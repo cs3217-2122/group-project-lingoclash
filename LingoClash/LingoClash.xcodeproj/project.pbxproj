@@ -14,6 +14,8 @@
 		D33282E827D4D42700C80986 /* LingoClash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D33282E627D4D42700C80986 /* LingoClash.xcdatamodeld */; };
 		D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33282E927D4D42E00C80986 /* Assets.xcassets */; };
 		D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */; };
+		D33282F927D4E63B00C80986 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282F827D4E63B00C80986 /* Theme.swift */; };
+		D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D33282E927D4D42E00C80986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D33282EC27D4D42E00C80986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D33282EE27D4D42E00C80986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D33282F827D4E63B00C80986 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		D33282DC27D4D42700C80986 /* LingoClash */ = {
 			isa = PBXGroup;
 			children = (
+				D33282F727D4E62F00C80986 /* Resources */,
 				D33282DD27D4D42700C80986 /* AppDelegate.swift */,
 				D33282DF27D4D42700C80986 /* SceneDelegate.swift */,
 				D33282E127D4D42700C80986 /* ViewController.swift */,
@@ -68,6 +73,15 @@
 				D33282E627D4D42700C80986 /* LingoClash.xcdatamodeld */,
 			);
 			path = LingoClash;
+			sourceTree = "<group>";
+		};
+		D33282F727D4E62F00C80986 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */,
+				D33282F827D4E63B00C80986 /* Theme.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
+				D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */,
 				D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */,
 				D33282E527D4D42700C80986 /* Main.storyboard in Resources */,
 			);
@@ -144,6 +159,7 @@
 				D33282E227D4D42700C80986 /* ViewController.swift in Sources */,
 				D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */,
 				D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */,
+				D33282F927D4E63B00C80986 /* Theme.swift in Sources */,
 				D33282E827D4D42700C80986 /* LingoClash.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,9 +312,11 @@
 				DEVELOPMENT_TEAM = K6AQBYTT24;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LingoClash/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LingoClash;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,9 +342,11 @@
 				DEVELOPMENT_TEAM = K6AQBYTT24;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LingoClash/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LingoClash;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
