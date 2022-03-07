@@ -9,7 +9,7 @@ import UIKit
 
 class Theme {
     static let mainFontName = "SF-Pro"
-    static let accent = UIColor(named: "Accent")
+    static let accent = UIColor(named: "AccentColor")
     static let background = UIColor(named: "Background")
     static let tint = UIColor(named: "Tint")
     static let green = UIColor(named: "Green")
