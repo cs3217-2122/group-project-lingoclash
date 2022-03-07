@@ -16,9 +16,13 @@
 		D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */; };
 		D33282F927D4E63B00C80986 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282F827D4E63B00C80986 /* Theme.swift */; };
 		D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
+		D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */; };
+		FFEBAC23A080A7AFD78B3769 /* Pods_LingoClash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40973093C5286CD8CEEF401C /* Pods-LingoClash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LingoClash.release.xcconfig"; path = "Target Support Files/Pods-LingoClash/Pods-LingoClash.release.xcconfig"; sourceTree = "<group>"; };
+		A31D878EA5F06AB7FA1E7CA5 /* Pods-LingoClash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LingoClash.debug.xcconfig"; path = "Target Support Files/Pods-LingoClash/Pods-LingoClash.debug.xcconfig"; sourceTree = "<group>"; };
 		D33282DA27D4D42700C80986 /* LingoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33282DD27D4D42700C80986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D33282DF27D4D42700C80986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		D33282EE27D4D42E00C80986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33282F827D4E63B00C80986 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
+		D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LingoClash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFEBAC23A080A7AFD78B3769 /* Pods_LingoClash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02C5B9E118F2915075D72495 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D33282D127D4D42700C80986 = {
 			isa = PBXGroup;
 			children = (
+				D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */,
 				D33282DC27D4D42700C80986 /* LingoClash */,
 				D33282DB27D4D42700C80986 /* Products */,
+				FAF94B47CEBBDB83317A7861 /* Pods */,
+				02C5B9E118F2915075D72495 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +80,7 @@
 		D33282DC27D4D42700C80986 /* LingoClash */ = {
 			isa = PBXGroup;
 			children = (
+				D33282FC27D5258000C80986 /* Model */,
 				D33282F727D4E62F00C80986 /* Resources */,
 				D33282DD27D4D42700C80986 /* AppDelegate.swift */,
 				D33282DF27D4D42700C80986 /* SceneDelegate.swift */,
@@ -84,6 +103,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D33282FC27D5258000C80986 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAF94B47CEBBDB83317A7861 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A31D878EA5F06AB7FA1E7CA5 /* Pods-LingoClash.debug.xcconfig */,
+				40973093C5286CD8CEEF401C /* Pods-LingoClash.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D33282F127D4D42E00C80986 /* Build configuration list for PBXNativeTarget "LingoClash" */;
 			buildPhases = (
+				6DE29A0D4F53B0B5562911DF /* [CP] Check Pods Manifest.lock */,
 				D33282D627D4D42700C80986 /* Sources */,
 				D33282D727D4D42700C80986 /* Frameworks */,
 				D33282D827D4D42700C80986 /* Resources */,
+				663E9873C8FD86E373E23ABA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,12 +181,55 @@
 			files = (
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
 				D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */,
+				D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */,
 				D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */,
 				D33282E527D4D42700C80986 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		663E9873C8FD86E373E23ABA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LingoClash/Pods-LingoClash-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LingoClash/Pods-LingoClash-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LingoClash/Pods-LingoClash-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DE29A0D4F53B0B5562911DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LingoClash-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D33282D627D4D42700C80986 /* Sources */ = {
@@ -304,6 +384,7 @@
 		};
 		D33282F227D4D42E00C80986 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A31D878EA5F06AB7FA1E7CA5 /* Pods-LingoClash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,6 +415,7 @@
 		};
 		D33282F327D4D42E00C80986 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40973093C5286CD8CEEF401C /* Pods-LingoClash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
