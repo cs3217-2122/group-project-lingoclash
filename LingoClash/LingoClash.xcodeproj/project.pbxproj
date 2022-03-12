@@ -16,9 +16,20 @@
 		D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */; };
 		D33282F927D4E63B00C80986 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282F827D4E63B00C80986 /* Theme.swift */; };
 		D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
+		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
 		D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */; };
 		FFEBAC23A080A7AFD78B3769 /* Pods_LingoClash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3BD29E627DCE6350061E362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D33282D227D4D42700C80986 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D33282D927D4D42700C80986;
+			remoteInfo = LingoClash;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		40973093C5286CD8CEEF401C /* Pods-LingoClash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LingoClash.release.xcconfig"; path = "Target Support Files/Pods-LingoClash/Pods-LingoClash.release.xcconfig"; sourceTree = "<group>"; };
@@ -34,6 +45,8 @@
 		D33282EE27D4D42E00C80986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33282F827D4E63B00C80986 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
+		D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LingoClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3BD29E427DCE6350061E362 /* LingoClashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoClashTests.swift; sourceTree = "<group>"; };
 		D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LingoClash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -44,6 +57,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFEBAC23A080A7AFD78B3769 /* Pods_LingoClash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3BD29DF27DCE6350061E362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +83,7 @@
 			children = (
 				D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */,
 				D33282DC27D4D42700C80986 /* LingoClash */,
+				D3BD29E327DCE6350061E362 /* LingoClashTests */,
 				D33282DB27D4D42700C80986 /* Products */,
 				FAF94B47CEBBDB83317A7861 /* Pods */,
 				02C5B9E118F2915075D72495 /* Frameworks */,
@@ -73,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				D33282DA27D4D42700C80986 /* LingoClash.app */,
+				D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +132,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D3BD29E327DCE6350061E362 /* LingoClashTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD29E427DCE6350061E362 /* LingoClashTests.swift */,
+			);
+			path = LingoClashTests;
+			sourceTree = "<group>";
+		};
 		FAF94B47CEBBDB83317A7861 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +171,24 @@
 			productReference = D33282DA27D4D42700C80986 /* LingoClash.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D3BD29E127DCE6350061E362 /* LingoClashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3BD29E827DCE6350061E362 /* Build configuration list for PBXNativeTarget "LingoClashTests" */;
+			buildPhases = (
+				D3BD29DE27DCE6350061E362 /* Sources */,
+				D3BD29DF27DCE6350061E362 /* Frameworks */,
+				D3BD29E027DCE6350061E362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3BD29E727DCE6350061E362 /* PBXTargetDependency */,
+			);
+			name = LingoClashTests;
+			productName = LingoClashTests;
+			productReference = D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,6 +201,10 @@
 				TargetAttributes = {
 					D33282D927D4D42700C80986 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					D3BD29E127DCE6350061E362 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D33282D927D4D42700C80986;
 					};
 				};
 			};
@@ -170,6 +222,7 @@
 			projectRoot = "";
 			targets = (
 				D33282D927D4D42700C80986 /* LingoClash */,
+				D3BD29E127DCE6350061E362 /* LingoClashTests */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +237,13 @@
 				D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */,
 				D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */,
 				D33282E527D4D42700C80986 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3BD29E027DCE6350061E362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +304,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3BD29DE27DCE6350061E362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3BD29E727DCE6350061E362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D33282D927D4D42700C80986 /* LingoClash */;
+			targetProxy = D3BD29E627DCE6350061E362 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D33282E327D4D42700C80986 /* Main.storyboard */ = {
@@ -444,6 +520,42 @@
 			};
 			name = Release;
 		};
+		D3BD29E927DCE6350061E362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K6AQBYTT24;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyletoh.LingoClashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LingoClash.app/LingoClash";
+			};
+			name = Debug;
+		};
+		D3BD29EA27DCE6350061E362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K6AQBYTT24;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyletoh.LingoClashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LingoClash.app/LingoClash";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -461,6 +573,15 @@
 			buildConfigurations = (
 				D33282F227D4D42E00C80986 /* Debug */,
 				D33282F327D4D42E00C80986 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3BD29E827DCE6350061E362 /* Build configuration list for PBXNativeTarget "LingoClashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3BD29E927DCE6350061E362 /* Debug */,
+				D3BD29EA27DCE6350061E362 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
