@@ -8,8 +8,6 @@
 import Foundation
 import PromiseKit
 
-
-
 class FetchUtilities {
     static func fetchData(with request: URLRequest) -> Promise<FetchResponse> {
         return Promise { seal in

@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
         setUpView()
         setUpBinders()
         
-        // TODO: to be removed
+        // TODO: To be removed
         // For testing:
         let bookDataManager = BookDataManager()
         let books = bookDataManager.getList(page: 1)
