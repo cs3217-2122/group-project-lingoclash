@@ -22,6 +22,17 @@ class LoginViewController: UIViewController {
         
         setUpView()
         setUpBinders()
+        
+        // TODO: to be removed
+        // For testing:
+        let bookDataManager = BookDataManager()
+        let books = bookDataManager.getList(page: 1)
+        
+        books.done { books in
+            print("Books fetched: ", books)
+        }.catch { error in
+            print("Error: ", error)
+        }
     }
     
     func setUpView() {

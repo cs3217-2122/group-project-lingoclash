@@ -34,6 +34,8 @@
 		D3F00CAD27DFAF6F00393ADC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAC27DFAF6F00393ADC /* Extensions.swift */; };
 		D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */; };
 		D3F00CB127DFC04600393ADC /* FetchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB027DFC04600393ADC /* FetchResponse.swift */; };
+		D3F00CB327DFC59500393ADC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB227DFC59500393ADC /* Book.swift */; };
+		D3F00CB527DFC5DD00393ADC /* BookCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB427DFC5DD00393ADC /* BookCategory.swift */; };
 		D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */; };
 		FFEBAC23A080A7AFD78B3769 /* Pods_LingoClash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +83,8 @@
 		D3F00CAC27DFAF6F00393ADC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTypes.swift; sourceTree = "<group>"; };
 		D3F00CB027DFC04600393ADC /* FetchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResponse.swift; sourceTree = "<group>"; };
+		D3F00CB227DFC59500393ADC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		D3F00CB427DFC5DD00393ADC /* BookCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCategory.swift; sourceTree = "<group>"; };
 		D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LingoClash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -190,7 +194,9 @@
 		D33282FC27D5258000C80986 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D3BD2A1627DF28B70061E362 /* BookDataManager.swift */,
+				D3F00CB227DFC59500393ADC /* Book.swift */,
+				D3F00CB427DFC5DD00393ADC /* BookCategory.swift */,
+				D3F00CB627DFC5F200393ADC /* DataManagers */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +243,14 @@
 				D398780A27DF7C1100B2F4ED /* RestProvider.swift */,
 			);
 			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		D3F00CB627DFC5F200393ADC /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD2A1627DF28B70061E362 /* BookDataManager.swift */,
+			);
+			path = DataManagers;
 			sourceTree = "<group>";
 		};
 		FAF94B47CEBBDB83317A7861 /* Pods */ = {
@@ -401,8 +415,10 @@
 				D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */,
 				62C04A0F27DDE59E002D2497 /* SignUpViewController.swift in Sources */,
 				6204A03D27DE41990063100D /* MainTabBarViewController.swift in Sources */,
+				D3F00CB527DFC5DD00393ADC /* BookCategory.swift in Sources */,
 				62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */,
 				D3F00CB127DFC04600393ADC /* FetchResponse.swift in Sources */,
+				D3F00CB327DFC59500393ADC /* Book.swift in Sources */,
 				D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */,
 				D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */,
 				D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */,

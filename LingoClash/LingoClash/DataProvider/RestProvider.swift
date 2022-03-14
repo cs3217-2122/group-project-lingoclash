@@ -14,12 +14,15 @@ enum NetworkError: Error {
 }
 
 class RestProvider: DataProvider {
+    
+    typealias HttpClient = (_ request: URLRequest) -> Promise<FetchResponse>
+    
     private let apiURL: String
-    private var httpClient = FetchUtilities.fetchJson
+    private var httpClient: HttpClient
     
     init(
         apiURL: String,
-        httpClient: @escaping (_ request: URLRequest) -> Promise<FetchResponse>) {
+        httpClient: @escaping HttpClient = FetchUtilities.fetchJson) {
             self.apiURL = apiURL
             self.httpClient = httpClient
         }
@@ -71,9 +74,10 @@ class RestProvider: DataProvider {
         let request = URLRequest(url: url)
         
         return httpClient(request).compactMap { fetchResponse in
+            
             let response = fetchResponse.response as? HTTPURLResponse
             
-            guard let count = Int(response?.allHeaderFields["x-total-count"] as? String ?? "") else {
+            guard let count = Int(response?.allHeaderFields["X-Total-Count"] as? String ?? "") else {
                 return nil
             }
             
