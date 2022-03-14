@@ -6,11 +6,10 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseFirestore
+import Combine
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -18,11 +17,15 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    private let viewModel = SignUpViewModel()
+    private var cancellables: Set<AnyCancellable> = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUpView()
+        setUpBinders()
     }
     
     func setUpView() {
@@ -37,40 +40,24 @@ class SignUpViewController: UIViewController {
         ViewUtilities.styleFilledButton(signUpButton)
     }
     
+    private func setUpBinders() {
+        viewModel.$error.sink {[weak self] error in
+            if let error = error {
+                self?.showError(error)
+            } else {
+                self?.transitionToHome()
+            }
+        }.store(in: &cancellables)
+    }
+    
     @IBAction func signUpTapped(_ sender: Any) {
         let firstName = Utilities.getTrimmedString(textField: firstNameTextField)
         let lastName = Utilities.getTrimmedString(textField: lastNameTextField)
         let email = Utilities.getTrimmedString(textField: emailTextField)
         let password = Utilities.getTrimmedString(textField: passwordTextField)
-        let fields = [firstName, lastName, email, password]
         
-        // Validate fields
-        let error = validateFields(fields)
-        if let error = error {
-            showError(error)
-            return
-        }
+        viewModel.signUp(firstName: firstName, lastName: lastName, email: email, password: password)
         
-        // Create user
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            if error != nil {
-                self.showError("Error creating user.")
-            } else {
-                guard let result = result else {
-                    return
-                }
-                
-                let db = Firestore.firestore()
-                db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "uid":result.user.uid]) { error in
-                    if error != nil {
-                        self.showError("Error saving user data.")
-                    }
-                }
-                
-                // Transition to home screen
-                self.transitionToHome()
-            }
-        }
     }
     
     @IBAction func backTapped(_ sender: Any) {
@@ -88,26 +75,5 @@ class SignUpViewController: UIViewController {
         view.window?.rootViewController = mainViewController
         view.window?.makeKeyAndVisible()
     }
-    ///  Returns: nil if fields are correct, else return error message
-    func validateFields(_ fields: [String]) -> String? {
-        // Check that all fields are filled in
-        if fields.contains("") {
-            return "Please fill in all fields."
-        }
-        
-        // Check that email format is valid
-        let email = Utilities.getTrimmedString(textField: emailTextField)
-        if Utilities.isEmailValid(email) == false {
-            return "Please input a valid email."
-        }
-        
-        // Check that password is secure
-        let password = Utilities.getTrimmedString(textField: passwordTextField)
-        if Utilities.isPasswordValid(password) == false {
-            return "Please make sure your password is at least 8 characters, contains a special character and a number."
-        }
-        
-        return nil
-    }
-
+    
 }

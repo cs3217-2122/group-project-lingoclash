@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseFirestore
+import Combine
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -15,10 +14,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    private let viewModel = LoginViewModel()
+    private var cancellables: Set<AnyCancellable> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUpView()
+        setUpBinders()
     }
     
     func setUpView() {
@@ -31,26 +34,23 @@ class LoginViewController: UIViewController {
         ViewUtilities.styleFilledButton(loginButton)
     }
     
+    func setUpBinders() {
+        viewModel.$error.sink {[weak self] error in
+            if let error = error {
+                self?.showError(error)
+            } else {
+                self?.transitionToHome()
+            }
+        }.store(in: &cancellables)
+    }
+    
     @IBAction func loginTapped(_ sender: Any) {
+        
         let email = Utilities.getTrimmedString(textField: emailTextField)
         let password = Utilities.getTrimmedString(textField: passwordTextField)
-        let fields = [email, password]
         
-        // Validate fields
-        let error = validateFields(fields)
-        if let error = error {
-            showError(error)
-            return
-        }
+        viewModel.login(email: email, password: password)
         
-        // Sign in
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if error != nil {
-                self.showError("Incorrect email or password.")
-            } else {
-                self.transitionToHome()
-            }
-        }
     }
     
     func transitionToHome() {
@@ -65,16 +65,6 @@ class LoginViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
-    ///  Returns: nil if fields are correct, else return error message
-    func validateFields(_ fields: [String]) -> String? {
-        // Check that all fields are filled in
-        if fields.contains("") {
-            return "Please fill in all fields."
-        }
-        
-        return nil
-    }
-
     @IBAction func backTapped(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
