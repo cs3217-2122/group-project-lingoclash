@@ -24,9 +24,16 @@
 		D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */; };
 		D33282F927D4E63B00C80986 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282F827D4E63B00C80986 /* Theme.swift */; };
 		D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
+		D398780927DF6AB800B2F4ED /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780827DF6AB800B2F4ED /* DataProvider.swift */; };
+		D398780B27DF7C1100B2F4ED /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780A27DF7C1100B2F4ED /* RestProvider.swift */; };
 		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
 		D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
 		D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */; };
+		D3BD2A1727DF28B70061E362 /* BookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1627DF28B70061E362 /* BookDataManager.swift */; };
+		D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */; };
+		D3F00CAD27DFAF6F00393ADC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAC27DFAF6F00393ADC /* Extensions.swift */; };
+		D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */; };
+		D3F00CB127DFC04600393ADC /* FetchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB027DFC04600393ADC /* FetchResponse.swift */; };
 		D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */; };
 		FFEBAC23A080A7AFD78B3769 /* Pods_LingoClash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */; };
 /* End PBXBuildFile section */
@@ -63,10 +70,17 @@
 		D33282EE27D4D42E00C80986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33282F827D4E63B00C80986 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
+		D398780827DF6AB800B2F4ED /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		D398780A27DF7C1100B2F4ED /* RestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestProvider.swift; sourceTree = "<group>"; };
 		D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LingoClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BD29E427DCE6350061E362 /* LingoClashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoClashTests.swift; sourceTree = "<group>"; };
 		D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D3BD2A1627DF28B70061E362 /* BookDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataManager.swift; sourceTree = "<group>"; };
+		D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUtilities.swift; sourceTree = "<group>"; };
+		D3F00CAC27DFAF6F00393ADC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTypes.swift; sourceTree = "<group>"; };
+		D3F00CB027DFC04600393ADC /* FetchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResponse.swift; sourceTree = "<group>"; };
 		D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LingoClash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +117,8 @@
 			children = (
 				62C04A1227DDE838002D2497 /* Utilities.swift */,
 				6204A04027DE4A500063100D /* ViewUtilities.swift */,
+				D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */,
+				D3F00CB027DFC04600393ADC /* FetchResponse.swift */,
 				6204A03927DE1CDB0063100D /* Constants.swift */,
 			);
 			path = Utilities;
@@ -143,7 +159,9 @@
 		D33282DC27D4D42700C80986 /* LingoClash */ = {
 			isa = PBXGroup;
 			children = (
+				D398780C27DF8C1400B2F4ED /* Extensions */,
 				6204A03B27DE34040063100D /* Utilities */,
+				D3BD2A1827DF29A00061E362 /* DataProvider */,
 				D33282FC27D5258000C80986 /* Model */,
 				D3BD2A1427DEE3DE0061E362 /* LoginView */,
 				D3BD2A1527DEE3F60061E362 /* SignUpView */,
@@ -172,8 +190,17 @@
 		D33282FC27D5258000C80986 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3BD2A1627DF28B70061E362 /* BookDataManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D398780C27DF8C1400B2F4ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D3F00CAC27DFAF6F00393ADC /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D3BD29E327DCE6350061E362 /* LingoClashTests */ = {
@@ -200,6 +227,16 @@
 				62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */,
 			);
 			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		D3BD2A1827DF29A00061E362 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */,
+				D398780827DF6AB800B2F4ED /* DataProvider.swift */,
+				D398780A27DF7C1100B2F4ED /* RestProvider.swift */,
+			);
+			path = DataProvider;
 			sourceTree = "<group>";
 		};
 		FAF94B47CEBBDB83317A7861 /* Pods */ = {
@@ -358,18 +395,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BD2A1727DF28B70061E362 /* BookDataManager.swift in Sources */,
 				D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */,
 				D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */,
+				D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */,
 				62C04A0F27DDE59E002D2497 /* SignUpViewController.swift in Sources */,
 				6204A03D27DE41990063100D /* MainTabBarViewController.swift in Sources */,
 				62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */,
+				D3F00CB127DFC04600393ADC /* FetchResponse.swift in Sources */,
 				D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */,
+				D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */,
 				D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */,
+				D398780B27DF7C1100B2F4ED /* RestProvider.swift in Sources */,
 				D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */,
 				6204A04127DE4A500063100D /* ViewUtilities.swift in Sources */,
 				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,
 				6204A03A27DE1CDB0063100D /* Constants.swift in Sources */,
 				62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */,
+				D3F00CAD27DFAF6F00393ADC /* Extensions.swift in Sources */,
+				D398780927DF6AB800B2F4ED /* DataProvider.swift in Sources */,
 				62C04A1327DDE838002D2497 /* Utilities.swift in Sources */,
 				D33282F927D4E63B00C80986 /* Theme.swift in Sources */,
 				D33282E827D4D42700C80986 /* LingoClash.xcdatamodeld in Sources */,

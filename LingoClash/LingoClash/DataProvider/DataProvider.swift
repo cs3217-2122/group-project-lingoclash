@@ -1,0 +1,25 @@
+//
+//  DataProvider.swift
+//  LingoClash
+//
+//  Created by Kyle キラ on 14/3/22.
+//
+
+import Foundation
+import PromiseKit
+
+
+protocol DataProvider {
+    
+    func create(resource: String, params: CreateParams) -> Promise<CreateResult>
+    
+    func delete(resource: String, params: DeleteParams) ->
+    Promise<DeleteResult>
+    
+    func getList(resource: String, params: GetListParams) -> Promise<GetListResult>
+    
+    func getOne(resource: String, params: GetOneParams) -> Promise<GetOneResult>
+    
+    func update(resource: String, params: UpdateParams) -> Promise<UpdateResult>
+    
+}

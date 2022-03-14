@@ -15,8 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        registerUserDefaults()
         FirebaseApp.configure()
+        
         return true
+    }
+    
+    private func registerUserDefaults() {
+        UserDefaults.standard.register(defaults: [
+            "dataProvider": "rest"
+        ])
     }
 
     // MARK: UISceneSession Lifecycle
