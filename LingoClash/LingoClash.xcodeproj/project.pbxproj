@@ -111,7 +111,6 @@
 		6232E41327DDDF4700107B89 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D3BD2A0D27DED0E80061E362 /* Auth */,
 				6204A03E27DE43350063100D /* ProfileViewController.swift */,
 				6204A03C27DE41990063100D /* MainTabBarViewController.swift */,
 				62C04A1427DDEB10002D2497 /* HomeViewController.swift */,
@@ -146,7 +145,8 @@
 			children = (
 				6204A03B27DE34040063100D /* Utilities */,
 				D33282FC27D5258000C80986 /* Model */,
-				D3BD2A0E27DED7FA0061E362 /* ViewModels */,
+				D3BD2A1427DEE3DE0061E362 /* LoginView */,
+				D3BD2A1527DEE3F60061E362 /* SignUpView */,
 				6232E41327DDDF4700107B89 /* ViewControllers */,
 				D33282F727D4E62F00C80986 /* Resources */,
 				D33282DD27D4D42700C80986 /* AppDelegate.swift */,
@@ -184,30 +184,22 @@
 			path = LingoClashTests;
 			sourceTree = "<group>";
 		};
-		D3BD2A0D27DED0E80061E362 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				62C04A1027DDE67F002D2497 /* LoginViewController.swift */,
-				62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		D3BD2A0E27DED7FA0061E362 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				D3BD2A0F27DED81B0061E362 /* Auth */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		D3BD2A0F27DED81B0061E362 /* Auth */ = {
+		D3BD2A1427DEE3DE0061E362 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
 				D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */,
-				D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */,
+				62C04A1027DDE67F002D2497 /* LoginViewController.swift */,
 			);
-			path = Auth;
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		D3BD2A1527DEE3F60061E362 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */,
+				62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */,
+			);
+			path = SignUpView;
 			sourceTree = "<group>";
 		};
 		FAF94B47CEBBDB83317A7861 /* Pods */ = {
