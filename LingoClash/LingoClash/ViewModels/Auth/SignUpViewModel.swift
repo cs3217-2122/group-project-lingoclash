@@ -64,7 +64,6 @@ final class SignUpViewModel {
             return validatePassword(password: password)
         }
         
-        
         return nil
     }
     
