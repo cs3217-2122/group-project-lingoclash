@@ -8,7 +8,6 @@
 import Foundation
 import PromiseKit
 
-
 protocol DataProvider {
     
     func create(resource: String, params: CreateParams) -> Promise<CreateResult>

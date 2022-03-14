@@ -8,11 +8,6 @@
 import Foundation
 import PromiseKit
 
-enum NetworkError: Error {
-    case invalidURL
-    case invalidResponse
-}
-
 class RestProvider: DataProvider {
     
     typealias HttpClient = (_ request: URLRequest) -> Promise<FetchResponse>
