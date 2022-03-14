@@ -11,7 +11,7 @@ import PromiseKit
 
 
 class FetchUtilities {
-    static func fetchJson(with request: URLRequest) -> Promise<FetchResponse> {
+    static func fetchData(with request: URLRequest) -> Promise<FetchResponse> {
         return Promise { seal in
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if let error = error {

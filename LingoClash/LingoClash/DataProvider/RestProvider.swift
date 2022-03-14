@@ -22,7 +22,7 @@ class RestProvider: DataProvider {
     
     init(
         apiURL: String,
-        httpClient: @escaping HttpClient = FetchUtilities.fetchJson) {
+        httpClient: @escaping HttpClient = FetchUtilities.fetchData) {
             self.apiURL = apiURL
             self.httpClient = httpClient
         }
