@@ -25,6 +25,8 @@
 		D33282F927D4E63B00C80986 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282F827D4E63B00C80986 /* Theme.swift */; };
 		D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
 		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
+		D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
+		D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */; };
 		D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */; };
 		FFEBAC23A080A7AFD78B3769 /* Pods_LingoClash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LingoClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BD29E427DCE6350061E362 /* LingoClashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoClashTests.swift; sourceTree = "<group>"; };
+		D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LingoClash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,11 +111,9 @@
 		6232E41327DDDF4700107B89 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				62C04A1027DDE67F002D2497 /* LoginViewController.swift */,
 				6204A03E27DE43350063100D /* ProfileViewController.swift */,
 				6204A03C27DE41990063100D /* MainTabBarViewController.swift */,
 				62C04A1427DDEB10002D2497 /* HomeViewController.swift */,
-				62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */,
 				D33282E127D4D42700C80986 /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
@@ -142,8 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				6204A03B27DE34040063100D /* Utilities */,
-				6232E41327DDDF4700107B89 /* ViewControllers */,
 				D33282FC27D5258000C80986 /* Model */,
+				D3BD2A1427DEE3DE0061E362 /* LoginView */,
+				D3BD2A1527DEE3F60061E362 /* SignUpView */,
+				6232E41327DDDF4700107B89 /* ViewControllers */,
 				D33282F727D4E62F00C80986 /* Resources */,
 				D33282DD27D4D42700C80986 /* AppDelegate.swift */,
 				D33282DF27D4D42700C80986 /* SceneDelegate.swift */,
@@ -178,6 +182,24 @@
 				D3BD29E427DCE6350061E362 /* LingoClashTests.swift */,
 			);
 			path = LingoClashTests;
+			sourceTree = "<group>";
+		};
+		D3BD2A1427DEE3DE0061E362 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */,
+				62C04A1027DDE67F002D2497 /* LoginViewController.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		D3BD2A1527DEE3F60061E362 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */,
+				62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */,
+			);
+			path = SignUpView;
 			sourceTree = "<group>";
 		};
 		FAF94B47CEBBDB83317A7861 /* Pods */ = {
@@ -342,6 +364,8 @@
 				6204A03D27DE41990063100D /* MainTabBarViewController.swift in Sources */,
 				62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */,
 				D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */,
+				D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */,
+				D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */,
 				6204A04127DE4A500063100D /* ViewUtilities.swift in Sources */,
 				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,
 				6204A03A27DE1CDB0063100D /* Constants.swift in Sources */,
