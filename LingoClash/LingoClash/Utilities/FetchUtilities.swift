@@ -26,10 +26,18 @@ class FetchUtilities {
             task.resume()
         }
     }
-    
+        
     static func stringify(query: [String: Any]) -> String {
         var res = ""
         for (key, value) in query {
+            
+            if let value = value as? [Any] {
+                for i in value {
+                    res += "\(key)=\(i)&"
+                }
+                continue
+            }
+            
             res += "\(key)=\(value)&"
         }
         

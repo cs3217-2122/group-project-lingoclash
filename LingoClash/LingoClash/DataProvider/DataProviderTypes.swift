@@ -41,7 +41,7 @@ struct SortPayload {
 struct GetListParams {
     let pagination: PaginationPayload
     let sort: SortPayload
-    let filter: [String: String]
+    let filter: [String: Any]
 }
 
 struct GetListResult {
@@ -55,6 +55,27 @@ struct GetOneParams {
 
 struct GetOneResult {
     let data: Record
+}
+
+struct GetManyParams {
+    let ids: [Identifier]
+}
+
+struct GetManyResult {
+    let data: Record
+}
+
+struct GetManyReferenceParams {
+    let target: String
+    let id: Identifier
+    let pagination: PaginationPayload
+    let sort: SortPayload
+    let filter: [String: Any]
+}
+
+struct GetManyReferenceResult {
+    let data: Record
+    let total: Int
 }
 
 struct UpdateParams {

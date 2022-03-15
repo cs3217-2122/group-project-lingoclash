@@ -19,6 +19,10 @@ protocol DataProvider {
     
     func getOne(resource: String, params: GetOneParams) -> Promise<GetOneResult>
     
+    func getMany(resource: String, params: GetManyParams) -> Promise<GetManyResult>
+    
+    func getManyReference(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult>
+    
     func update(resource: String, params: UpdateParams) -> Promise<UpdateResult>
     
 }

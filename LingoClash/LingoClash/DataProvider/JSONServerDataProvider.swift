@@ -91,8 +91,55 @@ class JSONServerDataProvider: DataProvider {
         return httpClient(request).map { fetchResult in
             GetOneResult(data: fetchResult.data)
         }
-        
     }
+    
+    func getMany(resource: String, params: GetManyParams) -> Promise<GetManyResult> {
+        let query = [
+            "id": params.ids,
+        ]
+        
+        guard let url = URL(string: "\(apiURL)/\(resource)?\(FetchUtilities.stringify(query: query))") else {
+            return Promise.reject(reason: NetworkError.invalidURL)
+        }
+        
+        let request = URLRequest(url: url)
+        
+        return httpClient(request).map { fetchResult in
+            GetManyResult(data: fetchResult.data)
+        }
+    }
+    
+    func getManyReference(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult> {
+        let pagination = params.pagination
+        let sort = params.sort
+        let _query = [
+            params.target: params.id,
+            "_sort": sort.field,
+            "_order": sort.order,
+            "_start": (pagination.page - 1) * pagination.perPage,
+            "_end": pagination.page * pagination.perPage
+        ] as [String : Any]
+        let query = _query.merging(params.filter) { (current, _) in current }
+        
+        guard let url = URL(string: "\(apiURL)/\(resource)?\(FetchUtilities.stringify(query: query))") else {
+            return Promise.reject(reason: NetworkError.invalidURL)
+        }
+        
+        let request = URLRequest(url: url)
+        
+        return httpClient(request).compactMap { fetchResult in
+            
+            let response = fetchResult.response as? HTTPURLResponse
+            
+            guard let count = Int(response?.allHeaderFields["X-Total-Count"] as? String ?? "") else {
+                return nil
+            }
+            
+            return GetManyReferenceResult(data: fetchResult.data, total: count)
+        }
+
+    }
+    
     
     func update(resource: String, params: UpdateParams) -> Promise<UpdateResult> {
         guard let url = URL(string: "\(apiURL)/\(resource)/\(params.id)") else {
