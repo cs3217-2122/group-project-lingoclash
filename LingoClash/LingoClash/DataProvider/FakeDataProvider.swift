@@ -12,7 +12,7 @@ import PromiseKit
 class FakeDataProvider: JSONServerDataProvider {
     
     init() {
-        super.init(apiURL: Constants.API.baseURL) { request in
+        super.init(apiURL: Constants.API.devServerBaseURL) { request in
             
             return Promise { seal in
                 let task = URLSession.shared.dataTask(with: request) { (data, response, error) in

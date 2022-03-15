@@ -16,7 +16,7 @@ struct Constants {
     }
     
     struct API {
-        static let baseURL = "http://localhost:3000"
+        static let devServerBaseURL = "http://localhost:3000"
     }
     
     struct StoryBoard {
