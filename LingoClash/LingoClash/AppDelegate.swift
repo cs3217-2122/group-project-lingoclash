@@ -23,9 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func registerUserDefaults() {
-        UserDefaults.standard.register(defaults: [
-            "dataProvider": "rest"
-        ])
+        UserDefaults.standard.register(defaults: [:])
     }
 
     // MARK: UISceneSession Lifecycle
