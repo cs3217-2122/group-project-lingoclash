@@ -9,23 +9,25 @@ import Foundation
 
 typealias Identifier = String
 
-typealias Record = Data
+struct Record: Codable {
+    let id: Identifier
+}
 
 struct CreateParams {
-    let data: Record
+    let data: Data
 }
 
 struct CreateResult {
-    let data: Record
+    let data: Data
 }
 
 struct DeleteParams {
     let id: Identifier
-    let previousData: Record
+    let previousData: Data
 }
 
 struct DeleteResult {
-    let data: Record
+    let data: Data
 }
 
 struct PaginationPayload {
@@ -45,7 +47,7 @@ struct GetListParams {
 }
 
 struct GetListResult {
-    let data: Record
+    let data: Data
     let total: Int
 }
 
@@ -54,7 +56,7 @@ struct GetOneParams {
 }
 
 struct GetOneResult {
-    let data: Record
+    let data: Data
 }
 
 struct GetManyParams {
@@ -62,7 +64,7 @@ struct GetManyParams {
 }
 
 struct GetManyResult {
-    let data: Record
+    let data: Data
 }
 
 struct GetManyReferenceParams {
@@ -74,16 +76,33 @@ struct GetManyReferenceParams {
 }
 
 struct GetManyReferenceResult {
-    let data: Record
+    let data: Data
     let total: Int
 }
 
 struct UpdateParams {
     let id: Identifier
-    let data: Record
-    let previousData: Record
+    let data: Data
+    let previousData: Data
 }
 
 struct UpdateResult {
-    let data: Record
+    let data: Data
+}
+
+struct UpdateManyParams {
+    let ids: [Identifier]
+    let data: Data
+}
+
+struct UpdateManyResult {
+    let data: [Identifier]
+}
+
+struct DeleteManyParams {
+    let ids: [Identifier]
+}
+
+struct DeleteManyResult {
+    let data: [Identifier]
 }

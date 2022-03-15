@@ -75,18 +75,6 @@ class BookDataManager {
             }
         }
     
-    func create(newBook: Book) -> Promise<Book> {
-        
-        guard let data = try? JSONEncoder().encode(newBook) else {
-            return Promise.reject(reason: DatabaseError.invalidFormat)
-        }
-        let createdData = dataProvider.create(resource: self.resource, params: CreateParams(data: data))
-        
-        return createdData.compactMap { result in
-            try? JSONDecoder().decode(Book.self, from: result.data)
-        }
-    }
-    
     func update(id: Identifier, from previousBook: Book, to newBook: Book) -> Promise<Book> {
         
         guard let previousData = try? JSONEncoder().encode(previousBook) else {
@@ -100,6 +88,18 @@ class BookDataManager {
         let updatedData = dataProvider.update(resource: self.resource, params: UpdateParams(id: id, data: newData, previousData: previousData))
         
         return updatedData.compactMap { result in
+            try? JSONDecoder().decode(Book.self, from: result.data)
+        }
+    }
+    
+    func create(newBook: Book) -> Promise<Book> {
+        
+        guard let data = try? JSONEncoder().encode(newBook) else {
+            return Promise.reject(reason: DatabaseError.invalidFormat)
+        }
+        let createdData = dataProvider.create(resource: self.resource, params: CreateParams(data: data))
+        
+        return createdData.compactMap { result in
             try? JSONDecoder().decode(Book.self, from: result.data)
         }
     }
