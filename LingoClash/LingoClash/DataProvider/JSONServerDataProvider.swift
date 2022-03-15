@@ -54,13 +54,11 @@ class JSONServerDataProvider: DataProvider {
         guard let url = URL(string: "\(apiURL)/\(resource)?\(FetchUtilities.stringify(query: query))") else {
             return Promise.reject(reason: NetworkError.invalidURL)
         }
-        
         let request = URLRequest(url: url)
         
         return httpClient(request).compactMap { fetchResult in
             
             let response = fetchResult.response as? HTTPURLResponse
-            
             guard let count = Int(response?.allHeaderFields["X-Total-Count"] as? String ?? "") else {
                 return nil
             }
@@ -73,7 +71,6 @@ class JSONServerDataProvider: DataProvider {
         guard let url = URL(string: "\(apiURL)/\(resource)/\(params.id)") else {
             return Promise.reject(reason: NetworkError.invalidURL)
         }
-        
         let request = URLRequest(url: url)
         
         return httpClient(request).map { fetchResult in
@@ -85,11 +82,9 @@ class JSONServerDataProvider: DataProvider {
         let query = [
             "id": params.ids,
         ]
-        
         guard let url = URL(string: "\(apiURL)/\(resource)?\(FetchUtilities.stringify(query: query))") else {
             return Promise.reject(reason: NetworkError.invalidURL)
         }
-        
         let request = URLRequest(url: url)
         
         return httpClient(request).map { fetchResult in
@@ -112,13 +107,11 @@ class JSONServerDataProvider: DataProvider {
         guard let url = URL(string: "\(apiURL)/\(resource)?\(FetchUtilities.stringify(query: query))") else {
             return Promise.reject(reason: NetworkError.invalidURL)
         }
-        
         let request = URLRequest(url: url)
         
         return httpClient(request).compactMap { fetchResult in
             
             let response = fetchResult.response as? HTTPURLResponse
-            
             guard let count = Int(response?.allHeaderFields["X-Total-Count"] as? String ?? "") else {
                 return nil
             }
