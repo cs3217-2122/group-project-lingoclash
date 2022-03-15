@@ -9,14 +9,14 @@ import Foundation
 import PromiseKit
 
 class FetchUtilities {
-    static func fetchData(with request: URLRequest) -> Promise<FetchResponse> {
+    static func fetchData(with request: URLRequest) -> Promise<FetchResult> {
         return Promise { seal in
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if let error = error {
                     seal.reject(error)
                 } else {
                     seal.fulfill(
-                        FetchResponse(
+                        FetchResult(
                             data: data ?? Data(),
                             response: response
                         )

@@ -10,7 +10,7 @@ import PromiseKit
 
 class RestProvider: DataProvider {
     
-    typealias HttpClient = (_ request: URLRequest) -> Promise<FetchResponse>
+    typealias HttpClient = (_ request: URLRequest) -> Promise<FetchResult>
     
     private let apiURL: String
     private var httpClient: HttpClient
@@ -28,13 +28,14 @@ class RestProvider: DataProvider {
             return Promise.reject(
                 reason: NetworkError.invalidURL)
         }
+        
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = params.data
         
-        return httpClient(request).map { fetchResponse in
-            CreateResult(data: fetchResponse.data)
+        return httpClient(request).map { fetchResult in
+            CreateResult(data: fetchResult.data)
         }
     }
     
@@ -42,11 +43,12 @@ class RestProvider: DataProvider {
         guard let url = URL(string: "\(apiURL)/\(resource)/\(params.id)") else {
             return Promise.reject(reason: NetworkError.invalidURL)
         }
+        
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
         
-        return httpClient(request).map { fetchResponse in
-            DeleteResult(data: fetchResponse.data)
+        return httpClient(request).map { fetchResult in
+            DeleteResult(data: fetchResult.data)
         }
     }
     
@@ -59,7 +61,6 @@ class RestProvider: DataProvider {
             "_start": (pagination.page - 1) * pagination.perPage,
             "_end": pagination.page * pagination.perPage
         ] as [String : Any]
-        
         let query = _query.merging(params.filter) { (current, _) in current }
         
         guard let url = URL(string: "\(apiURL)/\(resource)?\(FetchUtilities.stringify(query: query))") else {
@@ -68,15 +69,15 @@ class RestProvider: DataProvider {
         
         let request = URLRequest(url: url)
         
-        return httpClient(request).compactMap { fetchResponse in
+        return httpClient(request).compactMap { fetchResult in
             
-            let response = fetchResponse.response as? HTTPURLResponse
+            let response = fetchResult.response as? HTTPURLResponse
             
             guard let count = Int(response?.allHeaderFields["X-Total-Count"] as? String ?? "") else {
                 return nil
             }
             
-            return GetListResult(data: fetchResponse.data, total: count)
+            return GetListResult(data: fetchResult.data, total: count)
         }
     }
     
@@ -87,8 +88,8 @@ class RestProvider: DataProvider {
         
         let request = URLRequest(url: url)
         
-        return httpClient(request).map { fetchResponse in
-            GetOneResult(data: fetchResponse.data)
+        return httpClient(request).map { fetchResult in
+            GetOneResult(data: fetchResult.data)
         }
         
     }
@@ -103,8 +104,8 @@ class RestProvider: DataProvider {
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = params.data
         
-        return httpClient(request).map { fetchResponse in
-            UpdateResult(data: fetchResponse.data)
+        return httpClient(request).map { fetchResult in
+            UpdateResult(data: fetchResult.data)
         }
     }
     
