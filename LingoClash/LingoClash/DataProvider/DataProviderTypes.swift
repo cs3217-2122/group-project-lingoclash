@@ -25,7 +25,7 @@ struct DeleteParams {
 }
 
 struct DeleteResult {
-    let data: Record?
+    let data: Record
 }
 
 struct PaginationPayload {

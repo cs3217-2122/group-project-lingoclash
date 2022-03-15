@@ -137,9 +137,8 @@ class JSONServerDataProvider: DataProvider {
             
             return GetManyReferenceResult(data: fetchResult.data, total: count)
         }
-
+        
     }
-    
     
     func update(resource: String, params: UpdateParams) -> Promise<UpdateResult> {
         guard let url = URL(string: "\(apiURL)/\(resource)/\(params.id)") else {

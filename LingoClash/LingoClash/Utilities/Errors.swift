@@ -9,5 +9,8 @@ import Foundation
 
 enum NetworkError: Error {
     case invalidURL
-    case invalidResponse
+}
+
+enum DatabaseError: Error {
+    case invalidFormat
 }

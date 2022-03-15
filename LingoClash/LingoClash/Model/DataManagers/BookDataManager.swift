@@ -22,34 +22,98 @@ class BookDataManager {
         perPage: Int = Constants.ListConfig.perPage,
         field: String = Constants.ListConfig.field,
         order: String = Constants.ListConfig.order,
-        filter: [String: String] = [:]
+        filter: [String: Any] = [:]
     ) -> Promise<[Book]> {
         
         let pagination = PaginationPayload(page: page, perPage: perPage)
         let sort = SortPayload(field: field, order: order)
         let data = dataProvider.getList(resource: self.resource, params: GetListParams(pagination: pagination, sort: sort, filter: filter))
         
-        return data.compactMap { listResult in
+        return data.compactMap { result in
             try? JSONDecoder().decode(
-                [Book].self, from: listResult.data)
+                [Book].self, from: result.data)
         }
         
     }
     
-    func getOne() {}
+    func getOne(id: Identifier) -> Promise<Book> {
+        let data = dataProvider.getOne(resource: self.resource, params: GetOneParams(id: id))
+        
+        return data.compactMap { result in
+            try? JSONDecoder().decode(Book.self, from: result.data)
+        }
+    }
     
-    func getMany() {}
+    func getMany(ids: [Identifier]) -> Promise<[Book]> {
+        let data = dataProvider.getMany(resource: self.resource, params: GetManyParams(ids: ids))
+        
+        return data.compactMap { result in
+            try? JSONDecoder().decode(
+                [Book].self, from: result.data)
+        }
+    }
     
-    func getManyReference() {}
+    func getManyReference(
+        target: String,
+        id: Identifier,
+        page: Int,
+        perPage: Int = Constants.ListConfig.perPage,
+        field: String = Constants.ListConfig.field,
+        order: String = Constants.ListConfig.order,
+        filter: [String: Any] = [:]) -> Promise<[Book]> {
+            
+            let pagination = PaginationPayload(page: page, perPage: perPage)
+            let sort = SortPayload(field: field, order: order)
+            let data = dataProvider.getManyReference(
+                resource: self.resource,
+                params: GetManyReferenceParams(
+                    target: target, id: id, pagination: pagination, sort: sort, filter: filter))
+            
+            return data.compactMap { result in
+                try? JSONDecoder().decode(
+                    [Book].self, from: result.data)
+            }
+        }
     
-    func create() {}
+    func create(newBook: Book) -> Promise<Book> {
+        
+        guard let data = try? JSONEncoder().encode(newBook) else {
+            return Promise.reject(reason: DatabaseError.invalidFormat)
+        }
+        let createdData = dataProvider.create(resource: self.resource, params: CreateParams(data: data))
+        
+        return createdData.compactMap { result in
+            try? JSONDecoder().decode(Book.self, from: result.data)
+        }
+    }
     
-    func update() {}
+    func update(id: Identifier, from previousBook: Book, to newBook: Book) -> Promise<Book> {
+        
+        guard let previousData = try? JSONEncoder().encode(previousBook) else {
+            return Promise.reject(reason: DatabaseError.invalidFormat)
+        }
+        
+        guard let newData = try? JSONEncoder().encode(newBook) else {
+            return Promise.reject(reason: DatabaseError.invalidFormat)
+        }
+        
+        let updatedData = dataProvider.update(resource: self.resource, params: UpdateParams(id: id, data: newData, previousData: previousData))
+        
+        return updatedData.compactMap { result in
+            try? JSONDecoder().decode(Book.self, from: result.data)
+        }
+    }
     
-    func updateMany() {}
-    
-    func delete() {}
-    
-    func deleteMany() {}
+    func delete(id: Identifier, book: Book) -> Promise<Book> {
+        guard let previousData = try? JSONEncoder().encode(book) else {
+            return Promise.reject(reason: DatabaseError.invalidFormat)
+        }
+        
+        let deletedData = dataProvider.delete(resource: self.resource, params: DeleteParams(id: id, previousData: previousData))
+        
+        return deletedData.compactMap { result in
+            try? JSONDecoder().decode(Book.self, from: result.data)
+        }
+    }
     
 }

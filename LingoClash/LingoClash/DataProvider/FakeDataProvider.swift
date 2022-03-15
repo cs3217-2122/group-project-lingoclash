@@ -13,7 +13,7 @@ class FakeDataProvider: JSONServerDataProvider {
     
     init() {
         super.init(apiURL: Constants.API.baseURL) { request in
-
+            
             return Promise { seal in
                 let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
                     if let error = error {
