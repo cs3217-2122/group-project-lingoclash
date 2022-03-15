@@ -37,6 +37,7 @@ class BookDataManager {
     }
     
     func getOne(id: Identifier) -> Promise<Book> {
+        
         let data = dataProvider.getOne(resource: self.resource, params: GetOneParams(id: id))
         
         return data.compactMap { result in
@@ -45,6 +46,7 @@ class BookDataManager {
     }
     
     func getMany(ids: [Identifier]) -> Promise<[Book]> {
+        
         let data = dataProvider.getMany(resource: self.resource, params: GetManyParams(ids: ids))
         
         return data.compactMap { result in
@@ -92,6 +94,20 @@ class BookDataManager {
         }
     }
     
+    /// id of the newBook does not matter
+    func updateMany(ids: [Identifier], newBook: Book) -> Promise<[Identifier]> {
+        
+        guard let data = try? JSONEncoder().encode(newBook) else {
+            return Promise.reject(reason: DatabaseError.invalidFormat)
+        }
+        
+        let updatedData = dataProvider.updateMany(resource: self.resource, params: UpdateManyParams(ids: ids, data: data))
+        
+        return updatedData.compactMap { result in
+            result.data
+        }
+    }
+    
     func create(newBook: Book) -> Promise<Book> {
         
         guard let data = try? JSONEncoder().encode(newBook) else {
@@ -105,6 +121,7 @@ class BookDataManager {
     }
     
     func delete(id: Identifier, book: Book) -> Promise<Book> {
+        
         guard let previousData = try? JSONEncoder().encode(book) else {
             return Promise.reject(reason: DatabaseError.invalidFormat)
         }
@@ -116,4 +133,12 @@ class BookDataManager {
         }
     }
     
+    func deleteMany(ids: [Identifier]) -> Promise<[Identifier]> {
+        
+        let deletedData = dataProvider.deleteMany(resource: self.resource, params: DeleteManyParams(ids: ids))
+        
+        return deletedData.compactMap { result in
+            result.data
+        }
+    }
 }
