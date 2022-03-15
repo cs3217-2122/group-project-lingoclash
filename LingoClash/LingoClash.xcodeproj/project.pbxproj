@@ -25,7 +25,7 @@
 		D33282F927D4E63B00C80986 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282F827D4E63B00C80986 /* Theme.swift */; };
 		D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
 		D398780927DF6AB800B2F4ED /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780827DF6AB800B2F4ED /* DataProvider.swift */; };
-		D398780B27DF7C1100B2F4ED /* RestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780A27DF7C1100B2F4ED /* RestProvider.swift */; };
+		D398780B27DF7C1100B2F4ED /* JSONServerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780A27DF7C1100B2F4ED /* JSONServerDataProvider.swift */; };
 		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
 		D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
 		D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */; };
@@ -37,6 +37,7 @@
 		D3F00CB327DFC59500393ADC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB227DFC59500393ADC /* Book.swift */; };
 		D3F00CB527DFC5DD00393ADC /* BookCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB427DFC5DD00393ADC /* BookCategory.swift */; };
 		D3F00CB827DFD39700393ADC /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB727DFD39700393ADC /* Errors.swift */; };
+		D3F00CBA27E0642A00393ADC /* FakeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB927E0642A00393ADC /* FakeDataProvider.swift */; };
 		D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */; };
 		FFEBAC23A080A7AFD78B3769 /* Pods_LingoClash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */; };
 /* End PBXBuildFile section */
@@ -74,7 +75,7 @@
 		D33282F827D4E63B00C80986 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		D398780827DF6AB800B2F4ED /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
-		D398780A27DF7C1100B2F4ED /* RestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestProvider.swift; sourceTree = "<group>"; };
+		D398780A27DF7C1100B2F4ED /* JSONServerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONServerDataProvider.swift; sourceTree = "<group>"; };
 		D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LingoClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BD29E427DCE6350061E362 /* LingoClashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoClashTests.swift; sourceTree = "<group>"; };
 		D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		D3F00CB227DFC59500393ADC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D3F00CB427DFC5DD00393ADC /* BookCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCategory.swift; sourceTree = "<group>"; };
 		D3F00CB727DFD39700393ADC /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		D3F00CB927E0642A00393ADC /* FakeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataProvider.swift; sourceTree = "<group>"; };
 		D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LingoClash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -243,7 +245,8 @@
 			children = (
 				D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */,
 				D398780827DF6AB800B2F4ED /* DataProvider.swift */,
-				D398780A27DF7C1100B2F4ED /* RestProvider.swift */,
+				D398780A27DF7C1100B2F4ED /* JSONServerDataProvider.swift */,
+				D3F00CB927E0642A00393ADC /* FakeDataProvider.swift */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3BD2A1727DF28B70061E362 /* BookDataManager.swift in Sources */,
+				D3F00CBA27E0642A00393ADC /* FakeDataProvider.swift in Sources */,
 				D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */,
 				D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */,
 				D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */,
@@ -425,7 +429,7 @@
 				D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */,
 				D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */,
 				D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */,
-				D398780B27DF7C1100B2F4ED /* RestProvider.swift in Sources */,
+				D398780B27DF7C1100B2F4ED /* JSONServerDataProvider.swift in Sources */,
 				D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */,
 				6204A04127DE4A500063100D /* ViewUtilities.swift in Sources */,
 				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,

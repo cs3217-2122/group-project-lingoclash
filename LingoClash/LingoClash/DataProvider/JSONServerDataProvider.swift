@@ -8,7 +8,7 @@
 import Foundation
 import PromiseKit
 
-class RestProvider: DataProvider {
+class JSONServerDataProvider: DataProvider {
     
     typealias HttpClient = (_ request: URLRequest) -> Promise<FetchResult>
     

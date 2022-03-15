@@ -13,7 +13,7 @@ class BookDataManager {
     private let dataProvider: DataProvider
     private let resource = "books"
     
-    init(dataProvider: DataProvider = RestProvider(apiURL: Constants.API.baseURL)) {
+    init(dataProvider: DataProvider = FakeDataProvider()) {
         self.dataProvider = dataProvider
     }
     
