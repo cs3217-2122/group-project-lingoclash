@@ -9,6 +9,16 @@ import UIKit
 
 struct Constants {
     
+    struct ListConfig {
+        static let perPage = 10
+        static let field = "id"
+        static let order = "desc"
+    }
+    
+    struct API {
+        static let devServerBaseURL = "http://localhost:3000"
+    }
+    
     struct StoryBoard {
         static let mainTabBarVC = "MainTabBarVC"
         static let splashVC = "SplashVC"
