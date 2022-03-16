@@ -15,6 +15,14 @@
 		62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1027DDE67F002D2497 /* LoginViewController.swift */; };
 		62C04A1327DDE838002D2497 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1227DDE838002D2497 /* Utilities.swift */; };
 		62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1427DDEB10002D2497 /* HomeViewController.swift */; };
+		6FA0243827E1BBBE00F94E54 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243727E1BBBE00F94E54 /* FirebaseAuth */; };
+		6FA0243A27E1BBBE00F94E54 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243927E1BBBE00F94E54 /* FirebaseAuthCombine-Community */; };
+		6FA0243C27E1BBBE00F94E54 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243B27E1BBBE00F94E54 /* FirebaseDatabase */; };
+		6FA0243E27E1BBBE00F94E54 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243D27E1BBBE00F94E54 /* FirebaseFirestore */; };
+		6FA0244027E1BBBE00F94E54 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243F27E1BBBE00F94E54 /* FirebaseFirestoreCombine-Community */; };
+		6FA0244227E1BBBE00F94E54 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244127E1BBBE00F94E54 /* FirebaseStorage */; };
+		6FA0244427E1BBBE00F94E54 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244327E1BBBE00F94E54 /* FirebaseStorageCombine-Community */; };
+		6FA0244727E1BC9E00F94E54 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244627E1BC9E00F94E54 /* PromiseKit */; };
 		D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DD27D4D42700C80986 /* AppDelegate.swift */; };
 		D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DF27D4D42700C80986 /* SceneDelegate.swift */; };
 		D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282E127D4D42700C80986 /* SplashViewController.swift */; };
@@ -39,7 +47,6 @@
 		D3F00CB827DFD39700393ADC /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB727DFD39700393ADC /* Errors.swift */; };
 		D3F00CBA27E0642A00393ADC /* FakeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB927E0642A00393ADC /* FakeDataProvider.swift */; };
 		D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */; };
-		FFEBAC23A080A7AFD78B3769 /* Pods_LingoClash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40973093C5286CD8CEEF401C /* Pods-LingoClash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LingoClash.release.xcconfig"; path = "Target Support Files/Pods-LingoClash/Pods-LingoClash.release.xcconfig"; sourceTree = "<group>"; };
 		6204A03927DE1CDB0063100D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6204A03C27DE41990063100D /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		6204A03E27DE43350063100D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +68,6 @@
 		62C04A1027DDE67F002D2497 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		62C04A1227DDE838002D2497 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62C04A1427DDEB10002D2497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A31D878EA5F06AB7FA1E7CA5 /* Pods-LingoClash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LingoClash.debug.xcconfig"; path = "Target Support Files/Pods-LingoClash/Pods-LingoClash.debug.xcconfig"; sourceTree = "<group>"; };
 		D33282DA27D4D42700C80986 /* LingoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33282DD27D4D42700C80986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D33282DF27D4D42700C80986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +95,6 @@
 		D3F00CB727DFD39700393ADC /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		D3F00CB927E0642A00393ADC /* FakeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataProvider.swift; sourceTree = "<group>"; };
 		D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LingoClash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFEBAC23A080A7AFD78B3769 /* Pods_LingoClash.framework in Frameworks */,
+				6FA0243C27E1BBBE00F94E54 /* FirebaseDatabase in Frameworks */,
+				6FA0244727E1BC9E00F94E54 /* PromiseKit in Frameworks */,
+				6FA0244427E1BBBE00F94E54 /* FirebaseStorageCombine-Community in Frameworks */,
+				6FA0243E27E1BBBE00F94E54 /* FirebaseFirestore in Frameworks */,
+				6FA0243827E1BBBE00F94E54 /* FirebaseAuth in Frameworks */,
+				6FA0244027E1BBBE00F94E54 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				6FA0243A27E1BBBE00F94E54 /* FirebaseAuthCombine-Community in Frameworks */,
+				6FA0244227E1BBBE00F94E54 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,14 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02C5B9E118F2915075D72495 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FE4E0C629956193A4D0D79D8 /* Pods_LingoClash.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6204A03B27DE34040063100D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +155,6 @@
 				D3BD29E327DCE6350061E362 /* LingoClashTests */,
 				D33282DB27D4D42700C80986 /* Products */,
 				FAF94B47CEBBDB83317A7861 /* Pods */,
-				02C5B9E118F2915075D72495 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,8 +264,6 @@
 		FAF94B47CEBBDB83317A7861 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A31D878EA5F06AB7FA1E7CA5 /* Pods-LingoClash.debug.xcconfig */,
-				40973093C5286CD8CEEF401C /* Pods-LingoClash.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -275,17 +275,25 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D33282F127D4D42E00C80986 /* Build configuration list for PBXNativeTarget "LingoClash" */;
 			buildPhases = (
-				6DE29A0D4F53B0B5562911DF /* [CP] Check Pods Manifest.lock */,
 				D33282D627D4D42700C80986 /* Sources */,
 				D33282D727D4D42700C80986 /* Frameworks */,
 				D33282D827D4D42700C80986 /* Resources */,
-				663E9873C8FD86E373E23ABA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LingoClash;
+			packageProductDependencies = (
+				6FA0243727E1BBBE00F94E54 /* FirebaseAuth */,
+				6FA0243927E1BBBE00F94E54 /* FirebaseAuthCombine-Community */,
+				6FA0243B27E1BBBE00F94E54 /* FirebaseDatabase */,
+				6FA0243D27E1BBBE00F94E54 /* FirebaseFirestore */,
+				6FA0243F27E1BBBE00F94E54 /* FirebaseFirestoreCombine-Community */,
+				6FA0244127E1BBBE00F94E54 /* FirebaseStorage */,
+				6FA0244327E1BBBE00F94E54 /* FirebaseStorageCombine-Community */,
+				6FA0244627E1BC9E00F94E54 /* PromiseKit */,
+			);
 			productName = LingoClash;
 			productReference = D33282DA27D4D42700C80986 /* LingoClash.app */;
 			productType = "com.apple.product-type.application";
@@ -336,6 +344,10 @@
 				Base,
 			);
 			mainGroup = D33282D127D4D42700C80986;
+			packageReferences = (
+				6FA0243627E1BBBE00F94E54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				6FA0244527E1BC9D00F94E54 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+			);
 			productRefGroup = D33282DB27D4D42700C80986 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,48 +379,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		663E9873C8FD86E373E23ABA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LingoClash/Pods-LingoClash-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LingoClash/Pods-LingoClash-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LingoClash/Pods-LingoClash-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6DE29A0D4F53B0B5562911DF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LingoClash-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D33282D627D4D42700C80986 /* Sources */ = {
@@ -600,7 +570,6 @@
 		};
 		D33282F227D4D42E00C80986 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A31D878EA5F06AB7FA1E7CA5 /* Pods-LingoClash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -633,7 +602,6 @@
 		};
 		D33282F327D4D42E00C80986 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40973093C5286CD8CEEF401C /* Pods-LingoClash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -730,6 +698,68 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6FA0243627E1BBBE00F94E54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		6FA0244527E1BC9D00F94E54 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6FA0243727E1BBBE00F94E54 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA0243627E1BBBE00F94E54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		6FA0243927E1BBBE00F94E54 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA0243627E1BBBE00F94E54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		6FA0243B27E1BBBE00F94E54 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA0243627E1BBBE00F94E54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		6FA0243D27E1BBBE00F94E54 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA0243627E1BBBE00F94E54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		6FA0243F27E1BBBE00F94E54 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA0243627E1BBBE00F94E54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		6FA0244127E1BBBE00F94E54 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA0243627E1BBBE00F94E54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		6FA0244327E1BBBE00F94E54 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA0243627E1BBBE00F94E54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		6FA0244627E1BC9E00F94E54 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FA0244527E1BC9D00F94E54 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D33282E627D4D42700C80986 /* LingoClash.xcdatamodeld */ = {
