@@ -154,7 +154,6 @@
 				D33282DC27D4D42700C80986 /* LingoClash */,
 				D3BD29E327DCE6350061E362 /* LingoClashTests */,
 				D33282DB27D4D42700C80986 /* Products */,
-				FAF94B47CEBBDB83317A7861 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,13 +258,6 @@
 				D3BD2A1627DF28B70061E362 /* BookDataManager.swift */,
 			);
 			path = DataManagers;
-			sourceTree = "<group>";
-		};
-		FAF94B47CEBBDB83317A7861 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
