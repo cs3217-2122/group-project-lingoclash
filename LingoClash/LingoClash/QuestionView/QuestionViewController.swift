@@ -47,7 +47,7 @@ class QuestionViewController: UIViewController {
 }
 
 protocol QuestionViewControllerDataSource {
-    func setViewModel(_: QuestionViewController) -> QuestionViewModel
+    func setViewModel(_: QuestionViewController) -> g
 }
 
 protocol QuestionViewControllerDelegate {
