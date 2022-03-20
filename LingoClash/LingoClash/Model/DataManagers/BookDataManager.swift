@@ -33,7 +33,6 @@ class BookDataManager {
             try? JSONDecoder().decode(
                 [Book].self, from: result.data)
         }
-        
     }
     
     func getOne(id: Identifier) -> Promise<Book> {
