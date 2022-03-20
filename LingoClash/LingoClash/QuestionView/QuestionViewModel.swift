@@ -6,5 +6,5 @@
 //
 
 protocol QuestionViewModel {
-    
+    var questionLayoutViewModel: Dynamic<QuestionLayoutViewModel>? { get }
 }

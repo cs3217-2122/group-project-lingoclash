@@ -18,6 +18,7 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
     var currSentenceDefinition: Dynamic<String>
     var isLastVocab: Dynamic<Bool>
     var isFirstVocab: Dynamic<Bool>
+    var lessonQuizViewModel: LessonQuizViewModel
     
     init(lesson: Lesson) {
         assert(lesson.vocabs.count > 0)
@@ -30,6 +31,7 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
         self.currSentenceDefinition = Dynamic(currVocab.sentenceDefinition)
         self.isFirstVocab = Dynamic(true)
         self.isLastVocab = Dynamic(lesson.vocabs.count == self.currIndex.value - 1)
+        self.lessonQuizViewModel = LessonQuizViewModelFromLesson(lesson: lesson)
     }
 
     func playVocabPronounciation() {

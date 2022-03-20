@@ -34,6 +34,17 @@ class LessonVocabViewController: UIViewController {
             fillUI()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        guard let viewModel = viewModel else {
+            return
+        }
+
+        if let lessonQuizViewController = segue.destination as? LessonQuizViewController {
+            lessonQuizViewController.viewModel = viewModel.lessonQuizViewModel
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -37,6 +37,42 @@ class QuestionViewController: UIViewController {
             return
         }
         
+        viewModel.questionLayoutViewModel?.bindAndFire { [unowned self] in loadQuestionLayoutViewController(belongingTo: $0)}
+        
+    }
+    
+    private func loadQuestionLayoutViewController(belongingTo questionLayoutViewModel: QuestionLayoutViewModel) {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        var viewController: QuestionLayoutViewController?
+        switch questionLayoutViewModel {
+        case let simpleOptionQuestionLayoutViewModel as SimpleOptionQuestionLayoutViewModel:
+            viewController = storyboard.instantiateViewController(identifier: SimpleOptionQuestionLayoutViewController.identifier)
+                                                as? SimpleOptionQuestionLayoutViewController
+        case let twoDisjointSetOptionQuestionLayoutViewModel as TwoDisjointSetOptionQuestionLayoutViewModel:
+            viewController = storyboard.instantiateViewController(identifier: TwoDisjointSetOptionQuestionLayoutViewController.identifier)
+                                                as? TwoDisjointSetOptionQuestionLayoutViewController
+        default:
+            return
+        }
+        if let viewController = viewController {
+            viewController.delegate = self
+            loadQuestionLayoutViewController(viewController)
+        }
+    }
+    
+    private func loadQuestionLayoutViewController(_ viewController: QuestionLayoutViewController) {
+        addChild(viewController)
+        view.addSubview(viewController.view)
+        setVCConstraints(viewController)
+        viewController.didMove(toParent: self)
+    }
+    
+    private func setVCConstraints(_ viewController: QuestionLayoutViewController) {
+        viewController.view.translatesAutoresizingMaskIntoConstraints = false
+        viewController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+        viewController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        viewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        viewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
     }
     
     private func setUpViewModel() {
@@ -44,6 +80,12 @@ class QuestionViewController: UIViewController {
             return
         }
         self.viewModel = vm
+    }
+}
+
+extension QuestionViewController: QuestionLayoutVCDelegate {
+    func questionViewController(_: QuestionLayoutViewController, didAnswerCorrectly: Bool) {
+        self.delegate?.questionViewController(self, didAnswerCorrectly: didAnswerCorrectly)
     }
 }
 

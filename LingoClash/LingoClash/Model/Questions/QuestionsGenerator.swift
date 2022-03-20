@@ -20,11 +20,13 @@ class QuestionsGenerator {
         var questions = [Question]()
         for i in 0..<constructors.count {
             let constructor = constructors[i]
-            let constructorCount = constructorsCount[i]
-            let vocabs = getRandomVocabs(from: scope, count: constructorCount)
-            let question = constructor.constructQuestion(with: vocabs)
-            if let question = question {
-                questions.append(question)
+            let constructorQuestionCount = constructorsCount[i]
+            for _ in 0..<constructorQuestionCount {
+                let vocabs = getRandomVocabs(from: scope, count: constructor.vocabsNeededToConstruct)
+                let question = constructor.constructQuestion(with: vocabs)
+                if let question = question {
+                    questions.append(question)
+                }
             }
         }
         

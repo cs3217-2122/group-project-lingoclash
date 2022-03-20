@@ -27,6 +27,14 @@ class LessonOverviewViewModelFromLesson: LessonOverviewViewModel {
             Vocab(vocabId: 1, word: "周", definition: "week", sentence: "一周有七天。",
                   sentenceDefinition: "Every week has 7 days.", pronunciationText: "zhōu"),
             Vocab(vocabId: 2, word: "今天", definition: "today", sentence: "她今天看起来很悲伤。",
+                  sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
+            Vocab(vocabId: 3, word: "今今天", definition: "today", sentence: "她今天看起来很悲伤。",
+                  sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
+            Vocab(vocabId: 4, word: "今今今天", definition: "today", sentence: "她今天看起来很悲伤。",
+                  sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
+            Vocab(vocabId: 5, word: "今今今今天", definition: "today", sentence: "她今天看起来很悲伤。",
+                  sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
+            Vocab(vocabId: 6, word: "今今今今今天", definition: "today", sentence: "她今天看起来很悲伤。",
                   sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān")
         ]
         
