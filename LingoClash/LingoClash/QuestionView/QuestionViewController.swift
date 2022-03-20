@@ -36,6 +36,7 @@ class QuestionViewController: UIViewController {
         guard isViewLoaded, let viewModel = viewModel else {
             return
         }
+        
     }
     
     private func setUpViewModel() {
@@ -47,7 +48,7 @@ class QuestionViewController: UIViewController {
 }
 
 protocol QuestionViewControllerDataSource {
-    func setViewModel(_: QuestionViewController) -> g
+    func setViewModel(_: QuestionViewController) -> QuestionViewModel?
 }
 
 protocol QuestionViewControllerDelegate {

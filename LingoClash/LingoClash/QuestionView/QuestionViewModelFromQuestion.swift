@@ -6,4 +6,7 @@
 //
 
 class QuestionViewModelFromQuestion: QuestionViewModel {
+    init(question: Question){
+        
+    }
 }

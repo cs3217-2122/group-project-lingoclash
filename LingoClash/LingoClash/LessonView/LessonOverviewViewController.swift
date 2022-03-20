@@ -31,7 +31,7 @@ class LessonOverviewViewController: UIViewController {
         super.viewDidLoad()
         self.vocabCollection.dataSource = self
         // TODO: REMOVE TEMPORARY
-        self.viewModel = LessonOverviewViewModelFromLesson(lesson: Lesson(lessonName: "Lesson 1", lessonId: 1))
+        self.viewModel = LessonOverviewViewModelFromLesson(lesson: Lesson(lessonName: "Lesson 1", lessonId: 1, stars: 0))
         styleUI()
         fillUI()
     }

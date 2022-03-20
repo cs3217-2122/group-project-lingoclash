@@ -10,11 +10,13 @@ import Foundation
 class Lesson {
     let lessonName: String
     let lessonId: Int
+    var stars: Int
     var vocabs = [Vocab]()
     var questions = [Question]()
     
-    init(lessonName: String, lessonId: Int) {
+    init(lessonName: String, lessonId: Int, stars: Int) {
         self.lessonName = lessonName
         self.lessonId = lessonId
+        self.stars = stars
     }
 }
