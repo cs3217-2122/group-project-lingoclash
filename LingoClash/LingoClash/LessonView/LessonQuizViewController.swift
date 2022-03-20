@@ -19,6 +19,7 @@ class LessonQuizViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak var progressBar: UIProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
         styleUI()
@@ -44,6 +45,8 @@ class LessonQuizViewController: UIViewController {
         guard isViewLoaded, let viewModel = viewModel else {
             return
         }
+        viewModel.progress.bindAndFire { [unowned self] in
+            self.progressBar?.setProgress($0, animated: true) }
         viewModel.questionViewModel.bindAndFire { [unowned self] (_) -> Void in
             self.questionViewController?.reloadData() }
         viewModel.quizStatus.bindAndFire { [unowned self] in

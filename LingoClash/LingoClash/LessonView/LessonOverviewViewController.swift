@@ -44,9 +44,9 @@ class LessonOverviewViewController: UIViewController {
         guard isViewLoaded, let viewModel = viewModel else {
             return
         }
-        let textField = UITextField()
-        textField.text = viewModel.lessonName
-        self.navigationItem.titleView = textField
+        let label = UILabel()
+        label.text = viewModel.lessonName
+        self.navigationItem.titleView = label
 
         viewModel.vocabs.bindAndFire {[unowned self] (_) -> Void in
             vocabCollection.reloadData()}

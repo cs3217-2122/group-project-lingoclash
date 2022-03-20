@@ -8,11 +8,11 @@
 import UIKit
 
 class LessonVocabViewController: UIViewController {
-    @IBOutlet weak var vocabTextField: UITextField!
-    @IBOutlet weak var sentenceDefinitionTextField: UITextField!
-    @IBOutlet weak var sentenceTextField: UITextField!
-    @IBOutlet weak var vocabDefinitionTextField: UITextField!
-    @IBOutlet weak var pronounciationTextField: UITextField!
+    @IBOutlet weak var vocabLabel: UILabel!
+    @IBOutlet weak var sentenceDefinitionLabel: UILabel!
+    @IBOutlet weak var sentenceLabel: UILabel!
+    @IBOutlet weak var vocabDefinitionLabel: UILabel!
+    @IBOutlet weak var pronounciationLabel: UILabel!
 
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
@@ -61,11 +61,11 @@ class LessonVocabViewController: UIViewController {
             return
         }
         
-        viewModel.currVocab.bindAndFire { [unowned self] in self.vocabTextField.text = $0 }
-        viewModel.currSentenceDefinition.bindAndFire { [unowned self] in self.sentenceDefinitionTextField.text = $0 }
-        viewModel.currSentence.bindAndFire { [unowned self] in self.sentenceTextField.text = $0 }
-        viewModel.currVocabDefinition.bindAndFire { [unowned self] in self.vocabDefinitionTextField.text = $0 }
-        viewModel.currVocabPronounciation.bindAndFire { [unowned self] in self.pronounciationTextField.text = $0 }
+        viewModel.currVocab.bindAndFire { [unowned self] in self.vocabLabel.text = $0 }
+        viewModel.currSentenceDefinition.bindAndFire { [unowned self] in self.sentenceDefinitionLabel.text = $0 }
+        viewModel.currSentence.bindAndFire { [unowned self] in self.sentenceLabel.text = $0 }
+        viewModel.currVocabDefinition.bindAndFire { [unowned self] in self.vocabDefinitionLabel.text = $0 }
+        viewModel.currVocabPronounciation.bindAndFire { [unowned self] in self.pronounciationLabel.text = $0 }
         viewModel.isLastVocab.bindAndFire { [unowned self] in self.nextButton.isEnabled = !$0 }
         viewModel.isFirstVocab.bindAndFire { [unowned self] in self.prevButton.isEnabled = !$0 }
     }

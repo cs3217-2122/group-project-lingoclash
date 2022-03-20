@@ -46,11 +46,17 @@ class QuestionViewController: UIViewController {
         var viewController: QuestionLayoutViewController?
         switch questionLayoutViewModel {
         case let simpleOptionQuestionLayoutViewModel as SimpleOptionQuestionLayoutViewModel:
-            viewController = storyboard.instantiateViewController(identifier: SimpleOptionQuestionLayoutViewController.identifier)
-                                                as? SimpleOptionQuestionLayoutViewController
+            if let vc = storyboard.instantiateViewController(identifier: SimpleOptionQuestionLayoutViewController.identifier)
+                as? SimpleOptionQuestionLayoutViewController {
+                vc.viewModel = simpleOptionQuestionLayoutViewModel
+                viewController = vc
+            }
         case let twoDisjointSetOptionQuestionLayoutViewModel as TwoDisjointSetOptionQuestionLayoutViewModel:
-            viewController = storyboard.instantiateViewController(identifier: TwoDisjointSetOptionQuestionLayoutViewController.identifier)
-                                                as? TwoDisjointSetOptionQuestionLayoutViewController
+            if let vc = storyboard.instantiateViewController(identifier: TwoDisjointSetOptionQuestionLayoutViewController.identifier)
+                as? TwoDisjointSetOptionQuestionLayoutViewController {
+                vc.viewModel = twoDisjointSetOptionQuestionLayoutViewModel
+                viewController = vc
+            }
         default:
             return
         }
@@ -84,7 +90,7 @@ class QuestionViewController: UIViewController {
 }
 
 extension QuestionViewController: QuestionLayoutVCDelegate {
-    func questionViewController(_: QuestionLayoutViewController, didAnswerCorrectly: Bool) {
+    func questionLayoutViewController(_: QuestionLayoutViewController, didAnswerCorrectly: Bool) {
         self.delegate?.questionViewController(self, didAnswerCorrectly: didAnswerCorrectly)
     }
 }

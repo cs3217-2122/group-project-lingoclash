@@ -14,5 +14,5 @@ protocol QuestionLayoutViewController: UIViewController {
 }
 
 protocol QuestionLayoutVCDelegate {
-    func questionViewController(_ : QuestionLayoutViewController, didAnswerCorrectly: Bool)
+    func questionLayoutViewController(_ : QuestionLayoutViewController, didAnswerCorrectly: Bool)
 }

@@ -28,13 +28,13 @@ class LessonOverviewViewModelFromLesson: LessonOverviewViewModel {
                   sentenceDefinition: "Every week has 7 days.", pronunciationText: "zhōu"),
             Vocab(vocabId: 2, word: "今天", definition: "today", sentence: "她今天看起来很悲伤。",
                   sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
-            Vocab(vocabId: 3, word: "今今天", definition: "today", sentence: "她今天看起来很悲伤。",
+            Vocab(vocabId: 3, word: "明天", definition: "tomorrow", sentence: "明天10：10",
+                  sentenceDefinition: " tomorrow at 10:10", pronunciationText: "míngtiān"),
+            Vocab(vocabId: 4, word: "昨天", definition: "yesterday", sentence: "她今天看起来很悲伤。",
                   sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
-            Vocab(vocabId: 4, word: "今今今天", definition: "today", sentence: "她今天看起来很悲伤。",
+            Vocab(vocabId: 5, word: "日历", definition: "calendar", sentence: "她今天看起来很悲伤。",
                   sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
-            Vocab(vocabId: 5, word: "今今今今天", definition: "today", sentence: "她今天看起来很悲伤。",
-                  sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
-            Vocab(vocabId: 6, word: "今今今今今天", definition: "today", sentence: "她今天看起来很悲伤。",
+            Vocab(vocabId: 6, word: "秒", definition: "second", sentence: "她今天看起来很悲伤。",
                   sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān")
         ]
         

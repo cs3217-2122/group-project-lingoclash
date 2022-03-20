@@ -14,7 +14,7 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
     var questionsStatus: [QuestionStatus]
     var currQuestionIndex = 0
     
-    
+    var progress: Dynamic<Float>
     var questionViewModel: Dynamic<QuestionViewModel>
     var quizStatus: Dynamic<QuizStatus> = Dynamic(QuizStatus.incomplete)
 
@@ -28,17 +28,24 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
         self.questionsStatus = [QuestionStatus](repeating: .incomplete, count: self.questions.count)
         let currQuestion = self.questions[self.currQuestionIndex]
         self.questionViewModel = Dynamic(QuestionViewModelFromQuestion(question: currQuestion))
+        self.progress = Dynamic(0.0)
     }
     
     func questionDidComplete(isCorrect: Bool) {
-        self.questionsStatus[currQuestionIndex] = isCorrect ? .correct : .wrong
+        if isCorrect {
+            self.questionsStatus[currQuestionIndex] = .correct
+            self.progress.value += 1 / Float(self.questionsCount)
+        } else {
+            self.questionsStatus[currQuestionIndex] = .wrong
+        }
         currQuestionIndex += 1
-        guard currQuestionIndex < self.questions.count else {
+        let isQuizIncomplete = currQuestionIndex < self.questions.count
+        guard isQuizIncomplete else {
             self.quizDidComplete()
             return
         }
         let currQuestion = self.questions[self.currQuestionIndex]
-        self.questionViewModel = Dynamic(QuestionViewModelFromQuestion(question: currQuestion))
+        self.questionViewModel.value = QuestionViewModelFromQuestion(question: currQuestion)
     }
     
     private func quizDidComplete() {
