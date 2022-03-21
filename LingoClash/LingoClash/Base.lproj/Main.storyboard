@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Jf-HP-hoW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wSe-wd-I8A">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -383,6 +383,7 @@
                                     <constraint firstItem="U8P-lK-VJU" firstAttribute="top" secondItem="Zul-2c-ihB" secondAttribute="top" constant="30" id="W2L-rc-XjC"/>
                                     <constraint firstAttribute="bottom" secondItem="ieZ-Ka-m70" secondAttribute="bottom" constant="30" id="mHn-M9-f22"/>
                                     <constraint firstAttribute="width" constant="379" id="tN3-Gq-CWW"/>
+                                    <constraint firstItem="ieZ-Ka-m70" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zul-2c-ihB" secondAttribute="leading" constant="20" symbolic="YES" id="ugc-9N-WWO"/>
                                     <constraint firstAttribute="height" constant="167" id="vJS-Ff-xEA"/>
                                     <constraint firstItem="U8P-lK-VJU" firstAttribute="centerX" secondItem="Zul-2c-ihB" secondAttribute="centerX" id="yTj-qk-n9X"/>
                                 </constraints>
@@ -924,7 +925,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1G7-4b-OH4"/>
+        <segue reference="ZPf-VB-GhE"/>
         <segue reference="AfC-OO-m0s"/>
     </inferredMetricsTieBreakers>
     <resources>

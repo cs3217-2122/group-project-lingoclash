@@ -23,7 +23,7 @@ class CurrentBookSectionViewController: UITabBarController {
         if currentBookPresent {
             self.selectedIndex = currentBookViewIndex
         } else {
-            self.selectedIndex = noBookViewIndex
+//            self.selectedIndex = noBookViewIndex
         }
         
         self.tabBarController?.tabBar.isHidden = true
