@@ -14,7 +14,7 @@ final class RecommendedBooksViewModel {
     func refreshBooks() {
         // TODO: Call firebase API to get books the user has not completed, and preprocess into BooksWithCategories format
         let categories = ["Japanese", "Chinese"]
-        let books = ["Japanese":["Japanese 1", "Japanese 2", "Japanese 3", "Japanese 4"], "Chinese": ["Chinese 1"]]
+        let books = ["Japanese":["Japanese 1 2020 Edition", "Japanese 2", "Japanese 3", "Japanese 4"], "Chinese": ["Chinese 1"]]
         booksWithCategories = BooksWithCategories(categories: categories, books: books)
     }
 }

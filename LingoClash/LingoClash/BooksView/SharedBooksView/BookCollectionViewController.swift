@@ -39,7 +39,11 @@ class BookCollectionViewController: UICollectionViewController {
         var cell = UICollectionViewCell()
         
         if let bookCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? BookCollectionViewCell {
+            
             bookCell.configure(bookName: booksProgress[indexPath.row].name, progress: booksProgress[indexPath.row].progress)
+            
+            ViewUtilities.styleCard(bookCell)
+            
             cell = bookCell
         }
         

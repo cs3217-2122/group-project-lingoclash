@@ -22,7 +22,7 @@ class RecommendedBooksViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let collectionViewController = segue.destination as? RecommendedBookCollectionViewController {
+        if let collectionViewController = segue.destination as? RecommendedBooksTableViewController {
             collectionViewController.viewModel = self.viewModel
         }
     }

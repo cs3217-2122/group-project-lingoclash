@@ -33,4 +33,34 @@ class ViewUtilities {
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor.black
     }
+    
+    static func styleCard(_ cell: UICollectionViewCell) {
+        cell.contentView.layer.backgroundColor = Constants.UI.blue.cgColor
+        
+        // Make corners rounded
+        cell.contentView.layer.cornerRadius = 10.0
+        cell.contentView.layer.masksToBounds = true
+        
+        // Drop shadow
+        cell.layer.shadowRadius = 10.0
+        cell.layer.shadowOpacity = 0.2
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
+        cell.layer.masksToBounds = false
+    }
+    
+    static func styleCard(_ view: UIView) {
+        view.layer.backgroundColor = Constants.UI.blue.cgColor
+        
+        // Make corners rounded
+        view.layer.cornerRadius = 10.0
+        view.layer.masksToBounds = true
+        
+        // Drop shadow
+        view.layer.shadowRadius = 10.0
+        view.layer.shadowOpacity = 0.2
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: 5)
+        view.layer.masksToBounds = false
+    }
 }
