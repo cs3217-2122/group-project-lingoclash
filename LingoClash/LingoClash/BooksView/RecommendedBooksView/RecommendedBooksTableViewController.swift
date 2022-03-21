@@ -29,6 +29,7 @@ class RecommendedBooksTableViewController: UITableViewController {
         
         viewModel.$booksWithCategories.sink {[weak self] books in
             self?.booksWithCategories = books
+            self?.tableView.reloadData()
         }.store(in: &cancellables)
     }
 

@@ -32,6 +32,9 @@ class RecommendedBooksTableViewCell: UITableViewCell, UICollectionViewDataSource
         if let bookCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellReuseIdentifier, for: indexPath) as? RecommendedBookCollectionViewCell {
             
             bookCell.configure(bookName: books[indexPath.row])
+            
+            ViewUtilities.styleCard(bookCell.containerView)
+            
             cell = bookCell
         }
         return cell

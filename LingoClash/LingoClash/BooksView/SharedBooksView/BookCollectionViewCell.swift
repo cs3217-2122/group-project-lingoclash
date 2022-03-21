@@ -17,6 +17,6 @@ class BookCollectionViewCell: UICollectionViewCell {
     
     func configure(bookName: String, progress: String) {
         bookNameLabel.text = bookName
-        progressLabel.text = progress
+        progressLabel.text = "Progress: \(progress)"
     }
 }

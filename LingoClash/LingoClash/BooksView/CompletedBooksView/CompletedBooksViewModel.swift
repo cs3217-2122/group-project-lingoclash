@@ -17,7 +17,8 @@ final class CompletedBooksViewModel: BooksViewModel {
     func refreshBooks() {
         // TODO: Call firebase API to get books the user has completed
         booksProgress = [BookProgress(name: "Korean 1", progress: "10/10"),
-                         BookProgress(name: "Korean 2", progress: "10/10")]
+                         BookProgress(name: "Korean 2", progress: "10/10"),
+                         BookProgress(name: "Chinese 1", progress: "10/10")]
     }
 }
 

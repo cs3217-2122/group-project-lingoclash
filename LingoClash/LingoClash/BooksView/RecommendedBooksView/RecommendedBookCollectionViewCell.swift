@@ -9,6 +9,7 @@ import UIKit
 
 class RecommendedBookCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var learnButton: UIButton!
     

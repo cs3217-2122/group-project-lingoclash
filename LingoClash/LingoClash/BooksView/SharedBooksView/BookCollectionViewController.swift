@@ -28,6 +28,7 @@ class BookCollectionViewController: UICollectionViewController {
         
         viewModel.booksProgressPublisher.sink {[weak self] booksProgress in
             self?.booksProgress = booksProgress
+            self?.collectionView.reloadData()
         }.store(in: &cancellables)
     }
 
