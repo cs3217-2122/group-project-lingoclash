@@ -7,6 +7,6 @@
 
 protocol TwoDisjointSetOptionQuestion: Question {
     var context: String { get }
-    var options: [Set<String>] { get }
+    var options: [[String]] { get }
     var answer: Set<[String]> { get }
 }

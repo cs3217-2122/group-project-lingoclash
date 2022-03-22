@@ -648,11 +648,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="progressBar" destination="Uj5-1O-UNc" id="3t2-3Z-L6T"/>
+                        <segue destination="zkw-70-GXY" kind="presentation" identifier="toLessonQuizOutcomeViewController" id="EDQ-vW-gcN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbF-qJ-t6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7771.7741935483873" y="152.78022947925859"/>
+            <point key="canvasLocation" x="7724" y="162"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="Sxp-k0-cGT">
@@ -775,6 +776,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrB-3k-7Wy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8553" y="-56"/>
+        </scene>
+        <!--Lesson Quiz Outcome View Controller-->
+        <scene sceneID="otE-lW-zni">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="zkw-70-GXY" customClass="LessonQuizOutcomeViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nii-PV-jkr">
+                        <rect key="frame" x="0.0" y="0.0" width="744" height="1133"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0e-yO-gqc">
+                                <rect key="frame" x="351" y="556" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hy6-U7-uLo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j0e-yO-gqc" firstAttribute="centerX" secondItem="hy6-U7-uLo" secondAttribute="centerX" id="NMn-a7-p6z"/>
+                            <constraint firstItem="j0e-yO-gqc" firstAttribute="centerY" secondItem="hy6-U7-uLo" secondAttribute="centerY" id="mQX-ue-0pH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="quizOutcomeLabel" destination="j0e-yO-gqc" id="od7-KO-sSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X2t-pY-g2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9248" y="162"/>
         </scene>
         <!--Two Disjoint Set Option Question Layout View Controller-->
         <scene sceneID="9Yg-WH-z29">

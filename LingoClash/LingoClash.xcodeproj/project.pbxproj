@@ -24,6 +24,18 @@
 		6FA0244427E1BBBE00F94E54 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244327E1BBBE00F94E54 /* FirebaseStorageCombine-Community */; };
 		6FA0244727E1BC9E00F94E54 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244627E1BC9E00F94E54 /* PromiseKit */; };
 		CEF02D7327E8CAC400C30E03 /* LessonQuizProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */; };
+		CEF02D7527E956DA00C30E03 /* LessonQuizOutcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7427E956DA00C30E03 /* LessonQuizOutcomeViewController.swift */; };
+		CEF02D7727E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7627E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift */; };
+		CEF02D7927E9573700C30E03 /* LessonQuizOutcomeViewModelFromQuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7827E9573700C30E03 /* LessonQuizOutcomeViewModelFromQuizResult.swift */; };
+		CEF02D7B27E9577C00C30E03 /* LessonQuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7A27E9577C00C30E03 /* LessonQuizResult.swift */; };
+		CEF02D8027E9686C00C30E03 /* QuestionSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7F27E9686C00C30E03 /* QuestionSequence.swift */; };
+		CEF02D8527E9720600C30E03 /* QuestionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D8427E9720600C30E03 /* QuestionType.swift */; };
+		CEF02D8727E9721000C30E03 /* QuestionFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D8627E9721000C30E03 /* QuestionFormat.swift */; };
+		CEF02D8927E9775E00C30E03 /* QuestionConstructorRandomFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D8827E9775E00C30E03 /* QuestionConstructorRandomFactory.swift */; };
+		CEF02D8B27E983B700C30E03 /* MatchVocabToDefinitionQuestionConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D8A27E983B700C30E03 /* MatchVocabToDefinitionQuestionConstructor.swift */; };
+		CEF02D8D27E9862C00C30E03 /* QuestionScopeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D8C27E9862C00C30E03 /* QuestionScopeFactory.swift */; };
+		CEF02D9027E9910500C30E03 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = CEF02D8F27E9910500C30E03 /* Algorithms */; };
+		CEF02D9227E9C2A800C30E03 /* QuestionGenerationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D9127E9C2A800C30E03 /* QuestionGenerationError.swift */; };
 		CEF1E7A827E50082005D4272 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7A727E50082005D4272 /* Transaction.swift */; };
 		CEF1E7AA27E50093005D4272 /* StarsTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7A927E50093005D4272 /* StarsTransaction.swift */; };
 		CEF1E7AC27E5030C005D4272 /* CurrencySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7AB27E5030C005D4272 /* CurrencySystem.swift */; };
@@ -54,7 +66,6 @@
 		CEF1E80927E6F3F4005D4272 /* QuestionsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80827E6F3F4005D4272 /* QuestionsGenerator.swift */; };
 		CEF1E80B27E6F644005D4272 /* QuestionConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80A27E6F644005D4272 /* QuestionConstructor.swift */; };
 		CEF1E80D27E6F6B1005D4272 /* DefinitionOptionQuestionConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80C27E6F6B1005D4272 /* DefinitionOptionQuestionConstructor.swift */; };
-		CEF1E80F27E70248005D4272 /* Array+subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80E27E70248005D4272 /* Array+subscript.swift */; };
 		CEF1E81127E71944005D4272 /* LessonQuizViewModelFromLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E81027E71944005D4272 /* LessonQuizViewModelFromLesson.swift */; };
 		CEF1E81427E71F9D005D4272 /* QuestionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E81327E71F9D005D4272 /* QuestionStatus.swift */; };
 		CEF1E81627E742BF005D4272 /* SimpleOptionQuestionLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E81527E742BF005D4272 /* SimpleOptionQuestionLayoutViewModel.swift */; };
@@ -109,6 +120,17 @@
 		62C04A1227DDE838002D2497 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62C04A1427DDEB10002D2497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizProgressBarView.swift; sourceTree = "<group>"; };
+		CEF02D7427E956DA00C30E03 /* LessonQuizOutcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizOutcomeViewController.swift; sourceTree = "<group>"; };
+		CEF02D7627E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizOutcomeViewModel.swift; sourceTree = "<group>"; };
+		CEF02D7827E9573700C30E03 /* LessonQuizOutcomeViewModelFromQuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizOutcomeViewModelFromQuizResult.swift; sourceTree = "<group>"; };
+		CEF02D7A27E9577C00C30E03 /* LessonQuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizResult.swift; sourceTree = "<group>"; };
+		CEF02D7F27E9686C00C30E03 /* QuestionSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSequence.swift; sourceTree = "<group>"; };
+		CEF02D8427E9720600C30E03 /* QuestionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionType.swift; sourceTree = "<group>"; };
+		CEF02D8627E9721000C30E03 /* QuestionFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFormat.swift; sourceTree = "<group>"; };
+		CEF02D8827E9775E00C30E03 /* QuestionConstructorRandomFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionConstructorRandomFactory.swift; sourceTree = "<group>"; };
+		CEF02D8A27E983B700C30E03 /* MatchVocabToDefinitionQuestionConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVocabToDefinitionQuestionConstructor.swift; sourceTree = "<group>"; };
+		CEF02D8C27E9862C00C30E03 /* QuestionScopeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionScopeFactory.swift; sourceTree = "<group>"; };
+		CEF02D9127E9C2A800C30E03 /* QuestionGenerationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGenerationError.swift; sourceTree = "<group>"; };
 		CEF1E7A727E50082005D4272 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		CEF1E7A927E50093005D4272 /* StarsTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsTransaction.swift; sourceTree = "<group>"; };
 		CEF1E7AB27E5030C005D4272 /* CurrencySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySystem.swift; sourceTree = "<group>"; };
@@ -139,7 +161,6 @@
 		CEF1E80827E6F3F4005D4272 /* QuestionsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsGenerator.swift; sourceTree = "<group>"; };
 		CEF1E80A27E6F644005D4272 /* QuestionConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionConstructor.swift; sourceTree = "<group>"; };
 		CEF1E80C27E6F6B1005D4272 /* DefinitionOptionQuestionConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionOptionQuestionConstructor.swift; sourceTree = "<group>"; };
-		CEF1E80E27E70248005D4272 /* Array+subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+subscript.swift"; sourceTree = "<group>"; };
 		CEF1E81027E71944005D4272 /* LessonQuizViewModelFromLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizViewModelFromLesson.swift; sourceTree = "<group>"; };
 		CEF1E81327E71F9D005D4272 /* QuestionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStatus.swift; sourceTree = "<group>"; };
 		CEF1E81527E742BF005D4272 /* SimpleOptionQuestionLayoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOptionQuestionLayoutViewModel.swift; sourceTree = "<group>"; };
@@ -182,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF02D9027E9910500C30E03 /* Algorithms in Frameworks */,
 				6FA0243C27E1BBBE00F94E54 /* FirebaseDatabase in Frameworks */,
 				6FA0244727E1BC9E00F94E54 /* PromiseKit in Frameworks */,
 				6FA0244427E1BBBE00F94E54 /* FirebaseStorageCombine-Community in Frameworks */,
@@ -228,6 +250,90 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		CEF02D7C27E95D5500C30E03 /* QuestionContructors */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1E80A27E6F644005D4272 /* QuestionConstructor.swift */,
+				CEF02D8A27E983B700C30E03 /* MatchVocabToDefinitionQuestionConstructor.swift */,
+				CEF1E80C27E6F6B1005D4272 /* DefinitionOptionQuestionConstructor.swift */,
+			);
+			path = QuestionContructors;
+			sourceTree = "<group>";
+		};
+		CEF02D7D27E95D6700C30E03 /* QuestionFormats */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1E80327E6ED96005D4272 /* TwoDisjointSetOptionQuestion.swift */,
+				CEF1E7FC27E6E527005D4272 /* SimpleOptionQuestion.swift */,
+				CEF02D8627E9721000C30E03 /* QuestionFormat.swift */,
+			);
+			path = QuestionFormats;
+			sourceTree = "<group>";
+		};
+		CEF02D7E27E95D7F00C30E03 /* QuestionTypes */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1E80127E6EB21005D4272 /* DefinitionOptionQuestion.swift */,
+				CEF1E80527E6EF4D005D4272 /* MatchVocabToDefinitionQuestion.swift */,
+				CEF02D8427E9720600C30E03 /* QuestionType.swift */,
+			);
+			path = QuestionTypes;
+			sourceTree = "<group>";
+		};
+		CEF02D8327E96EAF00C30E03 /* QuestionsGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1E80827E6F3F4005D4272 /* QuestionsGenerator.swift */,
+				CEF02D7F27E9686C00C30E03 /* QuestionSequence.swift */,
+				CEF02D8827E9775E00C30E03 /* QuestionConstructorRandomFactory.swift */,
+				CEF02D8C27E9862C00C30E03 /* QuestionScopeFactory.swift */,
+				CEF02D9127E9C2A800C30E03 /* QuestionGenerationError.swift */,
+			);
+			path = QuestionsGenerator;
+			sourceTree = "<group>";
+		};
+		CEF02D9327E9CEB700C30E03 /* LessonOverview */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1E7D427E60C1F005D4272 /* LessonOverviewViewController.swift */,
+				CEF1E7DD27E60D42005D4272 /* LessonOverviewViewModel.swift */,
+				CEF1E7E527E61EF0005D4272 /* LessonOverviewViewModelFromLesson.swift */,
+			);
+			path = LessonOverview;
+			sourceTree = "<group>";
+		};
+		CEF02D9427E9CEC500C30E03 /* LessonVocab */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1E7D627E60C2D005D4272 /* LessonVocabViewController.swift */,
+				CEF1E7DF27E60D5C005D4272 /* LessonVocabViewModel.swift */,
+				CEF1E7EB27E63A2B005D4272 /* LessonVocabViewModelFromLesson.swift */,
+				CEF1E7E327E61CF1005D4272 /* VocabCollectionCell.swift */,
+			);
+			path = LessonVocab;
+			sourceTree = "<group>";
+		};
+		CEF02D9527E9CEDE00C30E03 /* LessonQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1E7D827E60C3E005D4272 /* LessonQuizViewController.swift */,
+				CEF1E7E127E60D68005D4272 /* LessonQuizViewModel.swift */,
+				CEF1E81027E71944005D4272 /* LessonQuizViewModelFromLesson.swift */,
+				CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */,
+			);
+			path = LessonQuiz;
+			sourceTree = "<group>";
+		};
+		CEF02D9627E9CEEE00C30E03 /* LessonQuizOutcome */ = {
+			isa = PBXGroup;
+			children = (
+				CEF02D7427E956DA00C30E03 /* LessonQuizOutcomeViewController.swift */,
+				CEF02D7627E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift */,
+				CEF02D7827E9573700C30E03 /* LessonQuizOutcomeViewModelFromQuizResult.swift */,
+			);
+			path = LessonQuizOutcome;
+			sourceTree = "<group>";
+		};
 		CEF1E7A627E50060005D4272 /* Currency */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,17 +356,10 @@
 		CEF1E7DA27E60C4F005D4272 /* LessonView */ = {
 			isa = PBXGroup;
 			children = (
-				CEF1E7D427E60C1F005D4272 /* LessonOverviewViewController.swift */,
-				CEF1E7DD27E60D42005D4272 /* LessonOverviewViewModel.swift */,
-				CEF1E7E527E61EF0005D4272 /* LessonOverviewViewModelFromLesson.swift */,
-				CEF1E7E327E61CF1005D4272 /* VocabCollectionCell.swift */,
-				CEF1E7D627E60C2D005D4272 /* LessonVocabViewController.swift */,
-				CEF1E7DF27E60D5C005D4272 /* LessonVocabViewModel.swift */,
-				CEF1E7EB27E63A2B005D4272 /* LessonVocabViewModelFromLesson.swift */,
-				CEF1E7D827E60C3E005D4272 /* LessonQuizViewController.swift */,
-				CEF1E7E127E60D68005D4272 /* LessonQuizViewModel.swift */,
-				CEF1E81027E71944005D4272 /* LessonQuizViewModelFromLesson.swift */,
-				CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */,
+				CEF02D9327E9CEB700C30E03 /* LessonOverview */,
+				CEF02D9427E9CEC500C30E03 /* LessonVocab */,
+				CEF02D9527E9CEDE00C30E03 /* LessonQuiz */,
+				CEF02D9627E9CEEE00C30E03 /* LessonQuizOutcome */,
 			);
 			path = LessonView;
 			sourceTree = "<group>";
@@ -280,14 +379,11 @@
 		CEF1E80027E6E967005D4272 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
-				CEF1E80827E6F3F4005D4272 /* QuestionsGenerator.swift */,
-				CEF1E80A27E6F644005D4272 /* QuestionConstructor.swift */,
+				CEF02D8327E96EAF00C30E03 /* QuestionsGenerator */,
+				CEF02D7E27E95D7F00C30E03 /* QuestionTypes */,
+				CEF02D7D27E95D6700C30E03 /* QuestionFormats */,
+				CEF02D7C27E95D5500C30E03 /* QuestionContructors */,
 				CEF1E7FA27E6D591005D4272 /* Question.swift */,
-				CEF1E80327E6ED96005D4272 /* TwoDisjointSetOptionQuestion.swift */,
-				CEF1E7FC27E6E527005D4272 /* SimpleOptionQuestion.swift */,
-				CEF1E80127E6EB21005D4272 /* DefinitionOptionQuestion.swift */,
-				CEF1E80527E6EF4D005D4272 /* MatchVocabToDefinitionQuestion.swift */,
-				CEF1E80C27E6F6B1005D4272 /* DefinitionOptionQuestionConstructor.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -370,6 +466,7 @@
 				D3F00CB627DFC5F200393ADC /* DataManagers */,
 				CEF1E7E727E61F58005D4272 /* Lesson.swift */,
 				CEF1E7E927E61F68005D4272 /* Vocab.swift */,
+				CEF02D7A27E9577C00C30E03 /* LessonQuizResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -378,7 +475,6 @@
 			isa = PBXGroup;
 			children = (
 				D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */,
-				CEF1E80E27E70248005D4272 /* Array+subscript.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -453,6 +549,7 @@
 				6FA0244127E1BBBE00F94E54 /* FirebaseStorage */,
 				6FA0244327E1BBBE00F94E54 /* FirebaseStorageCombine-Community */,
 				6FA0244627E1BC9E00F94E54 /* PromiseKit */,
+				CEF02D8F27E9910500C30E03 /* Algorithms */,
 			);
 			productName = LingoClash;
 			productReference = D33282DA27D4D42700C80986 /* LingoClash.app */;
@@ -507,6 +604,7 @@
 			packageReferences = (
 				6FA0243627E1BBBE00F94E54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				6FA0244527E1BC9D00F94E54 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				CEF02D8E27E9910500C30E03 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = D33282DB27D4D42700C80986 /* Products */;
 			projectDirPath = "";
@@ -554,7 +652,7 @@
 				D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */,
 				CEF1E7EA27E61F68005D4272 /* Vocab.swift in Sources */,
 				D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */,
-				CEF1E80F27E70248005D4272 /* Array+subscript.swift in Sources */,
+				CEF02D8027E9686C00C30E03 /* QuestionSequence.swift in Sources */,
 				CEF1E7EC27E63A2B005D4272 /* LessonVocabViewModelFromLesson.swift in Sources */,
 				CEF1E7B027E50419005D4272 /* User.swift in Sources */,
 				D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */,
@@ -564,17 +662,24 @@
 				CEF1E82127E75979005D4272 /* OptionTableCell.swift in Sources */,
 				CEF1E81427E71F9D005D4272 /* QuestionStatus.swift in Sources */,
 				6204A03D27DE41990063100D /* MainTabBarViewController.swift in Sources */,
+				CEF02D8727E9721000C30E03 /* QuestionFormat.swift in Sources */,
 				D3F00CB527DFC5DD00393ADC /* BookCategory.swift in Sources */,
+				CEF02D8D27E9862C00C30E03 /* QuestionScopeFactory.swift in Sources */,
 				62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */,
+				CEF02D7527E956DA00C30E03 /* LessonQuizOutcomeViewController.swift in Sources */,
 				CEF1E7D727E60C2D005D4272 /* LessonVocabViewController.swift in Sources */,
+				CEF02D8927E9775E00C30E03 /* QuestionConstructorRandomFactory.swift in Sources */,
 				D3F00CB127DFC04600393ADC /* FetchTypes.swift in Sources */,
+				CEF02D7727E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift in Sources */,
 				D3F00CB327DFC59500393ADC /* Book.swift in Sources */,
 				D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */,
 				CEF1E7AA27E50093005D4272 /* StarsTransaction.swift in Sources */,
 				CEF1E7E227E60D68005D4272 /* LessonQuizViewModel.swift in Sources */,
 				CEF1E81F27E74C6F005D4272 /* QuestionLayoutViewController.swift in Sources */,
+				CEF02D9227E9C2A800C30E03 /* QuestionGenerationError.swift in Sources */,
 				CEF1E7F927E6D568005D4272 /* QuestionViewModelFromQuestion.swift in Sources */,
 				D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */,
+				CEF02D8B27E983B700C30E03 /* MatchVocabToDefinitionQuestionConstructor.swift in Sources */,
 				D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */,
 				CEF1E7AC27E5030C005D4272 /* CurrencySystem.swift in Sources */,
 				CEF1E81C27E74634005D4272 /* TwoDisjointSetOptionQuestionLayoutViewController.swift in Sources */,
@@ -586,6 +691,7 @@
 				CEF1E7F527E6D143005D4272 /* QuestionLayoutViewModel.swift in Sources */,
 				D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */,
 				CEF1E7EF27E6D117005D4272 /* QuestionViewController.swift in Sources */,
+				CEF02D7B27E9577C00C30E03 /* LessonQuizResult.swift in Sources */,
 				CEF1E7DC27E60C7A005D4272 /* Dynamic.swift in Sources */,
 				CEF02D7327E8CAC400C30E03 /* LessonQuizProgressBarView.swift in Sources */,
 				6204A04127DE4A500063100D /* ViewUtilities.swift in Sources */,
@@ -596,6 +702,8 @@
 				CEF1E7E627E61EF0005D4272 /* LessonOverviewViewModelFromLesson.swift in Sources */,
 				CEF1E80927E6F3F4005D4272 /* QuestionsGenerator.swift in Sources */,
 				CEF1E80B27E6F644005D4272 /* QuestionConstructor.swift in Sources */,
+				CEF02D8527E9720600C30E03 /* QuestionType.swift in Sources */,
+				CEF02D7927E9573700C30E03 /* LessonQuizOutcomeViewModelFromQuizResult.swift in Sources */,
 				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,
 				CEF1E7D527E60C1F005D4272 /* LessonOverviewViewController.swift in Sources */,
 				6204A03A27DE1CDB0063100D /* Constants.swift in Sources */,
@@ -916,6 +1024,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		CEF02D8E27E9910500C30E03 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -958,6 +1074,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6FA0244527E1BC9D00F94E54 /* XCRemoteSwiftPackageReference "PromiseKit" */;
 			productName = PromiseKit;
+		};
+		CEF02D8F27E9910500C30E03 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEF02D8E27E9910500C30E03 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
 		};
 /* End XCSwiftPackageProductDependency section */
 

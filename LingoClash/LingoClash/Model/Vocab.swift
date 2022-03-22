@@ -18,3 +18,4 @@ struct Vocab {
 }
 
 extension Vocab: Codable {}
+extension Vocab: Hashable {}

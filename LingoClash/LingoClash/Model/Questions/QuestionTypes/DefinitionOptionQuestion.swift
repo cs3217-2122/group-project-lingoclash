@@ -6,16 +6,19 @@
 //
 
 /// Returns a question that gives a word and asks for its definition
-class DefinitionOptionQuestion: SimpleOptionQuestion {
-    static let vocabsTestedCount: Int = 4
+struct DefinitionOptionQuestion: SimpleOptionQuestion {
+    static let vocabsTestedCount: Int = 1
+    static let optionsCount: Int = 4
+    let vocabsTested: Set<Vocab>
     let context: String
     let options: [String]
     let answer: String
 
-    init(context: String, options: [String], answer: String) {
+    init(context: String, options: [String], answer: String, vocabsTested: Set<Vocab>) {
         self.context = context
         self.options = options
         self.answer = answer
+        self.vocabsTested = vocabsTested
     }
     
     func isCorrect(response: Any) -> Bool {

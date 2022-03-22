@@ -5,16 +5,20 @@
 //  Created by Sherwin Poh on 20/3/22.
 //
 
-class MatchVocabToDefinitionQuestion: TwoDisjointSetOptionQuestion {
-    static let vocabsTestedCount: Int = 4
+/// Match a vocabulary to its definition
+struct MatchVocabToDefinitionQuestion: TwoDisjointSetOptionQuestion {
+    static let vocabsTestedCount = optionsCount
+    static let optionsCount: Int = 4
+    let vocabsTested: Set<Vocab>
     let context: String
-    let options: [Set<String>]
+    let options: [[String]]
     let answer: Set<[String]>
     
-    init(context: String, options: [Set<String>], answer: Set<[String]>) {
+    init(context: String, options: [[String]], answer: Set<[String]>, vocabsTested: Set<Vocab>) {
         self.context = context
         self.options = options
         self.answer = answer
+        self.vocabsTested = vocabsTested
     }
     
     func isCorrect(response: Any) -> Bool {

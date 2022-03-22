@@ -10,6 +10,7 @@ import UIKit
 class LessonQuizViewController: UIViewController {
     enum Segue {
         static let toQuestionViewController = "segueToQuestionViewController"
+        static let toOutcomeVC = "toLessonQuizOutcomeViewController"
     }
     weak var questionViewController: QuestionViewController?
     
@@ -22,6 +23,7 @@ class LessonQuizViewController: UIViewController {
     @IBOutlet weak var progressBar: LessonQuizProgressBarView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("loaded!")
         styleUI()
         fillUI()
     }
@@ -34,7 +36,16 @@ class LessonQuizViewController: UIViewController {
             self.questionViewController = questionViewController
             questionViewController.datasource = self
             questionViewController.delegate = self
+            
+        } else if segue.identifier == Segue.toOutcomeVC {
+            guard let viewModel = viewModel,
+                  let outcomeViewController = segue.destination as? LessonQuizOutcomeViewController else {
+                return
+            }
+            outcomeViewController.viewModel = viewModel.quizOutcomeViewModel
         }
+        
+        
     }
     
     func styleUI() {
@@ -61,7 +72,7 @@ class LessonQuizViewController: UIViewController {
         guard quizStatus != .incomplete else {
             return
         }
-        navigationController?.popViewController(animated: true)
+        performSegue(withIdentifier: Segue.toOutcomeVC, sender: self)
     }
 }
 

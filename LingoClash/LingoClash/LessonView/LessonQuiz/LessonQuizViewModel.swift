@@ -8,7 +8,8 @@
 import Foundation
 
 protocol LessonQuizViewModel {
-    var questionViewModel: Dynamic<QuestionViewModel> { get }
+    var questionViewModel: Dynamic<QuestionViewModel?> { get }
+    var quizOutcomeViewModel: LessonQuizOutcomeViewModel? { get }
     var quizStatus: Dynamic<QuizStatus> { get }
     var starPositions: [Float] { get }
     var progress: Dynamic<Float> { get }
