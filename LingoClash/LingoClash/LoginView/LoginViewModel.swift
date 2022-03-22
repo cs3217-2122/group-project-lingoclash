@@ -6,12 +6,17 @@
 //
 
 import Foundation
-import FirebaseAuth
-import FirebaseFirestore
+import PromiseKit
 
 final class LoginViewModel {
     
     @Published var error: String?
+    
+    private let authProvider: AuthProvider
+    
+    init(authProvider: AuthProvider = FirebaseAuthProvider()) {
+        self.authProvider = authProvider
+    }
     
     func login(email: String, password: String) {
         
@@ -27,11 +32,12 @@ final class LoginViewModel {
             return
         }
         
-        // Sign in
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
-            self?.error = (error != nil)
-            ? "Incorrect email or password."
-            : nil
+        firstly {
+            authProvider.login(params: fields)
+        }.done {
+            self.error = nil
+        }.catch { error in
+            self.error = error.localizedDescription
         }
     }
     

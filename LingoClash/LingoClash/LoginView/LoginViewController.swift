@@ -8,6 +8,8 @@
 import UIKit
 import Combine
 
+import FirebaseAuth
+
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -24,9 +26,11 @@ class LoginViewController: UIViewController {
         setUpBinders()
         
         // TODO: To be removed
-        // For testing:
         let bookDataManager = BookDataManager()
-        let books = bookDataManager.getList(page: 1)
+        let books = bookDataManager.getList()
+        
+        try? Auth.auth().signOut()
+        print("current user:", Auth.auth().currentUser ?? "")
         
         books.done { books in
             print("Books fetched: ", books)
@@ -65,7 +69,7 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToHome() {
-        let mainViewController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryBoard.mainTabBarVC) as? MainTabBarViewController
+        let mainViewController = storyboard?.instantiateViewController(withIdentifier: AppConfigs.StoryBoard.mainTabBarVC) as? MainTabBarViewController
         
         view.window?.rootViewController = mainViewController
         view.window?.makeKeyAndVisible()
