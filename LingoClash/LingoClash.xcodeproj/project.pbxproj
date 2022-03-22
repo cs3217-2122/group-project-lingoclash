@@ -64,7 +64,6 @@
 		D3C4422427E877C400676C93 /* JSONAuthProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4422327E877C400676C93 /* JSONAuthProviderTypes.swift */; };
 		D3C4422727E878D800676C93 /* FirebaseAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4422627E878D800676C93 /* FirebaseAuthProvider.swift */; };
 		D3C4422927E8792200676C93 /* FakeAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4422827E8792200676C93 /* FakeAuthProvider.swift */; };
-		D3C4422D27E87EE800676C93 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4422C27E87EE800676C93 /* ProfileViewModel.swift */; };
 		D3C4423127E8966C00676C93 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423027E8966C00676C93 /* UIViewController+Extensions.swift */; };
 		D3C4423627E8A96200676C93 /* AlertUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423527E8A96200676C93 /* AlertUtilities.swift */; };
 		D3C4423827E8A98400676C93 /* AlertTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423727E8A98400676C93 /* AlertTypes.swift */; };
@@ -549,7 +548,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					D33282D927D4D42700C80986 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -629,7 +628,6 @@
 				D3C4423627E8A96200676C93 /* AlertUtilities.swift in Sources */,
 				629090A527E85EFA00941A3B /* ProfileViewModel.swift in Sources */,
 				D3C4423A27E8B15900676C93 /* AuthErrors.swift in Sources */,
-				D3C4423627E8A96200676C93 /* AlertUtilities.swift in Sources */,
 				D3F00CB327DFC59500393ADC /* Book.swift in Sources */,
 				D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */,
 				621E6D5527E9C8260015BBD4 /* ChangeEmailViewController.swift in Sources */,
@@ -648,18 +646,9 @@
 				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,
 				6204A03A27DE1CDB0063100D /* AppConfigs.swift in Sources */,
 				629090A827E8D02200941A3B /* CurrentBookViewModel.swift in Sources */,
-				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,
-				6204A03A27DE1CDB0063100D /* AppConfigs.swift in Sources */,
 				629090AC27E8E3B900941A3B /* CurrentBookViewController.swift in Sources */,
 				62E418C427EA4E5200DFF03C /* DataManager.swift in Sources */,
-				D3C4424027E8C65600676C93 /* Logger.swift in Sources */,
-				D3C4423E27E8B20000676C93 /* DataProviderErrors.swift in Sources */,
-				D3C4422727E878D800676C93 /* FirebaseAuthProvider.swift in Sources */,
-				D3C4422427E877C400676C93 /* JSONAuthProviderTypes.swift in Sources */,
-				D30CD1EB27E7A65F0021A5AA /* AuthProvider.swift in Sources */,
 				D3C4424527E9F2FC00676C93 /* BookDataManager.swift in Sources */,
-				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,
-				6204A03A27DE1CDB0063100D /* AppConfigs.swift in Sources */,
 				62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */,
 				624989DE27E7395E0092FC1B /* LearningBooksViewController.swift in Sources */,
 				624989E527E742690092FC1B /* RecommendedBookCollectionViewCell.swift in Sources */,
@@ -677,7 +666,6 @@
 				624BD58027E761FB006F0391 /* LearningBooksViewModel.swift in Sources */,
 				D3C4422927E8792200676C93 /* FakeAuthProvider.swift in Sources */,
 				D3C4424327E8CB0A00676C93 /* FirebaseDataProvider.swift in Sources */,
-				D3C4422D27E87EE800676C93 /* ProfileViewModel.swift in Sources */,
 				D3C4423827E8A98400676C93 /* AlertTypes.swift in Sources */,
 				D33282E827D4D42700C80986 /* LingoClash.xcdatamodeld in Sources */,
 				D30CD1ED27E81D7B0021A5AA /* JSONServerAuthProvider.swift in Sources */,
