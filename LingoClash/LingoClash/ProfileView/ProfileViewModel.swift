@@ -37,6 +37,9 @@ final class ProfileViewModel {
         }
     }
     
+    var firstName: String?
+    var lastName: String?
+    
     func refreshProfile() {
         // TODO: get user profile
         self.firstName = "John"
