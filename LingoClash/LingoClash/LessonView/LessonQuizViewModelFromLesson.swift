@@ -10,6 +10,9 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
     let questionGenerator = QuestionsGenerator()
     let questionsCount = 10
     let starsBenchmarks = [7,9,10]
+    var starPositions: [Float] {
+        starsBenchmarks.map { Float($0) / Float(questionsCount) }
+    }
     let questions: [Question]
     var questionsStatus: [QuestionStatus]
     var currQuestionIndex = 0

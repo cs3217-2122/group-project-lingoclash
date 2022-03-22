@@ -15,6 +15,7 @@ class QuestionsGenerator {
          2. Generate questions for all questiontypes, provide random vocabs from the list of vocabs
          3. Return list of Questions
          */
+        // TODO: Fix bug where if the number of vocabs provided is less than at least one questions's vocabTestedCount, the number of questions generated could be less than asked for.
         let constructors = QuestionsGenerator.questionConstructors
         let constructorsCount = distributeQuestionCount(numberOfQuestions: settings.numberOfQuestions, probabilities: settings.questionConstructorsProbabilities)
         var questions = [Question]()
@@ -33,6 +34,7 @@ class QuestionsGenerator {
         return questions
     }
     
+    /// Returns a random subscript of the vocabs array of length count.
     private func getRandomVocabs(from vocabs: [Vocab], count: Int) -> [Vocab] {
         guard count <= vocabs.count else {
             return []

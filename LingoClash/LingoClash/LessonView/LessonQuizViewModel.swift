@@ -10,6 +10,7 @@ import Foundation
 protocol LessonQuizViewModel {
     var questionViewModel: Dynamic<QuestionViewModel> { get }
     var quizStatus: Dynamic<QuizStatus> { get }
+    var starPositions: [Float] { get }
     var progress: Dynamic<Float> { get }
     func questionDidComplete(isCorrect: Bool)
 }

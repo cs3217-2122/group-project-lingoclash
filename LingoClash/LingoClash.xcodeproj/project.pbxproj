@@ -23,6 +23,7 @@
 		6FA0244227E1BBBE00F94E54 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244127E1BBBE00F94E54 /* FirebaseStorage */; };
 		6FA0244427E1BBBE00F94E54 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244327E1BBBE00F94E54 /* FirebaseStorageCombine-Community */; };
 		6FA0244727E1BC9E00F94E54 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244627E1BC9E00F94E54 /* PromiseKit */; };
+		CEF02D7327E8CAC400C30E03 /* LessonQuizProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */; };
 		CEF1E7A827E50082005D4272 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7A727E50082005D4272 /* Transaction.swift */; };
 		CEF1E7AA27E50093005D4272 /* StarsTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7A927E50093005D4272 /* StarsTransaction.swift */; };
 		CEF1E7AC27E5030C005D4272 /* CurrencySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7AB27E5030C005D4272 /* CurrencySystem.swift */; };
@@ -107,6 +108,7 @@
 		62C04A1027DDE67F002D2497 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		62C04A1227DDE838002D2497 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62C04A1427DDEB10002D2497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizProgressBarView.swift; sourceTree = "<group>"; };
 		CEF1E7A727E50082005D4272 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		CEF1E7A927E50093005D4272 /* StarsTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsTransaction.swift; sourceTree = "<group>"; };
 		CEF1E7AB27E5030C005D4272 /* CurrencySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySystem.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				CEF1E7D827E60C3E005D4272 /* LessonQuizViewController.swift */,
 				CEF1E7E127E60D68005D4272 /* LessonQuizViewModel.swift */,
 				CEF1E81027E71944005D4272 /* LessonQuizViewModelFromLesson.swift */,
+				CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */,
 			);
 			path = LessonView;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */,
 				CEF1E7EF27E6D117005D4272 /* QuestionViewController.swift in Sources */,
 				CEF1E7DC27E60C7A005D4272 /* Dynamic.swift in Sources */,
+				CEF02D7327E8CAC400C30E03 /* LessonQuizProgressBarView.swift in Sources */,
 				6204A04127DE4A500063100D /* ViewUtilities.swift in Sources */,
 				CEF1E7A827E50082005D4272 /* Transaction.swift in Sources */,
 				CEF1E7E427E61CF1005D4272 /* VocabCollectionCell.swift in Sources */,

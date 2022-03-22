@@ -19,7 +19,7 @@ class LessonQuizViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var progressBar: LessonQuizProgressBarView!
     override func viewDidLoad() {
         super.viewDidLoad()
         styleUI()
@@ -44,6 +44,10 @@ class LessonQuizViewController: UIViewController {
     func fillUI() {
         guard isViewLoaded, let viewModel = viewModel else {
             return
+        }
+        for position in viewModel.starPositions {
+            self.progressBar.addStarView(at: position)
+
         }
         viewModel.progress.bindAndFire { [unowned self] in
             self.progressBar?.setProgress($0, animated: true) }

@@ -623,30 +623,36 @@
                                     <segue destination="s0L-BF-ihP" kind="embed" identifier="segueToQuestionViewController" id="kaU-oW-8Wc"/>
                                 </connections>
                             </containerView>
+                            <progressView contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Uj5-1O-UNc" customClass="LessonQuizProgressBarView" customModule="LingoClash" customModuleProvider="target">
+                                <rect key="frame" x="122" y="74" width="500" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="cry-Pm-ErS"/>
+                                    <constraint firstAttribute="width" constant="500" id="kP9-c0-R2n"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ulb-QP-DEA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Uj5-1O-UNc" firstAttribute="top" secondItem="Ulb-QP-DEA" secondAttribute="top" id="4Lz-Aj-ngq"/>
                             <constraint firstItem="Exg-h3-b6m" firstAttribute="leading" secondItem="Ulb-QP-DEA" secondAttribute="leading" id="9e6-mG-nZj"/>
                             <constraint firstItem="Exg-h3-b6m" firstAttribute="top" secondItem="Ulb-QP-DEA" secondAttribute="top" constant="50" id="GOw-KX-Yvv"/>
                             <constraint firstItem="Ulb-QP-DEA" firstAttribute="bottom" secondItem="Exg-h3-b6m" secondAttribute="bottom" constant="50" id="JkS-0W-MEX"/>
+                            <constraint firstItem="Exg-h3-b6m" firstAttribute="width" secondItem="Ulb-QP-DEA" secondAttribute="width" id="fpe-Eb-FoW"/>
+                            <constraint firstItem="Uj5-1O-UNc" firstAttribute="centerX" secondItem="Ulb-QP-DEA" secondAttribute="centerX" id="vUF-sA-adV"/>
                             <constraint firstItem="Ulb-QP-DEA" firstAttribute="trailing" secondItem="Exg-h3-b6m" secondAttribute="trailing" id="zhn-Ka-RHa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Bvr-B3-mRY">
                         <nil key="title"/>
-                        <progressView key="titleView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="lII-AU-Y6W">
-                            <rect key="frame" x="50" y="23" width="682" height="4"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </progressView>
                     </navigationItem>
                     <connections>
-                        <outlet property="progressBar" destination="lII-AU-Y6W" id="o2O-jp-HDQ"/>
+                        <outlet property="progressBar" destination="Uj5-1O-UNc" id="3t2-3Z-L6T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbF-qJ-t6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7772" y="153"/>
+            <point key="canvasLocation" x="7771.7741935483873" y="152.78022947925859"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="Sxp-k0-cGT">
@@ -679,7 +685,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Caj-zr-8Zp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8493" y="153"/>
+            <point key="canvasLocation" x="8552" y="546"/>
         </scene>
         <!--Simple Option Question Layout View Controller-->
         <scene sceneID="ebD-nC-Diz">
@@ -699,7 +705,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="TUE-CN-cPX" firstAttribute="centerX" secondItem="0RF-XI-psu" secondAttribute="centerX" id="2WU-ww-WUv"/>
                                     <constraint firstItem="TUE-CN-cPX" firstAttribute="centerY" secondItem="0RF-XI-psu" secondAttribute="centerY" id="kZr-JT-FUK"/>
@@ -726,6 +732,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="0.0081407809629999994" green="0.62654554839999999" blue="0.99693483110000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="C7N-6X-VWE" firstAttribute="centerY" secondItem="bRI-5a-7Ra" secondAttribute="centerY" id="ejS-X6-87M"/>
                                                         <constraint firstItem="C7N-6X-VWE" firstAttribute="centerX" secondItem="bRI-5a-7Ra" secondAttribute="centerX" id="oOs-ID-IAH"/>
@@ -738,7 +745,7 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="TE8-xl-qSW" secondAttribute="trailing" constant="100" id="2Qc-mw-8TI"/>
                                     <constraint firstItem="TE8-xl-qSW" firstAttribute="leading" secondItem="D9c-ya-X75" secondAttribute="leading" constant="100" id="AhJ-CF-i8N"/>
@@ -748,7 +755,8 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bqt-dX-XEn"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0RF-XI-psu" firstAttribute="leading" secondItem="Bqt-dX-XEn" secondAttribute="leading" id="22N-1h-sJY"/>
                             <constraint firstItem="D9c-ya-X75" firstAttribute="top" secondItem="0RF-XI-psu" secondAttribute="bottom" id="Jbo-ZL-qvG"/>
@@ -766,7 +774,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrB-3k-7Wy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9231.4453125" y="187.55490483162518"/>
+            <point key="canvasLocation" x="8553" y="-56"/>
         </scene>
         <!--Two Disjoint Set Option Question Layout View Controller-->
         <scene sceneID="9Yg-WH-z29">
@@ -793,9 +801,6 @@
         <namedColor name="Error">
             <color red="0.73100000619888306" green="0.10400000214576721" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
