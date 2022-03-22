@@ -28,6 +28,13 @@ import PromiseKit
 
 class JSONServerDataProvider: DataProvider {
     
+    struct Configs {
+        static let sortKey = "_sort"
+        static let orderKey = "_order"
+        static let startKey = "_start"
+        static let endKey = "_end"
+    }
+    
     typealias HttpClient = (_ request: URLRequest) -> Promise<FetchResult>
     
     private let apiURL: String
@@ -41,13 +48,13 @@ class JSONServerDataProvider: DataProvider {
         }
     
     func getList(resource: String, params: GetListParams) -> Promise<GetListResult> {
-        let pagination = params.pagination
+        //        let pagination = params.pagination
         let sort = params.sort
         let _query = [
-            "_sort": sort.field,
-            "_order": sort.order,
-            "_start": (pagination.page - 1) * pagination.perPage,
-            "_end": pagination.page * pagination.perPage
+            Configs.sortKey: sort.field,
+            Configs.orderKey: sort.order,
+            //            Configs.startKey: (pagination.page - 1) * pagination.perPage,
+            //            Configs.endKey: pagination.page * pagination.perPage
         ] as [String : Any]
         let query = _query.merging(params.filter) { (current, _) in current }
         
@@ -63,7 +70,14 @@ class JSONServerDataProvider: DataProvider {
                 return nil
             }
             
-            return GetListResult(data: fetchResult.data, total: count)
+            guard let items = try? JSONSerialization.jsonObject(with: fetchResult.data, options: []) as? [Any] else {
+                return nil
+            }
+            let dataList = items.compactMap { item in
+                try? JSONSerialization.data(withJSONObject: item, options: [])
+            }
+            
+            return GetListResult(data: dataList, total: count)
         }
     }
     
@@ -87,20 +101,28 @@ class JSONServerDataProvider: DataProvider {
         }
         let request = URLRequest(url: url)
         
-        return httpClient(request).map { fetchResult in
-            GetManyResult(data: fetchResult.data)
+        return httpClient(request).compactMap { fetchResult in
+            
+            guard let items = try? JSONSerialization.jsonObject(with: fetchResult.data, options: []) as? [Any] else {
+                return nil
+            }
+            let dataList = items.compactMap { item in
+                try? JSONSerialization.data(withJSONObject: item, options: [])
+            }
+            
+            return GetManyResult(data: dataList)
         }
     }
     
     func getManyReference(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult> {
-        let pagination = params.pagination
+        //        let pagination = params.pagination
         let sort = params.sort
         let _query = [
             params.target: params.id,
-            "_sort": sort.field,
-            "_order": sort.order,
-            "_start": (pagination.page - 1) * pagination.perPage,
-            "_end": pagination.page * pagination.perPage
+            Configs.sortKey: sort.field,
+            Configs.orderKey: sort.order,
+            //            Configs.startKey: (pagination.page - 1) * pagination.perPage,
+            //            Configs.endKey: pagination.page * pagination.perPage
         ] as [String : Any]
         let query = _query.merging(params.filter) { (current, _) in current }
         
@@ -116,20 +138,31 @@ class JSONServerDataProvider: DataProvider {
                 return nil
             }
             
-            return GetManyReferenceResult(data: fetchResult.data, total: count)
+            guard let items = try? JSONSerialization.jsonObject(with: fetchResult.data, options: []) as? [Any] else {
+                return nil
+            }
+            let dataList = items.compactMap { item in
+                try? JSONSerialization.data(withJSONObject: item, options: [])
+            }
+            
+            return GetManyReferenceResult(data: dataList, total: count)
         }
         
     }
     
-    func update(resource: String, params: UpdateParams) -> Promise<UpdateResult> {
+    func update<T: Codable>(resource: String, params: UpdateParams<T>) -> Promise<UpdateResult> {
         guard let url = URL(string: "\(apiURL)/\(resource)/\(params.id)") else {
             return Promise.reject(reason: NetworkError.invalidURL)
+        }
+        
+        guard let data = try? JSONEncoder().encode(params.data) else {
+            return Promise.reject(reason: NetworkError.invalidParams)
         }
         
         var request = URLRequest(url: url)
         request.httpMethod = "PUT"
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = params.data
+        request.httpBody = data
         
         return httpClient(request).map { fetchResult in
             UpdateResult(data: fetchResult.data)
@@ -137,7 +170,7 @@ class JSONServerDataProvider: DataProvider {
     }
     
     // json-server doesn't handle filters on UPDATE route, so we fallback to calling UPDATE n times instead
-    func updateMany(resource: String, params: UpdateManyParams) -> Promise<UpdateManyResult> {
+    func updateMany<T: Codable>(resource: String, params: UpdateManyParams<T>) -> Promise<UpdateManyResult> {
         
         firstly { () -> Promise<[FetchResult]> in
             let promises = params.ids.map { id -> Promise<FetchResult> in
@@ -145,10 +178,14 @@ class JSONServerDataProvider: DataProvider {
                     return Promise.reject(reason: NetworkError.invalidURL)
                 }
                 
+                guard let data = try? JSONEncoder().encode(params.data) else {
+                    return Promise.reject(reason: NetworkError.invalidParams)
+                }
+                
                 var request = URLRequest(url: url)
                 request.httpMethod = "PUT"
                 request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
-                request.httpBody = params.data
+                request.httpBody = data
                 
                 return httpClient(request)
             }
@@ -165,24 +202,28 @@ class JSONServerDataProvider: DataProvider {
         
     }
     
-    func create(resource: String, params: CreateParams) -> Promise<CreateResult> {
+    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult> {
         
         guard let url = URL(string: "\(apiURL)/\(resource)") else {
             return Promise.reject(
                 reason: NetworkError.invalidURL)
         }
         
+        guard let data = try? JSONEncoder().encode(params.data) else {
+            return Promise.reject(reason: NetworkError.invalidParams)
+        }
+        
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = params.data
+        request.httpBody = data
         
         return httpClient(request).map { fetchResult in
             CreateResult(data: fetchResult.data)
         }
     }
     
-    func delete(resource: String, params: DeleteParams) -> Promise<DeleteResult> {
+    func delete<T: Codable>(resource: String, params: DeleteParams<T>) -> Promise<DeleteResult> {
         guard let url = URL(string: "\(apiURL)/\(resource)/\(params.id)") else {
             return Promise.reject(reason: NetworkError.invalidURL)
         }

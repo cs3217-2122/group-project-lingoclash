@@ -13,25 +13,24 @@ class BookDataManager {
     private let dataProvider: DataProvider
     private let resource = "books"
     
-    init(dataProvider: DataProvider = FakeDataProvider()) {
+    init(dataProvider: DataProvider = FirebaseDataProvider()) {
         self.dataProvider = dataProvider
     }
     
     func getList(
-        page: Int,
-        perPage: Int = Constants.ListConfig.perPage,
-        field: String = Constants.ListConfig.field,
-        order: String = Constants.ListConfig.order,
+        field: String = AppConfigs.API.field,
+        order: String = AppConfigs.API.order,
         filter: [String: Any] = [:]
     ) -> Promise<[Book]> {
         
-        let pagination = PaginationPayload(page: page, perPage: perPage)
         let sort = SortPayload(field: field, order: order)
-        let data = dataProvider.getList(resource: self.resource, params: GetListParams(pagination: pagination, sort: sort, filter: filter))
+        let data = dataProvider.getList(resource: self.resource, params: GetListParams(
+            sort: sort, filter: filter))
         
         return data.compactMap { result in
-            try? JSONDecoder().decode(
-                [Book].self, from: result.data)
+            result.data.compactMap {
+                try? JSONDecoder().decode(Book.self, from: $0)
+            }
         }
         
     }
@@ -50,44 +49,36 @@ class BookDataManager {
         let data = dataProvider.getMany(resource: self.resource, params: GetManyParams(ids: ids))
         
         return data.compactMap { result in
-            try? JSONDecoder().decode(
-                [Book].self, from: result.data)
+            result.data.compactMap {
+                try? JSONDecoder().decode(Book.self, from: $0)
+            }
         }
     }
     
     func getManyReference(
         target: String,
         id: Identifier,
-        page: Int,
-        perPage: Int = Constants.ListConfig.perPage,
-        field: String = Constants.ListConfig.field,
-        order: String = Constants.ListConfig.order,
+        field: String = AppConfigs.API.field,
+        order: String = AppConfigs.API.order,
         filter: [String: Any] = [:]) -> Promise<[Book]> {
             
-            let pagination = PaginationPayload(page: page, perPage: perPage)
             let sort = SortPayload(field: field, order: order)
             let data = dataProvider.getManyReference(
                 resource: self.resource,
                 params: GetManyReferenceParams(
-                    target: target, id: id, pagination: pagination, sort: sort, filter: filter))
+                    target: target, id: id,
+                    sort: sort, filter: filter))
             
             return data.compactMap { result in
-                try? JSONDecoder().decode(
-                    [Book].self, from: result.data)
+                result.data.compactMap {
+                    try? JSONDecoder().decode(Book.self, from: $0)
+                }
             }
         }
     
     func update(id: Identifier, from previousBook: Book, to newBook: Book) -> Promise<Book> {
         
-        guard let previousData = try? JSONEncoder().encode(previousBook) else {
-            return Promise.reject(reason: DatabaseError.invalidFormat)
-        }
-        
-        guard let newData = try? JSONEncoder().encode(newBook) else {
-            return Promise.reject(reason: DatabaseError.invalidFormat)
-        }
-        
-        let updatedData = dataProvider.update(resource: self.resource, params: UpdateParams(id: id, data: newData, previousData: previousData))
+        let updatedData = dataProvider.update(resource: self.resource, params: UpdateParams(id: id, data: newBook, previousData: previousBook))
         
         return updatedData.compactMap { result in
             try? JSONDecoder().decode(Book.self, from: result.data)
@@ -97,11 +88,7 @@ class BookDataManager {
     /// id of the newBook does not matter
     func updateMany(ids: [Identifier], newBook: Book) -> Promise<[Identifier]> {
         
-        guard let data = try? JSONEncoder().encode(newBook) else {
-            return Promise.reject(reason: DatabaseError.invalidFormat)
-        }
-        
-        let updatedData = dataProvider.updateMany(resource: self.resource, params: UpdateManyParams(ids: ids, data: data))
+        let updatedData = dataProvider.updateMany(resource: self.resource, params: UpdateManyParams(ids: ids, data: newBook))
         
         return updatedData.compactMap { result in
             result.data
@@ -110,10 +97,7 @@ class BookDataManager {
     
     func create(newBook: Book) -> Promise<Book> {
         
-        guard let data = try? JSONEncoder().encode(newBook) else {
-            return Promise.reject(reason: DatabaseError.invalidFormat)
-        }
-        let createdData = dataProvider.create(resource: self.resource, params: CreateParams(data: data))
+        let createdData = dataProvider.create(resource: self.resource, params: CreateParams(data: newBook))
         
         return createdData.compactMap { result in
             try? JSONDecoder().decode(Book.self, from: result.data)
@@ -122,11 +106,7 @@ class BookDataManager {
     
     func delete(id: Identifier, book: Book) -> Promise<Book> {
         
-        guard let previousData = try? JSONEncoder().encode(book) else {
-            return Promise.reject(reason: DatabaseError.invalidFormat)
-        }
-        
-        let deletedData = dataProvider.delete(resource: self.resource, params: DeleteParams(id: id, previousData: previousData))
+        let deletedData = dataProvider.delete(resource: self.resource, params: DeleteParams(id: id, previousData: book))
         
         return deletedData.compactMap { result in
             try? JSONDecoder().decode(Book.self, from: result.data)

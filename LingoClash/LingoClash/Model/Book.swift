@@ -8,7 +8,7 @@
 import Foundation
 
 struct Book {
-    let id: Identifier
+    var id: Identifier
     let category_id: Identifier
     let name: String
 }

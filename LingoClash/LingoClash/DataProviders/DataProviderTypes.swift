@@ -13,17 +13,17 @@ struct Record: Codable {
     let id: Identifier
 }
 
-struct CreateParams {
-    let data: Data
+struct CreateParams<T: Codable> {
+    let data: T
 }
 
 struct CreateResult {
     let data: Data
 }
 
-struct DeleteParams {
+struct DeleteParams<T: Codable> {
     let id: Identifier
-    let previousData: Data
+    let previousData: T
 }
 
 struct DeleteResult {
@@ -41,13 +41,12 @@ struct SortPayload {
 }
 
 struct GetListParams {
-    let pagination: PaginationPayload
     let sort: SortPayload
     let filter: [String: Any]
 }
 
 struct GetListResult {
-    let data: Data
+    let data: [Data]
     let total: Int
 }
 
@@ -64,35 +63,34 @@ struct GetManyParams {
 }
 
 struct GetManyResult {
-    let data: Data
+    let data: [Data]
 }
 
 struct GetManyReferenceParams {
     let target: String
     let id: Identifier
-    let pagination: PaginationPayload
     let sort: SortPayload
     let filter: [String: Any]
 }
 
 struct GetManyReferenceResult {
-    let data: Data
+    let data: [Data]
     let total: Int
 }
 
-struct UpdateParams {
+struct UpdateParams<T: Codable> {
     let id: Identifier
-    let data: Data
-    let previousData: Data
+    let data: T
+    let previousData: T
 }
 
 struct UpdateResult {
     let data: Data
 }
 
-struct UpdateManyParams {
+struct UpdateManyParams<T: Codable> {
     let ids: [Identifier]
-    let data: Data
+    let data: T
 }
 
 struct UpdateManyResult {

@@ -18,13 +18,13 @@ protocol DataProvider {
     
     func getManyReference(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult>
     
-    func update(resource: String, params: UpdateParams) -> Promise<UpdateResult>
+    func update<T: Codable>(resource: String, params: UpdateParams<T>) -> Promise<UpdateResult>
     
-    func updateMany(resource: String, params: UpdateManyParams) -> Promise<UpdateManyResult>
+    func updateMany<T: Codable>(resource: String, params: UpdateManyParams<T>) -> Promise<UpdateManyResult>
     
-    func create(resource: String, params: CreateParams) -> Promise<CreateResult>
+    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult>
     
-    func delete(resource: String, params: DeleteParams) ->
+    func delete<T: Codable>(resource: String, params: DeleteParams<T>) ->
     Promise<DeleteResult>
     
     func deleteMany(resource: String, params: DeleteManyParams) -> Promise<DeleteManyResult>

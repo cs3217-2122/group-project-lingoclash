@@ -12,21 +12,31 @@ class FetchUtilities {
     static func fetchData(with request: URLRequest) -> Promise<FetchResult> {
         return Promise { seal in
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+
                 if let error = error {
-                    seal.reject(error)
-                } else {
-                    seal.fulfill(
-                        FetchResult(
-                            data: data ?? Data(),
-                            response: response
-                        )
-                    )
+                    return seal.reject(error)
                 }
+                
+                guard let response = response as? HTTPURLResponse else {
+                    return seal.reject(NetworkError.invalidResponse)
+                }
+                let status = response.statusCode
+                guard (200...299).contains(status) else {
+                    return seal.reject(HTTPError.serverSideError(status))
+                }
+                
+                return seal.fulfill(
+                    FetchResult(
+                        data: data ?? Data(),
+                        response: response
+                    )
+                )
+                
             }
             task.resume()
         }
     }
-        
+    
     static func stringify(query: [String: Any]) -> String {
         var res = ""
         for (key, value) in query {
