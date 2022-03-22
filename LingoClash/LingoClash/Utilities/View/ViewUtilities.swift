@@ -35,7 +35,7 @@ class ViewUtilities {
     }
     
     static func styleCard(_ cell: UICollectionViewCell) {
-        cell.contentView.layer.backgroundColor = Constants.UI.blue.cgColor
+        cell.contentView.layer.backgroundColor = AppConfigs.View.blue.cgColor
         
         // Make corners rounded
         cell.contentView.layer.cornerRadius = 10.0
@@ -50,7 +50,7 @@ class ViewUtilities {
     }
     
     static func styleCard(_ view: UIView) {
-        view.layer.backgroundColor = Constants.UI.blue.cgColor
+        view.layer.backgroundColor = AppConfigs.View.blue.cgColor
         
         // Make corners rounded
         view.layer.cornerRadius = 10.0
