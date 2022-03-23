@@ -9,7 +9,7 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
     let lesson: Lesson
     let questionGenerator = QuestionsGenerator()
     let starsBenchmarks = [7,9,10]
-    let initialLives = 1
+    let initialLives = 2
 
     var questionSequence: QuestionSequence
     var questionsLoaded = [Question]()
@@ -99,7 +99,7 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
     private func isQuizComplete() -> Bool {
         let highestStarBenchmark = maxCorrectQuestions
         let hasAttainedMaximumStars = quizScore >= highestStarBenchmark
-        let haveNoMoreLivesLeft = self.livesLeft.value < 0
+        let haveNoMoreLivesLeft = self.livesLeft.value <= 0
         return hasAttainedMaximumStars || haveNoMoreLivesLeft
     }
     

@@ -14,6 +14,9 @@ class LessonQuizOutcomeViewController: UIViewController {
         static let unwindOutcomeToVocabVC = "unwindOutcomeToVocabVC"
     }
 
+    let darkBackgroundColor = UIColor(red: 5.0/255, green: 44.0/255, blue: 79.0/255, alpha: 1)
+    let lightBackgroundColor = UIColor(red: 3.0/255, green: 144.0/255, blue: 228.0/255, alpha: 1)
+    
     @IBOutlet var stars: [StarView]!
     @IBOutlet weak var completionStatusLabel: UILabel!
     @IBOutlet weak var lessonNameLabel: UILabel!
@@ -21,6 +24,7 @@ class LessonQuizOutcomeViewController: UIViewController {
     @IBOutlet weak var vocabsLearntTableView: UITableView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var actionButton: UIButton!
+
     @IBAction func onActionButtonTap(_ sender: UIButton) {
         guard let viewModel = self.viewModel else {
             return
@@ -31,8 +35,7 @@ class LessonQuizOutcomeViewController: UIViewController {
             performSegue(withIdentifier: Segue.unwindOutcomeToVocabVC, sender: self)
         }
     }
-    let darkBackgroundColor = UIColor(red: 5.0/255, green: 44.0/255, blue: 79.0/255, alpha: 1)
-    let lightBackgroundColor = UIColor(red: 3.0/255, green: 144.0/255, blue: 228.0/255, alpha: 1)
+
     var viewModel: VM? {
         didSet {
             fillUI()
