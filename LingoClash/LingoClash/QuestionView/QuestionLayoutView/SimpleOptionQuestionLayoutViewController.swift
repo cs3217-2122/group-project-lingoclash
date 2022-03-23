@@ -12,6 +12,7 @@ import UIKit
 class SimpleOptionQuestionLayoutViewController: UIViewController, QuestionLayoutViewController {
     static let identifier = "SimpleOptionQuestionLayoutVC"
     typealias VM = SimpleOptionQuestionLayoutViewModel
+    let cellSpacingHeight:CGFloat = 10
     
     
     @IBOutlet weak var contextLabel: UILabel!
@@ -52,8 +53,12 @@ class SimpleOptionQuestionLayoutViewController: UIViewController, QuestionLayout
 }
 
 extension SimpleOptionQuestionLayoutViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         viewModel?.options.count ?? 0
+    }
+        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,14 +67,23 @@ extension SimpleOptionQuestionLayoutViewController: UITableViewDataSource {
                     withIdentifier: OptionTableCell.reuseIdentifier) as? OptionTableCell else {
             fatalError("Failure obtaining reusable option table view cell")
         }
-
-        cell.optionText = viewModel?.options[indexPath.row] ?? ""
+        cell.optionText = viewModel?.options[indexPath.section] ?? ""
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
     }
 }
 
 extension SimpleOptionQuestionLayoutViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel?.didSelectOption(at: indexPath.row)
+        viewModel?.didSelectOption(at: indexPath.section)
     }
 }

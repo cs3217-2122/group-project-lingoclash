@@ -11,6 +11,7 @@ class QuestionViewController: UIViewController {
     typealias VM = QuestionViewModel
     var datasource: QuestionViewControllerDataSource?
     var delegate: QuestionViewControllerDelegate?
+    var currentChildVC: QuestionLayoutViewController?
     var viewModel: VM? {
         didSet {
             fillUI()
@@ -66,11 +67,19 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    private func loadQuestionLayoutViewController(_ viewController: QuestionLayoutViewController) {
-        addChild(viewController)
-        view.addSubview(viewController.view)
-        setVCConstraints(viewController)
-        viewController.didMove(toParent: self)
+    private func loadQuestionLayoutViewController(_ newViewController: QuestionLayoutViewController) {
+        let oldViewController = self.currentChildVC
+        
+        addChild(newViewController)
+        view.addSubview(newViewController.view)
+        setVCConstraints(newViewController)
+        newViewController.didMove(toParent: self)
+
+        oldViewController?.willMove(toParent: nil)
+        oldViewController?.view.removeFromSuperview()
+        oldViewController?.removeFromParent()
+
+        self.currentChildVC = newViewController
     }
     
     private func setVCConstraints(_ viewController: QuestionLayoutViewController) {

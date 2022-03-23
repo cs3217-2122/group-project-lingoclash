@@ -33,6 +33,11 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
         self.isLastVocab = Dynamic(lesson.vocabs.count == self.currIndex.value - 1)
         self.lessonQuizViewModel = LessonQuizViewModelFromLesson(lesson: lesson)
     }
+    
+    func reload() {
+        updateCurrVocabInfo(currIndex: 0)
+        self.lessonQuizViewModel = LessonQuizViewModelFromLesson(lesson: lesson)
+    }
 
     func playVocabPronounciation() {
         // TODO: Implement pronounciation

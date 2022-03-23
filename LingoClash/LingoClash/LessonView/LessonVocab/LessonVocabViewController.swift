@@ -45,6 +45,10 @@ class LessonVocabViewController: UIViewController {
             lessonQuizViewController.viewModel = viewModel.lessonQuizViewModel
         }
     }
+    
+    @IBAction func unwindToVocabs(segue: UIStoryboardSegue) {
+        viewModel?.reload()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

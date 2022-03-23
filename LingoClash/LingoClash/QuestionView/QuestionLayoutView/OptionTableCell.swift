@@ -15,4 +15,11 @@ class OptionTableCell: UITableViewCell {
         }
     }
     @IBOutlet weak var optionLabel: UILabel!
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = 10
+        layer.masksToBounds = true
+        layer.borderColor = CGColor.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        layer.borderWidth = 1.0
+    }
 }

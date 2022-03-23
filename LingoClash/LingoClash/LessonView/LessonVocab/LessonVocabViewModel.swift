@@ -19,4 +19,5 @@ protocol LessonVocabViewModel {
     func playVocabPronounciation()
     func navigateNext()
     func navigatePrev()
+    func reload()
 }

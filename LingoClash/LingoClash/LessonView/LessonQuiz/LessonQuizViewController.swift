@@ -20,6 +20,7 @@ class LessonQuizViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak var livesLeftLabel: UILabel!
     @IBOutlet weak var progressBar: LessonQuizProgressBarView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +67,8 @@ class LessonQuizViewController: UIViewController {
             self.questionViewController?.reloadData() }
         viewModel.quizStatus.bindAndFire { [unowned self] in
             self.navigateAfterQuizCompleted(quizStatus: $0) }
+        viewModel.livesLeft.bindAndFire { [unowned self] in
+            self.livesLeftLabel.text = String($0) }
     }
     
     func navigateAfterQuizCompleted(quizStatus: QuizStatus) {

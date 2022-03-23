@@ -23,6 +23,9 @@
 		6FA0244227E1BBBE00F94E54 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244127E1BBBE00F94E54 /* FirebaseStorage */; };
 		6FA0244427E1BBBE00F94E54 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244327E1BBBE00F94E54 /* FirebaseStorageCombine-Community */; };
 		6FA0244727E1BC9E00F94E54 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244627E1BC9E00F94E54 /* PromiseKit */; };
+		CEC5886A27EA2A4F00809403 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886927EA2A4F00809403 /* StarView.swift */; };
+		CEC5886C27EA37E900809403 /* VocabsLearntTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */; };
+		CEC5886E27EAAD4000809403 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886D27EAAD4000809403 /* DataManager.swift */; };
 		CEF02D7327E8CAC400C30E03 /* LessonQuizProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */; };
 		CEF02D7527E956DA00C30E03 /* LessonQuizOutcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7427E956DA00C30E03 /* LessonQuizOutcomeViewController.swift */; };
 		CEF02D7727E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7627E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift */; };
@@ -133,6 +136,9 @@
 		62C04A1027DDE67F002D2497 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		62C04A1227DDE838002D2497 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62C04A1427DDEB10002D2497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEC5886927EA2A4F00809403 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabsLearntTableCell.swift; sourceTree = "<group>"; };
+		CEC5886D27EAAD4000809403 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizProgressBarView.swift; sourceTree = "<group>"; };
 		CEF02D7427E956DA00C30E03 /* LessonQuizOutcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizOutcomeViewController.swift; sourceTree = "<group>"; };
 		CEF02D7627E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizOutcomeViewModel.swift; sourceTree = "<group>"; };
@@ -256,13 +262,8 @@
 		6204A03B27DE34040063100D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6204A03927DE1CDB0063100D /* AppConfigs.swift */,
 				62C04A1227DDE838002D2497 /* Utilities.swift */,
-				6204A04027DE4A500063100D /* ViewUtilities.swift */,
-				D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */,
-				D3F00CB027DFC04600393ADC /* FetchTypes.swift */,
-				6204A03927DE1CDB0063100D /* Constants.swift */,
-				D3F00CB727DFD39700393ADC /* Errors.swift */,
+				6204A03927DE1CDB0063100D /* AppConfigs.swift */,
 				CEF1E7DB27E60C7A005D4272 /* Dynamic.swift */,
 				D3C4423427E8A95000676C93 /* Alert */,
 				D3C4422027E8712100676C93 /* View */,
@@ -353,6 +354,7 @@
 				CEF1E7E127E60D68005D4272 /* LessonQuizViewModel.swift */,
 				CEF1E81027E71944005D4272 /* LessonQuizViewModelFromLesson.swift */,
 				CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */,
+				CEF02D7A27E9577C00C30E03 /* LessonQuizResult.swift */,
 			);
 			path = LessonQuiz;
 			sourceTree = "<group>";
@@ -363,6 +365,8 @@
 				CEF02D7427E956DA00C30E03 /* LessonQuizOutcomeViewController.swift */,
 				CEF02D7627E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift */,
 				CEF02D7827E9573700C30E03 /* LessonQuizOutcomeViewModelFromQuizResult.swift */,
+				CEC5886927EA2A4F00809403 /* StarView.swift */,
+				CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */,
 			);
 			path = LessonQuizOutcome;
 			sourceTree = "<group>";
@@ -433,6 +437,8 @@
 				CEF1E82027E75979005D4272 /* OptionTableCell.swift */,
 			);
 			path = QuestionLayoutView;
+			sourceTree = "<group>";
+		};
 		D30CD1E927E7A6460021A5AA /* AuthProviders */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,7 +480,6 @@
 				D33282FC27D5258000C80986 /* Model */,
 				CEF1E7DA27E60C4F005D4272 /* LessonView */,
 				CEF1E7ED27E6D0E2005D4272 /* QuestionView */,
-				D3BD2A1427DEE3DE0061E362 /* LoginView */,
 				D3BD2A1527DEE3F60061E362 /* SignUpView */,
 				D3BD2A1427DEE3DE0061E362 /* LoginView */,
 				D3C4422B27E87EBC00676C93 /* ProfileView */,
@@ -512,7 +517,6 @@
 				D3F00CB627DFC5F200393ADC /* DataManagers */,
 				CEF1E7E727E61F58005D4272 /* Lesson.swift */,
 				CEF1E7E927E61F68005D4272 /* Vocab.swift */,
-				CEF02D7A27E9577C00C30E03 /* LessonQuizResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -638,6 +642,7 @@
 			isa = PBXGroup;
 			children = (
 				D3BD2A1627DF28B70061E362 /* BookDataManager.swift */,
+				CEC5886D27EAAD4000809403 /* DataManager.swift */,
 			);
 			path = DataManagers;
 			sourceTree = "<group>";
@@ -765,6 +770,7 @@
 				CEF1E81A27E74622005D4272 /* SimpleOptionQuestionLayoutViewController.swift in Sources */,
 				D3F00CBA27E0642A00393ADC /* FakeDataProvider.swift in Sources */,
 				CEF1E7E027E60D5C005D4272 /* LessonVocabViewModel.swift in Sources */,
+				CEC5886C27EA37E900809403 /* VocabsLearntTableCell.swift in Sources */,
 				CEF1E80427E6ED96005D4272 /* TwoDisjointSetOptionQuestion.swift in Sources */,
 				CEF1E7FB27E6D591005D4272 /* Question.swift in Sources */,
 				D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */,
@@ -776,6 +782,7 @@
 				D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */,
 				D3C4423C27E8B17400676C93 /* DatabaseErrors.swift in Sources */,
 				62C04A0F27DDE59E002D2497 /* SignUpViewController.swift in Sources */,
+				CEC5886A27EA2A4F00809403 /* StarView.swift in Sources */,
 				CEF1E7F127E6D120005D4272 /* QuestionViewModel.swift in Sources */,
 				CEF1E81827E742FE005D4272 /* TwoDisjointSetOptionQuestionLayoutViewModel.swift in Sources */,
 				CEF1E82127E75979005D4272 /* OptionTableCell.swift in Sources */,
@@ -829,7 +836,8 @@
 				CEF02D7927E9573700C30E03 /* LessonQuizOutcomeViewModelFromQuizResult.swift in Sources */,
 				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,
 				CEF1E7D527E60C1F005D4272 /* LessonOverviewViewController.swift in Sources */,
-				6204A03A27DE1CDB0063100D /* Constants.swift in Sources */,
+				6204A03A27DE1CDB0063100D /* AppConfigs.swift in Sources */,
+				CEC5886E27EAAD4000809403 /* DataManager.swift in Sources */,
 				CEF1E81627E742BF005D4272 /* SimpleOptionQuestionLayoutViewModel.swift in Sources */,
 				CEF1E7E827E61F58005D4272 /* Lesson.swift in Sources */,
 				D3C4424027E8C65600676C93 /* Logger.swift in Sources */,

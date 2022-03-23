@@ -74,7 +74,7 @@ extension LessonOverviewViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: Constants.UI.vocabCollectionCellIdentifier,
+            withReuseIdentifier: AppConfigs.View.vocabCollectionCellIdentifier,
             for: indexPath) as! VocabCollectionCell
         cell.textField.text = viewModel?.vocabs.value[indexPath.row]
         return cell

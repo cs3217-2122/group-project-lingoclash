@@ -6,7 +6,8 @@
 //
 
 struct LessonQuizResult {
-    var starsObtained: Int
-    var didPass: Bool
-    var vocabsTested: Set<Vocab>
+    let starsObtained: Int
+    let didPass: Bool
+    let vocabsTested: Set<Vocab>
+    let lessonName: String
 }

@@ -83,9 +83,10 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
 
         let minStarsBenchMark = starsBenchmarks[0]
         let starsObtained = getStarsObtained(score: quizScore)
-        let vocabsTested = getVocabsTested()
+        let vocabsTested = Set(lesson.vocabs)
         let didPass = quizScore >= minStarsBenchMark
-        let quizResult = LessonQuizResult(starsObtained: starsObtained, didPass: didPass, vocabsTested: vocabsTested)
+        let quizResult = LessonQuizResult(starsObtained: starsObtained, didPass: didPass,
+                                          vocabsTested: vocabsTested, lessonName: lesson.lessonName)
         quizOutcomeViewModel = LessonQuizOutcomeViewModelFromQuizResult(quizResult: quizResult)
         if didPass {
             // TODO: update stars currency for user, update lesson for the stars
@@ -93,14 +94,6 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
         } else {
             quizStatus.value = QuizStatus.failed
         }
-    }
-    
-    private func getVocabsTested() -> Set<Vocab> {
-        var vocabs = Set<Vocab>()
-        for question in questionsLoaded {
-            vocabs = vocabs.union(question.vocabsTested)
-        }
-        return vocabs
     }
     
     private func isQuizComplete() -> Bool {
