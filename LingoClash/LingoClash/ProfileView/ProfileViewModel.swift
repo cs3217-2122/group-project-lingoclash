@@ -41,40 +41,43 @@ final class ProfileViewModel {
     }
     
     func refreshProfile() {
-        var authUser: UserIdentity?
-        firstly {
-            authProvider.getIdentity()
-        }.done { userIdentity in
-            self.error = nil
-            authUser = userIdentity
-        }.catch { error in
-            self.error = error.localizedDescription
-        }
-        
-        guard let authUser = authUser else {
-            return
-        }
-        
+//        var authUser: UserIdentity?
+//        firstly {
+//            authProvider.getIdentity()
+//        }.done { userIdentity in
+//            self.error = nil
+//            authUser = userIdentity
+//        }.catch { error in
+//            self.error = error.localizedDescription
+//        }
+//
+//
 //        let user = userDataManager.getOne(id: "aNcV0rwqWcGpF45wTDUU")
-        let user = userDataManager.getManyReference(target: "uid", id: authUser.id ?? "1")
-        user.done { users in
-            let user = users[0]
-            self.firstName = user.first_name
-            self.lastName = user.last_name
-            self.name = user.first_name + " " + user.last_name
-            self.email = authUser.email
-            
-            let profile = self.profileDataManager.getOne(id: user.profile_id)
-            profile.done { profile in
-                self.totalStars = profile.stars
-                self.starsToday = profile.stars_today
-            }.catch { error in
-                self.error = error.localizedDescription
-            }
-            
-        }.catch { error in
-            self.error = error.localizedDescription
-        }
+//        let user = userDataManager.getManyReference(target: "uid", id: authUser.id ?? "1")
+//        user.done { user in
+//            self.firstName = user.first_name
+//            self.lastName = user.last_name
+//            self.name = "John Doe"
+//            self.email = "guy@gmail.com"
+//
+//            let profile = self.profileDataManager.getOne(id: user.profile_id)
+//            profile.done { profile in
+//                self.totalStars = 1
+//                self.starsToday = 0
+//            }.catch { error in
+//                self.error = error.localizedDescription
+//            }
+//
+//        }.catch { error in
+//            self.error = error.localizedDescription
+//        }
+        
+        self.firstName = "John"
+        self.lastName = "Doe"
+        self.name = "John Doe"
+        self.email = "guy@gmail.com"
+        self.totalStars = 1
+        self.starsToday = 0
     }
     
     func editProfile(firstName: String, lastName: String) {

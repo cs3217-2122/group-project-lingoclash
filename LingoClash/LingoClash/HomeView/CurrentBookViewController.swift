@@ -36,5 +36,12 @@ class CurrentBookViewController: UIViewController {
             }
         }.store(in: &cancellables)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //TODO: Pass book to lesson view controller
+//        if let collectionViewController = segue.destination as? BookCollectionViewController {
+//            collectionViewController.viewModel = self.viewModel
+//        }
+    }
 
 }

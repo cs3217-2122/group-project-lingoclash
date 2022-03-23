@@ -10,10 +10,13 @@ import Combine
 final class CurrentBookViewModel {
     
     @Published var currentBookProgress: BookProgress?
+    @Published var currentBook: Book?
+    
     
     func refresh() {
         //TODO: get current book progress from db
-        self.currentBookProgress = BookProgress(name: "Korean 3", progress: "1/10")
+        self.currentBookProgress = BookProgress(name: "Chinese 1", progress: "0/10")
+        self.currentBook = Book(id: "1", category_id: "1", name: "Chinese 1")
     }
 }
 
