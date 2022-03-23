@@ -103,7 +103,7 @@ class FirebaseAuthProvider: AuthProvider {
         let user = Auth.auth().currentUser
         
         let userIdentity = UserIdentity(
-            id: user?.uid, fullName: user?.displayName, avatar: user?.photoURL?.absoluteString)
+            id: user?.uid, email: user?.email, fullName: user?.displayName, avatar: user?.photoURL?.absoluteString)
         
         return Promise<UserIdentity>.resolve(value: userIdentity)
     }
