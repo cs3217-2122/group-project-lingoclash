@@ -5,11 +5,11 @@
 //  Created by Kyle キラ on 14/3/22.
 //
 
-import Foundation
 import PromiseKit
 import Combine
 
 final class ProfileViewModel {
+    
     @Published var error: String?
     @Published var name: String?
     @Published var email: String?
@@ -18,6 +18,9 @@ final class ProfileViewModel {
     @Published var alertContent: AlertContent?
     
     private let authProvider: AuthProvider
+    private let userDataManager = UserDataManager()
+    private let profileDataManager = ProfileDataManager()
+    private let profileBookDataManager = ProfileDataManager()
     
     var firstName: String?
     var lastName: String?
@@ -38,13 +41,40 @@ final class ProfileViewModel {
     }
     
     func refreshProfile() {
-        // TODO: get user profile
-        self.firstName = "John"
-        self.lastName = "Doe"
-        self.name = "John Doe"
-        self.email = "guy@gmail.com"
-        self.totalStars = 5
-        self.starsToday = 1
+        var authUser: UserIdentity?
+        firstly {
+            authProvider.getIdentity()
+        }.done { userIdentity in
+            self.error = nil
+            authUser = userIdentity
+        }.catch { error in
+            self.error = error.localizedDescription
+        }
+        
+        guard let authUser = authUser else {
+            return
+        }
+        
+//        let user = userDataManager.getOne(id: "aNcV0rwqWcGpF45wTDUU")
+        let user = userDataManager.getManyReference(target: "uid", id: authUser.id ?? "1")
+        user.done { users in
+            let user = users[0]
+            self.firstName = user.first_name
+            self.lastName = user.last_name
+            self.name = user.first_name + " " + user.last_name
+            self.email = authUser.email
+            
+            let profile = self.profileDataManager.getOne(id: user.profile_id)
+            profile.done { profile in
+                self.totalStars = profile.stars
+                self.starsToday = profile.stars_today
+            }.catch { error in
+                self.error = error.localizedDescription
+            }
+            
+        }.catch { error in
+            self.error = error.localizedDescription
+        }
     }
     
     func editProfile(firstName: String, lastName: String) {

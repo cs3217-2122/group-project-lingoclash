@@ -6,12 +6,24 @@
 //
 
 import Combine
+import PromiseKit
 
 final class CompletedBooksViewModel: BooksViewModel {
     
+    @Published var error: String?
     @Published var booksProgress: [BookProgress] = []
     var booksProgressPublisher: Published<[BookProgress]>.Publisher {
         $booksProgress
+    }
+    
+    private let authProvider: AuthProvider
+    private let userDataManager = UserDataManager()
+    private let profileDataManager = ProfileDataManager()
+    private let profileBookDataManager = ProfileBookDataManager()
+    private let bookDataManager = BookDataManager()
+    
+    init(authProvider: AuthProvider = FirebaseAuthProvider()) {
+        self.authProvider = authProvider
     }
     
     func refreshBooks() {
