@@ -44,11 +44,37 @@ class SimpleOptionQuestionLayoutViewController: UIViewController, QuestionLayout
         
         viewModel.questionStatus.bindAndFire { [unowned self] in
             if $0 != .incomplete {
-                delegate?.questionLayoutViewController(self, didAnswerCorrectly: $0 == .correct)
+                handleQuestionCompletion($0)
             }
         }
         self.contextLabel.text = viewModel.context
         optionsTableView.reloadData()
+    }
+    
+    private func handleQuestionCompletion(_ questionStatus: QuestionStatus) {
+        guard questionStatus != .incomplete else {
+            return
+        }
+    
+        guard let viewModel = viewModel,
+              let optionSelectedIndex = viewModel.optionSelectedIndex else {
+            return
+        }
+        guard let correctCell = optionsTableView.cellForRow(at: IndexPath(row: 0, section: viewModel.answerIndex)),
+              let cellSelected = optionsTableView.cellForRow(at: IndexPath(row: 0, section: optionSelectedIndex)) else {
+            return
+        }
+        
+        UIView.animate(withDuration: 1,
+                       animations: {
+            correctCell.backgroundColor = .green
+            if questionStatus == .wrong {
+                cellSelected.backgroundColor = .red
+            }
+        }, completion: { [self] (_) -> Void in
+            delegate?.questionLayoutViewController(self, didAnswerCorrectly: questionStatus == .correct)
+        })
+        
     }
 }
 
