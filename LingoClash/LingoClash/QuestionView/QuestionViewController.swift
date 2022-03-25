@@ -43,7 +43,7 @@ class QuestionViewController: UIViewController {
     }
     
     private func loadQuestionLayoutViewController(belongingTo questionLayoutViewModel: QuestionLayoutViewModel) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let storyboard = UIStoryboard(name: "Question", bundle: .main)
         var viewController: QuestionLayoutViewController?
         switch questionLayoutViewModel {
         case let simpleOptionQuestionLayoutViewModel as SimpleOptionQuestionLayoutViewModel:
