@@ -78,7 +78,6 @@
 		CEF1E7AA27E50093005D4272 /* StarsTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7A927E50093005D4272 /* StarsTransaction.swift */; };
 		CEF1E7AC27E5030C005D4272 /* CurrencySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7AB27E5030C005D4272 /* CurrencySystem.swift */; };
 		CEF1E7AE27E503B3005D4272 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7AD27E503B3005D4272 /* Account.swift */; };
-		CEF1E7B027E50419005D4272 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7AF27E50419005D4272 /* User.swift */; };
 		CEF1E7B327E5071C005D4272 /* StarsCurrencySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7B227E5071C005D4272 /* StarsCurrencySystem.swift */; };
 		CEF1E7D527E60C1F005D4272 /* LessonOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7D427E60C1F005D4272 /* LessonOverviewViewController.swift */; };
 		CEF1E7D727E60C2D005D4272 /* LessonVocabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7D627E60C2D005D4272 /* LessonVocabViewController.swift */; };
@@ -215,6 +214,7 @@
 		CEF1E7A927E50093005D4272 /* StarsTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsTransaction.swift; sourceTree = "<group>"; };
 		CEF1E7AB27E5030C005D4272 /* CurrencySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySystem.swift; sourceTree = "<group>"; };
 		CEF1E7AD27E503B3005D4272 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		CEF1E7AF27E50419005D4272 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CEF1E7B227E5071C005D4272 /* StarsCurrencySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsCurrencySystem.swift; sourceTree = "<group>"; };
 		CEF1E7D427E60C1F005D4272 /* LessonOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonOverviewViewController.swift; sourceTree = "<group>"; };
 		CEF1E7D627E60C2D005D4272 /* LessonVocabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonVocabViewController.swift; sourceTree = "<group>"; };
@@ -804,6 +804,8 @@
 		D3F00CB627DFC5F200393ADC /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
+				D3BD2A1627DF28B70061E362 /* BookDataManager.swift */,
+				CEC5886D27EAAD4000809403 /* DataManager.swift */,
 				D3C4424427E9F2FC00676C93 /* BookDataManager.swift */,
 				62CB30DE27EA6EFB0044CB24 /* ProfileBookDataManager.swift */,
 				62E418D227EA5A6900DFF03C /* ProfileDataManager.swift */,
@@ -932,6 +934,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BD2A1727DF28B70061E362 /* BookDataManager.swift in Sources */,
+				CEF1E81A27E74622005D4272 /* SimpleOptionQuestionLayoutViewController.swift in Sources */,
 				621E6D5127E9C4F10015BBD4 /* EditProfileViewController.swift in Sources */,
 				62E418C627EA523400DFF03C /* UserDataManager.swift in Sources */,
 				629090A227E8314100941A3B /* RecommendedBooksTableViewCell.swift in Sources */,
@@ -972,7 +976,6 @@
 				CEF02D8927E9775E00C30E03 /* QuestionConstructorRandomFactory.swift in Sources */,
 				D3F00CB127DFC04600393ADC /* FetchTypes.swift in Sources */,
 				CEF02D7727E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift in Sources */,
-				D3C4423A27E8B15900676C93 /* AuthErrors.swift in Sources */,
 				62E418D127EA53A800DFF03C /* Profile.swift in Sources */,
 				D3C4423627E8A96200676C93 /* AlertUtilities.swift in Sources */,
 				629090A527E85EFA00941A3B /* ProfileViewModel.swift in Sources */,
@@ -1031,7 +1034,6 @@
 				6204A03A27DE1CDB0063100D /* AppConfigs.swift in Sources */,
 				629090A827E8D02200941A3B /* CurrentBookViewModel.swift in Sources */,
 				629090AC27E8E3B900941A3B /* CurrentBookViewController.swift in Sources */,
-				62E418C427EA4E5200DFF03C /* DataManager.swift in Sources */,
 				62E418CF27EA526200DFF03C /* ProfileLevel.swift in Sources */,
 				D3C4424527E9F2FC00676C93 /* BookDataManager.swift in Sources */,
 				62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */,
