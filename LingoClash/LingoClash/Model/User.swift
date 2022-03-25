@@ -2,11 +2,14 @@
 //  User.swift
 //  LingoClash
 //
-//  Created by Sherwin Poh on 19/3/22.
+//  Created by Ai Ling Hong on 23/3/22.
 //
 
-import Foundation
-
-class User {
-    
+struct User {
+    var id: Identifier
+    let profile_id: Identifier
+    let first_name: String
+    let last_name: String
 }
+
+extension User: Codable {}

@@ -10,6 +10,7 @@ import PromiseKit
 
 struct UserIdentity: Codable {
     let id: Identifier?
+    let email: String?
     let fullName: String?
     let avatar: String?
 }

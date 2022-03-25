@@ -37,7 +37,7 @@ class DataManager<T: Codable> {
     func getOne(id: Identifier) -> Promise<T> {
 
         let data = dataProvider.getOne(resource: self.resource, params: GetOneParams(id: id))
-
+        
         return data.compactMap { result in
             try? JSONDecoder().decode(T.self, from: result.data)
         }
