@@ -13,10 +13,6 @@ class RecommendedBooksViewController: UIViewController {
     
     private let viewModel = RecommendedBooksViewModel()
     
-    @IBAction func backButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

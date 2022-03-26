@@ -13,10 +13,6 @@ class LearningBooksViewController: UIViewController {
     
     private let viewModel = LearningBooksViewModel()
     
-    @IBAction func backButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
