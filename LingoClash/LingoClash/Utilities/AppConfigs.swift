@@ -8,11 +8,6 @@
 import UIKit
 
 struct AppConfigs {
-
-    struct StoryBoard {
-        static let mainTabBarVC = "MainTabBarVC"
-        static let splashVC = "SplashVC"
-    }
     
     struct View {
         static let primaryColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)

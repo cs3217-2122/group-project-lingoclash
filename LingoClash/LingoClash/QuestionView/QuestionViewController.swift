@@ -37,27 +37,23 @@ class QuestionViewController: UIViewController {
         guard isViewLoaded, let viewModel = viewModel else {
             return
         }
-        
-        viewModel.questionLayoutViewModel?.bindAndFire { [unowned self] in loadQuestionLayoutViewController(belongingTo: $0)}
-        
+        guard let layoutViewModel = viewModel.questionLayoutViewModel else {
+            return
+        }
+        loadQuestionLayoutViewController(belongingTo: layoutViewModel)
     }
     
     private func loadQuestionLayoutViewController(belongingTo questionLayoutViewModel: QuestionLayoutViewModel) {
-        let storyboard = UIStoryboard(name: "Question", bundle: .main)
         var viewController: QuestionLayoutViewController?
         switch questionLayoutViewModel {
         case let simpleOptionQuestionLayoutViewModel as SimpleOptionQuestionLayoutViewModel:
-            if let vc = storyboard.instantiateViewController(identifier: SimpleOptionQuestionLayoutViewController.identifier)
-                as? SimpleOptionQuestionLayoutViewController {
-                vc.viewModel = simpleOptionQuestionLayoutViewModel
-                viewController = vc
-            }
+            let vc = SimpleOptionQuestionLayoutViewController.instantiateFromAppStoryboard(appStoryboard: AppStoryboard.Question)
+            vc.viewModel = simpleOptionQuestionLayoutViewModel
+            viewController = vc
         case let twoDisjointSetOptionQuestionLayoutViewModel as TwoDisjointSetOptionQuestionLayoutViewModel:
-            if let vc = storyboard.instantiateViewController(identifier: TwoDisjointSetOptionQuestionLayoutViewController.identifier)
-                as? TwoDisjointSetOptionQuestionLayoutViewController {
-                vc.viewModel = twoDisjointSetOptionQuestionLayoutViewModel
-                viewController = vc
-            }
+            let vc = TwoDisjointSetOptionQuestionLayoutViewController.instantiateFromAppStoryboard(appStoryboard: AppStoryboard.Question)
+            vc.viewModel = twoDisjointSetOptionQuestionLayoutViewModel
+            viewController = vc
         default:
             return
         }

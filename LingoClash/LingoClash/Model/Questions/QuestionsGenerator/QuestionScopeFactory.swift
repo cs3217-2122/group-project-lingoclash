@@ -23,7 +23,6 @@ struct QuestionScopeFactory {
             return Set()
         }
         let vocabs = scope.subtracting(excludeVocabs)
-        let randomlySelectedVocabs = vocabs.randomSample(count: count)
         return Set(vocabs.randomSample(count: count))
     }
     

@@ -11,7 +11,7 @@ class CurrencySystem {
         guard amount != 0 else {
             return
         }
-        var action = amount > 0 ? DebitOrCredit.credit : DebitOrCredit.debit
+        let action = amount > 0 ? DebitOrCredit.credit : DebitOrCredit.debit
         let currentDateAndTime = Date()
         let transaction = Transaction(debitOrCredit: action, amount: amount, account: account, createdAt: currentDateAndTime)
         account.transactions.append(transaction)
