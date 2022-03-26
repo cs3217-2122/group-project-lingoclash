@@ -651,6 +651,9 @@
                                                     <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="Jfl-UW-3RA" kind="show" id="aho-Ff-dmE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWy-W5-jtq">
                                                 <rect key="frame" x="193" y="0.0" width="66.5" height="31"/>
@@ -659,6 +662,9 @@
                                                     <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="Jfl-UW-3RA" kind="show" id="faX-he-4YF"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -719,6 +725,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEl-Ri-LhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5336" y="-66"/>
+        </scene>
+        <!--LessonViewController-->
+        <scene sceneID="PLv-PE-nOk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Lesson" referencedIdentifier="LessonViewController" id="Jfl-UW-3RA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hPW-XI-vMD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSx-RO-ezo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5343" y="177"/>
         </scene>
         <!--Current Book Section View Controller-->
         <scene sceneID="xGX-j0-uDW">
@@ -918,7 +934,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YI0-UM-dnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8246" y="489"/>
+            <point key="canvasLocation" x="8248" y="385"/>
         </scene>
         <!--Completed-->
         <scene sceneID="bXu-Ut-fQ6">
@@ -1147,6 +1163,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="1G7-4b-OH4"/>
         <segue reference="AfC-OO-m0s"/>
+        <segue reference="faX-he-4YF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>

@@ -1,0 +1,40 @@
+{
+    "transactions": {
+        "1": {
+            "debit_or_credit": "credit",
+            "account_id": 1,
+            "amount": 100,
+            "created_at": "13/05/21 23:45",
+            "description": "Completion of Lesson 1."
+        }
+    },
+    "accounts": {
+        "1" : {
+            "user_id": 1,
+            "total": 100
+        }
+    },
+    "star_account": {
+        "1" : {
+            "account_id": 1
+        }
+    },
+    "gem_transaction": {
+        "1" : {
+            "account_id": 2,
+            "total_dangerous": 10
+        }
+    },
+    "star_transaction": {
+        "1": {
+            "transaction_id": 1
+        }
+    },
+    "gem_transaction": {
+        "1": {
+            "transaction_id": 2,
+            "dangerous": true,
+            "from_user_id": 1
+        }
+    }
+}
