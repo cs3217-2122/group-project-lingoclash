@@ -24,7 +24,8 @@ class ChangePasswordViewController: UIViewController {
         let newPassword = FormUtilities.getTrimmedString(textField: newPasswordTextField)
         let confirmNewPassword = FormUtilities.getTrimmedString(textField: confirmNewPasswordTextField)
         
-        viewModel.changePassword(currentPassword: currentPassword, newPassword: newPassword, confirmNewPassword: confirmNewPassword)
+        let fields = ChangePasswordFields(currentPassword: currentPassword, newPassword: newPassword, confirmNewPassword: confirmNewPassword)
+        viewModel.changePassword(fields)
     }
     
 }

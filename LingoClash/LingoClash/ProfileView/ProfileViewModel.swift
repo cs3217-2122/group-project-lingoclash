@@ -80,15 +80,39 @@ final class ProfileViewModel {
         self.starsToday = 0
     }
     
-    func editProfile(firstName: String, lastName: String) {
+    func editProfile(_ fields: EditProfileFields) {
+        if let error = FormUtilities.validateFieldsNotEmpty(fields) {
+            return error
+        }
+        
         // TODO: edit profile
     }
     
-    func changeEmail(newEmail: String, confirmNewEmail: String) {
+    func changeEmail(_ fields: ChangeEmailFields) {
+        if let error = FormUtilities.validateFieldsNotEmpty(fields) {
+            return error
+        }
+        
+        if let error = FormUtilities.validateEmail(email: fields.newEmail) {
+            return error
+        }
+
         // TODO: change email
     }
     
-    func changePassword(currentPassword: String, newPassword: String, confirmNewPassword: String) {
+    func changePassword(_ fields: ChangePasswordFields) {
+        if let error = FormUtilities.validateFieldsNotEmpty(fields) {
+            return error
+        }
+
+        if let error = FormUtilities.validatePassword(password: fields.newPassword) {
+            return error
+        }
+        
+        if fields.newPassword != fields.confirmNewPassword {
+            return "New password and confirmation password must be the same."
+        }
+        
         // TODO: change password
     }
 }
