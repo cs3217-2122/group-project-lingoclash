@@ -52,10 +52,10 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
-        let firstName = Utilities.getTrimmedString(textField: firstNameTextField)
-        let lastName = Utilities.getTrimmedString(textField: lastNameTextField)
-        let email = Utilities.getTrimmedString(textField: emailTextField)
-        let password = Utilities.getTrimmedString(textField: passwordTextField)
+        let firstName = FormUtilities.getTrimmedString(textField: firstNameTextField)
+        let lastName = FormUtilities.getTrimmedString(textField: lastNameTextField)
+        let email = FormUtilities.getTrimmedString(textField: emailTextField)
+        let password = FormUtilities.getTrimmedString(textField: passwordTextField)
         
         let fields = SignUpFields(firstName: firstName, lastName: lastName, email: email, password: password)
         viewModel.signUp(fields)

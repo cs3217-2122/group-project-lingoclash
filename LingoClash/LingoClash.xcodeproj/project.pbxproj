@@ -36,7 +36,6 @@
 		629090AC27E8E3B900941A3B /* CurrentBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */; };
 		62C04A0F27DDE59E002D2497 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */; };
 		62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1027DDE67F002D2497 /* LoginViewController.swift */; };
-		62C04A1327DDE838002D2497 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1227DDE838002D2497 /* Utilities.swift */; };
 		62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1427DDEB10002D2497 /* HomeViewController.swift */; };
 		62CB30DF27EA6EFB0044CB24 /* ProfileBookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CB30DE27EA6EFB0044CB24 /* ProfileBookDataManager.swift */; };
 		62E418C627EA523400DFF03C /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C527EA523400DFF03C /* UserDataManager.swift */; };
@@ -205,7 +204,6 @@
 		629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBookViewController.swift; sourceTree = "<group>"; };
 		62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		62C04A1027DDE67F002D2497 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		62C04A1227DDE838002D2497 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62C04A1427DDEB10002D2497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		62CB30DE27EA6EFB0044CB24 /* ProfileBookDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBookDataManager.swift; sourceTree = "<group>"; };
 		62E418C327EA4E5200DFF03C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -355,7 +353,6 @@
 		6204A03B27DE34040063100D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				62C04A1227DDE838002D2497 /* Utilities.swift */,
 				6204A03927DE1CDB0063100D /* AppConfigs.swift */,
 				62165B7527F2244C004BC620 /* FormUtilities.swift */,
 				CEF1E7DB27E60C7A005D4272 /* Dynamic.swift */,
@@ -1100,7 +1097,6 @@
 				CEF1E7AE27E503B3005D4272 /* Account.swift in Sources */,
 				CEC5887727EAC6E700809403 /* LessonSelectorTableCell.swift in Sources */,
 				CEC5887327EABECC00809403 /* LessonSelectionViewModel.swift in Sources */,
-				62C04A1327DDE838002D2497 /* Utilities.swift in Sources */,
 				CEF1E7FD27E6E527005D4272 /* SimpleOptionQuestion.swift in Sources */,
 				CEF1E80227E6EB21005D4272 /* DefinitionOptionQuestion.swift in Sources */,
 				624BD58627E7A37D006F0391 /* RecommendedBooksViewModel.swift in Sources */,

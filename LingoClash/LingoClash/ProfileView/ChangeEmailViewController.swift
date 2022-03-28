@@ -19,8 +19,8 @@ class ChangeEmailViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        let newEmail = Utilities.getTrimmedString(textField: newEmailTextField)
-        let confirmNewEmail = Utilities.getTrimmedString(textField: confirmNewEmailTextField)
+        let newEmail = FormUtilities.getTrimmedString(textField: newEmailTextField)
+        let confirmNewEmail = FormUtilities.getTrimmedString(textField: confirmNewEmailTextField)
         
         viewModel.changeEmail(newEmail: newEmail, confirmNewEmail: confirmNewEmail)
     }

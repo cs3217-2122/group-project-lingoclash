@@ -36,14 +36,14 @@ class FormUtilities {
     }
     
     static func validateEmail(email: String) -> String? {
-        if Utilities.isEmailValid(email) == false {
+        if !isEmailValid(email) {
             return "Please input a valid email."
         }
         return nil
     }
     
     static func validatePassword(password: String) -> String? {
-        if Utilities.isPasswordValid(password) == false {
+        if !isPasswordValid(password) {
             return "Please make sure your password is at least 8 characters, contains a special character and a number."
         }
         return nil
