@@ -57,7 +57,8 @@ class SignUpViewController: UIViewController {
         let email = Utilities.getTrimmedString(textField: emailTextField)
         let password = Utilities.getTrimmedString(textField: passwordTextField)
         
-        viewModel.signUp(firstName: firstName, lastName: lastName, email: email, password: password)
+        let fields = SignUpFields(firstName: firstName, lastName: lastName, email: email, password: password)
+        viewModel.signUp(fields)
         
     }
     
