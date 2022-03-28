@@ -10,10 +10,6 @@ import UIKit
 class CompletedBooksViewController: UIViewController {
     
     private let viewModel = CompletedBooksViewModel()
-
-    @IBAction func backButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

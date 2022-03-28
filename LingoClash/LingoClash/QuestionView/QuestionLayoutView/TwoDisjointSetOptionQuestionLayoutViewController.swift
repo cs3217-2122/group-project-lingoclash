@@ -8,10 +8,10 @@
 import UIKit
 
 class TwoDisjointSetOptionQuestionLayoutViewController: UIViewController, QuestionLayoutViewController {
+    typealias VM = TwoDisjointSetOptionQuestionLayoutViewModel
+
     var delegate: QuestionLayoutVCDelegate?
     
-    static let identifier = "TwoDisjointSetOptionQuestionLayoutVC"
-    typealias VM = TwoDisjointSetOptionQuestionLayoutViewModel
     var viewModel: VM? {
         didSet {
             fillUI()

@@ -8,7 +8,7 @@
 import Darwin
 
 class QuestionsGenerator {
-    static let questionConstructors: [QuestionContructor] = [DefinitionOptionQuestionConstructor()]
+    private static let questionConstructors: [QuestionContructor] = [DefinitionOptionQuestionConstructor()]
     
     func generateQuestions(settings: QuestionGeneratorSettings) throws -> QuestionSequence {
         /*

@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class SimpleOptionQuestionLayoutViewController: UIViewController, QuestionLayoutViewController {
-    static let identifier = "SimpleOptionQuestionLayoutVC"
     typealias VM = SimpleOptionQuestionLayoutViewModel
     let cellSpacingHeight:CGFloat = 10
     
