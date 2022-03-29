@@ -5,6 +5,6 @@
 //  Created by Ai Ling Hong on 29/3/22.
 //
 
-struct ChangeEmailFields {
+struct ChangeEmailFields: FormFields {
     let newEmail: String
 }

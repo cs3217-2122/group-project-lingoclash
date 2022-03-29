@@ -82,7 +82,7 @@ final class ProfileViewModel {
     
     func editProfile(_ fields: EditProfileFields) {
         if let error = FormUtilities.validateFieldsNotEmpty(fields) {
-            return error
+//            return error
         }
         
         // TODO: edit profile
@@ -90,11 +90,11 @@ final class ProfileViewModel {
     
     func changeEmail(_ fields: ChangeEmailFields) {
         if let error = FormUtilities.validateFieldsNotEmpty(fields) {
-            return error
+//            return error
         }
         
         if let error = FormUtilities.validateEmail(email: fields.newEmail) {
-            return error
+//            return error
         }
 
         // TODO: change email
@@ -102,15 +102,15 @@ final class ProfileViewModel {
     
     func changePassword(_ fields: ChangePasswordFields) {
         if let error = FormUtilities.validateFieldsNotEmpty(fields) {
-            return error
+//            return error
         }
 
         if let error = FormUtilities.validatePassword(password: fields.newPassword) {
-            return error
+//            return error
         }
         
         if fields.newPassword != fields.confirmNewPassword {
-            return "New password and confirmation password must be the same."
+//            return "New password and confirmation password must be the same."
         }
         
         // TODO: change password

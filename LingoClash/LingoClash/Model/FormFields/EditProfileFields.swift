@@ -5,7 +5,7 @@
 //  Created by Ai Ling Hong on 29/3/22.
 //
 
-struct EditProfileFields {
+struct EditProfileFields: FormFields {
     let firstName: String
     let lastName: String
 }
