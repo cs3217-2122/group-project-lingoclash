@@ -113,4 +113,20 @@ class JSONServerAuthProvider: AuthProvider {
             try? JSONDecoder().decode(UserIdentity.self, from: fetchResult.data)
         }
     }
+    
+    func updateEmail(_ email: String) -> Promise<Void> {
+        // TODO: fill in method
+        return Promise<Void>()
+    }
+    
+    func updatePassword(_ password: String) -> Promise<Void> {
+        // TODO: fill in method
+        return Promise<Void>()
+    }
+    
+    func reauthenticate(password: String) -> Promise<Void> {
+        // TODO: fill in method
+        return Promise<Void>()
+    }
+    
 }

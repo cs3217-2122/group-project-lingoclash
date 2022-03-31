@@ -33,9 +33,15 @@ class ProfileViewController: UIViewController {
             }
         }.store(in: &cancellables)
         
-        viewModel.$name.sink {[weak self] name in
-            if let name = name {
-                self?.nameLabel.text = name
+        viewModel.$firstName.sink {[weak self] firstName in
+            if let firstName = firstName, let lastName = self?.viewModel.lastName {
+                self?.nameLabel.text = firstName + " " + lastName
+            }
+        }.store(in: &cancellables)
+        
+        viewModel.$lastName.sink {[weak self] lastName in
+            if let lastName = lastName, let firstName = self?.viewModel.firstName {
+                self?.nameLabel.text = firstName + " " + lastName
             }
         }.store(in: &cancellables)
         
@@ -81,6 +87,16 @@ class ProfileViewController: UIViewController {
     func showError(_ message: String) {
         // TODO: Perhaps it is better to show as popup
         Logger.info("Error signing out: \(message)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let editProfileVC = segue.destination as? EditProfileViewController {
+            editProfileVC.viewModel = self.viewModel
+        } else if let changePasswordVC = segue.destination as? ChangePasswordViewController {
+            changePasswordVC.viewModel = self.viewModel
+        } else if let changeEmailVC = segue.destination as? ChangeEmailViewController {
+            changeEmailVC.viewModel = self.viewModel
+        }
     }
     
 }

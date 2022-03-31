@@ -3,6 +3,7 @@
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -133,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iCM-8f-Vby">
-                                <rect key="frame" x="120" y="189.5" width="300" height="161"/>
+                                <rect key="frame" x="120" y="164.5" width="300" height="211.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atf-3n-Pnh">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
@@ -146,8 +147,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfX-s2-Cqp">
+                                        <rect key="frame" x="0.0" y="130" width="300" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="Error"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqH-O2-EAL">
-                                        <rect key="frame" x="0.0" y="130" width="300" height="31"/>
+                                        <rect key="frame" x="0.0" y="180.5" width="300" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                         <connections>
@@ -168,6 +175,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="ZfX-s2-Cqp" id="8kq-OE-LtV"/>
                         <outlet property="newEmailTextField" destination="dX0-gI-NdV" id="dkc-7L-s5g"/>
                     </connections>
                 </viewController>
@@ -184,7 +192,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7Bq-Qx-UDU">
-                                <rect key="frame" x="120" y="125.5" width="300" height="289"/>
+                                <rect key="frame" x="120" y="100.5" width="300" height="339.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQh-46-y3W">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
@@ -207,8 +215,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZg-zA-kBV">
+                                        <rect key="frame" x="0.0" y="258" width="300" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="Error"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzA-cE-02R">
-                                        <rect key="frame" x="0.0" y="258" width="300" height="31"/>
+                                        <rect key="frame" x="0.0" y="308.5" width="300" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                         <connections>
@@ -232,6 +246,7 @@
                     <connections>
                         <outlet property="confirmNewPasswordTextField" destination="JyC-Za-Rro" id="r3r-WB-76t"/>
                         <outlet property="currentPasswordTextField" destination="d55-7u-Anf" id="dme-Hs-9Un"/>
+                        <outlet property="errorLabel" destination="MZg-zA-kBV" id="77z-XA-Oef"/>
                         <outlet property="newPasswordTextField" destination="H7S-kJ-v3d" id="FkJ-xD-KcA"/>
                     </connections>
                 </viewController>
@@ -248,7 +263,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yEG-sd-Ztz">
-                                <rect key="frame" x="120" y="157.5" width="300" height="225"/>
+                                <rect key="frame" x="120" y="132.5" width="300" height="275.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fke-En-Wl1">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
@@ -266,12 +281,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf6-Yh-OWq">
+                                        <rect key="frame" x="0.0" y="194" width="300" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="Error"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Z6-YE-d93">
-                                        <rect key="frame" x="0.0" y="194" width="300" height="31"/>
+                                        <rect key="frame" x="0.0" y="244.5" width="300" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                         <connections>
-                                            <action selector="saveButtonTapepd:" destination="HBH-hB-k1Q" eventType="touchUpInside" id="gde-lv-vAg"/>
+                                            <action selector="saveButtonTapped:" destination="HBH-hB-k1Q" eventType="touchUpInside" id="9qt-Oa-LKC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -289,6 +310,7 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="errorLabel" destination="jf6-Yh-OWq" id="9kT-DN-2LC"/>
                         <outlet property="firstNameTextField" destination="26a-xV-Nog" id="wdo-jR-GBJ"/>
                         <outlet property="lastNameTextField" destination="5NP-H8-4dg" id="Q8A-4G-rSX"/>
                     </connections>
@@ -16839,6 +16861,9 @@ D6QADw+sAA8PrgAPD7AADw+yAA8PtAAPIVQADyFZAA8hZgAPIWkADyF2AA8hewAPIYMADyGGAA8hiwAP
 IZMAAAAAAAAEAQAAAAAAAABWAAAAAAAAAAAAAAAAAA8hlg
 </mutableData>
         </image>
+        <namedColor name="Error">
+            <color red="0.73100000619888306" green="0.10400000214576721" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

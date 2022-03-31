@@ -7,11 +7,17 @@
 
 import PromiseKit
 import Combine
+import FirebaseFirestore
+import FirebaseAuth
 
 final class ProfileViewModel {
     
     @Published var error: String?
-    @Published var name: String?
+    @Published var editProfileError: String?
+    @Published var changeEmailError: String?
+    @Published var changePasswordError: String?
+    @Published var firstName: String?
+    @Published var lastName: String?
     @Published var email: String?
     @Published var totalStars: Int?
     @Published var starsToday: Int?
@@ -21,9 +27,7 @@ final class ProfileViewModel {
     private let userDataManager = UserDataManager()
     private let profileDataManager = ProfileDataManager()
     private let profileBookDataManager = ProfileDataManager()
-    
-    var firstName: String?
-    var lastName: String?
+    private let db = Firestore.firestore()
     
     init(authProvider: AuthProvider = FirebaseAuthProvider()) {
         self.authProvider = authProvider
@@ -41,78 +45,142 @@ final class ProfileViewModel {
     }
     
     func refreshProfile() {
-//        var authUser: UserIdentity?
-//        firstly {
-//            authProvider.getIdentity()
-//        }.done { userIdentity in
-//            self.error = nil
-//            authUser = userIdentity
-//        }.catch { error in
-//            self.error = error.localizedDescription
-//        }
-//
-//
-//        let user = userDataManager.getOne(id: "aNcV0rwqWcGpF45wTDUU")
-//        let user = userDataManager.getManyReference(target: "uid", id: authUser.id ?? "1")
-//        user.done { user in
-//            self.firstName = user.first_name
-//            self.lastName = user.last_name
-//            self.name = "John Doe"
-//            self.email = "guy@gmail.com"
-//
-//            let profile = self.profileDataManager.getOne(id: user.profile_id)
-//            profile.done { profile in
-//                self.totalStars = 1
-//                self.starsToday = 0
-//            }.catch { error in
-//                self.error = error.localizedDescription
-//            }
-//
-//        }.catch { error in
-//            self.error = error.localizedDescription
-//        }
+        guard let authUser = Auth.auth().currentUser else {
+            return
+        }
         
-        self.firstName = "John"
-        self.lastName = "Doe"
-        self.name = "John Doe"
-        self.email = "guy@gmail.com"
-        self.totalStars = 1
-        self.starsToday = 0
+        
+        db.collection("users").whereField("uid", isEqualTo: authUser.uid).getDocuments { querySnapshot, err in
+            if let _ = err {
+                return
+            }
+            
+            guard let data = querySnapshot?.documents[0] else {
+                return
+            }
+            
+            if let firstName = data["first_name"] as? String {
+                self.firstName = firstName
+            }
+            
+            if let lastName = data["last_name"] as? String {
+                self.lastName = lastName
+            }
+            
+            self.email = authUser.email
+            
+            self.db.collection("profiles").whereField("user_id", isEqualTo: data.documentID).getDocuments { querySnapshot, err in
+                if let _ = err {
+                    return
+                }
+                
+                guard let document = querySnapshot?.documents[0] else {
+                    return
+                }
+                
+                if let starsToday = document["stars_today"] as? Int {
+                    self.starsToday = starsToday
+                }
+                
+                if let stars = document["stars"] as? Int {
+                    self.totalStars = stars
+                }
+            }
+        }
     }
     
     func editProfile(_ fields: EditProfileFields) {
         if let error = FormUtilities.validateFieldsNotEmpty(fields) {
-//            return error
+            editProfileError = error
+            return
         }
         
-        // TODO: edit profile
+        guard let authUser = Auth.auth().currentUser else {
+            return
+        }
+        
+        db.collection("users").whereField("uid", isEqualTo: authUser.uid).getDocuments { querySnapshot, err in
+            if let _ = err {
+                return
+            }
+            
+            guard let document = querySnapshot?.documents[0] else {
+                return
+            }
+            
+            self.db.collection("users").document(document.documentID).updateData([
+                "first_name": fields.firstName,
+                "last_name": fields.lastName
+            ]) { err in
+                if let _ = err {
+                    self.editProfileError = "Error updating profile."
+                } else {
+                    self.editProfileError = nil
+                    self.alertContent = AlertContent(title: "", message: "Your profile is updated succesfully.", type: .basic)
+                    self.refreshProfile()
+                }
+            }
+        }
     }
     
     func changeEmail(_ fields: ChangeEmailFields) {
         if let error = FormUtilities.validateFieldsNotEmpty(fields) {
-//            return error
+            changeEmailError = error
+            return
         }
         
         if let error = FormUtilities.validateEmail(email: fields.newEmail) {
-//            return error
+            changeEmailError = error
+            return
+        }
+        
+        if email == fields.newEmail {
+            changeEmailError = "New email must be different from the current email."
+            return
         }
 
-        // TODO: change email
+        firstly {
+            authProvider.updateEmail(fields.newEmail)
+        }.done {
+            self.changeEmailError = nil
+            self.alertContent = AlertContent(title: "", message: "Your email is updated succesfully.", type: .basic)
+            self.refreshProfile()
+        }.catch { error in
+            self.changeEmailError = error.localizedDescription
+        }
     }
     
     func changePassword(_ fields: ChangePasswordFields) {
         if let error = FormUtilities.validateFieldsNotEmpty(fields) {
-//            return error
+            changePasswordError = error
+            return
         }
 
         if let error = FormUtilities.validatePassword(password: fields.newPassword) {
-//            return error
+            changePasswordError = error
+            return
         }
         
         if fields.newPassword != fields.confirmNewPassword {
-//            return "New password and confirmation password must be the same."
+            changePasswordError = "New password and confirmation password must be the same."
+            return
         }
         
-        // TODO: change password
+        if fields.newPassword == fields.currentPassword {
+            changePasswordError = "New password must be different from the current password."
+            return
+        }
+        
+        firstly {
+            authProvider.reauthenticate(password: fields.currentPassword)
+        }.then {
+            self.authProvider.updatePassword(fields.newPassword)
+        }.done {
+            self.error = nil
+            self.alertContent = AlertContent(title: "", message: "Your password is updated succesfully.", type: .basic)
+            self.refreshProfile()
+        }.catch { error in
+            self.changePasswordError = error.localizedDescription
+        }
     }
 }

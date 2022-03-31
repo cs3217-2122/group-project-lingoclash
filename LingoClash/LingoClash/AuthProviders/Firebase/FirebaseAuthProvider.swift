@@ -92,4 +92,45 @@ class FirebaseAuthProvider: AuthProvider {
         return Promise<UserIdentity>.resolve(value: userIdentity)
     }
     
+    func updateEmail(_ email: String) -> Promise<Void> {
+        return Promise<Void> { seal in            
+            Auth.auth().currentUser?.updateEmail(to: email, completion: { error in
+                if let error = error {
+                    return seal.reject(error)
+                }
+                
+                return seal.fulfill(())
+            })
+        }
+    }
+    
+    func updatePassword(_ password: String) -> Promise<Void> {
+        return Promise<Void> { seal in
+            Auth.auth().currentUser?.updatePassword(to: password, completion: { error in
+                if let error = error {
+                    return seal.reject(error)
+                }
+                
+                return seal.fulfill(())
+            })
+        }
+    }
+    
+    func reauthenticate(password: String) -> Promise<Void> {
+        guard let email = Auth.auth().currentUser?.email else {
+            return Promise.reject(reason: AuthError.invalidUser)
+        }
+        
+        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
+        
+        return Promise<Void> { seal in
+            Auth.auth().currentUser?.reauthenticate(with: credential, completion: { result, error in
+                if let _ = error {
+                    return seal.reject(AuthError.invalidPassword)
+                }
+                
+                return seal.fulfill(())
+            })
+        }
+    }
 }

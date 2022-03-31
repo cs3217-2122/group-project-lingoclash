@@ -21,4 +21,7 @@ protocol AuthProvider {
     func logout() -> Promise<Void>
     func checkError(error: HTTPError) -> Promise<Void>
     func getIdentity() -> Promise<UserIdentity>
+    func updateEmail(_ email: String) -> Promise<Void>
+    func updatePassword(_ password: String) -> Promise<Void>
+    func reauthenticate(password: String) -> Promise<Void>
 }

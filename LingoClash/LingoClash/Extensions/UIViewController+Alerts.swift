@@ -22,4 +22,11 @@ extension UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func showDoneAlert(title: String, message: String, doneHandler: ((UIAlertAction) -> Void)?) {
+        
+        let alert = AlertUtilities.createDoneAlert(title: title, message: message, doneHandler: doneHandler)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }
