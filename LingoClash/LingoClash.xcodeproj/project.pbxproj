@@ -119,7 +119,6 @@
 		CEF1E82127E75979005D4272 /* OptionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E82027E75979005D4272 /* OptionTableCell.swift */; };
 		D30CD1E827E79F3A0021A5AA /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CD1E727E79F3A0021A5AA /* KeychainManager.swift */; };
 		D30CD1EB27E7A65F0021A5AA /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CD1EA27E7A65F0021A5AA /* AuthProvider.swift */; };
-		D30CD1ED27E81D7B0021A5AA /* JSONServerAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CD1EC27E81D7B0021A5AA /* JSONServerAuthProvider.swift */; };
 		D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DD27D4D42700C80986 /* AppDelegate.swift */; };
 		D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DF27D4D42700C80986 /* SceneDelegate.swift */; };
 		D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282E127D4D42700C80986 /* SplashViewController.swift */; };
@@ -130,13 +129,10 @@
 		D33282F927D4E63B00C80986 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282F827D4E63B00C80986 /* Theme.swift */; };
 		D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
 		D398780927DF6AB800B2F4ED /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780827DF6AB800B2F4ED /* DataProvider.swift */; };
-		D398780B27DF7C1100B2F4ED /* JSONServerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780A27DF7C1100B2F4ED /* JSONServerDataProvider.swift */; };
 		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
 		D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
 		D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */; };
-		D3C4422427E877C400676C93 /* JSONAuthProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4422327E877C400676C93 /* JSONAuthProviderTypes.swift */; };
 		D3C4422727E878D800676C93 /* FirebaseAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4422627E878D800676C93 /* FirebaseAuthProvider.swift */; };
-		D3C4422927E8792200676C93 /* FakeAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4422827E8792200676C93 /* FakeAuthProvider.swift */; };
 		D3C4423127E8966C00676C93 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423027E8966C00676C93 /* UIViewController+Alerts.swift */; };
 		D3C4423627E8A96200676C93 /* AlertUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423527E8A96200676C93 /* AlertUtilities.swift */; };
 		D3C4423827E8A98400676C93 /* AlertTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423727E8A98400676C93 /* AlertTypes.swift */; };
@@ -152,7 +148,6 @@
 		D3F00CB127DFC04600393ADC /* FetchTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB027DFC04600393ADC /* FetchTypes.swift */; };
 		D3F00CB327DFC59500393ADC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB227DFC59500393ADC /* Book.swift */; };
 		D3F00CB527DFC5DD00393ADC /* BookCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB427DFC5DD00393ADC /* BookCategory.swift */; };
-		D3F00CBA27E0642A00393ADC /* FakeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB927E0642A00393ADC /* FakeDataProvider.swift */; };
 		D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -272,7 +267,6 @@
 		CEF1E82027E75979005D4272 /* OptionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableCell.swift; sourceTree = "<group>"; };
 		D30CD1E727E79F3A0021A5AA /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		D30CD1EA27E7A65F0021A5AA /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
-		D30CD1EC27E81D7B0021A5AA /* JSONServerAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONServerAuthProvider.swift; sourceTree = "<group>"; };
 		D33282DA27D4D42700C80986 /* LingoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33282DD27D4D42700C80986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D33282DF27D4D42700C80986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -285,14 +279,11 @@
 		D33282F827D4E63B00C80986 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		D398780827DF6AB800B2F4ED /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
-		D398780A27DF7C1100B2F4ED /* JSONServerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONServerDataProvider.swift; sourceTree = "<group>"; };
 		D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LingoClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BD29E427DCE6350061E362 /* LingoClashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoClashTests.swift; sourceTree = "<group>"; };
 		D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		D3C4422327E877C400676C93 /* JSONAuthProviderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAuthProviderTypes.swift; sourceTree = "<group>"; };
 		D3C4422627E878D800676C93 /* FirebaseAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthProvider.swift; sourceTree = "<group>"; };
-		D3C4422827E8792200676C93 /* FakeAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthProvider.swift; sourceTree = "<group>"; };
 		D3C4422C27E87EE800676C93 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D3C4423027E8966C00676C93 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		D3C4423527E8A96200676C93 /* AlertUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtilities.swift; sourceTree = "<group>"; };
@@ -309,7 +300,6 @@
 		D3F00CB027DFC04600393ADC /* FetchTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTypes.swift; sourceTree = "<group>"; };
 		D3F00CB227DFC59500393ADC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D3F00CB427DFC5DD00393ADC /* BookCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCategory.swift; sourceTree = "<group>"; };
-		D3F00CB927E0642A00393ADC /* FakeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataProvider.swift; sourceTree = "<group>"; };
 		D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -614,7 +604,6 @@
 				D30CD1EA27E7A65F0021A5AA /* AuthProvider.swift */,
 				D3C4423927E8B15900676C93 /* AuthErrors.swift */,
 				D3C4422A27E8796500676C93 /* Firebase */,
-				D3C4422527E8785300676C93 /* JSONServer */,
 			);
 			path = AuthProviders;
 			sourceTree = "<group>";
@@ -747,7 +736,6 @@
 				D3C4423D27E8B20000676C93 /* DataProviderErrors.swift */,
 				D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */,
 				D3C4424127E8CAD200676C93 /* Firebase */,
-				D3C4422227E871A200676C93 /* JSONServer */,
 			);
 			path = DataProviders;
 			sourceTree = "<group>";
@@ -767,25 +755,6 @@
 				D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		D3C4422227E871A200676C93 /* JSONServer */ = {
-			isa = PBXGroup;
-			children = (
-				D398780A27DF7C1100B2F4ED /* JSONServerDataProvider.swift */,
-				D3F00CB927E0642A00393ADC /* FakeDataProvider.swift */,
-			);
-			path = JSONServer;
-			sourceTree = "<group>";
-		};
-		D3C4422527E8785300676C93 /* JSONServer */ = {
-			isa = PBXGroup;
-			children = (
-				D3C4422327E877C400676C93 /* JSONAuthProviderTypes.swift */,
-				D30CD1EC27E81D7B0021A5AA /* JSONServerAuthProvider.swift */,
-				D3C4422827E8792200676C93 /* FakeAuthProvider.swift */,
-			);
-			path = JSONServer;
 			sourceTree = "<group>";
 		};
 		D3C4422A27E8796500676C93 /* Firebase */ = {
@@ -966,7 +935,6 @@
 				62CB30DF27EA6EFB0044CB24 /* ProfileBookDataManager.swift in Sources */,
 				62E418C827EA523D00DFF03C /* User.swift in Sources */,
 				624BD58D27E7A673006F0391 /* RecommendedBooksViewController.swift in Sources */,
-				D3F00CBA27E0642A00393ADC /* FakeDataProvider.swift in Sources */,
 				CEF1E7E027E60D5C005D4272 /* LessonVocabViewModel.swift in Sources */,
 				CEC5886C27EA37E900809403 /* VocabsLearntTableCell.swift in Sources */,
 				CEF1E80427E6ED96005D4272 /* TwoDisjointSetOptionQuestion.swift in Sources */,
@@ -1021,7 +989,6 @@
 				CEC5887127EABEC000809403 /* LessonSelectionViewController.swift in Sources */,
 				CEF1E7B327E5071C005D4272 /* StarsCurrencySystem.swift in Sources */,
 				CEF1E80D27E6F6B1005D4272 /* DefinitionOptionQuestionConstructor.swift in Sources */,
-				D398780B27DF7C1100B2F4ED /* JSONServerDataProvider.swift in Sources */,
 				CEF1E81127E71944005D4272 /* LessonQuizViewModelFromLesson.swift in Sources */,
 				CE8D229427EEB7EE005E7058 /* AppStoryboard.swift in Sources */,
 				CEF1E7F527E6D143005D4272 /* QuestionLayoutViewModel.swift in Sources */,
@@ -1050,7 +1017,6 @@
 				D3C4424027E8C65600676C93 /* Logger.swift in Sources */,
 				D3C4423E27E8B20000676C93 /* DataProviderErrors.swift in Sources */,
 				D3C4422727E878D800676C93 /* FirebaseAuthProvider.swift in Sources */,
-				D3C4422427E877C400676C93 /* JSONAuthProviderTypes.swift in Sources */,
 				62E418D327EA5A6900DFF03C /* ProfileDataManager.swift in Sources */,
 				D30CD1EB27E7A65F0021A5AA /* AuthProvider.swift in Sources */,
 				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,
@@ -1079,12 +1045,10 @@
 				629090A027E8303F00941A3B /* RecommendedBooksTableViewController.swift in Sources */,
 				624BD58027E761FB006F0391 /* LearningBooksViewModel.swift in Sources */,
 				62E418CA27EA524C00DFF03C /* Level.swift in Sources */,
-				D3C4422927E8792200676C93 /* FakeAuthProvider.swift in Sources */,
 				CEC5887527EABED600809403 /* LessonSelectionViewModelFromBook.swift in Sources */,
 				D3C4424327E8CB0A00676C93 /* FirebaseDataProvider.swift in Sources */,
 				D3C4423827E8A98400676C93 /* AlertTypes.swift in Sources */,
 				D33282E827D4D42700C80986 /* LingoClash.xcdatamodeld in Sources */,
-				D30CD1ED27E81D7B0021A5AA /* JSONServerAuthProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
