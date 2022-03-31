@@ -30,8 +30,7 @@ class SignUpViewController: UIViewController {
     }
     
     func setUpView() {
-        // Hide error label
-        errorLabel.alpha = 0
+        errorLabel.hide()
         
         // Style elements
         ViewUtilities.styleTextField(firstNameTextField)
@@ -44,7 +43,7 @@ class SignUpViewController: UIViewController {
     private func setUpBinders() {
         viewModel.$error.sink {[weak self] error in
             if let error = error {
-                self?.showError(error)
+                self?.errorLabel.show(withText: error)
             } else {
                 self?.transitionToHome()
             }
@@ -64,11 +63,6 @@ class SignUpViewController: UIViewController {
     
     @IBAction func backTapped(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-    
-    func showError(_ message: String) {
-        errorLabel.text = message
-        errorLabel.alpha = 1
     }
     
     func transitionToHome() {
