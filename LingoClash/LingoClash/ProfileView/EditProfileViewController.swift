@@ -19,10 +19,11 @@ class EditProfileViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        let firstName = Utilities.getTrimmedString(textField: firstNameTextField)
-        let lastName = Utilities.getTrimmedString(textField: lastNameTextField)
+        let firstName = FormUtilities.getTrimmedString(textField: firstNameTextField)
+        let lastName = FormUtilities.getTrimmedString(textField: lastNameTextField)
         
-        viewModel.editProfile(firstName: firstName, lastName: lastName)
+        let fields = EditProfileFields(firstName: firstName, lastName: lastName)
+        viewModel.editProfile(fields)
     }
     
 }

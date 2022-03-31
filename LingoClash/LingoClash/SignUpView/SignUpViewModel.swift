@@ -18,16 +18,7 @@ final class SignUpViewModel {
         self.authProvider = authProvider
     }
     
-    func signUp(firstName: String, lastName: String, email: String, password: String) {
-        
-        let fields = [
-            "firstName": firstName,
-            "lastName": lastName,
-            "email": email,
-            "password": password
-        ]
-        
-        // Validate fields
+    func signUp(_ fields: SignUpFields) {
         let error = validateFields(fields)
         if let error = error {
             self.error = error
@@ -45,35 +36,20 @@ final class SignUpViewModel {
     }
     
     ///  Returns: nil if fields are correct, else return error message
-    func validateFields(_ fields: [String: String]) -> String? {
-        // Check that all fields are filled in
-        if fields.values.contains("") {
-            return "Please fill in all fields."
+    func validateFields(_ fields: SignUpFields) -> String? {
+        if let error = FormUtilities.validateFieldsNotEmpty(fields) {
+            return error
         }
         
-        // Check that email format is valid
-        if let email = fields["email"] {
-            return validateEmail(email: email)
+        if let error = FormUtilities.validateEmail(email: fields.email) {
+            return error
         }
         
-        if let password = fields["password"] {
-            return validatePassword(password: password)
+        if let error = FormUtilities.validatePassword(password: fields.password) {
+            return error
         }
         
-        return nil
-    }
-    
-    private func validateEmail(email: String) -> String? {
-        if Utilities.isEmailValid(email) == false {
-            return "Please input a valid email."
-        }
-        return nil
-    }
-    
-    private func validatePassword(password: String) -> String? {
-        if Utilities.isPasswordValid(password) == false {
-            return "Please make sure your password is at least 8 characters, contains a special character and a number."
-        }
         return nil
     }
 }
+

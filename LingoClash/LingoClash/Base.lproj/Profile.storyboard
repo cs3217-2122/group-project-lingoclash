@@ -133,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iCM-8f-Vby">
-                                <rect key="frame" x="120" y="157.5" width="300" height="225"/>
+                                <rect key="frame" x="120" y="189.5" width="300" height="161"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atf-3n-Pnh">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
@@ -146,13 +146,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm new email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A5l-EZ-Mgd">
-                                        <rect key="frame" x="0.0" y="130" width="300" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqH-O2-EAL">
-                                        <rect key="frame" x="0.0" y="194" width="300" height="31"/>
+                                        <rect key="frame" x="0.0" y="130" width="300" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                         <connections>
@@ -173,7 +168,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confirmNewEmailTextField" destination="A5l-EZ-Mgd" id="pLe-Fh-TCD"/>
                         <outlet property="newEmailTextField" destination="dX0-gI-NdV" id="dkc-7L-s5g"/>
                     </connections>
                 </viewController>

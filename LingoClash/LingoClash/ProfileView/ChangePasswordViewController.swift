@@ -20,11 +20,12 @@ class ChangePasswordViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        let currentPassword = Utilities.getTrimmedString(textField: currentPasswordTextField)
-        let newPassword = Utilities.getTrimmedString(textField: newPasswordTextField)
-        let confirmNewPassword = Utilities.getTrimmedString(textField: confirmNewPasswordTextField)
+        let currentPassword = FormUtilities.getTrimmedString(textField: currentPasswordTextField)
+        let newPassword = FormUtilities.getTrimmedString(textField: newPasswordTextField)
+        let confirmNewPassword = FormUtilities.getTrimmedString(textField: confirmNewPasswordTextField)
         
-        viewModel.changePassword(currentPassword: currentPassword, newPassword: newPassword, confirmNewPassword: confirmNewPassword)
+        let fields = ChangePasswordFields(currentPassword: currentPassword, newPassword: newPassword, confirmNewPassword: confirmNewPassword)
+        viewModel.changePassword(fields)
     }
     
 }

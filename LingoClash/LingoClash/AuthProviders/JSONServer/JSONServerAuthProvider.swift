@@ -22,12 +22,8 @@ class JSONServerAuthProvider: AuthProvider {
         self.apiURL = apiURL
     }
     
-    func register(params: [String : Any]) -> Promise<Void> {
-        guard let email = params[Configs.emailKey] as? String, let password = params[Configs.passwordKey] as? String else {
-            return Promise.reject(reason: AuthError.invalidLoginParams)
-        }
-        
-        let userCredentials = UserCredentials(email: email, password: password)
+    func register(params: SignUpFields) -> Promise<Void> {
+        let userCredentials = UserCredentials(email: params.email, password: params.password)
         
         guard let url = URL(string: "\(self.apiURL)/auth/register") else {
             return Promise.reject(
@@ -54,12 +50,8 @@ class JSONServerAuthProvider: AuthProvider {
         }
     }
     
-    func login(params: [String: Any]) -> Promise<Void> {
-        guard let email = params[Configs.emailKey] as? String, let password = params[Configs.passwordKey] as? String else {
-            return Promise.reject(reason: AuthError.invalidLoginParams)
-        }
-        
-        let userCredentials = UserCredentials(email: email, password: password)
+    func login(params: LoginFields) -> Promise<Void> {
+        let userCredentials = UserCredentials(email: params.email, password: params.password)
         
         guard let url = URL(string: "\(self.apiURL)/auth/login") else {
             return Promise.reject(

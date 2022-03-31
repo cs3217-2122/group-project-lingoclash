@@ -18,14 +18,7 @@ final class LoginViewModel {
         self.authProvider = authProvider
     }
     
-    func login(email: String, password: String) {
-        
-        let fields = [
-            "email": email,
-            "password": password
-        ]
-        
-        // Validate fields
+    func login(_ fields: LoginFields) {
         let error = validateFields(fields)
         if let error = error {
             self.error = error
@@ -42,10 +35,13 @@ final class LoginViewModel {
     }
     
     ///  Returns: nil if fields are correct, else return error message
-    func validateFields(_ fields: [String:String]) -> String? {
-        // Check that all fields are filled in
-        if fields.values.contains("") {
-            return "Please fill in all fields."
+    func validateFields(_ fields: LoginFields) -> String? {
+        if let error = FormUtilities.validateFieldsNotEmpty(fields) {
+            return error
+        }
+        
+        if let error = FormUtilities.validateEmail(email: fields.email) {
+            return error
         }
         
         return nil
