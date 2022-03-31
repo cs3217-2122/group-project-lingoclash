@@ -45,8 +45,8 @@ struct GetListParams {
     let filter: [String: Any]
 }
 
-struct GetListResult {
-    let data: [Data]
+struct GetListResult<T: Codable> {
+    let data: [T]
     let total: Int
 }
 
@@ -54,16 +54,16 @@ struct GetOneParams {
     let id: Identifier
 }
 
-struct GetOneResult {
-    let data: Data
+struct GetOneResult<T: Codable> {
+    let data: T
 }
 
 struct GetManyParams {
     let ids: [Identifier]
 }
 
-struct GetManyResult {
-    let data: [Data]
+struct GetManyResult<T: Codable> {
+    let data: [T]
 }
 
 struct GetManyReferenceParams {
@@ -73,8 +73,8 @@ struct GetManyReferenceParams {
     let filter: [String: Any]
 }
 
-struct GetManyReferenceResult {
-    let data: [Data]
+struct GetManyReferenceResult<T: Codable> {
+    let data: [T]
     let total: Int
 }
 

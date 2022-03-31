@@ -12,11 +12,13 @@ class SplashViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        Logger.info("Starting LingoClash")
+        
+        super.viewDidLoad()
         setUpView()
     }
-
+    
     func setUpView() {
         // Style elements
         ViewUtilities.styleFilledButton(signUpButton)

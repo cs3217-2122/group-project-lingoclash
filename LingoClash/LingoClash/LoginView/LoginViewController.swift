@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
         
         setUpView()
         setUpBinders()
-        
+                
         // TODO: To be removed
         let bookDataManager = BookDataManager()
         let books = bookDataManager.getList()

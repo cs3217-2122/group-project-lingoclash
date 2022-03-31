@@ -10,13 +10,13 @@ import PromiseKit
 
 protocol DataProvider {
     
-    func getList(resource: String, params: GetListParams) -> Promise<GetListResult>
+    func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>>
     
-    func getOne(resource: String, params: GetOneParams) -> Promise<GetOneResult>
+    func getOne<T: Codable>(resource: String, params: GetOneParams) -> Promise<GetOneResult<T>>
     
-    func getMany(resource: String, params: GetManyParams) -> Promise<GetManyResult>
+    func getMany<T: Codable>(resource: String, params: GetManyParams) -> Promise<GetManyResult<T>>
     
-    func getManyReference(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult>
+    func getManyReference<T: Codable>(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>>
     
     func update<T: Codable>(resource: String, params: UpdateParams<T>) -> Promise<UpdateResult>
     
