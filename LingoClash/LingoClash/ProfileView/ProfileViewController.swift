@@ -66,7 +66,7 @@ class ProfileViewController: UIViewController {
         
         viewModel.$alertContent.sink {[weak self] alertContent in
             if let alertContent = alertContent {
-                self?.showConfirmAlert(title: alertContent.title, message: alertContent.message) { _ in
+                self?.showConfirmAlert(content: alertContent) { _ in
                     self?.transitionToSplash()
                 }
             }

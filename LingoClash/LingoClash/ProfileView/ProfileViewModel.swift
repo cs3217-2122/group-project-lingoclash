@@ -38,7 +38,7 @@ final class ProfileViewModel {
             authProvider.logout()
         }.done {
             self.error = nil
-            self.alertContent = AlertContent(title: "", message: "Are you sure you want to log out?", type: .confirm)
+            self.alertContent = AlertContent(title: "", message: "Are you sure you want to log out?")
         }.catch { error in
             self.error = error.localizedDescription
         }
@@ -116,7 +116,7 @@ final class ProfileViewModel {
                     self.editProfileError = "Error updating profile."
                 } else {
                     self.editProfileError = nil
-                    self.alertContent = AlertContent(title: "", message: "Your profile is updated succesfully.", type: .basic)
+                    self.alertContent = AlertContent(title: "", message: "Your profile is updated succesfully.")
                     self.refreshProfile()
                 }
             }
@@ -143,7 +143,7 @@ final class ProfileViewModel {
             authProvider.updateEmail(fields.newEmail)
         }.done {
             self.changeEmailError = nil
-            self.alertContent = AlertContent(title: "", message: "Your email is updated succesfully.", type: .basic)
+            self.alertContent = AlertContent(title: "", message: "Your email is updated succesfully.")
             self.refreshProfile()
         }.catch { error in
             self.changeEmailError = error.localizedDescription
@@ -177,7 +177,7 @@ final class ProfileViewModel {
             self.authProvider.updatePassword(fields.newPassword)
         }.done {
             self.error = nil
-            self.alertContent = AlertContent(title: "", message: "Your password is updated succesfully.", type: .basic)
+            self.alertContent = AlertContent(title: "", message: "Your password is updated succesfully.")
             self.refreshProfile()
         }.catch { error in
             self.changePasswordError = error.localizedDescription

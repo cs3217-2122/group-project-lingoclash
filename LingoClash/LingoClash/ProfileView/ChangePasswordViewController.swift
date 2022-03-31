@@ -40,7 +40,7 @@ class ChangePasswordViewController: UIViewController {
         
         viewModel?.$alertContent.sink {[weak self] alertContent in
             if let alertContent = alertContent {
-                self?.showDoneAlert(title: alertContent.title, message: alertContent.message) { _ in
+                self?.showDoneAlert(content: alertContent) { _ in
                     self?.dismiss(animated: true)
                 }
             }
