@@ -18,9 +18,9 @@ final class ProfileViewModel {
     @Published var alertContent: AlertContent?
     
     private let authProvider: AuthProvider
-    private let userDataManager = UserDataManager()
-    private let profileDataManager = ProfileDataManager()
-    private let profileBookDataManager = ProfileDataManager()
+    private let userDataManager = UserManager()
+    private let profileDataManager = ProfileManager()
+    private let profileBookDataManager = ProfileManager()
     
     var firstName: String?
     var lastName: String?

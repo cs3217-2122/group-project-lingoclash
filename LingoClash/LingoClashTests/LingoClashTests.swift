@@ -7,6 +7,8 @@
 
 import XCTest
 
+@testable import LingoClash
+
 class LingoClashTests: XCTestCase {
 
     override func setUpWithError() throws {

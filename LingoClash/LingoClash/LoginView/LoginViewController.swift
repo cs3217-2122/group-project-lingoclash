@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
         setUpBinders()
                 
         // TODO: To be removed
-        let bookDataManager = BookDataManager()
+        let bookDataManager = BookManager()
         let books = bookDataManager.getList()
         
         try? Auth.auth().signOut()

@@ -34,14 +34,14 @@
 		62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1027DDE67F002D2497 /* LoginViewController.swift */; };
 		62C04A1327DDE838002D2497 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1227DDE838002D2497 /* Utilities.swift */; };
 		62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1427DDEB10002D2497 /* HomeViewController.swift */; };
-		62CB30DF27EA6EFB0044CB24 /* ProfileBookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CB30DE27EA6EFB0044CB24 /* ProfileBookDataManager.swift */; };
-		62E418C627EA523400DFF03C /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C527EA523400DFF03C /* UserDataManager.swift */; };
+		62CB30DF27EA6EFB0044CB24 /* ProfileBookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CB30DE27EA6EFB0044CB24 /* ProfileBookManager.swift */; };
+		62E418C627EA523400DFF03C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C527EA523400DFF03C /* UserManager.swift */; };
 		62E418C827EA523D00DFF03C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C727EA523D00DFF03C /* User.swift */; };
 		62E418CA27EA524C00DFF03C /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C927EA524C00DFF03C /* Level.swift */; };
 		62E418CC27EA525600DFF03C /* ProfileBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418CB27EA525600DFF03C /* ProfileBook.swift */; };
 		62E418CF27EA526200DFF03C /* ProfileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418CE27EA526200DFF03C /* ProfileLevel.swift */; };
 		62E418D127EA53A800DFF03C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418D027EA53A800DFF03C /* Profile.swift */; };
-		62E418D327EA5A6900DFF03C /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418D227EA5A6900DFF03C /* ProfileDataManager.swift */; };
+		62E418D327EA5A6900DFF03C /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418D227EA5A6900DFF03C /* ProfileManager.swift */; };
 		6FA0243827E1BBBE00F94E54 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243727E1BBBE00F94E54 /* FirebaseAuth */; };
 		6FA0243A27E1BBBE00F94E54 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243927E1BBBE00F94E54 /* FirebaseAuthCombine-Community */; };
 		6FA0243C27E1BBBE00F94E54 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243B27E1BBBE00F94E54 /* FirebaseDatabase */; };
@@ -60,7 +60,6 @@
 		CE8D22A227EEC059005E7058 /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D22A027EEC059005E7058 /* Book.storyboard */; };
 		CEC5886A27EA2A4F00809403 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886927EA2A4F00809403 /* StarView.swift */; };
 		CEC5886C27EA37E900809403 /* VocabsLearntTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */; };
-		CEC5886E27EAAD4000809403 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886D27EAAD4000809403 /* DataManager.swift */; };
 		CEC5887127EABEC000809403 /* LessonSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887027EABEC000809403 /* LessonSelectionViewController.swift */; };
 		CEC5887327EABECC00809403 /* LessonSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887227EABECC00809403 /* LessonSelectionViewModel.swift */; };
 		CEC5887527EABED600809403 /* LessonSelectionViewModelFromBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887427EABED600809403 /* LessonSelectionViewModelFromBook.swift */; };
@@ -141,7 +140,9 @@
 		D3C4423E27E8B20000676C93 /* DataProviderErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423D27E8B20000676C93 /* DataProviderErrors.swift */; };
 		D3C4424027E8C65600676C93 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423F27E8C65600676C93 /* Logger.swift */; };
 		D3C4424327E8CB0A00676C93 /* FirebaseDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4424227E8CB0A00676C93 /* FirebaseDataProvider.swift */; };
-		D3C4424527E9F2FC00676C93 /* BookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4424427E9F2FC00676C93 /* BookDataManager.swift */; };
+		D3C4424527E9F2FC00676C93 /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4424427E9F2FC00676C93 /* BookManager.swift */; };
+		D3C5E1CD27F600BA00F65B8E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E1CC27F600BA00F65B8E /* DataManager.swift */; };
+		D3C5E1CF27F602FB00F65B8E /* BookManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E1CE27F602FB00F65B8E /* BookManagerTests.swift */; };
 		D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */; };
 		D3F00CAD27DFAF6F00393ADC /* Promise+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */; };
 		D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */; };
@@ -189,15 +190,14 @@
 		62C04A1027DDE67F002D2497 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		62C04A1227DDE838002D2497 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62C04A1427DDEB10002D2497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		62CB30DE27EA6EFB0044CB24 /* ProfileBookDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBookDataManager.swift; sourceTree = "<group>"; };
-		62E418C327EA4E5200DFF03C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		62E418C527EA523400DFF03C /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		62CB30DE27EA6EFB0044CB24 /* ProfileBookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBookManager.swift; sourceTree = "<group>"; };
+		62E418C527EA523400DFF03C /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		62E418C727EA523D00DFF03C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		62E418C927EA524C00DFF03C /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		62E418CB27EA525600DFF03C /* ProfileBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBook.swift; sourceTree = "<group>"; };
 		62E418CE27EA526200DFF03C /* ProfileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLevel.swift; sourceTree = "<group>"; };
 		62E418D027EA53A800DFF03C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		62E418D227EA5A6900DFF03C /* ProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManager.swift; sourceTree = "<group>"; };
+		62E418D227EA5A6900DFF03C /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		CE8D228B27EE2986005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Question.storyboard; sourceTree = "<group>"; };
 		CE8D228E27EE2B5A005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Lesson.storyboard; sourceTree = "<group>"; };
 		CE8D229127EEA8B0005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -208,7 +208,6 @@
 		CE8D22A127EEC059005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Book.storyboard; sourceTree = "<group>"; };
 		CEC5886927EA2A4F00809403 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabsLearntTableCell.swift; sourceTree = "<group>"; };
-		CEC5886D27EAAD4000809403 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CEC5887027EABEC000809403 /* LessonSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectionViewController.swift; sourceTree = "<group>"; };
 		CEC5887227EABECC00809403 /* LessonSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectionViewModel.swift; sourceTree = "<group>"; };
 		CEC5887427EABED600809403 /* LessonSelectionViewModelFromBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectionViewModelFromBook.swift; sourceTree = "<group>"; };
@@ -293,7 +292,9 @@
 		D3C4423D27E8B20000676C93 /* DataProviderErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderErrors.swift; sourceTree = "<group>"; };
 		D3C4423F27E8C65600676C93 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		D3C4424227E8CB0A00676C93 /* FirebaseDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataProvider.swift; sourceTree = "<group>"; };
-		D3C4424427E9F2FC00676C93 /* BookDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataManager.swift; sourceTree = "<group>"; };
+		D3C4424427E9F2FC00676C93 /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
+		D3C5E1CC27F600BA00F65B8E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D3C5E1CE27F602FB00F65B8E /* BookManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManagerTests.swift; sourceTree = "<group>"; };
 		D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUtilities.swift; sourceTree = "<group>"; };
 		D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Extensions.swift"; sourceTree = "<group>"; };
 		D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTypes.swift; sourceTree = "<group>"; };
@@ -707,6 +708,7 @@
 			isa = PBXGroup;
 			children = (
 				D3BD29E427DCE6350061E362 /* LingoClashTests.swift */,
+				D3C5E1CE27F602FB00F65B8E /* BookManagerTests.swift */,
 			);
 			path = LingoClashTests;
 			sourceTree = "<group>";
@@ -793,12 +795,11 @@
 		D3F00CB627DFC5F200393ADC /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
-				CEC5886D27EAAD4000809403 /* DataManager.swift */,
-				D3C4424427E9F2FC00676C93 /* BookDataManager.swift */,
-				62CB30DE27EA6EFB0044CB24 /* ProfileBookDataManager.swift */,
-				62E418D227EA5A6900DFF03C /* ProfileDataManager.swift */,
-				62E418C527EA523400DFF03C /* UserDataManager.swift */,
-				62E418C327EA4E5200DFF03C /* DataManager.swift */,
+				D3C4424427E9F2FC00676C93 /* BookManager.swift */,
+				62CB30DE27EA6EFB0044CB24 /* ProfileBookManager.swift */,
+				62E418D227EA5A6900DFF03C /* ProfileManager.swift */,
+				62E418C527EA523400DFF03C /* UserManager.swift */,
+				D3C5E1CC27F600BA00F65B8E /* DataManager.swift */,
 			);
 			path = DataManagers;
 			sourceTree = "<group>";
@@ -929,10 +930,10 @@
 			files = (
 				CEF1E81A27E74622005D4272 /* SimpleOptionQuestionLayoutViewController.swift in Sources */,
 				621E6D5127E9C4F10015BBD4 /* EditProfileViewController.swift in Sources */,
-				62E418C627EA523400DFF03C /* UserDataManager.swift in Sources */,
+				62E418C627EA523400DFF03C /* UserManager.swift in Sources */,
 				629090A227E8314100941A3B /* RecommendedBooksTableViewCell.swift in Sources */,
 				621E6D5327E9C5060015BBD4 /* ChangePasswordViewController.swift in Sources */,
-				62CB30DF27EA6EFB0044CB24 /* ProfileBookDataManager.swift in Sources */,
+				62CB30DF27EA6EFB0044CB24 /* ProfileBookManager.swift in Sources */,
 				62E418C827EA523D00DFF03C /* User.swift in Sources */,
 				624BD58D27E7A673006F0391 /* RecommendedBooksViewController.swift in Sources */,
 				CEF1E7E027E60D5C005D4272 /* LessonVocabViewModel.swift in Sources */,
@@ -1011,19 +1012,18 @@
 				CEF02D7927E9573700C30E03 /* LessonQuizOutcomeViewModelFromQuizResult.swift in Sources */,
 				CEF1E7D527E60C1F005D4272 /* LessonOverviewViewController.swift in Sources */,
 				6204A03A27DE1CDB0063100D /* AppConfigs.swift in Sources */,
-				CEC5886E27EAAD4000809403 /* DataManager.swift in Sources */,
 				CEF1E81627E742BF005D4272 /* SimpleOptionQuestionLayoutViewModel.swift in Sources */,
 				CEF1E7E827E61F58005D4272 /* Lesson.swift in Sources */,
 				D3C4424027E8C65600676C93 /* Logger.swift in Sources */,
 				D3C4423E27E8B20000676C93 /* DataProviderErrors.swift in Sources */,
 				D3C4422727E878D800676C93 /* FirebaseAuthProvider.swift in Sources */,
-				62E418D327EA5A6900DFF03C /* ProfileDataManager.swift in Sources */,
+				62E418D327EA5A6900DFF03C /* ProfileManager.swift in Sources */,
 				D30CD1EB27E7A65F0021A5AA /* AuthProvider.swift in Sources */,
 				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,
 				629090A827E8D02200941A3B /* CurrentBookViewModel.swift in Sources */,
 				629090AC27E8E3B900941A3B /* CurrentBookViewController.swift in Sources */,
 				62E418CF27EA526200DFF03C /* ProfileLevel.swift in Sources */,
-				D3C4424527E9F2FC00676C93 /* BookDataManager.swift in Sources */,
+				D3C4424527E9F2FC00676C93 /* BookManager.swift in Sources */,
 				62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */,
 				624989DE27E7395E0092FC1B /* LearningBooksViewController.swift in Sources */,
 				624989E527E742690092FC1B /* RecommendedBookCollectionViewCell.swift in Sources */,
@@ -1037,6 +1037,7 @@
 				CEC5887327EABECC00809403 /* LessonSelectionViewModel.swift in Sources */,
 				62C04A1327DDE838002D2497 /* Utilities.swift in Sources */,
 				CEF1E7FD27E6E527005D4272 /* SimpleOptionQuestion.swift in Sources */,
+				D3C5E1CD27F600BA00F65B8E /* DataManager.swift in Sources */,
 				CEF1E80227E6EB21005D4272 /* DefinitionOptionQuestion.swift in Sources */,
 				624BD58627E7A37D006F0391 /* RecommendedBooksViewModel.swift in Sources */,
 				624989DA27E735600092FC1B /* BookCollectionViewController.swift in Sources */,
@@ -1057,6 +1058,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */,
+				D3C5E1CF27F602FB00F65B8E /* BookManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

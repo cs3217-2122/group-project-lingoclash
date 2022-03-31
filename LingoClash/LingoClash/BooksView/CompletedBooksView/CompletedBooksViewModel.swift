@@ -17,10 +17,10 @@ final class CompletedBooksViewModel: BooksViewModel {
     }
     
     private let authProvider: AuthProvider
-    private let userDataManager = UserDataManager()
-    private let profileDataManager = ProfileDataManager()
-    private let profileBookDataManager = ProfileBookDataManager()
-    private let bookDataManager = BookDataManager()
+    private let userDataManager = UserManager()
+    private let profileDataManager = ProfileManager()
+    private let profileBookDataManager = ProfileBookManager()
+    private let bookDataManager = BookManager()
     
     init(authProvider: AuthProvider = FirebaseAuthProvider()) {
         self.authProvider = authProvider

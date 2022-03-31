@@ -27,7 +27,7 @@ class ProfileViewController: UIViewController {
         
         
         // TODO: To be removed
-        let bookDataManager = BookDataManager()
+        let bookDataManager = BookManager()
         let books = bookDataManager.getList()
         
         print("current user:", Auth.auth().currentUser ?? "")
