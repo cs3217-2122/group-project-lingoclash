@@ -1,5 +1,5 @@
 //
-//  BookDataManager.swift
+//  DataManager.swift
 //  LingoClash
 //
 //  Created by Kyle キラ on 14/3/22.
@@ -7,7 +7,8 @@
 import Foundation
 import PromiseKit
 
-class DataManager<T: Codable> {
+
+class DataManager<T: Record> {
     
     private let dataProvider: DataProvider
     private let resource: String
@@ -70,31 +71,40 @@ class DataManager<T: Codable> {
             
         }
     
-    func update(id: Identifier, from previousBook: T, to newBook: T) -> Promise<T> {
+    func update(id: Identifier, from previousRecord: T, to newRecord: T) -> Promise<T> {
         
-        let updatedData = dataProvider.update(resource: self.resource, params: UpdateParams(id: id, data: newBook, previousData: previousBook))
-        
-        return updatedData.compactMap { result in
-            try? JSONDecoder().decode(T.self, from: result.data)
-        }
-    }
-    
-    /// id of the newBook does not matter
-    func updateMany(ids: [Identifier], newBook: T) -> Promise<[Identifier]> {
-        
-        let updatedData = dataProvider.updateMany(resource: self.resource, params: UpdateManyParams(ids: ids, data: newBook))
+        let updatedData = dataProvider.update(resource: self.resource, params: UpdateParams(id: id, data: newRecord, previousData: previousRecord))
         
         return updatedData.compactMap { result in
             result.data
         }
     }
     
-    func create(newBook: T) -> Promise<T> {
+    /// id of the newRecord does not matter
+    func updateMany(ids: [Identifier], newRecord: T) -> Promise<[Identifier]> {
         
-        let createdData = dataProvider.create(resource: self.resource, params: CreateParams(data: newBook))
+        let updatedData = dataProvider.updateMany(resource: self.resource, params: UpdateManyParams(ids: ids, data: newRecord))
+        
+        return updatedData.compactMap { result in
+            result.data
+        }
+    }
+    
+    func create(newRecord: T) -> Promise<T> {
+        
+        let createdData = dataProvider.create(resource: self.resource, params: CreateParams(data: newRecord))
         
         return createdData.compactMap { result in
-            try? JSONDecoder().decode(T.self, from: result.data)
+            result.data
+        }
+    }
+    
+    func createMany(newRecords: [T]) -> Promise<[T]> {
+        
+        let createdData = dataProvider.createMany(resource: self.resource, params: CreateManyParams(data: newRecords))
+        
+        return createdData.compactMap { result in
+            result.data
         }
     }
     
@@ -103,7 +113,7 @@ class DataManager<T: Codable> {
         let deletedData = dataProvider.delete(resource: self.resource, params: DeleteParams(id: id, previousData: book))
         
         return deletedData.compactMap { result in
-            try? JSONDecoder().decode(T.self, from: result.data)
+            result.data
         }
     }
     

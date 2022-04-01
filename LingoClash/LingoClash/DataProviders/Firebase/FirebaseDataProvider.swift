@@ -12,7 +12,7 @@ import FirebaseFirestoreSwift
 
 
 class FirebaseDataProvider: DataProvider {
-
+    
     // TODO: think of better error names
     enum FirebaseDataProviderError: Error {
         case invalidParams
@@ -102,7 +102,6 @@ class FirebaseDataProvider: DataProvider {
         return Promise { seal in
             let collection = db.collection(resource)
             
-            
             collection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
@@ -152,7 +151,7 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    func update<T: Codable>(resource: String, params: UpdateParams<T>) -> Promise<UpdateResult> {
+    func update<T: Codable>(resource: String, params: UpdateParams<T>) -> Promise<UpdateResult<T>> {
         
         return Promise { seal in
             do {
@@ -162,7 +161,7 @@ class FirebaseDataProvider: DataProvider {
                         return seal.reject(error)
                     }
                     
-                    return seal.fulfill(UpdateResult(data: Data()))
+                    return seal.fulfill(UpdateResult(data: params.data))
                 }
             } catch {
                 seal.reject(error)
@@ -195,7 +194,31 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult> {
+    func createMany<T: Record>(resource: String, params: CreateManyParams<T>) -> Promise<CreateManyResult<T>> {
+        
+        let batch = db.batch()
+        
+        for data in params.data {
+            let docRef = db.collection(resource).document(data.id)
+            do {
+                try batch.setData(from: data, forDocument: docRef)
+            } catch {
+                return Promise.reject(reason: error)
+            }
+        }
+        
+        return Promise { seal in
+            batch.commit() { error in
+                if let error = error {
+                    return seal.reject(error)
+                }
+                
+                return seal.fulfill(CreateManyResult(data: params.data))
+            }
+        }
+    }
+    
+    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
         
         return Promise { seal in
             do {
@@ -205,12 +228,8 @@ class FirebaseDataProvider: DataProvider {
                         return seal.reject(error)
                     }
                     
-                    guard let data = try? JSONEncoder().encode(params.data) else {
-                        return seal.reject(FirebaseDataProviderError.invalidParams)
-                    }
-                    
                     // TODO: Modify the id to be ref.documentID
-                    return seal.fulfill(CreateResult(data: data))
+                    return seal.fulfill(CreateResult(data: params.data))
                 }
             } catch {
                 seal.reject(error)
@@ -218,7 +237,7 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    func delete<T: Codable>(resource: String, params: DeleteParams<T>) -> Promise<DeleteResult> {
+    func delete<T: Codable>(resource: String, params: DeleteParams<T>) -> Promise<DeleteResult<T>> {
         return Promise { seal in
             db.collection(resource).document(params.id).delete() { error in
                 
@@ -226,11 +245,7 @@ class FirebaseDataProvider: DataProvider {
                     return seal.reject(error)
                 }
                 
-                guard let data = try? JSONEncoder().encode(params.previousData) else {
-                    return seal.reject(FirebaseDataProviderError.invalidParams)
-                }
-                
-                return seal.fulfill(DeleteResult(data: data))
+                return seal.fulfill(DeleteResult(data: params.previousData))
             }
         }
     }
@@ -253,5 +268,5 @@ class FirebaseDataProvider: DataProvider {
             }
         }
     }
-
+    
 }

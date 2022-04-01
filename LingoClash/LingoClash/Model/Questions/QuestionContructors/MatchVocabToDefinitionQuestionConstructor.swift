@@ -9,7 +9,7 @@ struct MatchVocabToDefinitionQuestionConstructor: QuestionContructor {
     let vocabsTestedCount = MatchVocabToDefinitionQuestion.vocabsTestedCount
     let otherVocabsCount = 0
     
-    func constructQuestion(vocabsTested: Set<Vocab>, otherVocabs: Set<Vocab>) -> Question? {
+    func constructQuestion(vocabsTested: Set<BookVocab>, otherVocabs: Set<BookVocab>) -> Question? {
         guard vocabsTested.count == vocabsTestedCount, otherVocabs.count == otherVocabsCount else {
             return nil
         }

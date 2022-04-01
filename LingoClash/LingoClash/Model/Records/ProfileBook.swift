@@ -10,7 +10,7 @@ struct ProfileBook {
     let profile_id: Identifier
     let book_id: Identifier
     let is_completed: Bool
-    let profile_levels: [ProfileLevel]
+    let profile_lessons: [ProfileLesson]
 }
 
-extension ProfileBook: Codable {}
+extension ProfileBook: Record {}

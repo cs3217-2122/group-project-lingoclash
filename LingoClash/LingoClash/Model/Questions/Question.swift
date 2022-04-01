@@ -7,6 +7,6 @@
 
 protocol Question {
     static var vocabsTestedCount: Int { get }
-    var vocabsTested: Set<Vocab> { get }
+    var vocabsTested: Set<BookVocab> { get }
     func isCorrect(response: Any) -> Bool
 }

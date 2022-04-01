@@ -8,16 +8,16 @@
 import Algorithms
 /// Encapsulates the logic of providing the scope of questions to be generated
 struct QuestionScopeFactory {
-    var compulsoryScope: [Vocab]
-    var scope: Set<Vocab>
+    var compulsoryScope: [BookVocab]
+    var scope: Set<BookVocab>
     
-    mutating func getScope(for questionConstructor: QuestionContructor) -> (tested: Set<Vocab>, others: Set<Vocab>) {
+    mutating func getScope(for questionConstructor: QuestionContructor) -> (tested: Set<BookVocab>, others: Set<BookVocab>) {
         let testedVocabs = getTestedVocabs(count: questionConstructor.vocabsTestedCount)
         let otherVocabs = getOtherVocabs(count: questionConstructor.otherVocabsCount, notIn: testedVocabs)
         return (tested: testedVocabs, others: otherVocabs)
     }
     
-    private func getOtherVocabs(count: Int, notIn excludeVocabs: Set<Vocab> = Set()) -> Set<Vocab> {
+    private func getOtherVocabs(count: Int, notIn excludeVocabs: Set<BookVocab> = Set()) -> Set<BookVocab> {
         // get vocabs randomly from scope not in excludedVocabs
         guard count >= 0 else {
             return Set()
@@ -26,7 +26,7 @@ struct QuestionScopeFactory {
         return Set(vocabs.randomSample(count: count))
     }
     
-    private mutating func getTestedVocabs(count: Int) -> Set<Vocab> {
+    private mutating func getTestedVocabs(count: Int) -> Set<BookVocab> {
         // get and pop from compulsory scope, rest get randomly from scope
         guard !compulsoryScope.isEmpty else {
             return getOtherVocabs(count: count)

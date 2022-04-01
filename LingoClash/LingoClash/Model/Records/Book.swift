@@ -11,4 +11,4 @@ struct Book {
     let name: String
 }
 
-extension Book: Codable {}
+extension Book: Record {}

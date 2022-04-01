@@ -6,11 +6,11 @@
 //
 
 class LessonQuizViewModelFromLesson: LessonQuizViewModel {    
-    let lesson: Lesson
+    let lesson: BookLesson
     let questionGenerator = QuestionsGenerator()
     let starsBenchmarks = [7,9,10]
     let initialLives = 2
-
+    
     var questionSequence: QuestionSequence
     var questionsLoaded = [Question]()
     var questionsStatus = [QuestionStatus]()
@@ -32,9 +32,9 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
         questionsStatus.filter { $0 == .correct }.count
     }
     
-
+    
     /// Generates questions from lesson's vocabs, initialises fields
-    init(lesson: Lesson) {
+    init(lesson: BookLesson) {
         assert(lesson.vocabs.count > 0)
         self.lesson = lesson
         self.livesLeft = Dynamic(initialLives)
@@ -68,19 +68,19 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
             self.questionsStatus[currQuestionIndex] = .wrong
             self.livesLeft.value -= 1
         }
-
+        
         currQuestionIndex += 1
         guard !isQuizComplete() else {
             self.quizDidComplete()
             return
         }
-    
+        
         loadNextQuestion()
     }
     
     private func quizDidComplete() {
         assert(!questionsStatus.contains(where: { $0 == .incomplete }))
-
+        
         let minStarsBenchMark = starsBenchmarks[0]
         let starsObtained = getStarsObtained(score: quizScore)
         let vocabsTested = Set(lesson.vocabs)

@@ -13,4 +13,4 @@ struct Profile {
     let profile_book_ids: [Identifier]
 }
 
-extension Profile: Codable {}
+extension Profile: Record {}

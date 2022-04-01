@@ -7,11 +7,11 @@
 
 import Foundation
 
-class Lesson {
+class BookLesson {
     let lessonName: String
     let lessonId: Int
     var stars: Int
-    var vocabs = [Vocab]()
+    var vocabs = [BookVocab]()
     var questions = [Question]()
     var didPass: Bool {
         stars > 0

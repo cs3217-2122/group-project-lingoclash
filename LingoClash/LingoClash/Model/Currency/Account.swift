@@ -8,11 +8,9 @@
 import Foundation
 
 class Account {
-    let owner: User
     let total: Int
     var transactions = [Transaction]()
-    init(owner: User, total: Int) {
-        self.owner = owner
+    init(total: Int) {
         self.total = total
     }
 

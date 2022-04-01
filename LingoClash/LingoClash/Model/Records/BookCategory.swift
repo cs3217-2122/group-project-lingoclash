@@ -10,4 +10,4 @@ struct BookCategory {
     let name: String
 }
 
-extension BookCategory: Codable {}
+extension BookCategory: Record {}

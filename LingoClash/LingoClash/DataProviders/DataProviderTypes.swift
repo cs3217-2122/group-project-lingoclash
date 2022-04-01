@@ -9,16 +9,24 @@ import Foundation
 
 typealias Identifier = String
 
-struct Record: Codable {
-    let id: Identifier
+protocol Record: Codable {
+    var id: Identifier { get }
 }
 
 struct CreateParams<T: Codable> {
     let data: T
 }
 
-struct CreateResult {
-    let data: Data
+struct CreateResult<T: Codable> {
+    let data: T
+}
+
+struct CreateManyParams<T: Record> {
+    let data: [T]
+}
+
+struct CreateManyResult<T: Codable> {
+    let data: [T]
 }
 
 struct DeleteParams<T: Codable> {
@@ -26,8 +34,8 @@ struct DeleteParams<T: Codable> {
     let previousData: T
 }
 
-struct DeleteResult {
-    let data: Data
+struct DeleteResult<T: Codable> {
+    let data: T
 }
 
 struct PaginationPayload {
@@ -84,8 +92,8 @@ struct UpdateParams<T: Codable> {
     let previousData: T
 }
 
-struct UpdateResult {
-    let data: Data
+struct UpdateResult<T: Codable> {
+    let data: T
 }
 
 struct UpdateManyParams<T: Codable> {

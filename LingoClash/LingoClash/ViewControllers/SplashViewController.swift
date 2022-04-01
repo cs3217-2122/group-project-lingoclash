@@ -25,7 +25,9 @@ class SplashViewController: UIViewController {
         
         #if DEVELOPMENT
         Logger.info("Development environment detected. Will be starting with sample data")
-        SampleDataUtilities.createSampleData()
+        DispatchQueue.main.async {
+            SampleDataUtilities.createSampleData()
+        }
         #endif
     }
     

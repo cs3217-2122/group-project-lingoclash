@@ -19,12 +19,12 @@ class QuestionsGenerator {
          Generate till question upper limit if any is reached
          */
         let questionConstructorRandomFactory = try createQuestionContructorRandomFactory(questionProbabilities: settings.questionProbabilities,
-                                                                                     scopeSize: settings.scope.count)
+                                                                                         scopeSize: settings.scope.count)
         let questionScopeFactory = createQuestionScopeFactory(compulsoryScope: settings.compulsoryTestingScope, scope: settings.scope)
         return QuestionSequence(scopeFactory: questionScopeFactory, constructorFactory: questionConstructorRandomFactory)
     }
     
-    private func createQuestionScopeFactory(compulsoryScope: Set<Vocab>?, scope: Set<Vocab>) -> QuestionScopeFactory {
+    private func createQuestionScopeFactory(compulsoryScope: Set<BookVocab>?, scope: Set<BookVocab>) -> QuestionScopeFactory {
         if let compulsoryScope = compulsoryScope {
             return QuestionScopeFactory(compulsoryScope: Array(compulsoryScope), scope: scope)
         } else {
@@ -39,8 +39,8 @@ class QuestionsGenerator {
             for (questionType, probability) in questionProbabilities {
                 guard let constructor = getQuestionConstructor(for: questionType),
                       isConstructorViable(constructor, scopeSize: scopeSize) else {
-                    continue
-                }
+                          continue
+                      }
                 constructors.append(constructor)
                 probabilities.append(probability)
             }
@@ -53,7 +53,7 @@ class QuestionsGenerator {
             throw QuestionGenerationError.insufficientVocabsToGenerateAnyQuestions
         }
         return QuestionConstructorRandomFactory(constructors: constructors, probabilities: probabilities)
-
+        
     }
     
     private func isConstructorViable(_ constructor: QuestionContructor, scopeSize: Int) -> Bool {
@@ -86,11 +86,11 @@ struct QuestionGeneratorSettings {
     let questionProbabilities: Dictionary<QuestionType, Double>?
     // scope of vocab that need to be tested at least once, needs to be subset of scope
     // TODO: implement subset check
-    let compulsoryTestingScope: Set<Vocab>?
+    let compulsoryTestingScope: Set<BookVocab>?
     // scope of vocab to generate questions from
-    let scope: Set<Vocab>
+    let scope: Set<BookVocab>
     
-    init(scope: Set<Vocab>, compulsoryTestingScope: Set<Vocab>? = nil, questionProbalities: Dictionary<QuestionType, Double>? = nil, numberOfQuestions: Int? = nil) {
+    init(scope: Set<BookVocab>, compulsoryTestingScope: Set<BookVocab>? = nil, questionProbalities: Dictionary<QuestionType, Double>? = nil, numberOfQuestions: Int? = nil) {
         self.numberOfQuestions = numberOfQuestions
         self.questionProbabilities = questionProbalities
         self.compulsoryTestingScope = compulsoryTestingScope

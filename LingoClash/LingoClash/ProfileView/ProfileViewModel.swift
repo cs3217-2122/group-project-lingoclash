@@ -18,7 +18,6 @@ final class ProfileViewModel {
     @Published var alertContent: AlertContent?
     
     private let authProvider: AuthProvider
-    private let userDataManager = UserManager()
     private let profileDataManager = ProfileManager()
     private let profileBookDataManager = ProfileManager()
     
@@ -41,36 +40,36 @@ final class ProfileViewModel {
     }
     
     func refreshProfile() {
-//        var authUser: UserIdentity?
-//        firstly {
-//            authProvider.getIdentity()
-//        }.done { userIdentity in
-//            self.error = nil
-//            authUser = userIdentity
-//        }.catch { error in
-//            self.error = error.localizedDescription
-//        }
-//
-//
-//        let user = userDataManager.getOne(id: "aNcV0rwqWcGpF45wTDUU")
-//        let user = userDataManager.getManyReference(target: "uid", id: authUser.id ?? "1")
-//        user.done { user in
-//            self.firstName = user.first_name
-//            self.lastName = user.last_name
-//            self.name = "John Doe"
-//            self.email = "guy@gmail.com"
-//
-//            let profile = self.profileDataManager.getOne(id: user.profile_id)
-//            profile.done { profile in
-//                self.totalStars = 1
-//                self.starsToday = 0
-//            }.catch { error in
-//                self.error = error.localizedDescription
-//            }
-//
-//        }.catch { error in
-//            self.error = error.localizedDescription
-//        }
+        //        var authUser: UserIdentity?
+        //        firstly {
+        //            authProvider.getIdentity()
+        //        }.done { userIdentity in
+        //            self.error = nil
+        //            authUser = userIdentity
+        //        }.catch { error in
+        //            self.error = error.localizedDescription
+        //        }
+        //
+        //
+        //        let user = userDataManager.getOne(id: "aNcV0rwqWcGpF45wTDUU")
+        //        let user = userDataManager.getManyReference(target: "uid", id: authUser.id ?? "1")
+        //        user.done { user in
+        //            self.firstName = user.first_name
+        //            self.lastName = user.last_name
+        //            self.name = "John Doe"
+        //            self.email = "guy@gmail.com"
+        //
+        //            let profile = self.profileDataManager.getOne(id: user.profile_id)
+        //            profile.done { profile in
+        //                self.totalStars = 1
+        //                self.starsToday = 0
+        //            }.catch { error in
+        //                self.error = error.localizedDescription
+        //            }
+        //
+        //        }.catch { error in
+        //            self.error = error.localizedDescription
+        //        }
         
         self.firstName = "John"
         self.lastName = "Doe"
