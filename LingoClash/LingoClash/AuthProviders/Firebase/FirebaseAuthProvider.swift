@@ -19,26 +19,16 @@ class FirebaseAuthProvider: AuthProvider {
     }
     
     struct Configs {
-        static let emailKey = "email"
-        static let passwordKey = "password"
         static let firstNameKey = "firstName"
         static let lastNameKey = "lastName"
         static let uidKey = "uid"
         static let usersCollection = "users"
     }
     
-    func register(params: [String : Any]) -> Promise<Void> {
-        
-        guard let email = params[Configs.emailKey] as? String,
-              let password = params[Configs.passwordKey] as? String,
-              let firstName = params[Configs.firstNameKey] as? String,
-              let lastName = params[Configs.lastNameKey] as? String
-        else {
-            return Promise.reject(reason: FirebaseAuthError.invalidAuthParams)
-        }
+    func register(params: SignUpFields) -> Promise<Void> {
         
         return Promise<AuthDataResult?> { seal in
-            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            Auth.auth().createUser(withEmail: params.email, password: params.password) { (result, error) in
                 if let error = error {
                     return seal.reject(error)
                 }
@@ -54,8 +44,8 @@ class FirebaseAuthProvider: AuthProvider {
                 let db = Firestore.firestore()
                 db.collection(Configs.usersCollection).addDocument(
                     data: [
-                        Configs.firstNameKey: firstName,
-                        Configs.lastNameKey: lastName,
+                        Configs.firstNameKey: params.firstName,
+                        Configs.lastNameKey: params.lastName,
                         Configs.uidKey: result.user.uid
                     ]) { error in
                         if let error = error {
@@ -67,16 +57,10 @@ class FirebaseAuthProvider: AuthProvider {
         }
     }
     
-    func login(params: [String : Any]) -> Promise<Void> {
-        
-        guard let email = params[Configs.emailKey] as? String,
-              let password = params[Configs.passwordKey] as? String
-        else {
-            return Promise.reject(reason: FirebaseAuthError.invalidAuthParams)
-        }
+    func login(params: LoginFields) -> Promise<Void> {
         
         return Promise<Void> { seal in
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            Auth.auth().signIn(withEmail: params.email, password: params.password) { (result, error) in
                 if let error = error {
                     return seal.reject(error)
                 }

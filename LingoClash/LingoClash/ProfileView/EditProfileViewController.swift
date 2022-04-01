@@ -17,12 +17,13 @@ class EditProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    @IBAction func saveButtonTapped(_ sender: Any) {
-        let firstName = Utilities.getTrimmedString(textField: firstNameTextField)
-        let lastName = Utilities.getTrimmedString(textField: lastNameTextField)
         
-        viewModel.editProfile(firstName: firstName, lastName: lastName)
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        let firstName = FormUtilities.getTrimmedString(textField: firstNameTextField)
+        let lastName = FormUtilities.getTrimmedString(textField: lastNameTextField)
+        
+        let fields = EditProfileFields(firstName: firstName, lastName: lastName)
+        viewModel.editProfile(fields)
     }
     
 }

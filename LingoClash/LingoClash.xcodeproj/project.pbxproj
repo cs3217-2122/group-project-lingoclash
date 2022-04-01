@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		6204A03A27DE1CDB0063100D /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6204A03927DE1CDB0063100D /* AppConfigs.swift */; };
-		6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6204A03E27DE43350063100D /* ProfileViewController.swift */; };
 		6204A04127DE4A500063100D /* ViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6204A04027DE4A500063100D /* ViewUtilities.swift */; };
+		620DF3CA27F23133006A9E5F /* ChangeEmailFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DF3C927F23133006A9E5F /* ChangeEmailFields.swift */; };
+		620DF3CC27F2315F006A9E5F /* ChangePasswordFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DF3CB27F2315F006A9E5F /* ChangePasswordFields.swift */; };
+		620DF3CE27F231BD006A9E5F /* EditProfileFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DF3CD27F231BD006A9E5F /* EditProfileFields.swift */; };
+		62165B6A27F21880004BC620 /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B6927F21880004BC620 /* ChangeEmailViewController.swift */; };
+		62165B7127F218A0004BC620 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B6C27F218A0004BC620 /* ProfileViewController.swift */; };
+		62165B7427F218A0004BC620 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B6F27F218A0004BC620 /* ChangePasswordViewController.swift */; };
+		62165B7627F2244C004BC620 /* FormUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7527F2244C004BC620 /* FormUtilities.swift */; };
+		62165B7927F226AF004BC620 /* FormFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7827F226AF004BC620 /* FormFields.swift */; };
+		62165B7B27F226BA004BC620 /* SignUpFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7A27F226BA004BC620 /* SignUpFields.swift */; };
+		62165B7D27F226C7004BC620 /* LoginFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7C27F226C7004BC620 /* LoginFields.swift */; };
 		621E6D5127E9C4F10015BBD4 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5027E9C4F10015BBD4 /* EditProfileViewController.swift */; };
-		621E6D5327E9C5060015BBD4 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5227E9C5060015BBD4 /* ChangePasswordViewController.swift */; };
-		621E6D5527E9C8260015BBD4 /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5427E9C8260015BBD4 /* ChangeEmailViewController.swift */; };
 		624989DA27E735600092FC1B /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989D927E735600092FC1B /* BookCollectionViewController.swift */; };
 		624989DC27E736590092FC1B /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989DB27E736590092FC1B /* BookCollectionViewCell.swift */; };
 		624989DE27E7395E0092FC1B /* LearningBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989DD27E7395E0092FC1B /* LearningBooksViewController.swift */; };
@@ -32,7 +39,6 @@
 		629090AC27E8E3B900941A3B /* CurrentBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */; };
 		62C04A0F27DDE59E002D2497 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */; };
 		62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1027DDE67F002D2497 /* LoginViewController.swift */; };
-		62C04A1327DDE838002D2497 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1227DDE838002D2497 /* Utilities.swift */; };
 		62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1427DDEB10002D2497 /* HomeViewController.swift */; };
 		62CB30DF27EA6EFB0044CB24 /* ProfileBookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CB30DE27EA6EFB0044CB24 /* ProfileBookManager.swift */; };
 		62E418CA27EA524C00DFF03C /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C927EA524C00DFF03C /* Lesson.swift */; };
@@ -125,6 +131,13 @@
 		D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */; };
 		D33282F927D4E63B00C80986 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282F827D4E63B00C80986 /* Theme.swift */; };
 		D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
+		D3686A0527F750EA0013B289 /* FormUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7527F2244C004BC620 /* FormUtilities.swift */; };
+		D3686A0627F7513A0013B289 /* SignUpFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7A27F226BA004BC620 /* SignUpFields.swift */; };
+		D3686A0727F751440013B289 /* LoginFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7C27F226C7004BC620 /* LoginFields.swift */; };
+		D3686A0827F751520013B289 /* EditProfileFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DF3CD27F231BD006A9E5F /* EditProfileFields.swift */; };
+		D3686A0927F7515C0013B289 /* ChangePasswordFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DF3CB27F2315F006A9E5F /* ChangePasswordFields.swift */; };
+		D3686A0A27F751740013B289 /* ChangeEmailFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DF3C927F23133006A9E5F /* ChangeEmailFields.swift */; };
+		D3686A0B27F7517F0013B289 /* FormFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7827F226AF004BC620 /* FormFields.swift */; };
 		D398780927DF6AB800B2F4ED /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780827DF6AB800B2F4ED /* DataProvider.swift */; };
 		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
 		D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
@@ -246,7 +259,7 @@
 		D3C5E24627F6E36B00F65B8E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7AD27E503B3005D4272 /* Account.swift */; };
 		D3C5E24727F6E36B00F65B8E /* LessonSelectorTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887627EAC6E700809403 /* LessonSelectorTableCell.swift */; };
 		D3C5E24827F6E36B00F65B8E /* LessonSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887227EABECC00809403 /* LessonSelectionViewModel.swift */; };
-		D3C5E24927F6E36B00F65B8E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1227DDE838002D2497 /* Utilities.swift */; };
+		D3C5E24927F6E36B00F65B8E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		D3C5E24A27F6E36B00F65B8E /* SimpleOptionQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7FC27E6E527005D4272 /* SimpleOptionQuestion.swift */; };
 		D3C5E24B27F6E36B00F65B8E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E1CC27F600BA00F65B8E /* DataManager.swift */; };
 		D3C5E24C27F6E36B00F65B8E /* DefinitionOptionQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80127E6EB21005D4272 /* DefinitionOptionQuestion.swift */; };
@@ -323,6 +336,18 @@
 		6204A03927DE1CDB0063100D /* AppConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigs.swift; sourceTree = "<group>"; };
 		6204A03E27DE43350063100D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6204A04027DE4A500063100D /* ViewUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtilities.swift; sourceTree = "<group>"; };
+		620DF3C927F23133006A9E5F /* ChangeEmailFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailFields.swift; sourceTree = "<group>"; };
+		620DF3CB27F2315F006A9E5F /* ChangePasswordFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordFields.swift; sourceTree = "<group>"; };
+		620DF3CD27F231BD006A9E5F /* EditProfileFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFields.swift; sourceTree = "<group>"; };
+		62165B6927F21880004BC620 /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
+		62165B6B27F218A0004BC620 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		62165B6C27F218A0004BC620 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		62165B6D27F218A0004BC620 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		62165B6F27F218A0004BC620 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		62165B7527F2244C004BC620 /* FormUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUtilities.swift; sourceTree = "<group>"; };
+		62165B7827F226AF004BC620 /* FormFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFields.swift; sourceTree = "<group>"; };
+		62165B7A27F226BA004BC620 /* SignUpFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFields.swift; sourceTree = "<group>"; };
+		62165B7C27F226C7004BC620 /* LoginFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFields.swift; sourceTree = "<group>"; };
 		621E6D5027E9C4F10015BBD4 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		621E6D5227E9C5060015BBD4 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		621E6D5427E9C8260015BBD4 /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
@@ -345,7 +370,6 @@
 		629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBookViewController.swift; sourceTree = "<group>"; };
 		62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		62C04A1027DDE67F002D2497 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		62C04A1227DDE838002D2497 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62C04A1427DDEB10002D2497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		62CB30DE27EA6EFB0044CB24 /* ProfileBookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBookManager.swift; sourceTree = "<group>"; };
 		62E418C927EA524C00DFF03C /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
@@ -437,7 +461,6 @@
 		D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		D3C4422627E878D800676C93 /* FirebaseAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthProvider.swift; sourceTree = "<group>"; };
-		D3C4422C27E87EE800676C93 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D3C4423027E8966C00676C93 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		D3C4423527E8A96200676C93 /* AlertUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtilities.swift; sourceTree = "<group>"; };
 		D3C4423727E8A98400676C93 /* AlertTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTypes.swift; sourceTree = "<group>"; };
@@ -456,7 +479,7 @@
 		D3C5E28327F71D6900F65B8E /* BookCategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCategoryManager.swift; sourceTree = "<group>"; };
 		D3C5E28627F71D8500F65B8E /* LessonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonManager.swift; sourceTree = "<group>"; };
 		D3C5E28927F71DA200F65B8E /* VocabManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabManager.swift; sourceTree = "<group>"; };
-		D3C5E29127F73C9900F65B8E /* Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = "<group>"; };
+		D3C5E29127F73C9900F65B8E /* Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Dev-Info.plist"; path = "LingoClash/Dev-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUtilities.swift; sourceTree = "<group>"; };
 		D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Extensions.swift"; sourceTree = "<group>"; };
 		D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTypes.swift; sourceTree = "<group>"; };
@@ -512,9 +535,9 @@
 		6204A03B27DE34040063100D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				62C04A1227DDE838002D2497 /* Utilities.swift */,
 				D3C5E27927F6F3E900F65B8E /* SampleDataUtilities.swift */,
 				6204A03927DE1CDB0063100D /* AppConfigs.swift */,
+				62165B7527F2244C004BC620 /* FormUtilities.swift */,
 				CEF1E7DB27E60C7A005D4272 /* Dynamic.swift */,
 				D30CD1E727E79F3A0021A5AA /* KeychainManager.swift */,
 				D3C4423F27E8C65600676C93 /* Logger.swift */,
@@ -523,6 +546,19 @@
 				D3C4422127E8713400676C93 /* API */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		62165B7727F2269F004BC620 /* FormFields */ = {
+			isa = PBXGroup;
+			children = (
+				62165B7827F226AF004BC620 /* FormFields.swift */,
+				620DF3CB27F2315F006A9E5F /* ChangePasswordFields.swift */,
+				620DF3CD27F231BD006A9E5F /* EditProfileFields.swift */,
+				620DF3C927F23133006A9E5F /* ChangeEmailFields.swift */,
+				62165B7C27F226C7004BC620 /* LoginFields.swift */,
+				62165B7A27F226BA004BC620 /* SignUpFields.swift */,
+			);
+			path = FormFields;
 			sourceTree = "<group>";
 		};
 		6232E41327DDDF4700107B89 /* ViewControllers */ = {
@@ -860,6 +896,7 @@
 				CEF1E80027E6E967005D4272 /* Questions */,
 				CEF1E7A627E50060005D4272 /* Currency */,
 				D3C5E28227F71C8E00F65B8E /* Records */,
+				62165B7727F2269F004BC620 /* FormFields */,
 				D3F00CB627DFC5F200393ADC /* DataManagers */,
 				CEF1E7E727E61F58005D4272 /* BookLesson.swift */,
 				CEF1E7E927E61F68005D4272 /* BookVocab.swift */,
@@ -944,7 +981,11 @@
 		D3C4422B27E87EBC00676C93 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
-				D3C4422C27E87EE800676C93 /* ProfileViewModel.swift */,
+				62165B6F27F218A0004BC620 /* ChangePasswordViewController.swift */,
+				62165B6B27F218A0004BC620 /* EditProfileViewController.swift */,
+				62165B6C27F218A0004BC620 /* ProfileViewController.swift */,
+				62165B6D27F218A0004BC620 /* ProfileViewModel.swift */,
+				62165B6927F21880004BC620 /* ChangeEmailViewController.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -1196,13 +1237,14 @@
 				CEF1E81A27E74622005D4272 /* SimpleOptionQuestionLayoutViewController.swift in Sources */,
 				621E6D5127E9C4F10015BBD4 /* EditProfileViewController.swift in Sources */,
 				629090A227E8314100941A3B /* RecommendedBooksTableViewCell.swift in Sources */,
-				621E6D5327E9C5060015BBD4 /* ChangePasswordViewController.swift in Sources */,
 				62CB30DF27EA6EFB0044CB24 /* ProfileBookManager.swift in Sources */,
 				624BD58D27E7A673006F0391 /* RecommendedBooksViewController.swift in Sources */,
 				CEF1E7E027E60D5C005D4272 /* LessonVocabViewModel.swift in Sources */,
 				CEC5886C27EA37E900809403 /* VocabsLearntTableCell.swift in Sources */,
 				CEF1E80427E6ED96005D4272 /* TwoDisjointSetOptionQuestion.swift in Sources */,
 				CEF1E7FB27E6D591005D4272 /* Question.swift in Sources */,
+				62165B7127F218A0004BC620 /* ProfileViewController.swift in Sources */,
+				620DF3CC27F2315F006A9E5F /* ChangePasswordFields.swift in Sources */,
 				D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */,
 				CEF1E7EA27E61F68005D4272 /* BookVocab.swift in Sources */,
 				62E418CC27EA525600DFF03C /* ProfileBook.swift in Sources */,
@@ -1210,6 +1252,7 @@
 				D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */,
 				CEF02D8027E9686C00C30E03 /* QuestionSequence.swift in Sources */,
 				CEF1E7EC27E63A2B005D4272 /* LessonVocabViewModelFromLesson.swift in Sources */,
+				62165B7927F226AF004BC620 /* FormFields.swift in Sources */,
 				D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */,
 				CE8D229F27EEBBD2005E7058 /* HomeNavigationViewController.swift in Sources */,
 				D3C4423C27E8B17400676C93 /* DatabaseErrors.swift in Sources */,
@@ -1221,6 +1264,7 @@
 				CEF1E7F127E6D120005D4272 /* QuestionViewModel.swift in Sources */,
 				CEF1E81827E742FE005D4272 /* TwoDisjointSetOptionQuestionLayoutViewModel.swift in Sources */,
 				CEF1E82127E75979005D4272 /* OptionTableCell.swift in Sources */,
+				62165B7B27F226BA004BC620 /* SignUpFields.swift in Sources */,
 				CEF1E81427E71F9D005D4272 /* QuestionStatus.swift in Sources */,
 				CEF02D8727E9721000C30E03 /* QuestionFormat.swift in Sources */,
 				D3C5E28A27F71DA200F65B8E /* VocabManager.swift in Sources */,
@@ -1244,7 +1288,6 @@
 				CEF1E81F27E74C6F005D4272 /* QuestionLayoutViewController.swift in Sources */,
 				CEF02D9227E9C2A800C30E03 /* QuestionGenerationError.swift in Sources */,
 				CEF1E7F927E6D568005D4272 /* QuestionViewModelFromQuestion.swift in Sources */,
-				621E6D5527E9C8260015BBD4 /* ChangeEmailViewController.swift in Sources */,
 				D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */,
 				D3C5E28427F71D6A00F65B8E /* BookCategoryManager.swift in Sources */,
 				CEF02D8B27E983B700C30E03 /* MatchVocabToDefinitionQuestionConstructor.swift in Sources */,
@@ -1253,6 +1296,7 @@
 				CEF1E7AC27E5030C005D4272 /* CurrencySystem.swift in Sources */,
 				CEF1E81C27E74634005D4272 /* TwoDisjointSetOptionQuestionLayoutViewController.swift in Sources */,
 				CEF1E7DE27E60D42005D4272 /* LessonOverviewViewModel.swift in Sources */,
+				620DF3CA27F23133006A9E5F /* ChangeEmailFields.swift in Sources */,
 				CEC5887127EABEC000809403 /* LessonSelectionViewController.swift in Sources */,
 				CEF1E7B327E5071C005D4272 /* StarsCurrencySystem.swift in Sources */,
 				CEF1E80D27E6F6B1005D4272 /* DefinitionOptionQuestionConstructor.swift in Sources */,
@@ -1272,6 +1316,8 @@
 				CEF1E7D927E60C3E005D4272 /* LessonQuizViewController.swift in Sources */,
 				CEF1E80627E6EF4D005D4272 /* MatchVocabToDefinitionQuestion.swift in Sources */,
 				CEF1E7E627E61EF0005D4272 /* LessonOverviewViewModelFromLesson.swift in Sources */,
+				62165B7D27F226C7004BC620 /* LoginFields.swift in Sources */,
+				620DF3CE27F231BD006A9E5F /* EditProfileFields.swift in Sources */,
 				CEF1E80927E6F3F4005D4272 /* QuestionsGenerator.swift in Sources */,
 				CEF1E80B27E6F644005D4272 /* QuestionConstructor.swift in Sources */,
 				CEC5887B27EAC91600809403 /* LessonTableCellViewModelFromLesson.swift in Sources */,
@@ -1287,11 +1333,11 @@
 				D3C4422727E878D800676C93 /* FirebaseAuthProvider.swift in Sources */,
 				62E418D327EA5A6900DFF03C /* ProfileManager.swift in Sources */,
 				D30CD1EB27E7A65F0021A5AA /* AuthProvider.swift in Sources */,
-				6204A03F27DE43350063100D /* ProfileViewController.swift in Sources */,
 				629090A827E8D02200941A3B /* CurrentBookViewModel.swift in Sources */,
 				629090AC27E8E3B900941A3B /* CurrentBookViewController.swift in Sources */,
 				62E418CF27EA526200DFF03C /* ProfileLesson.swift in Sources */,
 				D3C4424527E9F2FC00676C93 /* BookManager.swift in Sources */,
+				62165B6A27F21880004BC620 /* ChangeEmailViewController.swift in Sources */,
 				62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */,
 				624989DE27E7395E0092FC1B /* LearningBooksViewController.swift in Sources */,
 				624989E527E742690092FC1B /* RecommendedBookCollectionViewCell.swift in Sources */,
@@ -1299,11 +1345,11 @@
 				624BD58827E7A3A2006F0391 /* BooksViewModel.swift in Sources */,
 				D3F00CAD27DFAF6F00393ADC /* Promise+Extensions.swift in Sources */,
 				629090AA27E8DE0300941A3B /* CurrentBookSectionViewController.swift in Sources */,
+				62165B7427F218A0004BC620 /* ChangePasswordViewController.swift in Sources */,
 				D398780927DF6AB800B2F4ED /* DataProvider.swift in Sources */,
 				CEF1E7AE27E503B3005D4272 /* Account.swift in Sources */,
 				CEC5887727EAC6E700809403 /* LessonSelectorTableCell.swift in Sources */,
 				CEC5887327EABECC00809403 /* LessonSelectionViewModel.swift in Sources */,
-				62C04A1327DDE838002D2497 /* Utilities.swift in Sources */,
 				CEF1E7FD27E6E527005D4272 /* SimpleOptionQuestion.swift in Sources */,
 				D3C5E1CD27F600BA00F65B8E /* DataManager.swift in Sources */,
 				CEF1E80227E6EB21005D4272 /* DefinitionOptionQuestion.swift in Sources */,
@@ -1314,6 +1360,7 @@
 				629090A027E8303F00941A3B /* RecommendedBooksTableViewController.swift in Sources */,
 				624BD58027E761FB006F0391 /* LearningBooksViewModel.swift in Sources */,
 				62E418CA27EA524C00DFF03C /* Lesson.swift in Sources */,
+				62165B7627F2244C004BC620 /* FormUtilities.swift in Sources */,
 				CEC5887527EABED600809403 /* LessonSelectionViewModelFromBook.swift in Sources */,
 				D3C4424327E8CB0A00676C93 /* FirebaseDataProvider.swift in Sources */,
 				D3C4423827E8A98400676C93 /* AlertTypes.swift in Sources */,
@@ -1340,12 +1387,15 @@
 				D3C5E1E227F6E36B00F65B8E /* ChangePasswordViewController.swift in Sources */,
 				D3C5E1E327F6E36B00F65B8E /* ProfileBookManager.swift in Sources */,
 				D3C5E1E527F6E36B00F65B8E /* RecommendedBooksViewController.swift in Sources */,
+				D3686A0627F7513A0013B289 /* SignUpFields.swift in Sources */,
 				D3C5E1E627F6E36B00F65B8E /* LessonVocabViewModel.swift in Sources */,
 				D3C5E1E727F6E36B00F65B8E /* VocabsLearntTableCell.swift in Sources */,
 				D3C5E1E827F6E36B00F65B8E /* TwoDisjointSetOptionQuestion.swift in Sources */,
+				D3686A0B27F7517F0013B289 /* FormFields.swift in Sources */,
 				D3C5E1E927F6E36B00F65B8E /* Question.swift in Sources */,
 				D3C5E1EA27F6E36B00F65B8E /* SplashViewController.swift in Sources */,
 				D3C5E1EB27F6E36B00F65B8E /* BookVocab.swift in Sources */,
+				D3686A0927F7515C0013B289 /* ChangePasswordFields.swift in Sources */,
 				D3C5E1EC27F6E36B00F65B8E /* ProfileBook.swift in Sources */,
 				D3C5E1ED27F6E36B00F65B8E /* CompletedBooksViewController.swift in Sources */,
 				D3C5E1EE27F6E36B00F65B8E /* AppDelegate.swift in Sources */,
@@ -1393,6 +1443,8 @@
 				D3C5E21527F6E36B00F65B8E /* LoginViewModel.swift in Sources */,
 				D3C5E21627F6E36B00F65B8E /* CurrencySystem.swift in Sources */,
 				D3C5E21727F6E36B00F65B8E /* TwoDisjointSetOptionQuestionLayoutViewController.swift in Sources */,
+				D3686A0A27F751740013B289 /* ChangeEmailFields.swift in Sources */,
+				D3686A0727F751440013B289 /* LoginFields.swift in Sources */,
 				D3C5E21827F6E36B00F65B8E /* LessonOverviewViewModel.swift in Sources */,
 				D3C5E21927F6E36B00F65B8E /* LessonSelectionViewController.swift in Sources */,
 				D3C5E21A27F6E36B00F65B8E /* StarsCurrencySystem.swift in Sources */,
@@ -1444,7 +1496,7 @@
 				D3C5E24627F6E36B00F65B8E /* Account.swift in Sources */,
 				D3C5E24727F6E36B00F65B8E /* LessonSelectorTableCell.swift in Sources */,
 				D3C5E24827F6E36B00F65B8E /* LessonSelectionViewModel.swift in Sources */,
-				D3C5E24927F6E36B00F65B8E /* Utilities.swift in Sources */,
+				D3C5E24927F6E36B00F65B8E /* (null) in Sources */,
 				D3C5E24A27F6E36B00F65B8E /* SimpleOptionQuestion.swift in Sources */,
 				D3C5E24B27F6E36B00F65B8E /* DataManager.swift in Sources */,
 				D3C5E24C27F6E36B00F65B8E /* DefinitionOptionQuestion.swift in Sources */,
@@ -1454,8 +1506,10 @@
 				D3C5E25027F6E36B00F65B8E /* BookCollectionViewCell.swift in Sources */,
 				D3C5E25127F6E36B00F65B8E /* RecommendedBooksTableViewController.swift in Sources */,
 				D3C5E25227F6E36B00F65B8E /* LearningBooksViewModel.swift in Sources */,
+				D3686A0527F750EA0013B289 /* FormUtilities.swift in Sources */,
 				D3C5E25327F6E36B00F65B8E /* Lesson.swift in Sources */,
 				D3C5E25427F6E36B00F65B8E /* LessonSelectionViewModelFromBook.swift in Sources */,
+				D3686A0827F751520013B289 /* EditProfileFields.swift in Sources */,
 				D3C5E25527F6E36B00F65B8E /* FirebaseDataProvider.swift in Sources */,
 				D3C5E25627F6E36B00F65B8E /* AlertTypes.swift in Sources */,
 				D3C5E25727F6E36B00F65B8E /* LingoClash.xcdatamodeld in Sources */,
@@ -1766,7 +1820,7 @@
 				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEVELOPMENT_TEAM = K6AQBYTT24;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Dev-Info.plist";
+				INFOPLIST_FILE = "LingoClash/Dev-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = LingoClashDev;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1799,7 +1853,7 @@
 				DEBUG_ACTIVITY_MODE = "";
 				DEVELOPMENT_TEAM = K6AQBYTT24;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Dev-Info.plist";
+				INFOPLIST_FILE = "LingoClash/Dev-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = LingoClashDev;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

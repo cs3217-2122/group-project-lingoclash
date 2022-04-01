@@ -10,7 +10,6 @@ import UIKit
 class ChangeEmailViewController: UIViewController {
 
     @IBOutlet weak var newEmailTextField: UITextField!
-    @IBOutlet weak var confirmNewEmailTextField: UITextField!
     
     private let viewModel = ProfileViewModel()
     
@@ -19,10 +18,10 @@ class ChangeEmailViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        let newEmail = Utilities.getTrimmedString(textField: newEmailTextField)
-        let confirmNewEmail = Utilities.getTrimmedString(textField: confirmNewEmailTextField)
+        let newEmail = FormUtilities.getTrimmedString(textField: newEmailTextField)
         
-        viewModel.changeEmail(newEmail: newEmail, confirmNewEmail: confirmNewEmail)
+        let fields = ChangeEmailFields(newEmail: newEmail)
+        viewModel.changeEmail(fields)
     }
 
 }

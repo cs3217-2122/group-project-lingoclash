@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D3C5E1D027F6E36B00F65B8E"
-               BuildableName = "LingoClash Dev.app"
+               BuildableName = "LingoClashDev.app"
                BlueprintName = "LingoClashDev"
                ReferencedContainer = "container:LingoClash.xcodeproj">
             </BuildableReference>
@@ -55,7 +55,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3C5E1D027F6E36B00F65B8E"
-            BuildableName = "LingoClash Dev.app"
+            BuildableName = "LingoClashDev.app"
             BlueprintName = "LingoClashDev"
             ReferencedContainer = "container:LingoClash.xcodeproj">
          </BuildableReference>
@@ -72,7 +72,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D3C5E1D027F6E36B00F65B8E"
-            BuildableName = "LingoClash Dev.app"
+            BuildableName = "LingoClashDev.app"
             BlueprintName = "LingoClashDev"
             ReferencedContainer = "container:LingoClash.xcodeproj">
          </BuildableReference>

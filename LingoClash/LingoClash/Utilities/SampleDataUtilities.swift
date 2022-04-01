@@ -13,17 +13,14 @@ class SampleDataUtilities {
     
     static func createSampleData() -> Promise<Void> {
         let authProvider = AppConfigs.API.authProvider
-        
-        return authProvider.login(params: [
-            "email": "superuser@lingoclash.com",
-            "password": "iamsuperuser"
-        ]).then {_ -> Promise<Void> in
+                
+        return authProvider.login(params: LoginFields(email: "superuser@lingoclash.com", password: "iamsuperuser")).then {_ -> Promise<Void> in
             
             Logger.info("Successfully logged in as superuser. Creating sample data now...")
             
             let categoryPromise = createSampleBookCategories()
             let bookPromise = createSampleBooks()
-            let lessonPromise = createSampleLessons()w
+            let lessonPromise = createSampleLessons()
             let vocabPromise =  createSampleVocabs()
             
             return when(fulfilled: [

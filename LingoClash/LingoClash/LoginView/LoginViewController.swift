@@ -47,12 +47,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
+        let email = FormUtilities.getTrimmedString(textField: emailTextField)
+        let password = FormUtilities.getTrimmedString(textField: passwordTextField)
         
-        let email = Utilities.getTrimmedString(textField: emailTextField)
-        let password = Utilities.getTrimmedString(textField: passwordTextField)
-        
-        viewModel.login(email: email, password: password)
-        
+        let fields = LoginFields(email: email, password: password)
+        viewModel.login(fields)
     }
     
     func transitionToHome() {
