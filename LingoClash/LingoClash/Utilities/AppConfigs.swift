@@ -10,6 +10,7 @@ import UIKit
 struct AppConfigs {
     
     struct General {
+        // Preloads the db with some sample data. Only works in development scheme.
         static let enablePreloadData = false
     }
     
