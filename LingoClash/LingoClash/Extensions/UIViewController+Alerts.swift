@@ -9,16 +9,23 @@ import UIKit
 
 extension UIViewController {
     
-    func showBasicAlert(title: String, message: String) {
+    func showBasicAlert(content: AlertContent) {
         
-        let alert = AlertUtilities.createAlert(title: title, message: message)
+        let alert = AlertUtilities.createAlert(title: content.title, message: content.message)
         
         self.present(alert, animated: true, completion: nil)
     }
     
-    func showConfirmAlert(title: String, message: String, confirmHandler: ((UIAlertAction) -> Void)?) {
+    func showConfirmAlert(content: AlertContent, confirmHandler: ((UIAlertAction) -> Void)?) {
         
-        let alert = AlertUtilities.createConfirmAlert(title: title, message: message, confirmHandler: confirmHandler)
+        let alert = AlertUtilities.createConfirmAlert(title: content.title, message: content.message, confirmHandler: confirmHandler)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showDoneAlert(content: AlertContent, doneHandler: ((UIAlertAction) -> Void)?) {
+        
+        let alert = AlertUtilities.createDoneAlert(title: content.title, message: content.message, doneHandler: doneHandler)
         
         self.present(alert, animated: true, completion: nil)
     }

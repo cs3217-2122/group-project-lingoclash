@@ -60,7 +60,7 @@ class ProfileViewController: UIViewController {
         
         viewModel.$alertContent.sink {[weak self] alertContent in
             if let alertContent = alertContent {
-                self?.showConfirmAlert(title: alertContent.title, message: alertContent.message) { _ in
+                self?.showConfirmAlert(content: alertContent) { _ in
                     self?.transitionToSplash()
                 }
             }
@@ -81,6 +81,16 @@ class ProfileViewController: UIViewController {
     func showError(_ message: String) {
         // TODO: Perhaps it is better to show as popup
         Logger.info("Error signing out: \(message)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let editProfileVC = segue.destination as? EditProfileViewController {
+            editProfileVC.viewModel = self.viewModel
+        } else if let changePasswordVC = segue.destination as? ChangePasswordViewController {
+            changePasswordVC.viewModel = self.viewModel
+        } else if let changeEmailVC = segue.destination as? ChangeEmailViewController {
+            changeEmailVC.viewModel = self.viewModel
+        }
     }
     
 }

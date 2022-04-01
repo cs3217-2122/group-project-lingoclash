@@ -22,7 +22,7 @@ class JSONServerAuthProvider: AuthProvider {
         self.apiURL = apiURL
     }
     
-    func register(params: SignUpFields) -> Promise<Void> {
+    func register(params: SignUpFields) -> Promise<UserIdentity> {
         let userCredentials = UserCredentials(email: params.email, password: params.password)
         
         guard let url = URL(string: "\(self.apiURL)/auth/register") else {
@@ -39,15 +39,18 @@ class JSONServerAuthProvider: AuthProvider {
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = data
         
-        return FetchUtilities.fetchData(with: request).done { result in
-            guard let auth = try? JSONDecoder().decode(LoginResult.self, from: result.data) else {
-                return
-            }
-            
-            let accessToken = auth.access_token
-            
-            try KeychainManager.save(service: AppConfigs.API.devService, account: AppConfigs.API.accessTokenKey, value: accessToken.data(using: .utf8) ?? Data())
-        }
+        // TODO: fill in method
+        return getIdentity()
+        
+//        return FetchUtilities.fetchData(with: request).done { result in
+//            guard let auth = try? JSONDecoder().decode(LoginResult.self, from: result.data) else {
+//                return
+//            }
+//
+//            let accessToken = auth.access_token
+//
+//            try KeychainManager.save(service: AppConfigs.API.devService, account: AppConfigs.API.accessTokenKey, value: accessToken.data(using: .utf8) ?? Data())
+//        }
     }
     
     func login(params: LoginFields) -> Promise<Void> {
@@ -113,4 +116,25 @@ class JSONServerAuthProvider: AuthProvider {
             try? JSONDecoder().decode(UserIdentity.self, from: fetchResult.data)
         }
     }
+    
+    func updateName(_ name: String) -> Promise<Void> {
+        // TODO: fill in method
+        return Promise<Void>()
+    }
+    
+    func updateEmail(_ email: String) -> Promise<Void> {
+        // TODO: fill in method
+        return Promise<Void>()
+    }
+    
+    func updatePassword(_ password: String) -> Promise<Void> {
+        // TODO: fill in method
+        return Promise<Void>()
+    }
+    
+    func reauthenticate(password: String) -> Promise<Void> {
+        // TODO: fill in method
+        return Promise<Void>()
+    }
+    
 }

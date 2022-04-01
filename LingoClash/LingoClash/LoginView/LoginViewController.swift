@@ -40,8 +40,7 @@ class LoginViewController: UIViewController {
     }
     
     func setUpView() {
-        // Hide error label
-        errorLabel.alpha = 0
+        errorLabel.hide()
         
         // Style elements
         ViewUtilities.styleTextField(emailTextField)
@@ -52,7 +51,7 @@ class LoginViewController: UIViewController {
     func setUpBinders() {
         viewModel.$error.sink {[weak self] error in
             if let error = error {
-                self?.showError(error)
+                self?.errorLabel.show(withText: error)
             } else {
                 self?.transitionToHome()
             }
@@ -72,11 +71,6 @@ class LoginViewController: UIViewController {
         
         view.window?.rootViewController = mainViewController
         view.window?.makeKeyAndVisible()
-    }
-    
-    func showError(_ message: String) {
-        errorLabel.text = message
-        errorLabel.alpha = 1
     }
     
     @IBAction func backTapped(_ sender: Any) {
