@@ -36,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case .development:
             Logger.info("Environment is: development")
             setUpSampleData()
-            print("kw1")
         case .production:
             Logger.info("Environment is: production")
         case .none:
