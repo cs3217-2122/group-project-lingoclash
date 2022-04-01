@@ -16,8 +16,7 @@ final class ProfileViewModel {
     @Published var editProfileError: String?
     @Published var changeEmailError: String?
     @Published var changePasswordError: String?
-    @Published var firstName: String?
-    @Published var lastName: String?
+    @Published var name: String?
     @Published var email: String?
     @Published var totalStars: Int?
     @Published var starsToday: Int?
@@ -49,8 +48,7 @@ final class ProfileViewModel {
             return
         }
         
-        
-        db.collection("users").whereField("uid", isEqualTo: authUser.uid).getDocuments { querySnapshot, err in
+        db.collection("profiles").whereField("user_id", isEqualTo: authUser.uid).getDocuments { querySnapshot, err in
             if let _ = err {
                 return
             }
@@ -59,32 +57,15 @@ final class ProfileViewModel {
                 return
             }
             
-            if let firstName = data["first_name"] as? String {
-                self.firstName = firstName
-            }
-            
-            if let lastName = data["last_name"] as? String {
-                self.lastName = lastName
-            }
-            
+            self.name = authUser.displayName
             self.email = authUser.email
             
-            self.db.collection("profiles").whereField("user_id", isEqualTo: data.documentID).getDocuments { querySnapshot, err in
-                if let _ = err {
-                    return
-                }
-                
-                guard let document = querySnapshot?.documents[0] else {
-                    return
-                }
-                
-                if let starsToday = document["stars_today"] as? Int {
-                    self.starsToday = starsToday
-                }
-                
-                if let stars = document["stars"] as? Int {
-                    self.totalStars = stars
-                }
+            if let starsToday = data["stars_today"] as? Int {
+                self.starsToday = starsToday
+            }
+            
+            if let stars = data["stars"] as? Int {
+                self.totalStars = stars
             }
         }
     }
@@ -95,31 +76,18 @@ final class ProfileViewModel {
             return
         }
         
-        guard let authUser = Auth.auth().currentUser else {
+        if name == fields.name {
             return
         }
         
-        db.collection("users").whereField("uid", isEqualTo: authUser.uid).getDocuments { querySnapshot, err in
-            if let _ = err {
-                return
-            }
-            
-            guard let document = querySnapshot?.documents[0] else {
-                return
-            }
-            
-            self.db.collection("users").document(document.documentID).updateData([
-                "first_name": fields.firstName,
-                "last_name": fields.lastName
-            ]) { err in
-                if let _ = err {
-                    self.editProfileError = "Error updating profile."
-                } else {
-                    self.editProfileError = nil
-                    self.alertContent = AlertContent(title: "", message: "Your profile is updated succesfully.")
-                    self.refreshProfile()
-                }
-            }
+        firstly {
+            authProvider.updateName(fields.name)
+        }.done {
+            self.editProfileError = nil
+            self.alertContent = AlertContent(title: "", message: "Your name is updated succesfully.")
+            self.refreshProfile()
+        }.catch { error in
+            self.editProfileError = error.localizedDescription
         }
     }
     

@@ -10,10 +10,10 @@ import Combine
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -33,10 +33,10 @@ class SignUpViewController: UIViewController {
         errorLabel.hide()
         
         // Style elements
-        ViewUtilities.styleTextField(firstNameTextField)
-        ViewUtilities.styleTextField(lastNameTextField)
+        ViewUtilities.styleTextField(nameTextField)
         ViewUtilities.styleTextField(emailTextField)
         ViewUtilities.styleTextField(passwordTextField)
+        ViewUtilities.styleTextField(confirmPasswordTextField)
         ViewUtilities.styleFilledButton(signUpButton)
     }
     
@@ -51,12 +51,12 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
-        let firstName = FormUtilities.getTrimmedString(textField: firstNameTextField)
-        let lastName = FormUtilities.getTrimmedString(textField: lastNameTextField)
+        let name = FormUtilities.getTrimmedString(textField: nameTextField)
         let email = FormUtilities.getTrimmedString(textField: emailTextField)
         let password = FormUtilities.getTrimmedString(textField: passwordTextField)
+        let confirmPassword = FormUtilities.getTrimmedString(textField: confirmPasswordTextField)
         
-        let fields = SignUpFields(firstName: firstName, lastName: lastName, email: email, password: password)
+        let fields = SignUpFields(name: name, email: email, password: password, confirmPassword: confirmPassword)
         viewModel.signUp(fields)
         
     }

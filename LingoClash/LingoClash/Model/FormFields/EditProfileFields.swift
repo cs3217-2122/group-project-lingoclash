@@ -6,6 +6,5 @@
 //
 
 struct EditProfileFields: FormFields {
-    let firstName: String
-    let lastName: String
+    let name: String
 }

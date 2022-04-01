@@ -10,8 +10,7 @@ import Combine
 
 class EditProfileViewController: UIViewController {
 
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
     weak var viewModel: ProfileViewModel?
@@ -30,15 +29,9 @@ class EditProfileViewController: UIViewController {
     }
     
     func setUpBinders() {
-        viewModel?.$firstName.sink {[weak self] firstName in
+        viewModel?.$name.sink {[weak self] firstName in
             if let firstName = firstName {
-                self?.firstNameTextField.text = firstName
-            }
-        }.store(in: &cancellables)
-        
-        viewModel?.$lastName.sink {[weak self] lastName in
-            if let lastName = lastName {
-                self?.lastNameTextField.text = lastName
+                self?.nameTextField.text = firstName
             }
         }.store(in: &cancellables)
         
@@ -60,10 +53,9 @@ class EditProfileViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        let firstName = FormUtilities.getTrimmedString(textField: firstNameTextField)
-        let lastName = FormUtilities.getTrimmedString(textField: lastNameTextField)
+        let name = FormUtilities.getTrimmedString(textField: nameTextField)
         
-        let fields = EditProfileFields(firstName: firstName, lastName: lastName)
+        let fields = EditProfileFields(name: name)
         viewModel?.editProfile(fields)
     }
     

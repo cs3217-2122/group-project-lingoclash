@@ -6,8 +6,8 @@
 //
 
 struct SignUpFields: FormFields {
-    let firstName: String
-    let lastName: String
+    let name: String
     let email: String
     let password: String
+    let confirmPassword: String
 }

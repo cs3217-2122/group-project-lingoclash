@@ -33,15 +33,9 @@ class ProfileViewController: UIViewController {
             }
         }.store(in: &cancellables)
         
-        viewModel.$firstName.sink {[weak self] firstName in
-            if let firstName = firstName, let lastName = self?.viewModel.lastName {
-                self?.nameLabel.text = firstName + " " + lastName
-            }
-        }.store(in: &cancellables)
-        
-        viewModel.$lastName.sink {[weak self] lastName in
-            if let lastName = lastName, let firstName = self?.viewModel.firstName {
-                self?.nameLabel.text = firstName + " " + lastName
+        viewModel.$name.sink {[weak self] name in
+            if let name = name {
+                self?.nameLabel.text = name
             }
         }.store(in: &cancellables)
         

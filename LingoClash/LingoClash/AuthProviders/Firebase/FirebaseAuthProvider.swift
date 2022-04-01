@@ -24,7 +24,7 @@ class FirebaseAuthProvider: AuthProvider {
         static let usersCollection = "users"
     }
     
-    func register(params: SignUpFields) -> Promise<Void> {
+    func register(params: SignUpFields) -> Promise<UserIdentity> {
         
         return Promise<AuthDataResult?> { seal in
             Auth.auth().createUser(withEmail: params.email, password: params.password) { (result, error) in
@@ -35,25 +35,25 @@ class FirebaseAuthProvider: AuthProvider {
                 return seal.fulfill(result)
             }
         }.then { result -> Promise<Void> in
-            guard let result = result else {
+            guard let _ = result else {
                 return Promise.reject(reason: FirebaseAuthError.invalidAuthDataResult)
             }
             
             return Promise { seal in
-                let db = Firestore.firestore()
-                db.collection(Configs.usersCollection).addDocument(
-                    data: [
-                        Configs.firstNameKey: params.firstName,
-                        Configs.lastNameKey: params.lastName,
-                        Configs.uidKey: result.user.uid
-                    ]) { error in
-                        if let error = error {
-                            return seal.reject(error)
-                        }
-                        return seal.fulfill(())
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.displayName = params.name
+                changeRequest?.commitChanges { error in
+                    if let error = error {
+                        return seal.reject(error)
                     }
+    
+                    return seal.fulfill(())
+                }
             }
+        }.then {
+            return self.getIdentity()
         }
+        
     }
     
     func login(params: LoginFields) -> Promise<Void> {
@@ -90,6 +90,20 @@ class FirebaseAuthProvider: AuthProvider {
             id: user?.uid, email: user?.email, fullName: user?.displayName, avatar: user?.photoURL?.absoluteString)
         
         return Promise<UserIdentity>.resolve(value: userIdentity)
+    }
+    
+    func updateName(_ name: String) -> Promise<Void> {
+        return Promise<Void> { seal in
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.displayName = name
+            changeRequest?.commitChanges { error in
+                if let error = error {
+                    return seal.reject(error)
+                }
+                
+                return seal.fulfill(())
+            }
+        }
     }
     
     func updateEmail(_ email: String) -> Promise<Void> {
