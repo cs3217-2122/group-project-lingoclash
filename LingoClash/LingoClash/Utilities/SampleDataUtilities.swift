@@ -23,7 +23,7 @@ class SampleDataUtilities {
             
             let categoryPromise = createSampleBookCategories()
             let bookPromise = createSampleBooks()
-            let lessonPromise = createSampleLessons()
+            let lessonPromise = createSampleLessons()w
             let vocabPromise =  createSampleVocabs()
             
             return when(fulfilled: [

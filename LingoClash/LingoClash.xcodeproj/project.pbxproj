@@ -291,6 +291,8 @@
 		D3C5E28827F71D8500F65B8E /* LessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E28627F71D8500F65B8E /* LessonManager.swift */; };
 		D3C5E28A27F71DA200F65B8E /* VocabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E28927F71DA200F65B8E /* VocabManager.swift */; };
 		D3C5E28B27F71DA200F65B8E /* VocabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E28927F71DA200F65B8E /* VocabManager.swift */; };
+		D3C5E29227F73C9900F65B8E /* Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3C5E29127F73C9900F65B8E /* Dev-Info.plist */; };
+		D3C5E29327F73C9900F65B8E /* Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3C5E29127F73C9900F65B8E /* Dev-Info.plist */; };
 		D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */; };
 		D3F00CAD27DFAF6F00393ADC /* Promise+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */; };
 		D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */; };
@@ -448,13 +450,13 @@
 		D3C5E1CC27F600BA00F65B8E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D3C5E1CE27F602FB00F65B8E /* BookManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManagerTests.swift; sourceTree = "<group>"; };
 		D3C5E27027F6E36B00F65B8E /* LingoClashDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoClashDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3C5E27127F6E37100F65B8E /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D3C5E27527F6EBFF00F65B8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3C5E27927F6F3E900F65B8E /* SampleDataUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataUtilities.swift; sourceTree = "<group>"; };
 		D3C5E27F27F71C7300F65B8E /* Vocab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocab.swift; sourceTree = "<group>"; };
 		D3C5E28327F71D6900F65B8E /* BookCategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCategoryManager.swift; sourceTree = "<group>"; };
 		D3C5E28627F71D8500F65B8E /* LessonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonManager.swift; sourceTree = "<group>"; };
 		D3C5E28927F71DA200F65B8E /* VocabManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabManager.swift; sourceTree = "<group>"; };
+		D3C5E29127F73C9900F65B8E /* Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = "<group>"; };
 		D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUtilities.swift; sourceTree = "<group>"; };
 		D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Extensions.swift"; sourceTree = "<group>"; };
 		D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTypes.swift; sourceTree = "<group>"; };
@@ -836,7 +838,7 @@
 				CE8D228A27EE2986005E7058 /* Question.storyboard */,
 				D33282E927D4D42E00C80986 /* Assets.xcassets */,
 				D33282EE27D4D42E00C80986 /* Info.plist */,
-				D3C5E27127F6E37100F65B8E /* Dev-Info.plist */,
+				D3C5E29127F73C9900F65B8E /* Dev-Info.plist */,
 				D33282E627D4D42700C80986 /* LingoClash.xcdatamodeld */,
 			);
 			path = LingoClash;
@@ -1148,6 +1150,7 @@
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
 				D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */,
 				CE8D22A227EEC059005E7058 /* Book.storyboard in Resources */,
+				D3C5E29227F73C9900F65B8E /* Dev-Info.plist in Resources */,
 				D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */,
 				D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */,
 				CE8D228C27EE2986005E7058 /* Question.storyboard in Resources */,
@@ -1173,6 +1176,7 @@
 				D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */,
 				D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */,
 				D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */,
+				D3C5E29327F73C9900F65B8E /* Dev-Info.plist in Resources */,
 				D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */,
 				D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */,
 				D3C5E26A27F6E36B00F65B8E /* Profile.storyboard in Resources */,
