@@ -10,6 +10,7 @@ import PromiseKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
+
 class FirebaseDataProvider: DataProvider {
     
     // TODO: think of better error names
