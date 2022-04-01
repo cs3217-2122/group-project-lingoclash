@@ -17,7 +17,6 @@ final class CompletedBooksViewModel: BooksViewModel {
     }
     
     private let authProvider: AuthProvider
-    private let userDataManager = UserDataManager()
     private let profileDataManager = ProfileDataManager()
     private let profileBookDataManager = ProfileBookDataManager()
     private let bookDataManager = BookDataManager()

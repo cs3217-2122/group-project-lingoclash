@@ -41,7 +41,6 @@
 		62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1027DDE67F002D2497 /* LoginViewController.swift */; };
 		62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1427DDEB10002D2497 /* HomeViewController.swift */; };
 		62CB30DF27EA6EFB0044CB24 /* ProfileBookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CB30DE27EA6EFB0044CB24 /* ProfileBookDataManager.swift */; };
-		62E418C627EA523400DFF03C /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C527EA523400DFF03C /* UserDataManager.swift */; };
 		62E418CA27EA524C00DFF03C /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C927EA524C00DFF03C /* Level.swift */; };
 		62E418CC27EA525600DFF03C /* ProfileBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418CB27EA525600DFF03C /* ProfileBook.swift */; };
 		62E418CF27EA526200DFF03C /* ProfileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418CE27EA526200DFF03C /* ProfileLevel.swift */; };
@@ -212,7 +211,6 @@
 		62C04A1427DDEB10002D2497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		62CB30DE27EA6EFB0044CB24 /* ProfileBookDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBookDataManager.swift; sourceTree = "<group>"; };
 		62E418C327EA4E5200DFF03C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		62E418C527EA523400DFF03C /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		62E418C927EA524C00DFF03C /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		62E418CB27EA525600DFF03C /* ProfileBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBook.swift; sourceTree = "<group>"; };
 		62E418CE27EA526200DFF03C /* ProfileLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLevel.swift; sourceTree = "<group>"; };
@@ -857,7 +855,6 @@
 				D3C4424427E9F2FC00676C93 /* BookDataManager.swift */,
 				62CB30DE27EA6EFB0044CB24 /* ProfileBookDataManager.swift */,
 				62E418D227EA5A6900DFF03C /* ProfileDataManager.swift */,
-				62E418C527EA523400DFF03C /* UserDataManager.swift */,
 				62E418C327EA4E5200DFF03C /* DataManager.swift */,
 			);
 			path = DataManagers;
@@ -989,7 +986,6 @@
 			files = (
 				CEF1E81A27E74622005D4272 /* SimpleOptionQuestionLayoutViewController.swift in Sources */,
 				621E6D5127E9C4F10015BBD4 /* EditProfileViewController.swift in Sources */,
-				62E418C627EA523400DFF03C /* UserDataManager.swift in Sources */,
 				629090A227E8314100941A3B /* RecommendedBooksTableViewCell.swift in Sources */,
 				62CB30DF27EA6EFB0044CB24 /* ProfileBookDataManager.swift in Sources */,
 				624BD58D27E7A673006F0391 /* RecommendedBooksViewController.swift in Sources */,

@@ -23,7 +23,6 @@ final class ProfileViewModel {
     @Published var alertContent: AlertContent?
     
     private let authProvider: AuthProvider
-    private let userDataManager = UserDataManager()
     private let profileDataManager = ProfileDataManager()
     private let profileBookDataManager = ProfileDataManager()
     private let db = Firestore.firestore()
