@@ -308,6 +308,13 @@
 			remoteGlobalIDString = D33282D927D4D42700C80986;
 			remoteInfo = LingoClash;
 		};
+		D3C5E28C27F727B300F65B8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D33282D227D4D42700C80986 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3C5E1D027F6E36B00F65B8E;
+			remoteInfo = "LingoClash Dev";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -440,7 +447,7 @@
 		D3C4424427E9F2FC00676C93 /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
 		D3C5E1CC27F600BA00F65B8E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D3C5E1CE27F602FB00F65B8E /* BookManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManagerTests.swift; sourceTree = "<group>"; };
-		D3C5E27027F6E36B00F65B8E /* LingoClash Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LingoClash Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3C5E27027F6E36B00F65B8E /* LingoClashDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoClashDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5E27127F6E37100F65B8E /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D3C5E27527F6EBFF00F65B8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3C5E27927F6F3E900F65B8E /* SampleDataUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDataUtilities.swift; sourceTree = "<group>"; };
@@ -794,7 +801,7 @@
 			children = (
 				D33282DA27D4D42700C80986 /* LingoClash.app */,
 				D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */,
-				D3C5E27027F6E36B00F65B8E /* LingoClash Dev.app */,
+				D3C5E27027F6E36B00F65B8E /* LingoClashDev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1053,15 +1060,16 @@
 			);
 			dependencies = (
 				D3BD29E727DCE6350061E362 /* PBXTargetDependency */,
+				D3C5E28D27F727B300F65B8E /* PBXTargetDependency */,
 			);
 			name = LingoClashTests;
 			productName = LingoClashTests;
 			productReference = D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D3C5E1D027F6E36B00F65B8E /* LingoClash Dev */ = {
+		D3C5E1D027F6E36B00F65B8E /* LingoClashDev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3C5E26D27F6E36B00F65B8E /* Build configuration list for PBXNativeTarget "LingoClash Dev" */;
+			buildConfigurationList = D3C5E26D27F6E36B00F65B8E /* Build configuration list for PBXNativeTarget "LingoClashDev" */;
 			buildPhases = (
 				D3C5E1DD27F6E36B00F65B8E /* Sources */,
 				D3C5E25827F6E36B00F65B8E /* Frameworks */,
@@ -1071,7 +1079,7 @@
 			);
 			dependencies = (
 			);
-			name = "LingoClash Dev";
+			name = LingoClashDev;
 			packageProductDependencies = (
 				D3C5E1D127F6E36B00F65B8E /* FirebaseAuth */,
 				D3C5E1D327F6E36B00F65B8E /* FirebaseAuthCombine-Community */,
@@ -1084,7 +1092,7 @@
 				D3C5E1DB27F6E36B00F65B8E /* Algorithms */,
 			);
 			productName = LingoClash;
-			productReference = D3C5E27027F6E36B00F65B8E /* LingoClash Dev.app */;
+			productReference = D3C5E27027F6E36B00F65B8E /* LingoClashDev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1102,7 +1110,7 @@
 					};
 					D3BD29E127DCE6350061E362 = {
 						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = D33282D927D4D42700C80986;
+						TestTargetID = D3C5E1D027F6E36B00F65B8E;
 					};
 				};
 			};
@@ -1126,7 +1134,7 @@
 			targets = (
 				D33282D927D4D42700C80986 /* LingoClash */,
 				D3BD29E127DCE6350061E362 /* LingoClashTests */,
-				D3C5E1D027F6E36B00F65B8E /* LingoClash Dev */,
+				D3C5E1D027F6E36B00F65B8E /* LingoClashDev */,
 			);
 		};
 /* End PBXProject section */
@@ -1458,6 +1466,11 @@
 			target = D33282D927D4D42700C80986 /* LingoClash */;
 			targetProxy = D3BD29E627DCE6350061E362 /* PBXContainerItemProxy */;
 		};
+		D3C5E28D27F727B300F65B8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3C5E1D027F6E36B00F65B8E /* LingoClashDev */;
+			targetProxy = D3C5E28C27F727B300F65B8E /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1715,7 +1728,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LingoClash.app/LingoClash";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LingoClashDev.app/LingoClashDev";
 			};
 			name = Debug;
 		};
@@ -1733,7 +1746,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LingoClash.app/LingoClash";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LingoClashDev.app/LingoClashDev";
 			};
 			name = Release;
 		};
@@ -1750,7 +1763,7 @@
 				DEVELOPMENT_TEAM = K6AQBYTT24;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Dev-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "LingoClash Dev";
+				INFOPLIST_KEY_CFBundleDisplayName = LingoClashDev;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1783,7 +1796,7 @@
 				DEVELOPMENT_TEAM = K6AQBYTT24;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Dev-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "LingoClash Dev";
+				INFOPLIST_KEY_CFBundleDisplayName = LingoClashDev;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1834,7 +1847,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D3C5E26D27F6E36B00F65B8E /* Build configuration list for PBXNativeTarget "LingoClash Dev" */ = {
+		D3C5E26D27F6E36B00F65B8E /* Build configuration list for PBXNativeTarget "LingoClashDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3C5E26E27F6E36B00F65B8E /* Debug */,

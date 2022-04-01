@@ -11,17 +11,34 @@ import PromiseKit
 
 class SampleDataUtilities {
     
-    static func createSampleData() {
-        createSampleUsers()
-        createSampleProfiles()
-        createSampleBookCategories()
-        createSampleBooks()
-        createSampleLessons()
-        createSampleVocabs()
-        createSampleProfileBooks()
+    static func createSampleData() -> Promise<Void> {
+        let authProvider = AppConfigs.API.authProvider
+        
+        return authProvider.login(params: [
+            "email": "superuser@lingoclash.com",
+            "password": "iamsuperuser"
+        ]).then {_ -> Promise<Void> in
+            
+            Logger.info("Successfully logged in as superuser. Creating sample data now...")
+            
+            let categoryPromise = createSampleBookCategories()
+            let bookPromise = createSampleBooks()
+            let lessonPromise = createSampleLessons()
+            let vocabPromise =  createSampleVocabs()
+            
+            return when(fulfilled: [
+                categoryPromise,
+                bookPromise,
+                lessonPromise,
+                vocabPromise
+            ]).then { () -> Promise<Void> in
+                Logger.info("All sample data is successfully created!")
+                return authProvider.logout()
+            }
+        }
     }
     
-    private static func createSampleBooks() {
+    private static func createSampleBooks() -> Promise<Void> {
         Logger.info("Creating sample books...")
         
         let bookManager = BookManager()
@@ -37,12 +54,12 @@ class SampleDataUtilities {
             }
         }
         
-        let _ = bookManager.createMany(newRecords: books).done {_ in
+        return bookManager.createMany(newRecords: books).done {_ in
             Logger.info("Sample books successfully created!")
         }
     }
     
-    private static func createSampleBookCategories() {
+    private static func createSampleBookCategories() -> Promise<Void> {
         Logger.info("Creating sample book categories...")
         
         let bookCategoryManager = BookCategoryManager()
@@ -52,12 +69,12 @@ class SampleDataUtilities {
             categories.append(category)
         }
         
-        let _ = bookCategoryManager.createMany(newRecords: categories).done {_ in 
+        return bookCategoryManager.createMany(newRecords: categories).done {_ in
             Logger.info("Sample book categories successfully created!")
         }
     }
     
-    private static func createSampleLessons() {
+    private static func createSampleLessons() -> Promise<Void> {
         Logger.info("Creating sample lessons...")
         
         let lessonManager = LessonManager()
@@ -73,12 +90,12 @@ class SampleDataUtilities {
             }
         }
         
-        let _ = lessonManager.createMany(newRecords: lessons).done {_ in
+        return lessonManager.createMany(newRecords: lessons).done {_ in
             Logger.info("Sample lessons successfully created!")
         }
     }
     
-    private static func createSampleVocabs() {
+    private static func createSampleVocabs() -> Promise<Void> {
         Logger.info("Creating sample vocabs...")
         
         let vocabManager = VocabManager()
@@ -94,21 +111,21 @@ class SampleDataUtilities {
             }
         }
         
-        let _ = vocabManager.createMany(newRecords: vocabs).done {_ in
+        return vocabManager.createMany(newRecords: vocabs).done {_ in
             Logger.info("Sample vocabs successfully created!")
         }
     }
     
-    private static func createSampleUsers() {
-        // TODO: Create test account using AuthProvider::register
-    }
-    
-    private static func createSampleProfiles() {
-        
-    }
-    
-    private static func createSampleProfileBooks() {
-        
-    }
+    //    private static func createSampleUsers() {
+    //        // TODO: Create test account using AuthProvider::register
+    //    }
+    //
+    //    private static func createSampleProfiles() {
+    //
+    //    }
+    //
+    //    private static func createSampleProfileBooks() {
+    //
+    //    }
     
 }

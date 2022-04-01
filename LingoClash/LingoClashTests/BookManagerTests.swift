@@ -8,7 +8,7 @@
 import XCTest
 import PromiseKit
 
-@testable import LingoClash
+@testable import LingoClashDev
 
 
 // TODO: Associate with development environment: General > Host application
@@ -18,8 +18,8 @@ class BookManagerTests: XCTestCase {
     private static let bookManager = BookManager()
     private static let authProvider = AppConfigs.API.authProvider
     private static let testAccountCredentials = [
-        "email": "test@testing.com",
-        "password": "testing"
+        "email": "test@lingoclash.com",
+        "password": "simplepassword"
     ]
     
     override class func setUp() {

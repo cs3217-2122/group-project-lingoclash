@@ -24,19 +24,6 @@ class ProfileViewController: UIViewController {
         
         setUpBinders()
         viewModel.refreshProfile()
-        
-        
-        // TODO: To be removed
-        let bookDataManager = BookManager()
-        let books = bookDataManager.getList()
-        
-        print("current user:", Auth.auth().currentUser ?? "")
-        
-        books.done { books in
-            print("Profile Books fetched: ", books)
-        }.catch { error in
-            print("Profile Error: ", error)
-        }
     }
     
     func setUpBinders() {
