@@ -17,10 +17,8 @@ class BookManagerTests: XCTestCase {
     
     private static let bookManager = BookManager()
     private static let authProvider = AppConfigs.API.authProvider
-    private static let testAccountCredentials = [
-        "email": "test@lingoclash.com",
-        "password": "simplepassword"
-    ]
+    private static let testAccountCredentials = LoginFields(
+        email: "test@lingoclash.com", password: "simplepassword")
     
     override class func setUp() {
         DispatchQueue.main.async {
