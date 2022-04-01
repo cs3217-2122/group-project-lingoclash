@@ -251,7 +251,6 @@
 		CEF1E7A927E50093005D4272 /* StarsTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsTransaction.swift; sourceTree = "<group>"; };
 		CEF1E7AB27E5030C005D4272 /* CurrencySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySystem.swift; sourceTree = "<group>"; };
 		CEF1E7AD27E503B3005D4272 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		CEF1E7AF27E50419005D4272 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CEF1E7B227E5071C005D4272 /* StarsCurrencySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsCurrencySystem.swift; sourceTree = "<group>"; };
 		CEF1E7D427E60C1F005D4272 /* LessonOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonOverviewViewController.swift; sourceTree = "<group>"; };
 		CEF1E7D627E60C2D005D4272 /* LessonVocabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonVocabViewController.swift; sourceTree = "<group>"; };
@@ -722,7 +721,6 @@
 				62E418CB27EA525600DFF03C /* ProfileBook.swift */,
 				D3F00CB227DFC59500393ADC /* Book.swift */,
 				D3F00CB427DFC5DD00393ADC /* BookCategory.swift */,
-				CEF1E7AF27E50419005D4272 /* User.swift */,
 				624BD58A27E7A431006F0391 /* BookProgress.swift */,
 				D3F00CB627DFC5F200393ADC /* DataManagers */,
 				CEF1E7E727E61F58005D4272 /* Lesson.swift */,
