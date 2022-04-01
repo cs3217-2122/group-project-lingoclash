@@ -143,6 +143,147 @@
 		D3C4424527E9F2FC00676C93 /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4424427E9F2FC00676C93 /* BookManager.swift */; };
 		D3C5E1CD27F600BA00F65B8E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E1CC27F600BA00F65B8E /* DataManager.swift */; };
 		D3C5E1CF27F602FB00F65B8E /* BookManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E1CE27F602FB00F65B8E /* BookManagerTests.swift */; };
+		D3C5E1DE27F6E36B00F65B8E /* SimpleOptionQuestionLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E81927E74621005D4272 /* SimpleOptionQuestionLayoutViewController.swift */; };
+		D3C5E1DF27F6E36B00F65B8E /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5027E9C4F10015BBD4 /* EditProfileViewController.swift */; };
+		D3C5E1E027F6E36B00F65B8E /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C527EA523400DFF03C /* UserManager.swift */; };
+		D3C5E1E127F6E36B00F65B8E /* RecommendedBooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090A127E8314100941A3B /* RecommendedBooksTableViewCell.swift */; };
+		D3C5E1E227F6E36B00F65B8E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5227E9C5060015BBD4 /* ChangePasswordViewController.swift */; };
+		D3C5E1E327F6E36B00F65B8E /* ProfileBookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CB30DE27EA6EFB0044CB24 /* ProfileBookManager.swift */; };
+		D3C5E1E427F6E36B00F65B8E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C727EA523D00DFF03C /* User.swift */; };
+		D3C5E1E527F6E36B00F65B8E /* RecommendedBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624BD58C27E7A673006F0391 /* RecommendedBooksViewController.swift */; };
+		D3C5E1E627F6E36B00F65B8E /* LessonVocabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7DF27E60D5C005D4272 /* LessonVocabViewModel.swift */; };
+		D3C5E1E727F6E36B00F65B8E /* VocabsLearntTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */; };
+		D3C5E1E827F6E36B00F65B8E /* TwoDisjointSetOptionQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80327E6ED96005D4272 /* TwoDisjointSetOptionQuestion.swift */; };
+		D3C5E1E927F6E36B00F65B8E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7FA27E6D591005D4272 /* Question.swift */; };
+		D3C5E1EA27F6E36B00F65B8E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282E127D4D42700C80986 /* SplashViewController.swift */; };
+		D3C5E1EB27F6E36B00F65B8E /* Vocab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7E927E61F68005D4272 /* Vocab.swift */; };
+		D3C5E1EC27F6E36B00F65B8E /* ProfileBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418CB27EA525600DFF03C /* ProfileBook.swift */; };
+		D3C5E1ED27F6E36B00F65B8E /* CompletedBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989E027E73C4E0092FC1B /* CompletedBooksViewController.swift */; };
+		D3C5E1EE27F6E36B00F65B8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DD27D4D42700C80986 /* AppDelegate.swift */; };
+		D3C5E1EF27F6E36B00F65B8E /* QuestionSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7F27E9686C00C30E03 /* QuestionSequence.swift */; };
+		D3C5E1F027F6E36B00F65B8E /* LessonVocabViewModelFromLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7EB27E63A2B005D4272 /* LessonVocabViewModelFromLesson.swift */; };
+		D3C5E1F127F6E36B00F65B8E /* DataProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */; };
+		D3C5E1F227F6E36B00F65B8E /* HomeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D229E27EEBBD2005E7058 /* HomeNavigationViewController.swift */; };
+		D3C5E1F327F6E36B00F65B8E /* DatabaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423B27E8B17400676C93 /* DatabaseErrors.swift */; };
+		D3C5E1F427F6E36B00F65B8E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */; };
+		D3C5E1F527F6E36B00F65B8E /* UiViewController+InstantiateFromAppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D229527EEB8F4005E7058 /* UiViewController+InstantiateFromAppStoryboard.swift */; };
+		D3C5E1F627F6E36B00F65B8E /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886927EA2A4F00809403 /* StarView.swift */; };
+		D3C5E1F727F6E36B00F65B8E /* LessonTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887827EAC90A00809403 /* LessonTableCellViewModel.swift */; };
+		D3C5E1F827F6E36B00F65B8E /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7F027E6D120005D4272 /* QuestionViewModel.swift */; };
+		D3C5E1F927F6E36B00F65B8E /* TwoDisjointSetOptionQuestionLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E81727E742FE005D4272 /* TwoDisjointSetOptionQuestionLayoutViewModel.swift */; };
+		D3C5E1FA27F6E36B00F65B8E /* OptionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E82027E75979005D4272 /* OptionTableCell.swift */; };
+		D3C5E1FB27F6E36B00F65B8E /* QuestionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E81327E71F9D005D4272 /* QuestionStatus.swift */; };
+		D3C5E1FC27F6E36B00F65B8E /* QuestionFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D8627E9721000C30E03 /* QuestionFormat.swift */; };
+		D3C5E1FD27F6E36B00F65B8E /* BookCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB427DFC5DD00393ADC /* BookCategory.swift */; };
+		D3C5E1FE27F6E36B00F65B8E /* QuestionScopeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D8C27E9862C00C30E03 /* QuestionScopeFactory.swift */; };
+		D3C5E1FF27F6E36B00F65B8E /* CompletedBooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624BD58127E7A22D006F0391 /* CompletedBooksViewModel.swift */; };
+		D3C5E20027F6E36B00F65B8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1027DDE67F002D2497 /* LoginViewController.swift */; };
+		D3C5E20127F6E36B00F65B8E /* LessonQuizOutcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7427E956DA00C30E03 /* LessonQuizOutcomeViewController.swift */; };
+		D3C5E20227F6E36B00F65B8E /* LessonVocabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7D627E60C2D005D4272 /* LessonVocabViewController.swift */; };
+		D3C5E20327F6E36B00F65B8E /* QuestionConstructorRandomFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D8827E9775E00C30E03 /* QuestionConstructorRandomFactory.swift */; };
+		D3C5E20427F6E36B00F65B8E /* FetchTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB027DFC04600393ADC /* FetchTypes.swift */; };
+		D3C5E20527F6E36B00F65B8E /* LessonQuizOutcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7627E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift */; };
+		D3C5E20627F6E36B00F65B8E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418D027EA53A800DFF03C /* Profile.swift */; };
+		D3C5E20727F6E36B00F65B8E /* AlertUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423527E8A96200676C93 /* AlertUtilities.swift */; };
+		D3C5E20827F6E36B00F65B8E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090A427E85EFA00941A3B /* ProfileViewModel.swift */; };
+		D3C5E20927F6E36B00F65B8E /* AuthErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423927E8B15900676C93 /* AuthErrors.swift */; };
+		D3C5E20A27F6E36B00F65B8E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CB227DFC59500393ADC /* Book.swift */; };
+		D3C5E20B27F6E36B00F65B8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DF27D4D42700C80986 /* SceneDelegate.swift */; };
+		D3C5E20C27F6E36B00F65B8E /* StarsTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7A927E50093005D4272 /* StarsTransaction.swift */; };
+		D3C5E20D27F6E36B00F65B8E /* LessonQuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7E127E60D68005D4272 /* LessonQuizViewModel.swift */; };
+		D3C5E20E27F6E36B00F65B8E /* QuestionLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E81E27E74C6F005D4272 /* QuestionLayoutViewController.swift */; };
+		D3C5E20F27F6E36B00F65B8E /* QuestionGenerationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D9127E9C2A800C30E03 /* QuestionGenerationError.swift */; };
+		D3C5E21027F6E36B00F65B8E /* QuestionViewModelFromQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7F827E6D567005D4272 /* QuestionViewModelFromQuestion.swift */; };
+		D3C5E21127F6E36B00F65B8E /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5427E9C8260015BBD4 /* ChangeEmailViewController.swift */; };
+		D3C5E21227F6E36B00F65B8E /* FetchUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */; };
+		D3C5E21327F6E36B00F65B8E /* MatchVocabToDefinitionQuestionConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D8A27E983B700C30E03 /* MatchVocabToDefinitionQuestionConstructor.swift */; };
+		D3C5E21427F6E36B00F65B8E /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CD1E727E79F3A0021A5AA /* KeychainManager.swift */; };
+		D3C5E21527F6E36B00F65B8E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
+		D3C5E21627F6E36B00F65B8E /* CurrencySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7AB27E5030C005D4272 /* CurrencySystem.swift */; };
+		D3C5E21727F6E36B00F65B8E /* TwoDisjointSetOptionQuestionLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E81B27E74634005D4272 /* TwoDisjointSetOptionQuestionLayoutViewController.swift */; };
+		D3C5E21827F6E36B00F65B8E /* LessonOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7DD27E60D42005D4272 /* LessonOverviewViewModel.swift */; };
+		D3C5E21927F6E36B00F65B8E /* LessonSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887027EABEC000809403 /* LessonSelectionViewController.swift */; };
+		D3C5E21A27F6E36B00F65B8E /* StarsCurrencySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7B227E5071C005D4272 /* StarsCurrencySystem.swift */; };
+		D3C5E21B27F6E36B00F65B8E /* DefinitionOptionQuestionConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80C27E6F6B1005D4272 /* DefinitionOptionQuestionConstructor.swift */; };
+		D3C5E21C27F6E36B00F65B8E /* LessonQuizViewModelFromLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E81027E71944005D4272 /* LessonQuizViewModelFromLesson.swift */; };
+		D3C5E21D27F6E36B00F65B8E /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D229327EEB7EE005E7058 /* AppStoryboard.swift */; };
+		D3C5E21E27F6E36B00F65B8E /* QuestionLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7F427E6D143005D4272 /* QuestionLayoutViewModel.swift */; };
+		D3C5E21F27F6E36B00F65B8E /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423027E8966C00676C93 /* UIViewController+Alerts.swift */; };
+		D3C5E22027F6E36B00F65B8E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */; };
+		D3C5E22127F6E36B00F65B8E /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7EE27E6D117005D4272 /* QuestionViewController.swift */; };
+		D3C5E22227F6E36B00F65B8E /* LessonQuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7A27E9577C00C30E03 /* LessonQuizResult.swift */; };
+		D3C5E22327F6E36B00F65B8E /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7DB27E60C7A005D4272 /* Dynamic.swift */; };
+		D3C5E22427F6E36B00F65B8E /* LessonQuizProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7227E8CAC400C30E03 /* LessonQuizProgressBarView.swift */; };
+		D3C5E22527F6E36B00F65B8E /* ViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6204A04027DE4A500063100D /* ViewUtilities.swift */; };
+		D3C5E22627F6E36B00F65B8E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7A727E50082005D4272 /* Transaction.swift */; };
+		D3C5E22727F6E36B00F65B8E /* VocabCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7E327E61CF1005D4272 /* VocabCollectionCell.swift */; };
+		D3C5E22827F6E36B00F65B8E /* LessonQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7D827E60C3E005D4272 /* LessonQuizViewController.swift */; };
+		D3C5E22927F6E36B00F65B8E /* MatchVocabToDefinitionQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80527E6EF4D005D4272 /* MatchVocabToDefinitionQuestion.swift */; };
+		D3C5E22A27F6E36B00F65B8E /* LessonOverviewViewModelFromLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7E527E61EF0005D4272 /* LessonOverviewViewModelFromLesson.swift */; };
+		D3C5E22B27F6E36B00F65B8E /* QuestionsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80827E6F3F4005D4272 /* QuestionsGenerator.swift */; };
+		D3C5E22C27F6E36B00F65B8E /* QuestionConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80A27E6F644005D4272 /* QuestionConstructor.swift */; };
+		D3C5E22D27F6E36B00F65B8E /* LessonTableCellViewModelFromLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887A27EAC91600809403 /* LessonTableCellViewModelFromLesson.swift */; };
+		D3C5E22E27F6E36B00F65B8E /* QuestionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D8427E9720600C30E03 /* QuestionType.swift */; };
+		D3C5E22F27F6E36B00F65B8E /* LessonQuizOutcomeViewModelFromQuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF02D7827E9573700C30E03 /* LessonQuizOutcomeViewModelFromQuizResult.swift */; };
+		D3C5E23027F6E36B00F65B8E /* LessonOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7D427E60C1F005D4272 /* LessonOverviewViewController.swift */; };
+		D3C5E23127F6E36B00F65B8E /* AppConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6204A03927DE1CDB0063100D /* AppConfigs.swift */; };
+		D3C5E23227F6E36B00F65B8E /* SimpleOptionQuestionLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E81527E742BF005D4272 /* SimpleOptionQuestionLayoutViewModel.swift */; };
+		D3C5E23327F6E36B00F65B8E /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7E727E61F58005D4272 /* Lesson.swift */; };
+		D3C5E23427F6E36B00F65B8E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423F27E8C65600676C93 /* Logger.swift */; };
+		D3C5E23527F6E36B00F65B8E /* DataProviderErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423D27E8B20000676C93 /* DataProviderErrors.swift */; };
+		D3C5E23627F6E36B00F65B8E /* FirebaseAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4422627E878D800676C93 /* FirebaseAuthProvider.swift */; };
+		D3C5E23727F6E36B00F65B8E /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418D227EA5A6900DFF03C /* ProfileManager.swift */; };
+		D3C5E23827F6E36B00F65B8E /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CD1EA27E7A65F0021A5AA /* AuthProvider.swift */; };
+		D3C5E23927F6E36B00F65B8E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6204A03E27DE43350063100D /* ProfileViewController.swift */; };
+		D3C5E23A27F6E36B00F65B8E /* CurrentBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090A727E8D02200941A3B /* CurrentBookViewModel.swift */; };
+		D3C5E23B27F6E36B00F65B8E /* CurrentBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */; };
+		D3C5E23C27F6E36B00F65B8E /* ProfileLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418CE27EA526200DFF03C /* ProfileLevel.swift */; };
+		D3C5E23D27F6E36B00F65B8E /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4424427E9F2FC00676C93 /* BookManager.swift */; };
+		D3C5E23E27F6E36B00F65B8E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1427DDEB10002D2497 /* HomeViewController.swift */; };
+		D3C5E23F27F6E36B00F65B8E /* LearningBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989DD27E7395E0092FC1B /* LearningBooksViewController.swift */; };
+		D3C5E24027F6E36B00F65B8E /* RecommendedBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989E427E742690092FC1B /* RecommendedBookCollectionViewCell.swift */; };
+		D3C5E24127F6E36B00F65B8E /* BookProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624BD58A27E7A431006F0391 /* BookProgress.swift */; };
+		D3C5E24227F6E36B00F65B8E /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624BD58727E7A3A2006F0391 /* BooksViewModel.swift */; };
+		D3C5E24327F6E36B00F65B8E /* Promise+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */; };
+		D3C5E24427F6E36B00F65B8E /* CurrentBookSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090A927E8DE0300941A3B /* CurrentBookSectionViewController.swift */; };
+		D3C5E24527F6E36B00F65B8E /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780827DF6AB800B2F4ED /* DataProvider.swift */; };
+		D3C5E24627F6E36B00F65B8E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7AD27E503B3005D4272 /* Account.swift */; };
+		D3C5E24727F6E36B00F65B8E /* LessonSelectorTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887627EAC6E700809403 /* LessonSelectorTableCell.swift */; };
+		D3C5E24827F6E36B00F65B8E /* LessonSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887227EABECC00809403 /* LessonSelectionViewModel.swift */; };
+		D3C5E24927F6E36B00F65B8E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1227DDE838002D2497 /* Utilities.swift */; };
+		D3C5E24A27F6E36B00F65B8E /* SimpleOptionQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7FC27E6E527005D4272 /* SimpleOptionQuestion.swift */; };
+		D3C5E24B27F6E36B00F65B8E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E1CC27F600BA00F65B8E /* DataManager.swift */; };
+		D3C5E24C27F6E36B00F65B8E /* DefinitionOptionQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E80127E6EB21005D4272 /* DefinitionOptionQuestion.swift */; };
+		D3C5E24D27F6E36B00F65B8E /* RecommendedBooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624BD58527E7A37D006F0391 /* RecommendedBooksViewModel.swift */; };
+		D3C5E24E27F6E36B00F65B8E /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989D927E735600092FC1B /* BookCollectionViewController.swift */; };
+		D3C5E24F27F6E36B00F65B8E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282F827D4E63B00C80986 /* Theme.swift */; };
+		D3C5E25027F6E36B00F65B8E /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989DB27E736590092FC1B /* BookCollectionViewCell.swift */; };
+		D3C5E25127F6E36B00F65B8E /* RecommendedBooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6290909F27E8303F00941A3B /* RecommendedBooksTableViewController.swift */; };
+		D3C5E25227F6E36B00F65B8E /* LearningBooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624BD57F27E761FB006F0391 /* LearningBooksViewModel.swift */; };
+		D3C5E25327F6E36B00F65B8E /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E418C927EA524C00DFF03C /* Level.swift */; };
+		D3C5E25427F6E36B00F65B8E /* LessonSelectionViewModelFromBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887427EABED600809403 /* LessonSelectionViewModelFromBook.swift */; };
+		D3C5E25527F6E36B00F65B8E /* FirebaseDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4424227E8CB0A00676C93 /* FirebaseDataProvider.swift */; };
+		D3C5E25627F6E36B00F65B8E /* AlertTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423727E8A98400676C93 /* AlertTypes.swift */; };
+		D3C5E25727F6E36B00F65B8E /* LingoClash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D33282E627D4D42700C80986 /* LingoClash.xcdatamodeld */; };
+		D3C5E25927F6E36B00F65B8E /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = D3C5E1DB27F6E36B00F65B8E /* Algorithms */; };
+		D3C5E25A27F6E36B00F65B8E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D3C5E1D427F6E36B00F65B8E /* FirebaseDatabase */; };
+		D3C5E25B27F6E36B00F65B8E /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3C5E1D927F6E36B00F65B8E /* PromiseKit */; };
+		D3C5E25C27F6E36B00F65B8E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D3C5E1D827F6E36B00F65B8E /* FirebaseStorageCombine-Community */; };
+		D3C5E25D27F6E36B00F65B8E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D3C5E1D527F6E36B00F65B8E /* FirebaseFirestore */; };
+		D3C5E25E27F6E36B00F65B8E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D3C5E1D127F6E36B00F65B8E /* FirebaseAuth */; };
+		D3C5E25F27F6E36B00F65B8E /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D3C5E1D627F6E36B00F65B8E /* FirebaseFirestoreCombine-Community */; };
+		D3C5E26027F6E36B00F65B8E /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D3C5E1D327F6E36B00F65B8E /* FirebaseAuthCombine-Community */; };
+		D3C5E26127F6E36B00F65B8E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D3C5E1D727F6E36B00F65B8E /* FirebaseStorage */; };
+		D3C5E26327F6E36B00F65B8E /* Lesson.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D228D27EE2B5A005E7058 /* Lesson.storyboard */; };
+		D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */; };
+		D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
+		D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D22A027EEC059005E7058 /* Book.storyboard */; };
+		D3C5E26727F6E36B00F65B8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */; };
+		D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33282E927D4D42E00C80986 /* Assets.xcassets */; };
+		D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D228A27EE2986005E7058 /* Question.storyboard */; };
+		D3C5E26A27F6E36B00F65B8E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229A27EEBA29005E7058 /* Profile.storyboard */; };
+		D3C5E26B27F6E36B00F65B8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282E327D4D42700C80986 /* Main.storyboard */; };
+		D3C5E26C27F6E36B00F65B8E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229027EEA8B0005E7058 /* Home.storyboard */; };
 		D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */; };
 		D3F00CAD27DFAF6F00393ADC /* Promise+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */; };
 		D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */; };
@@ -295,6 +436,8 @@
 		D3C4424427E9F2FC00676C93 /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
 		D3C5E1CC27F600BA00F65B8E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D3C5E1CE27F602FB00F65B8E /* BookManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManagerTests.swift; sourceTree = "<group>"; };
+		D3C5E27027F6E36B00F65B8E /* LingoClash Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LingoClash Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3C5E27127F6E37100F65B8E /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUtilities.swift; sourceTree = "<group>"; };
 		D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Extensions.swift"; sourceTree = "<group>"; };
 		D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTypes.swift; sourceTree = "<group>"; };
@@ -325,6 +468,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3C5E25827F6E36B00F65B8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C5E25927F6E36B00F65B8E /* Algorithms in Frameworks */,
+				D3C5E25A27F6E36B00F65B8E /* FirebaseDatabase in Frameworks */,
+				D3C5E25B27F6E36B00F65B8E /* PromiseKit in Frameworks */,
+				D3C5E25C27F6E36B00F65B8E /* FirebaseStorageCombine-Community in Frameworks */,
+				D3C5E25D27F6E36B00F65B8E /* FirebaseFirestore in Frameworks */,
+				D3C5E25E27F6E36B00F65B8E /* FirebaseAuth in Frameworks */,
+				D3C5E25F27F6E36B00F65B8E /* FirebaseFirestoreCombine-Community in Frameworks */,
+				D3C5E26027F6E36B00F65B8E /* FirebaseAuthCombine-Community in Frameworks */,
+				D3C5E26127F6E36B00F65B8E /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +783,7 @@
 			children = (
 				D33282DA27D4D42700C80986 /* LingoClash.app */,
 				D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */,
+				D3C5E27027F6E36B00F65B8E /* LingoClash Dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -631,6 +791,7 @@
 		D33282DC27D4D42700C80986 /* LingoClash */ = {
 			isa = PBXGroup;
 			children = (
+				D3C5E27127F6E37100F65B8E /* Dev-Info.plist */,
 				CEF1E7B127E50706005D4272 /* CurrencySystem */,
 				D398780C27DF8C1400B2F4ED /* Extensions */,
 				6204A03B27DE34040063100D /* Utilities */,
@@ -853,6 +1014,34 @@
 			productReference = D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D3C5E1D027F6E36B00F65B8E /* LingoClash Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3C5E26D27F6E36B00F65B8E /* Build configuration list for PBXNativeTarget "LingoClash Dev" */;
+			buildPhases = (
+				D3C5E1DD27F6E36B00F65B8E /* Sources */,
+				D3C5E25827F6E36B00F65B8E /* Frameworks */,
+				D3C5E26227F6E36B00F65B8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LingoClash Dev";
+			packageProductDependencies = (
+				D3C5E1D127F6E36B00F65B8E /* FirebaseAuth */,
+				D3C5E1D327F6E36B00F65B8E /* FirebaseAuthCombine-Community */,
+				D3C5E1D427F6E36B00F65B8E /* FirebaseDatabase */,
+				D3C5E1D527F6E36B00F65B8E /* FirebaseFirestore */,
+				D3C5E1D627F6E36B00F65B8E /* FirebaseFirestoreCombine-Community */,
+				D3C5E1D727F6E36B00F65B8E /* FirebaseStorage */,
+				D3C5E1D827F6E36B00F65B8E /* FirebaseStorageCombine-Community */,
+				D3C5E1D927F6E36B00F65B8E /* PromiseKit */,
+				D3C5E1DB27F6E36B00F65B8E /* Algorithms */,
+			);
+			productName = LingoClash;
+			productReference = D3C5E27027F6E36B00F65B8E /* LingoClash Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -892,6 +1081,7 @@
 			targets = (
 				D33282D927D4D42700C80986 /* LingoClash */,
 				D3BD29E127DCE6350061E362 /* LingoClashTests */,
+				D3C5E1D027F6E36B00F65B8E /* LingoClash Dev */,
 			);
 		};
 /* End PBXProject section */
@@ -918,6 +1108,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3C5E26227F6E36B00F65B8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C5E26327F6E36B00F65B8E /* Lesson.storyboard in Resources */,
+				D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */,
+				D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */,
+				D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */,
+				D3C5E26727F6E36B00F65B8E /* GoogleService-Info.plist in Resources */,
+				D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */,
+				D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */,
+				D3C5E26A27F6E36B00F65B8E /* Profile.storyboard in Resources */,
+				D3C5E26B27F6E36B00F65B8E /* Main.storyboard in Resources */,
+				D3C5E26C27F6E36B00F65B8E /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1059,6 +1266,135 @@
 			files = (
 				D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */,
 				D3C5E1CF27F602FB00F65B8E /* BookManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3C5E1DD27F6E36B00F65B8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C5E1DE27F6E36B00F65B8E /* SimpleOptionQuestionLayoutViewController.swift in Sources */,
+				D3C5E1DF27F6E36B00F65B8E /* EditProfileViewController.swift in Sources */,
+				D3C5E1E027F6E36B00F65B8E /* UserManager.swift in Sources */,
+				D3C5E1E127F6E36B00F65B8E /* RecommendedBooksTableViewCell.swift in Sources */,
+				D3C5E1E227F6E36B00F65B8E /* ChangePasswordViewController.swift in Sources */,
+				D3C5E1E327F6E36B00F65B8E /* ProfileBookManager.swift in Sources */,
+				D3C5E1E427F6E36B00F65B8E /* User.swift in Sources */,
+				D3C5E1E527F6E36B00F65B8E /* RecommendedBooksViewController.swift in Sources */,
+				D3C5E1E627F6E36B00F65B8E /* LessonVocabViewModel.swift in Sources */,
+				D3C5E1E727F6E36B00F65B8E /* VocabsLearntTableCell.swift in Sources */,
+				D3C5E1E827F6E36B00F65B8E /* TwoDisjointSetOptionQuestion.swift in Sources */,
+				D3C5E1E927F6E36B00F65B8E /* Question.swift in Sources */,
+				D3C5E1EA27F6E36B00F65B8E /* SplashViewController.swift in Sources */,
+				D3C5E1EB27F6E36B00F65B8E /* Vocab.swift in Sources */,
+				D3C5E1EC27F6E36B00F65B8E /* ProfileBook.swift in Sources */,
+				D3C5E1ED27F6E36B00F65B8E /* CompletedBooksViewController.swift in Sources */,
+				D3C5E1EE27F6E36B00F65B8E /* AppDelegate.swift in Sources */,
+				D3C5E1EF27F6E36B00F65B8E /* QuestionSequence.swift in Sources */,
+				D3C5E1F027F6E36B00F65B8E /* LessonVocabViewModelFromLesson.swift in Sources */,
+				D3C5E1F127F6E36B00F65B8E /* DataProviderTypes.swift in Sources */,
+				D3C5E1F227F6E36B00F65B8E /* HomeNavigationViewController.swift in Sources */,
+				D3C5E1F327F6E36B00F65B8E /* DatabaseErrors.swift in Sources */,
+				D3C5E1F427F6E36B00F65B8E /* SignUpViewController.swift in Sources */,
+				D3C5E1F527F6E36B00F65B8E /* UiViewController+InstantiateFromAppStoryboard.swift in Sources */,
+				D3C5E1F627F6E36B00F65B8E /* StarView.swift in Sources */,
+				D3C5E1F727F6E36B00F65B8E /* LessonTableCellViewModel.swift in Sources */,
+				D3C5E1F827F6E36B00F65B8E /* QuestionViewModel.swift in Sources */,
+				D3C5E1F927F6E36B00F65B8E /* TwoDisjointSetOptionQuestionLayoutViewModel.swift in Sources */,
+				D3C5E1FA27F6E36B00F65B8E /* OptionTableCell.swift in Sources */,
+				D3C5E1FB27F6E36B00F65B8E /* QuestionStatus.swift in Sources */,
+				D3C5E1FC27F6E36B00F65B8E /* QuestionFormat.swift in Sources */,
+				D3C5E1FD27F6E36B00F65B8E /* BookCategory.swift in Sources */,
+				D3C5E1FE27F6E36B00F65B8E /* QuestionScopeFactory.swift in Sources */,
+				D3C5E1FF27F6E36B00F65B8E /* CompletedBooksViewModel.swift in Sources */,
+				D3C5E20027F6E36B00F65B8E /* LoginViewController.swift in Sources */,
+				D3C5E20127F6E36B00F65B8E /* LessonQuizOutcomeViewController.swift in Sources */,
+				D3C5E20227F6E36B00F65B8E /* LessonVocabViewController.swift in Sources */,
+				D3C5E20327F6E36B00F65B8E /* QuestionConstructorRandomFactory.swift in Sources */,
+				D3C5E20427F6E36B00F65B8E /* FetchTypes.swift in Sources */,
+				D3C5E20527F6E36B00F65B8E /* LessonQuizOutcomeViewModel.swift in Sources */,
+				D3C5E20627F6E36B00F65B8E /* Profile.swift in Sources */,
+				D3C5E20727F6E36B00F65B8E /* AlertUtilities.swift in Sources */,
+				D3C5E20827F6E36B00F65B8E /* ProfileViewModel.swift in Sources */,
+				D3C5E20927F6E36B00F65B8E /* AuthErrors.swift in Sources */,
+				D3C5E20A27F6E36B00F65B8E /* Book.swift in Sources */,
+				D3C5E20B27F6E36B00F65B8E /* SceneDelegate.swift in Sources */,
+				D3C5E20C27F6E36B00F65B8E /* StarsTransaction.swift in Sources */,
+				D3C5E20D27F6E36B00F65B8E /* LessonQuizViewModel.swift in Sources */,
+				D3C5E20E27F6E36B00F65B8E /* QuestionLayoutViewController.swift in Sources */,
+				D3C5E20F27F6E36B00F65B8E /* QuestionGenerationError.swift in Sources */,
+				D3C5E21027F6E36B00F65B8E /* QuestionViewModelFromQuestion.swift in Sources */,
+				D3C5E21127F6E36B00F65B8E /* ChangeEmailViewController.swift in Sources */,
+				D3C5E21227F6E36B00F65B8E /* FetchUtilities.swift in Sources */,
+				D3C5E21327F6E36B00F65B8E /* MatchVocabToDefinitionQuestionConstructor.swift in Sources */,
+				D3C5E21427F6E36B00F65B8E /* KeychainManager.swift in Sources */,
+				D3C5E21527F6E36B00F65B8E /* LoginViewModel.swift in Sources */,
+				D3C5E21627F6E36B00F65B8E /* CurrencySystem.swift in Sources */,
+				D3C5E21727F6E36B00F65B8E /* TwoDisjointSetOptionQuestionLayoutViewController.swift in Sources */,
+				D3C5E21827F6E36B00F65B8E /* LessonOverviewViewModel.swift in Sources */,
+				D3C5E21927F6E36B00F65B8E /* LessonSelectionViewController.swift in Sources */,
+				D3C5E21A27F6E36B00F65B8E /* StarsCurrencySystem.swift in Sources */,
+				D3C5E21B27F6E36B00F65B8E /* DefinitionOptionQuestionConstructor.swift in Sources */,
+				D3C5E21C27F6E36B00F65B8E /* LessonQuizViewModelFromLesson.swift in Sources */,
+				D3C5E21D27F6E36B00F65B8E /* AppStoryboard.swift in Sources */,
+				D3C5E21E27F6E36B00F65B8E /* QuestionLayoutViewModel.swift in Sources */,
+				D3C5E21F27F6E36B00F65B8E /* UIViewController+Alerts.swift in Sources */,
+				D3C5E22027F6E36B00F65B8E /* SignUpViewModel.swift in Sources */,
+				D3C5E22127F6E36B00F65B8E /* QuestionViewController.swift in Sources */,
+				D3C5E22227F6E36B00F65B8E /* LessonQuizResult.swift in Sources */,
+				D3C5E22327F6E36B00F65B8E /* Dynamic.swift in Sources */,
+				D3C5E22427F6E36B00F65B8E /* LessonQuizProgressBarView.swift in Sources */,
+				D3C5E22527F6E36B00F65B8E /* ViewUtilities.swift in Sources */,
+				D3C5E22627F6E36B00F65B8E /* Transaction.swift in Sources */,
+				D3C5E22727F6E36B00F65B8E /* VocabCollectionCell.swift in Sources */,
+				D3C5E22827F6E36B00F65B8E /* LessonQuizViewController.swift in Sources */,
+				D3C5E22927F6E36B00F65B8E /* MatchVocabToDefinitionQuestion.swift in Sources */,
+				D3C5E22A27F6E36B00F65B8E /* LessonOverviewViewModelFromLesson.swift in Sources */,
+				D3C5E22B27F6E36B00F65B8E /* QuestionsGenerator.swift in Sources */,
+				D3C5E22C27F6E36B00F65B8E /* QuestionConstructor.swift in Sources */,
+				D3C5E22D27F6E36B00F65B8E /* LessonTableCellViewModelFromLesson.swift in Sources */,
+				D3C5E22E27F6E36B00F65B8E /* QuestionType.swift in Sources */,
+				D3C5E22F27F6E36B00F65B8E /* LessonQuizOutcomeViewModelFromQuizResult.swift in Sources */,
+				D3C5E23027F6E36B00F65B8E /* LessonOverviewViewController.swift in Sources */,
+				D3C5E23127F6E36B00F65B8E /* AppConfigs.swift in Sources */,
+				D3C5E23227F6E36B00F65B8E /* SimpleOptionQuestionLayoutViewModel.swift in Sources */,
+				D3C5E23327F6E36B00F65B8E /* Lesson.swift in Sources */,
+				D3C5E23427F6E36B00F65B8E /* Logger.swift in Sources */,
+				D3C5E23527F6E36B00F65B8E /* DataProviderErrors.swift in Sources */,
+				D3C5E23627F6E36B00F65B8E /* FirebaseAuthProvider.swift in Sources */,
+				D3C5E23727F6E36B00F65B8E /* ProfileManager.swift in Sources */,
+				D3C5E23827F6E36B00F65B8E /* AuthProvider.swift in Sources */,
+				D3C5E23927F6E36B00F65B8E /* ProfileViewController.swift in Sources */,
+				D3C5E23A27F6E36B00F65B8E /* CurrentBookViewModel.swift in Sources */,
+				D3C5E23B27F6E36B00F65B8E /* CurrentBookViewController.swift in Sources */,
+				D3C5E23C27F6E36B00F65B8E /* ProfileLevel.swift in Sources */,
+				D3C5E23D27F6E36B00F65B8E /* BookManager.swift in Sources */,
+				D3C5E23E27F6E36B00F65B8E /* HomeViewController.swift in Sources */,
+				D3C5E23F27F6E36B00F65B8E /* LearningBooksViewController.swift in Sources */,
+				D3C5E24027F6E36B00F65B8E /* RecommendedBookCollectionViewCell.swift in Sources */,
+				D3C5E24127F6E36B00F65B8E /* BookProgress.swift in Sources */,
+				D3C5E24227F6E36B00F65B8E /* BooksViewModel.swift in Sources */,
+				D3C5E24327F6E36B00F65B8E /* Promise+Extensions.swift in Sources */,
+				D3C5E24427F6E36B00F65B8E /* CurrentBookSectionViewController.swift in Sources */,
+				D3C5E24527F6E36B00F65B8E /* DataProvider.swift in Sources */,
+				D3C5E24627F6E36B00F65B8E /* Account.swift in Sources */,
+				D3C5E24727F6E36B00F65B8E /* LessonSelectorTableCell.swift in Sources */,
+				D3C5E24827F6E36B00F65B8E /* LessonSelectionViewModel.swift in Sources */,
+				D3C5E24927F6E36B00F65B8E /* Utilities.swift in Sources */,
+				D3C5E24A27F6E36B00F65B8E /* SimpleOptionQuestion.swift in Sources */,
+				D3C5E24B27F6E36B00F65B8E /* DataManager.swift in Sources */,
+				D3C5E24C27F6E36B00F65B8E /* DefinitionOptionQuestion.swift in Sources */,
+				D3C5E24D27F6E36B00F65B8E /* RecommendedBooksViewModel.swift in Sources */,
+				D3C5E24E27F6E36B00F65B8E /* BookCollectionViewController.swift in Sources */,
+				D3C5E24F27F6E36B00F65B8E /* Theme.swift in Sources */,
+				D3C5E25027F6E36B00F65B8E /* BookCollectionViewCell.swift in Sources */,
+				D3C5E25127F6E36B00F65B8E /* RecommendedBooksTableViewController.swift in Sources */,
+				D3C5E25227F6E36B00F65B8E /* LearningBooksViewModel.swift in Sources */,
+				D3C5E25327F6E36B00F65B8E /* Level.swift in Sources */,
+				D3C5E25427F6E36B00F65B8E /* LessonSelectionViewModelFromBook.swift in Sources */,
+				D3C5E25527F6E36B00F65B8E /* FirebaseDataProvider.swift in Sources */,
+				D3C5E25627F6E36B00F65B8E /* AlertTypes.swift in Sources */,
+				D3C5E25727F6E36B00F65B8E /* LingoClash.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1261,7 +1597,7 @@
 				DEVELOPMENT_TEAM = K6AQBYTT24;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LingoClash/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = LingoClash;
+				INFOPLIST_KEY_CFBundleDisplayName = "LingoClash ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1293,7 +1629,7 @@
 				DEVELOPMENT_TEAM = K6AQBYTT24;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LingoClash/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = LingoClash;
+				INFOPLIST_KEY_CFBundleDisplayName = "LingoClash ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1349,6 +1685,73 @@
 			};
 			name = Release;
 		};
+		D3C5E26E27F6E36B00F65B8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
+				DEVELOPMENT_TEAM = K6AQBYTT24;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dev-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LingoClash Dev";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-DDEVELOPMENT";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyletoh.LingoClash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3C5E26F27F6E36B00F65B8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_ACTIVITY_MODE = "";
+				DEVELOPMENT_TEAM = K6AQBYTT24;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dev-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LingoClash Dev";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-DDEVELOPMENT";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyletoh.LingoClash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1379,6 +1782,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D3C5E26D27F6E36B00F65B8E /* Build configuration list for PBXNativeTarget "LingoClash Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3C5E26E27F6E36B00F65B8E /* Debug */,
+				D3C5E26F27F6E36B00F65B8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1399,6 +1811,30 @@
 			};
 		};
 		CEF02D8E27E9910500C30E03 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		D3C5E1D227F6E36B00F65B8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		D3C5E1DA27F6E36B00F65B8E /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		D3C5E1DC27F6E36B00F65B8E /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-algorithms.git";
 			requirement = {
@@ -1452,6 +1888,51 @@
 		CEF02D8F27E9910500C30E03 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEF02D8E27E9910500C30E03 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		D3C5E1D127F6E36B00F65B8E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C5E1D227F6E36B00F65B8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D3C5E1D327F6E36B00F65B8E /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C5E1D227F6E36B00F65B8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		D3C5E1D427F6E36B00F65B8E /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C5E1D227F6E36B00F65B8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		D3C5E1D527F6E36B00F65B8E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C5E1D227F6E36B00F65B8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		D3C5E1D627F6E36B00F65B8E /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C5E1D227F6E36B00F65B8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		D3C5E1D727F6E36B00F65B8E /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C5E1D227F6E36B00F65B8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		D3C5E1D827F6E36B00F65B8E /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C5E1D227F6E36B00F65B8E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		D3C5E1D927F6E36B00F65B8E /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C5E1DA27F6E36B00F65B8E /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		D3C5E1DB27F6E36B00F65B8E /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C5E1DC27F6E36B00F65B8E /* XCRemoteSwiftPackageReference "swift-algorithms" */;
 			productName = Algorithms;
 		};
 /* End XCSwiftPackageProductDependency section */

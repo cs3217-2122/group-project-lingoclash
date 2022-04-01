@@ -9,6 +9,14 @@ import UIKit
 import CoreData
 import Firebase
 
+enum Environment: String {
+    case development = "Development"
+    case production = "Production"
+    case none = "None"
+}
+
+var environment: Environment = .none
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +24,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         registerUserDefaults()
         FirebaseApp.configure()
+        
+        #if DEVELOPMENT
+        environment = .development
+        #else
+        environment = .production
+        #endif
+        
+        switch environment {
+        case .development:
+            Logger.info("Environment is: development")
+        case .production:
+            Logger.info("Environment is: production")
+        case .none:
+            Logger.info("Environment is: none")
+        }
         
         return true
     }
