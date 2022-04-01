@@ -16,9 +16,13 @@ struct UserIdentity: Codable {
 }
 
 protocol AuthProvider {
-    func register(params: SignUpFields) -> Promise<Void>
+    func register(params: SignUpFields) -> Promise<UserIdentity>
     func login(params: LoginFields) -> Promise<Void>
     func logout() -> Promise<Void>
     func checkError(error: HTTPError) -> Promise<Void>
     func getIdentity() -> Promise<UserIdentity>
+    func updateName(_ name: String) -> Promise<Void>
+    func updateEmail(_ email: String) -> Promise<Void>
+    func updatePassword(_ password: String) -> Promise<Void>
+    func reauthenticate(password: String) -> Promise<Void>
 }

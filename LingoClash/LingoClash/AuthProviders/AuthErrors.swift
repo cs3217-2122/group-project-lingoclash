@@ -13,4 +13,19 @@ enum AuthError: Error  {
     case invalidParams
     case invalidLoginParams
     case invalidLogoutParams
+    case invalidUser
+    case invalidPassword
+}
+
+extension AuthError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .invalidUser:
+            return NSLocalizedString("The current user is invalid.", comment: "Invalid user")
+        case .invalidPassword:
+            return NSLocalizedString("The password is incorrect.", comment: "Invalid password")
+        default:
+            return NSLocalizedString("", comment: "")
+        }
+    }
 }

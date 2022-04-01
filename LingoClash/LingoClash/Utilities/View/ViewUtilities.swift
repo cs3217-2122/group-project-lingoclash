@@ -64,3 +64,14 @@ class ViewUtilities {
         view.layer.masksToBounds = false
     }
 }
+
+extension UILabel {
+    func show(withText text: String) {
+        self.text = text
+        self.alpha = 1
+    }
+    
+    func hide() {
+        self.alpha = 0
+    }
+}

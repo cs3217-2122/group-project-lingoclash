@@ -145,7 +145,7 @@
 		D3C4422727E878D800676C93 /* FirebaseAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4422627E878D800676C93 /* FirebaseAuthProvider.swift */; };
 		D3C4423127E8966C00676C93 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423027E8966C00676C93 /* UIViewController+Alerts.swift */; };
 		D3C4423627E8A96200676C93 /* AlertUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423527E8A96200676C93 /* AlertUtilities.swift */; };
-		D3C4423827E8A98400676C93 /* AlertTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423727E8A98400676C93 /* AlertTypes.swift */; };
+		D3C4423827E8A98400676C93 /* AlertContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423727E8A98400676C93 /* AlertContent.swift */; };
 		D3C4423A27E8B15900676C93 /* AuthErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423927E8B15900676C93 /* AuthErrors.swift */; };
 		D3C4423C27E8B17400676C93 /* DatabaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423B27E8B17400676C93 /* DatabaseErrors.swift */; };
 		D3C4423E27E8B20000676C93 /* DataProviderErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4423D27E8B20000676C93 /* DataProviderErrors.swift */; };
@@ -373,6 +373,7 @@
 		62C04A1427DDEB10002D2497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		62CB30DE27EA6EFB0044CB24 /* ProfileBookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBookManager.swift; sourceTree = "<group>"; };
 		62E418C927EA524C00DFF03C /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		62E418C327EA4E5200DFF03C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		62E418CB27EA525600DFF03C /* ProfileBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBook.swift; sourceTree = "<group>"; };
 		62E418CE27EA526200DFF03C /* ProfileLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLesson.swift; sourceTree = "<group>"; };
 		62E418D027EA53A800DFF03C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -463,7 +464,7 @@
 		D3C4422627E878D800676C93 /* FirebaseAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthProvider.swift; sourceTree = "<group>"; };
 		D3C4423027E8966C00676C93 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		D3C4423527E8A96200676C93 /* AlertUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtilities.swift; sourceTree = "<group>"; };
-		D3C4423727E8A98400676C93 /* AlertTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTypes.swift; sourceTree = "<group>"; };
+		D3C4423727E8A98400676C93 /* AlertContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContent.swift; sourceTree = "<group>"; };
 		D3C4423927E8B15900676C93 /* AuthErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrors.swift; sourceTree = "<group>"; };
 		D3C4423B27E8B17400676C93 /* DatabaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseErrors.swift; sourceTree = "<group>"; };
 		D3C4423D27E8B20000676C93 /* DataProviderErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderErrors.swift; sourceTree = "<group>"; };
@@ -994,7 +995,7 @@
 			isa = PBXGroup;
 			children = (
 				D3C4423527E8A96200676C93 /* AlertUtilities.swift */,
-				D3C4423727E8A98400676C93 /* AlertTypes.swift */,
+				D3C4423727E8A98400676C93 /* AlertContent.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -1363,7 +1364,7 @@
 				62165B7627F2244C004BC620 /* FormUtilities.swift in Sources */,
 				CEC5887527EABED600809403 /* LessonSelectionViewModelFromBook.swift in Sources */,
 				D3C4424327E8CB0A00676C93 /* FirebaseDataProvider.swift in Sources */,
-				D3C4423827E8A98400676C93 /* AlertTypes.swift in Sources */,
+				D3C4423827E8A98400676C93 /* AlertContent.swift in Sources */,
 				D33282E827D4D42700C80986 /* LingoClash.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

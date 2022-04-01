@@ -7,6 +7,7 @@
 
 import Foundation
 import PromiseKit
+import FirebaseFirestore
 
 final class SignUpViewModel {
     
@@ -27,6 +28,19 @@ final class SignUpViewModel {
         
         firstly {
             authProvider.register(params: fields)
+        }.then { result -> Promise<Void> in
+            return Promise { seal in
+                let db = Firestore.firestore()
+                db.collection("profiles").addDocument(
+                    data: [
+                        "uid": result.id as Any
+                    ]) { error in
+                        if let error = error {
+                            return seal.reject(error)
+                        }
+                        return seal.fulfill(())
+                    }
+            }
         }.done {
             self.error = nil
         }.catch { error in
@@ -43,6 +57,10 @@ final class SignUpViewModel {
         
         if let error = FormUtilities.validateEmail(email: fields.email) {
             return error
+        }
+        
+        if fields.password != fields.confirmPassword {
+            return "Password and confirmation password must be the same."
         }
         
         if let error = FormUtilities.validatePassword(password: fields.password) {

@@ -19,6 +19,16 @@ class AlertUtilities {
         return alert
     }
     
+    static func createDoneAlert(
+        title: String,
+        message: String,
+        doneHandler: ((UIAlertAction) -> Void)?
+    ) -> UIAlertController {
+        let alert = AlertUtilities.createAlert(title: title, message: message)
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: doneHandler))
+        return alert
+    }
+    
     static func createAlert(title: String, message: String) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message,
                                       preferredStyle: UIAlertController.Style.alert)
