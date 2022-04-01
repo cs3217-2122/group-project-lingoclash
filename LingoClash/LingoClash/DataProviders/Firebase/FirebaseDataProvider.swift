@@ -46,8 +46,6 @@ class FirebaseDataProvider: DataProvider {
         documentData["id"] = document.documentID
         
         let data =  try? JSONSerialization.data(withJSONObject: documentData)
-        
-        
         let model = try? JSONDecoder().decode(S.self, from: data ?? Data())
         
         return model
@@ -104,7 +102,8 @@ class FirebaseDataProvider: DataProvider {
         return Promise { seal in
             let collection = db.collection(resource)
             
-            collection.whereField(Configs.uidKey, in: params.ids).getDocuments { (querySnapshot, error) in
+            
+            collection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
                     return seal.reject(error)
@@ -115,8 +114,10 @@ class FirebaseDataProvider: DataProvider {
                 }
                 
                 let dataList = querySnapshot.documents.compactMap { document -> T? in
-                    self.getModel(from: document)
+                    
+                    return self.getModel(from: document)
                 }
+                
                 
                 return seal.fulfill(GetManyResult(data: dataList))
             }

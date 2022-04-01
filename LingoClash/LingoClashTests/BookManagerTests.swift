@@ -11,11 +11,6 @@ import PromiseKit
 @testable import LingoClash
 
 
-/*
- login then test;
- login to this account and test his account;
- 
- */
 class BookManagerTests: XCTestCase {
     
     private static let bookManager = BookManager()
@@ -77,6 +72,28 @@ class BookManagerTests: XCTestCase {
                 BookManagerTests.bookManager.getOne(id: bookId)
             }.done { result in
                 XCTAssertEqual(result.id, bookId)
+                responseExpectation.fulfill()
+            }.catch { error in
+                XCTFail(error.localizedDescription)
+            }
+        }
+        
+        let result = XCTWaiter.wait(for: [responseExpectation], timeout: 30)
+        
+        XCTAssertEqual(result, .completed)
+    }
+    
+    func test_getMany() {
+        
+        let responseExpectation = expectation(description: "response")
+        
+        let bookIds = ["1", "2"]
+        
+        DispatchQueue.main.async {
+            let _ = firstly {
+                BookManagerTests.bookManager.getMany(ids: bookIds)
+            }.done { result in
+                XCTAssertEqual(result.count, 2)
                 responseExpectation.fulfill()
             }.catch { error in
                 XCTFail(error.localizedDescription)
