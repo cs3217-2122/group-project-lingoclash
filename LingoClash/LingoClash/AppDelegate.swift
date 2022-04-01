@@ -50,11 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         
-        Logger.info("Development environment detected. Will be starting with sample data")
+        Logger.warning("enablePreloadData is set to true. Will be preloading db with sample data")
         
         DispatchQueue.main.async {
             firstly {
                 SampleDataUtilities.createSampleData()
+            }.done {
+                Logger.warning("You may turn off enablePreloadData now to avoid exceeding document writes quota")
             }.catch { error in
                 Logger.error("Failed to create some sample data: \(error)")
             }
