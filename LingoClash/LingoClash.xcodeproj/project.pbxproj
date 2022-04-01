@@ -278,12 +278,13 @@
 		D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */; };
 		D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
 		D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D22A027EEC059005E7058 /* Book.storyboard */; };
-		D3C5E26727F6E36B00F65B8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */; };
 		D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33282E927D4D42E00C80986 /* Assets.xcassets */; };
 		D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D228A27EE2986005E7058 /* Question.storyboard */; };
 		D3C5E26A27F6E36B00F65B8E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229A27EEBA29005E7058 /* Profile.storyboard */; };
 		D3C5E26B27F6E36B00F65B8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282E327D4D42700C80986 /* Main.storyboard */; };
 		D3C5E26C27F6E36B00F65B8E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229027EEA8B0005E7058 /* Home.storyboard */; };
+		D3C5E27627F6EBFF00F65B8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3C5E27527F6EBFF00F65B8E /* GoogleService-Info.plist */; };
+		D3C5E27727F6EBFF00F65B8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3C5E27527F6EBFF00F65B8E /* GoogleService-Info.plist */; };
 		D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */; };
 		D3F00CAD27DFAF6F00393ADC /* Promise+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */; };
 		D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */; };
@@ -438,6 +439,7 @@
 		D3C5E1CE27F602FB00F65B8E /* BookManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManagerTests.swift; sourceTree = "<group>"; };
 		D3C5E27027F6E36B00F65B8E /* LingoClash Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LingoClash Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5E27127F6E37100F65B8E /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D3C5E27527F6EBFF00F65B8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUtilities.swift; sourceTree = "<group>"; };
 		D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Extensions.swift"; sourceTree = "<group>"; };
 		D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTypes.swift; sourceTree = "<group>"; };
@@ -771,9 +773,9 @@
 		D33282D127D4D42700C80986 = {
 			isa = PBXGroup;
 			children = (
-				D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */,
-				D33282DC27D4D42700C80986 /* LingoClash */,
+				D3C5E27227F6EB8900F65B8E /* SupportingFiles */,
 				D3BD29E327DCE6350061E362 /* LingoClashTests */,
+				D33282DC27D4D42700C80986 /* LingoClash */,
 				D33282DB27D4D42700C80986 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -791,7 +793,6 @@
 		D33282DC27D4D42700C80986 /* LingoClash */ = {
 			isa = PBXGroup;
 			children = (
-				D3C5E27127F6E37100F65B8E /* Dev-Info.plist */,
 				CEF1E7B127E50706005D4272 /* CurrencySystem */,
 				D398780C27DF8C1400B2F4ED /* Extensions */,
 				6204A03B27DE34040063100D /* Utilities */,
@@ -819,6 +820,7 @@
 				CE8D228A27EE2986005E7058 /* Question.storyboard */,
 				D33282E927D4D42E00C80986 /* Assets.xcassets */,
 				D33282EE27D4D42E00C80986 /* Info.plist */,
+				D3C5E27127F6E37100F65B8E /* Dev-Info.plist */,
 				D33282E627D4D42700C80986 /* LingoClash.xcdatamodeld */,
 			);
 			path = LingoClash;
@@ -951,6 +953,31 @@
 				D3C4424227E8CB0A00676C93 /* FirebaseDataProvider.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D3C5E27227F6EB8900F65B8E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D3C5E27427F6EBDA00F65B8E /* Development */,
+				D3C5E27327F6EBCE00F65B8E /* Production */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D3C5E27327F6EBCE00F65B8E /* Production */ = {
+			isa = PBXGroup;
+			children = (
+				D3F94BEA27D63AE000D527F6 /* GoogleService-Info.plist */,
+			);
+			path = Production;
+			sourceTree = "<group>";
+		};
+		D3C5E27427F6EBDA00F65B8E /* Development */ = {
+			isa = PBXGroup;
+			children = (
+				D3C5E27527F6EBFF00F65B8E /* GoogleService-Info.plist */,
+			);
+			path = Development;
 			sourceTree = "<group>";
 		};
 		D3F00CB627DFC5F200393ADC /* DataManagers */ = {
@@ -1108,6 +1135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C5E27627F6EBFF00F65B8E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1119,10 +1147,10 @@
 				D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */,
 				D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */,
 				D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */,
-				D3C5E26727F6E36B00F65B8E /* GoogleService-Info.plist in Resources */,
 				D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */,
 				D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */,
 				D3C5E26A27F6E36B00F65B8E /* Profile.storyboard in Resources */,
+				D3C5E27727F6EBFF00F65B8E /* GoogleService-Info.plist in Resources */,
 				D3C5E26B27F6E36B00F65B8E /* Main.storyboard in Resources */,
 				D3C5E26C27F6E36B00F65B8E /* Home.storyboard in Resources */,
 			);
