@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import Firebase
+import PromiseKit
 
 enum Environment: String {
     case development = "Development"
@@ -34,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         switch environment {
         case .development:
             Logger.info("Environment is: development")
+            setUpSampleData()
+            print("kw1")
         case .production:
             Logger.info("Environment is: production")
         case .none:
@@ -41,6 +44,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return true
+    }
+    
+    private func setUpSampleData() {
+        guard AppConfigs.General.enablePreloadData else {
+            return
+        }
+        
+        Logger.info("Development environment detected. Will be starting with sample data")
+        
+        DispatchQueue.main.async {
+            firstly {
+                SampleDataUtilities.createSampleData()
+            }.catch { error in
+                Logger.error("Failed to create some sample data: \(error)")
+            }
+        }
     }
     
     private func registerUserDefaults() {
