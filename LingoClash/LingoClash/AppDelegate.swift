@@ -52,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Logger.warning("enablePreloadData is set to true. Will be preloading db with sample data")
         
+        // TODO: use main.sync instead?
         DispatchQueue.main.async {
             firstly {
                 SampleDataUtilities.createSampleData()
