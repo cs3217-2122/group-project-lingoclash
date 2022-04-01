@@ -11,11 +11,12 @@ import PromiseKit
 @testable import LingoClash
 
 
+// TODO: Add tests for: update, create, delete; updateMany, deleteMany
 class BookManagerTests: XCTestCase {
     
     private static let bookManager = BookManager()
     private static let authProvider = FirebaseAuthProvider()
-    private static let credentials = [
+    private static let testAccountCredentials = [
         "email": "test@testing.com",
         "password": "testing"
     ]
@@ -23,7 +24,7 @@ class BookManagerTests: XCTestCase {
     override class func setUp() {
         DispatchQueue.main.async {
             firstly {
-                authProvider.login(params: credentials)
+                authProvider.login(params: testAccountCredentials)
             }.catch { error in
                 XCTFail(error.localizedDescription)
             }
@@ -109,9 +110,11 @@ class BookManagerTests: XCTestCase {
     func test_getManyReference() {
         let responseExpectation = expectation(description: "response")
         
+        let categoryId = "2"
+        
         DispatchQueue.main.async {
             let _ = firstly {
-                BookManagerTests.bookManager.getManyReference(target: "category_id", id: "2")
+                BookManagerTests.bookManager.getManyReference(target: "category_id", id: categoryId)
             }.done { result in
                 XCTAssertGreaterThan(result.count, 0)
                 responseExpectation.fulfill()
