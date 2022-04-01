@@ -11,11 +11,14 @@ import PromiseKit
 @testable import LingoClash
 
 
+
+
+// TODO: Switch to database for testing instead of using production data. See: https://firebase.google.com/docs/projects/multiprojects
 // TODO: Add tests for: update, create, delete; updateMany, deleteMany
 class BookManagerTests: XCTestCase {
     
     private static let bookManager = BookManager()
-    private static let authProvider = FirebaseAuthProvider()
+    private static let authProvider = AppConfigs.API.authProvider
     private static let testAccountCredentials = [
         "email": "test@testing.com",
         "password": "testing"

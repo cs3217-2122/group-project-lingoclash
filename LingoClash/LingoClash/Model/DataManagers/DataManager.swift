@@ -12,7 +12,7 @@ class DataManager<T: Codable> {
     private let dataProvider: DataProvider
     private let resource: String
     
-    init(resource: String, dataProvider: DataProvider = FirebaseDataProvider()) {
+    init(resource: String, dataProvider: DataProvider = AppConfigs.API.dataProvider) {
         self.resource = resource
         self.dataProvider = dataProvider
     }

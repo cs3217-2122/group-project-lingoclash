@@ -16,6 +16,8 @@ struct AppConfigs {
     }
     
     struct API {
+        static let authProvider = FirebaseAuthProvider()
+        static let dataProvider = FirebaseDataProvider()
         static let devService = "lingoclashdev.com"
         static let devServerBaseURL = "http://localhost:3000"
         static let perPage = 10

@@ -25,7 +25,7 @@ final class ProfileViewModel {
     var firstName: String?
     var lastName: String?
     
-    init(authProvider: AuthProvider = FirebaseAuthProvider()) {
+    init(authProvider: AuthProvider = AppConfigs.API.authProvider) {
         self.authProvider = authProvider
     }
     

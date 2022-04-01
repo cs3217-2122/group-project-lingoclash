@@ -14,7 +14,7 @@ final class SignUpViewModel {
     
     private let authProvider: AuthProvider
     
-    init(authProvider: AuthProvider = FirebaseAuthProvider()) {
+    init(authProvider: AuthProvider = AppConfigs.API.authProvider) {
         self.authProvider = authProvider
     }
     
