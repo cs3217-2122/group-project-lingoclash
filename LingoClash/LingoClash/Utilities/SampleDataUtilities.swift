@@ -43,7 +43,6 @@ class SampleDataUtilities {
         
         let bookManager = BookManager()
         var books = [Book]()
-        
         var bookId = 0
         
         for i in 0...5 {
@@ -79,7 +78,6 @@ class SampleDataUtilities {
         
         let lessonManager = LessonManager()
         var lessons = [Lesson]()
-        
         var lessonId = 0
         
         for i in 0...35 {
@@ -100,7 +98,6 @@ class SampleDataUtilities {
         
         let vocabManager = VocabManager()
         var vocabs = [Vocab]()
-        
         var vocabId = 0
         
         for i in 0...30 {
@@ -115,17 +112,5 @@ class SampleDataUtilities {
             Logger.info("Sample vocabs successfully created!")
         }
     }
-    
-    //    private static func createSampleUsers() {
-    //        // TODO: Create test account using AuthProvider::register
-    //    }
-    //
-    //    private static func createSampleProfiles() {
-    //
-    //    }
-    //
-    //    private static func createSampleProfileBooks() {
-    //
-    //    }
     
 }
