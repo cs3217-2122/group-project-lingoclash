@@ -11,7 +11,7 @@ import PromiseKit
 @testable import LingoClash
 
 
-// TODO: Switch to development database instead of using production data. See: https://firebase.google.com/docs/projects/multiprojects#support_multiple_environments_in_your_apple_application
+// TODO: Associate with development environment: General > Host application
 // TODO: Add tests for: update, create, delete; updateMany, deleteMany
 class BookManagerTests: XCTestCase {
     
