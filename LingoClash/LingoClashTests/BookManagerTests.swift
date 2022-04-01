@@ -55,7 +55,7 @@ class BookManagerTests: XCTestCase {
             }
         }
         
-        let result = XCTWaiter.wait(for: [responseExpectation], timeout: 30)
+        let result = XCTWaiter.wait(for: [responseExpectation], timeout: 15)
         
         XCTAssertEqual(result, .completed)
     }
@@ -78,7 +78,7 @@ class BookManagerTests: XCTestCase {
             }
         }
         
-        let result = XCTWaiter.wait(for: [responseExpectation], timeout: 30)
+        let result = XCTWaiter.wait(for: [responseExpectation], timeout: 15)
         
         XCTAssertEqual(result, .completed)
     }
@@ -100,7 +100,27 @@ class BookManagerTests: XCTestCase {
             }
         }
         
-        let result = XCTWaiter.wait(for: [responseExpectation], timeout: 30)
+        let result = XCTWaiter.wait(for: [responseExpectation], timeout: 15)
+        
+        XCTAssertEqual(result, .completed)
+    }
+    
+    
+    func test_getManyReference() {
+        let responseExpectation = expectation(description: "response")
+        
+        DispatchQueue.main.async {
+            let _ = firstly {
+                BookManagerTests.bookManager.getManyReference(target: "category_id", id: "2")
+            }.done { result in
+                XCTAssertGreaterThan(result.count, 0)
+                responseExpectation.fulfill()
+            }.catch { error in
+                XCTFail(error.localizedDescription)
+            }
+        }
+        
+        let result = XCTWaiter.wait(for: [responseExpectation], timeout: 15)
         
         XCTAssertEqual(result, .completed)
     }
