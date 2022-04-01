@@ -7,16 +7,26 @@
 
 import UIKit
 
+
 class SplashViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
-        
-        Logger.info("Starting LingoClash")
-        
         super.viewDidLoad()
+        
+        setUpData()
         setUpView()
+        
+    }
+    
+    private func setUpData() {
+        Logger.info("Initializing LingoClash")
+        
+        #if DEVELOPMENT
+        Logger.info("Development environment detected. Will be starting with sample data")
+        SampleDataUtilities.createSampleData()
+        #endif
     }
     
     func setUpView() {
