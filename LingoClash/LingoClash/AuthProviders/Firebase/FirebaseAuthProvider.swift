@@ -52,7 +52,25 @@ class FirebaseAuthProvider: AuthProvider {
                 }
             }
         }.then {
-            return self.getIdentity()
+            self.getIdentity()
+        }.then { result -> Promise<UserIdentity> in
+
+            return Promise { seal in
+                let db = Firestore.firestore()
+                
+                // TODO: use codable object for this
+                db.collection("profiles").addDocument(
+                    data: [
+                        "user_id": result.id as Any,
+                        "stars": 0,
+                        "stars_today": 0,
+                    ]) { error in
+                        if let error = error {
+                            return seal.reject(error)
+                        }
+                        return seal.fulfill(result)
+                    }
+            }
         }
         
     }
@@ -86,7 +104,7 @@ class FirebaseAuthProvider: AuthProvider {
     
     func getIdentity() -> Promise<UserIdentity> {
         let user = Auth.auth().currentUser
-        
+
         let userIdentity = UserIdentity(
             id: user?.uid, email: user?.email, fullName: user?.displayName, avatar: user?.photoURL?.absoluteString)
         
