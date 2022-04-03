@@ -31,7 +31,7 @@ class FirebaseDataProvider: DataProvider {
         var documentData = document.data()
         documentData["id"] = document.documentID
         
-        let data = try? JSONSerialization.data(withJSONObject: documentData)
+        let data = try? JSONSerialization.data(withJSONObject: processDocumentData(documentData))
         
         let model = try? JSONDecoder().decode(S.self, from: data ?? Data())
         
@@ -45,7 +45,7 @@ class FirebaseDataProvider: DataProvider {
         
         documentData["id"] = document.documentID
         
-        let data =  try? JSONSerialization.data(withJSONObject: documentData)
+        let data =  try? JSONSerialization.data(withJSONObject: processDocumentData(documentData))
         let model = try? JSONDecoder().decode(S.self, from: data ?? Data())
         
         return model
@@ -55,9 +55,17 @@ class FirebaseDataProvider: DataProvider {
     func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
         
         return Promise { seal in
-            db.collection(resource).getDocuments { (querySnapshot, error) in
+            var collectionQuery: Query = db.collection(resource)
+            for (key, value) in params.filter {
+                collectionQuery = collectionQuery.whereField(key, isEqualTo: value)
+            }
+
+            collectionQuery = collectionQuery.order(by: params.sort.field, descending: params.sort.isDescending)
+            
+            collectionQuery.getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
+                    print(error)
                     return seal.reject(error)
                 }
                 
@@ -126,13 +134,15 @@ class FirebaseDataProvider: DataProvider {
     func getManyReference<T: Codable>(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
         
         return Promise { seal in
-            var filteredCollection = db.collection(resource).whereField(params.target, isEqualTo: params.id)
+            var collectionQuery = db.collection(resource).whereField(params.target, isEqualTo: params.id)
             
             for (key, value) in params.filter {
-                filteredCollection = filteredCollection.whereField(key, isEqualTo: value)
+                collectionQuery = collectionQuery.whereField(key, isEqualTo: value)
             }
+
+            collectionQuery = collectionQuery.order(by: params.sort.field, descending: params.sort.isDescending)
             
-            filteredCollection.getDocuments { (querySnapshot, error) in
+            collectionQuery.getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
                     return seal.reject(error)
@@ -222,14 +232,32 @@ class FirebaseDataProvider: DataProvider {
         
         return Promise { seal in
             do {
-                let _ = try db.collection(resource).addDocument(from: params.data) { error in
-                    
+                var ref: DocumentReference? = nil
+
+                ref = try db.collection(resource).addDocument(from: params.data) { error in
+                    if let error = error {
+                        return seal.reject(error)
+                    }
+                }
+                
+                guard let ref = ref else {
+                    return seal.reject(FirebaseDataProviderError.documentNotFound)
+                }
+                
+                ref.getDocument { (document, error) in
                     if let error = error {
                         return seal.reject(error)
                     }
                     
-                    // TODO: Modify the id to be ref.documentID
-                    return seal.fulfill(CreateResult(data: params.data))
+                    guard let document = document, document.exists else {
+                        return seal.reject(FirebaseDataProviderError.documentNotFound)
+                    }
+                    
+                    guard let data: T = self.getModel(from: document) else {
+                        return seal.reject(FirebaseDataProviderError.serializationError)
+                    }
+                    
+                    return seal.fulfill(CreateResult(data: data))
                 }
             } catch {
                 seal.reject(error)
@@ -269,4 +297,24 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
+    // converts from firebase types to swift types
+    private func processDocumentData(_ documentData: [String: Any]) -> [String: Any] {
+        var newDocumentData = documentData
+        newDocumentData.forEach { (key: String, value: Any) in
+            switch value{
+            case is DocumentReference:
+                newDocumentData.removeValue(forKey: key)
+                break
+            case let ts as Timestamp:
+                let date = ts.dateValue()
+                
+                let jsonValue = Int((date.timeIntervalSince1970 * 1000).rounded())
+                newDocumentData[key] = jsonValue
+                break
+            default:
+                break
+            }
+        }
+        return newDocumentData
+    }
 }

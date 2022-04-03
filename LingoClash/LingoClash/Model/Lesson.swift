@@ -7,9 +7,9 @@
 
 import Foundation
 
-class Lesson {
+struct Lesson {
+    let id: Identifier
     let lessonName: String
-    let lessonId: Int
     var stars: Int
     var vocabs = [Vocab]()
     var questions = [Question]()
@@ -17,9 +17,9 @@ class Lesson {
         stars > 0
     }
     
-    init(lessonName: String, lessonId: Int, stars: Int) {
+    init(lessonName: String, lessonId: Int, stars: Int, id: Identifier = UUID().uuidString) {
         self.lessonName = lessonName
-        self.lessonId = lessonId
+        self.id = String(lessonId)
         self.stars = stars
     }
 }

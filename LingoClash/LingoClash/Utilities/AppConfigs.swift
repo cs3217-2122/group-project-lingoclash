@@ -28,7 +28,7 @@ struct AppConfigs {
         static let devServerBaseURL = "http://localhost:3000"
         static let perPage = 10
         static let field = "id"
-        static let order = "desc"
+        static let isDescending = true
         static let accessTokenKey = "access_token"
     }
     

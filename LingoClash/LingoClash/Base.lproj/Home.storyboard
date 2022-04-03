@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K6s-Mm-Rk2">
-    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="ipad7_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="bDF-8g-LGo" customClass="HomeViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QOj-mM-4xl">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="744" height="1133"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twb-mm-j3v">
-                                <rect key="frame" x="50" y="64" width="219.5" height="36"/>
+                                <rect key="frame" x="50" y="68" width="219.5" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZU-pN-TOX">
-                                <rect key="frame" x="50" y="135" width="924" height="280"/>
+                                <rect key="frame" x="50" y="139" width="644" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="5IR-jX-u2u"/>
                                 </constraints>
@@ -31,6 +31,15 @@
                                     <segue destination="d4I-0u-cQ3" kind="embed" id="dyl-hE-Zzo"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tba-x8-17V">
+                                <rect key="frame" x="346" y="975" width="42" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="PK"/>
+                                <connections>
+                                    <segue destination="yna-TW-BcE" kind="show" id="jLB-I4-dd1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IaJ-5d-J2x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -50,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gtf-zM-FFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3735.9712230215828" y="-241.20603015075378"/>
+            <point key="canvasLocation" x="3735.483870967742" y="-241.74757281553397"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Qhf-yY-cwS">
@@ -76,7 +85,7 @@
                 <navigationController storyboardIdentifier="HomeNavigationViewController" title="Home" id="K6s-Mm-Rk2" customClass="HomeNavigationViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ncz-yP-WY9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wHo-DS-p4g">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
+                        <rect key="frame" x="0.0" y="24" width="744" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -104,6 +113,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjE-Dm-gIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4450" y="-206"/>
+        </scene>
+        <!--PKGameLobbyViewController-->
+        <scene sceneID="K33-U4-x7i">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PKGame" referencedIdentifier="PKGameLobbyViewController" id="yna-TW-BcE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3t2-i3-3hi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iII-Vf-39g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4246" y="47"/>
         </scene>
     </scenes>
     <resources>

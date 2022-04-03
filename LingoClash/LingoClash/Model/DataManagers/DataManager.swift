@@ -20,11 +20,11 @@ class DataManager<T: Record> {
     
     func getList(
         field: String = AppConfigs.API.field,
-        order: String = AppConfigs.API.order,
+        isDescending: Bool = AppConfigs.API.isDescending,
         filter: [String: Any] = [:]
     ) -> Promise<[T]> {
-        
-        let sort = SortPayload(field: field, order: order)
+
+        let sort = SortPayload(field: field, isDescending: isDescending)
         let result: Promise<GetListResult<T>> = dataProvider.getList(resource: self.resource, params: GetListParams(
             sort: sort, filter: filter))
         
@@ -55,10 +55,10 @@ class DataManager<T: Record> {
         target: String,
         id: Identifier,
         field: String = AppConfigs.API.field,
-        order: String = AppConfigs.API.order,
+        isDescending: Bool = AppConfigs.API.isDescending,
         filter: [String: Any] = [:]) -> Promise<[T]> {
             
-            let sort = SortPayload(field: field, order: order)
+            let sort = SortPayload(field: field, isDescending: isDescending)
             let result: Promise<GetManyReferenceResult<T>> = dataProvider.getManyReference(
                 resource: self.resource,
                 params: GetManyReferenceParams(

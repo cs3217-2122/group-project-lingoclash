@@ -17,7 +17,7 @@ struct CreateParams<T: Codable> {
     let data: T
 }
 
-struct CreateResult<T: Codable> {
+struct CreateResult<T: Record> {
     let data: T
 }
 
@@ -45,7 +45,7 @@ struct PaginationPayload {
 
 struct SortPayload {
     let field: String
-    let order: String
+    let isDescending: Bool
 }
 
 struct GetListParams {
