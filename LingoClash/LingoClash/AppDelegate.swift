@@ -52,15 +52,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Logger.warning("enablePreloadData is set to true. Will be preloading db with sample data")
         
-        // TODO: use main.sync instead?
-        DispatchQueue.main.async {
-            firstly {
-                SampleDataUtilities.createSampleData()
-            }.done {
-                Logger.warning("You may turn off enablePreloadData now to avoid exceeding document writes quota")
-            }.catch { error in
-                Logger.error("Failed to create some sample data: \(error)")
-            }
+        // TODO: convert to synchronous
+        firstly {
+            SampleDataUtilities.createSampleData()
+        }.done {
+            Logger.warning("You may turn off enablePreloadData now to avoid exceeding document writes quota")
+        }.catch { error in
+            Logger.error("Failed to create some sample data: \(error)")
         }
     }
     
