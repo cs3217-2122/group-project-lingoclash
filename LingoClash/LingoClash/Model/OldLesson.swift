@@ -7,7 +7,9 @@
 
 import Foundation
 
-class Lesson {
+
+// deprecated. please use Lesson instead
+class OldLesson {
     let lessonName: String
     let lessonId: Int
     var stars: Int

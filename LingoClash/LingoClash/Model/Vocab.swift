@@ -8,7 +8,7 @@
 import Foundation
 
 struct Vocab {
-    let vocabId: Int
+    let id: Identifier
     let word: String
     let definition: String
     let sentence: String
