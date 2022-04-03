@@ -26,22 +26,7 @@ final class SignUpViewModel {
             return
         }
         
-        firstly {
-            authProvider.register(params: fields)
-        }.then { result -> Promise<Void> in
-            return Promise { seal in
-                let db = Firestore.firestore()
-                db.collection("profiles").addDocument(
-                    data: [
-                        "uid": result.id as Any
-                    ]) { error in
-                        if let error = error {
-                            return seal.reject(error)
-                        }
-                        return seal.fulfill(())
-                    }
-            }
-        }.done {
+        authProvider.register(params: fields).done {_ in
             self.error = nil
         }.catch { error in
             self.error = error.localizedDescription

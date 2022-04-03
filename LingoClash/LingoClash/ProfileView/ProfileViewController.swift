@@ -58,7 +58,6 @@ class ProfileViewController: UIViewController {
             }
         }.store(in: &cancellables)
         
-        
         viewModel.$alertContent.sink {[weak self] alertContent in
             if let alertContent = alertContent {
                 self?.showConfirmAlert(content: alertContent) { _ in
