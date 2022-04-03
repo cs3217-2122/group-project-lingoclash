@@ -13,7 +13,7 @@ struct DefinitionOptionQuestion: SimpleOptionQuestion {
     let context: String
     let options: [String]
     let answer: String
-
+    
     init(context: String, options: [String], answer: String, vocabsTested: Set<Vocab>) {
         self.context = context
         self.options = options

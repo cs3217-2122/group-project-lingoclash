@@ -7,14 +7,14 @@
 
 class LessonSelectionViewModelFromBook: LessonSelectionViewModel {
     let starsTotalPerLevel = 3
-    private let book: Book
+    private let book: BookData
     private var lessons: [Lesson] = []
     var lessonTableViewModels: Dynamic<[LessonTableCellViewModel]> = Dynamic([])
     var lessonOverviewViewModel: Dynamic<LessonOverviewViewModel?> = Dynamic(nil)
     var starsObtained: Dynamic<String> = Dynamic("")
     var levelsPassed: Dynamic<String> = Dynamic("")
     
-    init(book: Book) {
+    init(book: BookData) {
         self.book = book
         reloadLessons()
     }
@@ -43,8 +43,8 @@ class LessonSelectionViewModelFromBook: LessonSelectionViewModel {
         let levelTotal = self.lessons.count
         self.levelsPassed.value = String(levelsPassed) + "/" + String(levelTotal)
     }
-
-    private func makeShiftGetter(book: Book) -> [Lesson] {
+    
+    private func makeShiftGetter(book: BookData) -> [Lesson] {
         let lesson1 = Lesson(lessonName: "Lesson 1", lessonId: 1, stars: 2)
         let lesson2 = Lesson(lessonName: "Lesson 2", lessonId: 2, stars: 3)
         let lesson3 = Lesson(lessonName: "Lesson 3", lessonId: 3, stars: 0)

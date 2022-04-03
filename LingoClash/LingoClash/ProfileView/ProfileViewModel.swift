@@ -23,11 +23,11 @@ final class ProfileViewModel {
     @Published var alertContent: AlertContent?
     
     private let authProvider: AuthProvider
-    private let profileDataManager = ProfileDataManager()
-    private let profileBookDataManager = ProfileDataManager()
+    private let profileDataManager = ProfileManager()
+    private let profileBookDataManager = ProfileManager()
     private let db = Firestore.firestore()
     
-    init(authProvider: AuthProvider = FirebaseAuthProvider()) {
+    init(authProvider: AuthProvider = AppConfigs.API.authProvider) {
         self.authProvider = authProvider
     }
     

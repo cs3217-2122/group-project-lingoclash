@@ -24,7 +24,7 @@ class LessonSelectionViewController: UIViewController {
     @IBOutlet weak var lessonsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel = LessonSelectionViewModelFromBook(book: Book(id: "awdawd", category_id: "dawdawd", name: "ho"))
+        self.viewModel = LessonSelectionViewModelFromBook(book: BookData(id: "awdawd", category_id: "dawdawd", name: "ho"))
         lessonsTableView.dataSource = self
         lessonsTableView.delegate = self
         styleUI()

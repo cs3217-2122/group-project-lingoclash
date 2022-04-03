@@ -9,16 +9,24 @@ import Foundation
 
 typealias Identifier = String
 
-struct Record: Codable {
-    let id: Identifier
+protocol Record: Codable {
+    var id: Identifier { get }
 }
 
 struct CreateParams<T: Codable> {
     let data: T
 }
 
-struct CreateResult {
-    let data: Data
+struct CreateResult<T: Codable> {
+    let data: T
+}
+
+struct CreateManyParams<T: Record> {
+    let data: [T]
+}
+
+struct CreateManyResult<T: Codable> {
+    let data: [T]
 }
 
 struct DeleteParams<T: Codable> {
@@ -26,8 +34,8 @@ struct DeleteParams<T: Codable> {
     let previousData: T
 }
 
-struct DeleteResult {
-    let data: Data
+struct DeleteResult<T: Codable> {
+    let data: T
 }
 
 struct PaginationPayload {
@@ -45,8 +53,8 @@ struct GetListParams {
     let filter: [String: Any]
 }
 
-struct GetListResult {
-    let data: [Data]
+struct GetListResult<T: Codable> {
+    let data: [T]
     let total: Int
 }
 
@@ -54,16 +62,16 @@ struct GetOneParams {
     let id: Identifier
 }
 
-struct GetOneResult {
-    let data: Data
+struct GetOneResult<T: Codable> {
+    let data: T
 }
 
 struct GetManyParams {
     let ids: [Identifier]
 }
 
-struct GetManyResult {
-    let data: [Data]
+struct GetManyResult<T: Codable> {
+    let data: [T]
 }
 
 struct GetManyReferenceParams {
@@ -73,8 +81,8 @@ struct GetManyReferenceParams {
     let filter: [String: Any]
 }
 
-struct GetManyReferenceResult {
-    let data: [Data]
+struct GetManyReferenceResult<T: Codable> {
+    let data: [T]
     let total: Int
 }
 
@@ -84,8 +92,8 @@ struct UpdateParams<T: Codable> {
     let previousData: T
 }
 
-struct UpdateResult {
-    let data: Data
+struct UpdateResult<T: Codable> {
+    let data: T
 }
 
 struct UpdateManyParams<T: Codable> {

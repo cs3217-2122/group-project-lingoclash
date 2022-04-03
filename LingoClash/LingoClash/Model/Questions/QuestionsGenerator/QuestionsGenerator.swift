@@ -19,7 +19,7 @@ class QuestionsGenerator {
          Generate till question upper limit if any is reached
          */
         let questionConstructorRandomFactory = try createQuestionContructorRandomFactory(questionProbabilities: settings.questionProbabilities,
-                                                                                     scopeSize: settings.scope.count)
+                                                                                         scopeSize: settings.scope.count)
         let questionScopeFactory = createQuestionScopeFactory(compulsoryScope: settings.compulsoryTestingScope, scope: settings.scope)
         return QuestionSequence(scopeFactory: questionScopeFactory, constructorFactory: questionConstructorRandomFactory)
     }
@@ -39,8 +39,8 @@ class QuestionsGenerator {
             for (questionType, probability) in questionProbabilities {
                 guard let constructor = getQuestionConstructor(for: questionType),
                       isConstructorViable(constructor, scopeSize: scopeSize) else {
-                    continue
-                }
+                          continue
+                      }
                 constructors.append(constructor)
                 probabilities.append(probability)
             }
@@ -53,7 +53,7 @@ class QuestionsGenerator {
             throw QuestionGenerationError.insufficientVocabsToGenerateAnyQuestions
         }
         return QuestionConstructorRandomFactory(constructors: constructors, probabilities: probabilities)
-
+        
     }
     
     private func isConstructorViable(_ constructor: QuestionContructor, scopeSize: Int) -> Bool {

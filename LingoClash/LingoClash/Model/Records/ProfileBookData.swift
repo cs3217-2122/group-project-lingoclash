@@ -5,12 +5,12 @@
 //  Created by Ai Ling Hong on 23/3/22.
 //
 
-struct ProfileBook {
+struct ProfileBookData {
     var id: Identifier
     let profile_id: Identifier
     let book_id: Identifier
     let is_completed: Bool
-    let profile_levels: [ProfileLevel]
+    let profile_lessons: [ProfileLessonData]
 }
 
-extension ProfileBook: Codable {}
+extension ProfileBookData: Record {}

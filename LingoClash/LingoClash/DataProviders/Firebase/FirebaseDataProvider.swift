@@ -13,6 +13,7 @@ import FirebaseFirestoreSwift
 
 class FirebaseDataProvider: DataProvider {
     
+    // TODO: think of better error names
     enum FirebaseDataProviderError: Error {
         case invalidParams
         case invalidQuerySnapshot
@@ -26,24 +27,32 @@ class FirebaseDataProvider: DataProvider {
     
     private let db = Firestore.firestore()
     
-    private func getData(from document: QueryDocumentSnapshot) -> Data? {
+    private func getModel<S: Codable>(from document: QueryDocumentSnapshot) -> S? {
         var documentData = document.data()
         documentData["id"] = document.documentID
         
-        return try? JSONSerialization.data(withJSONObject: documentData)
+        let data = try? JSONSerialization.data(withJSONObject: documentData)
+        
+        let model = try? JSONDecoder().decode(S.self, from: data ?? Data())
+        
+        return model
     }
     
-    private func getData(from document: DocumentSnapshot) -> Data? {
+    private func getModel<S: Codable>(from document: DocumentSnapshot) -> S? {
         guard var documentData = document.data() else {
             return nil
         }
         
         documentData["id"] = document.documentID
         
-        return try? JSONSerialization.data(withJSONObject: documentData)
+        let data =  try? JSONSerialization.data(withJSONObject: documentData)
+        let model = try? JSONDecoder().decode(S.self, from: data ?? Data())
+        
+        return model
     }
     
-    func getList(resource: String, params: GetListParams) -> Promise<GetListResult> {
+    
+    func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
         
         return Promise { seal in
             db.collection(resource).getDocuments { (querySnapshot, error) in
@@ -56,8 +65,8 @@ class FirebaseDataProvider: DataProvider {
                     return seal.reject(FirebaseDataProviderError.invalidQuerySnapshot)
                 }
                 
-                let dataList = querySnapshot.documents.compactMap { document -> Data? in
-                    self.getData(from: document)
+                let dataList = querySnapshot.documents.compactMap { document -> T? in
+                    self.getModel(from: document)
                 }
                 
                 return seal.fulfill(GetListResult(data: dataList, total: querySnapshot.count))
@@ -65,7 +74,7 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    func getOne(resource: String, params: GetOneParams) -> Promise<GetOneResult> {
+    func getOne<T: Codable>(resource: String, params: GetOneParams) -> Promise<GetOneResult<T>> {
         
         return Promise { seal in
             let docRef = db.collection(resource).document(params.id)
@@ -79,7 +88,7 @@ class FirebaseDataProvider: DataProvider {
                     return seal.reject(FirebaseDataProviderError.documentNotFound)
                 }
                 
-                guard let data = self.getData(from: document) else {
+                guard let data: T = self.getModel(from: document) else {
                     return seal.reject(FirebaseDataProviderError.serializationError)
                 }
                 
@@ -88,12 +97,12 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    func getMany(resource: String, params: GetManyParams) -> Promise<GetManyResult> {
+    func getMany<T: Codable>(resource: String, params: GetManyParams) -> Promise<GetManyResult<T>> {
         
         return Promise { seal in
             let collection = db.collection(resource)
             
-            collection.whereField(Configs.uidKey, in: params.ids).getDocuments { (querySnapshot, error) in
+            collection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
                     return seal.reject(error)
@@ -103,16 +112,18 @@ class FirebaseDataProvider: DataProvider {
                     return seal.reject(FirebaseDataProviderError.invalidQuerySnapshot)
                 }
                 
-                let dataList = querySnapshot.documents.compactMap { document -> Data? in
-                    self.getData(from: document)
+                let dataList = querySnapshot.documents.compactMap { document -> T? in
+                    
+                    return self.getModel(from: document)
                 }
+                
                 
                 return seal.fulfill(GetManyResult(data: dataList))
             }
         }
     }
     
-    func getManyReference(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult> {
+    func getManyReference<T: Codable>(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
         
         return Promise { seal in
             var filteredCollection = db.collection(resource).whereField(params.target, isEqualTo: params.id)
@@ -131,8 +142,8 @@ class FirebaseDataProvider: DataProvider {
                     return seal.reject(FirebaseDataProviderError.invalidQuerySnapshot)
                 }
                 
-                let dataList = querySnapshot.documents.compactMap { document -> Data? in
-                    self.getData(from: document)
+                let dataList = querySnapshot.documents.compactMap { document -> T? in
+                    self.getModel(from: document)
                 }
                 
                 return seal.fulfill(GetManyReferenceResult(data: dataList, total: querySnapshot.count))
@@ -140,7 +151,7 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    func update<T: Codable>(resource: String, params: UpdateParams<T>) -> Promise<UpdateResult> {
+    func update<T: Codable>(resource: String, params: UpdateParams<T>) -> Promise<UpdateResult<T>> {
         
         return Promise { seal in
             do {
@@ -150,7 +161,7 @@ class FirebaseDataProvider: DataProvider {
                         return seal.reject(error)
                     }
                     
-                    return seal.fulfill(UpdateResult(data: Data()))
+                    return seal.fulfill(UpdateResult(data: params.data))
                 }
             } catch {
                 seal.reject(error)
@@ -183,7 +194,31 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult> {
+    func createMany<T: Record>(resource: String, params: CreateManyParams<T>) -> Promise<CreateManyResult<T>> {
+        
+        let batch = db.batch()
+        
+        for data in params.data {
+            let docRef = db.collection(resource).document(data.id)
+            do {
+                try batch.setData(from: data, forDocument: docRef)
+            } catch {
+                return Promise.reject(reason: error)
+            }
+        }
+        
+        return Promise { seal in
+            batch.commit() { error in
+                if let error = error {
+                    return seal.reject(error)
+                }
+                
+                return seal.fulfill(CreateManyResult(data: params.data))
+            }
+        }
+    }
+    
+    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
         
         return Promise { seal in
             do {
@@ -193,12 +228,8 @@ class FirebaseDataProvider: DataProvider {
                         return seal.reject(error)
                     }
                     
-                    guard let data = try? JSONEncoder().encode(params.data) else {
-                        return seal.reject(FirebaseDataProviderError.invalidParams)
-                    }
-                    
                     // TODO: Modify the id to be ref.documentID
-                    return seal.fulfill(CreateResult(data: data))
+                    return seal.fulfill(CreateResult(data: params.data))
                 }
             } catch {
                 seal.reject(error)
@@ -206,7 +237,7 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    func delete<T: Codable>(resource: String, params: DeleteParams<T>) -> Promise<DeleteResult> {
+    func delete<T: Codable>(resource: String, params: DeleteParams<T>) -> Promise<DeleteResult<T>> {
         return Promise { seal in
             db.collection(resource).document(params.id).delete() { error in
                 
@@ -214,11 +245,7 @@ class FirebaseDataProvider: DataProvider {
                     return seal.reject(error)
                 }
                 
-                guard let data = try? JSONEncoder().encode(params.previousData) else {
-                    return seal.reject(FirebaseDataProviderError.invalidParams)
-                }
-                
-                return seal.fulfill(DeleteResult(data: data))
+                return seal.fulfill(DeleteResult(data: params.previousData))
             }
         }
     }
@@ -241,4 +268,5 @@ class FirebaseDataProvider: DataProvider {
             }
         }
     }
+    
 }

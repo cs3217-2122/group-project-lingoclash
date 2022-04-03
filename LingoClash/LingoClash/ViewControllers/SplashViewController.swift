@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import PromiseKit
+
 
 class SplashViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
@@ -14,11 +16,10 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpView()
+        self.setUpView()
     }
-
+    
     func setUpView() {
-        // Style elements
         ViewUtilities.styleFilledButton(signUpButton)
         ViewUtilities.styleHollowButton(loginButton)
     }

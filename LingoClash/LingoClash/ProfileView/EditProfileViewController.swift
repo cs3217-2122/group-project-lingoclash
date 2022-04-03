@@ -51,7 +51,7 @@ class EditProfileViewController: UIViewController {
             }
         }.store(in: &cancellables)
     }
-    
+        
     @IBAction func saveButtonTapped(_ sender: Any) {
         let name = FormUtilities.getTrimmedString(textField: nameTextField)
         

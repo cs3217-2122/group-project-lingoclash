@@ -5,9 +5,9 @@
 //  Created by Kyle キラ on 15/3/22.
 //
 
-struct BookCategory {
+struct BookCategoryData {
     let id: Identifier
     let name: String
 }
 
-extension BookCategory: Codable {}
+extension BookCategoryData: Record {}
