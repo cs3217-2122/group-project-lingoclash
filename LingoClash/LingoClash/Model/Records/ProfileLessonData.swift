@@ -5,10 +5,10 @@
 //  Created by Ai Ling Hong on 23/3/22.
 //
 
-struct ProfileLesson {
+struct ProfileLessonData {
     var id: Identifier
     let level_id: Identifier
     let stars: Int
 }
 
-extension ProfileLesson: Record {}
+extension ProfileLessonData: Record {}

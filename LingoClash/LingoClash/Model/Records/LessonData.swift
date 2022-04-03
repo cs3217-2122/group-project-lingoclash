@@ -5,9 +5,9 @@
 //  Created by Ai Ling Hong on 23/3/22.
 //
 
-struct Lesson {
+struct LessonData {
     var id: Identifier
     let book_id: Identifier
 }
 
-extension Lesson: Record {}
+extension LessonData: Record {}

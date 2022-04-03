@@ -5,7 +5,7 @@
 //  Created by Kyle キラ on 22/3/22.
 //
 
-class LessonManager: DataManager<Lesson> {
+class LessonManager: DataManager<LessonData> {
     
     init() {
         super.init(resource: "lessons")

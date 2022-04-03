@@ -39,12 +39,12 @@ class SampleDataUtilities {
         Logger.info("Creating sample books...")
         
         let bookManager = BookManager()
-        var books = [Book]()
+        var books = [BookData]()
         var bookId = 0
         
         for i in 0...5 {
             for j in 0...5 {
-                let book = Book(id: String(bookId), category_id: String(i), name: "Book \(i)-\(j)")
+                let book = BookData(id: String(bookId), category_id: String(i), name: "Book \(i)-\(j)")
                 books.append(book)
                 bookId += 1
             }
@@ -59,9 +59,9 @@ class SampleDataUtilities {
         Logger.info("Creating sample book categories...")
         
         let bookCategoryManager = BookCategoryManager()
-        var categories = [BookCategory]()
+        var categories = [BookCategoryData]()
         for i in 0...5 {
-            let category = BookCategory(id: String(i), name: "Language - \(i)")
+            let category = BookCategoryData(id: String(i), name: "Language - \(i)")
             categories.append(category)
         }
         
@@ -74,12 +74,12 @@ class SampleDataUtilities {
         Logger.info("Creating sample lessons...")
         
         let lessonManager = LessonManager()
-        var lessons = [Lesson]()
+        var lessons = [LessonData]()
         var lessonId = 0
         
         for i in 0...35 {
             for _ in 0...9 {
-                let lesson = Lesson(id: String(lessonId), book_id: String(i))
+                let lesson = LessonData(id: String(lessonId), book_id: String(i))
                 lessons.append(lesson)
                 lessonId += 1
             }
@@ -94,12 +94,12 @@ class SampleDataUtilities {
         Logger.info("Creating sample vocabs...")
         
         let vocabManager = VocabManager()
-        var vocabs = [Vocab]()
+        var vocabs = [VocabData]()
         var vocabId = 0
         
         for i in 0...30 {
             for j in 0...9 {
-                let vocab = Vocab(id: String(vocabId), definition: "Definition of vocab \(j)", lesson_id: String(i), sentence: "Example sentence of vocab \(j)", word: "Vocabulary - \(vocabId)")
+                let vocab = VocabData(id: String(vocabId), definition: "Definition of vocab \(j)", lesson_id: String(i), sentence: "Example sentence of vocab \(j)", word: "Vocabulary - \(vocabId)")
                 vocabs.append(vocab)
                 vocabId += 1
             }

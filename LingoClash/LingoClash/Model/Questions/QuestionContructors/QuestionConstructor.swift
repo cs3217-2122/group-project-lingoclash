@@ -8,5 +8,5 @@
 protocol QuestionContructor {
     var vocabsTestedCount: Int { get }
     var otherVocabsCount: Int { get }
-    func constructQuestion(vocabsTested: Set<BookVocab>, otherVocabs: Set<BookVocab>) -> Question?
+    func constructQuestion(vocabsTested: Set<Vocab>, otherVocabs: Set<Vocab>) -> Question?
 }

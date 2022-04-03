@@ -8,6 +8,6 @@
 struct LessonQuizResult {
     let starsObtained: Int
     let didPass: Bool
-    let vocabsTested: Set<BookVocab>
+    let vocabsTested: Set<Vocab>
     let lessonName: String
 }

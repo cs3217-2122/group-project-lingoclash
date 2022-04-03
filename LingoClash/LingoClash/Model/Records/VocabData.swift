@@ -5,7 +5,7 @@
 //  Created by Ai Ling Hong on 23/3/22.
 //
 
-struct Vocab {
+struct VocabData {
     var id: Identifier
     let definition: String
     let lesson_id: Identifier
@@ -13,4 +13,4 @@ struct Vocab {
     let word: String
 }
 
-extension Vocab: Record {}
+extension VocabData: Record {}

@@ -9,7 +9,7 @@ struct DefinitionOptionQuestionConstructor: QuestionContructor {
     let vocabsTestedCount = DefinitionOptionQuestion.vocabsTestedCount
     let otherVocabsCount = DefinitionOptionQuestion.optionsCount - DefinitionOptionQuestion.vocabsTestedCount
     
-    func constructQuestion(vocabsTested: Set<BookVocab>, otherVocabs: Set<BookVocab>) -> Question? {
+    func constructQuestion(vocabsTested: Set<Vocab>, otherVocabs: Set<Vocab>) -> Question? {
         guard vocabsTested.count == vocabsTestedCount, otherVocabs.count == otherVocabsCount, let correctVocab = vocabsTested.first else {
             return nil
         }

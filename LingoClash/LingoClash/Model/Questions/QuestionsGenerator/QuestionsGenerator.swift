@@ -24,7 +24,7 @@ class QuestionsGenerator {
         return QuestionSequence(scopeFactory: questionScopeFactory, constructorFactory: questionConstructorRandomFactory)
     }
     
-    private func createQuestionScopeFactory(compulsoryScope: Set<BookVocab>?, scope: Set<BookVocab>) -> QuestionScopeFactory {
+    private func createQuestionScopeFactory(compulsoryScope: Set<Vocab>?, scope: Set<Vocab>) -> QuestionScopeFactory {
         if let compulsoryScope = compulsoryScope {
             return QuestionScopeFactory(compulsoryScope: Array(compulsoryScope), scope: scope)
         } else {
@@ -86,11 +86,11 @@ struct QuestionGeneratorSettings {
     let questionProbabilities: Dictionary<QuestionType, Double>?
     // scope of vocab that need to be tested at least once, needs to be subset of scope
     // TODO: implement subset check
-    let compulsoryTestingScope: Set<BookVocab>?
+    let compulsoryTestingScope: Set<Vocab>?
     // scope of vocab to generate questions from
-    let scope: Set<BookVocab>
+    let scope: Set<Vocab>
     
-    init(scope: Set<BookVocab>, compulsoryTestingScope: Set<BookVocab>? = nil, questionProbalities: Dictionary<QuestionType, Double>? = nil, numberOfQuestions: Int? = nil) {
+    init(scope: Set<Vocab>, compulsoryTestingScope: Set<Vocab>? = nil, questionProbalities: Dictionary<QuestionType, Double>? = nil, numberOfQuestions: Int? = nil) {
         self.numberOfQuestions = numberOfQuestions
         self.questionProbabilities = questionProbalities
         self.compulsoryTestingScope = compulsoryTestingScope

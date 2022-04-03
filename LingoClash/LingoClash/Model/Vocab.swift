@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BookVocab {
+struct Vocab {
     let vocabId: Int
     let word: String
     let definition: String
@@ -17,5 +17,5 @@ struct BookVocab {
     // TODO: Add pronunciation
 }
 
-extension BookVocab: Codable {}
-extension BookVocab: Hashable {}
+extension Vocab: Codable {}
+extension Vocab: Hashable {}

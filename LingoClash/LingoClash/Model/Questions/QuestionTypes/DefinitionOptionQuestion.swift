@@ -9,12 +9,12 @@
 struct DefinitionOptionQuestion: SimpleOptionQuestion {
     static let vocabsTestedCount: Int = 1
     static let optionsCount: Int = 4
-    let vocabsTested: Set<BookVocab>
+    let vocabsTested: Set<Vocab>
     let context: String
     let options: [String]
     let answer: String
     
-    init(context: String, options: [String], answer: String, vocabsTested: Set<BookVocab>) {
+    init(context: String, options: [String], answer: String, vocabsTested: Set<Vocab>) {
         self.context = context
         self.options = options
         self.answer = answer
