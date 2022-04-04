@@ -36,18 +36,6 @@ struct Lesson {
     }
 }
 
-//struct ProfileLesson {
-//    let lesson: Lesson
-//    let stars: Int
-//}
-//
-//struct ProfileBook {
-//    let book: Book
-//    let profile: Profile
-//    let isCompleted: Bool
-//    let profileLessons: [ProfileLesson]
-//}
-
 struct Book {
     let id: Identifier
     let category: BookCategory
@@ -60,19 +48,16 @@ struct Book {
         "\(passedLessons) / \(totalLessons)"
     }
     
-    /*
-    
-     */
-    init(bookData: BookData, vocabsByLesson: [LessonData: [VocabData]], bookCategoryData: BookCategoryData, profileBookData: ProfileBookData) {
+    init(bookData: BookData, vocabsByLesson: [LessonData: [VocabData]], bookCategoryData: BookCategoryData, profileBookData: ProfileBookData?) {
         self.category = BookCategory(bookCategoryData: bookCategoryData)
         self.id = bookData.id
         self.name = bookData.name
-        
         self.totalLessons = vocabsByLesson.count
         
         var passedLessonsCount = 0
         var profileLessonsByLessonId = [Identifier: ProfileLessonData]()
-        for profileLesson in profileBookData.profile_lessons {
+        let profileLessons = profileBookData?.profile_lessons ?? []
+        for profileLesson in profileLessons {
             if profileLesson.stars > 0 {
                 passedLessonsCount += 1
             }
@@ -87,6 +72,6 @@ struct Book {
             bookLessons.append(Lesson(lessonData: lessonData, vocabs: vocabs, profileLessonData: profileLessonsByLessonId[lessonData.id]))
         }
         self.lessons = bookLessons
-        self.isCompleted = profileBookData.is_completed
+        self.isCompleted = profileBookData?.is_completed ?? false
     }
 }

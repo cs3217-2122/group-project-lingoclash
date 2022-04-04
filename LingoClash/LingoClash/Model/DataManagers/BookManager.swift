@@ -74,8 +74,7 @@ class BookManager: DataManager<BookData> {
             }
         }.compactMap {
             guard let book = book,
-                    let bookCategory = bookCategory,
-                    let profileBook = profileBook else {
+                    let bookCategory = bookCategory else {
                 return nil
             }
 
