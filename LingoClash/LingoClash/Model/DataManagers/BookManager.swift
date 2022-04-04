@@ -208,4 +208,16 @@ class BookManager: DataManager<BookData> {
             recommendedBooks
         }
     }
+    
+    func markAsLearning(bookId: Identifier) -> Promise<ProfileBookData> {
+        firstly {
+            ProfileManager().getCurrentProfile()
+        }.then { currentProfile in
+            ProfileBookManager().create(
+                newRecord: ProfileBookData(
+                    id: "-1",
+                    profile_id: currentProfile.id,
+                    book_id: bookId, is_completed: false, profile_lessons: []))
+        }
+    }
 }
