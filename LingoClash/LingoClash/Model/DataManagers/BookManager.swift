@@ -87,6 +87,60 @@ class BookManager: DataManager<BookData> {
         
     }
     
+    func getBook(book: BookData) -> Promise<Book> {
+        var bookCategory: BookCategoryData?
+        var profileBook: ProfileBookData?
+        var vocabsByLesson = [LessonData: [VocabData]]()
+        
+        return firstly {
+            // Gets the lessons of the book
+            firstly {
+                LessonManager().getManyReference(target: "book_id", id: book.id)
+            }.then { lessons -> Promise<Void> in
+                // Gets the vocabs of the lesson
+                let vocabManager = VocabManager()
+                let vocabsPromises = lessons.map { lessonData in
+                    firstly {
+                        vocabManager.getManyReference(target: "lesson_id", id: lessonData.id)
+                    }.done { vocabData in
+                        vocabsByLesson[lessonData] = vocabData
+                    }
+                }
+                return when(fulfilled: vocabsPromises)
+            }
+        }.then { () -> Promise<Void> in
+            // Gets the book category
+            firstly {
+                BookCategoryManager().getOne(id: book.category_id)
+            }.done { bookCategoryData in
+                bookCategory = bookCategoryData
+            }
+        }.then { () -> Promise<Void> in
+            // Gets the profile book
+            firstly {
+                ProfileBookManager().getManyReference(
+                    target: "book_id", id: book.id)
+            }.done { profileBooksData in
+                guard !profileBooksData.isEmpty else {
+                    return
+                }
+
+                profileBook = profileBooksData[0]
+            }
+        }.compactMap {
+            guard let bookCategory = bookCategory else {
+                return nil
+            }
+
+            return Book(
+                bookData: book,
+                vocabsByLesson: vocabsByLesson,
+                bookCategoryData: bookCategory,
+                profileBookData: profileBook)
+        }
+        
+    }
+    
     func getCompletedBooks() {
         
         
