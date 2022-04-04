@@ -201,7 +201,9 @@ class BookManager: DataManager<BookData> {
             
             return when(fulfilled: bookPromises)
         }.map {
-            recommendedBooks
+            recommendedBooks.filter { book in
+                book.status == .unread
+            }
         }
     }
     

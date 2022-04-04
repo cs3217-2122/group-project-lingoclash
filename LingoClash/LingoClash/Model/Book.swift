@@ -8,17 +8,20 @@
 import Foundation
 
 
+enum BookStatus {
+    case unread
+    case learning
+    case completed
+}
+
 struct Book {
     let id: Identifier
     let category: BookCategory
     let name: String
-    let isCompleted: Bool
     let totalLessons: Int
     let passedLessons: Int
     let lessons: [Lesson]
-    var progress: String {
-        "\(passedLessons) / \(totalLessons)"
-    }
+    let status: BookStatus
     
     init(bookData: BookData, vocabsByLesson: [LessonData: [VocabData]], bookCategoryData: BookCategoryData, profileBookData: ProfileBookData?) {
         self.category = BookCategory(bookCategoryData: bookCategoryData)
@@ -44,6 +47,11 @@ struct Book {
             bookLessons.append(Lesson(lessonData: lessonData, vocabs: vocabs, profileLessonData: profileLessonsByLessonId[lessonData.id]))
         }
         self.lessons = bookLessons
-        self.isCompleted = profileBookData?.is_completed ?? false
+        
+        if let profileBookData = profileBookData {
+            self.status = profileBookData.is_completed ? .completed : .learning
+        } else {
+            self.status = .unread
+        }
     }
 }
