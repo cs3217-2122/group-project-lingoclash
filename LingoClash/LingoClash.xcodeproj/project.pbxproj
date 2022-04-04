@@ -717,8 +717,8 @@
 				CEA1C90A27FA684500123225 /* PKGameRenderer.swift */,
 				CEA1C90C27FA68C600123225 /* PKGameMoveListener.swift */,
 				CEA1C90E27FA68F800123225 /* PKGameMoveUpdateDelegate.swift */,
-				CEA1C91027FA698900123225 /* FirebasePKGameMoveUpdater.swift */,
 				CEA1C91227FA7A2700123225 /* PKGameOutcome.swift */,
+				CEA1C91027FA698900123225 /* FirebasePKGameMoveUpdater.swift */,
 			);
 			path = PKGameQuiz;
 			sourceTree = "<group>";

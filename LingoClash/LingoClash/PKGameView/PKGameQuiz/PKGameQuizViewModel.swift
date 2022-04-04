@@ -8,6 +8,8 @@
 protocol PKGameQuizViewModel: PKGameRenderer, PKGameMoveListener {
     var questionViewModel: Dynamic<QuestionViewModel?> { get }
     var gameOverviewViewModel: Dynamic<PKGameOverviewViewModel?> { get }
-    
+    var scores: Dynamic<[Int]> { get }
+    var playerNames: [String] { get }
+
     func questionDidComplete(isCorrect: Bool)
 }

@@ -8,12 +8,20 @@
 import Foundation
 
 struct Vocab {
-    let id: Identifier = UUID().uuidString
+    let id: Identifier
     let word: String
     let definition: String
     let sentence: String
     let sentenceDefinition: String
     let pronunciationText: String
+    init(id: Identifier = "0" , word: String, definition: String, sentence: String, sentenceDefinition: String, pronunciationText: String) {
+        self.id = id
+        self.word = word
+        self.definition = definition
+        self.sentence = sentence
+        self.sentenceDefinition = sentenceDefinition
+        self.pronunciationText = pronunciationText
+    }
     // TODO: Add pronunciation
 }
 

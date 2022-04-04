@@ -7,6 +7,8 @@
 import Foundation
 
 class PKGameEngine {
+    static let maxPointsPerQuestion = 100.0
+    static let maxTimePerQuestion = 15.0
     var timeSinceStartOfCurrentQuestion: Date?
     var renderer: PKGameRenderer? {
         didSet {
@@ -55,19 +57,34 @@ class PKGameEngine {
             loadNextQuestion()
         }
         
+        updateScore(for: move)
         return move
     }
     
+    func updateScore(for move: PKGameMove) {
+        if move.isCorrect {
+            let player = move.player
+            let scoreIncrement = Int((PKGameEngine.maxPointsPerQuestion * (move.timeTaken / PKGameEngine.maxTimePerQuestion)).rounded())
+            guard let oldScore = scores[player] else {
+                assert(false)
+                return
+            }
+            let newScore = oldScore + scoreIncrement
+            scores[player] = newScore
+            renderer?.didIncrementScore(newScore: newScore, change: scoreIncrement, player: move.player)
+        }
+        
+    }
+    
     func shouldLoadNextQuestion() -> Bool {
-        return true
         var playersThatAnswered = Set<Profile>()
-//        moves.forEach( { move in
-//            if move.question.isEqual(to: currentQuestion) {
-//                playersThatAnswered.insert(move.player)
-//            }
-//        })
-//        let hasAllPlayersAnsweredQuestion = playersThatAnswered.isSuperset(of: Set(players))
-//        return hasAllPlayersAnsweredQuestion
+        moves.forEach( { move in
+            if move.question.isEqual(to: currentQuestion) {
+                playersThatAnswered.insert(move.player)
+            }
+        })
+        let hasAllPlayersAnsweredQuestion = playersThatAnswered.isSuperset(of: Set(players))
+        return hasAllPlayersAnsweredQuestion
     }
     
     func isMoveValid(_ move: PKGameMove) -> Bool {

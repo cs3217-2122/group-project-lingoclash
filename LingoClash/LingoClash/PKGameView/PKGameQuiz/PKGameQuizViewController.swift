@@ -25,7 +25,11 @@ class PKGameQuizViewController: UIViewController {
         styleUI()
         fillUI()
     }
+    @IBOutlet weak var playerTwoName: UILabel!
+    @IBOutlet weak var playerTwoScore: UILabel!
     
+    @IBOutlet weak var playerOneName: UILabel!
+    @IBOutlet weak var playerOneScore: UILabel!
     func styleUI() {
         
     }
@@ -34,8 +38,14 @@ class PKGameQuizViewController: UIViewController {
         guard isViewLoaded, let viewModel = viewModel else {
             return
         }
+        playerOneName.text = viewModel.playerNames[0]
+        playerTwoName.text = viewModel.playerNames[1]
         viewModel.questionViewModel.bindAndFire { [unowned self] (_) -> Void in
             self.questionViewController?.reloadData() }
+        viewModel.scores.bindAndFire { [unowned self] scores in
+            playerOneScore.text = String(scores[0])
+            playerTwoScore.text = String(scores[1])
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

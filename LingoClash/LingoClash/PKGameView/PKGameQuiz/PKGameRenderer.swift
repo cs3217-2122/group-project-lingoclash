@@ -9,4 +9,5 @@ protocol PKGameRenderer {
     func didChangeQuestion(currQuestion: Question)
     func didCompleteGame(gameOutcome: PKGameOutcome)
     func didAddMove(_ move: PKGameMove)
+    func didIncrementScore(newScore: Int, change: Int, player: Profile)
 }
