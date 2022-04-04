@@ -139,9 +139,55 @@ class BookManager: DataManager<BookData> {
         
     }
     
-    func getCompletedBooks() {
+    func getCompletedBooks() -> Promise<[Book]> {
+        var completedBooks = [Book]()
         
+        return firstly {
+            ProfileManager().getCurrentProfile()
+        }.then { profileData in
+            // Gets the filtered profile books
+            ProfileBookManager().getManyReference(
+                target: "profile_id", id: profileData.id, filter: ["is_completed": true])
+        }.then { profileBooksData -> Promise<Void> in
+            // Gets the books
+            let bookManager = BookManager()
+            let bookPromises = profileBooksData.map { profileBookData in
+                firstly {
+                    bookManager.getBook(id: profileBookData.book_id)
+                }.done { book in
+                    completedBooks.append(book)
+                }
+            }
+            
+            return when(fulfilled: bookPromises)
+        }.map {
+            return completedBooks
+        }
+    }
+    
+    func getLearningBooks() -> Promise<[Book]> {
+        var learningBooks = [Book]()
         
-        
+        return firstly {
+            ProfileManager().getCurrentProfile()
+        }.then { profileData in
+            // Gets the filtered profile books
+            ProfileBookManager().getManyReference(
+                target: "profile_id", id: profileData.id, filter: ["is_completed": false])
+        }.then { profileBooksData -> Promise<Void> in
+            // Gets the books
+            let bookManager = BookManager()
+            let bookPromises = profileBooksData.map { profileBookData in
+                firstly {
+                    bookManager.getBook(id: profileBookData.book_id)
+                }.done { book in
+                    learningBooks.append(book)
+                }
+            }
+            
+            return when(fulfilled: bookPromises)
+        }.map {
+            return learningBooks
+        }
     }
 }
