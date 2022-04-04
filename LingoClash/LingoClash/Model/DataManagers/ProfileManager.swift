@@ -72,4 +72,15 @@ class ProfileManager: DataManager<ProfileData> {
         }
     }
     
+    func setAsCurrentBook(bookId: Identifier, profileData: ProfileData) -> Promise<ProfileData> {
+        let newProfileData = ProfileData(
+            id: profileData.id,
+            book_id: bookId,
+            user_id: profileData.user_id,
+            stars: profileData.stars,
+            stars_today: profileData.stars_today)
+        
+        return self.update(id: profileData.id, from: profileData, to: newProfileData)
+    }
+    
 }
