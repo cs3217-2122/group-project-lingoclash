@@ -231,20 +231,34 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    /// id does not matter
-    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
+    func create<T: Record>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
         
         return Promise { seal in
             do {
-                let _ = try db.collection(resource).addDocument(from: params.data) { error in
-                    
-                    if let error = error {
-                        return seal.reject(error)
+                let docRef = db.collection(resource)
+                
+                if params.useAutoId {
+                    let _ = try docRef.addDocument(from: params.data) { error in
+                        
+                        if let error = error {
+                            return seal.reject(error)
+                        }
+                        
+                        // TODO: Modify the id to be ref.documentID
+                        return seal.fulfill(CreateResult(data: params.data))
                     }
-                    
-                    // TODO: Modify the id to be ref.documentID
-                    return seal.fulfill(CreateResult(data: params.data))
+                } else {
+                    let _ = try docRef.document(params.data.id).setData(from: params.data) { error in
+                        
+                        if let error = error {
+                            return seal.reject(error)
+                        }
+                        
+                        // TODO: Modify the id to be ref.documentID
+                        return seal.fulfill(CreateResult(data: params.data))
+                    }
                 }
+               
             } catch {
                 seal.reject(error)
             }

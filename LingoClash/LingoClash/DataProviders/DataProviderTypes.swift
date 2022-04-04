@@ -15,6 +15,7 @@ protocol Record: Codable {
 
 struct CreateParams<T: Codable> {
     let data: T
+    var useAutoId: Bool = true
 }
 
 struct CreateResult<T: Codable> {
