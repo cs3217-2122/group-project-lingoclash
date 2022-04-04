@@ -52,10 +52,18 @@ class FirebaseDataProvider: DataProvider {
     }
     
     
+    /*
+     order by;
+     */
     func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
         
         return Promise { seal in
-            db.collection(resource).getDocuments { (querySnapshot, error) in
+            let sortField = params.sort.field
+            let isDescending = params.sort.order == "desc"
+            let orderedCollection = db.collection(resource).order(
+                by:sortField , descending: isDescending)
+            
+            orderedCollection.getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
                     return seal.reject(error)
@@ -100,9 +108,12 @@ class FirebaseDataProvider: DataProvider {
     func getMany<T: Codable>(resource: String, params: GetManyParams) -> Promise<GetManyResult<T>> {
         
         return Promise { seal in
-            let collection = db.collection(resource)
+            let sortField = params.sort.field
+            let isDescending = params.sort.order == "desc"
+            let orderedCollection = db.collection(resource).order(
+                by:sortField , descending: isDescending)
             
-            collection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { (querySnapshot, error) in
+            orderedCollection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
                     return seal.reject(error)
@@ -126,7 +137,12 @@ class FirebaseDataProvider: DataProvider {
     func getManyReference<T: Codable>(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
         
         return Promise { seal in
-            var filteredCollection = db.collection(resource).whereField(params.target, isEqualTo: params.id)
+            let sortField = params.sort.field
+            let isDescending = params.sort.order == "desc"
+            let orderedCollection = db.collection(resource).order(
+                by:sortField , descending: isDescending)
+            
+            var filteredCollection = orderedCollection.whereField(params.target, isEqualTo: params.id)
             
             for (key, value) in params.filter {
                 filteredCollection = filteredCollection.whereField(key, isEqualTo: value)

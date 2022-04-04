@@ -68,6 +68,7 @@ struct GetOneResult<T: Codable> {
 
 struct GetManyParams {
     let ids: [Identifier]
+    let sort: SortPayload
 }
 
 struct GetManyResult<T: Codable> {
