@@ -25,7 +25,7 @@ class BookManager: DataManager<BookData> {
         var vocabsByLesson = [LessonData: [VocabData]]()
         
         return firstly {
-            return firstly {
+            firstly {
                 self.getOne(id: id)
             }.done { bookData in
                 book = bookData
@@ -63,7 +63,7 @@ class BookManager: DataManager<BookData> {
             }
         }.then { () -> Promise<Void> in
             // Gets the profile book
-            return firstly {
+            firstly {
                 ProfileBookManager().getManyReference(target: "book_id", id: id)
             }.done { profileBooksData in
                 guard !profileBooksData.isEmpty else {
