@@ -206,6 +206,7 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
+    /// id matters
     func createMany<T: Record>(resource: String, params: CreateManyParams<T>) -> Promise<CreateManyResult<T>> {
         
         let batch = db.batch()
@@ -230,6 +231,7 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
+    /// id does not matter
     func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
         
         return Promise { seal in
