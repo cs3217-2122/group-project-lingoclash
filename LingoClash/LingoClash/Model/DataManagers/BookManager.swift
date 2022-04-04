@@ -40,10 +40,9 @@ class BookManager: DataManager<BookData> {
                 LessonManager().getManyReference(target: "book_id", id: book.id)
             }.then { lessons -> Promise<Void> in
                 // Gets the vocabs of the lesson
-                let vocabManager = VocabManager()
                 let vocabsPromises = lessons.map { lessonData in
                     firstly {
-                        vocabManager.getManyReference(target: "lesson_id", id: lessonData.id)
+                        VocabManager().getManyReference(target: "lesson_id", id: lessonData.id)
                     }.done { vocabData in
                         vocabsByLesson[lessonData] = vocabData
                     }
@@ -98,10 +97,9 @@ class BookManager: DataManager<BookData> {
                 LessonManager().getManyReference(target: "book_id", id: book.id)
             }.then { lessons -> Promise<Void> in
                 // Gets the vocabs of the lesson
-                let vocabManager = VocabManager()
                 let vocabsPromises = lessons.map { lessonData in
                     firstly {
-                        vocabManager.getManyReference(target: "lesson_id", id: lessonData.id)
+                        VocabManager().getManyReference(target: "lesson_id", id: lessonData.id)
                     }.done { vocabData in
                         vocabsByLesson[lessonData] = vocabData
                     }
