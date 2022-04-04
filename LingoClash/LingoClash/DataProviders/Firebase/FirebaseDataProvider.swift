@@ -51,10 +51,6 @@ class FirebaseDataProvider: DataProvider {
         return model
     }
     
-    
-    /*
-     order by;
-     */
     func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
         
         return Promise { seal in
