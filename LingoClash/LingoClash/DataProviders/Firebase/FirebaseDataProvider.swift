@@ -57,7 +57,7 @@ class FirebaseDataProvider: DataProvider {
             let sortField = params.sort.field
             let isDescending = params.sort.order == "desc"
             let orderedCollection = db.collection(resource).order(
-                by:sortField , descending: isDescending)
+                by: sortField , descending: isDescending)
             
             orderedCollection.getDocuments { (querySnapshot, error) in
                 
@@ -107,7 +107,7 @@ class FirebaseDataProvider: DataProvider {
             let sortField = params.sort.field
             let isDescending = params.sort.order == "desc"
             let orderedCollection = db.collection(resource).order(
-                by:sortField , descending: isDescending)
+                by: sortField , descending: isDescending)
             
             orderedCollection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { (querySnapshot, error) in
                 
@@ -136,7 +136,7 @@ class FirebaseDataProvider: DataProvider {
             let sortField = params.sort.field
             let isDescending = params.sort.order == "desc"
             let orderedCollection = db.collection(resource).order(
-                by:sortField , descending: isDescending)
+                by: sortField , descending: isDescending)
             
             var filteredCollection = orderedCollection.whereField(params.target, isEqualTo: params.id)
             
