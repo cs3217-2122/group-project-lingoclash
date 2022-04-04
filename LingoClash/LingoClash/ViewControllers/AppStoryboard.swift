@@ -2,13 +2,12 @@
 //  AppStoryboard.swift
 //  LingoClash
 //
-//  Created by Sherwin Poh on 26/3/22.
-//
+// Referenced design from: https://medium.com/@gurdeep060289/clean-code-for-multiple-storyboards-c64eb679dbf6
 
 import UIKit
 
 enum AppStoryboard: String {
-    case Main, Home, Lesson, Question
+    case Main, Home, Profile, Lesson, Question
     var instance: UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }

@@ -564,9 +564,8 @@
 		6232E41327DDDF4700107B89 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D33282E127D4D42700C80986 /* SplashViewController.swift */,
 				CE8D229327EEB7EE005E7058 /* AppStoryboard.swift */,
-				CE8D229E27EEBBD2005E7058 /* HomeNavigationViewController.swift */,
+				D33282E127D4D42700C80986 /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -637,6 +636,7 @@
 		629090A627E8D00B00941A3B /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				CE8D229E27EEBBD2005E7058 /* HomeNavigationViewController.swift */,
 				62C04A1427DDEB10002D2497 /* HomeViewController.swift */,
 				629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */,
 				629090A727E8D02200941A3B /* CurrentBookViewModel.swift */,
@@ -1723,7 +1723,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "LingoClash ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1755,7 +1755,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "LingoClash ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
