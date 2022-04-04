@@ -6,7 +6,7 @@
 //
 
 class LessonQuizViewModelFromLesson: LessonQuizViewModel {    
-    let lesson: Lesson
+    let lesson: OldLesson
     let questionGenerator = QuestionsGenerator()
     let starsBenchmarks = [7,9,10]
     let initialLives = 2
@@ -34,7 +34,7 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
     
     
     /// Generates questions from lesson's vocabs, initialises fields
-    init(lesson: Lesson) {
+    init(lesson: OldLesson) {
         assert(lesson.vocabs.count > 0)
         self.lesson = lesson
         self.livesLeft = Dynamic(initialLives)

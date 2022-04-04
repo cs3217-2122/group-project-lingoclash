@@ -7,7 +7,6 @@
 import Foundation
 import PromiseKit
 
-
 class DataManager<T: Record> {
     
     private let dataProvider: DataProvider

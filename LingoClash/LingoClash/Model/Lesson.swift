@@ -2,24 +2,26 @@
 //  Lesson.swift
 //  LingoClash
 //
-//  Created by Sherwin Poh on 19/3/22.
+//  Created by Kyle キラ on 4/4/22.
 //
 
 import Foundation
 
-class Lesson {
-    let lessonName: String
-    let lessonId: Int
-    var stars: Int
-    var vocabs = [Vocab]()
+struct Lesson {
+    let id: Identifier
+    let vocabs: [Vocab]
+    let stars: Int
+    let name: String
+    
     var questions = [Question]()
     var didPass: Bool {
         stars > 0
     }
     
-    init(lessonName: String, lessonId: Int, stars: Int) {
-        self.lessonName = lessonName
-        self.lessonId = lessonId
-        self.stars = stars
+    init(lessonData: LessonData, vocabs: [Vocab], profileLessonData: ProfileLessonData?) {
+        self.id = lessonData.id
+        self.vocabs = vocabs
+        self.name = ""
+        self.stars = profileLessonData?.stars ?? 0
     }
 }

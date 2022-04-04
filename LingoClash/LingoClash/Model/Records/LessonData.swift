@@ -11,3 +11,4 @@ struct LessonData {
 }
 
 extension LessonData: Record {}
+extension LessonData: Hashable {}
