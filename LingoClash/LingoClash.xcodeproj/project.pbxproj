@@ -127,6 +127,7 @@
 		D30E490927FA1E630074CF2B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E490827FA1E630074CF2B /* Book.swift */; };
 		D30E490A27FA1E670074CF2B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E490827FA1E630074CF2B /* Book.swift */; };
 		D30E490E27FA20140074CF2B /* BookCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E490D27FA20140074CF2B /* BookCategory.swift */; };
+		D30E491027FA91ED0074CF2B /* DataManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E490F27FA91ED0074CF2B /* DataManagerError.swift */; };
 		D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DD27D4D42700C80986 /* AppDelegate.swift */; };
 		D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DF27D4D42700C80986 /* SceneDelegate.swift */; };
 		D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282E127D4D42700C80986 /* SplashViewController.swift */; };
@@ -450,6 +451,7 @@
 		D30E490527FA12D20074CF2B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D30E490827FA1E630074CF2B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D30E490D27FA20140074CF2B /* BookCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCategory.swift; sourceTree = "<group>"; };
+		D30E490F27FA91ED0074CF2B /* DataManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerError.swift; sourceTree = "<group>"; };
 		D33282DA27D4D42700C80986 /* LingoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33282DD27D4D42700C80986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D33282DF27D4D42700C80986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1057,6 +1059,7 @@
 			isa = PBXGroup;
 			children = (
 				D3C5E1CC27F600BA00F65B8E /* DataManager.swift */,
+				D30E490F27FA91ED0074CF2B /* DataManagerError.swift */,
 				D3C5E28327F71D6900F65B8E /* BookCategoryManager.swift */,
 				D3C4424427E9F2FC00676C93 /* BookManager.swift */,
 				D3C5E28627F71D8500F65B8E /* LessonManager.swift */,
@@ -1281,6 +1284,7 @@
 				62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */,
 				CEF02D7527E956DA00C30E03 /* LessonQuizOutcomeViewController.swift in Sources */,
 				CEF1E7D727E60C2D005D4272 /* LessonVocabViewController.swift in Sources */,
+				D30E491027FA91ED0074CF2B /* DataManagerError.swift in Sources */,
 				CEF02D8927E9775E00C30E03 /* QuestionConstructorRandomFactory.swift in Sources */,
 				D3F00CB127DFC04600393ADC /* FetchTypes.swift in Sources */,
 				CEF02D7727E956EA00C30E03 /* LessonQuizOutcomeViewModel.swift in Sources */,

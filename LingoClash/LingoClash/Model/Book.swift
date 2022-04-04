@@ -10,6 +10,11 @@ import Foundation
 struct BookCategory {
     let id: Identifier
     let name: String
+    
+    init(bookCategoryData: BookCategoryData) {
+        self.id = bookCategoryData.id
+        self.name = bookCategoryData.name
+    }
 }
 
 struct Lesson {
@@ -22,7 +27,26 @@ struct Lesson {
     var didPass: Bool {
         stars > 0
     }
+    
+    init(lessonData: LessonData, vocabs: [Vocab], profileLessonData: ProfileLessonData?) {
+        self.id = lessonData.id
+        self.vocabs = vocabs
+        self.name = ""
+        self.stars = profileLessonData?.stars ?? 0
+    }
 }
+
+//struct ProfileLesson {
+//    let lesson: Lesson
+//    let stars: Int
+//}
+//
+//struct ProfileBook {
+//    let book: Book
+//    let profile: Profile
+//    let isCompleted: Bool
+//    let profileLessons: [ProfileLesson]
+//}
 
 struct Book {
     let id: Identifier
@@ -34,5 +58,35 @@ struct Book {
     let lessons: [Lesson]
     var progress: String {
         "\(passedLessons) / \(totalLessons)"
+    }
+    
+    /*
+    
+     */
+    init(bookData: BookData, vocabsByLesson: [LessonData: [VocabData]], bookCategoryData: BookCategoryData, profileBookData: ProfileBookData) {
+        self.category = BookCategory(bookCategoryData: bookCategoryData)
+        self.id = bookData.id
+        self.name = bookData.name
+        
+        self.totalLessons = vocabsByLesson.count
+        
+        var passedLessonsCount = 0
+        var profileLessonsByLessonId = [Identifier: ProfileLessonData]()
+        for profileLesson in profileBookData.profile_lessons {
+            if profileLesson.stars > 0 {
+                passedLessonsCount += 1
+            }
+            profileLessonsByLessonId[profileLesson.lesson_id] = profileLesson
+        }
+        self.passedLessons = passedLessonsCount
+        
+        var bookLessons = [Lesson]()
+        for (lessonData, vocabsData) in vocabsByLesson {
+            let vocabs = vocabsData.map { Vocab(vocabData: $0) }
+        
+            bookLessons.append(Lesson(lessonData: lessonData, vocabs: vocabs, profileLessonData: profileLessonsByLessonId[lessonData.id]))
+        }
+        self.lessons = bookLessons
+        self.isCompleted = profileBookData.is_completed
     }
 }
