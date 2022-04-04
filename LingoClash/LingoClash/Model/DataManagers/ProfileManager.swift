@@ -31,6 +31,21 @@ class ProfileManager: DataManager<ProfileData> {
         super.init(resource: "profiles")
     }
     
+    func getCurrentProfileData() -> Promise<ProfileData> {
+        return firstly {
+            authProvider.getIdentity()
+        }.then { userIdentity in
+            // Gets the profile
+            self.getManyReference(target: "user_id", id: userIdentity.id ?? "-1")
+        }.compactMap { profilesData in
+            guard !profilesData.isEmpty else {
+                return nil
+            }
+            
+            return profilesData[0]
+        }
+    }
+    
     func getCurrentProfile() -> Promise<Profile> {
         var profile: ProfileData?
         var currentBook: Book?
@@ -72,15 +87,20 @@ class ProfileManager: DataManager<ProfileData> {
         }
     }
     
-    func setAsCurrentBook(bookId: Identifier, profileData: ProfileData) -> Promise<ProfileData> {
-        let newProfileData = ProfileData(
-            id: profileData.id,
-            book_id: bookId,
-            user_id: profileData.user_id,
-            stars: profileData.stars,
-            stars_today: profileData.stars_today)
+    func setAsCurrentBook(bookId: Identifier) -> Promise<ProfileData> {
         
-        return self.update(id: profileData.id, from: profileData, to: newProfileData)
+        return firstly {
+            self.getCurrentProfileData()
+        }.then { profileData -> Promise<ProfileData> in
+            let newProfileData = ProfileData(
+                id: profileData.id,
+                book_id: bookId,
+                user_id: profileData.user_id,
+                stars: profileData.stars,
+                stars_today: profileData.stars_today)
+            
+            return self.update(id: profileData.id, from: profileData, to: newProfileData)
+        }
     }
     
 }
