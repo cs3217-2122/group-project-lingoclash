@@ -150,10 +150,9 @@ class BookManager: DataManager<BookData> {
                 target: "profile_id", id: profileData.id, filter: ["is_completed": true])
         }.then { profileBooksData -> Promise<Void> in
             // Gets the books
-            let bookManager = BookManager()
             let bookPromises = profileBooksData.map { profileBookData in
                 firstly {
-                    bookManager.getBook(id: profileBookData.book_id)
+                    self.getBook(id: profileBookData.book_id)
                 }.done { book in
                     completedBooks.append(book)
                 }
@@ -161,7 +160,7 @@ class BookManager: DataManager<BookData> {
             
             return when(fulfilled: bookPromises)
         }.map {
-            return completedBooks
+            completedBooks
         }
     }
     
@@ -176,10 +175,9 @@ class BookManager: DataManager<BookData> {
                 target: "profile_id", id: profileData.id, filter: ["is_completed": false])
         }.then { profileBooksData -> Promise<Void> in
             // Gets the books
-            let bookManager = BookManager()
             let bookPromises = profileBooksData.map { profileBookData in
                 firstly {
-                    bookManager.getBook(id: profileBookData.book_id)
+                    self.getBook(id: profileBookData.book_id)
                 }.done { book in
                     learningBooks.append(book)
                 }
@@ -187,7 +185,27 @@ class BookManager: DataManager<BookData> {
             
             return when(fulfilled: bookPromises)
         }.map {
-            return learningBooks
+            learningBooks
+        }
+    }
+    
+    func getRecommendedBooks() -> Promise<[Book]> {
+        var recommendedBooks = [Book]()
+        
+        return firstly {
+            self.getList()
+        }.then { booksData -> Promise<Void> in
+            let bookPromises = booksData.map { bookData in
+                firstly {
+                    self.getBook(id: bookData.id)
+                }.done { book in
+                    recommendedBooks.append(book)
+                }
+            }
+            
+            return when(fulfilled: bookPromises)
+        }.map {
+            recommendedBooks
         }
     }
 }
