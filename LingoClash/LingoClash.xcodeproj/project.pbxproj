@@ -100,6 +100,13 @@
 		CEA1C90327FA23DE00123225 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C90227FA23DE00123225 /* HomeViewModel.swift */; };
 		CEA1C90527FA26FD00123225 /* PKGameQuizViewModelFromPKGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C90427FA26FD00123225 /* PKGameQuizViewModelFromPKGame.swift */; };
 		CEA1C90727FA30C000123225 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA1C90627FA30BF00123225 /* GoogleService-Info.plist */; };
+		CEA1C90927FA67BC00123225 /* PKGameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C90827FA67BC00123225 /* PKGameEngine.swift */; };
+		CEA1C90B27FA684500123225 /* PKGameRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C90A27FA684500123225 /* PKGameRenderer.swift */; };
+		CEA1C90D27FA68C600123225 /* PKGameMoveListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C90C27FA68C600123225 /* PKGameMoveListener.swift */; };
+		CEA1C90F27FA68F800123225 /* PKGameMoveUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C90E27FA68F800123225 /* PKGameMoveUpdateDelegate.swift */; };
+		CEA1C91127FA698900123225 /* FirebasePKGameMoveUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C91027FA698900123225 /* FirebasePKGameMoveUpdater.swift */; };
+		CEA1C91327FA7A2700123225 /* PKGameOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C91227FA7A2700123225 /* PKGameOutcome.swift */; };
+		CEA1C91527FA7D0D00123225 /* PKGameOverviewViewModelFromOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C91427FA7D0D00123225 /* PKGameOverviewViewModelFromOutcome.swift */; };
 		CEC5886A27EA2A4F00809403 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886927EA2A4F00809403 /* StarView.swift */; };
 		CEC5886C27EA37E900809403 /* VocabsLearntTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */; };
 		CEC5887127EABEC000809403 /* LessonSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887027EABEC000809403 /* LessonSelectionViewController.swift */; };
@@ -427,6 +434,13 @@
 		CEA1C90227FA23DE00123225 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CEA1C90427FA26FD00123225 /* PKGameQuizViewModelFromPKGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameQuizViewModelFromPKGame.swift; sourceTree = "<group>"; };
 		CEA1C90627FA30BF00123225 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEA1C90827FA67BC00123225 /* PKGameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameEngine.swift; sourceTree = "<group>"; };
+		CEA1C90A27FA684500123225 /* PKGameRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameRenderer.swift; sourceTree = "<group>"; };
+		CEA1C90C27FA68C600123225 /* PKGameMoveListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameMoveListener.swift; sourceTree = "<group>"; };
+		CEA1C90E27FA68F800123225 /* PKGameMoveUpdateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameMoveUpdateDelegate.swift; sourceTree = "<group>"; };
+		CEA1C91027FA698900123225 /* FirebasePKGameMoveUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePKGameMoveUpdater.swift; sourceTree = "<group>"; };
+		CEA1C91227FA7A2700123225 /* PKGameOutcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameOutcome.swift; sourceTree = "<group>"; };
+		CEA1C91427FA7D0D00123225 /* PKGameOverviewViewModelFromOutcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameOverviewViewModelFromOutcome.swift; sourceTree = "<group>"; };
 		CEC5886927EA2A4F00809403 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabsLearntTableCell.swift; sourceTree = "<group>"; };
 		CEC5887027EABEC000809403 /* LessonSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectionViewController.swift; sourceTree = "<group>"; };
@@ -699,6 +713,12 @@
 				CE673C2327F8B48300321BB8 /* PKGameQuizViewController.swift */,
 				CE673C2527F8B48F00321BB8 /* PKGameQuizViewModel.swift */,
 				CEA1C90427FA26FD00123225 /* PKGameQuizViewModelFromPKGame.swift */,
+				CEA1C90827FA67BC00123225 /* PKGameEngine.swift */,
+				CEA1C90A27FA684500123225 /* PKGameRenderer.swift */,
+				CEA1C90C27FA68C600123225 /* PKGameMoveListener.swift */,
+				CEA1C90E27FA68F800123225 /* PKGameMoveUpdateDelegate.swift */,
+				CEA1C91027FA698900123225 /* FirebasePKGameMoveUpdater.swift */,
+				CEA1C91227FA7A2700123225 /* PKGameOutcome.swift */,
 			);
 			path = PKGameQuiz;
 			sourceTree = "<group>";
@@ -708,6 +728,7 @@
 			children = (
 				CE673C2727F8B4D400321BB8 /* PKGameOverviewViewController.swift */,
 				CE673C2927F8B4DD00321BB8 /* PKGameOverviewViewModel.swift */,
+				CEA1C91427FA7D0D00123225 /* PKGameOverviewViewModelFromOutcome.swift */,
 			);
 			path = PKGameOverview;
 			sourceTree = "<group>";
@@ -1310,6 +1331,7 @@
 				62165B7127F218A0004BC620 /* ProfileViewController.swift in Sources */,
 				CEA1C8CE27FA14FA00123225 /* PKGame.swift in Sources */,
 				620DF3CC27F2315F006A9E5F /* ChangePasswordFields.swift in Sources */,
+				CEA1C91327FA7A2700123225 /* PKGameOutcome.swift in Sources */,
 				D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */,
 				CEA1C7A927FA145800123225 /* QuestionScopeFactory.swift in Sources */,
 				CEF1E7EA27E61F68005D4272 /* Vocab.swift in Sources */,
@@ -1340,6 +1362,7 @@
 				D3F00CB527DFC5DD00393ADC /* BookCategoryData.swift in Sources */,
 				624BD58227E7A22D006F0391 /* CompletedBooksViewModel.swift in Sources */,
 				62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */,
+				CEA1C90F27FA68F800123225 /* PKGameMoveUpdateDelegate.swift in Sources */,
 				CE673C2827F8B4D400321BB8 /* PKGameOverviewViewController.swift in Sources */,
 				CEF02D7527E956DA00C30E03 /* LessonQuizOutcomeViewController.swift in Sources */,
 				CEF1E7D727E60C2D005D4272 /* LessonVocabViewController.swift in Sources */,
@@ -1360,6 +1383,7 @@
 				CEA1C7AE27FA145800123225 /* QuestionConstructorRandomFactory.swift in Sources */,
 				CEF1E7E227E60D68005D4272 /* LessonQuizViewModel.swift in Sources */,
 				CEF1E81F27E74C6F005D4272 /* QuestionLayoutViewController.swift in Sources */,
+				CEA1C90D27FA68C600123225 /* PKGameMoveListener.swift in Sources */,
 				CEF1E7F927E6D568005D4272 /* QuestionViewModelFromQuestion.swift in Sources */,
 				CE673C2F27F9315700321BB8 /* PKGameLobbyViewModelFromProfile.swift in Sources */,
 				CEA1C7B927FA145800123225 /* TwoDisjointSetOptionQuestion.swift in Sources */,
@@ -1375,6 +1399,7 @@
 				CEA1C90327FA23DE00123225 /* HomeViewModel.swift in Sources */,
 				CEF1E7B327E5071C005D4272 /* StarsCurrencySystem.swift in Sources */,
 				CEF1E81127E71944005D4272 /* LessonQuizViewModelFromLesson.swift in Sources */,
+				CEA1C90927FA67BC00123225 /* PKGameEngine.swift in Sources */,
 				CE8D229427EEB7EE005E7058 /* AppStoryboard.swift in Sources */,
 				CEF1E7F527E6D143005D4272 /* QuestionLayoutViewModel.swift in Sources */,
 				D3C4423127E8966C00676C93 /* UIViewController+Alerts.swift in Sources */,
@@ -1408,6 +1433,7 @@
 				D3C5E28727F71D8500F65B8E /* LessonManager.swift in Sources */,
 				D3C4422727E878D800676C93 /* FirebaseAuthProvider.swift in Sources */,
 				62E418D327EA5A6900DFF03C /* ProfileManager.swift in Sources */,
+				CEA1C91127FA698900123225 /* FirebasePKGameMoveUpdater.swift in Sources */,
 				CEA1C90527FA26FD00123225 /* PKGameQuizViewModelFromPKGame.swift in Sources */,
 				D30CD1EB27E7A65F0021A5AA /* AuthProvider.swift in Sources */,
 				629090A827E8D02200941A3B /* CurrentBookViewModel.swift in Sources */,
@@ -1417,7 +1443,9 @@
 				CEA1C7B127FA145800123225 /* MatchVocabToDefinitionQuestionConstructor.swift in Sources */,
 				CEA1C7AF27FA145800123225 /* Question.swift in Sources */,
 				D3C4424527E9F2FC00676C93 /* BookManager.swift in Sources */,
+				CEA1C90B27FA684500123225 /* PKGameRenderer.swift in Sources */,
 				62165B6A27F21880004BC620 /* ChangeEmailViewController.swift in Sources */,
+				CEA1C91527FA7D0D00123225 /* PKGameOverviewViewModelFromOutcome.swift in Sources */,
 				62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */,
 				624989DE27E7395E0092FC1B /* LearningBooksViewController.swift in Sources */,
 				624989E527E742690092FC1B /* RecommendedBookCollectionViewCell.swift in Sources */,

@@ -50,6 +50,10 @@ struct PKGameMove {
         try container.encode(id, forKey: .id)
         try container.encode(wrapper, forKey: .question)
     }
+    
+    func isRepeated(with other: PKGameMove) -> Bool {
+        return self.question.isEqual(to: other.question) && self.player == other.player
+    }
 }
 
 extension PKGameMove: Codable {}

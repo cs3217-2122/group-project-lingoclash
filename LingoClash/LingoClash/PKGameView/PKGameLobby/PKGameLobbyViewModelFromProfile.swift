@@ -21,7 +21,7 @@ class PKGameLobbyViewModelFromProfile: PKGameLobbyViewModel {
         firstly {
             matchFinder.findGame(playerProfile: playerProfile)
         }.done { game in
-            self.pkGameQuizViewModel.value = PKGameQuizViewModelFromPKGame(game: game)
+            self.pkGameQuizViewModel.value = PKGameQuizViewModelFromPKGame(game: game, currentPlayerProfile: self.playerProfile)
         }
     }
 

@@ -18,4 +18,4 @@ struct Profile {
     
 }
 
-extension Profile: Codable {}
+extension Profile: Codable, Hashable {}

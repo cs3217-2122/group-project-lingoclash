@@ -68,10 +68,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="l8w-iM-dry">
+                                <rect key="frame" x="0.0" y="-52" width="704" height="1047.5"/>
+                            </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynT-Mq-vCJ">
                                 <rect key="frame" x="0.0" y="120" width="704" height="825.5"/>
                                 <connections>
-                                    <segue destination="wK9-Jz-udr" kind="embed" id="T7m-hF-hev"/>
+                                    <segue destination="wK9-Jz-udr" kind="embed" identifier="segueFromPKGameQuizToQuestionVC" id="T7m-hF-hev"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89F-ve-CDC">
@@ -143,11 +146,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="trailing" secondItem="89F-ve-CDC" secondAttribute="trailing" constant="20" id="1fE-aH-1D0"/>
+                            <constraint firstItem="l8w-iM-dry" firstAttribute="leading" secondItem="gU8-OW-6Bv" secondAttribute="leading" id="4Ie-YY-d66"/>
+                            <constraint firstItem="l8w-iM-dry" firstAttribute="bottom" secondItem="gU8-OW-6Bv" secondAttribute="bottom" id="4zO-V5-sc3"/>
+                            <constraint firstItem="gU8-OW-6Bv" firstAttribute="top" secondItem="l8w-iM-dry" secondAttribute="top" constant="52" id="7hr-XA-PFf"/>
                             <constraint firstItem="ynT-Mq-vCJ" firstAttribute="leading" secondItem="gU8-OW-6Bv" secondAttribute="leading" id="JdZ-Vs-77E"/>
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="bottom" secondItem="iyY-Wu-QCP" secondAttribute="bottom" constant="11" id="Qub-U6-xPU"/>
                             <constraint firstItem="ynT-Mq-vCJ" firstAttribute="bottom" secondItem="gU8-OW-6Bv" secondAttribute="bottom" constant="-50" id="S5r-iv-Zrl"/>
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="trailing" secondItem="iyY-Wu-QCP" secondAttribute="trailing" constant="32" id="Spw-hk-wGt"/>
                             <constraint firstItem="89F-ve-CDC" firstAttribute="centerX" secondItem="gU8-OW-6Bv" secondAttribute="centerX" id="Uxq-BX-3D6"/>
+                            <constraint firstItem="gU8-OW-6Bv" firstAttribute="trailing" secondItem="l8w-iM-dry" secondAttribute="trailing" id="WNE-lA-cS5"/>
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="top" secondItem="89F-ve-CDC" secondAttribute="top" constant="-10" id="WgD-ij-G5Y"/>
                             <constraint firstItem="89F-ve-CDC" firstAttribute="leading" secondItem="gU8-OW-6Bv" secondAttribute="leading" constant="20" id="nim-sX-8PD"/>
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="trailing" secondItem="ynT-Mq-vCJ" secondAttribute="trailing" id="rem-Z2-pxP"/>
@@ -407,6 +414,7 @@
     </scenes>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="gradient" width="3000" height="2000"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="ribbon" width="1777" height="569"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

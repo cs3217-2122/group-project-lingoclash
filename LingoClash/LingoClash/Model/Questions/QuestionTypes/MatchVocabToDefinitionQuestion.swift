@@ -7,6 +7,8 @@
 
 /// Match a vocabulary to its definition
 struct MatchVocabToDefinitionQuestion: TwoDisjointSetOptionQuestion, Codable {
+
+    
     static let vocabsTestedCount = optionsCount
     static let optionsCount: Int = 4
     let vocabsTested: Set<Vocab>
@@ -28,4 +30,12 @@ struct MatchVocabToDefinitionQuestion: TwoDisjointSetOptionQuestion, Codable {
         return response == answer
     }
     
+    func isEqual(to other: Question) -> Bool {
+        guard let other = other as? MatchVocabToDefinitionQuestion else {
+            return false
+        }
+        return self == other
+    }
 }
+
+extension MatchVocabToDefinitionQuestion: Equatable {}

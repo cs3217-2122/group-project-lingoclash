@@ -34,7 +34,7 @@ class PKGameLobbyViewController: UIViewController {
             return
         }
         
-        viewModel.pkGameQuizViewModel.bind { [unowned self] (_) -> Void in
+        viewModel.pkGameQuizViewModel.bind { [self] (_) -> Void in
             self.startPKGame()
         }
 

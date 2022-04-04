@@ -27,4 +27,13 @@ struct DefinitionOptionQuestion: SimpleOptionQuestion, Codable {
         }
         return response == answer
     }
+    
+    func isEqual(to other: Question) -> Bool {
+        guard let other = other as? DefinitionOptionQuestion else {
+            return false
+        }
+        return self == other
+    }
 }
+
+extension DefinitionOptionQuestion: Equatable {}
