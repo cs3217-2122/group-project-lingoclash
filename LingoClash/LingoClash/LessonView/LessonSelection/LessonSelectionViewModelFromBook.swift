@@ -26,10 +26,10 @@ class LessonSelectionViewModelFromBook: LessonSelectionViewModel {
     
     func reloadLessons() {
         // TODO: TO replace with actual data fetching
-        self.lessons = makeShiftGetter(book: book)
-        self.lessonTableViewModels.value = self.lessons.map { LessonTableCellViewModelFromLesson(lesson: $0) }
-        updateStarsObtained()
-        updateLevelsPassed()
+//        self.lessons = makeShiftGetter(book: book)
+//        self.lessonTableViewModels.value = self.lessons.map { LessonTableCellViewModelFromLesson(lesson: $0) }
+//        updateStarsObtained()
+//        updateLevelsPassed()
     }
     
     private func updateStarsObtained() {

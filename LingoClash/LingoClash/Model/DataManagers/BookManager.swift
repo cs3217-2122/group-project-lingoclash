@@ -7,10 +7,6 @@
 
 import PromiseKit
 
-// TODO: move to own file
-enum DataManagerError: Error {
-    case dataNotFound
-}
 
 class BookManager: DataManager<BookData> {
     
@@ -35,7 +31,7 @@ class BookManager: DataManager<BookData> {
             guard let book = book else {
                 return Promise.reject(reason: DataManagerError.dataNotFound)
             }
-
+            
             return firstly {
                 LessonManager().getManyReference(target: "book_id", id: book.id)
             }.then { lessons -> Promise<Void> in
@@ -54,7 +50,7 @@ class BookManager: DataManager<BookData> {
             guard let categoryId = book?.category_id else {
                 return Promise.reject(reason: DataManagerError.dataNotFound)
             }
-
+            
             return firstly {
                 BookCategoryManager().getOne(id: categoryId)
             }.done { bookCategoryData in
@@ -68,15 +64,15 @@ class BookManager: DataManager<BookData> {
                 guard !profileBooksData.isEmpty else {
                     return
                 }
-
+                
                 profileBook = profileBooksData[0]
             }
         }.compactMap {
             guard let book = book,
-                    let bookCategory = bookCategory else {
-                return nil
-            }
-
+                  let bookCategory = bookCategory else {
+                      return nil
+                  }
+            
             return Book(
                 bookData: book,
                 vocabsByLesson: vocabsByLesson,
@@ -122,14 +118,14 @@ class BookManager: DataManager<BookData> {
                 guard !profileBooksData.isEmpty else {
                     return
                 }
-
+                
                 profileBook = profileBooksData[0]
             }
         }.compactMap {
             guard let bookCategory = bookCategory else {
                 return nil
             }
-
+            
             return Book(
                 bookData: book,
                 vocabsByLesson: vocabsByLesson,

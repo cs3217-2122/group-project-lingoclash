@@ -7,34 +7,6 @@
 
 import Foundation
 
-struct BookCategory {
-    let id: Identifier
-    let name: String
-    
-    init(bookCategoryData: BookCategoryData) {
-        self.id = bookCategoryData.id
-        self.name = bookCategoryData.name
-    }
-}
-
-struct Lesson {
-    let id: Identifier
-    let vocabs: [Vocab]
-    let stars: Int
-    let name: String
-    
-    var questions = [Question]()
-    var didPass: Bool {
-        stars > 0
-    }
-    
-    init(lessonData: LessonData, vocabs: [Vocab], profileLessonData: ProfileLessonData?) {
-        self.id = lessonData.id
-        self.vocabs = vocabs
-        self.name = ""
-        self.stars = profileLessonData?.stars ?? 0
-    }
-}
 
 struct Book {
     let id: Identifier
@@ -68,7 +40,7 @@ struct Book {
         var bookLessons = [Lesson]()
         for (lessonData, vocabsData) in vocabsByLesson {
             let vocabs = vocabsData.map { Vocab(vocabData: $0) }
-        
+            
             bookLessons.append(Lesson(lessonData: lessonData, vocabs: vocabs, profileLessonData: profileLessonsByLessonId[lessonData.id]))
         }
         self.lessons = bookLessons

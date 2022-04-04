@@ -7,20 +7,6 @@
 
 import PromiseKit
 
-struct Profile {
-    var id: Identifier
-    let currentBook: Book?
-    let stars: Int
-    let starsToday: Int
-    
-    init(profileData: ProfileData, currentBook: Book?) {
-        self.id = profileData.id
-        self.stars = profileData.stars
-        self.starsToday = profileData.stars_today
-        self.currentBook = currentBook
-    }
-}
-
 class ProfileManager: DataManager<ProfileData> {
     
     private var authProvider: AuthProvider
@@ -72,7 +58,7 @@ class ProfileManager: DataManager<ProfileData> {
             guard let currentBookId = profile.book_id else {
                 return Promise<Void>.resolve(value: ())
             }
-
+            
             return firstly {
                 BookManager().getBook(id: currentBookId)
             }.done { book in
@@ -82,7 +68,7 @@ class ProfileManager: DataManager<ProfileData> {
             guard let profile = profile else {
                 return nil
             }
-
+            
             return Profile(profileData: profile, currentBook: currentBook)
         }
     }
