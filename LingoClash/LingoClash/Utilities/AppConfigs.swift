@@ -11,7 +11,7 @@ struct AppConfigs {
     
     struct General {
         // Preloads the db with some sample data. Only works in development scheme.
-        static let enablePreloadData = true
+        static let enablePreloadData = false
     }
     
     struct View {
