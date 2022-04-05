@@ -115,6 +115,8 @@ class PKGameEngine {
     }
     
     private func isGameComplete() -> Bool {
+//        return true
+//        return currQuestionIndex == 1
         return currQuestionIndex >= self.questions.count - 1
     }
     

@@ -10,6 +10,7 @@ import UIKit
 class PKGameQuizViewController: UIViewController {
     enum Segue {
         static let toQuestionViewController = "segueFromPKGameQuizToQuestionVC"
+        static let toOverviewViewController = "segueFromPKGameQuizToOverviewVC"
     }
     typealias VM = PKGameQuizViewModel
     weak var questionViewController: QuestionViewController?
@@ -46,6 +47,17 @@ class PKGameQuizViewController: UIViewController {
             playerOneScore.text = String(scores[0])
             playerTwoScore.text = String(scores[1])
         }
+        viewModel.gameOverviewViewModel.bindAndFire { [unowned self] in
+            self.navigateAfterQuizCompleted(vm: $0)
+            
+        }
+    }
+    
+    func navigateAfterQuizCompleted(vm: PKGameOverviewViewModel?) {
+        guard let overviewVM = vm else {
+            return
+        }
+        performSegue(withIdentifier: Segue.toOverviewViewController, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,8 +69,13 @@ class PKGameQuizViewController: UIViewController {
             questionViewController.datasource = self
             questionViewController.delegate = self
             
+        } else if segue.identifier == Segue.toOverviewViewController {
+            guard let gameOverviewViewModel = viewModel?.gameOverviewViewModel.value,
+                  let outcomeViewController = segue.destination as? PKGameOverviewViewController else {
+                return
+            }
+            outcomeViewController.viewModel = gameOverviewViewModel
         }
-        // TODO: Add segue logic to Outcome
     }
 }
 

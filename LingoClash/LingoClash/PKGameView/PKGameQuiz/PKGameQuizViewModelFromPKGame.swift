@@ -49,7 +49,7 @@ extension PKGameQuizViewModelFromPKGame {
     }
     
     func didCompleteGame(gameOutcome: PKGameOutcome) {
-        self.gameOverviewViewModel.value = PKGameOverviewViewModelFromOutcome(outcome: gameOutcome)
+        self.gameOverviewViewModel.value = PKGameOverviewViewModelFromOutcome(outcome: gameOutcome, currentPlayer: currentPlayerProfile)
     }
     
     func didAddMove(_ move: PKGameMove) {

@@ -65,7 +65,7 @@
             <objects>
                 <viewController id="Hjm-Wd-L7K" customClass="PKGameQuizViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mfg-W9-g6N">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="l8w-iM-dry">
@@ -100,20 +100,20 @@
                                             <constraint firstAttribute="height" constant="80" id="sAR-2i-POe"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPR-JH-go0">
-                                        <rect key="frame" x="120" y="36.5" width="58.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPR-JH-go0">
+                                        <rect key="frame" x="120" y="39.5" width="58.5" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIv-Cy-E8O">
-                                        <rect key="frame" x="483" y="36.5" width="61" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIv-Cy-E8O">
+                                        <rect key="frame" x="483" y="39.5" width="61" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfK-xx-jNB">
-                                        <rect key="frame" x="332" y="47" width="0.0" height="0.0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfK-xx-jNB">
+                                        <rect key="frame" x="332" y="50" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -132,14 +132,17 @@
                                     <constraint firstItem="LUM-U6-mbk" firstAttribute="centerY" secondItem="Nk2-nz-tQJ" secondAttribute="centerY" id="Bgs-yQ-Mmu"/>
                                     <constraint firstAttribute="height" constant="100" id="EH1-lK-LNl"/>
                                     <constraint firstItem="czZ-1c-9dP" firstAttribute="centerY" secondItem="ZT2-1G-wy7" secondAttribute="centerY" id="Flw-SW-rOl"/>
+                                    <constraint firstItem="gPR-JH-go0" firstAttribute="leading" secondItem="Nk2-nz-tQJ" secondAttribute="trailing" constant="30" id="HPN-QK-bus"/>
                                     <constraint firstItem="LUM-U6-mbk" firstAttribute="centerX" secondItem="Nk2-nz-tQJ" secondAttribute="centerX" id="JiT-4c-iOp"/>
                                     <constraint firstItem="XfK-xx-jNB" firstAttribute="centerX" secondItem="89F-ve-CDC" secondAttribute="centerX" id="KOD-N2-jys"/>
                                     <constraint firstItem="Nk2-nz-tQJ" firstAttribute="leading" secondItem="89F-ve-CDC" secondAttribute="leading" constant="10" id="OcB-HX-GaE"/>
                                     <constraint firstAttribute="trailing" secondItem="ZT2-1G-wy7" secondAttribute="trailing" constant="10" id="RSq-7H-DWK"/>
+                                    <constraint firstItem="ZT2-1G-wy7" firstAttribute="leading" secondItem="FIv-Cy-E8O" secondAttribute="trailing" constant="30" id="SZe-fF-6lL"/>
                                     <constraint firstItem="czZ-1c-9dP" firstAttribute="centerX" secondItem="ZT2-1G-wy7" secondAttribute="centerX" id="i05-wk-2xL"/>
                                     <constraint firstItem="Nk2-nz-tQJ" firstAttribute="centerY" secondItem="89F-ve-CDC" secondAttribute="centerY" id="n1g-iw-Jdd"/>
                                     <constraint firstItem="XfK-xx-jNB" firstAttribute="centerY" secondItem="FIv-Cy-E8O" secondAttribute="centerY" id="sHv-3g-tgZ"/>
                                     <constraint firstItem="gPR-JH-go0" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="XfK-xx-jNB" secondAttribute="leading" constant="10" id="t0y-4z-YoP"/>
+                                    <constraint firstItem="gPR-JH-go0" firstAttribute="centerY" secondItem="89F-ve-CDC" secondAttribute="centerY" id="ywe-F3-KaG"/>
                                     <constraint firstItem="gPR-JH-go0" firstAttribute="centerY" secondItem="XfK-xx-jNB" secondAttribute="centerY" id="zyB-w5-ecu"/>
                                 </constraints>
                             </view>
@@ -176,6 +179,7 @@
                         <outlet property="playerOneScore" destination="LUM-U6-mbk" id="1w9-eM-qwM"/>
                         <outlet property="playerTwoName" destination="FIv-Cy-E8O" id="9B7-zM-tJj"/>
                         <outlet property="playerTwoScore" destination="czZ-1c-9dP" id="GEF-LR-XPG"/>
+                        <segue destination="3LJ-bp-6rq" kind="presentation" identifier="segueFromPKGameQuizToOverviewVC" id="c2L-rf-b2e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQj-94-7Bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -185,13 +189,13 @@
         <!--Game Overview View Controller-->
         <scene sceneID="8kk-3w-DST">
             <objects>
-                <viewController id="3LJ-bp-6rq" customClass="PKGameOverviewViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="3LJ-bp-6rq" customClass="PKGameOverviewViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5WA-WK-HtL">
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM5-nU-v92" userLabel="top">
-                                <rect key="frame" x="0.0" y="24" width="820" height="350"/>
+                                <rect key="frame" x="0.0" y="0.0" width="820" height="350"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ribbon" translatesAutoresizingMaskIntoConstraints="NO" id="evM-Wj-ga0">
                                         <rect key="frame" x="183.5" y="102.5" width="453" height="145"/>
@@ -232,10 +236,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIK-QX-nex" userLabel="mid">
-                                <rect key="frame" x="0.0" y="374" width="820" height="686"/>
+                                <rect key="frame" x="0.0" y="350" width="820" height="710"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OVl-sq-FVR">
-                                        <rect key="frame" x="100" y="183" width="620" height="320.5"/>
+                                        <rect key="frame" x="100" y="195" width="620" height="320.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-aK-akE">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="320.5"/>
@@ -314,6 +318,9 @@
                                         <rect key="frame" x="100" y="34.5" width="260" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Home"/>
+                                        <connections>
+                                            <segue destination="yLs-V2-pcY" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="3Jd-HK-3LT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -343,10 +350,20 @@
                             <constraint firstItem="TM5-nU-v92" firstAttribute="trailing" secondItem="qBP-3F-rJL" secondAttribute="trailing" id="vXF-FO-0sF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="a2z-D4-Y0o"/>
+                    <connections>
+                        <outlet property="descriptionOutcome" destination="C6c-hh-gSS" id="epQ-DC-JZI"/>
+                        <outlet property="playerOneName" destination="tr5-9e-LjJ" id="Qmr-CF-pDE"/>
+                        <outlet property="playerOneScore" destination="xrC-gd-m4W" id="e61-nx-Ohx"/>
+                        <outlet property="playerTwoName" destination="yNM-QB-SIj" id="hLE-9r-qvY"/>
+                        <outlet property="playerTwoScore" destination="EJG-OC-IpF" id="0GC-yV-JkE"/>
+                        <outlet property="titleOutcome" destination="6o8-m3-Vrm" id="JVr-Ek-PK3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6v-oe-qbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="yLs-V2-pcY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1470.9677419354839" y="155.95763459841129"/>
+            <point key="canvasLocation" x="1470.7317073170732" y="155.59322033898306"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="kx0-cQ-dZF">
@@ -424,6 +441,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caI-WI-bBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="495" y="547"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="aPj-U4-nbP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="Sh5-fX-mL8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FIQ-ab-hMf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K03-2I-868" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="547"/>
         </scene>
     </scenes>
     <resources>
