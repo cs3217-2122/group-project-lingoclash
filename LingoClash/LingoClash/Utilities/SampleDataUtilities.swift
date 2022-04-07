@@ -78,8 +78,9 @@ class SampleDataUtilities {
         var lessonId = 0
         
         for i in 0...35 {
-            for _ in 0...9 {
-                let lesson = LessonData(id: String(lessonId), book_id: String(i))
+            for j in 0...9 {
+                let lesson = LessonData(
+                    id: String(lessonId), name: "Lesson \(j)", book_id: String(i))
                 lessons.append(lesson)
                 lessonId += 1
             }

@@ -21,7 +21,7 @@ struct Lesson {
     init(lessonData: LessonData, vocabs: [Vocab], profileLessonData: ProfileLessonData?) {
         self.id = lessonData.id
         self.vocabs = vocabs
-        self.name = ""
+        self.name = lessonData.name
         self.stars = profileLessonData?.stars ?? 0
     }
 }

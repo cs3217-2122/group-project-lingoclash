@@ -51,11 +51,15 @@ class FirebaseDataProvider: DataProvider {
         return model
     }
     
-    
     func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
         
         return Promise { seal in
-            db.collection(resource).getDocuments { (querySnapshot, error) in
+            let sortField = params.sort.field
+            let isDescending = params.sort.order == "desc"
+            let orderedCollection = db.collection(resource).order(
+                by: sortField , descending: isDescending)
+            
+            orderedCollection.getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
                     return seal.reject(error)
@@ -100,9 +104,12 @@ class FirebaseDataProvider: DataProvider {
     func getMany<T: Codable>(resource: String, params: GetManyParams) -> Promise<GetManyResult<T>> {
         
         return Promise { seal in
-            let collection = db.collection(resource)
+            let sortField = params.sort.field
+            let isDescending = params.sort.order == "desc"
+            let orderedCollection = db.collection(resource).order(
+                by: sortField , descending: isDescending)
             
-            collection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { (querySnapshot, error) in
+            orderedCollection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
                     return seal.reject(error)
@@ -126,7 +133,12 @@ class FirebaseDataProvider: DataProvider {
     func getManyReference<T: Codable>(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
         
         return Promise { seal in
-            var filteredCollection = db.collection(resource).whereField(params.target, isEqualTo: params.id)
+            let sortField = params.sort.field
+            let isDescending = params.sort.order == "desc"
+            let orderedCollection = db.collection(resource).order(
+                by: sortField , descending: isDescending)
+            
+            var filteredCollection = orderedCollection.whereField(params.target, isEqualTo: params.id)
             
             for (key, value) in params.filter {
                 filteredCollection = filteredCollection.whereField(key, isEqualTo: value)
@@ -194,6 +206,7 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
+    /// id matters
     func createMany<T: Record>(resource: String, params: CreateManyParams<T>) -> Promise<CreateManyResult<T>> {
         
         let batch = db.batch()
@@ -218,19 +231,34 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
+    func create<T: Record>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
         
         return Promise { seal in
             do {
-                let _ = try db.collection(resource).addDocument(from: params.data) { error in
-                    
-                    if let error = error {
-                        return seal.reject(error)
+                let docRef = db.collection(resource)
+                
+                if params.useAutoId {
+                    let _ = try docRef.addDocument(from: params.data) { error in
+                        
+                        if let error = error {
+                            return seal.reject(error)
+                        }
+                        
+                        // TODO: Modify the id to be ref.documentID
+                        return seal.fulfill(CreateResult(data: params.data))
                     }
-                    
-                    // TODO: Modify the id to be ref.documentID
-                    return seal.fulfill(CreateResult(data: params.data))
+                } else {
+                    let _ = try docRef.document(params.data.id).setData(from: params.data) { error in
+                        
+                        if let error = error {
+                            return seal.reject(error)
+                        }
+                        
+                        // TODO: Modify the id to be ref.documentID
+                        return seal.fulfill(CreateResult(data: params.data))
+                    }
                 }
+               
             } catch {
                 seal.reject(error)
             }
