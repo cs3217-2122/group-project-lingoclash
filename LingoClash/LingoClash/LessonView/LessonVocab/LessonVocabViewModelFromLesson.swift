@@ -8,7 +8,7 @@
 import Foundation
 
 class LessonVocabViewModelFromLesson: LessonVocabViewModel {
-    let lesson: OldLesson
+    let lesson: Lesson
     var currIndex: Dynamic<Int> = Dynamic(0)
     
     var currVocab: Dynamic<String>
@@ -20,7 +20,7 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
     var isFirstVocab: Dynamic<Bool>
     var lessonQuizViewModel: LessonQuizViewModel
     
-    init(lesson: OldLesson) {
+    init(lesson: Lesson) {
         assert(lesson.vocabs.count > 0)
         self.lesson = lesson
         let currVocab = lesson.vocabs[self.currIndex.value]
@@ -42,6 +42,7 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
     func playVocabPronounciation() {
         // TODO: Implement pronounciation
     }
+    
     func navigateNext() {
         guard !isLastVocab.value else {
             return

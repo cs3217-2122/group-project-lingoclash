@@ -15,8 +15,8 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var reviseButton: UIButton!
     @IBOutlet weak var learnButton: UIButton!
     
-    func configure(bookName: String, progress: String) {
-        bookNameLabel.text = bookName
-        progressLabel.text = "Progress: \(progress)"
+    func configure(book: Book) {
+        bookNameLabel.text = book.name
+        progressLabel.text = book.progress
     }
 }

@@ -21,7 +21,7 @@ class EditProfileViewController: UIViewController {
         
         setUpView()
         setUpBinders()
-        viewModel?.refreshProfile()
+        viewModel?.refresh()
     }
     
     func setUpView() {

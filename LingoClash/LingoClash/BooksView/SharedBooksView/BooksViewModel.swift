@@ -8,6 +8,6 @@
 import Combine
 
 protocol BooksViewModel {
-    var booksProgressPublisher: Published<[BookProgress]>.Publisher { get }
+    var booksPublisher: Published<[Book]>.Publisher { get }
     func refreshBooks()
 }

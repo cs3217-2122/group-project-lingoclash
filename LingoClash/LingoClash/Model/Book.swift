@@ -23,6 +23,10 @@ struct Book {
     let lessons: [Lesson]
     let status: BookStatus
     
+    var progress: String {
+        "Progress: \(passedLessons) / \(totalLessons)"
+    }
+    
     init(bookData: BookData, vocabsByLesson: [LessonData: [VocabData]], bookCategoryData: BookCategoryData, profileBookData: ProfileBookData?) {
         self.category = BookCategory(bookCategoryData: bookCategoryData)
         self.id = bookData.id

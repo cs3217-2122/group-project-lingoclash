@@ -7,17 +7,24 @@
 
 import Foundation
 import Combine
+import PromiseKit
 
 final class LearningBooksViewModel: BooksViewModel {
     
-    @Published var booksProgress: [BookProgress] = []
-    var booksProgressPublisher: Published<[BookProgress]>.Publisher {
-        $booksProgress
+    @Published var books: [Book] = []
+    var booksPublisher: Published<[Book]>.Publisher {
+        $books
     }
+    
+    private let bookManager = BookManager()
     
     func refreshBooks() {
         // TODO: Call firebase API to get books the user is learning
-        booksProgress = [BookProgress(name: "Chinese 1", progress: "0/10")]
+        firstly {
+            bookManager.getLearningBooks()
+        }.done { books in
+            self.books = books
+        }
     }
 }
 

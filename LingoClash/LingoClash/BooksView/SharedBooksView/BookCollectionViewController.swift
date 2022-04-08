@@ -11,7 +11,7 @@ import Combine
 private let reuseIdentifier = "BookCell"
 
 class BookCollectionViewController: UICollectionViewController {
-    var booksProgress: [BookProgress] = []
+    var books: [Book] = []
     var viewModel: BooksViewModel?
     private var cancellables: Set<AnyCancellable> = []
     
@@ -26,14 +26,14 @@ class BookCollectionViewController: UICollectionViewController {
             return
         }
         
-        viewModel.booksProgressPublisher.sink {[weak self] booksProgress in
-            self?.booksProgress = booksProgress
+        viewModel.booksPublisher.sink {[weak self] books in
+            self?.books = books
             self?.collectionView.reloadData()
         }.store(in: &cancellables)
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return booksProgress.count
+        return books.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -41,7 +41,7 @@ class BookCollectionViewController: UICollectionViewController {
         
         if let bookCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? BookCollectionViewCell {
             
-            bookCell.configure(bookName: booksProgress[indexPath.row].name, progress: booksProgress[indexPath.row].progress)
+            bookCell.configure(book: books[indexPath.row])
             
             ViewUtilities.styleCard(bookCell)
             

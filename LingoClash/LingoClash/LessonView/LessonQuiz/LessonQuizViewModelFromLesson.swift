@@ -6,7 +6,7 @@
 //
 
 class LessonQuizViewModelFromLesson: LessonQuizViewModel {    
-    let lesson: OldLesson
+    let lesson: Lesson
     let questionGenerator = QuestionsGenerator()
     let starsBenchmarks = [7,9,10]
     let initialLives = 2
@@ -34,7 +34,7 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
     
     
     /// Generates questions from lesson's vocabs, initialises fields
-    init(lesson: OldLesson) {
+    init(lesson: Lesson) {
         assert(lesson.vocabs.count > 0)
         self.lesson = lesson
         self.livesLeft = Dynamic(initialLives)
@@ -86,7 +86,7 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
         let vocabsTested = Set(lesson.vocabs)
         let didPass = quizScore >= minStarsBenchMark
         let quizResult = LessonQuizResult(starsObtained: starsObtained, didPass: didPass,
-                                          vocabsTested: vocabsTested, lessonName: lesson.lessonName)
+                                          vocabsTested: vocabsTested, lessonName: lesson.name)
         quizOutcomeViewModel = LessonQuizOutcomeViewModelFromQuizResult(quizResult: quizResult)
         if didPass {
             // TODO: update stars currency for user, update lesson for the stars

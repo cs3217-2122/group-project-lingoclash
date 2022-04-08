@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         setUpBinders()
-        viewModel.refreshProfile()
+        viewModel.refresh()
     }
     
     func setUpBinders() {

@@ -42,7 +42,7 @@ final class ProfileViewModel {
         }
     }
     
-    func refreshProfile() {
+    func refresh() {
         guard let authUser = Auth.auth().currentUser else {
             return
         }
@@ -84,7 +84,7 @@ final class ProfileViewModel {
         }.done {
             self.editProfileError = nil
             self.alertContent = AlertContent(title: "", message: "Your name is updated succesfully.")
-            self.refreshProfile()
+            self.refresh()
         }.catch { error in
             self.editProfileError = error.localizedDescription
         }
@@ -111,7 +111,7 @@ final class ProfileViewModel {
         }.done {
             self.changeEmailError = nil
             self.alertContent = AlertContent(title: "", message: "Your email is updated succesfully.")
-            self.refreshProfile()
+            self.refresh()
         }.catch { error in
             self.changeEmailError = error.localizedDescription
         }
@@ -145,7 +145,7 @@ final class ProfileViewModel {
         }.done {
             self.error = nil
             self.alertContent = AlertContent(title: "", message: "Your password is updated succesfully.")
-            self.refreshProfile()
+            self.refresh()
         }.catch { error in
             self.changePasswordError = error.localizedDescription
         }

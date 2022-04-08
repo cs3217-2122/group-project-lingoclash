@@ -58,7 +58,7 @@
                             <constraint firstItem="Zul-2c-ihB" firstAttribute="centerY" secondItem="jNm-RK-DqE" secondAttribute="centerY" id="8fh-B1-KId"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="oNG-uL-b2W"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="" id="oNG-uL-b2W"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJn-ZN-wrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,16 +111,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-aR-za8">
-                                        <rect key="frame" x="46" y="24" width="84.5" height="51"/>
+                                        <rect key="frame" x="46" y="24" width="67.5" height="110"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="book name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QF-uc-IJ4">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QF-uc-IJ4">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIb-XW-ljz">
-                                                <rect key="frame" x="0.0" y="30.5" width="84.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIb-XW-ljz">
+                                                <rect key="frame" x="0.0" y="60" width="67.5" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -157,7 +157,7 @@
                             <constraint firstItem="1xq-1v-q48" firstAttribute="bottom" secondItem="ZsL-GU-8DV" secondAttribute="top" constant="-10" id="m8z-n1-mpT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="TbT-ru-b47"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="" id="TbT-ru-b47"/>
                     <connections>
                         <outlet property="bookNameLabel" destination="1QF-uc-IJ4" id="GfY-N1-j0T"/>
                         <outlet property="containerView" destination="ZsL-GU-8DV" id="2CM-TY-vOU"/>
@@ -166,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEl-Ri-LhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5336" y="-66"/>
+            <point key="canvasLocation" x="5336" y="315"/>
         </scene>
         <!--LessonSelectionViewController-->
         <scene sceneID="PLv-PE-nOk">
@@ -176,12 +176,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSx-RO-ezo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5343" y="177"/>
+            <point key="canvasLocation" x="5336" y="757"/>
         </scene>
-        <!--Current Book Section View Controller-->
+        <!--Current Book Tab Bar Controller-->
         <scene sceneID="xGX-j0-uDW">
             <objects>
-                <tabBarController storyboardIdentifier="CurrentBookSectionViewController" id="PQh-3K-y6a" customClass="CurrentBookSectionViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CurrentBookSectionViewController" id="PQh-3K-y6a" customClass="CurrentBookTabBarController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MjK-RN-GFY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
