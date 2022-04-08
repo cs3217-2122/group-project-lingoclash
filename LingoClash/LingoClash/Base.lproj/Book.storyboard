@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Explore Book View Controller-->
         <scene sceneID="mLh-bU-0zk">
             <objects>
-                <viewController id="GEm-ea-1s1" sceneMemberID="viewController">
+                <viewController id="GEm-ea-1s1" customClass="ExploreBookViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jNm-RK-DqE">
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,6 +59,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="" id="oNG-uL-b2W"/>
+                    <connections>
+                        <outlet property="containerView" destination="Zul-2c-ihB" id="WVc-Lo-Uzf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJn-ZN-wrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -512,7 +515,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1G7-4b-OH4"/>
+        <segue reference="ZPf-VB-GhE"/>
         <segue reference="AfC-OO-m0s"/>
         <segue reference="faX-he-4YF"/>
     </inferredMetricsTieBreakers>
