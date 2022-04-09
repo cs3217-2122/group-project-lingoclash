@@ -8,5 +8,12 @@
 import UIKit
 
 class VocabCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var vocabLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    
+    func configure(vocab: String?) {
+        vocabLabel.text = vocab
+        vocabLabel.sizeToFit()
+        ViewUtilities.styleCard(contentView)
+    }
 }

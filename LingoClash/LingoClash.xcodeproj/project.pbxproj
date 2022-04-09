@@ -42,6 +42,14 @@
 		62A03E5A280176DD008FE249 /* BookButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E58280176CA008FE249 /* BookButtonDelegate.swift */; };
 		62A03E5C280177C7008FE249 /* LearnButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E5B280177C7008FE249 /* LearnButtonDelegate.swift */; };
 		62A03E5D28017856008FE249 /* LearnButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E5B280177C7008FE249 /* LearnButtonDelegate.swift */; };
+		62A03E5F2801CDD4008FE249 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E5E2801CDD4008FE249 /* AlignedCollectionViewFlowLayout.swift */; };
+		62A03E612801CE6E008FE249 /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E602801CE6E008FE249 /* Alignment.swift */; };
+		62A03E632801CE8C008FE249 /* HorizontalAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E622801CE8C008FE249 /* HorizontalAlignment.swift */; };
+		62A03E652801CE9D008FE249 /* VerticalAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E642801CE9D008FE249 /* VerticalAlignment.swift */; };
+		62A03E682801CF53008FE249 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E5E2801CDD4008FE249 /* AlignedCollectionViewFlowLayout.swift */; };
+		62A03E692801CF55008FE249 /* HorizontalAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E622801CE8C008FE249 /* HorizontalAlignment.swift */; };
+		62A03E6A2801CF57008FE249 /* VerticalAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E642801CE9D008FE249 /* VerticalAlignment.swift */; };
+		62A03E6B2801CF59008FE249 /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E602801CE6E008FE249 /* Alignment.swift */; };
 		62BB1CE128002135002CD31A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE028002135002CD31A /* HomeViewModel.swift */; };
 		62BB1CE228002135002CD31A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE028002135002CD31A /* HomeViewModel.swift */; };
 		62BB1CE428002766002CD31A /* UIViewController+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE328002766002CD31A /* UIViewController+Spinner.swift */; };
@@ -391,6 +399,10 @@
 		62A03E552801510F008FE249 /* ProfileLessonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLessonManager.swift; sourceTree = "<group>"; };
 		62A03E58280176CA008FE249 /* BookButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookButtonDelegate.swift; sourceTree = "<group>"; };
 		62A03E5B280177C7008FE249 /* LearnButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnButtonDelegate.swift; sourceTree = "<group>"; };
+		62A03E5E2801CDD4008FE249 /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		62A03E602801CE6E008FE249 /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
+		62A03E622801CE8C008FE249 /* HorizontalAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalAlignment.swift; sourceTree = "<group>"; };
+		62A03E642801CE9D008FE249 /* VerticalAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignment.swift; sourceTree = "<group>"; };
 		62BB1CE028002135002CD31A /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		62BB1CE328002766002CD31A /* UIViewController+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Spinner.swift"; sourceTree = "<group>"; };
 		62BB1CE62800308D002CD31A /* ExploreBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBookViewController.swift; sourceTree = "<group>"; };
@@ -573,8 +585,9 @@
 				CEF1E7DB27E60C7A005D4272 /* Dynamic.swift */,
 				D30CD1E727E79F3A0021A5AA /* KeychainManager.swift */,
 				D3C4423F27E8C65600676C93 /* Logger.swift */,
+				6204A04027DE4A500063100D /* ViewUtilities.swift */,
 				D3C4423427E8A95000676C93 /* Alert */,
-				D3C4422027E8712100676C93 /* View */,
+				D3C4422027E8712100676C93 /* AlignedCollectionViewFlowLayout */,
 				D3C4422127E8713400676C93 /* API */,
 			);
 			path = Utilities;
@@ -994,12 +1007,15 @@
 			path = DataProviders;
 			sourceTree = "<group>";
 		};
-		D3C4422027E8712100676C93 /* View */ = {
+		D3C4422027E8712100676C93 /* AlignedCollectionViewFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
-				6204A04027DE4A500063100D /* ViewUtilities.swift */,
+				62A03E5E2801CDD4008FE249 /* AlignedCollectionViewFlowLayout.swift */,
+				62A03E622801CE8C008FE249 /* HorizontalAlignment.swift */,
+				62A03E642801CE9D008FE249 /* VerticalAlignment.swift */,
+				62A03E602801CE6E008FE249 /* Alignment.swift */,
 			);
-			path = View;
+			path = AlignedCollectionViewFlowLayout;
 			sourceTree = "<group>";
 		};
 		D3C4422127E8713400676C93 /* API */ = {
@@ -1277,6 +1293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF1E81A27E74622005D4272 /* SimpleOptionQuestionLayoutViewController.swift in Sources */,
+				62A03E632801CE8C008FE249 /* HorizontalAlignment.swift in Sources */,
 				621E6D5127E9C4F10015BBD4 /* EditProfileViewController.swift in Sources */,
 				629090A227E8314100941A3B /* RecommendedBooksTableViewCell.swift in Sources */,
 				62CB30DF27EA6EFB0044CB24 /* ProfileBookManager.swift in Sources */,
@@ -1349,12 +1366,14 @@
 				CEF1E80D27E6F6B1005D4272 /* DefinitionOptionQuestionConstructor.swift in Sources */,
 				CEF1E81127E71944005D4272 /* LessonQuizViewModelFromLesson.swift in Sources */,
 				CE8D229427EEB7EE005E7058 /* AppStoryboard.swift in Sources */,
+				62A03E612801CE6E008FE249 /* Alignment.swift in Sources */,
 				CEF1E7F527E6D143005D4272 /* QuestionLayoutViewModel.swift in Sources */,
 				D3C4423127E8966C00676C93 /* UIViewController+Alerts.swift in Sources */,
 				D3C5E28027F71C7300F65B8E /* VocabData.swift in Sources */,
 				D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */,
 				CEF1E7EF27E6D117005D4272 /* QuestionViewController.swift in Sources */,
 				CEF02D7B27E9577C00C30E03 /* LessonQuizResult.swift in Sources */,
+				62A03E5F2801CDD4008FE249 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				CEF1E7DC27E60C7A005D4272 /* Dynamic.swift in Sources */,
 				CEF02D7327E8CAC400C30E03 /* LessonQuizProgressBarView.swift in Sources */,
 				6204A04127DE4A500063100D /* ViewUtilities.swift in Sources */,
@@ -1412,6 +1431,7 @@
 				624989DC27E736590092FC1B /* BookCollectionViewCell.swift in Sources */,
 				629090A027E8303F00941A3B /* RecommendedBooksTableViewController.swift in Sources */,
 				624BD58027E761FB006F0391 /* LearningBooksViewModel.swift in Sources */,
+				62A03E652801CE9D008FE249 /* VerticalAlignment.swift in Sources */,
 				62E418CA27EA524C00DFF03C /* LessonData.swift in Sources */,
 				62165B7627F2244C004BC620 /* FormUtilities.swift in Sources */,
 				CEC5887527EABED600809403 /* LessonSelectionViewModelFromBook.swift in Sources */,
@@ -1435,6 +1455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C5E1DE27F6E36B00F65B8E /* SimpleOptionQuestionLayoutViewController.swift in Sources */,
+				62A03E692801CF55008FE249 /* HorizontalAlignment.swift in Sources */,
 				D3C5E1DF27F6E36B00F65B8E /* EditProfileViewController.swift in Sources */,
 				D3C5E1E127F6E36B00F65B8E /* RecommendedBooksTableViewCell.swift in Sources */,
 				D3C5E1E227F6E36B00F65B8E /* ChangePasswordViewController.swift in Sources */,
@@ -1467,6 +1488,7 @@
 				D3C5E1F827F6E36B00F65B8E /* QuestionViewModel.swift in Sources */,
 				D3C5E1F927F6E36B00F65B8E /* TwoDisjointSetOptionQuestionLayoutViewModel.swift in Sources */,
 				D30E490A27FA1E670074CF2B /* Book.swift in Sources */,
+				62A03E682801CF53008FE249 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				D3C5E1FA27F6E36B00F65B8E /* OptionTableCell.swift in Sources */,
 				D3C5E1FB27F6E36B00F65B8E /* QuestionStatus.swift in Sources */,
 				D3C5E1FC27F6E36B00F65B8E /* QuestionFormat.swift in Sources */,
@@ -1526,6 +1548,7 @@
 				D3C5E22727F6E36B00F65B8E /* VocabCollectionCell.swift in Sources */,
 				D3C5E22827F6E36B00F65B8E /* LessonQuizViewController.swift in Sources */,
 				D3C5E22927F6E36B00F65B8E /* MatchVocabToDefinitionQuestion.swift in Sources */,
+				62A03E6B2801CF59008FE249 /* Alignment.swift in Sources */,
 				D3C5E22A27F6E36B00F65B8E /* LessonOverviewViewModelFromLesson.swift in Sources */,
 				D3C5E22B27F6E36B00F65B8E /* QuestionsGenerator.swift in Sources */,
 				D3C5E22C27F6E36B00F65B8E /* QuestionConstructor.swift in Sources */,
@@ -1571,6 +1594,7 @@
 				D3C5E25127F6E36B00F65B8E /* RecommendedBooksTableViewController.swift in Sources */,
 				D3C5E25227F6E36B00F65B8E /* LearningBooksViewModel.swift in Sources */,
 				D3686A0527F750EA0013B289 /* FormUtilities.swift in Sources */,
+				62A03E6A2801CF57008FE249 /* VerticalAlignment.swift in Sources */,
 				D3C5E25327F6E36B00F65B8E /* LessonData.swift in Sources */,
 				D3C5E25427F6E36B00F65B8E /* LessonSelectionViewModelFromBook.swift in Sources */,
 				D3686A0827F751520013B289 /* EditProfileFields.swift in Sources */,

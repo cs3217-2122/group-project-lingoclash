@@ -22,6 +22,7 @@ class LessonOverviewViewController: UIViewController {
                                              right: 50.0)
     private let itemsPerRow = CGFloat(3)
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var vocabCollection: UICollectionView!
     @IBAction func startLesson(_ sender: UIButton) {
         
@@ -35,7 +36,9 @@ class LessonOverviewViewController: UIViewController {
     }
     
     func styleUI() {
-        
+        let alignedFlowLayout = collectionView.collectionViewLayout as? AlignedCollectionViewFlowLayout
+        alignedFlowLayout?.horizontalAlignment = .left
+        alignedFlowLayout?.verticalAlignment = .top
     }
     
     func fillUI() {
@@ -74,40 +77,7 @@ extension LessonOverviewViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: AppConfigs.View.vocabCollectionCellIdentifier,
             for: indexPath) as! VocabCollectionCell
-        cell.textField.text = viewModel?.vocabs.value[indexPath.row]
+        cell.configure(vocab: viewModel?.vocabs.value[indexPath.row])
         return cell
     }
-    
-    
 }
-//
-//extension LessonOverviewViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(
-//      _ collectionView: UICollectionView,
-//      layout collectionViewLayout: UICollectionViewLayout,
-//      sizeForItemAt indexPath: IndexPath
-//    ) -> CGSize {
-//      // 2
-//      let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-//      let availableWidth = view.frame.width - paddingSpace
-//      let widthPerItem = availableWidth / itemsPerRow
-//
-//      return CGSize(width: widthPerItem, height: widthPerItem)
-//    }
-//
-//    func collectionView(
-//      _ collectionView: UICollectionView,
-//      layout collectionViewLayout: UICollectionViewLayout,
-//      insetForSectionAt section: Int
-//    ) -> UIEdgeInsets {
-//      return sectionInsets
-//    }
-//
-//    func collectionView(
-//      _ collectionView: UICollectionView,
-//      layout collectionViewLayout: UICollectionViewLayout,
-//      minimumLineSpacingForSectionAt section: Int
-//    ) -> CGFloat {
-//      return sectionInsets.left
-//    }
-//}
