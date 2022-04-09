@@ -54,12 +54,7 @@ class FirebaseDataProvider: DataProvider {
     func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
         
         return Promise { seal in
-            let sortField = params.sort.field
-            let isDescending = params.sort.order == "desc"
-            let orderedCollection = db.collection(resource).order(
-                by: sortField , descending: isDescending)
-            
-            orderedCollection.getDocuments { (querySnapshot, error) in
+            db.collection(resource).getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
                     return seal.reject(error)
@@ -104,12 +99,9 @@ class FirebaseDataProvider: DataProvider {
     func getMany<T: Codable>(resource: String, params: GetManyParams) -> Promise<GetManyResult<T>> {
         
         return Promise { seal in
-            let sortField = params.sort.field
-            let isDescending = params.sort.order == "desc"
-            let orderedCollection = db.collection(resource).order(
-                by: sortField , descending: isDescending)
+            let collection = db.collection(resource)
             
-            orderedCollection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { (querySnapshot, error) in
+            collection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
                     return seal.reject(error)
@@ -133,12 +125,7 @@ class FirebaseDataProvider: DataProvider {
     func getManyReference<T: Codable>(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
         
         return Promise { seal in
-            let sortField = params.sort.field
-            let isDescending = params.sort.order == "desc"
-            let orderedCollection = db.collection(resource).order(
-                by: sortField , descending: isDescending)
-            
-            var filteredCollection = orderedCollection.whereField(params.target, isEqualTo: params.id)
+            var filteredCollection = db.collection(resource).whereField(params.target, isEqualTo: params.id)
             
             for (key, value) in params.filter {
                 filteredCollection = filteredCollection.whereField(key, isEqualTo: value)
@@ -231,33 +218,19 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
-    func create<T: Record>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
+    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
         
         return Promise { seal in
             do {
-                let docRef = db.collection(resource)
-                
-                if params.useAutoId {
-                    let _ = try docRef.addDocument(from: params.data) { error in
-                        
-                        if let error = error {
-                            return seal.reject(error)
-                        }
-                        
-                        // TODO: Modify the id to be ref.documentID
-                        return seal.fulfill(CreateResult(data: params.data))
+                let _ = try db.collection(resource).addDocument(from: params.data) { error in
+
+                    if let error = error {
+                        return seal.reject(error)
                     }
-                } else {
-                    let _ = try docRef.document(params.data.id).setData(from: params.data) { error in
-                        
-                        if let error = error {
-                            return seal.reject(error)
-                        }
-                        
-                        // TODO: Modify the id to be ref.documentID
-                        return seal.fulfill(CreateResult(data: params.data))
-                    }
+                    // TODO: Modify the id to be ref.documentID
+                    return seal.fulfill(CreateResult(data: params.data))
                 }
+                
                
             } catch {
                 seal.reject(error)

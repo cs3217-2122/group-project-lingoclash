@@ -18,6 +18,7 @@ class BookManager: DataManager<BookData> {
         var book: BookData?
         var bookCategory: BookCategoryData?
         var profileBook: ProfileBookData?
+        var profileLessons = [ProfileLessonData]()
         var vocabsByLesson = [LessonData: [VocabData]]()
         
         return firstly {
@@ -27,11 +28,11 @@ class BookManager: DataManager<BookData> {
                 book = bookData
             }
         }.then { () -> Promise<Void> in
-            // Gets the lessons of the book
             guard let book = book else {
                 return Promise.reject(reason: DataManagerError.dataNotFound)
             }
             
+            // Gets the lessons of the book
             return firstly {
                 LessonManager().getManyReference(target: "book_id", id: book.id)
             }.then { lessons -> Promise<Void> in
@@ -61,11 +62,24 @@ class BookManager: DataManager<BookData> {
             firstly {
                 ProfileBookManager().getManyReference(target: "book_id", id: id)
             }.done { profileBooksData in
-                guard !profileBooksData.isEmpty else {
+                if !profileBooksData.isEmpty {
+                    profileBook = profileBooksData[0]
+                }
+            }
+        }.then { () -> Promise<Void> in
+            guard let profileBook = profileBook else {
+                return Promise<Void>()
+            }
+            
+            // Gets the profile lessons
+            return firstly {
+                ProfileLessonManager().getManyReference(target: "profile_book_id", id: profileBook.id)
+            }.done { profileLessonData in
+                guard !profileLessonData.isEmpty else {
                     return
                 }
                 
-                profileBook = profileBooksData[0]
+                profileLessons = profileLessonData
             }
         }.compactMap {
             guard let book = book,
@@ -77,62 +91,10 @@ class BookManager: DataManager<BookData> {
                 bookData: book,
                 vocabsByLesson: vocabsByLesson,
                 bookCategoryData: bookCategory,
-                profileBookData: profileBook)
+                profileBookData: profileBook,
+                profileLessonsData: profileLessons
+            )
         }
-        
-    }
-    
-    func getBook(book: BookData) -> Promise<Book> {
-        var bookCategory: BookCategoryData?
-        var profileBook: ProfileBookData?
-        var vocabsByLesson = [LessonData: [VocabData]]()
-        
-        return firstly {
-            // Gets the lessons of the book
-            firstly {
-                LessonManager().getManyReference(target: "book_id", id: book.id)
-            }.then { lessons -> Promise<Void> in
-                // Gets the vocabs of the lesson
-                let vocabsPromises = lessons.map { lessonData in
-                    firstly {
-                        VocabManager().getManyReference(target: "lesson_id", id: lessonData.id)
-                    }.done { vocabData in
-                        vocabsByLesson[lessonData] = vocabData
-                    }
-                }
-                return when(fulfilled: vocabsPromises)
-            }
-        }.then { () -> Promise<Void> in
-            // Gets the book category
-            firstly {
-                BookCategoryManager().getOne(id: book.category_id)
-            }.done { bookCategoryData in
-                bookCategory = bookCategoryData
-            }
-        }.then { () -> Promise<Void> in
-            // Gets the profile book
-            firstly {
-                ProfileBookManager().getManyReference(
-                    target: "book_id", id: book.id)
-            }.done { profileBooksData in
-                guard !profileBooksData.isEmpty else {
-                    return
-                }
-                
-                profileBook = profileBooksData[0]
-            }
-        }.compactMap {
-            guard let bookCategory = bookCategory else {
-                return nil
-            }
-            
-            return Book(
-                bookData: book,
-                vocabsByLesson: vocabsByLesson,
-                bookCategoryData: bookCategory,
-                profileBookData: profileBook)
-        }
-        
     }
     
     func getCompletedBooks() -> Promise<[Book]> {
@@ -185,12 +147,15 @@ class BookManager: DataManager<BookData> {
         }
     }
     
-    func getRecommendedBooks() -> Promise<[Book]> {
+    func getRecommendedBooks() -> Promise<[BooksForCategory]> {
         var recommendedBooks = [Book]()
+        var bookCategories = [BookCategoryData]()
+        var booksForCategories = [BooksForCategory]()
         
         return firstly {
             self.getList()
         }.then { booksData -> Promise<Void> in
+            // Gets all books
             let bookPromises = booksData.map { bookData in
                 firstly {
                     self.getBook(id: bookData.id)
@@ -200,13 +165,26 @@ class BookManager: DataManager<BookData> {
             }
             
             return when(fulfilled: bookPromises)
-        }.map {
-            recommendedBooks.filter { book in
-                book.status == .unread
+        }.then { () -> Promise<Void> in
+            // Gets the book category
+            firstly {
+                BookCategoryManager().getList()
+            }.done { bookCategoryData in
+                bookCategories = bookCategoryData
             }
+        }.map {
+            // Groups books by category name
+            for category in bookCategories {
+                let books = recommendedBooks.filter { book in
+                    book.status == .unread && book.category.name == category.name
+                }
+                let booksForCategory = BooksForCategory(category: category.name, books: books)
+                booksForCategories.append(booksForCategory)
+            }
+            return booksForCategories
         }
     }
-    
+        
     func markAsLearning(bookId: Identifier) -> Promise<ProfileBookData> {
         firstly {
             ProfileManager().getCurrentProfile()
@@ -215,7 +193,7 @@ class BookManager: DataManager<BookData> {
                 newRecord: ProfileBookData(
                     id: "-1",
                     profile_id: currentProfile.id,
-                    book_id: bookId, is_completed: false, profile_lessons: []))
+                    book_id: bookId, is_completed: false))
         }
     }
 }

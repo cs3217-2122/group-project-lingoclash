@@ -22,6 +22,7 @@ class LearningBooksViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let collectionViewController = segue.destination as? BookCollectionViewController {
             collectionViewController.viewModel = self.viewModel
+            collectionViewController.parentVC = self
         }
     }
 }

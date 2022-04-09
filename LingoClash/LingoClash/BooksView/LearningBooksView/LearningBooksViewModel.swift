@@ -11,6 +11,10 @@ import PromiseKit
 
 final class LearningBooksViewModel: BooksViewModel {
     
+    @Published var isRefreshing = false
+    var isRefreshingPublisher: Published<Bool>.Publisher {
+        $isRefreshing
+    }
     @Published var books: [Book] = []
     var booksPublisher: Published<[Book]>.Publisher {
         $books
@@ -18,12 +22,15 @@ final class LearningBooksViewModel: BooksViewModel {
     
     private let bookManager = BookManager()
     
-    func refreshBooks() {
-        // TODO: Call firebase API to get books the user is learning
+    func refresh() {
+        self.isRefreshing = true
         firstly {
             bookManager.getLearningBooks()
         }.done { books in
             self.books = books
+            self.isRefreshing = false
+        }.catch { error in
+            print(error)
         }
     }
 }

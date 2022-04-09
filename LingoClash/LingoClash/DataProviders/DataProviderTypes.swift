@@ -15,7 +15,6 @@ protocol Record: Codable {
 
 struct CreateParams<T: Codable> {
     let data: T
-    var useAutoId: Bool = true
 }
 
 struct CreateResult<T: Codable> {
@@ -69,7 +68,6 @@ struct GetOneResult<T: Codable> {
 
 struct GetManyParams {
     let ids: [Identifier]
-    let sort: SortPayload
 }
 
 struct GetManyResult<T: Codable> {

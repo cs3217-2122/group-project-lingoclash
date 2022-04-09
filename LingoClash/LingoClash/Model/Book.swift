@@ -27,7 +27,7 @@ struct Book {
         "Progress: \(passedLessons) / \(totalLessons)"
     }
     
-    init(bookData: BookData, vocabsByLesson: [LessonData: [VocabData]], bookCategoryData: BookCategoryData, profileBookData: ProfileBookData?) {
+    init(bookData: BookData, vocabsByLesson: [LessonData: [VocabData]], bookCategoryData: BookCategoryData, profileBookData: ProfileBookData?, profileLessonsData: [ProfileLessonData]) {
         self.category = BookCategory(bookCategoryData: bookCategoryData)
         self.id = bookData.id
         self.name = bookData.name
@@ -35,7 +35,7 @@ struct Book {
         
         var passedLessonsCount = 0
         var profileLessonsByLessonId = [Identifier: ProfileLessonData]()
-        let profileLessons = profileBookData?.profile_lessons ?? []
+        let profileLessons = profileLessonsData
         for profileLesson in profileLessons {
             if profileLesson.stars > 0 {
                 passedLessonsCount += 1

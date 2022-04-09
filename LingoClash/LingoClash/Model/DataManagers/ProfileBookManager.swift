@@ -11,3 +11,4 @@ class ProfileBookManager: DataManager<ProfileBookData> {
         super.init(resource: "profile_books")
     }
 }
+

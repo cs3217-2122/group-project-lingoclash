@@ -41,14 +41,9 @@ class DataManager<T: Record> {
         }
     }
     
-    func getMany(
-        ids: [Identifier],
-        field: String = AppConfigs.API.field,
-        order: String = AppConfigs.API.order
-    ) -> Promise<[T]> {
-        let sort = SortPayload(field: field, order: order)
-        let result: Promise<GetManyResult<T>> = dataProvider.getMany(
-            resource: self.resource, params:  GetManyParams(ids: ids, sort: sort))
+    func getMany(ids: [Identifier]) -> Promise<[T]> {
+
+        let result: Promise<GetManyResult<T>> = dataProvider.getMany(resource: self.resource, params: GetManyParams(ids: ids))
         
         return result.map { result in
             result.data

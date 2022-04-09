@@ -36,12 +36,16 @@
 		629090A527E85EFA00941A3B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090A427E85EFA00941A3B /* ProfileViewModel.swift */; };
 		629090AA27E8DE0300941A3B /* CurrentBookTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090A927E8DE0300941A3B /* CurrentBookTabBarController.swift */; };
 		629090AC27E8E3B900941A3B /* CurrentBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */; };
+		62A03E562801510F008FE249 /* ProfileLessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E552801510F008FE249 /* ProfileLessonManager.swift */; };
+		62A03E5728015158008FE249 /* ProfileLessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E552801510F008FE249 /* ProfileLessonManager.swift */; };
 		62BB1CE128002135002CD31A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE028002135002CD31A /* HomeViewModel.swift */; };
 		62BB1CE228002135002CD31A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE028002135002CD31A /* HomeViewModel.swift */; };
 		62BB1CE428002766002CD31A /* UIViewController+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE328002766002CD31A /* UIViewController+Spinner.swift */; };
 		62BB1CE528002766002CD31A /* UIViewController+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE328002766002CD31A /* UIViewController+Spinner.swift */; };
 		62BB1CE72800308D002CD31A /* ExploreBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE62800308D002CD31A /* ExploreBookViewController.swift */; };
 		62BB1CE82800308D002CD31A /* ExploreBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE62800308D002CD31A /* ExploreBookViewController.swift */; };
+		62BB1CEA28003F74002CD31A /* BooksForCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE928003F74002CD31A /* BooksForCategory.swift */; };
+		62BB1CEB28003F74002CD31A /* BooksForCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE928003F74002CD31A /* BooksForCategory.swift */; };
 		62C04A0F27DDE59E002D2497 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */; };
 		62C04A1127DDE67F002D2497 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1027DDE67F002D2497 /* LoginViewController.swift */; };
 		62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C04A1427DDEB10002D2497 /* HomeViewController.swift */; };
@@ -380,9 +384,11 @@
 		629090A427E85EFA00941A3B /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		629090A927E8DE0300941A3B /* CurrentBookTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBookTabBarController.swift; sourceTree = "<group>"; };
 		629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBookViewController.swift; sourceTree = "<group>"; };
+		62A03E552801510F008FE249 /* ProfileLessonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLessonManager.swift; sourceTree = "<group>"; };
 		62BB1CE028002135002CD31A /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		62BB1CE328002766002CD31A /* UIViewController+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Spinner.swift"; sourceTree = "<group>"; };
 		62BB1CE62800308D002CD31A /* ExploreBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBookViewController.swift; sourceTree = "<group>"; };
+		62BB1CE928003F74002CD31A /* BooksForCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksForCategory.swift; sourceTree = "<group>"; };
 		62C04A0E27DDE59E002D2497 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		62C04A1027DDE67F002D2497 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		62C04A1427DDEB10002D2497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -656,12 +662,12 @@
 		629090A627E8D00B00941A3B /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				CE8D229E27EEBBD2005E7058 /* HomeNavigationViewController.swift */,
 				62BB1CE028002135002CD31A /* HomeViewModel.swift */,
-				62BB1CE62800308D002CD31A /* ExploreBookViewController.swift */,
+				CE8D229E27EEBBD2005E7058 /* HomeNavigationViewController.swift */,
 				62C04A1427DDEB10002D2497 /* HomeViewController.swift */,
-				629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */,
 				629090A927E8DE0300941A3B /* CurrentBookTabBarController.swift */,
+				62BB1CE62800308D002CD31A /* ExploreBookViewController.swift */,
+				629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -914,13 +920,14 @@
 			isa = PBXGroup;
 			children = (
 				D3C4423B27E8B17400676C93 /* DatabaseErrors.swift */,
+				62165B7727F2269F004BC620 /* FormFields */,
 				CEF1E80027E6E967005D4272 /* Questions */,
 				CEF1E7A627E50060005D4272 /* Currency */,
-				62165B7727F2269F004BC620 /* FormFields */,
 				D3F00CB627DFC5F200393ADC /* DataManagers */,
 				D3C5E28227F71C8E00F65B8E /* Records */,
 				D30E490827FA1E630074CF2B /* Book.swift */,
 				D30E490D27FA20140074CF2B /* BookCategory.swift */,
+				62BB1CE928003F74002CD31A /* BooksForCategory.swift */,
 				CEF1E7E727E61F58005D4272 /* OldLesson.swift */,
 				CEF1E7E927E61F68005D4272 /* Vocab.swift */,
 				624BD58A27E7A431006F0391 /* BookProgress.swift */,
@@ -1081,6 +1088,7 @@
 				D3C4424427E9F2FC00676C93 /* BookManager.swift */,
 				D3C5E28627F71D8500F65B8E /* LessonManager.swift */,
 				D3C5E28927F71DA200F65B8E /* VocabManager.swift */,
+				62A03E552801510F008FE249 /* ProfileLessonManager.swift */,
 				62CB30DE27EA6EFB0044CB24 /* ProfileBookManager.swift */,
 				62E418D227EA5A6900DFF03C /* ProfileManager.swift */,
 			);
@@ -1266,12 +1274,14 @@
 				62CB30DF27EA6EFB0044CB24 /* ProfileBookManager.swift in Sources */,
 				624BD58D27E7A673006F0391 /* RecommendedBooksViewController.swift in Sources */,
 				CEF1E7E027E60D5C005D4272 /* LessonVocabViewModel.swift in Sources */,
+				62BB1CEA28003F74002CD31A /* BooksForCategory.swift in Sources */,
 				CEC5886C27EA37E900809403 /* VocabsLearntTableCell.swift in Sources */,
 				CEF1E80427E6ED96005D4272 /* TwoDisjointSetOptionQuestion.swift in Sources */,
 				CEF1E7FB27E6D591005D4272 /* Question.swift in Sources */,
 				62165B7127F218A0004BC620 /* ProfileViewController.swift in Sources */,
 				620DF3CC27F2315F006A9E5F /* ChangePasswordFields.swift in Sources */,
 				D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */,
+				62A03E562801510F008FE249 /* ProfileLessonManager.swift in Sources */,
 				CEF1E7EA27E61F68005D4272 /* Vocab.swift in Sources */,
 				62E418CC27EA525600DFF03C /* ProfileBookData.swift in Sources */,
 				624989E127E73C4E0092FC1B /* CompletedBooksViewController.swift in Sources */,
@@ -1473,11 +1483,13 @@
 				62BB1CE528002766002CD31A /* UIViewController+Spinner.swift in Sources */,
 				D3C5E20F27F6E36B00F65B8E /* QuestionGenerationError.swift in Sources */,
 				D3C5E21027F6E36B00F65B8E /* QuestionViewModelFromQuestion.swift in Sources */,
+				62A03E5728015158008FE249 /* ProfileLessonManager.swift in Sources */,
 				D3C5E21127F6E36B00F65B8E /* ChangeEmailViewController.swift in Sources */,
 				D3C5E21227F6E36B00F65B8E /* FetchUtilities.swift in Sources */,
 				D3C5E28527F71D6A00F65B8E /* BookCategoryManager.swift in Sources */,
 				D3C5E21327F6E36B00F65B8E /* MatchVocabToDefinitionQuestionConstructor.swift in Sources */,
 				D3C5E21427F6E36B00F65B8E /* KeychainManager.swift in Sources */,
+				62BB1CEB28003F74002CD31A /* BooksForCategory.swift in Sources */,
 				D3C5E21527F6E36B00F65B8E /* LoginViewModel.swift in Sources */,
 				D3C5E21627F6E36B00F65B8E /* CurrencySystem.swift in Sources */,
 				D3C5E21727F6E36B00F65B8E /* TwoDisjointSetOptionQuestionLayoutViewController.swift in Sources */,

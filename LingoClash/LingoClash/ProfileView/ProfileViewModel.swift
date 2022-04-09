@@ -7,11 +7,10 @@
 
 import PromiseKit
 import Combine
-import FirebaseFirestore
-import FirebaseAuth
 
 final class ProfileViewModel {
     
+    @Published var isRefreshing = false
     @Published var error: String?
     @Published var editProfileError: String?
     @Published var changeEmailError: String?
@@ -23,9 +22,7 @@ final class ProfileViewModel {
     @Published var alertContent: AlertContent?
     
     private let authProvider: AuthProvider
-    private let profileDataManager = ProfileManager()
-    private let profileBookDataManager = ProfileManager()
-    private let db = Firestore.firestore()
+    private let profileManager = ProfileManager()
     
     init(authProvider: AuthProvider = AppConfigs.API.authProvider) {
         self.authProvider = authProvider
@@ -43,29 +40,17 @@ final class ProfileViewModel {
     }
     
     func refresh() {
-        guard let authUser = Auth.auth().currentUser else {
-            return
-        }
-        
-        db.collection("profiles").whereField("user_id", isEqualTo: authUser.uid).getDocuments { querySnapshot, err in
-            if let _ = err {
-                return
-            }
-            
-            guard let data = querySnapshot?.documents[0] else {
-                return
-            }
-            
-            self.name = authUser.displayName
-            self.email = authUser.email
-            
-            if let starsToday = data["stars_today"] as? Int {
-                self.starsToday = starsToday
-            }
-            
-            if let stars = data["stars"] as? Int {
-                self.totalStars = stars
-            }
+        self.isRefreshing = true
+        firstly {
+            profileManager.getCurrentProfile()
+        }.done { profile in
+            self.name = profile.name
+            self.email = profile.email
+            self.starsToday = profile.starsToday
+            self.totalStars = profile.stars
+            self.isRefreshing = false
+        }.catch { error in
+            print(error)
         }
     }
     

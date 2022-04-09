@@ -13,12 +13,13 @@ private let reuseIdentifier = "BookCell"
 class BookCollectionViewController: UICollectionViewController {
     var books: [Book] = []
     var viewModel: BooksViewModel?
+    weak var parentVC: UIViewController?
     private var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBinders()
-        viewModel?.refreshBooks()
+        viewModel?.refresh()
     }
     
     func setUpBinders() {
@@ -29,6 +30,14 @@ class BookCollectionViewController: UICollectionViewController {
         viewModel.booksPublisher.sink {[weak self] books in
             self?.books = books
             self?.collectionView.reloadData()
+        }.store(in: &cancellables)
+        
+        viewModel.isRefreshingPublisher.sink {[weak self] isRefreshing in
+            if isRefreshing {
+                self?.parentVC?.showSpinner()
+            } else {
+                self?.parentVC?.removeSpinner()
+            }
         }.store(in: &cancellables)
     }
 

@@ -12,11 +12,11 @@ private let collectionCellReuseIdentifier = "RecommendedBookCollectionCell"
 
 class RecommendedBooksTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    private var books: [String] = []
+    private var books = [Book]()
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    func configure(books: [String]) {
+    func configure(books: [Book]) {
         self.books = books
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
@@ -31,7 +31,7 @@ class RecommendedBooksTableViewCell: UITableViewCell, UICollectionViewDataSource
         var cell = UICollectionViewCell()
         if let bookCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellReuseIdentifier, for: indexPath) as? RecommendedBookCollectionViewCell {
             
-            bookCell.configure(bookName: books[indexPath.row])
+            bookCell.configure(bookName: books[indexPath.row].name)
             
             ViewUtilities.styleCard(bookCell.containerView)
             

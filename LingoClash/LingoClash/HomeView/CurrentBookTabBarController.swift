@@ -32,7 +32,7 @@ class CurrentBookTabBarController: UITabBarController {
         }.store(in: &cancellables)
         
         viewModel?.$isRefreshing.sink {[weak self] isRefreshing in
-            if let isRefreshing = isRefreshing, isRefreshing {
+            if isRefreshing {
                 self?.parent?.showSpinner()
             } else {
                 self?.parent?.removeSpinner()

@@ -9,7 +9,7 @@ import Combine
 import PromiseKit
 
 class HomeViewModel {
-    @Published var isRefreshing: Bool?
+    @Published var isRefreshing = false
     @Published var profile: Profile?
     @Published var currentBook: Book?
     @Published var lessonSelectionViewModel: LessonSelectionViewModel?
@@ -27,8 +27,8 @@ class HomeViewModel {
                 self.lessonSelectionViewModel = LessonSelectionViewModelFromBook(book: book)
             }
             self.isRefreshing = false
-        }.catch { err in
-            print(err)
+        }.catch { error in
+            print(error)
         }
     }
 }

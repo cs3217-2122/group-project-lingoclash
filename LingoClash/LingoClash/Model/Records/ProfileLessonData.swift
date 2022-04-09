@@ -7,6 +7,7 @@
 
 struct ProfileLessonData {
     var id: Identifier
+    let profile_book_id: Identifier
     let lesson_id: Identifier
     let stars: Int
 }

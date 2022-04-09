@@ -65,6 +65,14 @@ class ProfileViewController: UIViewController {
                 }
             }
         }.store(in: &cancellables)
+        
+        viewModel.$isRefreshing.sink {[weak self] isRefreshing in
+            if isRefreshing {
+                self?.showSpinner()
+            } else {
+                self?.removeSpinner()
+            }
+        }.store(in: &cancellables)
     }
     
     @IBAction func logoutTapped(_ sender: Any) {

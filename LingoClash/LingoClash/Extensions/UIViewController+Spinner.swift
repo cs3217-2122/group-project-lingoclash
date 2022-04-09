@@ -18,6 +18,8 @@ extension UIViewController {
         activityIndicator.center = activityView.center
         activityIndicator.startAnimating()
         activityView.addSubview(activityIndicator)
+        activityView.backgroundColor = .white
+        activityView.alpha = 0.3
         self.view.addSubview(activityView)
         spinnerView = activityView
     }
