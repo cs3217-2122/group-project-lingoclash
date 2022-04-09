@@ -50,7 +50,7 @@ class BookCollectionViewController: UICollectionViewController {
         
         if let bookCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? BookCollectionViewCell {
             
-            bookCell.configure(book: books[indexPath.row])
+            bookCell.configure(book: books[indexPath.row], delegate: self)
             
             ViewUtilities.styleCard(bookCell)
             
@@ -59,5 +59,14 @@ class BookCollectionViewController: UICollectionViewController {
         
         return cell
     }
-
 }
+
+extension BookCollectionViewController: BookButtonDelegate {
+    func learnButtonTapped(lessonSelectionVM: LessonSelectionViewModel) {
+        let viewController = LessonSelectionViewController.instantiateFromAppStoryboard(.Lesson)
+        viewController.viewModel = lessonSelectionVM
+        self.show(viewController, sender: nil)
+    }
+}
+
+

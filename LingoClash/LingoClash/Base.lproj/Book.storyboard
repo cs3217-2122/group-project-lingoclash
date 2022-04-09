@@ -281,6 +281,9 @@
                                                         <color key="baseForegroundColor" name="TintColor"/>
                                                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="learnButtonTapped:" destination="aHg-xy-IQI" eventType="touchUpInside" id="OSb-gQ-esy"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -457,7 +460,7 @@
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="filled" title="Learn" cornerStyle="capsule"/>
                                                                         <connections>
-                                                                            <segue destination="Jfl-UW-3RA" kind="show" id="phU-gs-OVC"/>
+                                                                            <action selector="learnButtonTapped:" destination="4eh-HQ-jce" eventType="touchUpInside" id="AG2-sl-LTl"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -521,7 +524,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="ZPf-VB-GhE"/>
         <segue reference="MYV-Xs-1I4"/>
-        <segue reference="phU-gs-OVC"/>
+        <segue reference="aho-Ff-dmE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="TintColor">

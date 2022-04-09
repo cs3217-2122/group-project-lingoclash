@@ -55,7 +55,7 @@ class RecommendedBooksTableViewController: UITableViewController {
         var cell = UITableViewCell()
         if let booksCell = tableView.dequeueReusableCell(withIdentifier: tableCellReuseIdentifier, for: indexPath) as? RecommendedBooksTableViewCell {
             
-            booksCell.configure(books: booksForCategories[indexPath.section].books)
+            booksCell.configure(books: booksForCategories[indexPath.section].books, delegate: self)
             cell = booksCell
         }
 
@@ -86,6 +86,12 @@ class RecommendedBooksTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
-    
+}
 
+extension RecommendedBooksTableViewController: LearnButtonDelegate {
+    func learnButtonTapped(lessonSelectionVM: LessonSelectionViewModel) {
+        let viewController = LessonSelectionViewController.instantiateFromAppStoryboard(.Lesson)
+        viewController.viewModel = lessonSelectionVM
+        self.show(viewController, sender: nil)
+    }
 }

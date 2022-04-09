@@ -38,6 +38,10 @@
 		629090AC27E8E3B900941A3B /* CurrentBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */; };
 		62A03E562801510F008FE249 /* ProfileLessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E552801510F008FE249 /* ProfileLessonManager.swift */; };
 		62A03E5728015158008FE249 /* ProfileLessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E552801510F008FE249 /* ProfileLessonManager.swift */; };
+		62A03E59280176CA008FE249 /* BookButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E58280176CA008FE249 /* BookButtonDelegate.swift */; };
+		62A03E5A280176DD008FE249 /* BookButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E58280176CA008FE249 /* BookButtonDelegate.swift */; };
+		62A03E5C280177C7008FE249 /* LearnButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E5B280177C7008FE249 /* LearnButtonDelegate.swift */; };
+		62A03E5D28017856008FE249 /* LearnButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A03E5B280177C7008FE249 /* LearnButtonDelegate.swift */; };
 		62BB1CE128002135002CD31A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE028002135002CD31A /* HomeViewModel.swift */; };
 		62BB1CE228002135002CD31A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE028002135002CD31A /* HomeViewModel.swift */; };
 		62BB1CE428002766002CD31A /* UIViewController+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB1CE328002766002CD31A /* UIViewController+Spinner.swift */; };
@@ -385,6 +389,8 @@
 		629090A927E8DE0300941A3B /* CurrentBookTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBookTabBarController.swift; sourceTree = "<group>"; };
 		629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBookViewController.swift; sourceTree = "<group>"; };
 		62A03E552801510F008FE249 /* ProfileLessonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLessonManager.swift; sourceTree = "<group>"; };
+		62A03E58280176CA008FE249 /* BookButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookButtonDelegate.swift; sourceTree = "<group>"; };
+		62A03E5B280177C7008FE249 /* LearnButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnButtonDelegate.swift; sourceTree = "<group>"; };
 		62BB1CE028002135002CD31A /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		62BB1CE328002766002CD31A /* UIViewController+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Spinner.swift"; sourceTree = "<group>"; };
 		62BB1CE62800308D002CD31A /* ExploreBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreBookViewController.swift; sourceTree = "<group>"; };
@@ -612,6 +618,7 @@
 			children = (
 				624989E427E742690092FC1B /* RecommendedBookCollectionViewCell.swift */,
 				629090A127E8314100941A3B /* RecommendedBooksTableViewCell.swift */,
+				62A03E5B280177C7008FE249 /* LearnButtonDelegate.swift */,
 				6290909F27E8303F00941A3B /* RecommendedBooksTableViewController.swift */,
 				624BD58527E7A37D006F0391 /* RecommendedBooksViewModel.swift */,
 				624BD58C27E7A673006F0391 /* RecommendedBooksViewController.swift */,
@@ -641,6 +648,7 @@
 			isa = PBXGroup;
 			children = (
 				624989D927E735600092FC1B /* BookCollectionViewController.swift */,
+				62A03E58280176CA008FE249 /* BookButtonDelegate.swift */,
 				624989DB27E736590092FC1B /* BookCollectionViewCell.swift */,
 				624BD58727E7A3A2006F0391 /* BooksViewModel.swift */,
 			);
@@ -1358,6 +1366,7 @@
 				CEF1E7E627E61EF0005D4272 /* LessonOverviewViewModelFromLesson.swift in Sources */,
 				62165B7D27F226C7004BC620 /* LoginFields.swift in Sources */,
 				620DF3CE27F231BD006A9E5F /* EditProfileFields.swift in Sources */,
+				62A03E59280176CA008FE249 /* BookButtonDelegate.swift in Sources */,
 				CEF1E80927E6F3F4005D4272 /* QuestionsGenerator.swift in Sources */,
 				D30E490E27FA20140074CF2B /* BookCategory.swift in Sources */,
 				CEF1E80B27E6F644005D4272 /* QuestionConstructor.swift in Sources */,
@@ -1380,6 +1389,7 @@
 				D30E491227FAA6880074CF2B /* Profile.swift in Sources */,
 				62165B6A27F21880004BC620 /* ChangeEmailViewController.swift in Sources */,
 				62C04A1527DDEB10002D2497 /* HomeViewController.swift in Sources */,
+				62A03E5C280177C7008FE249 /* LearnButtonDelegate.swift in Sources */,
 				624989DE27E7395E0092FC1B /* LearningBooksViewController.swift in Sources */,
 				624989E527E742690092FC1B /* RecommendedBookCollectionViewCell.swift in Sources */,
 				624BD58B27E7A431006F0391 /* BookProgress.swift in Sources */,
@@ -1489,6 +1499,7 @@
 				D3C5E28527F71D6A00F65B8E /* BookCategoryManager.swift in Sources */,
 				D3C5E21327F6E36B00F65B8E /* MatchVocabToDefinitionQuestionConstructor.swift in Sources */,
 				D3C5E21427F6E36B00F65B8E /* KeychainManager.swift in Sources */,
+				62A03E5D28017856008FE249 /* LearnButtonDelegate.swift in Sources */,
 				62BB1CEB28003F74002CD31A /* BooksForCategory.swift in Sources */,
 				D3C5E21527F6E36B00F65B8E /* LoginViewModel.swift in Sources */,
 				D3C5E21627F6E36B00F65B8E /* CurrencySystem.swift in Sources */,
@@ -1496,6 +1507,7 @@
 				D3686A0A27F751740013B289 /* ChangeEmailFields.swift in Sources */,
 				D3686A0727F751440013B289 /* LoginFields.swift in Sources */,
 				D3C5E21827F6E36B00F65B8E /* LessonOverviewViewModel.swift in Sources */,
+				62A03E5A280176DD008FE249 /* BookButtonDelegate.swift in Sources */,
 				D3C5E21927F6E36B00F65B8E /* LessonSelectionViewController.swift in Sources */,
 				D3C5E21A27F6E36B00F65B8E /* StarsCurrencySystem.swift in Sources */,
 				D3C5E21B27F6E36B00F65B8E /* DefinitionOptionQuestionConstructor.swift in Sources */,
