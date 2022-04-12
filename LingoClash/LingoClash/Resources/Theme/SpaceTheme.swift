@@ -12,7 +12,7 @@ class SpaceTheme: ThemeProtocol {
     var mainFontName: String = "SF-Pro"
     var accent: UIColor = UIColor(named: "AccentColor-Space")!
     var background: UIColor = UIColor(named: "Background-Space")!
-    var tint: UIColor = UIColor(named: "Tint-Space")!
+    var tint: UIColor = UIColor(named: "TintColor-Space")!
     var green = UIColor(named: "Green-Space")!
     var red = UIColor(named: "Red-Space")!
     var primary = UIColor(named: "Primary-Space")!

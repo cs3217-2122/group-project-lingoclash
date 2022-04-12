@@ -11,7 +11,7 @@ class LightTheme: ThemeProtocol {
     var mainFontName: String = "SF-Pro"
     var accent: UIColor = UIColor(named: "AccentColor")!
     var background: UIColor = UIColor(named: "Background")!
-    var tint: UIColor = UIColor(named: "Tint")!
+    var tint: UIColor = UIColor(named: "TintColor")!
     var green = UIColor(named: "Green")!
     var red = UIColor(named: "Red")!
     var primary = UIColor(named: "Primary")!

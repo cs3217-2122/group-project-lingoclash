@@ -80,7 +80,7 @@
 		CE8D229227EEA8B0005E7058 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229027EEA8B0005E7058 /* Home.storyboard */; };
 		CE8D229427EEB7EE005E7058 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D229327EEB7EE005E7058 /* AppStoryboard.swift */; };
 		CE8D229627EEB8F4005E7058 /* UiViewController+InstantiateFromAppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D229527EEB8F4005E7058 /* UiViewController+InstantiateFromAppStoryboard.swift */; };
-		CE8D229C27EEBA29005E7058 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229A27EEBA29005E7058 /* Profile.storyboard */; };
+		CE8D229C27EEBA29005E7058 /* Profile_test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229A27EEBA29005E7058 /* Profile_test.storyboard */; };
 		CE8D229F27EEBBD2005E7058 /* HomeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D229E27EEBBD2005E7058 /* HomeNavigationViewController.swift */; };
 		CE8D22A227EEC059005E7058 /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D22A027EEC059005E7058 /* Book.storyboard */; };
 		CEC5886A27EA2A4F00809403 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886927EA2A4F00809403 /* StarView.swift */; };
@@ -178,6 +178,12 @@
 		D3AF1C1B28057DC300DCFA2E /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */; };
 		D3AF1C1C28057DF800DCFA2E /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1728057C7600DCFA2E /* LightTheme.swift */; };
 		D3AF1C1D28057DFA00DCFA2E /* SpaceTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1928057C8200DCFA2E /* SpaceTheme.swift */; };
+		D3AF1C212805919500DCFA2E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C1F2805919500DCFA2E /* Settings.storyboard */; };
+		D3AF1C252805924300DCFA2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C242805924300DCFA2E /* SettingsViewController.swift */; };
+		D3AF1C262805937100DCFA2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C242805924300DCFA2E /* SettingsViewController.swift */; };
+		D3AF1C27280593C500DCFA2E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C1F2805919500DCFA2E /* Settings.storyboard */; };
+		D3AF1C292805992E00DCFA2E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C282805992E00DCFA2E /* Profile.storyboard */; };
+		D3AF1C2A2805999500DCFA2E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C282805992E00DCFA2E /* Profile.storyboard */; };
 		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
 		D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
 		D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */; };
@@ -327,7 +333,7 @@
 		D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D22A027EEC059005E7058 /* Book.storyboard */; };
 		D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33282E927D4D42E00C80986 /* Assets.xcassets */; };
 		D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D228A27EE2986005E7058 /* Question.storyboard */; };
-		D3C5E26A27F6E36B00F65B8E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229A27EEBA29005E7058 /* Profile.storyboard */; };
+		D3C5E26A27F6E36B00F65B8E /* Profile_test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229A27EEBA29005E7058 /* Profile_test.storyboard */; };
 		D3C5E26B27F6E36B00F65B8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282E327D4D42700C80986 /* Main.storyboard */; };
 		D3C5E26C27F6E36B00F65B8E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229027EEA8B0005E7058 /* Home.storyboard */; };
 		D3C5E27A27F6F3E900F65B8E /* SampleDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E27927F6F3E900F65B8E /* SampleDataUtilities.swift */; };
@@ -427,7 +433,7 @@
 		CE8D229127EEA8B0005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		CE8D229327EEB7EE005E7058 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		CE8D229527EEB8F4005E7058 /* UiViewController+InstantiateFromAppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+InstantiateFromAppStoryboard.swift"; sourceTree = "<group>"; };
-		CE8D229B27EEBA29005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		CE8D229B27EEBA29005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile_test.storyboard; sourceTree = "<group>"; };
 		CE8D229E27EEBBD2005E7058 /* HomeNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationViewController.swift; sourceTree = "<group>"; };
 		CE8D22A127EEC059005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Book.storyboard; sourceTree = "<group>"; };
 		CEC5886927EA2A4F00809403 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
@@ -510,6 +516,9 @@
 		D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		D3AF1C1728057C7600DCFA2E /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		D3AF1C1928057C8200DCFA2E /* SpaceTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTheme.swift; sourceTree = "<group>"; };
+		D3AF1C202805919500DCFA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LingoClash/Storyboards/Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		D3AF1C242805924300DCFA2E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D3AF1C282805992E00DCFA2E /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LingoClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BD29E427DCE6350061E362 /* LingoClashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoClashTests.swift; sourceTree = "<group>"; };
 		D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -615,13 +624,12 @@
 			path = FormFields;
 			sourceTree = "<group>";
 		};
-		6232E41327DDDF4700107B89 /* ViewControllers */ = {
+		6232E41327DDDF4700107B89 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CE8D229327EEB7EE005E7058 /* AppStoryboard.swift */,
-				D33282E127D4D42700C80986 /* SplashViewController.swift */,
 			);
-			path = ViewControllers;
+			path = View;
 			sourceTree = "<group>";
 		};
 		624BD57D27E76060006F0391 /* BooksView */ = {
@@ -904,6 +912,7 @@
 		D33282DC27D4D42700C80986 /* LingoClash */ = {
 			isa = PBXGroup;
 			children = (
+				D3AF1C22280591DA00DCFA2E /* Splash */,
 				CEF1E7B127E50706005D4272 /* CurrencySystem */,
 				D398780C27DF8C1400B2F4ED /* Extensions */,
 				D3BD2A1827DF29A00061E362 /* DataProviders */,
@@ -912,12 +921,13 @@
 				CEF1E7DA27E60C4F005D4272 /* LessonView */,
 				CEF1E7ED27E6D0E2005D4272 /* QuestionView */,
 				D3BD2A1527DEE3F60061E362 /* SignUpView */,
+				D3AF1C23280591EE00DCFA2E /* Settings */,
 				629090A327E85ED000941A3B /* ProfileView */,
 				624BD57D27E76060006F0391 /* BooksView */,
 				629090A627E8D00B00941A3B /* HomeView */,
 				D3BD2A1427DEE3DE0061E362 /* LoginView */,
 				D3C4422B27E87EBC00676C93 /* ProfileView */,
-				6232E41327DDDF4700107B89 /* ViewControllers */,
+				6232E41327DDDF4700107B89 /* View */,
 				6204A03B27DE34040063100D /* Utilities */,
 				D33282F727D4E62F00C80986 /* Resources */,
 				D3AF1C1E28057FC500DCFA2E /* Storyboards */,
@@ -986,15 +996,33 @@
 		D3AF1C1E28057FC500DCFA2E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				D3AF1C282805992E00DCFA2E /* Profile.storyboard */,
 				D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */,
 				D33282E327D4D42700C80986 /* Main.storyboard */,
 				CE8D229027EEA8B0005E7058 /* Home.storyboard */,
-				CE8D229A27EEBA29005E7058 /* Profile.storyboard */,
+				CE8D229A27EEBA29005E7058 /* Profile_test.storyboard */,
+				D3AF1C1F2805919500DCFA2E /* Settings.storyboard */,
 				CE8D22A027EEC059005E7058 /* Book.storyboard */,
 				CE8D228D27EE2B5A005E7058 /* Lesson.storyboard */,
 				CE8D228A27EE2986005E7058 /* Question.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D3AF1C22280591DA00DCFA2E /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D33282E127D4D42700C80986 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		D3AF1C23280591EE00DCFA2E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D3AF1C242805924300DCFA2E /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		D3BD29E327DCE6350061E362 /* LingoClashTests */ = {
@@ -1277,12 +1305,14 @@
 				CE8D228F27EE2B5A005E7058 /* Lesson.storyboard in Resources */,
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
 				D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */,
+				D3AF1C212805919500DCFA2E /* Settings.storyboard in Resources */,
 				CE8D22A227EEC059005E7058 /* Book.storyboard in Resources */,
+				D3AF1C292805992E00DCFA2E /* Profile.storyboard in Resources */,
 				D3C5E29227F73C9900F65B8E /* Dev-Info.plist in Resources */,
 				D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */,
 				D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */,
 				CE8D228C27EE2986005E7058 /* Question.storyboard in Resources */,
-				CE8D229C27EEBA29005E7058 /* Profile.storyboard in Resources */,
+				CE8D229C27EEBA29005E7058 /* Profile_test.storyboard in Resources */,
 				D33282E527D4D42700C80986 /* Main.storyboard in Resources */,
 				CE8D229227EEA8B0005E7058 /* Home.storyboard in Resources */,
 			);
@@ -1302,11 +1332,13 @@
 			files = (
 				D3C5E26327F6E36B00F65B8E /* Lesson.storyboard in Resources */,
 				D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */,
+				D3AF1C27280593C500DCFA2E /* Settings.storyboard in Resources */,
 				D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */,
 				D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */,
 				D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */,
+				D3AF1C2A2805999500DCFA2E /* Profile.storyboard in Resources */,
 				D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */,
-				D3C5E26A27F6E36B00F65B8E /* Profile.storyboard in Resources */,
+				D3C5E26A27F6E36B00F65B8E /* Profile_test.storyboard in Resources */,
 				D30E490727FA12D20074CF2B /* GoogleService-Info.plist in Resources */,
 				D3C5E26B27F6E36B00F65B8E /* Main.storyboard in Resources */,
 				D3C5E26C27F6E36B00F65B8E /* Home.storyboard in Resources */,
@@ -1403,6 +1435,7 @@
 				D3C5E28027F71C7300F65B8E /* VocabData.swift in Sources */,
 				D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */,
 				CEF1E7EF27E6D117005D4272 /* QuestionViewController.swift in Sources */,
+				D3AF1C252805924300DCFA2E /* SettingsViewController.swift in Sources */,
 				CEF02D7B27E9577C00C30E03 /* LessonQuizResult.swift in Sources */,
 				62A03E5F2801CDD4008FE249 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				CEF1E7DC27E60C7A005D4272 /* Dynamic.swift in Sources */,
@@ -1519,6 +1552,7 @@
 				D3C5E1F827F6E36B00F65B8E /* QuestionViewModel.swift in Sources */,
 				D3C5E1F927F6E36B00F65B8E /* TwoDisjointSetOptionQuestionLayoutViewModel.swift in Sources */,
 				D30E490A27FA1E670074CF2B /* Book.swift in Sources */,
+				D3AF1C262805937100DCFA2E /* SettingsViewController.swift in Sources */,
 				62A03E682801CF53008FE249 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				D3C5E1FA27F6E36B00F65B8E /* OptionTableCell.swift in Sources */,
 				D3C5E1FB27F6E36B00F65B8E /* QuestionStatus.swift in Sources */,
@@ -1678,12 +1712,12 @@
 			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
-		CE8D229A27EEBA29005E7058 /* Profile.storyboard */ = {
+		CE8D229A27EEBA29005E7058 /* Profile_test.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CE8D229B27EEBA29005E7058 /* Base */,
 			);
-			name = Profile.storyboard;
+			name = Profile_test.storyboard;
 			sourceTree = "<group>";
 		};
 		CE8D22A027EEC059005E7058 /* Book.storyboard */ = {
@@ -1708,6 +1742,14 @@
 				D33282EC27D4D42E00C80986 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D3AF1C1F2805919500DCFA2E /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3AF1C202805919500DCFA2E /* Base */,
+			);
+			name = Settings.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
