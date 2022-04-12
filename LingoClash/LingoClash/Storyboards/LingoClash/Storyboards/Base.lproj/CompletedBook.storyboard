@@ -3,6 +3,7 @@
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uAd-HP-Gzd">
-                            <size key="itemSize" width="379" height="167"/>
+                            <size key="itemSize" width="460" height="438"/>
                             <size key="estimatedItemSize" width="379" height="167"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -26,20 +27,20 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCell" id="aHg-xy-IQI" customClass="BookCollectionViewCell" customModule="LingoClash" customModuleProvider="target">
-                                <rect key="frame" x="200.5" y="20" width="379" height="167"/>
+                                <rect key="frame" x="160" y="20" width="460" height="438"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yc0-2z-3LU">
-                                    <rect key="frame" x="0.0" y="0.0" width="379" height="167"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="460" height="438"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-gG-aVb">
-                                            <rect key="frame" x="60" y="113" width="259.5" height="31"/>
+                                            <rect key="frame" x="100.5" y="384" width="259.5" height="31"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-rn-aeu">
                                                     <rect key="frame" x="0.0" y="0.0" width="66.5" height="31"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="PK" cornerStyle="capsule">
-                                                        <color key="baseForegroundColor" name="TintColor"/>
+                                                        <color key="baseForegroundColor" name="Primary"/>
                                                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
                                                 </button>
@@ -47,7 +48,7 @@
                                                     <rect key="frame" x="96.5" y="0.0" width="66.5" height="31"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Revise" cornerStyle="capsule">
-                                                        <color key="baseForegroundColor" name="TintColor"/>
+                                                        <color key="baseForegroundColor" name="Primary"/>
                                                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
                                                 </button>
@@ -55,7 +56,7 @@
                                                     <rect key="frame" x="193" y="0.0" width="66.5" height="31"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Learn" cornerStyle="capsule">
-                                                        <color key="baseForegroundColor" name="TintColor"/>
+                                                        <color key="baseForegroundColor" name="Primary"/>
                                                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
                                                     <connections>
@@ -65,7 +66,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3rZ-Sw-Iau">
-                                            <rect key="frame" x="60" y="32" width="84.5" height="51"/>
+                                            <rect key="frame" x="100.5" y="32" width="84.5" height="51"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="book name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omh-HC-mZ4">
                                                     <rect key="frame" x="0.0" y="0.0" width="84.5" height="20.5"/>
@@ -82,7 +83,7 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                    <color key="backgroundColor" name="Primary"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="kaO-gG-aVb" secondAttribute="bottom" constant="23" id="0CK-Gi-Sws"/>
                                         <constraint firstItem="kaO-gG-aVb" firstAttribute="centerX" secondItem="yc0-2z-3LU" secondAttribute="centerX" id="1N1-pO-jms"/>
@@ -90,7 +91,7 @@
                                         <constraint firstItem="3rZ-Sw-Iau" firstAttribute="leading" secondItem="kaO-gG-aVb" secondAttribute="leading" id="Q30-WC-fZQ"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="379" height="167"/>
+                                <size key="customSize" width="460" height="438"/>
                                 <connections>
                                     <outlet property="PKButton" destination="CWs-rn-aeu" id="xrW-xS-btZ"/>
                                     <outlet property="bookNameLabel" destination="Omh-HC-mZ4" id="h9o-BF-qCe"/>
@@ -108,7 +109,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YI0-UM-dnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8248" y="385"/>
+            <point key="canvasLocation" x="8086.8292682926831" y="116.94915254237289"/>
         </scene>
         <!--Completed-->
         <scene sceneID="bXu-Ut-fQ6">
@@ -143,14 +144,11 @@
     </scenes>
     <resources>
         <image name="book-completed" width="30" height="30"/>
-        <namedColor name="TintColor">
-            <color red="0.0" green="0.5899999737739563" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Primary">
+            <color red="0.054999999701976776" green="0.40400001406669617" blue="0.50300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
