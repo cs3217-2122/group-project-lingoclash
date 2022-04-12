@@ -103,25 +103,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hww-aS-l4F">
-                                <rect key="frame" x="412" y="583" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="B7O-VS-9dY"/>
-                                    <constraint firstAttribute="width" constant="200" id="mla-bL-Row"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                <connections>
-                                    <segue destination="eV3-9N-ceU" kind="show" id="331-5b-3Gs"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar_1" translatesAutoresizingMaskIntoConstraints="NO" id="eQR-Hi-9T0">
+                                <rect key="frame" x="406" y="212" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kNh-UI-fz7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Hww-aS-l4F" firstAttribute="centerX" secondItem="fBK-U0-jUO" secondAttribute="centerX" id="DyV-38-E3i"/>
-                            <constraint firstItem="Hww-aS-l4F" firstAttribute="centerY" secondItem="fBK-U0-jUO" secondAttribute="centerY" id="MGF-hv-dlw"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jU0-Ln-7ep">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="bOS-1o-TPP">
@@ -149,13 +137,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQC-W9-fRD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4942" y="757"/>
+            <point key="canvasLocation" x="4983" y="745"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="R4B-Kc-kjk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dQe-5W-h0Q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fT5-KW-wHU"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" id="fT5-KW-wHU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uxo-76-rfj">
                         <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
@@ -171,11 +159,10 @@
             <point key="canvasLocation" x="3543" y="745"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="vP1-ck-3j2"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="avatar_1" width="128" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

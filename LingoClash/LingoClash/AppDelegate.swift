@@ -42,6 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Logger.info("Environment is: none")
         }
         
+        
+        // TODO: move this to subclass
+        UITabBar.appearance().barTintColor = .black
+        UITabBar.appearance().tintColor = .red
+
         return true
     }
     
