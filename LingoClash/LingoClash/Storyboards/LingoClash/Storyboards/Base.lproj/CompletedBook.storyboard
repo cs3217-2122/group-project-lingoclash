@@ -19,22 +19,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uAd-HP-Gzd">
-                            <size key="itemSize" width="460" height="438"/>
-                            <size key="estimatedItemSize" width="379" height="167"/>
+                            <size key="itemSize" width="600" height="250"/>
+                            <size key="estimatedItemSize" width="600" height="250"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCell" id="aHg-xy-IQI" customClass="BookCollectionViewCell" customModule="LingoClash" customModuleProvider="target">
-                                <rect key="frame" x="160" y="20" width="460" height="438"/>
+                                <rect key="frame" x="90" y="20" width="600" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yc0-2z-3LU">
-                                    <rect key="frame" x="0.0" y="0.0" width="460" height="438"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N1 Vocab" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIC-Y4-7Fa">
+                                            <rect key="frame" x="30" y="30" width="123" height="36"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                            <color key="textColor" name="PrimaryText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-gG-aVb">
-                                            <rect key="frame" x="100.5" y="384" width="259.5" height="31"/>
+                                            <rect key="frame" x="170.5" y="539" width="259.5" height="31"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-rn-aeu">
                                                     <rect key="frame" x="0.0" y="0.0" width="66.5" height="31"/>
@@ -65,38 +71,68 @@
                                                 </button>
                                             </subviews>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3rZ-Sw-Iau">
-                                            <rect key="frame" x="100.5" y="32" width="84.5" height="51"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QKK-Pv-MNM">
+                                            <rect key="frame" x="50" y="273" width="500" height="54"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="book name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omh-HC-mZ4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="84.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9F-fZ-yTL">
-                                                    <rect key="frame" x="0.0" y="30.5" width="84.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y16-3Q-lrk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/333" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6G-S7-SYQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="70.5" height="50"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                            <color key="textColor" name="PrimaryText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGz-3m-jeC">
+                                                            <rect key="frame" x="70.5" y="0.0" width="348.5" height="50"/>
+                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-white" translatesAutoresizingMaskIntoConstraints="NO" id="WCG-M7-8TG">
+                                                            <rect key="frame" x="419" y="0.0" width="30" height="50"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-Uf-dKL">
+                                                            <rect key="frame" x="449" y="0.0" width="15" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="15" id="J5z-xx-hxz"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="133" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aJ-2l-H65">
+                                                            <rect key="frame" x="464" y="0.0" width="36" height="50"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                            <color key="textColor" name="PrimaryText"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Gaj-iR-ZZD"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VK7-67-kqo">
+                                                    <rect key="frame" x="0.0" y="50" width="500" height="4"/>
+                                                    <color key="tintColor" name="PrimaryText"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="500" id="2Ws-j4-5Rm"/>
+                                                    </constraints>
+                                                </progressView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                     <color key="backgroundColor" name="Primary"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="kaO-gG-aVb" secondAttribute="bottom" constant="23" id="0CK-Gi-Sws"/>
-                                        <constraint firstItem="kaO-gG-aVb" firstAttribute="centerX" secondItem="yc0-2z-3LU" secondAttribute="centerX" id="1N1-pO-jms"/>
-                                        <constraint firstItem="3rZ-Sw-Iau" firstAttribute="top" secondItem="yc0-2z-3LU" secondAttribute="top" constant="32" id="K5I-Ba-bZj"/>
-                                        <constraint firstItem="3rZ-Sw-Iau" firstAttribute="leading" secondItem="kaO-gG-aVb" secondAttribute="leading" id="Q30-WC-fZQ"/>
+                                        <constraint firstItem="IIC-Y4-7Fa" firstAttribute="leading" secondItem="yc0-2z-3LU" secondAttribute="leading" constant="30" id="Dg2-en-5wS"/>
+                                        <constraint firstItem="IIC-Y4-7Fa" firstAttribute="top" secondItem="yc0-2z-3LU" secondAttribute="top" constant="30" id="T8F-IQ-alT"/>
+                                        <constraint firstItem="QKK-Pv-MNM" firstAttribute="centerY" secondItem="yc0-2z-3LU" secondAttribute="centerY" id="c3m-SF-iIq"/>
+                                        <constraint firstAttribute="bottom" secondItem="kaO-gG-aVb" secondAttribute="bottom" constant="30" id="deG-cq-LcG"/>
+                                        <constraint firstItem="kaO-gG-aVb" firstAttribute="centerX" secondItem="yc0-2z-3LU" secondAttribute="centerX" id="fa3-yh-ovx"/>
+                                        <constraint firstItem="QKK-Pv-MNM" firstAttribute="centerX" secondItem="yc0-2z-3LU" secondAttribute="centerX" id="jWm-Ey-hNn"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="460" height="438"/>
+                                <size key="customSize" width="600" height="600"/>
                                 <connections>
                                     <outlet property="PKButton" destination="CWs-rn-aeu" id="xrW-xS-btZ"/>
-                                    <outlet property="bookNameLabel" destination="Omh-HC-mZ4" id="h9o-BF-qCe"/>
                                     <outlet property="learnButton" destination="gQD-Xv-WtM" id="q2l-ka-5hB"/>
-                                    <outlet property="progressLabel" destination="R9F-fZ-yTL" id="9WG-y4-2yu"/>
                                     <outlet property="reviseButton" destination="MRn-TK-NhC" id="oD4-9c-FAA"/>
                                 </connections>
                             </collectionViewCell>
@@ -144,8 +180,12 @@
     </scenes>
     <resources>
         <image name="book-completed" width="30" height="30"/>
+        <image name="star-white" width="30" height="30"/>
         <namedColor name="Primary">
             <color red="0.054999999701976776" green="0.40400001406669617" blue="0.50300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
