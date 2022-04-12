@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setUpView() {
         UITabBar.appearance().barTintColor = .black
-        UITabBar.appearance().tintColor = .red
+        UITabBar.appearance().tintColor = Theme.current.tint
     }
     
     private func setUpTheme() {

@@ -42,7 +42,7 @@
                             <constraint firstItem="QpW-td-VMI" firstAttribute="top" secondItem="F6O-GB-z5D" secondAttribute="top" constant="10" id="cyp-eo-kM0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zD7-kc-WBW"/>
+                    <navigationItem key="navigationItem" title="Settings" id="zD7-kc-WBW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgx-vu-P4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
