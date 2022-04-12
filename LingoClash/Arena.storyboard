@@ -60,7 +60,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arena" width="30" height="30"/>
+        <image name="arena" width="33" height="33"/>
         <image name="background_1" width="640" height="1136"/>
         <image name="undraw-game" width="916.77496337890625" height="612.0550537109375"/>
         <namedColor name="Secondary">
