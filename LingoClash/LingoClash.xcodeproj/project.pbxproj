@@ -186,6 +186,8 @@
 		D3AF1C2A2805999500DCFA2E /* Profile_2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C282805992E00DCFA2E /* Profile_2.storyboard */; };
 		D3AF1C2D28059F5200DCFA2E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C2B28059F5100DCFA2E /* Profile.storyboard */; };
 		D3AF1C2E28059FA400DCFA2E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C2B28059F5100DCFA2E /* Profile.storyboard */; };
+		D3AF1C302805DDDB00DCFA2E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */; };
+		D3AF1C312805DDE000DCFA2E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */; };
 		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
 		D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
 		D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */; };
@@ -522,6 +524,7 @@
 		D3AF1C242805924300DCFA2E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D3AF1C282805992E00DCFA2E /* Profile_2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile_2.storyboard; sourceTree = "<group>"; };
 		D3AF1C2C28059F5200DCFA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LingoClash/Storyboards/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LingoClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BD29E427DCE6350061E362 /* LingoClashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoClashTests.swift; sourceTree = "<group>"; };
 		D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -915,7 +918,7 @@
 		D33282DC27D4D42700C80986 /* LingoClash */ = {
 			isa = PBXGroup;
 			children = (
-				D3AF1C22280591DA00DCFA2E /* Splash */,
+				D3AF1C22280591DA00DCFA2E /* SplashView */,
 				CEF1E7B127E50706005D4272 /* CurrencySystem */,
 				D398780C27DF8C1400B2F4ED /* Extensions */,
 				D3BD2A1827DF29A00061E362 /* DataProviders */,
@@ -1013,12 +1016,13 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		D3AF1C22280591DA00DCFA2E /* Splash */ = {
+		D3AF1C22280591DA00DCFA2E /* SplashView */ = {
 			isa = PBXGroup;
 			children = (
 				D33282E127D4D42700C80986 /* SplashViewController.swift */,
+				D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */,
 			);
-			path = Splash;
+			path = SplashView;
 			sourceTree = "<group>";
 		};
 		D3AF1C23280591EE00DCFA2E /* Settings */ = {
@@ -1488,6 +1492,7 @@
 				D30E491427FAA6E70074CF2B /* Lesson.swift in Sources */,
 				62165B7427F218A0004BC620 /* ChangePasswordViewController.swift in Sources */,
 				D398780927DF6AB800B2F4ED /* DataProvider.swift in Sources */,
+				D3AF1C302805DDDB00DCFA2E /* SplashViewModel.swift in Sources */,
 				CEF1E7AE27E503B3005D4272 /* Account.swift in Sources */,
 				CEC5887727EAC6E700809403 /* LessonSelectorTableCell.swift in Sources */,
 				CEC5887327EABECC00809403 /* LessonSelectionViewModel.swift in Sources */,
@@ -1563,6 +1568,7 @@
 				D3C5E1FA27F6E36B00F65B8E /* OptionTableCell.swift in Sources */,
 				D3C5E1FB27F6E36B00F65B8E /* QuestionStatus.swift in Sources */,
 				D3C5E1FC27F6E36B00F65B8E /* QuestionFormat.swift in Sources */,
+				D3AF1C312805DDE000DCFA2E /* SplashViewModel.swift in Sources */,
 				D3C5E28B27F71DA200F65B8E /* VocabManager.swift in Sources */,
 				D3C5E1FD27F6E36B00F65B8E /* BookCategoryData.swift in Sources */,
 				D3C5E1FE27F6E36B00F65B8E /* QuestionScopeFactory.swift in Sources */,

@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setUpSampleData() {
-        guard AppConfigs.General.enablePreloadData else {
+        guard AppConfigs.Debug.enablePreloadData else {
             return
         }
         
