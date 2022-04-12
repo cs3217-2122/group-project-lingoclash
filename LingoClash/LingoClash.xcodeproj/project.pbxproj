@@ -188,6 +188,12 @@
 		D3AF1C2E28059FA400DCFA2E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C2B28059F5100DCFA2E /* Profile.storyboard */; };
 		D3AF1C302805DDDB00DCFA2E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */; };
 		D3AF1C312805DDE000DCFA2E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */; };
+		D3AF1C342805E33200DCFA2E /* RecommendedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C322805E33200DCFA2E /* RecommendedBook.storyboard */; };
+		D3AF1C362805E36A00DCFA2E /* LearningBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C352805E36900DCFA2E /* LearningBook.storyboard */; };
+		D3AF1C372805E36A00DCFA2E /* LearningBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C352805E36900DCFA2E /* LearningBook.storyboard */; };
+		D3AF1C382805E37E00DCFA2E /* RecommendedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C322805E33200DCFA2E /* RecommendedBook.storyboard */; };
+		D3AF1C3B2805E39F00DCFA2E /* CompletedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C392805E39F00DCFA2E /* CompletedBook.storyboard */; };
+		D3AF1C3C2805E39F00DCFA2E /* CompletedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C392805E39F00DCFA2E /* CompletedBook.storyboard */; };
 		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
 		D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
 		D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */; };
@@ -525,6 +531,9 @@
 		D3AF1C282805992E00DCFA2E /* Profile_2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile_2.storyboard; sourceTree = "<group>"; };
 		D3AF1C2C28059F5200DCFA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LingoClash/Storyboards/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		D3AF1C332805E33200DCFA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LingoClash/Storyboards/Base.lproj/RecommendedBook.storyboard; sourceTree = "<group>"; };
+		D3AF1C352805E36900DCFA2E /* LearningBook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LearningBook.storyboard; sourceTree = "<group>"; };
+		D3AF1C3A2805E39F00DCFA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LingoClash/Storyboards/Base.lproj/CompletedBook.storyboard; sourceTree = "<group>"; };
 		D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LingoClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BD29E427DCE6350061E362 /* LingoClashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoClashTests.swift; sourceTree = "<group>"; };
 		D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -898,6 +907,9 @@
 		D33282D127D4D42700C80986 = {
 			isa = PBXGroup;
 			children = (
+				D3AF1C392805E39F00DCFA2E /* CompletedBook.storyboard */,
+				D3AF1C352805E36900DCFA2E /* LearningBook.storyboard */,
+				D3AF1C322805E33200DCFA2E /* RecommendedBook.storyboard */,
 				D3C5E27227F6EB8900F65B8E /* SupportingFiles */,
 				D33282DC27D4D42700C80986 /* LingoClash */,
 				D3BD29E327DCE6350061E362 /* LingoClashTests */,
@@ -1310,6 +1322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AF1C342805E33200DCFA2E /* RecommendedBook.storyboard in Resources */,
 				CE8D228F27EE2B5A005E7058 /* Lesson.storyboard in Resources */,
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
 				D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */,
@@ -1318,6 +1331,8 @@
 				D3AF1C292805992E00DCFA2E /* Profile_2.storyboard in Resources */,
 				D3C5E29227F73C9900F65B8E /* Dev-Info.plist in Resources */,
 				D3F94BEB27D63AE000D527F6 /* GoogleService-Info.plist in Resources */,
+				D3AF1C3B2805E39F00DCFA2E /* CompletedBook.storyboard in Resources */,
+				D3AF1C362805E36A00DCFA2E /* LearningBook.storyboard in Resources */,
 				D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */,
 				CE8D228C27EE2986005E7058 /* Question.storyboard in Resources */,
 				CE8D229C27EEBA29005E7058 /* Profile_1.storyboard in Resources */,
@@ -1339,13 +1354,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AF1C382805E37E00DCFA2E /* RecommendedBook.storyboard in Resources */,
 				D3C5E26327F6E36B00F65B8E /* Lesson.storyboard in Resources */,
 				D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */,
 				D3AF1C27280593C500DCFA2E /* Settings.storyboard in Resources */,
 				D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */,
 				D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */,
 				D3AF1C2E28059FA400DCFA2E /* Profile.storyboard in Resources */,
+				D3AF1C3C2805E39F00DCFA2E /* CompletedBook.storyboard in Resources */,
 				D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */,
+				D3AF1C372805E36A00DCFA2E /* LearningBook.storyboard in Resources */,
 				D3AF1C2A2805999500DCFA2E /* Profile_2.storyboard in Resources */,
 				D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */,
 				D3C5E26A27F6E36B00F65B8E /* Profile_1.storyboard in Resources */,
@@ -1770,6 +1788,22 @@
 				D3AF1C2C28059F5200DCFA2E /* Base */,
 			);
 			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		D3AF1C322805E33200DCFA2E /* RecommendedBook.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3AF1C332805E33200DCFA2E /* Base */,
+			);
+			name = RecommendedBook.storyboard;
+			sourceTree = "<group>";
+		};
+		D3AF1C392805E39F00DCFA2E /* CompletedBook.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3AF1C3A2805E39F00DCFA2E /* Base */,
+			);
+			name = CompletedBook.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

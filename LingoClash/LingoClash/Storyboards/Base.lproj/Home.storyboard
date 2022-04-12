@@ -23,15 +23,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twb-mm-j3v">
-                                <rect key="frame" x="50" y="64" width="219.5" height="36"/>
+                                <rect key="frame" x="50" y="120" width="300" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Z2G-c3-OBc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZU-pN-TOX">
-                                <rect key="frame" x="50" y="135" width="924" height="280"/>
+                                <rect key="frame" x="50" y="206" width="924" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="5IR-jX-u2u"/>
+                                    <constraint firstAttribute="height" constant="300" id="H3m-Q3-m7S"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="d4I-0u-cQ3" kind="embed" id="dyl-hE-Zzo"/>
@@ -41,14 +44,11 @@
                         <viewLayoutGuide key="safeArea" id="IaJ-5d-J2x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="twb-mm-j3v" firstAttribute="top" secondItem="IaJ-5d-J2x" secondAttribute="top" constant="-6" id="0cG-sJ-F1l"/>
-                            <constraint firstItem="IaJ-5d-J2x" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lZU-pN-TOX" secondAttribute="bottom" constant="100" id="7JO-Ke-mTQ"/>
-                            <constraint firstItem="lZU-pN-TOX" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" constant="50" id="NPD-hY-ndo"/>
-                            <constraint firstItem="lZU-pN-TOX" firstAttribute="top" secondItem="twb-mm-j3v" secondAttribute="bottom" constant="35" id="P8S-8n-MSu"/>
-                            <constraint firstItem="twb-mm-j3v" firstAttribute="leading" secondItem="lZU-pN-TOX" secondAttribute="leading" id="SHS-7G-SEF"/>
-                            <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="twb-mm-j3v" secondAttribute="trailing" symbolic="YES" id="n8D-P1-e25"/>
-                            <constraint firstItem="lZU-pN-TOX" firstAttribute="centerX" secondItem="IaJ-5d-J2x" secondAttribute="centerX" id="rFx-9T-Zel"/>
-                            <constraint firstItem="lZU-pN-TOX" firstAttribute="trailing" secondItem="IaJ-5d-J2x" secondAttribute="trailing" constant="-50" id="rOa-II-oGH"/>
+                            <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="lZU-pN-TOX" secondAttribute="trailing" constant="50" id="80b-7z-UFf"/>
+                            <constraint firstItem="twb-mm-j3v" firstAttribute="top" secondItem="QOj-mM-4xl" secondAttribute="topMargin" constant="50" id="IJa-Xl-wnd"/>
+                            <constraint firstItem="twb-mm-j3v" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" constant="50" id="dwt-s3-btq"/>
+                            <constraint firstItem="lZU-pN-TOX" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" constant="50" id="fOA-OD-uwj"/>
+                            <constraint firstItem="lZU-pN-TOX" firstAttribute="top" secondItem="twb-mm-j3v" secondAttribute="bottom" constant="50" id="mjS-9H-QFH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="Xuo-Gh-bln"/>

@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJn-ZN-wrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5295" y="286"/>
+            <point key="canvasLocation" x="5336" y="-332"/>
         </scene>
         <!--Current Book View Controller-->
         <scene sceneID="GpT-TA-p7u">
@@ -168,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEl-Ri-LhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5295" y="-526"/>
+            <point key="canvasLocation" x="5336" y="315"/>
         </scene>
         <!--LessonSelectionViewController-->
         <scene sceneID="PLv-PE-nOk">
@@ -178,7 +179,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSx-RO-ezo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5295" y="-126"/>
+            <point key="canvasLocation" x="9378" y="711"/>
         </scene>
         <!--Current Book Tab Bar Controller-->
         <scene sceneID="xGX-j0-uDW">
@@ -198,6 +199,137 @@
             </objects>
             <point key="canvasLocation" x="4450" y="-206"/>
         </scene>
+        <!--Book Collection View Controller-->
+        <scene sceneID="fyF-KY-018">
+            <objects>
+                <collectionViewController storyboardIdentifier="UICollectionViewController-YY5-1r-xMr" id="YY5-1r-xMr" customClass="BookCollectionViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Bf6-4I-qYX">
+                        <rect key="frame" x="0.0" y="0.0" width="664" height="905.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uAd-HP-Gzd">
+                            <size key="itemSize" width="379" height="167"/>
+                            <size key="estimatedItemSize" width="379" height="167"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCell" id="aHg-xy-IQI" customClass="BookCollectionViewCell" customModule="LingoClash" customModuleProvider="target">
+                                <rect key="frame" x="142.5" y="20" width="379" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yc0-2z-3LU">
+                                    <rect key="frame" x="0.0" y="0.0" width="379" height="167"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-gG-aVb">
+                                            <rect key="frame" x="60" y="113" width="259.5" height="31"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-rn-aeu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="66.5" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="PK" cornerStyle="capsule">
+                                                        <color key="baseForegroundColor" name="TintColor"/>
+                                                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-TK-NhC">
+                                                    <rect key="frame" x="96.5" y="0.0" width="66.5" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Revise" cornerStyle="capsule">
+                                                        <color key="baseForegroundColor" name="TintColor"/>
+                                                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-Xv-WtM">
+                                                    <rect key="frame" x="193" y="0.0" width="66.5" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Learn" cornerStyle="capsule">
+                                                        <color key="baseForegroundColor" name="TintColor"/>
+                                                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="learnButtonTapped:" destination="aHg-xy-IQI" eventType="touchUpInside" id="OSb-gQ-esy"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3rZ-Sw-Iau">
+                                            <rect key="frame" x="60" y="32" width="84.5" height="51"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="book name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omh-HC-mZ4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="84.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9F-fZ-yTL">
+                                                    <rect key="frame" x="0.0" y="30.5" width="84.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="kaO-gG-aVb" secondAttribute="bottom" constant="23" id="0CK-Gi-Sws"/>
+                                        <constraint firstItem="kaO-gG-aVb" firstAttribute="centerX" secondItem="yc0-2z-3LU" secondAttribute="centerX" id="1N1-pO-jms"/>
+                                        <constraint firstItem="3rZ-Sw-Iau" firstAttribute="top" secondItem="yc0-2z-3LU" secondAttribute="top" constant="32" id="K5I-Ba-bZj"/>
+                                        <constraint firstItem="3rZ-Sw-Iau" firstAttribute="leading" secondItem="kaO-gG-aVb" secondAttribute="leading" id="Q30-WC-fZQ"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="379" height="167"/>
+                                <connections>
+                                    <outlet property="PKButton" destination="CWs-rn-aeu" id="xrW-xS-btZ"/>
+                                    <outlet property="bookNameLabel" destination="Omh-HC-mZ4" id="h9o-BF-qCe"/>
+                                    <outlet property="learnButton" destination="gQD-Xv-WtM" id="q2l-ka-5hB"/>
+                                    <outlet property="progressLabel" destination="R9F-fZ-yTL" id="9WG-y4-2yu"/>
+                                    <outlet property="reviseButton" destination="MRn-TK-NhC" id="oD4-9c-FAA"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="YY5-1r-xMr" id="ht0-P8-Zk3"/>
+                            <outlet property="delegate" destination="YY5-1r-xMr" id="5bm-hi-PGQ"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YI0-UM-dnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8248" y="385"/>
+        </scene>
+        <!--Completed-->
+        <scene sceneID="bXu-Ut-fQ6">
+            <objects>
+                <viewController id="3oJ-Jc-zpH" customClass="CompletedBooksViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e0y-Nu-Eu9">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pa6-IK-ZY3">
+                                <rect key="frame" x="20" y="40" width="664" height="905.5"/>
+                                <connections>
+                                    <segue destination="YY5-1r-xMr" kind="embed" id="MYV-Xs-1I4"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WFN-O5-oj8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WFN-O5-oj8" firstAttribute="bottom" secondItem="pa6-IK-ZY3" secondAttribute="bottom" id="7FS-Cz-mdE"/>
+                            <constraint firstItem="pa6-IK-ZY3" firstAttribute="leading" secondItem="WFN-O5-oj8" secondAttribute="leading" constant="20" id="7cP-zo-agK"/>
+                            <constraint firstItem="WFN-O5-oj8" firstAttribute="trailing" secondItem="pa6-IK-ZY3" secondAttribute="trailing" constant="20" id="8fE-22-7Rm"/>
+                            <constraint firstItem="pa6-IK-ZY3" firstAttribute="top" secondItem="WFN-O5-oj8" secondAttribute="top" constant="40" id="PwY-Y4-4hX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Completed" id="aha-ce-132"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whg-zM-JXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7400" y="117"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pmE-Nt-DCH">
             <objects>
@@ -212,7 +344,7 @@
                     <connections>
                         <segue destination="fCG-mA-8tE" kind="relationship" relationship="viewControllers" id="xmE-uS-dRA"/>
                         <segue destination="VwJ-XH-8OD" kind="relationship" relationship="viewControllers" id="ZPA-WG-ATS"/>
-                        <segue destination="BEo-H9-Q0G" kind="relationship" relationship="viewControllers" id="YwZ-CX-CPW"/>
+                        <segue destination="3oJ-Jc-zpH" kind="relationship" relationship="viewControllers" id="YwZ-CX-CPW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqo-ar-Uj1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -227,7 +359,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLL-zy-p0d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6515" y="230"/>
+            <point key="canvasLocation" x="7400" y="-549"/>
         </scene>
         <!--LearningBook-->
         <scene sceneID="vZs-k4-3jA">
@@ -237,25 +369,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bce-fL-BrE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6285" y="230"/>
-        </scene>
-        <!--UIViewController-3oJ-Jc-zpH-->
-        <scene sceneID="CNz-mW-7Ev">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CompletedBook" referencedIdentifier="UIViewController-3oJ-Jc-zpH" id="BEo-H9-Q0G" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="TtW-mb-2Hk"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QdL-3E-epK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6071" y="230"/>
-        </scene>
-        <!--UICollectionViewController-YY5-1r-xMr-->
-        <scene sceneID="wNG-9n-YBQ">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UICollectionViewController-YY5-1r-xMr" storyboardName="CompletedBook" referencedIdentifier="UICollectionViewController-YY5-1r-xMr" id="GV3-1Y-eZN" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YyV-9Y-mmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8248" y="385"/>
+            <point key="canvasLocation" x="8245" y="-220"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -263,6 +377,9 @@
         <segue reference="aho-Ff-dmE"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <namedColor name="TintColor">
+            <color red="0.0" green="0.5899999737739563" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
