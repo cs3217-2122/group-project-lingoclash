@@ -373,7 +373,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32U-G6-Vns">
                                                         <rect key="frame" x="0.0" y="125" width="820" height="432.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="Kzi-br-pXd">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-calendar" translatesAutoresizingMaskIntoConstraints="NO" id="Kzi-br-pXd">
                                                                 <rect key="frame" x="260" y="141.5" width="300" height="150"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="150" id="q2h-PH-bJb"/>
@@ -444,7 +444,6 @@
     </scenes>
     <resources>
         <image name="avatar_7-circle" width="720" height="720"/>
-        <image name="calendar" width="866.3306884765625" height="605.73992919921875"/>
         <image name="cover_2" width="1000" height="1000"/>
         <image name="cover_5" width="1000" height="1000"/>
         <image name="person" width="30" height="30"/>
@@ -452,6 +451,7 @@
         <image name="star" width="1024" height="1024"/>
         <image name="star-white" width="30" height="30"/>
         <image name="undraw-book_reading" width="868.644287109375" height="699.46441650390625"/>
+        <image name="undraw-calendar" width="866.3306884765625" height="605.73992919921875"/>
         <namedColor name="Primary">
             <color red="0.054999999701976776" green="0.40400001406669617" blue="0.50300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
