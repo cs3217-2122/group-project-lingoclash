@@ -33,7 +33,7 @@
                             <constraint firstItem="UDc-ZT-zd9" firstAttribute="leading" secondItem="xCc-zN-iVu" secondAttribute="leading" constant="20" id="u2n-WJ-4Jl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Recommended" id="t1X-De-Ggt"/>
+                    <tabBarItem key="tabBarItem" title="Recommended" image="book" id="t1X-De-Ggt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjz-h7-cta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,6 +147,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

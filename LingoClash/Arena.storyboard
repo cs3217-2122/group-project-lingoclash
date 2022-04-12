@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ryk-VQ-Too">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Arena-->
+        <scene sceneID="JzC-gm-MtI">
+            <objects>
+                <viewController id="ryk-VQ-Too" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IuL-qY-rhO">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-game" translatesAutoresizingMaskIntoConstraints="NO" id="4N6-Jb-HN9">
+                                <rect key="frame" x="160" y="340" width="500" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="ko4-12-yr3"/>
+                                    <constraint firstAttribute="height" constant="500" id="z6j-In-OgM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work in progress... " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-VY-sdG">
+                                <rect key="frame" x="289" y="822" width="242" height="36"/>
+                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="30"/>
+                                <color key="textColor" name="Secondary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kcK-e2-41N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xu4-VY-sdG" firstAttribute="centerX" secondItem="IuL-qY-rhO" secondAttribute="centerX" id="4WK-PY-lOF"/>
+                            <constraint firstItem="4N6-Jb-HN9" firstAttribute="centerX" secondItem="IuL-qY-rhO" secondAttribute="centerX" id="7eM-tm-5Va"/>
+                            <constraint firstItem="Xu4-VY-sdG" firstAttribute="centerY" secondItem="IuL-qY-rhO" secondAttribute="centerY" constant="250" id="kfo-MV-98k"/>
+                            <constraint firstItem="4N6-Jb-HN9" firstAttribute="centerY" secondItem="IuL-qY-rhO" secondAttribute="centerY" id="mVZ-TB-m2C"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Arena" image="arena" id="Lgc-nI-2G4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oad-PZ-qte" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3203.90625" y="518.74084919472909"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arena" width="30" height="30"/>
+        <image name="undraw-game" width="916.77496337890625" height="612.0550537109375"/>
+        <namedColor name="Secondary">
+            <color red="0.29699999094009399" green="0.38400000333786011" blue="0.41800001263618469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -64,15 +64,15 @@
                                                     <constraint firstItem="D2C-d6-fxI" firstAttribute="centerX" secondItem="kcn-Vx-Cva" secondAttribute="centerX" id="ofN-yO-mZH"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_1" translatesAutoresizingMaskIntoConstraints="NO" id="ym5-up-Lux">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_7-circle" translatesAutoresizingMaskIntoConstraints="NO" id="ym5-up-Lux">
                                                 <rect key="frame" x="310" y="129" width="200" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="TdO-LE-3jW"/>
                                                     <constraint firstAttribute="height" constant="200" id="nvh-oe-VJA"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5go-Xw-bjI">
-                                                <rect key="frame" x="338.5" y="354" width="143.5" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crownkira" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5go-Xw-bjI">
+                                                <rect key="frame" x="338" y="354" width="144" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="gro-Wp-VJg"/>
                                                 </constraints>
@@ -90,8 +90,8 @@
                                                 <color key="textColor" name="PrimaryText"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Bio&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovr-Rz-WoK">
-                                                <rect key="frame" x="375.5" y="404" width="69" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;君日本语本当上手&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovr-Rz-WoK">
+                                                <rect key="frame" x="277" y="404" width="266.5" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ihI-ni-cXj"/>
                                                 </constraints>
@@ -116,16 +116,24 @@
                                                     <constraint firstAttribute="height" constant="100" id="cg2-Bw-X9s"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="settings"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="settings-white"/>
                                                 <connections>
                                                     <segue destination="GWX-qF-t82" kind="show" id="D7O-bq-5cA"/>
                                                 </connections>
                                             </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-book_reading" translatesAutoresizingMaskIntoConstraints="NO" id="au2-HR-5xC">
+                                                <rect key="frame" x="-50" y="407.5" width="300" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="93e-J8-gmS"/>
+                                                    <constraint firstAttribute="width" constant="300" id="xF1-2e-XY0"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="Primary"/>
                                         <constraints>
                                             <constraint firstItem="vmw-Wu-qJa" firstAttribute="centerY" secondItem="DWo-w0-D5Z" secondAttribute="centerY" constant="-75" id="28u-7C-eqA"/>
                                             <constraint firstItem="UVi-cG-b3N" firstAttribute="centerY" secondItem="DWo-w0-D5Z" secondAttribute="centerY" constant="-30" id="7NS-7Y-t4h"/>
+                                            <constraint firstItem="au2-HR-5xC" firstAttribute="leading" secondItem="DWo-w0-D5Z" secondAttribute="leading" constant="-50" id="8GB-Wu-Bdy"/>
                                             <constraint firstItem="EZz-4m-d0t" firstAttribute="top" secondItem="DWo-w0-D5Z" secondAttribute="top" id="9pk-lW-dcG"/>
                                             <constraint firstItem="ym5-up-Lux" firstAttribute="centerY" secondItem="DWo-w0-D5Z" secondAttribute="centerY" constant="-50" id="Bfc-BZ-UVh"/>
                                             <constraint firstAttribute="trailing" secondItem="EZz-4m-d0t" secondAttribute="trailing" id="L8j-KY-FjC"/>
@@ -142,6 +150,7 @@
                                             <constraint firstAttribute="trailing" secondItem="UVi-cG-b3N" secondAttribute="trailing" constant="100" id="h0M-VL-qoQ"/>
                                             <constraint firstAttribute="trailing" secondItem="9P1-No-tWq" secondAttribute="trailing" constant="25" id="oW1-aU-A1K"/>
                                             <constraint firstItem="ym5-up-Lux" firstAttribute="centerX" secondItem="DWo-w0-D5Z" secondAttribute="centerX" id="psJ-eY-FMP"/>
+                                            <constraint firstAttribute="bottom" secondItem="au2-HR-5xC" secondAttribute="bottom" id="rXi-51-BIJ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFW-Wx-nHR">
@@ -354,12 +363,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avatar_1" width="128" height="128"/>
+        <image name="avatar_7-circle" width="720" height="720"/>
         <image name="cover_2" width="1000" height="1000"/>
         <image name="cover_5" width="1000" height="1000"/>
         <image name="person" width="30" height="30"/>
-        <image name="settings" width="30" height="30"/>
+        <image name="settings-white" width="30" height="30"/>
         <image name="star" width="1024" height="1024"/>
+        <image name="undraw-book_reading" width="868.644287109375" height="699.46441650390625"/>
         <namedColor name="Primary">
             <color red="0.054999999701976776" green="0.40400001406669617" blue="0.50300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

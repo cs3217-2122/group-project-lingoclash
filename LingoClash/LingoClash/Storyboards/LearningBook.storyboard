@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nIF-gE-wlG">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +13,11 @@
             <objects>
                 <viewController id="nIF-gE-wlG" customClass="LearningBooksViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h0n-EL-U2i">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcX-sl-ld5">
-                                <rect key="frame" x="20" y="40" width="664" height="905.5"/>
+                                <rect key="frame" x="20" y="64" width="780" height="1096"/>
                                 <connections>
                                     <segue destination="eCr-cN-gaU" kind="embed" id="AfC-OO-m0s"/>
                                 </connections>
@@ -31,7 +32,7 @@
                             <constraint firstItem="raU-bx-zTm" firstAttribute="trailing" secondItem="kcX-sl-ld5" secondAttribute="trailing" constant="20" id="sKu-cZ-pAA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Learning" id="UyJ-NN-fon"/>
+                    <tabBarItem key="tabBarItem" title="Learning" image="book-reading" id="UyJ-NN-fon"/>
                     <connections>
                         <outlet property="containerView" destination="kcX-sl-ld5" id="zqW-MF-soa"/>
                     </connections>
@@ -50,6 +51,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book-reading" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
