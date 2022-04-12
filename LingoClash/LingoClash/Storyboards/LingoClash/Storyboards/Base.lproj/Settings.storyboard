@@ -26,19 +26,19 @@
                                 <rect key="frame" x="20" y="24" width="780" height="1136"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="181" translatesAutoresizingMaskIntoConstraints="NO" id="QpW-td-VMI">
-                                        <rect key="frame" x="0.0" y="0.0" width="780" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="780" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Theme" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQq-N2-G4Y">
-                                                <rect key="frame" x="0.0" y="0.0" width="550" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="550" height="25"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="JsT-n1-14S"/>
+                                                    <constraint firstAttribute="height" constant="25" id="JsT-n1-14S"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45c-Kb-nO1">
-                                                <rect key="frame" x="731" y="0.0" width="51" height="50"/>
+                                                <rect key="frame" x="731" y="0.0" width="51" height="25"/>
                                                 <connections>
                                                     <action selector="themeChanged:" destination="q2j-81-4aM" eventType="valueChanged" id="3bu-FE-fD7"/>
                                                 </connections>
@@ -46,7 +46,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5L-Iz-zNi">
-                                        <rect key="frame" x="0.0" y="80" width="780" height="736"/>
+                                        <rect key="frame" x="0.0" y="55" width="780" height="761"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG9-a1-tge">
