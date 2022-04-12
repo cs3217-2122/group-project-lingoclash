@@ -22,15 +22,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_1" translatesAutoresizingMaskIntoConstraints="NO" id="fAL-Vp-YTa">
+                                <rect key="frame" x="20" y="24" width="780" height="1136"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-game" translatesAutoresizingMaskIntoConstraints="NO" id="4N6-Jb-HN9">
-                                <rect key="frame" x="160" y="340" width="500" height="500"/>
+                                <rect key="frame" x="260" y="440" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="500" id="ko4-12-yr3"/>
-                                    <constraint firstAttribute="height" constant="500" id="z6j-In-OgM"/>
+                                    <constraint firstAttribute="width" constant="300" id="ko4-12-yr3"/>
+                                    <constraint firstAttribute="height" constant="300" id="z6j-In-OgM"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work in progress... " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-VY-sdG">
-                                <rect key="frame" x="289" y="822" width="242" height="36"/>
+                                <rect key="frame" x="289" y="722" width="242" height="36"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="30"/>
                                 <color key="textColor" name="Secondary"/>
                                 <nil key="highlightedColor"/>
@@ -39,10 +42,14 @@
                         <viewLayoutGuide key="safeArea" id="kcK-e2-41N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fAL-Vp-YTa" firstAttribute="top" secondItem="IuL-qY-rhO" secondAttribute="topMargin" id="1Qb-jq-9cn"/>
                             <constraint firstItem="Xu4-VY-sdG" firstAttribute="centerX" secondItem="IuL-qY-rhO" secondAttribute="centerX" id="4WK-PY-lOF"/>
                             <constraint firstItem="4N6-Jb-HN9" firstAttribute="centerX" secondItem="IuL-qY-rhO" secondAttribute="centerX" id="7eM-tm-5Va"/>
-                            <constraint firstItem="Xu4-VY-sdG" firstAttribute="centerY" secondItem="IuL-qY-rhO" secondAttribute="centerY" constant="250" id="kfo-MV-98k"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fAL-Vp-YTa" secondAttribute="bottom" id="7pW-SL-I3C"/>
+                            <constraint firstItem="Xu4-VY-sdG" firstAttribute="centerY" secondItem="IuL-qY-rhO" secondAttribute="centerY" constant="150" id="kfo-MV-98k"/>
                             <constraint firstItem="4N6-Jb-HN9" firstAttribute="centerY" secondItem="IuL-qY-rhO" secondAttribute="centerY" id="mVZ-TB-m2C"/>
+                            <constraint firstItem="fAL-Vp-YTa" firstAttribute="leading" secondItem="IuL-qY-rhO" secondAttribute="leadingMargin" id="meb-HQ-t7e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fAL-Vp-YTa" secondAttribute="trailing" id="qk1-Im-1WD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Arena" image="arena" id="Lgc-nI-2G4"/>
@@ -54,6 +61,7 @@
     </scenes>
     <resources>
         <image name="arena" width="30" height="30"/>
+        <image name="background_1" width="640" height="1136"/>
         <image name="undraw-game" width="916.77496337890625" height="612.0550537109375"/>
         <namedColor name="Secondary">
             <color red="0.29699999094009399" green="0.38400000333786011" blue="0.41800001263618469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
