@@ -102,7 +102,8 @@ extension SimpleOptionQuestionLayoutViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-        headerView.backgroundColor = UIColor.clear
+//        headerView.backgroundColor = UIColor.clear
+        headerView.backgroundColor = Theme.current.tertiary
         return headerView
     }
 }
