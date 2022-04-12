@@ -11,6 +11,7 @@ import Combine
 class CurrentBookViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
+    // TODO: remove below
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
     

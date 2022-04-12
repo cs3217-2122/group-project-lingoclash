@@ -34,11 +34,20 @@
                                     <segue destination="d4I-0u-cQ3" kind="embed" id="dyl-hE-Zzo"/>
                                 </connections>
                             </containerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-empty_street" translatesAutoresizingMaskIntoConstraints="NO" id="Big-oc-yN4">
+                                <rect key="frame" x="674" y="100" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="fP4-8N-Uc6"/>
+                                    <constraint firstAttribute="height" constant="150" id="spx-I1-HtV"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IaJ-5d-J2x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lZU-pN-TOX" firstAttribute="top" secondItem="Big-oc-yN4" secondAttribute="bottom" constant="-20" id="3cr-q3-QE5"/>
                             <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="lZU-pN-TOX" secondAttribute="trailing" constant="50" id="80b-7z-UFf"/>
+                            <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="Big-oc-yN4" secondAttribute="trailing" constant="100" id="86K-Gb-g8d"/>
                             <constraint firstItem="twb-mm-j3v" firstAttribute="top" secondItem="QOj-mM-4xl" secondAttribute="topMargin" constant="50" id="IJa-Xl-wnd"/>
                             <constraint firstItem="twb-mm-j3v" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" constant="50" id="dwt-s3-btq"/>
                             <constraint firstItem="lZU-pN-TOX" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" constant="50" id="fOA-OD-uwj"/>
@@ -119,6 +128,7 @@
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="undraw-empty_street" width="997.8612060546875" height="450.80810546875"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
