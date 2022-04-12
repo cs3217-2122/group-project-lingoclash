@@ -33,100 +33,116 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N1 Vocab" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIC-Y4-7Fa">
-                                            <rect key="frame" x="30" y="30" width="123" height="36"/>
-                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                            <color key="textColor" name="PrimaryText"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-gG-aVb">
-                                            <rect key="frame" x="170.5" y="539" width="259.5" height="31"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="su3-Xo-0o8">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-rn-aeu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="66.5" height="31"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="PK" cornerStyle="capsule">
-                                                        <color key="baseForegroundColor" name="Primary"/>
-                                                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </buttonConfiguration>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-TK-NhC">
-                                                    <rect key="frame" x="96.5" y="0.0" width="66.5" height="31"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Revise" cornerStyle="capsule">
-                                                        <color key="baseForegroundColor" name="Primary"/>
-                                                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </buttonConfiguration>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-Xv-WtM">
-                                                    <rect key="frame" x="193" y="0.0" width="66.5" height="31"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Learn" cornerStyle="capsule">
-                                                        <color key="baseForegroundColor" name="Primary"/>
-                                                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </buttonConfiguration>
-                                                    <connections>
-                                                        <action selector="learnButtonTapped:" destination="aHg-xy-IQI" eventType="touchUpInside" id="OSb-gQ-esy"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QKK-Pv-MNM">
-                                            <rect key="frame" x="50" y="273" width="500" height="54"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y16-3Q-lrk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cover_2" translatesAutoresizingMaskIntoConstraints="NO" id="E5h-9H-ydt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N1 Vocab" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIC-Y4-7Fa">
+                                                    <rect key="frame" x="20" y="20" width="123" height="36"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                    <color key="textColor" name="PrimaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-gG-aVb">
+                                                    <rect key="frame" x="180.5" y="549" width="259.5" height="31"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/333" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6G-S7-SYQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="70.5" height="50"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                            <color key="textColor" name="PrimaryText"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGz-3m-jeC">
-                                                            <rect key="frame" x="70.5" y="0.0" width="348.5" height="50"/>
-                                                        </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-white" translatesAutoresizingMaskIntoConstraints="NO" id="WCG-M7-8TG">
-                                                            <rect key="frame" x="419" y="0.0" width="30" height="50"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-Uf-dKL">
-                                                            <rect key="frame" x="449" y="0.0" width="15" height="50"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="15" id="J5z-xx-hxz"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="133" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aJ-2l-H65">
-                                                            <rect key="frame" x="464" y="0.0" width="36" height="50"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                            <color key="textColor" name="PrimaryText"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-rn-aeu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="66.5" height="31"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="PK" cornerStyle="capsule">
+                                                                <color key="baseForegroundColor" name="Primary"/>
+                                                                <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-TK-NhC">
+                                                            <rect key="frame" x="96.5" y="0.0" width="66.5" height="31"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="Revise" cornerStyle="capsule">
+                                                                <color key="baseForegroundColor" name="Primary"/>
+                                                                <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-Xv-WtM">
+                                                            <rect key="frame" x="193" y="0.0" width="66.5" height="31"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="filled" title="Learn" cornerStyle="capsule">
+                                                                <color key="baseForegroundColor" name="Primary"/>
+                                                                <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="learnButtonTapped:" destination="aHg-xy-IQI" eventType="touchUpInside" id="OSb-gQ-esy"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="Gaj-iR-ZZD"/>
-                                                    </constraints>
                                                 </stackView>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VK7-67-kqo">
-                                                    <rect key="frame" x="0.0" y="50" width="500" height="4"/>
-                                                    <color key="tintColor" name="PrimaryText"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="500" id="2Ws-j4-5Rm"/>
-                                                    </constraints>
-                                                </progressView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QKK-Pv-MNM">
+                                                    <rect key="frame" x="60" y="273" width="500" height="54"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y16-3Q-lrk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="500" height="50"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/333" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6G-S7-SYQ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="70.5" height="50"/>
+                                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                                    <color key="textColor" name="PrimaryText"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGz-3m-jeC">
+                                                                    <rect key="frame" x="70.5" y="0.0" width="348.5" height="50"/>
+                                                                </view>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-white" translatesAutoresizingMaskIntoConstraints="NO" id="WCG-M7-8TG">
+                                                                    <rect key="frame" x="419" y="0.0" width="30" height="50"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-Uf-dKL">
+                                                                    <rect key="frame" x="449" y="0.0" width="15" height="50"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="15" id="J5z-xx-hxz"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="133" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aJ-2l-H65">
+                                                                    <rect key="frame" x="464" y="0.0" width="36" height="50"/>
+                                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                                    <color key="textColor" name="PrimaryText"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="Gaj-iR-ZZD"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VK7-67-kqo">
+                                                            <rect key="frame" x="0.0" y="50" width="500" height="4"/>
+                                                            <color key="tintColor" name="PrimaryText"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="500" id="2Ws-j4-5Rm"/>
+                                                            </constraints>
+                                                        </progressView>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
-                                        </stackView>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="kaO-gG-aVb" secondAttribute="bottom" constant="20" id="5ee-PW-v8E"/>
+                                                <constraint firstItem="IIC-Y4-7Fa" firstAttribute="leading" secondItem="su3-Xo-0o8" secondAttribute="leading" constant="20" id="F3u-xi-aMh"/>
+                                                <constraint firstItem="IIC-Y4-7Fa" firstAttribute="top" secondItem="su3-Xo-0o8" secondAttribute="top" constant="20" id="M5E-X7-rJN"/>
+                                                <constraint firstItem="kaO-gG-aVb" firstAttribute="centerX" secondItem="su3-Xo-0o8" secondAttribute="centerX" constant="10.25" id="QZW-P5-cRe"/>
+                                                <constraint firstItem="QKK-Pv-MNM" firstAttribute="centerY" secondItem="su3-Xo-0o8" secondAttribute="centerY" id="i8L-kT-wbe"/>
+                                                <constraint firstItem="QKK-Pv-MNM" firstAttribute="centerX" secondItem="su3-Xo-0o8" secondAttribute="centerX" constant="10" id="ymA-LB-O5z"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" name="Primary"/>
                                     <constraints>
-                                        <constraint firstItem="IIC-Y4-7Fa" firstAttribute="leading" secondItem="yc0-2z-3LU" secondAttribute="leading" constant="30" id="Dg2-en-5wS"/>
-                                        <constraint firstItem="IIC-Y4-7Fa" firstAttribute="top" secondItem="yc0-2z-3LU" secondAttribute="top" constant="30" id="T8F-IQ-alT"/>
-                                        <constraint firstItem="QKK-Pv-MNM" firstAttribute="centerY" secondItem="yc0-2z-3LU" secondAttribute="centerY" id="c3m-SF-iIq"/>
-                                        <constraint firstAttribute="bottom" secondItem="kaO-gG-aVb" secondAttribute="bottom" constant="30" id="deG-cq-LcG"/>
-                                        <constraint firstItem="kaO-gG-aVb" firstAttribute="centerX" secondItem="yc0-2z-3LU" secondAttribute="centerX" id="fa3-yh-ovx"/>
-                                        <constraint firstItem="QKK-Pv-MNM" firstAttribute="centerX" secondItem="yc0-2z-3LU" secondAttribute="centerX" id="jWm-Ey-hNn"/>
+                                        <constraint firstItem="su3-Xo-0o8" firstAttribute="leading" secondItem="yc0-2z-3LU" secondAttribute="leading" id="5yF-gi-WFu"/>
+                                        <constraint firstAttribute="bottom" secondItem="su3-Xo-0o8" secondAttribute="bottom" id="IvG-LA-RM9"/>
+                                        <constraint firstItem="su3-Xo-0o8" firstAttribute="top" secondItem="yc0-2z-3LU" secondAttribute="top" id="kNt-YO-k8w"/>
+                                        <constraint firstAttribute="trailing" secondItem="su3-Xo-0o8" secondAttribute="trailing" id="ukV-c5-gPB"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="600" height="600"/>
@@ -180,6 +196,7 @@
     </scenes>
     <resources>
         <image name="book-completed" width="30" height="30"/>
+        <image name="cover_2" width="1000" height="1000"/>
         <image name="star-white" width="30" height="30"/>
         <namedColor name="Primary">
             <color red="0.054999999701976776" green="0.40400001406669617" blue="0.50300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
