@@ -27,8 +27,8 @@ class ViewUtilities {
 //        button.backgroundColor = AppConfigs.View.primaryColor
         button.backgroundColor = Theme.current.primary
         button.layer.cornerRadius = 25.0
-//        button.tintColor = UIColor.white
-        button.tintColor = Theme.current.tint
+        button.tintColor = UIColor.white
+//        button.tintColor = Theme.current.tint
     }
     
     static func styleHollowButton(_ button: UIButton) {
@@ -36,8 +36,8 @@ class ViewUtilities {
 //        button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderColor = Theme.current.secondary.cgColor
         button.layer.cornerRadius = 25.0
-//        button.tintColor = UIColor.black
-        button.tintColor = Theme.current.tint
+        button.tintColor = UIColor.black
+//        button.tintColor = Theme.current.tint
     }
     
     static func styleCard(_ cell: UICollectionViewCell) {
