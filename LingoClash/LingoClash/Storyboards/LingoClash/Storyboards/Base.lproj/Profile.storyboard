@@ -299,7 +299,7 @@
                     <navigationItem key="navigationItem" id="jU0-Ln-7ep">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="bOS-1o-TPP">
                             <connections>
-                                <segue destination="eV3-9N-ceU" kind="show" id="vP1-ck-3j2"/>
+                                <segue destination="GWX-qF-t82" kind="show" id="JG1-IX-4H7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -308,21 +308,15 @@
             </objects>
             <point key="canvasLocation" x="4270.9756097560976" y="744.9152542372882"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="cps-Wh-s7u">
+        <!--Settings-->
+        <scene sceneID="gs3-Mt-zAE">
             <objects>
-                <viewController id="eV3-9N-ceU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tJc-bS-9xq">
-                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="qwd-2L-0MC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="azw-P5-BYt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VQC-W9-fRD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Settings" id="GWX-qF-t82" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lVa-9m-qyJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4h-3K-vef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4983" y="745"/>
+            <point key="canvasLocation" x="4736" y="745"/>
         </scene>
         <!--Profile-->
         <scene sceneID="R4B-Kc-kjk">

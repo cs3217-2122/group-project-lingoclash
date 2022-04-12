@@ -174,10 +174,10 @@
 		D398780927DF6AB800B2F4ED /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780827DF6AB800B2F4ED /* DataProvider.swift */; };
 		D3AF1C1628057B2900DCFA2E /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */; };
 		D3AF1C1828057C7600DCFA2E /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1728057C7600DCFA2E /* LightTheme.swift */; };
-		D3AF1C1A28057C8200DCFA2E /* SpaceTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1928057C8200DCFA2E /* SpaceTheme.swift */; };
+		D3AF1C1A28057C8200DCFA2E /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1928057C8200DCFA2E /* DarkTheme.swift */; };
 		D3AF1C1B28057DC300DCFA2E /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */; };
 		D3AF1C1C28057DF800DCFA2E /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1728057C7600DCFA2E /* LightTheme.swift */; };
-		D3AF1C1D28057DFA00DCFA2E /* SpaceTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1928057C8200DCFA2E /* SpaceTheme.swift */; };
+		D3AF1C1D28057DFA00DCFA2E /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1928057C8200DCFA2E /* DarkTheme.swift */; };
 		D3AF1C212805919500DCFA2E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C1F2805919500DCFA2E /* Settings.storyboard */; };
 		D3AF1C252805924300DCFA2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C242805924300DCFA2E /* SettingsViewController.swift */; };
 		D3AF1C262805937100DCFA2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C242805924300DCFA2E /* SettingsViewController.swift */; };
@@ -517,7 +517,7 @@
 		D398780827DF6AB800B2F4ED /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		D3AF1C1728057C7600DCFA2E /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
-		D3AF1C1928057C8200DCFA2E /* SpaceTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTheme.swift; sourceTree = "<group>"; };
+		D3AF1C1928057C8200DCFA2E /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
 		D3AF1C202805919500DCFA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LingoClash/Storyboards/Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		D3AF1C242805924300DCFA2E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D3AF1C282805992E00DCFA2E /* Profile_2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile_2.storyboard; sourceTree = "<group>"; };
@@ -991,7 +991,7 @@
 				D33282F827D4E63B00C80986 /* Theme.swift */,
 				D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */,
 				D3AF1C1728057C7600DCFA2E /* LightTheme.swift */,
-				D3AF1C1928057C8200DCFA2E /* SpaceTheme.swift */,
+				D3AF1C1928057C8200DCFA2E /* DarkTheme.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -1428,7 +1428,7 @@
 				CEF1E7AC27E5030C005D4272 /* CurrencySystem.swift in Sources */,
 				CEF1E81C27E74634005D4272 /* TwoDisjointSetOptionQuestionLayoutViewController.swift in Sources */,
 				CEF1E7DE27E60D42005D4272 /* LessonOverviewViewModel.swift in Sources */,
-				D3AF1C1A28057C8200DCFA2E /* SpaceTheme.swift in Sources */,
+				D3AF1C1A28057C8200DCFA2E /* DarkTheme.swift in Sources */,
 				620DF3CA27F23133006A9E5F /* ChangeEmailFields.swift in Sources */,
 				CEC5887127EABEC000809403 /* LessonSelectionViewController.swift in Sources */,
 				CEF1E7B327E5071C005D4272 /* StarsCurrencySystem.swift in Sources */,
@@ -1640,7 +1640,7 @@
 				D3C5E23927F6E36B00F65B8E /* ProfileViewController.swift in Sources */,
 				D3C5E23B27F6E36B00F65B8E /* CurrentBookViewController.swift in Sources */,
 				D3C5E23C27F6E36B00F65B8E /* ProfileLessonData.swift in Sources */,
-				D3AF1C1D28057DFA00DCFA2E /* SpaceTheme.swift in Sources */,
+				D3AF1C1D28057DFA00DCFA2E /* DarkTheme.swift in Sources */,
 				D3C5E23D27F6E36B00F65B8E /* BookManager.swift in Sources */,
 				D30E491627FAC7C60074CF2B /* Profile.swift in Sources */,
 				D3C5E23E27F6E36B00F65B8E /* HomeViewController.swift in Sources */,

@@ -7,29 +7,24 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
 
+class SettingsViewController: UIViewController {
+    
     @IBAction func themeChanged(_ sender: UISwitch) {
-        if sender.isOn {
-            Theme.current = LightTheme()
-        } else {
-            Theme.current = SpaceTheme()
-        }
-        
+        Theme.current = sender.isOn ? LightTheme() : DarkTheme()
+        UserDefaults.standard.set(sender.isOn, forKey: "LightTheme")
         applyTheme()
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         applyTheme()
-
-        // Do any additional setup after loading the view.
     }
     
     fileprivate func applyTheme() {
-        view.backgroundColor = Theme.current.primary
+        //        view.backgroundColor = Theme.current.primary
     }
     
 }
