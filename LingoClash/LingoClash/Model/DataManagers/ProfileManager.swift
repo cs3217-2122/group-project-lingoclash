@@ -35,6 +35,7 @@ class ProfileManager: DataManager<ProfileData> {
     func getCurrentProfile() -> Promise<Profile> {
         var profile: ProfileData?
         var currentBook: Book?
+        var currentUser: UserIdentity?
         
         return firstly {
             authProvider.getIdentity()
@@ -48,6 +49,7 @@ class ProfileManager: DataManager<ProfileData> {
                 }
                 
                 profile = profilesData[0]
+                currentUser = userIdentity
             }
         }.then { () -> Promise<Void> in
             // Gets the current book
@@ -65,11 +67,11 @@ class ProfileManager: DataManager<ProfileData> {
                 currentBook = book
             }
         }.compactMap {
-            guard let profile = profile else {
+            guard let profile = profile, let currentUser = currentUser else {
                 return nil
             }
             
-            return Profile(profileData: profile, currentBook: currentBook)
+            return Profile(userIdentity: currentUser, profileData: profile, currentBook: currentBook)
         }
     }
     

@@ -24,7 +24,6 @@ class LessonSelectionViewController: UIViewController {
     @IBOutlet weak var lessonsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel = LessonSelectionViewModelFromBook(book: BookData(id: "awdawd", category_id: "dawdawd", name: "ho"))
         lessonsTableView.dataSource = self
         lessonsTableView.delegate = self
         styleUI()
@@ -39,11 +38,10 @@ class LessonSelectionViewController: UIViewController {
         guard isViewLoaded, let viewModel = viewModel else {
             return
         }
-        
         viewModel.starsObtained.bindAndFire { [unowned self] in
             self.starsObtainedLabel.text = $0
         }
-        viewModel.levelsPassed.bindAndFire { [unowned self] in
+        viewModel.lessonsPassed.bindAndFire { [unowned self] in
             self.levelsPassedLabel.text = $0
         }
         viewModel.lessonTableViewModels.bindAndFire { [unowned self] (_) -> Void in
@@ -108,6 +106,6 @@ extension LessonSelectionViewController: UITableViewDataSource {
 
 extension LessonSelectionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel?.didSelectLevel(at: indexPath.section)
+        viewModel?.didSelectLesson(at: indexPath.section)
     }
 }

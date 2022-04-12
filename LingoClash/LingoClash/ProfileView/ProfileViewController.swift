@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         setUpBinders()
-        viewModel.refreshProfile()
+        viewModel.refresh()
     }
     
     func setUpBinders() {
@@ -63,6 +63,14 @@ class ProfileViewController: UIViewController {
                 self?.showConfirmAlert(content: alertContent) { _ in
                     self?.transitionToSplash()
                 }
+            }
+        }.store(in: &cancellables)
+        
+        viewModel.$isRefreshing.sink {[weak self] isRefreshing in
+            if isRefreshing {
+                self?.showSpinner()
+            } else {
+                self?.removeSpinner()
             }
         }.store(in: &cancellables)
     }

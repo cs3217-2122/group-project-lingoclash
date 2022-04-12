@@ -7,17 +7,17 @@
 
 // Assumes that the LessonSelectorViewModel will generate a new view model every update
 class LessonTableCellViewModelFromLesson: LessonTableCellViewModel {    
-    let lesson: OldLesson
+    let lesson: Lesson
     let starsTotal = 3
     
     var starsFilled: [Bool]
     var lessonName: String
     
     
-    init(lesson: OldLesson) {
+    init(lesson: Lesson) {
         self.lesson = lesson
         self.starsFilled = [Bool](repeating: true, count: lesson.stars)
         + [Bool](repeating: false, count: starsTotal - lesson.stars)
-        self.lessonName = lesson.lessonName
+        self.lessonName = lesson.name
     }
 }

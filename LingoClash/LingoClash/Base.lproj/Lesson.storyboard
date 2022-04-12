@@ -170,36 +170,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aew-SA-KHe">
-                                <rect key="frame" x="0.0" y="0.0" width="744" height="1025"/>
+                                <rect key="frame" x="40" y="40" width="664" height="985"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hgz-V0-5dD">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="10" id="G33-v7-fJ4" customClass="AlignedCollectionViewFlowLayout" customModule="LingoClash" customModuleProvider="target">
+                                    <size key="itemSize" width="128" height="40"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="vocabCollectionCellIdentifier" id="gko-eg-SFE" customClass="VocabCollectionCell" customModule="LingoClash" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="M2k-8D-M17">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Word" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QjC-Rg-HdN">
-                                                    <rect key="frame" x="32.5" y="47" width="63" height="34"/>
-                                                    <color key="backgroundColor" red="0.51930648089999998" green="0.7137650847" blue="0.83092635869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vocab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4N-98-V56">
+                                                    <rect key="frame" x="21.5" y="9.5" width="85" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="systemTealColor"/>
                                             <constraints>
-                                                <constraint firstItem="QjC-Rg-HdN" firstAttribute="centerX" secondItem="M2k-8D-M17" secondAttribute="centerX" id="I02-b3-4e1"/>
-                                                <constraint firstItem="QjC-Rg-HdN" firstAttribute="centerY" secondItem="M2k-8D-M17" secondAttribute="centerY" id="l3e-R5-cVF"/>
+                                                <constraint firstItem="i4N-98-V56" firstAttribute="centerY" secondItem="M2k-8D-M17" secondAttribute="centerY" id="dgk-Fd-kUE"/>
+                                                <constraint firstAttribute="width" secondItem="i4N-98-V56" secondAttribute="width" multiplier="1.5" id="ouv-rL-gnR"/>
+                                                <constraint firstItem="i4N-98-V56" firstAttribute="centerX" secondItem="M2k-8D-M17" secondAttribute="centerX" id="qnf-FQ-VUZ"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="128" height="40"/>
                                         <connections>
-                                            <outlet property="textField" destination="QjC-Rg-HdN" id="wAz-pC-KOV"/>
+                                            <outlet property="containerView" destination="M2k-8D-M17" id="gwx-jY-S0X"/>
+                                            <outlet property="vocabLabel" destination="i4N-98-V56" id="NQj-jy-zLR"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -228,17 +232,18 @@
                         <viewLayoutGuide key="safeArea" id="pWi-Ju-uHv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aew-SA-KHe" firstAttribute="leading" secondItem="pWi-Ju-uHv" secondAttribute="leading" id="G5g-gv-xXD"/>
-                            <constraint firstItem="aew-SA-KHe" firstAttribute="top" secondItem="pWi-Ju-uHv" secondAttribute="top" id="RDT-c7-Dt9"/>
+                            <constraint firstItem="aew-SA-KHe" firstAttribute="leading" secondItem="pWi-Ju-uHv" secondAttribute="leading" constant="40" id="G5g-gv-xXD"/>
+                            <constraint firstItem="aew-SA-KHe" firstAttribute="top" secondItem="pWi-Ju-uHv" secondAttribute="top" constant="40" id="RDT-c7-Dt9"/>
                             <constraint firstItem="KT6-kj-3Ot" firstAttribute="top" secondItem="aew-SA-KHe" secondAttribute="bottom" constant="8" symbolic="YES" id="Sd1-c6-zUc"/>
                             <constraint firstItem="KT6-kj-3Ot" firstAttribute="leading" secondItem="pWi-Ju-uHv" secondAttribute="leading" id="XRk-P8-eMA"/>
                             <constraint firstItem="pWi-Ju-uHv" firstAttribute="trailing" secondItem="KT6-kj-3Ot" secondAttribute="trailing" id="daG-mu-azS"/>
                             <constraint firstItem="KT6-kj-3Ot" firstAttribute="bottom" secondItem="pWi-Ju-uHv" secondAttribute="bottom" id="t8G-3f-6GC"/>
-                            <constraint firstItem="pWi-Ju-uHv" firstAttribute="trailing" secondItem="aew-SA-KHe" secondAttribute="trailing" id="v2g-7M-LSb"/>
+                            <constraint firstItem="pWi-Ju-uHv" firstAttribute="trailing" secondItem="aew-SA-KHe" secondAttribute="trailing" constant="40" id="v2g-7M-LSb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yPY-HC-tUd"/>
                     <connections>
+                        <outlet property="collectionView" destination="aew-SA-KHe" id="pNt-4F-dpo"/>
                         <outlet property="vocabCollection" destination="aew-SA-KHe" id="iCI-ir-XD0"/>
                     </connections>
                 </viewController>
@@ -683,6 +688,9 @@
         <image name="star" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -13,7 +13,19 @@ class RecommendedBookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var learnButton: UIButton!
     
-    func configure(bookName: String) {
-        bookNameLabel.text = bookName
+    weak var delegate: LearnButtonDelegate?
+    private(set) var lessonSelectionViewModel: LessonSelectionViewModel?
+    
+    func configure(book: Book, delegate: LearnButtonDelegate?) {
+        bookNameLabel.text = book.name
+        self.delegate = delegate
+        self.lessonSelectionViewModel = LessonSelectionViewModelFromBook(book: book)
+    }
+    
+    @IBAction func learnButtonTapped(_ sender: UIButton) {
+        guard let lessonSelectionViewModel = lessonSelectionViewModel else {
+            return
+        }
+        self.delegate?.learnButtonTapped(lessonSelectionVM: lessonSelectionViewModel)
     }
 }

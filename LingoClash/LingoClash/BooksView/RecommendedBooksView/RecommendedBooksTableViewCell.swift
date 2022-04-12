@@ -10,18 +10,22 @@ import UIKit
 private let collectionCellReuseIdentifier = "RecommendedBookCollectionCell"
 
 
-class RecommendedBooksTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class RecommendedBooksTableViewCell: UITableViewCell {
     
-    private var books: [String] = []
+    private var books = [Book]()
+    private weak var delegate: LearnButtonDelegate?
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    func configure(books: [String]) {
+    func configure(books: [Book], delegate: LearnButtonDelegate) {
         self.books = books
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+        self.delegate = delegate
     }
-    
+}
+
+extension RecommendedBooksTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return books.count
     }
@@ -30,8 +34,7 @@ class RecommendedBooksTableViewCell: UITableViewCell, UICollectionViewDataSource
         
         var cell = UICollectionViewCell()
         if let bookCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellReuseIdentifier, for: indexPath) as? RecommendedBookCollectionViewCell {
-            
-            bookCell.configure(bookName: books[indexPath.row])
+            bookCell.configure(book: books[indexPath.row], delegate: delegate)
             
             ViewUtilities.styleCard(bookCell.containerView)
             
@@ -39,5 +42,4 @@ class RecommendedBooksTableViewCell: UITableViewCell, UICollectionViewDataSource
         }
         return cell
     }
-
 }
