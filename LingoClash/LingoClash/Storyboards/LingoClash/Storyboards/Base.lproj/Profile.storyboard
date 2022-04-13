@@ -19,7 +19,7 @@
         <!--Profile-->
         <scene sceneID="S2o-U1-tXX">
             <objects>
-                <viewController id="4ly-WR-423" sceneMemberID="viewController">
+                <viewController id="4ly-WR-423" customClass="ProfileViewController" customModule="LingoClashDev" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBK-U0-jUO">
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -426,6 +426,11 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="person" id="hyr-10-pG5"/>
                     <navigationItem key="navigationItem" id="jU0-Ln-7ep"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="5go-Xw-bjI" id="Z88-i7-jhM"/>
+                        <outlet property="starsTodayLabel" destination="I19-7S-g39" id="dYJ-gR-c0d"/>
+                        <outlet property="totalStarsLabel" destination="eZt-as-a6b" id="h2j-7X-22y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFr-74-7ca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -453,7 +458,7 @@
         <image name="undraw-book_reading" width="868.644287109375" height="699.46441650390625"/>
         <image name="undraw-calendar" width="866.3306884765625" height="605.73992919921875"/>
         <namedColor name="Primary">
-            <color red="0.36401796339999998" green="0.71016556019999999" blue="0.78107446430000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36470588235294116" green="0.70980392156862748" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryContainer">
             <color red="0.054999999701976776" green="0.40400001406669617" blue="0.50300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
