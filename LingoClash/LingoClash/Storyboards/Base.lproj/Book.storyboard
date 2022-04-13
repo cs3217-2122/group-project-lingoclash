@@ -219,7 +219,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="" id="TbT-ru-b47"/>
                     <connections>
+                        <outlet property="bookNameLabel" destination="z7c-2N-ouF" id="9Bs-w5-fun"/>
                         <outlet property="containerView" destination="ZsL-GU-8DV" id="2CM-TY-vOU"/>
+                        <outlet property="progressLabel" destination="bSW-Bj-4hA" id="J4b-zW-RKy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEl-Ri-LhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -148,7 +148,9 @@
                                 <size key="customSize" width="600" height="600"/>
                                 <connections>
                                     <outlet property="PKButton" destination="CWs-rn-aeu" id="xrW-xS-btZ"/>
+                                    <outlet property="bookNameLabel" destination="IIC-Y4-7Fa" id="A8D-x1-IhW"/>
                                     <outlet property="learnButton" destination="gQD-Xv-WtM" id="q2l-ka-5hB"/>
+                                    <outlet property="progressLabel" destination="Z6G-S7-SYQ" id="XDU-XJ-bBw"/>
                                     <outlet property="reviseButton" destination="MRn-TK-NhC" id="oD4-9c-FAA"/>
                                 </connections>
                             </collectionViewCell>

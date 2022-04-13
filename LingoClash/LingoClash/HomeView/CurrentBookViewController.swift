@@ -12,9 +12,9 @@ class CurrentBookViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     // TODO: remove below
-//    @IBOutlet weak var bookNameLabel: UILabel!
-//    @IBOutlet weak var progressLabel: UILabel!
-//
+    @IBOutlet weak var bookNameLabel: UILabel!
+    @IBOutlet weak var progressLabel: UILabel!
+
     var viewModel: HomeViewModel?
     private var cancellables: Set<AnyCancellable> = []
 
@@ -31,8 +31,8 @@ class CurrentBookViewController: UIViewController {
     func setUpBinders() {
         viewModel?.$currentBook.sink {[weak self] book in
             if let book = book {
-//                self?.bookNameLabel.text = book.name
-//                self?.progressLabel.text = book.progress
+                self?.bookNameLabel.text = book.name
+                self?.progressLabel.text = book.progress
             }
         }.store(in: &cancellables)
     }
