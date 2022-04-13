@@ -184,6 +184,17 @@
                                             <constraint firstAttribute="width" constant="200" id="psU-XC-9ht"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eu-lM-pTH">
+                                        <rect key="frame" x="615" y="30" width="175" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Discover Books &gt; ">
+                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                            <color key="baseForegroundColor" name="PrimaryText"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="baa-mu-0L2" kind="show" id="yZG-JA-Oy7"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="Primary"/>
                                 <constraints>
@@ -192,11 +203,13 @@
                                     <constraint firstAttribute="trailing" secondItem="QtM-MK-utr" secondAttribute="trailing" id="8VT-5B-deI"/>
                                     <constraint firstItem="EXi-2U-su2" firstAttribute="centerY" secondItem="ZsL-GU-8DV" secondAttribute="centerY" id="9j6-Ha-9Xe"/>
                                     <constraint firstItem="QtM-MK-utr" firstAttribute="leading" secondItem="ZsL-GU-8DV" secondAttribute="leading" id="HAJ-Vo-hEP"/>
+                                    <constraint firstAttribute="trailing" secondItem="7eu-lM-pTH" secondAttribute="trailing" constant="30" id="HXc-Jb-lcJ"/>
                                     <constraint firstItem="Pgc-dg-KG1" firstAttribute="centerX" secondItem="ZsL-GU-8DV" secondAttribute="centerX" id="IuX-36-RCM"/>
                                     <constraint firstAttribute="bottom" secondItem="QtM-MK-utr" secondAttribute="bottom" id="S6H-Ov-aSl"/>
                                     <constraint firstItem="EXi-2U-su2" firstAttribute="centerX" secondItem="ZsL-GU-8DV" secondAttribute="centerX" id="UaA-np-jbF"/>
                                     <constraint firstItem="QtM-MK-utr" firstAttribute="top" secondItem="ZsL-GU-8DV" secondAttribute="top" id="Uq4-Bu-s5R"/>
                                     <constraint firstAttribute="trailing" secondItem="Tst-aR-3Zc" secondAttribute="trailing" id="Xfg-lV-Glc"/>
+                                    <constraint firstItem="7eu-lM-pTH" firstAttribute="top" secondItem="ZsL-GU-8DV" secondAttribute="top" constant="30" id="mdd-Gj-0Ec"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N1 Vocab" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7c-2N-ouF">
@@ -317,6 +330,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="yZG-JA-Oy7"/>
         <segue reference="aho-Ff-dmE"/>
     </inferredMetricsTieBreakers>
     <resources>

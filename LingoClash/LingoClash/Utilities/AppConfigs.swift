@@ -12,9 +12,11 @@ struct AppConfigs {
     struct Debug {
         // Preloads the db with some sample data. Only works in development scheme.
         static let enablePreloadData = false
-        static let enableLogin = true
-        static let testEmail = "test3@test.com"
-        static let testPassword = "test@123"
+        static let enableLogin = false
+//        static let testEmail = "test3@test.com"
+//        static let testPassword = "test@123"
+        static let testEmail = "guy@gmail.com"
+        static let testPassword = "setMeUp?"
     }
     
     struct View {
