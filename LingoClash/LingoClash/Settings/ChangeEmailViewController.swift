@@ -9,11 +9,11 @@ import UIKit
 import Combine
 
 class ChangeEmailViewController: UIViewController {
-
+    
     @IBOutlet weak var newEmailTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    weak var viewModel: ProfileViewModel?
+    weak var viewModel: SettingsViewModel?
     private var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
@@ -51,5 +51,5 @@ class ChangeEmailViewController: UIViewController {
         let fields = ChangeEmailFields(newEmail: newEmail)
         viewModel?.changeEmail(fields)
     }
-
+    
 }

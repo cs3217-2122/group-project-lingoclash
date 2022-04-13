@@ -173,6 +173,10 @@
 		D3686A0B27F7517F0013B289 /* FormFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7827F226AF004BC620 /* FormFields.swift */; };
 		D3757B142805E84D003CF4F2 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3757B132805E84D003CF4F2 /* Arena.storyboard */; };
 		D3757B152805E84D003CF4F2 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3757B132805E84D003CF4F2 /* Arena.storyboard */; };
+		D3757B16280683FF003CF4F2 /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5427E9C8260015BBD4 /* ChangeEmailViewController.swift */; };
+		D3757B17280683FF003CF4F2 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5227E9C5060015BBD4 /* ChangePasswordViewController.swift */; };
+		D3757B192806849B003CF4F2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3757B182806849B003CF4F2 /* SettingsViewModel.swift */; };
+		D3757B1A2806849B003CF4F2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3757B182806849B003CF4F2 /* SettingsViewModel.swift */; };
 		D398780927DF6AB800B2F4ED /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D398780827DF6AB800B2F4ED /* DataProvider.swift */; };
 		D3AF1C1628057B2900DCFA2E /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */; };
 		D3AF1C1828057C7600DCFA2E /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1728057C7600DCFA2E /* LightTheme.swift */; };
@@ -525,6 +529,7 @@
 		D33282F827D4E63B00C80986 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		D3757B132805E84D003CF4F2 /* Arena.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Arena.storyboard; sourceTree = "<group>"; };
+		D3757B182806849B003CF4F2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		D398780827DF6AB800B2F4ED /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		D3AF1C1728057C7600DCFA2E /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
@@ -707,10 +712,7 @@
 			isa = PBXGroup;
 			children = (
 				6204A03E27DE43350063100D /* ProfileViewController.swift */,
-				621E6D5227E9C5060015BBD4 /* ChangePasswordViewController.swift */,
-				621E6D5427E9C8260015BBD4 /* ChangeEmailViewController.swift */,
 				629090A427E85EFA00941A3B /* ProfileViewModel.swift */,
-				621E6D5027E9C4F10015BBD4 /* EditProfileViewController.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -1045,6 +1047,10 @@
 			isa = PBXGroup;
 			children = (
 				D3AF1C242805924300DCFA2E /* SettingsViewController.swift */,
+				D3757B182806849B003CF4F2 /* SettingsViewModel.swift */,
+				621E6D5227E9C5060015BBD4 /* ChangePasswordViewController.swift */,
+				621E6D5427E9C8260015BBD4 /* ChangeEmailViewController.swift */,
+				621E6D5027E9C4F10015BBD4 /* EditProfileViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1398,6 +1404,7 @@
 				CEF1E80427E6ED96005D4272 /* TwoDisjointSetOptionQuestion.swift in Sources */,
 				CEF1E7FB27E6D591005D4272 /* Question.swift in Sources */,
 				62165B7127F218A0004BC620 /* ProfileViewController.swift in Sources */,
+				D3757B17280683FF003CF4F2 /* ChangePasswordViewController.swift in Sources */,
 				620DF3CC27F2315F006A9E5F /* ChangePasswordFields.swift in Sources */,
 				D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */,
 				62A03E562801510F008FE249 /* ProfileLessonManager.swift in Sources */,
@@ -1425,6 +1432,8 @@
 				62BB1CE428002766002CD31A /* UIViewController+Spinner.swift in Sources */,
 				CEF02D8727E9721000C30E03 /* QuestionFormat.swift in Sources */,
 				D3C5E28A27F71DA200F65B8E /* VocabManager.swift in Sources */,
+				D3757B16280683FF003CF4F2 /* ChangeEmailViewController.swift in Sources */,
+				D3757B192806849B003CF4F2 /* SettingsViewModel.swift in Sources */,
 				D3F00CB527DFC5DD00393ADC /* BookCategoryData.swift in Sources */,
 				CEF02D8D27E9862C00C30E03 /* QuestionScopeFactory.swift in Sources */,
 				624BD58227E7A22D006F0391 /* CompletedBooksViewModel.swift in Sources */,
@@ -1561,6 +1570,7 @@
 				D3C5E1E327F6E36B00F65B8E /* ProfileBookManager.swift in Sources */,
 				D3C5E1E527F6E36B00F65B8E /* RecommendedBooksViewController.swift in Sources */,
 				D3686A0627F7513A0013B289 /* SignUpFields.swift in Sources */,
+				D3757B1A2806849B003CF4F2 /* SettingsViewModel.swift in Sources */,
 				D3C5E1E627F6E36B00F65B8E /* LessonVocabViewModel.swift in Sources */,
 				D3C5E1E727F6E36B00F65B8E /* VocabsLearntTableCell.swift in Sources */,
 				D3C5E1E827F6E36B00F65B8E /* TwoDisjointSetOptionQuestion.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ChangePasswordViewController.swift
+//  EditProfileViewController.swift
 //  LingoClash
 //
 //  Created by Ai Ling Hong on 22/3/22.
@@ -8,14 +8,12 @@
 import UIKit
 import Combine
 
-class ChangePasswordViewController: UIViewController {
-
-    @IBOutlet weak var currentPasswordTextField: UITextField!
-    @IBOutlet weak var newPasswordTextField: UITextField!
-    @IBOutlet weak var confirmNewPasswordTextField: UITextField!
+class EditProfileViewController: UIViewController {
+    
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    weak var viewModel: ProfileViewModel?
+    weak var viewModel: SettingsViewModel?
     private var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
@@ -25,12 +23,18 @@ class ChangePasswordViewController: UIViewController {
         setUpBinders()
     }
     
-    private func setUpView() {
+    func setUpView() {
         errorLabel.hide()
     }
     
-    private func setUpBinders() {
-        viewModel?.$changePasswordError.sink {[weak self] error in
+    func setUpBinders() {
+        viewModel?.$name.sink {[weak self] name in
+            if let name = name {
+                self?.nameTextField.text = name
+            }
+        }.store(in: &cancellables)
+        
+        viewModel?.$editProfileError.sink {[weak self] error in
             if let error = error {
                 self?.errorLabel.show(withText: error)
             } else {
@@ -46,14 +50,12 @@ class ChangePasswordViewController: UIViewController {
             }
         }.store(in: &cancellables)
     }
-        
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
-        let currentPassword = FormUtilities.getTrimmedString(textField: currentPasswordTextField)
-        let newPassword = FormUtilities.getTrimmedString(textField: newPasswordTextField)
-        let confirmNewPassword = FormUtilities.getTrimmedString(textField: confirmNewPasswordTextField)
+        let name = FormUtilities.getTrimmedString(textField: nameTextField)
         
-        let fields = ChangePasswordFields(currentPassword: currentPassword, newPassword: newPassword, confirmNewPassword: confirmNewPassword)
-        viewModel?.changePassword(fields)
+        let fields = EditProfileFields(name: name)
+        viewModel?.editProfile(fields)
     }
     
 }
