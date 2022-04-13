@@ -48,9 +48,7 @@ class ViewUtilities {
         cell.layer.masksToBounds = false
     }
     
-    static func styleCard(_ view: UIView) {
-        view.layer.backgroundColor = Theme.current.primary.cgColor
-        
+    static func styleCard(_ view: UIView) {        
         // Make corners rounded
         view.layer.cornerRadius = 10.0
         view.layer.masksToBounds = true
