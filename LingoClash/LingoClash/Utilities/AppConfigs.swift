@@ -12,7 +12,7 @@ struct AppConfigs {
     struct Debug {
         // Preloads the db with some sample data. Only works in development scheme.
         static let enablePreloadData = false
-        static let enableLogin = false
+        static let enableLogin = true
         static let testEmail = "test3@test.com"
         static let testPassword = "test@123"
     }
@@ -23,7 +23,6 @@ struct AppConfigs {
         static let blue = #colorLiteral(red: 0.3065024073, green: 0.6942780921, blue: 1, alpha: 1)
     }
 
-    
     struct API {
         static let authProvider = FirebaseAuthProvider()
         static let dataProvider = FirebaseDataProvider()

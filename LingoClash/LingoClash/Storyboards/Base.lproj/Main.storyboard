@@ -46,7 +46,7 @@
                                     <constraint firstItem="IR3-ea-lRv" firstAttribute="height" secondItem="f0m-Dr-DVL" secondAttribute="height" id="L5m-jJ-j3Q"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="E6k-CR-mzx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_v2" translatesAutoresizingMaskIntoConstraints="NO" id="E6k-CR-mzx">
                                 <rect key="frame" x="260" y="442" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="aMx-op-VfZ"/>
@@ -55,7 +55,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.88627451660000001" green="0.88235294819999999" blue="0.9098039269" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.91387563940000005" green="0.91763645410000005" blue="0.93005818129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Dn-j0-5Kb" secondAttribute="trailing" constant="40" id="DnX-xG-F67"/>
                             <constraint firstItem="E6k-CR-mzx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F68-kC-8Ud"/>
@@ -278,12 +278,12 @@
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="logo" width="360" height="360"/>
+        <image name="logo_v2" width="166.5" height="166.5"/>
         <namedColor name="Error">
             <color red="0.73100000619888306" green="0.10400000214576721" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Primary">
-            <color red="0.36401796339999998" green="0.71016556019999999" blue="0.78107446430000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36470588235294116" green="0.70980392156862748" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
