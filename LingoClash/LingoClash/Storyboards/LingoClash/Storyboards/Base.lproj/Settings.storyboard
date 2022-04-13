@@ -54,9 +54,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7pn-7o-JBq"/>
                                         </constraints>
-                                        <color key="tintColor" name="Primary"/>
+                                        <color key="tintColor" name="TintColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Edit Profile"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Edit Profile" cornerStyle="capsule">
+                                            <color key="baseForegroundColor" name="Tertiary"/>
+                                            <color key="baseBackgroundColor" name="TertiaryContainer"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="Iho-VM-mNW" kind="show" id="TIp-4c-TAz"/>
                                         </connections>
@@ -66,9 +69,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="oYG-YD-vKt"/>
                                         </constraints>
-                                        <color key="tintColor" name="Primary"/>
+                                        <color key="tintColor" name="TintColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Change Email"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Change Email" cornerStyle="capsule">
+                                            <color key="baseForegroundColor" name="Tertiary"/>
+                                            <color key="baseBackgroundColor" name="TertiaryContainer"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="E9m-3h-Lbh" kind="show" id="ak5-5Q-Hpv"/>
                                         </connections>
@@ -78,9 +84,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ffu-KI-Z2s"/>
                                         </constraints>
-                                        <color key="tintColor" name="Primary"/>
+                                        <color key="tintColor" name="TintColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Change Password"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Change Password" cornerStyle="capsule">
+                                            <color key="baseForegroundColor" name="Secondary"/>
+                                            <color key="baseBackgroundColor" name="TertiaryContainer"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="FHy-vw-icR" kind="show" id="acb-VY-cYq"/>
                                         </connections>
@@ -90,9 +99,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="1y7-H6-r9s"/>
                                         </constraints>
-                                        <color key="tintColor" name="Secondary"/>
+                                        <color key="tintColor" name="TintColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Log out"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log out" cornerStyle="capsule">
+                                            <color key="baseForegroundColor" name="PrimaryText"/>
+                                            <color key="baseBackgroundColor" name="Secondary"/>
+                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -310,11 +322,20 @@
         <namedColor name="Error">
             <color red="0.73100000619888306" green="0.10400000214576721" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Primary">
-            <color red="0.36401796339999998" green="0.71016556019999999" blue="0.78107446430000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="PrimaryText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Secondary">
             <color red="0.49022787810000001" green="0.46213459969999998" blue="0.74027162790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tertiary">
+            <color red="0.35400000214576721" green="0.36100000143051147" blue="0.49599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TertiaryContainer">
+            <color red="0.87900000810623169" green="0.87800002098083496" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TintColor">
+            <color red="0.0" green="0.5899999737739563" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

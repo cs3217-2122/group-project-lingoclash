@@ -93,7 +93,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" name="Secondary"/>
+                                                                        <color key="backgroundColor" name="Primary"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="150" id="3vV-7n-I8B"/>
                                                                             <constraint firstItem="oYe-Tv-yHN" firstAttribute="leading" secondItem="TAj-jh-ITp" secondAttribute="leading" id="4HV-dj-B50"/>
@@ -110,10 +110,12 @@
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="KHm-1s-fRl"/>
                                                                         </constraints>
-                                                                        <color key="tintColor" red="0.36401796339999998" green="0.71016556019999999" blue="0.78107446430000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="tintColor" name="TintColor"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="filled" title="Learn" cornerStyle="capsule">
                                                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                                            <color key="baseForegroundColor" name="Tertiary"/>
+                                                                            <color key="baseBackgroundColor" name="TertiaryContainer"/>
                                                                         </buttonConfiguration>
                                                                         <connections>
                                                                             <action selector="learnButtonTapped:" destination="4eh-HQ-jce" eventType="touchUpInside" id="AG2-sl-LTl"/>
@@ -159,17 +161,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eN9-Gf-863" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8112" y="-549"/>
+            <point key="canvasLocation" x="8040" y="-606"/>
         </scene>
     </scenes>
     <resources>
         <image name="book" width="30" height="30"/>
         <image name="undraw-true_love" width="888" height="475.27072143554688"/>
-        <namedColor name="Secondary">
-            <color red="0.49022787810000001" green="0.46213459969999998" blue="0.74027162790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Primary">
+            <color red="0.36470588235294116" green="0.70980392156862748" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SecondaryText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tertiary">
+            <color red="0.35400000214576721" green="0.36100000143051147" blue="0.49599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TertiaryContainer">
+            <color red="0.87900000810623169" green="0.87800002098083496" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TintColor">
+            <color red="0.0" green="0.5899999737739563" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

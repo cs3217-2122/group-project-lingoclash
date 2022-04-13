@@ -324,7 +324,7 @@
         <image name="undraw-reading-time" width="751.13134765625" height="556.41473388671875"/>
         <image name="undraw-road_to_knowledge" width="911.60162353515625" height="451.38424682617188"/>
         <namedColor name="Primary">
-            <color red="0.054999999701976776" green="0.40400001406669617" blue="0.50300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36470588235294116" green="0.70980392156862748" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -164,7 +164,7 @@
         <image name="undraw-empty_street" width="997.8612060546875" height="450.80810546875"/>
         <image name="undraw-notebook" width="892" height="500.74996948242188"/>
         <namedColor name="Secondary">
-            <color red="0.29699999094009399" green="0.38400000333786011" blue="0.41800001263618469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.49022787810000001" green="0.46213459969999998" blue="0.74027162790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
