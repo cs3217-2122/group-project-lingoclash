@@ -91,22 +91,19 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGz-3m-jeC">
-                                                                    <rect key="frame" x="70.5" y="0.0" width="348.5" height="50"/>
+                                                                    <rect key="frame" x="70.5" y="0.0" width="367" height="50"/>
                                                                 </view>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-white" translatesAutoresizingMaskIntoConstraints="NO" id="WCG-M7-8TG">
-                                                                    <rect key="frame" x="419" y="0.0" width="30" height="50"/>
+                                                                    <rect key="frame" x="437.5" y="0.0" width="30" height="50"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-Uf-dKL">
-                                                                    <rect key="frame" x="449" y="0.0" width="15" height="50"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcM-WU-oFc">
+                                                                    <rect key="frame" x="467.5" y="0.0" width="10" height="50"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="15" id="J5z-xx-hxz"/>
+                                                                        <constraint firstAttribute="width" constant="10" id="fQJ-lH-iQQ"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="133" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aJ-2l-H65">
-                                                                    <rect key="frame" x="464" y="0.0" width="36" height="50"/>
+                                                                    <rect key="frame" x="477.5" y="0.0" width="22.5" height="50"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
                                                                     <color key="textColor" name="PrimaryText"/>
                                                                     <nil key="highlightedColor"/>
@@ -201,7 +198,7 @@
         <image name="cover_2" width="1000" height="1000"/>
         <image name="star-white" width="30" height="30"/>
         <namedColor name="Primary">
-            <color red="0.36470588235294116" green="0.70980392156862748" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36500000953674316" green="0.70999997854232788" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

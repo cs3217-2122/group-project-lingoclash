@@ -86,7 +86,7 @@
                                                 <rect key="frame" x="570" y="179" width="150" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="h3K-XQ-US8"/>
-                                                    <constraint firstAttribute="width" constant="150" id="zwL-jH-SZP"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="zwL-jH-SZP"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="30"/>
                                                 <color key="textColor" name="PrimaryText"/>
@@ -114,7 +114,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9P1-No-tWq">
                                                 <rect key="frame" x="695" y="25" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="Gsf-ax-bjK"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Gsf-ax-bjK"/>
                                                     <constraint firstAttribute="height" constant="100" id="cg2-Bw-X9s"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
@@ -167,15 +167,12 @@
                                                         <color key="textColor" name="PrimaryText"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="is2-lZ-lyh">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jD0-PR-uy4">
                                                         <rect key="frame" x="38.5" y="0.0" width="10" height="50"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="SzF-vD-MhO"/>
+                                                            <constraint firstAttribute="width" constant="10" id="ez0-bo-pgR"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    </view>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-white" translatesAutoresizingMaskIntoConstraints="NO" id="3yz-VF-em0">
                                                         <rect key="frame" x="48.5" y="0.0" width="30" height="50"/>
                                                     </imageView>
@@ -459,7 +456,7 @@
         <image name="undraw-book_reading" width="868.644287109375" height="699.46441650390625"/>
         <image name="undraw-calendar" width="866.3306884765625" height="605.73992919921875"/>
         <namedColor name="Primary">
-            <color red="0.36470588235294116" green="0.70980392156862748" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36500000953674316" green="0.70999997854232788" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryContainer">
             <color red="0.054999999701976776" green="0.40400001406669617" blue="0.50300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -468,7 +465,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Secondary">
-            <color red="0.49022787810000001" green="0.46213459969999998" blue="0.74027162790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.49000000953674316" green="0.46200001239776611" blue="0.74000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

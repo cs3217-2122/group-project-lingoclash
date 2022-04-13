@@ -31,8 +31,8 @@ class TwoDisjointSetOptionQuestionLayoutViewController: UIViewController, Questi
     
     // TODO: perhaps remove this since it is not used.
     func fillUI() {
-        guard isViewLoaded, let viewModel = viewModel else {
-            return
-        }
+//        guard isViewLoaded, let viewModel = viewModel else {
+//            return
+//        }
     }
 }
