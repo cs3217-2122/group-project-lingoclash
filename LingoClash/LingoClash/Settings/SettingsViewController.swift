@@ -73,6 +73,4 @@ class SettingsViewController: UIViewController {
             changeEmailVC.viewModel = self.viewModel
         }
     }
-    
-    
 }

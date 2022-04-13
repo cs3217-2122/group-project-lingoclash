@@ -12,7 +12,7 @@ import FirebaseAuth
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+//    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var totalStarsLabel: UILabel!
     @IBOutlet weak var starsTodayLabel: UILabel!
     
@@ -33,21 +33,21 @@ class ProfileViewController: UIViewController {
             }
         }.store(in: &cancellables)
         
-        viewModel.$email.sink {[weak self] email in
-            if let email = email {
-                self?.emailLabel.text = email
-            }
-        }.store(in: &cancellables)
+//        viewModel.$email.sink {[weak self] email in
+//            if let email = email {
+//                self?.emailLabel.text = email
+//            }
+//        }.store(in: &cancellables)
         
         viewModel.$totalStars.sink {[weak self] totalStars in
             if let totalStars = totalStars {
-                self?.totalStarsLabel.text = "Total stars: \(totalStars)"
+                self?.totalStarsLabel.text = "\(totalStars)"
             }
         }.store(in: &cancellables)
         
         viewModel.$starsToday.sink {[weak self] starsToday in
             if let starsToday = starsToday {
-                self?.starsTodayLabel.text = "Total stars today: \(starsToday)"
+                self?.starsTodayLabel.text = "\(starsToday)"
             }
         }.store(in: &cancellables)
         

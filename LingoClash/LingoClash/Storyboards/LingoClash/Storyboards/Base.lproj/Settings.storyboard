@@ -296,7 +296,7 @@
                                             <color key="baseBackgroundColor" name="Secondary"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="saveButtonTapped:" destination="g5d-MZ-hJU" eventType="touchUpInside" id="ePg-Ub-qEO"/>
+                                            <action selector="saveButtonTapped:" destination="g5d-MZ-hJU" eventType="touchUpInside" id="KWK-iw-0xV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -314,8 +314,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Adr-kq-fpV"/>
                     <connections>
-                        <outlet property="errorLabel" destination="nrS-0F-WOG" id="tAG-xJ-r9L"/>
-                        <outlet property="nameTextField" destination="au3-YP-GSv" id="8Qr-c8-8dM"/>
+                        <outlet property="errorLabel" destination="nrS-0F-WOG" id="Jim-eZ-hoj"/>
+                        <outlet property="nameTextField" destination="au3-YP-GSv" id="icu-zZ-wTh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6U-6e-G95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

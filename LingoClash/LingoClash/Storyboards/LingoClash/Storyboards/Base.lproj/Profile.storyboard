@@ -45,6 +45,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZt-as-a6b">
                                                                 <rect key="frame" x="0.0" y="50" width="100" height="50"/>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="CDM-la-4e0"/>
                                                                     <constraint firstAttribute="height" constant="50" id="LpD-7w-XN2"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="30"/>
