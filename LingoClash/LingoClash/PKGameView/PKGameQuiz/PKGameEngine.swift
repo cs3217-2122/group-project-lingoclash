@@ -53,11 +53,11 @@ class PKGameEngine {
         moves.append(move)
         renderer?.didAddMove(move)
         
+        updateScore(for: move)
+        
         if shouldLoadNextQuestion() {
             loadNextQuestion()
         }
-        
-        updateScore(for: move)
         return move
     }
     

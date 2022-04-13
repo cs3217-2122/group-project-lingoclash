@@ -24,8 +24,6 @@ class PKGameOverviewViewModelFromOutcome: PKGameOverviewViewModel {
         }
         self.names = names
         self.scores = scores
-        print(outcome.scores)
-        print(scores)
         
         if let winner = winner {
             self.didWin = winner == currentPlayer

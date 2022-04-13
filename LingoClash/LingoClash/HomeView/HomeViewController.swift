@@ -27,11 +27,6 @@ class HomeViewController: UIViewController {
                     currentBookVC.viewModel = self.viewModel
                 }
             }
-        } else if let pkLobbyVC = segue.destination as? PKGameLobbyViewController {
-            guard let pkLobbyVM = self.viewModel.pkGameLobbyViewModel else {
-                return
-            }
-            pkLobbyVC.viewModel = pkLobbyVM
         }
     }
 

@@ -35,6 +35,7 @@ class SampleDataUtilities {
         }
     }
     
+    // TODO: add book icon
     private static func createSampleBooks() -> Promise<Void> {
         Logger.info("Creating sample books...")
         

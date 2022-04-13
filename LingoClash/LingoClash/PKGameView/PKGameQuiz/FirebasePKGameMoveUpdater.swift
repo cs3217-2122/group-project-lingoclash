@@ -54,17 +54,17 @@ class FirebasePKGameMoveUpdater: PKGameMoveUpdateDelegate {
                         firstly {
                             self.getMove(from: moveData)
                         }.done { move in
-                            print("added move: \(move)")
+//                            print("added move: \(move)")
                             self.updateMoveListener(with: move)
                         }
                     }
 
                 }
                 if (diff.type == .modified) {
-                    print("Modified move: \(diff.document.data())")
+//                    print("Modified move: \(diff.document.data())")
                 }
                 if (diff.type == .removed) {
-                    print("Removed move: \(diff.document.data())")
+//                    print("Removed move: \(diff.document.data())")
                 }
             }
         }

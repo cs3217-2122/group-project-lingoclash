@@ -11,9 +11,10 @@ import Combine
 class CurrentBookViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
+    // TODO: remove below
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
-    
+
     var viewModel: HomeViewModel?
     private var cancellables: Set<AnyCancellable> = []
 
@@ -43,6 +44,12 @@ class CurrentBookViewController: UIViewController {
                 return
             }
             lessonSelectionViewController.viewModel = lessonSelectionViewModel
+        } else if let pkLobbyVC = segue.destination as? PKGameLobbyViewController {
+            guard let pkLobbyVM = self.viewModel?.pkGameLobbyViewModel else {
+                assert(false)
+                return
+            }
+            pkLobbyVC.viewModel = pkLobbyVM
         }
     }
 

@@ -9,9 +9,14 @@ import UIKit
 
 struct AppConfigs {
     
-    struct General {
+    struct Debug {
+        
         // Preloads the db with some sample data. Only works in development scheme.
         static let enablePreloadData = false
+        static let enableLogin = false
+//        static let testEmail = "test3@test.com"
+//        static let testPassword = "test@123"
+        static let testAccounts: [LoginFields] = [LoginFields(email: "guy@gmail.com", password: "setMeUp?"),LoginFields(email: "c@c.com", password: "123456")]
     }
     
     struct View {
@@ -20,7 +25,6 @@ struct AppConfigs {
         static let blue = #colorLiteral(red: 0.3065024073, green: 0.6942780921, blue: 1, alpha: 1)
     }
 
-    
     struct API {
         static let authProvider = FirebaseAuthProvider()
         static let dataProvider = FirebaseDataProvider()

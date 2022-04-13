@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nIF-gE-wlG">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Learning-->
+        <scene sceneID="3eY-Ey-H1w">
+            <objects>
+                <viewController id="nIF-gE-wlG" customClass="LearningBooksViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h0n-EL-U2i">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcX-sl-ld5">
+                                <rect key="frame" x="20" y="64" width="780" height="1096"/>
+                                <connections>
+                                    <segue destination="eCr-cN-gaU" kind="embed" id="AfC-OO-m0s"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="raU-bx-zTm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kcX-sl-ld5" firstAttribute="leading" secondItem="raU-bx-zTm" secondAttribute="leading" constant="20" id="gZY-yz-zRd"/>
+                            <constraint firstItem="kcX-sl-ld5" firstAttribute="top" secondItem="raU-bx-zTm" secondAttribute="top" constant="40" id="h0O-Hj-4PR"/>
+                            <constraint firstItem="raU-bx-zTm" firstAttribute="bottom" secondItem="kcX-sl-ld5" secondAttribute="bottom" id="pzF-F0-PRg"/>
+                            <constraint firstItem="raU-bx-zTm" firstAttribute="trailing" secondItem="kcX-sl-ld5" secondAttribute="trailing" constant="20" id="sKu-cZ-pAA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Learning" image="book-reading" id="UyJ-NN-fon"/>
+                    <connections>
+                        <outlet property="containerView" destination="kcX-sl-ld5" id="zqW-MF-soa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cn1-89-AFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8245" y="-220"/>
+        </scene>
+        <!--UICollectionViewController-YY5-1r-xMr-->
+        <scene sceneID="2b6-kl-Bbh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Book" referencedIdentifier="UICollectionViewController-YY5-1r-xMr" id="eCr-cN-gaU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qdr-jg-Dol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8248" y="385"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book-reading" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
