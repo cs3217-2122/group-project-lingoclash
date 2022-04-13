@@ -25,5 +25,3 @@ struct Lesson {
         self.stars = profileLessonData?.stars ?? 0
     }
 }
-
-extension Lesson: Hashable {}

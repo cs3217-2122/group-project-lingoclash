@@ -53,23 +53,22 @@ class FirebaseAuthProvider: AuthProvider {
             }
         }.then {
             self.getIdentity()
-        }.then { result -> Promise<UserIdentity> in
-
-            return Promise { seal in
-                let db = Firestore.firestore()
-                
-                // TODO: use codable object for this
-                db.collection("profiles").addDocument(
-                    data: [
-                        "user_id": result.id as Any,
-                        "stars": 0,
-                        "stars_today": 0,
-                    ]) { error in
-                        if let error = error {
-                            return seal.reject(error)
-                        }
-                        return seal.fulfill(result)
-                    }
+        }.then { userIdentity -> Promise<UserIdentity> in
+            guard let id = userIdentity.id,
+                  let name = userIdentity.fullName,
+                  let email = userIdentity.email else {
+                return Promise.reject(reason: FirebaseAuthError.invalidAuthDataResult)
+            }
+            let newProfileData = ProfileData(id: ProfileData.placeholderId,
+                                             book_id: nil,
+                                             user_id: id,
+                                             name: name,
+                                             email: email,
+                                             stars: 0,
+                                             stars_today: 0)
+            let createdProfileData = ProfileManager().create(newRecord: newProfileData)
+            return createdProfileData.map { _ in
+                return userIdentity
             }
         }
         

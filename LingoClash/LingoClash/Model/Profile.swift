@@ -25,6 +25,16 @@ struct Profile {
         self.starsToday = profileData.stars_today
         self.currentBook = currentBook
     }
+    
+    init(profileData: ProfileData, currentBook: Book?) {
+        self.id = profileData.id
+        self.name = profileData.name
+        self.email = profileData.email
+        self.user_id = profileData.user_id
+        self.stars = profileData.stars
+        self.starsToday = profileData.stars_today
+        self.currentBook = currentBook
+    }
 }
 
 extension Profile: Hashable {

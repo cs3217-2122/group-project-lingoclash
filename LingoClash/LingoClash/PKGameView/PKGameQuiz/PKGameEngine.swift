@@ -64,7 +64,7 @@ class PKGameEngine {
     func updateScore(for move: PKGameMove) {
         if move.isCorrect {
             let player = move.player
-            let scoreIncrement = Int((PKGameEngine.maxPointsPerQuestion * (move.timeTaken / PKGameEngine.maxTimePerQuestion)).rounded())
+            let scoreIncrement = Int((PKGameEngine.maxPointsPerQuestion * (max((PKGameEngine.maxTimePerQuestion - move.timeTaken), 0.0) / PKGameEngine.maxTimePerQuestion)).rounded())
             guard let oldScore = scores[player] else {
                 assert(false)
                 return

@@ -7,17 +7,17 @@
 	<key>REVERSED_CLIENT_ID</key>
 	<string>com.googleusercontent.apps.245579435202-fd0lrfnc7caanf0jq01p69qmgqchg8vl</string>
 	<key>API_KEY</key>
-	<string>AIzaSyALnsmJrRH6F5Qwpnyg2EV7Enk_ASb_4KY</string>
+	<string>AIzaSyByvZ0WhYfSqdEX3OVVcKTB0jbVSqWVKD0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>929853575561</string>
+	<string>245579435202</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.kyletoh.LingoClashDev</string>
 	<key>PROJECT_ID</key>
-	<string>testgame-3e644</string>
+	<string>lingoclash-dev</string>
 	<key>STORAGE_BUCKET</key>
-	<string>testgame-3e644.appspot.com</string>
+	<string>lingoclash-dev.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>

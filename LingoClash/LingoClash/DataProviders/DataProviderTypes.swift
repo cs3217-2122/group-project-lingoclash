@@ -13,6 +13,11 @@ protocol Record: Codable {
     var id: Identifier { get }
 }
 
+extension Record {
+    // Local creation of Records to be pushed to DataProvider where id is useless
+    static var placeholderId: Identifier { return "PLACEHOLDER" }
+}
+
 struct CreateParams<T: Codable> {
     let data: T
 }

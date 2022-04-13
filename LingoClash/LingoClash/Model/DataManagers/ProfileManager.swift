@@ -75,6 +75,41 @@ class ProfileManager: DataManager<ProfileData> {
         }
     }
     
+    func getProfile(id: Identifier) -> Promise<Profile> {
+        // TODO: Refactor getCurrentProfile to use this to avoid DRY
+        var profile: ProfileData?
+        var currentBook: Book?
+        var currentUser: UserIdentity?
+        
+        return firstly {
+            firstly {
+                self.getOne(id: id)
+            }.done {
+                profile = $0
+            }
+        }.then { () -> Promise<Void> in
+            guard let profile = profile else {
+                return Promise.reject(reason: DataManagerError.dataNotFound)
+            }
+            // Gets the current book
+            guard let currentBookId = profile.book_id else {
+                return Promise<Void>.resolve(value: ())
+            }
+            
+            return firstly {
+                BookManager().getBook(id: currentBookId)
+            }.done { book in
+                currentBook = book
+            }
+        }.compactMap {
+            guard let profile = profile else {
+                return nil
+            }
+            
+            return Profile(profileData: profile, currentBook: currentBook)
+        }
+    }
+    
     func setAsCurrentBook(bookId: Identifier) -> Promise<ProfileData> {
         
         return firstly {
@@ -84,6 +119,8 @@ class ProfileManager: DataManager<ProfileData> {
                 id: profileData.id,
                 book_id: bookId,
                 user_id: profileData.user_id,
+                name: profileData.name,
+                email: profileData.email,
                 stars: profileData.stars,
                 stars_today: profileData.stars_today)
             

@@ -43,9 +43,11 @@ class FormUtilities {
     }
     
     static func validatePassword(password: String) -> String? {
-        if !isPasswordValid(password) {
-            return "Please make sure your password is at least 8 characters, contains a special character and a number."
-        }
+        // TODO: Reinstate after dev
         return nil
+//        if !isPasswordValid(password) {
+//            return "Please make sure your password is at least 8 characters, contains a special character and a number."
+//        }
+//        return nil
     }
 }

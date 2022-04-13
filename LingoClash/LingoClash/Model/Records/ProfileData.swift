@@ -9,6 +9,8 @@ struct ProfileData {
     var id: Identifier
     let book_id: Identifier?
     let user_id: Identifier
+    let name: String
+    let email: String
     let stars: Int
     let stars_today: Int
 }
