@@ -47,44 +47,58 @@
                                     <constraint firstAttribute="height" constant="150" id="spx-I1-HtV"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-notebook" translatesAutoresizingMaskIntoConstraints="NO" id="SHl-Fr-xh9">
-                                <rect key="frame" x="362" y="780" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="4yi-B1-Yum"/>
-                                    <constraint firstAttribute="height" constant="300" id="7NK-Gn-lMn"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62O-yZ-ZwO">
-                                <rect key="frame" x="215" y="1090" width="594" height="24"/>
-                                <string key="text">    “Success is the sum of small efforts, repeated day in and day out.”
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSZ-tI-a42">
+                                <rect key="frame" x="0.0" y="680" width="1024" height="636"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-notebook" translatesAutoresizingMaskIntoConstraints="NO" id="SHl-Fr-xh9">
+                                        <rect key="frame" x="362" y="118" width="300" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="Gnm-LW-Qt7"/>
+                                            <constraint firstAttribute="width" constant="300" id="dXW-JD-XUi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62O-yZ-ZwO">
+                                        <rect key="frame" x="215" y="406" width="594" height="24"/>
+                                        <string key="text">    “Success is the sum of small efforts, repeated day in and day out.”
     ―  Robert Collier, self-help author</string>
-                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
-                                <color key="textColor" name="Secondary"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    ―  Robert Collier, self-help author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIu-HE-ehr">
-                                <rect key="frame" x="354" y="1124" width="316" height="24"/>
-                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
-                                <color key="textColor" name="Secondary"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
+                                        <color key="textColor" name="Secondary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    ―  Robert Collier, self-help author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIu-HE-ehr">
+                                        <rect key="frame" x="354" y="440" width="316" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
+                                        <color key="textColor" name="Secondary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="CIu-HE-ehr" firstAttribute="top" secondItem="62O-yZ-ZwO" secondAttribute="bottom" constant="10" id="F5p-ck-6Oo"/>
+                                    <constraint firstItem="62O-yZ-ZwO" firstAttribute="centerX" secondItem="MSZ-tI-a42" secondAttribute="centerX" id="F9Z-rx-GXf"/>
+                                    <constraint firstItem="62O-yZ-ZwO" firstAttribute="centerX" secondItem="MSZ-tI-a42" secondAttribute="centerX" id="Tq0-f7-s9A"/>
+                                    <constraint firstItem="62O-yZ-ZwO" firstAttribute="centerY" secondItem="MSZ-tI-a42" secondAttribute="centerY" constant="100" id="bD3-nr-882"/>
+                                    <constraint firstItem="SHl-Fr-xh9" firstAttribute="centerY" secondItem="MSZ-tI-a42" secondAttribute="centerY" constant="-50" id="dnz-zL-qhg"/>
+                                    <constraint firstItem="CIu-HE-ehr" firstAttribute="centerX" secondItem="MSZ-tI-a42" secondAttribute="centerX" id="gJr-0Y-mXw"/>
+                                    <constraint firstItem="CIu-HE-ehr" firstAttribute="centerX" secondItem="MSZ-tI-a42" secondAttribute="centerX" id="iIQ-sQ-ax1"/>
+                                    <constraint firstItem="SHl-Fr-xh9" firstAttribute="centerX" secondItem="MSZ-tI-a42" secondAttribute="centerX" id="wjv-sO-uQL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IaJ-5d-J2x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="62O-yZ-ZwO" firstAttribute="centerX" secondItem="QOj-mM-4xl" secondAttribute="centerX" id="1Pa-WF-il8"/>
                             <constraint firstItem="lZU-pN-TOX" firstAttribute="top" secondItem="Big-oc-yN4" secondAttribute="bottom" constant="-20" id="3cr-q3-QE5"/>
                             <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="lZU-pN-TOX" secondAttribute="trailing" constant="50" id="80b-7z-UFf"/>
                             <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="Big-oc-yN4" secondAttribute="trailing" constant="100" id="86K-Gb-g8d"/>
                             <constraint firstItem="twb-mm-j3v" firstAttribute="top" secondItem="QOj-mM-4xl" secondAttribute="topMargin" constant="50" id="IJa-Xl-wnd"/>
-                            <constraint firstItem="SHl-Fr-xh9" firstAttribute="centerX" secondItem="QOj-mM-4xl" secondAttribute="centerX" id="Mt5-sv-MlM"/>
+                            <constraint firstItem="MSZ-tI-a42" firstAttribute="top" secondItem="lZU-pN-TOX" secondAttribute="bottom" id="Iva-95-C35"/>
+                            <constraint firstItem="MSZ-tI-a42" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" id="WRq-Hz-YQm"/>
                             <constraint firstItem="twb-mm-j3v" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" constant="50" id="dwt-s3-btq"/>
-                            <constraint firstItem="SHl-Fr-xh9" firstAttribute="top" secondItem="lZU-pN-TOX" secondAttribute="bottom" constant="100" id="f6J-F4-Kea"/>
                             <constraint firstItem="lZU-pN-TOX" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" constant="50" id="fOA-OD-uwj"/>
-                            <constraint firstItem="CIu-HE-ehr" firstAttribute="top" secondItem="62O-yZ-ZwO" secondAttribute="bottom" constant="10" id="lsu-vs-j93"/>
+                            <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="MSZ-tI-a42" secondAttribute="trailing" id="gEE-sH-zfS"/>
                             <constraint firstItem="lZU-pN-TOX" firstAttribute="top" secondItem="twb-mm-j3v" secondAttribute="bottom" constant="50" id="mjS-9H-QFH"/>
-                            <constraint firstItem="CIu-HE-ehr" firstAttribute="centerX" secondItem="QOj-mM-4xl" secondAttribute="centerX" id="obW-vG-BpI"/>
-                            <constraint firstItem="62O-yZ-ZwO" firstAttribute="top" secondItem="SHl-Fr-xh9" secondAttribute="bottom" constant="10" id="qPQ-bS-fpT"/>
+                            <constraint firstItem="IaJ-5d-J2x" firstAttribute="bottom" secondItem="MSZ-tI-a42" secondAttribute="bottom" id="vEP-Kt-a3a"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="Xuo-Gh-bln"/>
