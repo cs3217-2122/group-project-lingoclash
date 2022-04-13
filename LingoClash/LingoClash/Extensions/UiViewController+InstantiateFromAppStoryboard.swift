@@ -12,7 +12,7 @@ extension UIViewController {
         return "\(self)"
     }
     
-    static func instantiateFromAppStoryboard(appStoryboard: AppStoryboard) -> Self {
+    static func instantiateFromAppStoryboard(_ appStoryboard: AppStoryboard) -> Self {
         return appStoryboard.viewController(viewControllerClass: self)
     }
 }

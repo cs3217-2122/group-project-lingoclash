@@ -18,6 +18,6 @@ class LessonTableCellViewModelFromLesson: LessonTableCellViewModel {
         self.lesson = lesson
         self.starsFilled = [Bool](repeating: true, count: lesson.stars)
         + [Bool](repeating: false, count: starsTotal - lesson.stars)
-        self.lessonName = lesson.lessonName
+        self.lessonName = lesson.name
     }
 }

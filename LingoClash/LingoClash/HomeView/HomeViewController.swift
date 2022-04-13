@@ -8,14 +8,26 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    typealias VM = HomeViewModel
-    let viewModel = HomeViewModel()
+    
+    private let viewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.refresh()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let pkLobbyVC = segue.destination as? PKGameLobbyViewController {
+        if let currentBookTabBarVC = segue.destination as? CurrentBookTabBarController {
+            currentBookTabBarVC.viewModel = self.viewModel
+            guard let childVCs = currentBookTabBarVC.viewControllers else {
+                return
+            }
+            for VC in childVCs {
+                if let currentBookVC = VC as? CurrentBookViewController {
+                    currentBookVC.viewModel = self.viewModel
+                }
+            }
+        } else if let pkLobbyVC = segue.destination as? PKGameLobbyViewController {
             guard let pkLobbyVM = self.viewModel.pkGameLobbyViewModel else {
                 return
             }
@@ -24,6 +36,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
-        self.viewModel.refreshProfile()
+        self.viewModel.refresh()
     }
 }
+

@@ -47,11 +47,11 @@ class QuestionViewController: UIViewController {
         var viewController: QuestionLayoutViewController?
         switch questionLayoutViewModel {
         case let simpleOptionQuestionLayoutViewModel as SimpleOptionQuestionLayoutViewModel:
-            let vc = SimpleOptionQuestionLayoutViewController.instantiateFromAppStoryboard(appStoryboard: AppStoryboard.Question)
+            let vc = SimpleOptionQuestionLayoutViewController.instantiateFromAppStoryboard(AppStoryboard.Question)
             vc.viewModel = simpleOptionQuestionLayoutViewModel
             viewController = vc
         case let twoDisjointSetOptionQuestionLayoutViewModel as TwoDisjointSetOptionQuestionLayoutViewModel:
-            let vc = TwoDisjointSetOptionQuestionLayoutViewController.instantiateFromAppStoryboard(appStoryboard: AppStoryboard.Question)
+            let vc = TwoDisjointSetOptionQuestionLayoutViewController.instantiateFromAppStoryboard(AppStoryboard.Question)
             vc.viewModel = twoDisjointSetOptionQuestionLayoutViewModel
             viewController = vc
         default:

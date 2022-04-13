@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>929853575561-cucj8c5j9m2sqmj51bg8cbnlf22ub5it.apps.googleusercontent.com</string>
+	<string>245579435202-fd0lrfnc7caanf0jq01p69qmgqchg8vl.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.929853575561-cucj8c5j9m2sqmj51bg8cbnlf22ub5it</string>
+	<string>com.googleusercontent.apps.245579435202-fd0lrfnc7caanf0jq01p69qmgqchg8vl</string>
 	<key>API_KEY</key>
 	<string>AIzaSyALnsmJrRH6F5Qwpnyg2EV7Enk_ASb_4KY</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.kyletoh.LingoClash</string>
+	<string>com.kyletoh.LingoClashDev</string>
 	<key>PROJECT_ID</key>
 	<string>testgame-3e644</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:929853575561:ios:c25b494550535d1a4c1158</string>
+	<string>1:245579435202:ios:d0534a6048c2f22ea77f5b</string>
 </dict>
 </plist>

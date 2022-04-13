@@ -51,7 +51,6 @@ class FirebaseDataProvider: DataProvider {
         return model
     }
     
-    
     func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
         
         return Promise { seal in
@@ -204,6 +203,7 @@ class FirebaseDataProvider: DataProvider {
         }
     }
     
+    /// id matters
     func createMany<T: Record>(resource: String, params: CreateManyParams<T>) -> Promise<CreateManyResult<T>> {
         
         let batch = db.batch()
@@ -259,6 +259,8 @@ class FirebaseDataProvider: DataProvider {
                     
                     return seal.fulfill(CreateResult(data: data))
                 }
+                
+               
             } catch {
                 seal.reject(error)
             }

@@ -15,8 +15,21 @@ class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var reviseButton: UIButton!
     @IBOutlet weak var learnButton: UIButton!
     
-    func configure(bookName: String, progress: String) {
-        bookNameLabel.text = bookName
-        progressLabel.text = "Progress: \(progress)"
+    weak var delegate: BookButtonDelegate?
+    private(set) var lessonSelectionViewModel: LessonSelectionViewModel?
+    
+    func configure(book: Book, delegate: BookButtonDelegate) {
+        bookNameLabel.text = book.name
+        progressLabel.text = book.progress
+        self.delegate = delegate
+        self.lessonSelectionViewModel = LessonSelectionViewModelFromBook(book: book)
     }
+    
+    @IBAction func learnButtonTapped(_ sender: UIButton) {
+        guard let lessonSelectionViewModel = lessonSelectionViewModel else {
+            return
+        }
+        self.delegate?.learnButtonTapped(lessonSelectionVM: lessonSelectionViewModel)
+    }
+    
 }

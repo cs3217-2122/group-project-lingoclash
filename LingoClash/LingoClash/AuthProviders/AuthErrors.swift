@@ -15,6 +15,7 @@ enum AuthError: Error  {
     case invalidLogoutParams
     case invalidUser
     case invalidPassword
+    case invalidCurrentUser
 }
 
 extension AuthError: LocalizedError {

@@ -9,7 +9,7 @@ import Foundation
 
 struct QueueEntry {
     var id: Identifier
-    var playerProfile: Profile
+    var playerProfile: ProfileData
     var joinedAt: Date
     var isWaiting: Bool
     var gameType: String

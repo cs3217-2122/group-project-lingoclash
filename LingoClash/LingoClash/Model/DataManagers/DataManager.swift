@@ -7,9 +7,7 @@
 import Foundation
 import PromiseKit
 
-
 class DataManager<T: Record> {
-    
     private let dataProvider: DataProvider
     private let resource: String
     
@@ -43,7 +41,7 @@ class DataManager<T: Record> {
     }
     
     func getMany(ids: [Identifier]) -> Promise<[T]> {
-        
+
         let result: Promise<GetManyResult<T>> = dataProvider.getMany(resource: self.resource, params: GetManyParams(ids: ids))
         
         return result.map { result in

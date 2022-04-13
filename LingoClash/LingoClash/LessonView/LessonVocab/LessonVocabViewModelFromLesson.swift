@@ -42,6 +42,7 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
     func playVocabPronounciation() {
         // TODO: Implement pronounciation
     }
+    
     func navigateNext() {
         guard !isLastVocab.value else {
             return

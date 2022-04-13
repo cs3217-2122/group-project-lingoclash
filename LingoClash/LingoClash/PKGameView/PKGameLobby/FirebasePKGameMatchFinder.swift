@@ -14,6 +14,7 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
         case invalidDocumentSnapshot
         case emptyDocument
         case questionGenerationError
+        case noCurrentBook
     }
     
     private let db = Firestore.firestore()
@@ -90,7 +91,7 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
     
     private func joinQueue(playerProfile: Profile) -> Promise<PKGame> {
         // 1. create queue entry
-        let newQueueEntry = QueueEntry(id: UUID().uuidString, playerProfile: playerProfile, joinedAt: Date.now, isWaiting: true, gameType: gameType)
+        let newQueueEntry = QueueEntry(id: "", playerProfile: playerProfile, joinedAt: Date.now, isWaiting: true, gameType: gameType)
 
         let promise = firstly {
             queueEntryDataManager.create(newRecord: newQueueEntry)
@@ -144,10 +145,13 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
         //        b. isWaiting is true
         //        c. Different playerId
         //        d. Overlap in playerScope
+        guard let currenBookId = playerProfile.currentBook?.id else {
+            return Promise.reject(reason: FirebaseMultiplayerMatchFinderError.noCurrentBook)
+        }
         let filters: [String: Any] = [
             "gameType": self.gameType,
             "isWaiting": true,
-            "playerProfile.currentBookId": playerProfile.currentBookId
+            "playerProfile.currentBookId": currenBookId
         ]
         return queueEntryDataManager.getList(field: "joinedAt", isDescending: false, filter: filters)
     }

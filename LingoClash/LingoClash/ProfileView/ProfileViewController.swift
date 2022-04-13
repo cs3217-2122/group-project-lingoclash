@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         setUpBinders()
-        viewModel.refreshProfile()
+        viewModel.refresh()
     }
     
     func setUpBinders() {
@@ -58,12 +58,19 @@ class ProfileViewController: UIViewController {
             }
         }.store(in: &cancellables)
         
-        
         viewModel.$alertContent.sink {[weak self] alertContent in
             if let alertContent = alertContent {
                 self?.showConfirmAlert(content: alertContent) { _ in
                     self?.transitionToSplash()
                 }
+            }
+        }.store(in: &cancellables)
+        
+        viewModel.$isRefreshing.sink {[weak self] isRefreshing in
+            if isRefreshing {
+                self?.showSpinner()
+            } else {
+                self?.removeSpinner()
             }
         }.store(in: &cancellables)
     }
@@ -73,7 +80,7 @@ class ProfileViewController: UIViewController {
     }
     
     func transitionToSplash() {
-        let splashViewController = SplashViewController.instantiateFromAppStoryboard(appStoryboard: AppStoryboard.Main)
+        let splashViewController = SplashViewController.instantiateFromAppStoryboard(AppStoryboard.Main)
         
         view.window?.rootViewController = splashViewController
         view.window?.makeKeyAndVisible()

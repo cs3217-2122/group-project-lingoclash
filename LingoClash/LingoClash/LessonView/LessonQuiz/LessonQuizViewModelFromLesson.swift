@@ -86,7 +86,7 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
         let vocabsTested = Set(lesson.vocabs)
         let didPass = quizScore >= minStarsBenchMark
         let quizResult = LessonQuizResult(starsObtained: starsObtained, didPass: didPass,
-                                          vocabsTested: vocabsTested, lessonName: lesson.lessonName)
+                                          vocabsTested: vocabsTested, lessonName: lesson.name)
         quizOutcomeViewModel = LessonQuizOutcomeViewModelFromQuizResult(quizResult: quizResult)
         if didPass {
             // TODO: update stars currency for user, update lesson for the stars

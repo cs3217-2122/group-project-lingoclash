@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToHome() {
-        let mainViewController = HomeNavigationViewController.instantiateFromAppStoryboard(appStoryboard: AppStoryboard.Home)
+        let mainViewController = HomeNavigationViewController.instantiateFromAppStoryboard(AppStoryboard.Home)
         
         view.window?.rootViewController = mainViewController
         view.window?.makeKeyAndVisible()

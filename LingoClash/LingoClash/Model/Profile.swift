@@ -1,21 +1,40 @@
 //
 //  Profile.swift
-//  testGame
+//  LingoClash
 //
-//  Created by Sherwin Poh on 3/4/22.
+//  Created by Kyle キラ on 4/4/22.
 //
 
 import Foundation
 
 struct Profile {
-    var id: Identifier = UUID().uuidString
+    var id: Identifier
     let user_id: Identifier
-    let currentBookId: Identifier
+    // let currentBookId: Identifier
+    let currentBook: Book?
     let email: String
     let name: String
     let stars: Int
-    let stars_today: Int
-    
+    let starsToday: Int
+    init(userIdentity: UserIdentity, profileData: ProfileData, currentBook: Book?) {
+        self.id = profileData.id
+        self.name = userIdentity.fullName ?? ""
+        self.email = userIdentity.email ?? ""
+        self.user_id = profileData.user_id
+        self.stars = profileData.stars
+        self.starsToday = profileData.stars_today
+        self.currentBook = currentBook
+    }
 }
 
-extension Profile: Codable, Hashable {}
+extension Profile: Hashable {
+    static func == (lhs: Profile, rhs: Profile) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
+    }
+}
+
+//extension Profile: Codable, Hashable {}

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Explore Book View Controller-->
         <scene sceneID="mLh-bU-0zk">
             <objects>
-                <viewController id="GEm-ea-1s1" sceneMemberID="viewController">
+                <viewController id="GEm-ea-1s1" customClass="ExploreBookViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jNm-RK-DqE">
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,10 @@
                             <constraint firstItem="Zul-2c-ihB" firstAttribute="centerY" secondItem="jNm-RK-DqE" secondAttribute="centerY" id="8fh-B1-KId"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="oNG-uL-b2W"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="" id="oNG-uL-b2W"/>
+                    <connections>
+                        <outlet property="containerView" destination="Zul-2c-ihB" id="WVc-Lo-Uzf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJn-ZN-wrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,16 +114,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-aR-za8">
-                                        <rect key="frame" x="46" y="24" width="84.5" height="51"/>
+                                        <rect key="frame" x="46" y="24" width="67.5" height="110"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="book name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QF-uc-IJ4">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QF-uc-IJ4">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIb-XW-ljz">
-                                                <rect key="frame" x="0.0" y="30.5" width="84.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIb-XW-ljz">
+                                                <rect key="frame" x="0.0" y="60" width="67.5" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -157,7 +160,7 @@
                             <constraint firstItem="1xq-1v-q48" firstAttribute="bottom" secondItem="ZsL-GU-8DV" secondAttribute="top" constant="-10" id="m8z-n1-mpT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="TbT-ru-b47"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="" id="TbT-ru-b47"/>
                     <connections>
                         <outlet property="bookNameLabel" destination="1QF-uc-IJ4" id="GfY-N1-j0T"/>
                         <outlet property="containerView" destination="ZsL-GU-8DV" id="2CM-TY-vOU"/>
@@ -166,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEl-Ri-LhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5336" y="-66"/>
+            <point key="canvasLocation" x="5336" y="315"/>
         </scene>
         <!--LessonSelectionViewController-->
         <scene sceneID="PLv-PE-nOk">
@@ -176,12 +179,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSx-RO-ezo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5343" y="177"/>
+            <point key="canvasLocation" x="9378" y="711"/>
         </scene>
-        <!--Current Book Section View Controller-->
+        <!--Current Book Tab Bar Controller-->
         <scene sceneID="xGX-j0-uDW">
             <objects>
-                <tabBarController storyboardIdentifier="CurrentBookSectionViewController" id="PQh-3K-y6a" customClass="CurrentBookSectionViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CurrentBookSectionViewController" id="PQh-3K-y6a" customClass="CurrentBookTabBarController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MjK-RN-GFY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -278,6 +281,9 @@
                                                         <color key="baseForegroundColor" name="TintColor"/>
                                                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="learnButtonTapped:" destination="aHg-xy-IQI" eventType="touchUpInside" id="OSb-gQ-esy"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -366,7 +372,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDc-ZT-zd9">
-                                <rect key="frame" x="20" y="40" width="684" height="905.5"/>
+                                <rect key="frame" x="20" y="0.0" width="684" height="945.5"/>
                                 <connections>
                                     <segue destination="xxJ-ow-hJg" kind="embed" id="RGI-Qd-Fko"/>
                                 </connections>
@@ -375,7 +381,7 @@
                         <viewLayoutGuide key="safeArea" id="xCc-zN-iVu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UDc-ZT-zd9" firstAttribute="top" secondItem="xCc-zN-iVu" secondAttribute="top" constant="40" id="EgO-GF-QRw"/>
+                            <constraint firstItem="UDc-ZT-zd9" firstAttribute="top" secondItem="xCc-zN-iVu" secondAttribute="top" id="EgO-GF-QRw"/>
                             <constraint firstItem="xCc-zN-iVu" firstAttribute="trailing" secondItem="UDc-ZT-zd9" secondAttribute="trailing" id="IE5-Rc-uqs"/>
                             <constraint firstItem="xCc-zN-iVu" firstAttribute="bottom" secondItem="UDc-ZT-zd9" secondAttribute="bottom" id="X6X-04-Pk2"/>
                             <constraint firstItem="UDc-ZT-zd9" firstAttribute="leading" secondItem="xCc-zN-iVu" secondAttribute="leading" constant="20" id="u2n-WJ-4Jl"/>
@@ -392,7 +398,7 @@
             <objects>
                 <tableViewController id="xxJ-ow-hJg" customClass="RecommendedBooksTableViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jZr-jZ-6bq">
-                        <rect key="frame" x="0.0" y="0.0" width="684" height="905.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="684" height="945.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -449,9 +455,13 @@
                                                                     </view>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOu-2m-64U">
                                                                         <rect key="frame" x="0.0" y="110" width="100" height="31"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="tintColor" systemColor="systemBlueColor"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="filled" title="Learn" cornerStyle="capsule"/>
+                                                                        <connections>
+                                                                            <action selector="learnButtonTapped:" destination="4eh-HQ-jce" eventType="touchUpInside" id="AG2-sl-LTl"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -512,9 +522,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1G7-4b-OH4"/>
-        <segue reference="AfC-OO-m0s"/>
-        <segue reference="faX-he-4YF"/>
+        <segue reference="ZPf-VB-GhE"/>
+        <segue reference="MYV-Xs-1I4"/>
+        <segue reference="aho-Ff-dmE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="TintColor">
