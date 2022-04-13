@@ -263,7 +263,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="MYL-wB-Tkj">
             <objects>
-                <viewController id="g5d-MZ-hJU" customClass="EditProfileViewController" sceneMemberID="viewController">
+                <viewController id="g5d-MZ-hJU" customClass="EditProfileViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Vh-GD-4Cg">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,8 +314,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Adr-kq-fpV"/>
                     <connections>
-                        <outlet property="errorLabel" destination="nrS-0F-WOG" id="Jim-eZ-hoj"/>
-                        <outlet property="nameTextField" destination="au3-YP-GSv" id="icu-zZ-wTh"/>
+                        <outlet property="errorLabel" destination="nrS-0F-WOG" id="TRI-IH-qjx"/>
+                        <outlet property="nameTextField" destination="au3-YP-GSv" id="RCb-M0-Ogb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6U-6e-G95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
