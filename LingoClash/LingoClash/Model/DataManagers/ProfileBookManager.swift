@@ -8,7 +8,7 @@
 class ProfileBookManager: DataManager<ProfileBookData> {
     
     init() {
-        super.init(resource: "profile_books")
+        super.init(resource: DataManagerResources.profileBooks)
     }
 }
 

@@ -9,6 +9,6 @@
 class QueueEntryDataManager: DataManager<QueueEntry> {
     
     init() {
-        super.init(resource: "queue_entries")
+        super.init(resource: DataManagerResources.queueEntries)
     }
 }

@@ -18,8 +18,7 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
     }
     
     private let db = Firestore.firestore()
-    private let queueCollection = "queue_entries"
-    private let gameType = "PKGame"
+    private let gameType = DataManagerResources.pkGames
     private let bookDataManager = BookManager()
     private let questionsGenerator = QuestionsGenerator()
     private let queueEntryDataManager = QueueEntryDataManager()
@@ -62,7 +61,7 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
         }.then { [self] newGame -> Promise<PKGame> in
             let batch = self.db.batch()
             for id in queueEntries.map({ $0.id }) {
-                let docRef = db.collection(queueCollection).document(id)
+                let docRef = db.collection(DataManagerResources.queueEntries).document(id)
                 let fieldsToUpdate = [
                     "gameId": newGame.id,
                     "isWaiting": false
@@ -105,7 +104,7 @@ extension FirebasePKGameMatchFinder {
 
         // TODO: This is firebase query inefficient since every player has to do the query chain of PKGame -> Profiles -> Books -> Lessons -> Vocabs
         return Promise<Identifier> { seal in
-            self.db.collection(queueCollection).document(queueEntry.id).addSnapshotListener { documentSnapshot, error in
+            self.db.collection(DataManagerResources.queueEntries).document(queueEntry.id).addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
                     return seal.reject(FirebaseMultiplayerMatchFinderError.invalidDocumentSnapshot)
                 }

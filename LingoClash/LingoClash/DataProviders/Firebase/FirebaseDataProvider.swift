@@ -131,7 +131,7 @@ class FirebaseDataProvider: DataProvider {
     }
     
     func getManyReference<T: Codable>(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
-        
+
         return Promise { seal in
             var collectionQuery = db.collection(resource).whereField(params.target, isEqualTo: params.id)
             
@@ -142,7 +142,6 @@ class FirebaseDataProvider: DataProvider {
             collectionQuery = collectionQuery.order(by: params.sort.field, descending: params.sort.isDescending)
             
             collectionQuery.getDocuments { (querySnapshot, error) in
-                
                 if let error = error {
                     return seal.reject(error)
                 }
@@ -152,7 +151,7 @@ class FirebaseDataProvider: DataProvider {
                 }
                 
                 let dataList = querySnapshot.documents.compactMap { document -> T? in
-                    self.getModel(from: document)
+                    return self.getModel(from: document)
                 }
                 
                 return seal.fulfill(GetManyReferenceResult(data: dataList, total: querySnapshot.count))

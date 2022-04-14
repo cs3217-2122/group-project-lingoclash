@@ -15,7 +15,9 @@ class FirebasePKGameMoveUpdater: PKGameMoveUpdateDelegate {
     var firebaseMoveListener: ListenerRegistration?
     let profileManager = ProfileManager()
     init(game: PKGame) {
-        self.moveCollectionRef = db.collection("PKGame").document(game.id).collection("moves")
+        self.moveCollectionRef = db.collection(DataManagerResources.pkGames)
+                                   .document(game.id)
+                                   .collection(DataManagerResources.pkGamesMoves)
     }
     
     var moveListener: PKGameMoveListener? {

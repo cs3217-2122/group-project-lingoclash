@@ -11,7 +11,7 @@ import PromiseKit
 class BookManager: DataManager<BookData> {
     
     init() {
-        super.init(resource: "books")
+        super.init(resource: DataManagerResources.books)
     }
     
     func getBook(id: Identifier) -> Promise<Book> {

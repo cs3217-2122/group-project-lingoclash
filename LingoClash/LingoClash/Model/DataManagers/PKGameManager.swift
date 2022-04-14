@@ -10,7 +10,7 @@ import PromiseKit
 class PKGameManager: DataManager<PKGameData> {
     
     init() {
-        super.init(resource: "PKGame")
+        super.init(resource: DataManagerResources.pkGames)
     }
     
     func createPKGame(pkGameData: PKGameData) -> Promise<PKGame> {

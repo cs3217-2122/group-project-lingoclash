@@ -8,6 +8,6 @@
 class LessonManager: DataManager<LessonData> {
     
     init() {
-        super.init(resource: "lessons")
+        super.init(resource: DataManagerResources.lessons)
     }
 }

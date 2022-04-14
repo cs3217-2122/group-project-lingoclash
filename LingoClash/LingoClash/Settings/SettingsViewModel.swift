@@ -12,6 +12,8 @@ final class SettingsViewModel {
     
     @Published var isRefreshing = false
     @Published var name: String?
+    @Published var starsGoal: Int?
+    @Published var bio: String?
     @Published var email: String?
     @Published var totalStars: Int?
     @Published var starsToday: Int?
@@ -45,6 +47,8 @@ final class SettingsViewModel {
             profileManager.getCurrentProfile()
         }.done { profile in
             self.name = profile.name
+            self.starsGoal = profile.starsGoal
+            self.bio = profile.bio
             self.email = profile.email
             self.starsToday = profile.starsToday
             self.totalStars = profile.stars
@@ -60,17 +64,21 @@ final class SettingsViewModel {
             return
         }
         
-        if name == fields.name {
+        if name == fields.name, starsGoal == fields.starsGoal, bio == fields.bio {
             return
         }
         
         firstly {
             authProvider.updateName(fields.name)
-        }.done {
+        }.then { [self] _ in
+            self.profileManager.updateProfile(
+                starsGoal: starsGoal ?? 0,
+                bio: bio ?? "")
+        }.done { [self] _ in
             self.editProfileError = nil
             self.alertContent = AlertContent(title: "", message: "Your name is updated succesfully.")
             self.refresh()
-        }.catch { error in
+        }.catch { [self] error in
             self.editProfileError = error.localizedDescription
         }
     }

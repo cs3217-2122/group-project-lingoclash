@@ -65,7 +65,12 @@ class FirebaseAuthProvider: AuthProvider {
                                              name: name,
                                              email: email,
                                              stars: 0,
-                                             stars_today: 0)
+                                             stars_today: 0,
+                                             stars_goal: 10,
+                                             bio: "Learning a language doesn't always have to be civil.",
+                                             days_learning: 0,
+                                             vocabs_learnt: 0,
+                                             pk_winning_rate: 0)
             let createdProfileData = ProfileManager().create(newRecord: newProfileData)
             return createdProfileData.map { _ in
                 return userIdentity

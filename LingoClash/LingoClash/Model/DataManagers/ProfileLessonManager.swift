@@ -8,6 +8,6 @@
 class ProfileLessonManager: DataManager<ProfileLessonData> {
     
     init() {
-        super.init(resource: "profile_lessons")
+        super.init(resource: DataManagerResources.profileLessons)
     }
 }

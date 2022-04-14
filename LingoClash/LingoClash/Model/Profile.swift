@@ -10,30 +10,32 @@ import Foundation
 struct Profile {
     var id: Identifier
     let user_id: Identifier
-    // let currentBookId: Identifier
     let currentBook: Book?
     let email: String
     let name: String
     let stars: Int
     let starsToday: Int
-    init(userIdentity: UserIdentity, profileData: ProfileData, currentBook: Book?) {
-        self.id = profileData.id
-        self.name = userIdentity.fullName ?? ""
-        self.email = userIdentity.email ?? ""
-        self.user_id = profileData.user_id
-        self.stars = profileData.stars
-        self.starsToday = profileData.stars_today
-        self.currentBook = currentBook
-    }
+    let starsGoal: Int
+    let bio: String
+    let daysLearning: Int
+    let vocabsLearnt: Int
+    let pkWinningRate: Double
+    let rankingByTotalStars: Int
     
-    init(profileData: ProfileData, currentBook: Book?) {
+    init(profileData: ProfileData, currentBook: Book?, rankingByTotalStars: Int) {
         self.id = profileData.id
-        self.name = profileData.name
-        self.email = profileData.email
         self.user_id = profileData.user_id
+        self.currentBook = currentBook
+        self.email = profileData.email
+        self.name = profileData.name
         self.stars = profileData.stars
         self.starsToday = profileData.stars_today
-        self.currentBook = currentBook
+        self.starsGoal = profileData.stars_goal
+        self.bio = profileData.bio
+        self.daysLearning = profileData.days_learning
+        self.vocabsLearnt = profileData.vocabs_learnt
+        self.pkWinningRate = profileData.pk_winning_rate
+        self.rankingByTotalStars = rankingByTotalStars
     }
 }
 

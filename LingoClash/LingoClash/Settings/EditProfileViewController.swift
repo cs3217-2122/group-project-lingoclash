@@ -11,6 +11,8 @@ import Combine
 class EditProfileViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var starsGoalTextField: UITextField!
+    @IBOutlet weak var bioTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
     weak var viewModel: SettingsViewModel?
@@ -34,6 +36,18 @@ class EditProfileViewController: UIViewController {
             }
         }.store(in: &cancellables)
         
+        viewModel?.$starsGoal.sink {[weak self] starsGoal in
+            if let starsGoal = starsGoal {
+                self?.starsGoalTextField.text = "\(starsGoal)"
+            }
+        }.store(in: &cancellables)
+        
+        viewModel?.$bio.sink {[weak self] bio in
+            if let bio = bio {
+                self?.bioTextField.text = bio
+            }
+        }.store(in: &cancellables)
+        
         viewModel?.$editProfileError.sink {[weak self] error in
             if let error = error {
                 self?.errorLabel.show(withText: error)
@@ -54,7 +68,7 @@ class EditProfileViewController: UIViewController {
     @IBAction func saveButtonTapped(_ sender: Any) {
         let name = FormUtilities.getTrimmedString(textField: nameTextField)
         
-        let fields = EditProfileFields(name: name)
+        let fields = EditProfileFields(name: name, starsGoal: 0, bio: "")
         viewModel?.editProfile(fields)
     }
     
