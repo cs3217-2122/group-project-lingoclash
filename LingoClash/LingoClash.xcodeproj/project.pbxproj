@@ -71,14 +71,12 @@
 		6FA0244227E1BBBE00F94E54 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244127E1BBBE00F94E54 /* FirebaseStorage */; };
 		6FA0244427E1BBBE00F94E54 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244327E1BBBE00F94E54 /* FirebaseStorageCombine-Community */; };
 		6FA0244727E1BC9E00F94E54 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244627E1BC9E00F94E54 /* PromiseKit */; };
-		CE28FE1F2806DEC40058752D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		CE673C2027F8B46100321BB8 /* PKGameLobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C1F27F8B46100321BB8 /* PKGameLobbyViewController.swift */; };
 		CE673C2227F8B46F00321BB8 /* PKGameLobbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C2127F8B46F00321BB8 /* PKGameLobbyViewModel.swift */; };
 		CE673C2427F8B48300321BB8 /* PKGameQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C2327F8B48300321BB8 /* PKGameQuizViewController.swift */; };
 		CE673C2627F8B48F00321BB8 /* PKGameQuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C2527F8B48F00321BB8 /* PKGameQuizViewModel.swift */; };
 		CE673C2827F8B4D400321BB8 /* PKGameOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C2727F8B4D400321BB8 /* PKGameOverviewViewController.swift */; };
 		CE673C2A27F8B4DD00321BB8 /* PKGameOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C2927F8B4DD00321BB8 /* PKGameOverviewViewModel.swift */; };
-		CE673C2D27F8B53C00321BB8 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		CE673C2F27F9315700321BB8 /* PKGameLobbyViewModelFromProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C2E27F9315700321BB8 /* PKGameLobbyViewModelFromProfile.swift */; };
 		CE673C3827F95AF200321BB8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C3727F95AF200321BB8 /* User.swift */; };
 		CE673C3B27F9813C00321BB8 /* PKGameMatchFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C3A27F9813C00321BB8 /* PKGameMatchFinder.swift */; };
@@ -130,7 +128,6 @@
 		CEC5887927EAC90A00809403 /* LessonTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887827EAC90A00809403 /* LessonTableCellViewModel.swift */; };
 		CEC5887B27EAC91600809403 /* LessonTableCellViewModelFromLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887A27EAC91600809403 /* LessonTableCellViewModelFromLesson.swift */; };
 		CED64D452806A20B0028B2FE /* (null) in Resources */ = {isa = PBXBuildFile; };
-		CED64D4F2806A6850028B2FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CED64D4C2806A53D0028B2FE /* GoogleService-Info.plist */; };
 		CEE9805D2806E11A0052863B /* PKGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE9805B2806E11A0052863B /* PKGame.storyboard */; };
 		CEE9805E2806E11A0052863B /* PKGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE9805B2806E11A0052863B /* PKGame.storyboard */; };
 		CEE980662806E17C0052863B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEE980632806E17C0052863B /* GoogleService-Info.plist */; };
@@ -1485,13 +1482,10 @@
 				D3757B142805E84D003CF4F2 /* Arena.storyboard in Resources */,
 				D3AF1C342805E33200DCFA2E /* RecommendedBook.storyboard in Resources */,
 				CE8D228F27EE2B5A005E7058 /* Lesson.storyboard in Resources */,
-				CE28FE1F2806DEC40058752D /* (null) in Resources */,
-				CE673C2D27F8B53C00321BB8 /* (null) in Resources */,
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
 				D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */,
 				D3AF1C212805919500DCFA2E /* Settings.storyboard in Resources */,
 				CE8D22A227EEC059005E7058 /* Book.storyboard in Resources */,
-				CED64D4F2806A6850028B2FE /* GoogleService-Info.plist in Resources */,
 				CEE9805D2806E11A0052863B /* PKGame.storyboard in Resources */,
 				D3C5E29227F73C9900F65B8E /* Dev-Info.plist in Resources */,
 				D3AF1C3B2805E39F00DCFA2E /* CompletedBook.storyboard in Resources */,
