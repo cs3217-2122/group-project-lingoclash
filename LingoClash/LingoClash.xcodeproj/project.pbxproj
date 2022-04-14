@@ -842,7 +842,6 @@
 				CE673C2327F8B48300321BB8 /* PKGameQuizViewController.swift */,
 				CE673C2527F8B48F00321BB8 /* PKGameQuizViewModel.swift */,
 				CEA1C90427FA26FD00123225 /* PKGameQuizViewModelFromPKGame.swift */,
-				CEA1C90827FA67BC00123225 /* PKGameEngine.swift */,
 				CEA1C90A27FA684500123225 /* PKGameRenderer.swift */,
 				CEA1C90C27FA68C600123225 /* PKGameMoveListener.swift */,
 				CEA1C90E27FA68F800123225 /* PKGameMoveUpdateDelegate.swift */,
@@ -917,14 +916,15 @@
 			path = QuestionFormats;
 			sourceTree = "<group>";
 		};
-		CEA1C87827FA14FA00123225 /* Games */ = {
+		CEA1C87827FA14FA00123225 /* PKGame */ = {
 			isa = PBXGroup;
 			children = (
 				CEA1C87927FA14FA00123225 /* PKGame.swift */,
+				CEA1C90827FA67BC00123225 /* PKGameEngine.swift */,
 				CEA1C8CD27FA14FA00123225 /* PKGameMove.swift */,
 				CEA1C91227FA7A2700123225 /* PKGameOutcome.swift */,
 			);
-			path = Games;
+			path = PKGame;
 			sourceTree = "<group>";
 		};
 		CEBC07742807E70800A0ED82 /* SupportingFiles */ = {
@@ -1142,7 +1142,7 @@
 			isa = PBXGroup;
 			children = (
 				D3C4423B27E8B17400676C93 /* DatabaseErrors.swift */,
-				CEA1C87827FA14FA00123225 /* Games */,
+				CEA1C87827FA14FA00123225 /* PKGame */,
 				CEA1C75827FA145800123225 /* Questions */,
 				62165B7727F2269F004BC620 /* FormFields */,
 				CEF1E7A627E50060005D4272 /* Currency */,

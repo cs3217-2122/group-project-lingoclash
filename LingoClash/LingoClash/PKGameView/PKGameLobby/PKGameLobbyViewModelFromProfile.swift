@@ -22,10 +22,13 @@ class PKGameLobbyViewModelFromProfile: PKGameLobbyViewModel {
             matchFinder.findGame(playerProfile: playerProfile)
         }.done { game in
             self.pkGameQuizViewModel.value = PKGameQuizViewModelFromPKGame(game: game, currentPlayerProfile: self.playerProfile)
+        }.catch { error in
+            assert(false)
+            print(error)
         }
     }
 
     func cancel() {
-        
+        matchFinder.cancel(playerProfile: playerProfile)
     }
 }

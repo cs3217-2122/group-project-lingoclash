@@ -6,29 +6,38 @@
 //
 
 class PKGameOverviewViewModelFromOutcome: PKGameOverviewViewModel {
-    var didWin: Bool
+    var titleOutcome: String
+    var descriptionOutcome: String
+    var isBackgroundDark: Bool
+    private let playerOutcome: PKGamePlayerOutcome
+    private let profileScores: [(profile: Profile, score: Int)]
     var scores: [String]
     var names: [String]
     init(outcome: PKGameOutcome, currentPlayer: Profile) {
-        var names: [String] = []
-        var scores: [String] = []
-        var highest: Int = 0
-        var winner: Profile? = nil
-        for (key, val) in outcome.scores {
-            if val > highest {
-                winner = key
-                highest = val
-            }
-            names.append(key.name)
-            scores.append(String(val))
-        }
-        self.names = names
-        self.scores = scores
+        let profileScoresUnsorted = outcome.scores.map { (profile: $0, score: $1) }
+        self.profileScores = profileScoresUnsorted.filter({ $0.profile == currentPlayer }) + profileScoresUnsorted.filter({ $0.profile != currentPlayer })
+
+        self.names = profileScores.map { $0.profile.name }
+        self.scores = profileScores.map { String($0.score) }
         
-        if let winner = winner {
-            self.didWin = winner == currentPlayer
-        } else {
-            self.didWin = false
+        guard let playerOutcome = outcome.playerOutcomes[currentPlayer] else {
+            fatalError("Unable to get current player outcome")
+        }
+        self.playerOutcome = playerOutcome
+        
+        switch playerOutcome {
+        case .lose:
+            self.titleOutcome = "Loss"
+            self.descriptionOutcome = "Better luck next time."
+            self.isBackgroundDark = true
+        case .win:
+            self.titleOutcome = "Victorious"
+            self.descriptionOutcome = "Masterful!"
+            self.isBackgroundDark = false
+        case .draw:
+            self.titleOutcome = "Draw"
+            self.descriptionOutcome = "You have met your match."
+            self.isBackgroundDark = true
         }
     }
 }

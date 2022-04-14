@@ -16,7 +16,7 @@ class PKGameEngine {
         }
     }
     let questions: [Question]
-    private var currQuestionIndex: Int = 0
+    private var currQuestionIndex: Int = -1
     var moves: [PKGameMove]
     var players: [Profile]
     var scores: [ Profile: Int ]
@@ -145,6 +145,27 @@ class PKGameEngine {
             }
             return questionOutcome
         })
-        return PKGameOutcome(questions: self.questions, questionOutcomes: questionOutcomes, scores: self.scores)
+        var highest: Int = 0
+        var highestPlayers = [Profile]()
+        for (profile, score) in self.scores {
+            if score > highest {
+                highestPlayers = [profile]
+                highest = score
+            } else if score == highest {
+                highestPlayers.append(profile)
+            }
+        }
+        let playerOutcomes: [Profile: PKGamePlayerOutcome] = self.scores.mapValues { score in
+            if score == highest {
+                if highestPlayers.count > 1 {
+                    return PKGamePlayerOutcome.draw
+                } else {
+                    return PKGamePlayerOutcome.win
+                }
+            } else {
+                return PKGamePlayerOutcome.lose
+            }
+        }
+        return PKGameOutcome(questions: self.questions, questionOutcomes: questionOutcomes, scores: self.scores, playerOutcomes: playerOutcomes)
     }
 }

@@ -19,12 +19,11 @@ class PKGameQuizViewModelFromPKGame: PKGameQuizViewModel {
         self.pkGame = game
         self.moveUpdateDelegate = FirebasePKGameMoveUpdater(game: game)
         self.currentPlayerProfile = currentPlayerProfile
-        
-        self.playerNames = game.players.map({ $0.name.capitalized })
-        self.scores = Dynamic(game.players.map( { _ in
+        self.players = [currentPlayerProfile] + game.players.filter { $0 != currentPlayerProfile }
+        self.playerNames = self.players.map({ $0.name.capitalized })
+        self.scores = Dynamic(self.players.map( { _ in
             return 0
         } ))
-        self.players = game.players
         
         self.pkGameEngine = PKGameEngine(game: game)
         

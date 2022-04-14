@@ -9,4 +9,11 @@ struct PKGameOutcome {
     var questions: [Question]
     var questionOutcomes: [[Profile: Bool]]
     var scores: [Profile: Int]
+    var playerOutcomes: [Profile: PKGamePlayerOutcome]
+}
+
+enum PKGamePlayerOutcome {
+    case win
+    case lose
+    case draw
 }

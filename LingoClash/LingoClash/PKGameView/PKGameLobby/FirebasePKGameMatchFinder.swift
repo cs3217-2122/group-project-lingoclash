@@ -18,6 +18,11 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
     }
     
     private let db = Firestore.firestore()
+    private var listener: ListenerRegistration? {
+        didSet {
+            oldValue?.remove()
+        }
+    }
     private let gameType = DataManagerResources.pkGames
     private let bookDataManager = BookManager()
     private let questionsGenerator = QuestionsGenerator()
@@ -36,6 +41,24 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
         }
     }
     
+    func cancel(playerProfile: Profile) {
+        // If queue entry exists belonging to playerProfile that is currently waiting, remove it
+        let filters: [String: Any] = [
+            "gameType": self.gameType,
+            "isWaiting": true,
+            "playerProfile.id": playerProfile.id
+        ]
+
+    
+        queueEntryDataManager.getList(filter: filters)
+            .then{ [self] queueEntriesToDelete -> Promise<[Identifier]> in
+                assert(!queueEntriesToDelete.isEmpty)
+                return self.queueEntryDataManager.deleteMany(ids: queueEntriesToDelete.map { $0.id })
+            }.done { _ in
+                self.listener = nil
+            }
+    }
+    
     private func getValidQueueEntries(playerProfile: Profile) -> Promise<[QueueEntry]> {
         //    1. Find all queueEntries that have:
         //        a. Same game type
@@ -48,9 +71,13 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
         let filters: [String: Any] = [
             "gameType": self.gameType,
             "isWaiting": true,
-            "playerProfile.book_id": currentBookId
+            "playerProfile.book_id": currentBookId,
         ]
-        return queueEntryDataManager.getList(field: "joinedAt", isDescending: false, filter: filters)
+        let queueEntries = queueEntryDataManager.getList(field: "joinedAt", isDescending: false, filter: filters)
+        let filteredQueueEntries = queueEntries.map { queueEntries in
+            queueEntries.filter { $0.playerProfile.id != playerProfile.id }
+        }
+        return filteredQueueEntries
     }
     
     private func createGame(playerProfile: Profile, queueEntries: [QueueEntry]) -> Promise<PKGame> {
@@ -104,7 +131,7 @@ extension FirebasePKGameMatchFinder {
 
         // TODO: This is firebase query inefficient since every player has to do the query chain of PKGame -> Profiles -> Books -> Lessons -> Vocabs
         return Promise<Identifier> { seal in
-            self.db.collection(DataManagerResources.queueEntries).document(queueEntry.id).addSnapshotListener { documentSnapshot, error in
+            self.listener = self.db.collection(DataManagerResources.queueEntries).document(queueEntry.id).addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
                     return seal.reject(FirebaseMultiplayerMatchFinderError.invalidDocumentSnapshot)
                 }
@@ -119,8 +146,9 @@ extension FirebasePKGameMatchFinder {
                     return seal.fulfill(gameId)
                 }
             }
-        }.then { gameId in
-            self.pkGameDataManager.getPKGame(id: gameId)
+        }.then { gameId -> Promise<PKGame> in
+            self.listener = nil
+            return self.pkGameDataManager.getPKGame(id: gameId)
         }
     }
 }
@@ -154,26 +182,12 @@ extension FirebasePKGameMatchFinder {
     }
     
     private func generateQuestions(playerProfile: Profile) -> [Question]? {
-        // Generate questions from question generator
-        // TODO: Replace with actaul BookDataManager
-        let bookVocabs: [Vocab] = [
-            Vocab(word: "周", definition: "week", sentence: "一周有七天。",
-                      sentenceDefinition: "Every week has 7 days.", pronunciationText: "zhōu"),
-            Vocab(word: "今天", definition: "today", sentence: "她今天看起来很悲伤。",
-                      sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
-            Vocab(word: "明天", definition: "tomorrow", sentence: "明天10：10",
-                      sentenceDefinition: " tomorrow at 10:10", pronunciationText: "míngtiān"),
-            Vocab(word: "昨天", definition: "yesterday", sentence: "她今天看起来很悲伤。",
-                      sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
-            Vocab(word: "日历", definition: "calendar", sentence: "她今天看起来很悲伤。",
-                      sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān"),
-            Vocab(word: "秒", definition: "second", sentence: "她今天看起来很悲伤。",
-                      sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān")
-        ]
-        
-        let vocabs = bookVocabs
-        
-        guard var questionSequence = try? questionsGenerator.generateQuestions(settings: QuestionGeneratorSettings(scope: Set(vocabs))) else {
+        guard let currentBook = playerProfile.currentBook else {
+            return nil
+        }
+        let bookVocabs = currentBook.getVocabs()
+                
+        guard var questionSequence = try? questionsGenerator.generateQuestions(settings: QuestionGeneratorSettings(scope: bookVocabs)) else {
             return nil
         }
         

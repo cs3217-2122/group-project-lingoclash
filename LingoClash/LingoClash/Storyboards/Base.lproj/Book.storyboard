@@ -103,7 +103,7 @@
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="pgD-es-a7e" kind="show" id="hHB-bV-UuV"/>
+                                                    <segue destination="pgD-es-a7e" kind="presentation" modalPresentationStyle="fullScreen" id="hHB-bV-UuV"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxr-8a-Poi">

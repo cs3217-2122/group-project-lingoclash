@@ -20,7 +20,7 @@
         <!--Game Lobby View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="PKGameLobbyViewController" id="Y6W-OH-hqX" customClass="PKGameLobbyViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PKGameLobbyViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="PKGameLobbyViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
                                 <connections>
-                                    <action selector="cancel:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7Kf-1l-HCe"/>
+                                    <action selector="cancel:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="25H-7K-bcj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,7 +68,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="l8w-iM-dry">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover_2" translatesAutoresizingMaskIntoConstraints="NO" id="l8w-iM-dry">
                                 <rect key="frame" x="0.0" y="-52" width="704" height="1047.5"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynT-Mq-vCJ">
@@ -148,8 +148,12 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyY-Wu-QCP">
                                 <rect key="frame" x="610" y="953.5" width="62" height="31"/>
+                                <color key="backgroundColor" name="Background"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Leave"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Leave">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.96078431610000004" green="0.97254908080000002" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gU8-OW-6Bv"/>
@@ -244,11 +248,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-aK-akE">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="320.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-ln-KOe">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_7-circle" translatesAutoresizingMaskIntoConstraints="NO" id="5K5-nc-cx2">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="200" id="b82-O7-kz9"/>
-                                                            <constraint firstAttribute="height" constant="200" id="ncS-VT-zQS"/>
+                                                            <constraint firstAttribute="width" constant="200" id="Dq4-t7-BjD"/>
+                                                            <constraint firstAttribute="height" constant="200" id="HfZ-fw-JKz"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr5-9e-LjJ">
@@ -274,11 +278,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rIb-Lj-NLs">
                                                 <rect key="frame" x="420" y="0.0" width="200" height="320.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ak6-6w-Amj">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_7-circle" translatesAutoresizingMaskIntoConstraints="NO" id="zl3-Yg-aZ3">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="200" id="heh-DY-JMO"/>
-                                                            <constraint firstAttribute="height" constant="200" id="woS-da-lg7"/>
+                                                            <constraint firstAttribute="height" constant="200" id="5FL-J5-TFe"/>
+                                                            <constraint firstAttribute="width" constant="200" id="YEb-om-Nd8"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNM-QB-SIj">
@@ -312,12 +316,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D17-jj-0vT">
                                         <rect key="frame" x="460" y="34.5" width="260" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="PK Again"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="PK Again" cornerStyle="capsule"/>
+                                        <connections>
+                                            <segue destination="yLs-V2-pcY" kind="unwind" unwindAction="unwindToPKGameLobbyWithSegue:" id="JbU-2Y-h1c"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LC-kg-xOk">
                                         <rect key="frame" x="100" y="34.5" width="260" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Home"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Home" cornerStyle="capsule"/>
                                         <connections>
                                             <segue destination="yLs-V2-pcY" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="3Jd-HK-3LT"/>
                                         </connections>
@@ -358,6 +365,7 @@
                         <outlet property="playerTwoName" destination="yNM-QB-SIj" id="hLE-9r-qvY"/>
                         <outlet property="playerTwoScore" destination="EJG-OC-IpF" id="0GC-yV-JkE"/>
                         <outlet property="titleOutcome" destination="6o8-m3-Vrm" id="JVr-Ek-PK3"/>
+                        <outlet property="topView" destination="TM5-nU-v92" id="a8V-yE-SuW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6v-oe-qbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -454,10 +462,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar_7-circle" width="720" height="720"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="gradient" width="3000" height="2000"/>
+        <image name="cover_2" width="1000" height="1000"/>
         <image name="ribbon" width="1777" height="569"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="Background">
+            <color red="0.98400002717971802" green="0.98799997568130493" blue="0.99699997901916504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Green">
             <color red="0.0" green="0.56000000238418579" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
