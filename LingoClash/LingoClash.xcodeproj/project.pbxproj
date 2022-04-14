@@ -134,7 +134,6 @@
 		CED64D452806A20B0028B2FE /* (null) in Resources */ = {isa = PBXBuildFile; };
 		CEE9805D2806E11A0052863B /* PKGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE9805B2806E11A0052863B /* PKGame.storyboard */; };
 		CEE9805E2806E11A0052863B /* PKGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE9805B2806E11A0052863B /* PKGame.storyboard */; };
-		CEE980662806E17C0052863B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEE980632806E17C0052863B /* GoogleService-Info.plist */; };
 		CEE9806D2806E6840052863B /* DevLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9806C2806E6840052863B /* DevLoginViewController.swift */; };
 		CEE9806E2806E6840052863B /* DevLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9806C2806E6840052863B /* DevLoginViewController.swift */; };
 		CEE980702806E83B0052863B /* DevLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9806F2806E83B0052863B /* DevLoginViewModel.swift */; };
@@ -556,9 +555,7 @@
 		CEC5887627EAC6E700809403 /* LessonSelectorTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectorTableCell.swift; sourceTree = "<group>"; };
 		CEC5887827EAC90A00809403 /* LessonTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableCellViewModel.swift; sourceTree = "<group>"; };
 		CEC5887A27EAC91600809403 /* LessonTableCellViewModelFromLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableCellViewModelFromLesson.swift; sourceTree = "<group>"; };
-		CED64D4C2806A53D0028B2FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEE9805C2806E11A0052863B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../lingo-3/LingoClash/LingoClash/LingoClash/Base.lproj/PKGame.storyboard"; sourceTree = "<group>"; };
-		CEE980632806E17C0052863B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEE9806C2806E6840052863B /* DevLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevLoginViewController.swift; sourceTree = "<group>"; };
 		CEE9806F2806E83B0052863B /* DevLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevLoginViewModel.swift; sourceTree = "<group>"; };
 		CEE980722806E9AF0052863B /* DevLoginTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevLoginTableCell.swift; sourceTree = "<group>"; };
@@ -815,15 +812,6 @@
 				629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */,
 			);
 			path = HomeView;
-			sourceTree = "<group>";
-		};
-		CE28FE1C2806DCB30058752D /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				CED64D4C2806A53D0028B2FE /* GoogleService-Info.plist */,
-				CEE980632806E17C0052863B /* GoogleService-Info.plist */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		CE673C1B27F8B3CE00321BB8 /* PKGameView */ = {
