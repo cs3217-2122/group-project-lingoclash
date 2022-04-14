@@ -11,6 +11,8 @@ class BookCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var bookNameLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var totalStarsLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var PKButton: UIButton!
     @IBOutlet weak var reviseButton: UIButton!
     @IBOutlet weak var learnButton: UIButton!
@@ -20,7 +22,10 @@ class BookCollectionViewCell: UICollectionViewCell {
     
     func configure(book: Book, delegate: BookButtonDelegate) {
         bookNameLabel.text = book.name
-        progressLabel.text = book.progress
+        progressLabel.text = book.progressText
+        totalStarsLabel.text = "\(book.totalStars)"
+        progressView.progress = book.progress
+
         self.delegate = delegate
         self.lessonSelectionViewModel = LessonSelectionViewModelFromBook(book: book)
     }

@@ -14,13 +14,25 @@ struct Profile {
     let currentBook: Book?
     let stars: Int
     let starsToday: Int
-    
-    init(userIdentity: UserIdentity, profileData: ProfileData, currentBook: Book?) {
+    let starsGoal: Int
+    let bio: String
+    let daysLearning: Int
+    let vocabsLearnt: Int
+    let pkWinningRate: Double
+    let rankingByTotalStars: Int
+
+    init(userIdentity: UserIdentity, profileData: ProfileData, currentBook: Book?, rankingByTotalStars: Int) {
         self.id = profileData.id
         self.name = userIdentity.fullName ?? ""
         self.email = userIdentity.email ?? ""
         self.stars = profileData.stars
         self.starsToday = profileData.stars_today
         self.currentBook = currentBook
+        self.starsGoal = profileData.stars_goal
+        self.bio = profileData.bio
+        self.daysLearning = profileData.days_learning
+        self.vocabsLearnt = profileData.vocabs_learnt
+        self.pkWinningRate = profileData.pk_winning_rate
+        self.rankingByTotalStars = rankingByTotalStars
     }
 }

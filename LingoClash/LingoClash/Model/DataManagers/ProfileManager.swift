@@ -6,6 +6,7 @@
 //
 
 import PromiseKit
+import Foundation
 
 class ProfileManager: DataManager<ProfileData> {
     
@@ -36,6 +37,7 @@ class ProfileManager: DataManager<ProfileData> {
         var profile: ProfileData?
         var currentBook: Book?
         var currentUser: UserIdentity?
+        var rankingByTotalStars: Int?
         
         return firstly {
             authProvider.getIdentity()
@@ -66,12 +68,36 @@ class ProfileManager: DataManager<ProfileData> {
             }.done { book in
                 currentBook = book
             }
+        }.then { () -> Promise<Void> in
+            // Gets the ranking of the profile by total stars
+            guard let profile = profile else {
+                return Promise<Void>.resolve(value: ())
+            }
+            
+            return firstly {
+                self.getList()
+            }.done { profiles in
+                let sortedProfiles = profiles.sorted(by: { (p1: ProfileData, p2: ProfileData) -> Bool in
+                    return p1.stars < p2.stars
+                })
+                
+                rankingByTotalStars = sortedProfiles.firstIndex {
+                    $0.id == profile.id
+                }
+                
+                rankingByTotalStars? += 1
+                
+            }
         }.compactMap {
-            guard let profile = profile, let currentUser = currentUser else {
+            guard let profile = profile, let currentUser = currentUser, let rankingByTotalStars = rankingByTotalStars else {
                 return nil
             }
             
-            return Profile(userIdentity: currentUser, profileData: profile, currentBook: currentBook)
+            return Profile(
+                userIdentity: currentUser,
+                profileData: profile,
+                currentBook: currentBook,
+                rankingByTotalStars: rankingByTotalStars)
         }
     }
     
@@ -85,7 +111,35 @@ class ProfileManager: DataManager<ProfileData> {
                 book_id: bookId,
                 user_id: profileData.user_id,
                 stars: profileData.stars,
-                stars_today: profileData.stars_today)
+                stars_today: profileData.stars_today,
+                stars_goal: profileData.stars_goal,
+                bio: profileData.bio,
+                days_learning: profileData.days_learning,
+                vocabs_learnt: profileData.vocabs_learnt,
+                pk_winning_rate: profileData.pk_winning_rate
+            )
+            
+            return self.update(id: profileData.id, from: profileData, to: newProfileData)
+        }
+    }
+    
+    func updateProfile(starsGoal: Int, bio: String) -> Promise<ProfileData> {
+        
+        return firstly {
+            self.getCurrentProfileData()
+        }.then { profileData -> Promise<ProfileData> in
+            let newProfileData = ProfileData(
+                id: profileData.id,
+                book_id: profileData.book_id,
+                user_id: profileData.user_id,
+                stars: profileData.stars,
+                stars_today: profileData.stars_today,
+                stars_goal: starsGoal,
+                bio: bio,
+                days_learning: profileData.days_learning,
+                vocabs_learnt: profileData.vocabs_learnt,
+                pk_winning_rate: profileData.pk_winning_rate
+            )
             
             return self.update(id: profileData.id, from: profileData, to: newProfileData)
         }

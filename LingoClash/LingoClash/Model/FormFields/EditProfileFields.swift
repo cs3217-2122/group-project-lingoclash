@@ -7,4 +7,6 @@
 
 struct EditProfileFields: FormFields {
     let name: String
+    let starsGoal: Int
+    let bio: String
 }

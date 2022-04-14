@@ -151,6 +151,8 @@
 		D30E491627FAC7C60074CF2B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E491127FAA6880074CF2B /* Profile.swift */; };
 		D30E491727FAC7C80074CF2B /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E491327FAA6E70074CF2B /* Lesson.swift */; };
 		D30E491827FAC7CE0074CF2B /* BookCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E490D27FA20140074CF2B /* BookCategory.swift */; };
+		D32E44842806FE88000523C6 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32E44832806FE88000523C6 /* Arena.storyboard */; };
+		D32E44852806FE88000523C6 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32E44832806FE88000523C6 /* Arena.storyboard */; };
 		D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DD27D4D42700C80986 /* AppDelegate.swift */; };
 		D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DF27D4D42700C80986 /* SceneDelegate.swift */; };
 		D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282E127D4D42700C80986 /* SplashViewController.swift */; };
@@ -167,8 +169,6 @@
 		D3686A0927F7515C0013B289 /* ChangePasswordFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DF3CB27F2315F006A9E5F /* ChangePasswordFields.swift */; };
 		D3686A0A27F751740013B289 /* ChangeEmailFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DF3C927F23133006A9E5F /* ChangeEmailFields.swift */; };
 		D3686A0B27F7517F0013B289 /* FormFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7827F226AF004BC620 /* FormFields.swift */; };
-		D3757B142805E84D003CF4F2 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3757B132805E84D003CF4F2 /* Arena.storyboard */; };
-		D3757B152805E84D003CF4F2 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3757B132805E84D003CF4F2 /* Arena.storyboard */; };
 		D3757B16280683FF003CF4F2 /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5427E9C8260015BBD4 /* ChangeEmailViewController.swift */; };
 		D3757B17280683FF003CF4F2 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5227E9C5060015BBD4 /* ChangePasswordViewController.swift */; };
 		D3757B192806849B003CF4F2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3757B182806849B003CF4F2 /* SettingsViewModel.swift */; };
@@ -504,6 +504,7 @@
 		D30E490F27FA91ED0074CF2B /* DataManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerError.swift; sourceTree = "<group>"; };
 		D30E491127FAA6880074CF2B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		D30E491327FAA6E70074CF2B /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		D32E44832806FE88000523C6 /* Arena.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Arena.storyboard; sourceTree = "<group>"; };
 		D33282DA27D4D42700C80986 /* LingoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33282DD27D4D42700C80986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D33282DF27D4D42700C80986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -515,7 +516,6 @@
 		D33282EE27D4D42E00C80986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33282F827D4E63B00C80986 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
-		D3757B132805E84D003CF4F2 /* Arena.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Arena.storyboard; sourceTree = "<group>"; };
 		D3757B182806849B003CF4F2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		D398780827DF6AB800B2F4ED /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
@@ -898,7 +898,6 @@
 		D33282D127D4D42700C80986 = {
 			isa = PBXGroup;
 			children = (
-				D3757B132805E84D003CF4F2 /* Arena.storyboard */,
 				D3C5E27227F6EB8900F65B8E /* SupportingFiles */,
 				D33282DC27D4D42700C80986 /* LingoClash */,
 				D3BD29E327DCE6350061E362 /* LingoClashTests */,
@@ -1002,6 +1001,7 @@
 		D3AF1C1E28057FC500DCFA2E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				D32E44832806FE88000523C6 /* Arena.storyboard */,
 				D3AF1C2B28059F5100DCFA2E /* Profile.storyboard */,
 				CE8D22A027EEC059005E7058 /* Book.storyboard */,
 				D3AF1C392805E39F00DCFA2E /* CompletedBook.storyboard */,
@@ -1303,7 +1303,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3757B142805E84D003CF4F2 /* Arena.storyboard in Resources */,
 				D3AF1C342805E33200DCFA2E /* RecommendedBook.storyboard in Resources */,
 				CE8D228F27EE2B5A005E7058 /* Lesson.storyboard in Resources */,
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
@@ -1318,6 +1317,7 @@
 				CE8D228C27EE2986005E7058 /* Question.storyboard in Resources */,
 				D33282E527D4D42700C80986 /* Main.storyboard in Resources */,
 				D3AF1C2D28059F5200DCFA2E /* Profile.storyboard in Resources */,
+				D32E44842806FE88000523C6 /* Arena.storyboard in Resources */,
 				CE8D229227EEA8B0005E7058 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1334,6 +1334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32E44852806FE88000523C6 /* Arena.storyboard in Resources */,
 				D3AF1C382805E37E00DCFA2E /* RecommendedBook.storyboard in Resources */,
 				D3C5E26327F6E36B00F65B8E /* Lesson.storyboard in Resources */,
 				D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */,
@@ -1343,7 +1344,6 @@
 				D3AF1C2E28059FA400DCFA2E /* Profile.storyboard in Resources */,
 				D3AF1C3C2805E39F00DCFA2E /* CompletedBook.storyboard in Resources */,
 				D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */,
-				D3757B152805E84D003CF4F2 /* Arena.storyboard in Resources */,
 				D3AF1C372805E36A00DCFA2E /* LearningBook.storyboard in Resources */,
 				D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */,
 				D30E490727FA12D20074CF2B /* GoogleService-Info.plist in Resources */,
