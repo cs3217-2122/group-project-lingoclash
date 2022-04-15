@@ -34,6 +34,11 @@ class PKGameEngine {
         }
     }
     
+    // Returns true if player successfully forfeitted game
+    func forfeitGame(player: Profile) -> Bool {
+        return false
+    }
+    
     func addMove(isCorrect: Bool, playerProfile: Profile) -> PKGameMove? {
         guard players.contains(where: { $0 == playerProfile }) else {
             return nil

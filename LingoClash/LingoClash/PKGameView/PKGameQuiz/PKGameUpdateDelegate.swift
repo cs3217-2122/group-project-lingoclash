@@ -8,4 +8,5 @@
 protocol PKGameUpdateDelegate {
     var gameUpdateListener: PKGameUpdateListener? { get set }
     func didMove(move: PKGameMove)
+    func didForfeit(player: Profile)
 }

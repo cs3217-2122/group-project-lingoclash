@@ -7,4 +7,5 @@
 
 protocol PKGameUpdateListener {
     func didMove(_ move: PKGameMove)
+    func didForfeit(player: Profile)
 }

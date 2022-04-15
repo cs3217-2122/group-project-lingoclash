@@ -11,6 +11,7 @@ class PKGameQuizViewController: UIViewController {
     enum Segue {
         static let toQuestionViewController = "segueFromPKGameQuizToQuestionVC"
         static let toOverviewViewController = "segueFromPKGameQuizToOverviewVC"
+        static let unwindToPKGameLobby = "unwindToPKGameLobby"
     }
     typealias VM = PKGameQuizViewModel
     weak var questionViewController: QuestionViewController?
@@ -75,6 +76,8 @@ class PKGameQuizViewController: UIViewController {
                 return
             }
             outcomeViewController.viewModel = gameOverviewViewModel
+        } else if segue.identifier == Segue.unwindToPKGameLobby {
+            viewModel?.forfeitGame()
         }
     }
 }

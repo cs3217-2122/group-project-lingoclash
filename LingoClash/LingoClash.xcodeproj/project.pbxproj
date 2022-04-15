@@ -839,10 +839,10 @@
 				CE673C2327F8B48300321BB8 /* PKGameQuizViewController.swift */,
 				CE673C2527F8B48F00321BB8 /* PKGameQuizViewModel.swift */,
 				CEA1C90427FA26FD00123225 /* PKGameQuizViewModelFromPKGame.swift */,
-				CEA1C90A27FA684500123225 /* PKGameRenderer.swift */,
-				CEA1C90C27FA68C600123225 /* PKGameUpdateListener.swift */,
 				CEA1C90E27FA68F800123225 /* PKGameUpdateDelegate.swift */,
 				CEA1C91027FA698900123225 /* FirebasePKGameUpdater.swift */,
+				CEA1C90C27FA68C600123225 /* PKGameUpdateListener.swift */,
+				CEA1C90A27FA684500123225 /* PKGameRenderer.swift */,
 			);
 			path = PKGameQuiz;
 			sourceTree = "<group>";

@@ -9,25 +9,48 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class FirebasePKGameUpdater: PKGameUpdateDelegate {
+
+    
     // TODO: abstract this away into a general synchroniser class
-    var moveCollectionRef: CollectionReference
+    private let moveCollectionRef: CollectionReference
     private let db = Firestore.firestore()
+    private let profileManager = ProfileManager()
+    private let pkGame: PKGame
     var firebaseMoveListener: ListenerRegistration?
-    let profileManager = ProfileManager()
     
     var gameUpdateListener: PKGameUpdateListener? {
         didSet {
             removeListener()
             if let moveListener = gameUpdateListener {
                 addListenerToMoves(gameUpdateListener: moveListener)
+                // TODO: add listener to changes in PKGame forfeitters
             }
         }
     }
     
     init(game: PKGame) {
+        self.pkGame = game
         self.moveCollectionRef = db.collection(DataManagerResources.pkGames)
                                    .document(game.id)
                                    .collection(DataManagerResources.pkGamesMoves)
+    }
+    
+    func didForfeit(player: Profile) {
+        // append player's id to forfeited players list
+        // create a PKGameOutcome document for a loss for the player
+    }
+    
+    private func addListenerToPKGame(gameUpdateListener: PKGameUpdateListener) {
+        
+    }
+    
+    private func updateListenerOnForfeit(gameUpdateListener: PKGameUpdateListener, forfeittedPlayerId: Identifier) {
+        guard let forfeittedPlayer = self.pkGame.players.first(where: { $0.id == forfeittedPlayerId }) else {
+            assert(false)
+            print("Received update on forfeit but player not in game.")
+            return
+        }
+        gameUpdateListener.didForfeit(player: forfeittedPlayer)
     }
     
     func didMove(move: PKGameMove) {

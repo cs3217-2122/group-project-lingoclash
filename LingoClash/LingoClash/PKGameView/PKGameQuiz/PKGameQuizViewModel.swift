@@ -12,4 +12,5 @@ protocol PKGameQuizViewModel: PKGameRenderer, PKGameUpdateListener {
     var playerNames: [String] { get }
 
     func questionDidComplete(isCorrect: Bool)
+    func forfeitGame()
 }

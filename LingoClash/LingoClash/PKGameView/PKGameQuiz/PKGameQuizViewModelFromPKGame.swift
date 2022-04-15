@@ -40,8 +40,21 @@ class PKGameQuizViewModelFromPKGame: PKGameQuizViewModel {
         
         self.gameUpdateDelegate.didMove(move: move)
     }
+    
+    func forfeitGame() {
+        let didSucessfullyForfeit = pkGameEngine.forfeitGame(player: currentPlayerProfile)
+        guard didSucessfullyForfeit else {
+            print("Unable to forfeit game.")
+            // TODO: Tell user this failure
+            return
+        }
+
+        gameUpdateDelegate.didForfeit(player: currentPlayerProfile)
+    }
 }
 
+
+// MARK: PKGameUpdateListener methods
 extension PKGameQuizViewModelFromPKGame {
     func didChangeQuestion(currQuestion: Question) {
         self.questionViewModel.value = QuestionViewModelFromQuestion(question: currQuestion)
@@ -62,6 +75,10 @@ extension PKGameQuizViewModelFromPKGame {
         }
         newScores[index] = newScore
         self.scores.value = newScores
+    }
+    
+    func didForfeit(player: Profile) {
+        // TODO: Add some notif that a person has forfeitted
     }
 }
 
