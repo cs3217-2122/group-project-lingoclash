@@ -15,7 +15,7 @@ protocol Record: Codable {
 
 extension Record {
     // Local creation of Records to be pushed to DataProvider where id is useless
-    static var placeholderId: Identifier { return "PLACEHOLDER" }
+    static var placeholderId: Identifier { "PLACEHOLDER" }
 }
 
 struct CreateParams<T: Codable> {

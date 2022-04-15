@@ -11,9 +11,9 @@ import PromiseKit
 final class RecommendedBooksViewModel {
     @Published var isRefreshing = false
     @Published var booksForCategories = [BooksForCategory]()
-    
+
     private let bookManager = BookManager()
-    
+
     func refresh() {
         self.isRefreshing = true
         firstly {

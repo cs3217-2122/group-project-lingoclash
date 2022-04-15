@@ -14,7 +14,7 @@ class PKGameOverviewViewModelFromOutcome: PKGameOverviewViewModel {
     var scores: [String]
     var names: [String]
     init(outcome: PKGameOutcome, currentPlayer: Profile) {
-        guard let playerOutcome = outcome.playerOutcomes.first(where: {$0.profile == currentPlayer}) else {
+        guard let playerOutcome = outcome.playerOutcomes.first(where: { $0.profile == currentPlayer }) else {
             fatalError("Unable to get current player outcome")
         }
         self.playerOutcome = playerOutcome
@@ -22,7 +22,7 @@ class PKGameOverviewViewModelFromOutcome: PKGameOverviewViewModel {
 
         self.names = playerOutcomes.map { $0.profile.name }
         self.scores = playerOutcomes.map { $0.didForfeit ? "Forfeited": String($0.score) }
-        
+
         switch playerOutcome.outcome {
         case .lose:
             self.titleOutcome = "Loss"

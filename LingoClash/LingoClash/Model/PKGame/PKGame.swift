@@ -13,7 +13,7 @@ class PKGame {
     let id: Identifier
     var players: [Profile]
     var questions: [Question]
-    
+
     init(id: Identifier, players: [Profile], questions: [Question]) {
         self.id = id
         self.players = players

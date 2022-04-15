@@ -9,14 +9,13 @@ import UIKit
 
 private let collectionCellReuseIdentifier = "RecommendedBookCollectionCell"
 
-
 class RecommendedBooksTableViewCell: UITableViewCell {
-    
+
     private var books = [Book]()
     private weak var delegate: LearnButtonDelegate?
 
-    @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet private var collectionView: UICollectionView!
+
     func configure(books: [Book], delegate: LearnButtonDelegate) {
         self.books = books
         self.collectionView.dataSource = self
@@ -27,17 +26,21 @@ class RecommendedBooksTableViewCell: UITableViewCell {
 
 extension RecommendedBooksTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return books.count
+        books.count
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         var cell = UICollectionViewCell()
-        if let bookCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellReuseIdentifier, for: indexPath) as? RecommendedBookCollectionViewCell {
+        if let bookCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: collectionCellReuseIdentifier,
+            for: indexPath) as? RecommendedBookCollectionViewCell {
             bookCell.configure(book: books[indexPath.row], delegate: delegate)
-            
+
             ViewUtilities.styleCard(bookCell.containerView)
-            
+
             cell = bookCell
         }
         return cell

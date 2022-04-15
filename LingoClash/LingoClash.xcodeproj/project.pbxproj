@@ -1357,6 +1357,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D33282F127D4D42E00C80986 /* Build configuration list for PBXNativeTarget "LingoClash" */;
 			buildPhases = (
+				D32BB7802809E461009E4049 /* Run SwiftLint */,
 				D33282D627D4D42700C80986 /* Sources */,
 				D33282D727D4D42700C80986 /* Frameworks */,
 				D33282D827D4D42700C80986 /* Resources */,
@@ -1404,6 +1405,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C5E26D27F6E36B00F65B8E /* Build configuration list for PBXNativeTarget "LingoClashDev" */;
 			buildPhases = (
+				D32BB7812809E48C009E4049 /* Run SwiftLint */,
 				D3C5E1DD27F6E36B00F65B8E /* Sources */,
 				D3C5E25827F6E36B00F65B8E /* Frameworks */,
 				D3C5E26227F6E36B00F65B8E /* Resources */,
@@ -1529,6 +1531,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D32BB7802809E461009E4049 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		D32BB7812809E48C009E4049 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D33282D627D4D42700C80986 /* Sources */ = {

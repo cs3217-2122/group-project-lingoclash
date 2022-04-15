@@ -10,14 +10,15 @@ import Algorithms
 struct QuestionScopeFactory {
     var compulsoryScope: [Vocab]
     var scope: Set<Vocab>
-    
+
     mutating func getScope(for questionConstructor: QuestionContructor) -> (tested: Set<Vocab>, others: Set<Vocab>) {
         let testedVocabs = getTestedVocabs(count: questionConstructor.vocabsTestedCount)
         let otherVocabs = getOtherVocabs(count: questionConstructor.otherVocabsCount, notIn: testedVocabs)
         return (tested: testedVocabs, others: otherVocabs)
     }
-    
-    private func getOtherVocabs(count: Int, notIn excludeVocabs: Set<Vocab> = Set()) -> Set<Vocab> {
+
+    private func getOtherVocabs(
+        count: Int, notIn excludeVocabs: Set<Vocab> = Set()) -> Set<Vocab> {
         // get vocabs randomly from scope not in excludedVocabs
         guard count >= 0 else {
             return Set()
@@ -25,7 +26,7 @@ struct QuestionScopeFactory {
         let vocabs = scope.subtracting(excludeVocabs)
         return Set(vocabs.randomSample(count: count))
     }
-    
+
     private mutating func getTestedVocabs(count: Int) -> Set<Vocab> {
         // get and pop from compulsory scope, rest get randomly from scope
         guard !compulsoryScope.isEmpty else {

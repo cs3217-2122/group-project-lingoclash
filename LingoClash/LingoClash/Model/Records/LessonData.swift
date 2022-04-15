@@ -7,7 +7,7 @@
 
 struct LessonData {
     var id: Identifier
-    let name: String 
+    let name: String
     let book_id: Identifier
 }
 

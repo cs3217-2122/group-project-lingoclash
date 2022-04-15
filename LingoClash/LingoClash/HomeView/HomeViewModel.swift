@@ -8,9 +8,8 @@ class HomeViewModel {
     @Published var lessonSelectionViewModel: LessonSelectionViewModel?
     @Published var pkGameLobbyViewModel: PKGameLobbyViewModel?
 
-    
     private let profileManager = ProfileManager()
-    
+
     func refresh() {
         self.isRefreshing = true
         firstly {
@@ -30,4 +29,3 @@ class HomeViewModel {
         }
     }
 }
-

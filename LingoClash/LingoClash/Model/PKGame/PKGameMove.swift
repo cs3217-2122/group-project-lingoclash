@@ -13,7 +13,7 @@ struct PKGameMove {
     let player: Profile
     let isCorrect: Bool
     let timeTaken: Double
-    
+
     // TODO: Possibly add a constant to represent a placeholder
     init(question: Question, player: Profile, isCorrect: Bool, timeTaken: Double, id: Identifier = "") {
         self.id = "Placeholder"
@@ -22,8 +22,8 @@ struct PKGameMove {
         self.isCorrect = isCorrect
         self.timeTaken = timeTaken
     }
-    
+
     func isRepeated(with other: PKGameMove) -> Bool {
-        return self.question.isEqual(to: other.question) && self.player == other.player
+        self.question.isEqual(to: other.question) && self.player == other.player
     }
 }

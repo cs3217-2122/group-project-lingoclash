@@ -13,7 +13,11 @@ class CurrencySystem {
         }
         let action = amount > 0 ? DebitOrCredit.credit : DebitOrCredit.debit
         let currentDateAndTime = Date()
-        let transaction = Transaction(debitOrCredit: action, amount: amount, account: account, createdAt: currentDateAndTime)
+        let transaction = Transaction(
+            debitOrCredit: action,
+            amount: amount,
+            account: account,
+            createdAt: currentDateAndTime)
         account.transactions.append(transaction)
         // TODO: Update the database (add transaction )
     }

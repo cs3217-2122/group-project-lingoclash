@@ -9,7 +9,7 @@ import Combine
 import PromiseKit
 
 final class CompletedBooksViewModel: BooksViewModel {
-    
+
     @Published var isRefreshing = false
     var isRefreshingPublisher: Published<Bool>.Publisher {
         $isRefreshing
@@ -21,7 +21,7 @@ final class CompletedBooksViewModel: BooksViewModel {
     }
 
     private let bookManager = BookManager()
-    
+
     func refresh() {
         firstly {
             bookManager.getCompletedBooks()
@@ -32,4 +32,3 @@ final class CompletedBooksViewModel: BooksViewModel {
         }
     }
 }
-

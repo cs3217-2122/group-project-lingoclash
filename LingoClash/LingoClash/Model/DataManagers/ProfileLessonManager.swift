@@ -6,7 +6,7 @@
 //
 
 class ProfileLessonManager: DataManager<ProfileLessonData> {
-    
+
     init() {
         super.init(resource: DataManagerResources.profileLessons)
     }

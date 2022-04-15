@@ -21,26 +21,26 @@ class PKGameQuizViewModelFromPKGame: PKGameQuizViewModel {
         self.currentPlayerProfile = currentPlayerProfile
         self.players = [currentPlayerProfile] + game.players.filter { $0 != currentPlayerProfile }
         self.playerNames = self.players.map({ $0.name.capitalized })
-        self.scores = Dynamic(self.players.map( { _ in
-            return 0
-        } ))
-        
+        self.scores = Dynamic(self.players.map({ _ in
+            0
+        }))
+
         self.pkGameEngine = PKGameEngine(game: game)
-        
+
         self.pkGameEngine.renderer = self
         self.gameUpdateDelegate.gameUpdateListener = self
 
     }
-    
+
     func questionDidComplete(isCorrect: Bool) {
         let move = pkGameEngine.addMove(isCorrect: isCorrect, playerProfile: currentPlayerProfile)
         guard let move = move else {
             return
         }
-        
+
         self.gameUpdateDelegate.didMove(move: move)
     }
-    
+
     func forfeitGame() {
         let didSucessfullyForfeit = pkGameEngine.forfeitGame(player: currentPlayerProfile)
         guard didSucessfullyForfeit else {
@@ -53,26 +53,28 @@ class PKGameQuizViewModelFromPKGame: PKGameQuizViewModel {
     }
 }
 
-
 // MARK: PKGameRenderer methods
 extension PKGameQuizViewModelFromPKGame {
     func didChangeQuestion(currQuestion: Question) {
         self.questionViewModel.value = QuestionViewModelFromQuestion(question: currQuestion)
     }
-    
+
     func didCompleteGame(gameOutcome: PKGameOutcome) {
-        guard let currPlayerOutcome = gameOutcome.playerOutcomes.first(where: { $0.profile == currentPlayerProfile }) else {
+        guard let currPlayerOutcome = gameOutcome.playerOutcomes.first(
+            where: { $0.profile == currentPlayerProfile }) else {
             print("current player outcome not found.")
             assert(false)
             return
         }
         self.gameUpdateDelegate.didCompleteGame(outcome: currPlayerOutcome)
-        self.gameOverviewViewModel.value = PKGameOverviewViewModelFromOutcome(outcome: gameOutcome, currentPlayer: currentPlayerProfile)
+        self.gameOverviewViewModel.value = PKGameOverviewViewModelFromOutcome(
+            outcome: gameOutcome,
+            currentPlayer: currentPlayerProfile)
     }
-    
+
     func didAddMove(_ move: PKGameMove) {
     }
-    
+
     func didIncrementScore(newScore: Int, change: Int, player: Profile) {
         var newScores = self.scores.value
         guard let index = players.firstIndex(of: player) else {
@@ -82,7 +84,7 @@ extension PKGameQuizViewModelFromPKGame {
         newScores[index] = newScore
         self.scores.value = newScores
     }
-    
+
     func didAccountForForfeit(player: Profile) {
         // TODO: Add some notif that a person has forfeitted
         print("renderer update forfeit.")
@@ -92,12 +94,12 @@ extension PKGameQuizViewModelFromPKGame {
 // MARK: PKGameUpdateListener
 extension PKGameQuizViewModelFromPKGame {
     func didMove(_ move: PKGameMove) {
-        let _ = pkGameEngine.addMove(move)
+        _ = pkGameEngine.addMove(move)
     }
-    
+
     func didForfeit(player: Profile) {
         // TODO: Add some notif that a person has forfeitted
-        let _ = pkGameEngine.forfeitGame(player: player)
+        _ = pkGameEngine.forfeitGame(player: player)
         print("renderer update forfeit.")
     }
 }

@@ -10,11 +10,8 @@ import PromiseKit
 
 @testable import LingoClashDev
 
-
-// TODO: Associate with development environment: General > Host application
-// TODO: Add tests for: update, create, delete; updateMany, deleteMany
 class BookManagerTests: XCTestCase {
-    
+
 //    private static let bookManager = BookManager()
 //    private static let authProvider = AppConfigs.API.authProvider
 //    private static let testAccountCredentials = LoginFields(

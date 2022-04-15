@@ -8,12 +8,12 @@
 import UIKit
 
 class StarView: UIImageView {
-    var isFilled: Bool = false {
+    var isFilled = false {
         didSet {
             refreshView()
         }
     }
-    
+
     func refreshView() {
         if isFilled {
             image = #imageLiteral(resourceName: "star")

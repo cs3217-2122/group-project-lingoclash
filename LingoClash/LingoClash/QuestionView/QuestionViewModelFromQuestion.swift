@@ -7,12 +7,13 @@
 
 class QuestionViewModelFromQuestion: QuestionViewModel {
     var questionLayoutViewModel: QuestionLayoutViewModel?
-    init(question: Question){
+    init(question: Question) {
         switch question {
         case let simpleOptionQuestion as SimpleOptionQuestion:
             self.questionLayoutViewModel = SimpleOptionQuestionLayoutViewModel(question: simpleOptionQuestion)
         case let twoDisjointSetOptionQuestion as TwoDisjointSetOptionQuestion:
-            self.questionLayoutViewModel = TwoDisjointSetOptionQuestionLayoutViewModel(question: twoDisjointSetOptionQuestion)
+            self.questionLayoutViewModel = TwoDisjointSetOptionQuestionLayoutViewModel(
+                question: twoDisjointSetOptionQuestion)
         default:
             assert(false, "Question Format not found")
         }

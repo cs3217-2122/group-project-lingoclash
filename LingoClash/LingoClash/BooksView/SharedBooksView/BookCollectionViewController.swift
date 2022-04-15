@@ -15,23 +15,23 @@ class BookCollectionViewController: UICollectionViewController {
     var viewModel: BooksViewModel?
     weak var parentVC: UIViewController?
     private var cancellables: Set<AnyCancellable> = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBinders()
         viewModel?.refresh()
     }
-    
+
     func setUpBinders() {
         guard let viewModel = viewModel else {
             return
         }
-        
+
         viewModel.booksPublisher.sink {[weak self] books in
             self?.books = books
             self?.collectionView.reloadData()
         }.store(in: &cancellables)
-        
+
         viewModel.isRefreshingPublisher.sink {[weak self] isRefreshing in
             if isRefreshing {
                 self?.parentVC?.showSpinner()
@@ -42,21 +42,25 @@ class BookCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return books.count
+        books.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = UICollectionViewCell()
-        
-        if let bookCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? BookCollectionViewCell {
-            
+
+        if let bookCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: reuseIdentifier,
+            for: indexPath) as? BookCollectionViewCell {
+
             bookCell.configure(book: books[indexPath.row], delegate: self)
-            
+
             ViewUtilities.styleCard(bookCell)
-            
+
             cell = bookCell
         }
-        
+
         return cell
     }
 }
@@ -68,5 +72,3 @@ extension BookCollectionViewController: BookButtonDelegate {
         self.show(viewController, sender: nil)
     }
 }
-
-

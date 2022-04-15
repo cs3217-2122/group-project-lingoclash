@@ -10,10 +10,9 @@ import Foundation
 struct BookCategory {
     let id: Identifier
     let name: String
-    
+
     init(bookCategoryData: BookCategoryData) {
         self.id = bookCategoryData.id
         self.name = bookCategoryData.name
     }
 }
-

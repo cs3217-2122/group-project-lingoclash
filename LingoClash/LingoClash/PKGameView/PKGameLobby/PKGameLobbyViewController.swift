@@ -18,36 +18,36 @@ class PKGameLobbyViewController: UIViewController {
             fillUI()
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         styleUI()
         fillUI()
     }
-    
+
     func styleUI() {
-        
+
     }
-    
+
     func fillUI() {
         guard isViewLoaded, let viewModel = viewModel else {
             return
         }
-        
-        viewModel.pkGameQuizViewModel.bind { [self] (_) -> Void in
+
+        viewModel.pkGameQuizViewModel.bind { [self] _ -> Void in
             self.startPKGame()
         }
 
         viewModel.findMatch()
     }
-    
+
     private func startPKGame() {
         guard self.viewModel?.pkGameQuizViewModel.value != nil else {
             return
         }
         performSegue(withIdentifier: Segue.toPKGameQuizViewController, sender: self)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let pkQuizVC = segue.destination as? PKGameQuizViewController {
             guard let pkQuizVM = self.viewModel?.pkGameQuizViewModel.value else {
@@ -56,12 +56,12 @@ class PKGameLobbyViewController: UIViewController {
             pkQuizVC.viewModel = pkQuizVM
         }
     }
-    
-    @IBAction func unwindToPKGameLobby(segue: UIStoryboardSegue) {
+
+    @IBAction private func unwindToPKGameLobby(segue: UIStoryboardSegue) {
         viewModel?.findMatch()
     }
 
-    @IBAction func cancel(_ sender: UIButton) {
+    @IBAction private func cancel(_ sender: UIButton) {
         // tell view model to cancel the find
         viewModel?.cancel()
         // segue to home

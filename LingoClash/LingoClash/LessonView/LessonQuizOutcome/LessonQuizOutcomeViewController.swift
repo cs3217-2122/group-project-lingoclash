@@ -9,20 +9,20 @@ import UIKit
 
 class LessonQuizOutcomeViewController: UIViewController {
     typealias VM = LessonQuizOutcomeViewModel
-    
+
     enum Segue {
         static let unwindOutcomeToVocabVC = "unwindOutcomeToVocabVC"
     }
-    
-    @IBOutlet var stars: [StarView]!
-    @IBOutlet weak var completionStatusLabel: UILabel!
-    @IBOutlet weak var lessonNameLabel: UILabel!
-    @IBOutlet weak var performanceCommentLabel: UILabel!
-    @IBOutlet weak var vocabsLearntTableView: UITableView!
-    @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var actionButton: UIButton!
 
-    @IBAction func onActionButtonTap(_ sender: UIButton) {
+    @IBOutlet private var stars: [StarView]!
+    @IBOutlet private var completionStatusLabel: UILabel!
+    @IBOutlet private var lessonNameLabel: UILabel!
+    @IBOutlet private var performanceCommentLabel: UILabel!
+    @IBOutlet private var vocabsLearntTableView: UITableView!
+    @IBOutlet private var topView: UIView!
+    @IBOutlet private var actionButton: UIButton!
+
+    @IBAction private func onActionButtonTap(_ sender: UIButton) {
         guard let viewModel = self.viewModel else {
             return
         }
@@ -38,19 +38,19 @@ class LessonQuizOutcomeViewController: UIViewController {
             fillUI()
         }
     }
-    
-    @IBOutlet weak var quizOutcomeLabel: UILabel!
+
+    @IBOutlet private var quizOutcomeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.vocabsLearntTableView.dataSource = self
         styleUI()
         fillUI()
     }
-    
+
     func styleUI() {
-        
+
     }
-    
+
     func fillUI() {
         guard isViewLoaded, let viewModel = viewModel else {
             return

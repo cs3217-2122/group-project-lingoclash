@@ -6,7 +6,7 @@
 //
 
 class LessonManager: DataManager<LessonData> {
-    
+
     init() {
         super.init(resource: DataManagerResources.lessons)
     }

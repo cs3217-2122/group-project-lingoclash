@@ -8,13 +8,13 @@
 import UIKit
 
 class CompletedBooksViewController: UIViewController {
-    
+
     private let viewModel = CompletedBooksViewModel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
