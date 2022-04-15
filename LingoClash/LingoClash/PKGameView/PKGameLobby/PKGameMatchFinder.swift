@@ -8,4 +8,5 @@ import PromiseKit
 
 protocol PKGameMatchFinder {
     func findGame(playerProfile: Profile) -> Promise<PKGame>
+    func cancel(playerProfile: Profile)
 }

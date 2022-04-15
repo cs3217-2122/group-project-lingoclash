@@ -125,6 +125,18 @@
 		CEBC077B2807E71100A0ED82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07762807E70800A0ED82 /* GoogleService-Info.plist */; };
 		CEBC077E280810CF00A0ED82 /* PKGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC077C280810CE00A0ED82 /* PKGame.storyboard */; };
 		CEBC077F280810CF00A0ED82 /* PKGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC077C280810CE00A0ED82 /* PKGame.storyboard */; };
+		CEBC0788280883C300A0ED82 /* RecommendedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC0780280883C300A0ED82 /* RecommendedBook.storyboard */; };
+		CEBC0789280883C300A0ED82 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC0782280883C300A0ED82 /* Settings.storyboard */; };
+		CEBC078A280883C300A0ED82 /* CompletedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC0784280883C300A0ED82 /* CompletedBook.storyboard */; };
+		CEBC078B280883C300A0ED82 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC0786280883C300A0ED82 /* Profile.storyboard */; };
+		CEBC078C280883E200A0ED82 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC0782280883C300A0ED82 /* Settings.storyboard */; };
+		CEBC078D280883E600A0ED82 /* CompletedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC0784280883C300A0ED82 /* CompletedBook.storyboard */; };
+		CEBC078E280883E600A0ED82 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC0786280883C300A0ED82 /* Profile.storyboard */; };
+		CEBC078F280883E600A0ED82 /* RecommendedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC0780280883C300A0ED82 /* RecommendedBook.storyboard */; };
+		CEBC07942808841E00A0ED82 /* LearningBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07902808841E00A0ED82 /* LearningBook.storyboard */; };
+		CEBC07952808841E00A0ED82 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07922808841E00A0ED82 /* Arena.storyboard */; };
+		CEBC07962808842300A0ED82 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07922808841E00A0ED82 /* Arena.storyboard */; };
+		CEBC07972808842300A0ED82 /* LearningBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07902808841E00A0ED82 /* LearningBook.storyboard */; };
 		CEC5886A27EA2A4F00809403 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886927EA2A4F00809403 /* StarView.swift */; };
 		CEC5886C27EA37E900809403 /* VocabsLearntTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */; };
 		CEC5887127EABEC000809403 /* LessonSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887027EABEC000809403 /* LessonSelectionViewController.swift */; };
@@ -232,8 +244,6 @@
 		D30E491627FAC7C60074CF2B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E491127FAA6880074CF2B /* Profile.swift */; };
 		D30E491727FAC7C80074CF2B /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E491327FAA6E70074CF2B /* Lesson.swift */; };
 		D30E491827FAC7CE0074CF2B /* BookCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E490D27FA20140074CF2B /* BookCategory.swift */; };
-		D32E44842806FE88000523C6 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32E44832806FE88000523C6 /* Arena.storyboard */; };
-		D32E44852806FE88000523C6 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32E44832806FE88000523C6 /* Arena.storyboard */; };
 		D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DD27D4D42700C80986 /* AppDelegate.swift */; };
 		D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DF27D4D42700C80986 /* SceneDelegate.swift */; };
 		D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282E127D4D42700C80986 /* SplashViewController.swift */; };
@@ -261,20 +271,10 @@
 		D3AF1C1B28057DC300DCFA2E /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */; };
 		D3AF1C1C28057DF800DCFA2E /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1728057C7600DCFA2E /* LightTheme.swift */; };
 		D3AF1C1D28057DFA00DCFA2E /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C1928057C8200DCFA2E /* DarkTheme.swift */; };
-		D3AF1C212805919500DCFA2E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C1F2805919500DCFA2E /* Settings.storyboard */; };
 		D3AF1C252805924300DCFA2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C242805924300DCFA2E /* SettingsViewController.swift */; };
 		D3AF1C262805937100DCFA2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C242805924300DCFA2E /* SettingsViewController.swift */; };
-		D3AF1C27280593C500DCFA2E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C1F2805919500DCFA2E /* Settings.storyboard */; };
-		D3AF1C2D28059F5200DCFA2E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C2B28059F5100DCFA2E /* Profile.storyboard */; };
-		D3AF1C2E28059FA400DCFA2E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C2B28059F5100DCFA2E /* Profile.storyboard */; };
 		D3AF1C302805DDDB00DCFA2E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */; };
 		D3AF1C312805DDE000DCFA2E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */; };
-		D3AF1C342805E33200DCFA2E /* RecommendedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C322805E33200DCFA2E /* RecommendedBook.storyboard */; };
-		D3AF1C362805E36A00DCFA2E /* LearningBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C352805E36900DCFA2E /* LearningBook.storyboard */; };
-		D3AF1C372805E36A00DCFA2E /* LearningBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C352805E36900DCFA2E /* LearningBook.storyboard */; };
-		D3AF1C382805E37E00DCFA2E /* RecommendedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C322805E33200DCFA2E /* RecommendedBook.storyboard */; };
-		D3AF1C3B2805E39F00DCFA2E /* CompletedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C392805E39F00DCFA2E /* CompletedBook.storyboard */; };
-		D3AF1C3C2805E39F00DCFA2E /* CompletedBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3AF1C392805E39F00DCFA2E /* CompletedBook.storyboard */; };
 		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
 		D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
 		D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */; };
@@ -548,6 +548,12 @@
 		CEBC07762807E70800A0ED82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEBC07782807E70800A0ED82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEBC077D280810CE00A0ED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PKGame.storyboard; sourceTree = "<group>"; };
+		CEBC0781280883C300A0ED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RecommendedBook.storyboard; sourceTree = "<group>"; };
+		CEBC0783280883C300A0ED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		CEBC0785280883C300A0ED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CompletedBook.storyboard; sourceTree = "<group>"; };
+		CEBC0787280883C300A0ED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		CEBC07912808841E00A0ED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LearningBook.storyboard; sourceTree = "<group>"; };
+		CEBC07932808841E00A0ED82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Arena.storyboard; sourceTree = "<group>"; };
 		CEC5886927EA2A4F00809403 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabsLearntTableCell.swift; sourceTree = "<group>"; };
 		CEC5887027EABEC000809403 /* LessonSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonSelectionViewController.swift; sourceTree = "<group>"; };
@@ -602,7 +608,6 @@
 		D30E490F27FA91ED0074CF2B /* DataManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerError.swift; sourceTree = "<group>"; };
 		D30E491127FAA6880074CF2B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		D30E491327FAA6E70074CF2B /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
-		D32E44832806FE88000523C6 /* Arena.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Arena.storyboard; sourceTree = "<group>"; };
 		D33282DA27D4D42700C80986 /* LingoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33282DD27D4D42700C80986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D33282DF27D4D42700C80986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -619,13 +624,8 @@
 		D3AF1C1528057B2900DCFA2E /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		D3AF1C1728057C7600DCFA2E /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		D3AF1C1928057C8200DCFA2E /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
-		D3AF1C202805919500DCFA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LingoClash/Storyboards/Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		D3AF1C242805924300DCFA2E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		D3AF1C2C28059F5200DCFA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LingoClash/Storyboards/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
-		D3AF1C332805E33200DCFA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LingoClash/Storyboards/Base.lproj/RecommendedBook.storyboard; sourceTree = "<group>"; };
-		D3AF1C352805E36900DCFA2E /* LearningBook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LearningBook.storyboard; sourceTree = "<group>"; };
-		D3AF1C3A2805E39F00DCFA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LingoClash/Storyboards/Base.lproj/CompletedBook.storyboard; sourceTree = "<group>"; };
 		D3BD29E227DCE6350061E362 /* LingoClashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LingoClashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BD29E427DCE6350061E362 /* LingoClashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LingoClashTests.swift; sourceTree = "<group>"; };
 		D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -842,7 +842,6 @@
 				CE673C2327F8B48300321BB8 /* PKGameQuizViewController.swift */,
 				CE673C2527F8B48F00321BB8 /* PKGameQuizViewModel.swift */,
 				CEA1C90427FA26FD00123225 /* PKGameQuizViewModelFromPKGame.swift */,
-				CEA1C90827FA67BC00123225 /* PKGameEngine.swift */,
 				CEA1C90A27FA684500123225 /* PKGameRenderer.swift */,
 				CEA1C90C27FA68C600123225 /* PKGameMoveListener.swift */,
 				CEA1C90E27FA68F800123225 /* PKGameMoveUpdateDelegate.swift */,
@@ -917,14 +916,15 @@
 			path = QuestionFormats;
 			sourceTree = "<group>";
 		};
-		CEA1C87827FA14FA00123225 /* Games */ = {
+		CEA1C87827FA14FA00123225 /* PKGame */ = {
 			isa = PBXGroup;
 			children = (
 				CEA1C87927FA14FA00123225 /* PKGame.swift */,
+				CEA1C90827FA67BC00123225 /* PKGameEngine.swift */,
 				CEA1C8CD27FA14FA00123225 /* PKGameMove.swift */,
 				CEA1C91227FA7A2700123225 /* PKGameOutcome.swift */,
 			);
-			path = Games;
+			path = PKGame;
 			sourceTree = "<group>";
 		};
 		CEBC07742807E70800A0ED82 /* SupportingFiles */ = {
@@ -1142,7 +1142,7 @@
 			isa = PBXGroup;
 			children = (
 				D3C4423B27E8B17400676C93 /* DatabaseErrors.swift */,
-				CEA1C87827FA14FA00123225 /* Games */,
+				CEA1C87827FA14FA00123225 /* PKGame */,
 				CEA1C75827FA145800123225 /* Questions */,
 				62165B7727F2269F004BC620 /* FormFields */,
 				CEF1E7A627E50060005D4272 /* Currency */,
@@ -1186,17 +1186,17 @@
 		D3AF1C1E28057FC500DCFA2E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				CEBC07922808841E00A0ED82 /* Arena.storyboard */,
+				CEBC07902808841E00A0ED82 /* LearningBook.storyboard */,
+				CEBC0784280883C300A0ED82 /* CompletedBook.storyboard */,
+				CEBC0786280883C300A0ED82 /* Profile.storyboard */,
+				CEBC0780280883C300A0ED82 /* RecommendedBook.storyboard */,
+				CEBC0782280883C300A0ED82 /* Settings.storyboard */,
 				CEBC077C280810CE00A0ED82 /* PKGame.storyboard */,
-				D32E44832806FE88000523C6 /* Arena.storyboard */,
-				D3AF1C2B28059F5100DCFA2E /* Profile.storyboard */,
 				CE8D22A027EEC059005E7058 /* Book.storyboard */,
-				D3AF1C392805E39F00DCFA2E /* CompletedBook.storyboard */,
-				D3AF1C352805E36900DCFA2E /* LearningBook.storyboard */,
-				D3AF1C322805E33200DCFA2E /* RecommendedBook.storyboard */,
 				D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */,
 				D33282E327D4D42700C80986 /* Main.storyboard */,
 				CE8D229027EEA8B0005E7058 /* Home.storyboard */,
-				D3AF1C1F2805919500DCFA2E /* Settings.storyboard */,
 				CE8D228D27EE2B5A005E7058 /* Lesson.storyboard */,
 				CE8D228A27EE2986005E7058 /* Question.storyboard */,
 			);
@@ -1473,22 +1473,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3AF1C342805E33200DCFA2E /* RecommendedBook.storyboard in Resources */,
 				CE8D228F27EE2B5A005E7058 /* Lesson.storyboard in Resources */,
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
 				CEBC077E280810CF00A0ED82 /* PKGame.storyboard in Resources */,
 				D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */,
-				D3AF1C212805919500DCFA2E /* Settings.storyboard in Resources */,
 				CE8D22A227EEC059005E7058 /* Book.storyboard in Resources */,
 				D3C5E29227F73C9900F65B8E /* Dev-Info.plist in Resources */,
-				D3AF1C3B2805E39F00DCFA2E /* CompletedBook.storyboard in Resources */,
-				D3AF1C362805E36A00DCFA2E /* LearningBook.storyboard in Resources */,
+				CEBC078A280883C300A0ED82 /* CompletedBook.storyboard in Resources */,
+				CEBC0788280883C300A0ED82 /* RecommendedBook.storyboard in Resources */,
 				D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */,
+				CEBC07952808841E00A0ED82 /* Arena.storyboard in Resources */,
+				CEBC07942808841E00A0ED82 /* LearningBook.storyboard in Resources */,
+				CEBC0789280883C300A0ED82 /* Settings.storyboard in Resources */,
 				CEBC077A2807E70800A0ED82 /* GoogleService-Info.plist in Resources */,
 				CE8D228C27EE2986005E7058 /* Question.storyboard in Resources */,
+				CEBC078B280883C300A0ED82 /* Profile.storyboard in Resources */,
 				D33282E527D4D42700C80986 /* Main.storyboard in Resources */,
-				D3AF1C2D28059F5200DCFA2E /* Profile.storyboard in Resources */,
-				D32E44842806FE88000523C6 /* Arena.storyboard in Resources */,
 				CE8D229227EEA8B0005E7058 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1504,23 +1504,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D32E44852806FE88000523C6 /* Arena.storyboard in Resources */,
-				D3AF1C382805E37E00DCFA2E /* RecommendedBook.storyboard in Resources */,
 				D3C5E26327F6E36B00F65B8E /* Lesson.storyboard in Resources */,
 				CEBC077F280810CF00A0ED82 /* PKGame.storyboard in Resources */,
 				D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */,
-				D3AF1C27280593C500DCFA2E /* Settings.storyboard in Resources */,
 				D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */,
+				CEBC078F280883E600A0ED82 /* RecommendedBook.storyboard in Resources */,
 				D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */,
-				D3AF1C2E28059FA400DCFA2E /* Profile.storyboard in Resources */,
-				D3AF1C3C2805E39F00DCFA2E /* CompletedBook.storyboard in Resources */,
 				D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */,
-				D3AF1C372805E36A00DCFA2E /* LearningBook.storyboard in Resources */,
 				CEBC077B2807E71100A0ED82 /* GoogleService-Info.plist in Resources */,
 				D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */,
+				CEBC078E280883E600A0ED82 /* Profile.storyboard in Resources */,
+				CEBC078D280883E600A0ED82 /* CompletedBook.storyboard in Resources */,
 				D3C5E26B27F6E36B00F65B8E /* Main.storyboard in Resources */,
 				D3C5E26C27F6E36B00F65B8E /* Home.storyboard in Resources */,
 				CED64D452806A20B0028B2FE /* (null) in Resources */,
+				CEBC07962808842300A0ED82 /* Arena.storyboard in Resources */,
+				CEBC078C280883E200A0ED82 /* Settings.storyboard in Resources */,
+				CEBC07972808842300A0ED82 /* LearningBook.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1972,6 +1972,54 @@
 			name = PKGame.storyboard;
 			sourceTree = "<group>";
 		};
+		CEBC0780280883C300A0ED82 /* RecommendedBook.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEBC0781280883C300A0ED82 /* Base */,
+			);
+			name = RecommendedBook.storyboard;
+			sourceTree = "<group>";
+		};
+		CEBC0782280883C300A0ED82 /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEBC0783280883C300A0ED82 /* Base */,
+			);
+			name = Settings.storyboard;
+			sourceTree = "<group>";
+		};
+		CEBC0784280883C300A0ED82 /* CompletedBook.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEBC0785280883C300A0ED82 /* Base */,
+			);
+			name = CompletedBook.storyboard;
+			sourceTree = "<group>";
+		};
+		CEBC0786280883C300A0ED82 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEBC0787280883C300A0ED82 /* Base */,
+			);
+			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		CEBC07902808841E00A0ED82 /* LearningBook.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEBC07912808841E00A0ED82 /* Base */,
+			);
+			name = LearningBook.storyboard;
+			sourceTree = "<group>";
+		};
+		CEBC07922808841E00A0ED82 /* Arena.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEBC07932808841E00A0ED82 /* Base */,
+			);
+			name = Arena.storyboard;
+			sourceTree = "<group>";
+		};
 		D33282E327D4D42700C80986 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1986,38 +2034,6 @@
 				D33282EC27D4D42E00C80986 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		D3AF1C1F2805919500DCFA2E /* Settings.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3AF1C202805919500DCFA2E /* Base */,
-			);
-			name = Settings.storyboard;
-			sourceTree = "<group>";
-		};
-		D3AF1C2B28059F5100DCFA2E /* Profile.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3AF1C2C28059F5200DCFA2E /* Base */,
-			);
-			name = Profile.storyboard;
-			sourceTree = "<group>";
-		};
-		D3AF1C322805E33200DCFA2E /* RecommendedBook.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3AF1C332805E33200DCFA2E /* Base */,
-			);
-			name = RecommendedBook.storyboard;
-			sourceTree = "<group>";
-		};
-		D3AF1C392805E39F00DCFA2E /* CompletedBook.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3AF1C3A2805E39F00DCFA2E /* Base */,
-			);
-			name = CompletedBook.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

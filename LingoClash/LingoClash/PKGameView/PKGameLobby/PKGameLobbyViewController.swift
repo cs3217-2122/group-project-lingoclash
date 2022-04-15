@@ -56,6 +56,10 @@ class PKGameLobbyViewController: UIViewController {
             pkQuizVC.viewModel = pkQuizVM
         }
     }
+    
+    @IBAction func unwindToPKGameLobby(segue: UIStoryboardSegue) {
+        viewModel?.findMatch()
+    }
 
     @IBAction func cancel(_ sender: UIButton) {
         // tell view model to cancel the find

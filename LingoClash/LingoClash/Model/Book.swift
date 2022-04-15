@@ -65,4 +65,12 @@ struct Book {
             self.status = .unread
         }
     }
+    
+    func getVocabs() -> Set<Vocab> {
+        var vocabs = Set<Vocab>()
+        for lesson in self.lessons {
+            vocabs = vocabs.union(lesson.vocabs)
+        }
+        return vocabs
+    }
 }

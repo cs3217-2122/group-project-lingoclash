@@ -14,12 +14,14 @@ class PKGameOverviewViewController: UIViewController {
             fillUI()
         }
     }
+    
     @IBOutlet weak var descriptionOutcome: UILabel!
     @IBOutlet weak var titleOutcome: UILabel!
     @IBOutlet weak var playerTwoName: UILabel!
     @IBOutlet weak var playerOneName: UILabel!
     @IBOutlet weak var playerTwoScore: UILabel!
     @IBOutlet weak var playerOneScore: UILabel!
+    @IBOutlet weak var topView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         styleUI()
@@ -34,8 +36,10 @@ class PKGameOverviewViewController: UIViewController {
         guard isViewLoaded, let viewModel = viewModel else {
             return
         }
-        titleOutcome.text = viewModel.didWin ? "Victory" : "Loss"
-        descriptionOutcome.text = viewModel.didWin ? "Masterful!" : "Better luck next time."
+        titleOutcome.text = viewModel.titleOutcome
+        descriptionOutcome.text = viewModel.descriptionOutcome
+        topView.backgroundColor = viewModel.isBackgroundDark ? Theme.current.secondary : Theme.current.primary
+
         playerOneName.text = viewModel.names[0]
         playerTwoName.text = viewModel.names[1]
         playerOneScore.text = viewModel.scores[0]

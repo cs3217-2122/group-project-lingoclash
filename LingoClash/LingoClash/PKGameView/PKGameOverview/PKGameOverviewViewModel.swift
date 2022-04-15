@@ -6,7 +6,9 @@
 //
 
 protocol PKGameOverviewViewModel {
-    var didWin: Bool { get }
     var scores: [String] { get }
     var names: [String] { get }
+    var titleOutcome: String { get }
+    var descriptionOutcome: String { get }
+    var isBackgroundDark: Bool { get }
 }
