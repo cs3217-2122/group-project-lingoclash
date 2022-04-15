@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -83,27 +88,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(DEV) Choose account to log in as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7e-SQ-3ro">
+                                <rect key="frame" x="54.5" y="74" width="711.5" height="60"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MHe-qZ-hwB">
-                                <rect key="frame" x="0.0" y="74" width="820" height="1086"/>
+                                <rect key="frame" x="0.0" y="184" width="820" height="976"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="devLoginTableCellIdentifier" id="Hxx-fO-mou" customClass="DevLoginTableCell" customModule="LingoClash" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="820" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="820" height="66.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hxx-fO-mou" id="mAT-bP-ge4">
-                                            <rect key="frame" x="0.0" y="0.0" width="820" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="820" height="66.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niM-bV-5BO">
-                                                    <rect key="frame" x="389.5" y="11.5" width="41" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="375" y="15" width="70.5" height="36.5"/>
+                                                    <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="30"/>
+                                                    <color key="textColor" name="Secondary"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="niM-bV-5BO" firstAttribute="centerY" secondItem="mAT-bP-ge4" secondAttribute="centerY" id="LIg-6J-w4Z"/>
                                                 <constraint firstItem="niM-bV-5BO" firstAttribute="centerX" secondItem="mAT-bP-ge4" secondAttribute="centerX" id="U0o-bP-O9t"/>
+                                                <constraint firstItem="niM-bV-5BO" firstAttribute="top" secondItem="mAT-bP-ge4" secondAttribute="top" constant="15" id="fK4-4B-cnJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="niM-bV-5BO" secondAttribute="bottom" constant="15" id="wpd-9V-veN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -112,21 +125,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(DEV) Choose account to log in as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7e-SQ-3ro">
-                                <rect key="frame" x="190.5" y="38" width="439" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yyZ-ck-0BW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yyZ-ck-0BW" firstAttribute="trailing" secondItem="MHe-qZ-hwB" secondAttribute="trailing" id="Ky6-gK-Lfu"/>
-                            <constraint firstItem="MHe-qZ-hwB" firstAttribute="top" secondItem="yyZ-ck-0BW" secondAttribute="top" constant="50" id="PUa-NW-YJ7"/>
-                            <constraint firstItem="S7e-SQ-3ro" firstAttribute="centerX" secondItem="yyZ-ck-0BW" secondAttribute="centerX" id="TnV-eB-4Zw"/>
-                            <constraint firstItem="S7e-SQ-3ro" firstAttribute="top" secondItem="yyZ-ck-0BW" secondAttribute="top" constant="14" id="oiu-j7-YsE"/>
+                            <constraint firstItem="S7e-SQ-3ro" firstAttribute="centerX" secondItem="PJk-Kq-kuW" secondAttribute="centerX" id="PGZ-lL-OKw"/>
                             <constraint firstItem="yyZ-ck-0BW" firstAttribute="bottom" secondItem="MHe-qZ-hwB" secondAttribute="bottom" id="p8a-9z-P7h"/>
+                            <constraint firstItem="MHe-qZ-hwB" firstAttribute="top" secondItem="S7e-SQ-3ro" secondAttribute="bottom" constant="50" id="tZ1-dt-1Ea"/>
+                            <constraint firstItem="S7e-SQ-3ro" firstAttribute="top" secondItem="yyZ-ck-0BW" secondAttribute="top" constant="50" id="wCj-nf-dqe"/>
                             <constraint firstItem="MHe-qZ-hwB" firstAttribute="leading" secondItem="yyZ-ck-0BW" secondAttribute="leading" id="xfl-m3-LBr"/>
                         </constraints>
                     </view>
@@ -137,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3h-gN-yX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="799"/>
+            <point key="canvasLocation" x="557.56097560975604" y="798.81355932203394"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aks-Xj-rbr">
@@ -346,6 +353,9 @@
         <image name="logo_v2" width="166.5" height="166.5"/>
         <namedColor name="Error">
             <color red="0.73100000619888306" green="0.10400000214576721" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.49000000953674316" green="0.46200001239776611" blue="0.74000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

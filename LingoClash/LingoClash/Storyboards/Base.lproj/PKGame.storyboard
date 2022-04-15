@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Bold</string>
+            <string>SFPro-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--HomeViewController-->
         <scene sceneID="kQd-8x-6s8">
@@ -26,15 +32,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finding a match..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRY-Yq-1jK">
-                                <rect key="frame" x="282.5" y="574" width="255" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <rect key="frame" x="225.5" y="562" width="369.5" height="60"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq5-Go-cha">
                                 <rect key="frame" x="376" y="1060" width="68.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cancel" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" name="SecondaryText"/>
+                                    <color key="baseBackgroundColor" name="Secondary"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="cancel:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="25H-7K-bcj"/>
                                 </connections>
@@ -88,8 +97,8 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUM-U6-mbk">
-                                        <rect key="frame" x="23.5" y="38" width="53" height="24"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <rect key="frame" x="24.5" y="38" width="51.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -101,14 +110,14 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPR-JH-go0">
-                                        <rect key="frame" x="120" y="39.5" width="58.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="120" y="38" width="67.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIv-Cy-E8O">
-                                        <rect key="frame" x="483" y="39.5" width="61" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="474" y="38" width="70" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -119,8 +128,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czZ-1c-9dP">
-                                        <rect key="frame" x="587.5" y="38" width="53" height="24"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <rect key="frame" x="588.5" y="38" width="51.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -146,13 +155,12 @@
                                     <constraint firstItem="gPR-JH-go0" firstAttribute="centerY" secondItem="XfK-xx-jNB" secondAttribute="centerY" id="zyB-w5-ecu"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyY-Wu-QCP">
-                                <rect key="frame" x="610" y="953.5" width="62" height="31"/>
-                                <color key="backgroundColor" name="Background"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXX-H1-LQC">
+                                <rect key="frame" x="607" y="954.5" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Leave">
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.96078431610000004" green="0.97254908080000002" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="capsule">
+                                    <color key="baseForegroundColor" name="Secondary"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
@@ -162,16 +170,15 @@
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="trailing" secondItem="89F-ve-CDC" secondAttribute="trailing" constant="20" id="1fE-aH-1D0"/>
                             <constraint firstItem="l8w-iM-dry" firstAttribute="leading" secondItem="gU8-OW-6Bv" secondAttribute="leading" id="4Ie-YY-d66"/>
                             <constraint firstItem="l8w-iM-dry" firstAttribute="bottom" secondItem="gU8-OW-6Bv" secondAttribute="bottom" id="4zO-V5-sc3"/>
+                            <constraint firstItem="gU8-OW-6Bv" firstAttribute="bottom" secondItem="iXX-H1-LQC" secondAttribute="bottom" constant="10" id="7Q2-dG-5u6"/>
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="top" secondItem="l8w-iM-dry" secondAttribute="top" constant="52" id="7hr-XA-PFf"/>
                             <constraint firstItem="ynT-Mq-vCJ" firstAttribute="leading" secondItem="gU8-OW-6Bv" secondAttribute="leading" id="JdZ-Vs-77E"/>
-                            <constraint firstItem="gU8-OW-6Bv" firstAttribute="bottom" secondItem="iyY-Wu-QCP" secondAttribute="bottom" constant="11" id="Qub-U6-xPU"/>
                             <constraint firstItem="ynT-Mq-vCJ" firstAttribute="bottom" secondItem="gU8-OW-6Bv" secondAttribute="bottom" constant="-50" id="S5r-iv-Zrl"/>
-                            <constraint firstItem="gU8-OW-6Bv" firstAttribute="trailing" secondItem="iyY-Wu-QCP" secondAttribute="trailing" constant="32" id="Spw-hk-wGt"/>
                             <constraint firstItem="89F-ve-CDC" firstAttribute="centerX" secondItem="gU8-OW-6Bv" secondAttribute="centerX" id="Uxq-BX-3D6"/>
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="trailing" secondItem="l8w-iM-dry" secondAttribute="trailing" id="WNE-lA-cS5"/>
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="top" secondItem="89F-ve-CDC" secondAttribute="top" constant="-10" id="WgD-ij-G5Y"/>
+                            <constraint firstItem="gU8-OW-6Bv" firstAttribute="trailing" secondItem="iXX-H1-LQC" secondAttribute="trailing" constant="30" id="jaf-IY-oUY"/>
                             <constraint firstItem="89F-ve-CDC" firstAttribute="leading" secondItem="gU8-OW-6Bv" secondAttribute="leading" constant="20" id="nim-sX-8PD"/>
-                            <constraint firstItem="iyY-Wu-QCP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gU8-OW-6Bv" secondAttribute="leading" symbolic="YES" id="rbD-9c-vjw"/>
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="trailing" secondItem="ynT-Mq-vCJ" secondAttribute="trailing" id="rem-Z2-pxP"/>
                             <constraint firstItem="ynT-Mq-vCJ" firstAttribute="top" secondItem="89F-ve-CDC" secondAttribute="bottom" constant="10" id="x1w-p5-v09"/>
                             <constraint firstItem="gU8-OW-6Bv" firstAttribute="trailing" secondItem="ynT-Mq-vCJ" secondAttribute="trailing" id="zIY-gB-NeA"/>
@@ -209,11 +216,11 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1m4-Ex-kj4">
-                                        <rect key="frame" x="316" y="277" width="188" height="23.5"/>
+                                        <rect key="frame" x="321" y="277" width="178" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masterful Answering!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6c-hh-gSS">
-                                                <rect key="frame" x="0.0" y="0.0" width="188" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="178" height="24"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -243,10 +250,10 @@
                                 <rect key="frame" x="0.0" y="350" width="820" height="710"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OVl-sq-FVR">
-                                        <rect key="frame" x="100" y="195" width="620" height="320.5"/>
+                                        <rect key="frame" x="100" y="193" width="620" height="324"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Sey-aK-akE">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="320.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="324"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_7-circle" translatesAutoresizingMaskIntoConstraints="NO" id="5K5-nc-cx2">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -256,27 +263,27 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr5-9e-LjJ">
-                                                        <rect key="frame" x="0.0" y="220" width="200" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="220" width="200" height="24"/>
+                                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
+                                                        <color key="textColor" name="Secondary"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrC-gd-m4W">
-                                                        <rect key="frame" x="0.0" y="260.5" width="200" height="60"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="264" width="200" height="60"/>
+                                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="50"/>
+                                                        <color key="textColor" name="Secondary"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XE-wQ-7cZ">
-                                                <rect key="frame" x="230" y="0.0" width="160" height="320.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="230" y="0.0" width="160" height="324"/>
+                                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="50"/>
+                                                <color key="textColor" name="Secondary"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rIb-Lj-NLs">
-                                                <rect key="frame" x="420" y="0.0" width="200" height="320.5"/>
+                                                <rect key="frame" x="420" y="0.0" width="200" height="324"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_7-circle" translatesAutoresizingMaskIntoConstraints="NO" id="zl3-Yg-aZ3">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -286,15 +293,15 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNM-QB-SIj">
-                                                        <rect key="frame" x="0.0" y="220" width="200" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="220" width="200" height="24"/>
+                                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
+                                                        <color key="textColor" name="Secondary"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJG-OC-IpF">
-                                                        <rect key="frame" x="0.0" y="260.5" width="200" height="60"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="264" width="200" height="60"/>
+                                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="50"/>
+                                                        <color key="textColor" name="Secondary"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -316,7 +323,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D17-jj-0vT">
                                         <rect key="frame" x="460" y="34.5" width="260" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="PK Again" cornerStyle="capsule"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="PK Again" cornerStyle="capsule">
+                                            <color key="baseForegroundColor" name="SecondaryText"/>
+                                            <color key="baseBackgroundColor" name="Secondary"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="yLs-V2-pcY" kind="unwind" unwindAction="unwindToPKGameLobbyWithSegue:" id="JbU-2Y-h1c"/>
                                         </connections>
@@ -324,7 +334,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LC-kg-xOk">
                                         <rect key="frame" x="100" y="34.5" width="260" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Home" cornerStyle="capsule"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Home" cornerStyle="capsule">
+                                            <color key="baseForegroundColor" name="SecondaryText"/>
+                                            <color key="baseBackgroundColor" name="Secondary"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="yLs-V2-pcY" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="3Jd-HK-3LT"/>
                                         </connections>
@@ -414,8 +427,8 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vocabulary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIH-zF-dG5">
-                                            <rect key="frame" x="56" y="29.5" width="85.5" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="56" y="28" width="98" height="24"/>
+                                            <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -467,11 +480,14 @@
         <image name="cover_2" width="1000" height="1000"/>
         <image name="ribbon" width="1777" height="569"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <namedColor name="Background">
-            <color red="0.98400002717971802" green="0.98799997568130493" blue="0.99699997901916504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Green">
             <color red="0.0" green="0.56000000238418579" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.49000000953674316" green="0.46200001239776611" blue="0.74000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
