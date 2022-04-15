@@ -12,7 +12,7 @@ struct PKGameOutcome {
     var playerOutcomes: [Profile: PKGamePlayerOutcome]
 }
 
-enum PKGamePlayerOutcome {
+enum PKGamePlayerOutcome: String, Codable {
     case win
     case lose
     case draw

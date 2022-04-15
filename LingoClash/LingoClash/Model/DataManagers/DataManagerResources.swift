@@ -15,6 +15,6 @@ struct DataManagerResources {
     static let profiles = "profiles"
     static let queueEntries = "queue_entries"
     static let pkGames = "pk_games"
-    // subcollections
     static let pkGamesMoves = "moves"
+    static let pkGameOutcomes = "pk_game_outcomes"
 }

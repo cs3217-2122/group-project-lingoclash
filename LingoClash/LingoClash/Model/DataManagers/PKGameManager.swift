@@ -37,4 +37,15 @@ class PKGameManager: DataManager<PKGameData> {
             }
         }
     }
+    
+    func addForfeittedPlayerToPKGame(id: Identifier, playerId: Identifier) -> Promise<PKGameData> {
+        return firstly {
+            self.getOne(id: id)
+        }.then { pkGameData -> Promise<PKGameData> in
+            var forfeittedPlayers = pkGameData.forfeittedPlayers
+            forfeittedPlayers.insert(playerId)
+            let newPkGameData = PKGameData(createdAt: pkGameData.createdAt, players: pkGameData.players, questions: pkGameData.questions, forfeittedPlayers: forfeittedPlayers)
+            return self.update(id: pkGameData.id, from: pkGameData, to: newPkGameData)
+        }
+    }
 }

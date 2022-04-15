@@ -9,10 +9,16 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class FirebasePKGameUpdater: PKGameUpdateDelegate {
+    enum FirebasePKGameUpdaterError: Error {
+        case errorUpdatingForfeit(desc: String)
+    }
     // TODO: abstract this away into a general synchroniser class
 
     private let db = Firestore.firestore()
     private let profileManager = ProfileManager()
+    private let pkGameManager = PKGameManager()
+    private let pkGameOutcomeManager = PKGameOutcomeManager()
+
     
     private let moveCollectionRef: CollectionReference
     private let gameDocumentRef: DocumentReference
@@ -41,9 +47,32 @@ class FirebasePKGameUpdater: PKGameUpdateDelegate {
     
     func didForfeit(player: Profile) {
         print("did forfeit game")
-        // append player's id to forfeited players list
-        
-        // create a PKGameOutcome document for a loss for the player
+//        pkGameManager.addForfeittedPlayerToPKGame(id: pkGame.id, playerId: player.id)
+//            .then { [self] pkGameData -> Promise<PKGameOutcomeData> in
+//            let outcomeData = PKGameOutcomeData(id: PKGameOutcomeData.placeholderId, profile_id: player.id, pk_game_id: pkGameData.id, outcome: .lose)
+//            return self.pkGameOutcomeManager.create(newRecord: outcomeData)
+//        }.catch { err in
+//            print(err)
+//        }
+        Promise<Profile> { seal in
+            // TODO: Add method in firebase to support this (Repeated issue where dataprovider methods are not specific enough)
+            // Alternative is less efficient: Query to get the existing PKGameData then update it
+            self.gameDocumentRef.updateData([
+                "forfeittedPlayers": FieldValue.arrayUnion([player.id])
+            ]) { err in
+                if let err = err {
+                    return seal.reject(FirebasePKGameUpdaterError
+                        .errorUpdatingForfeit(desc: "\(err): Error adding forfeitted player to Firebase \(player.id) \(player.name)"))
+                }
+                print("Successfully added forfietted player to Firebase \(player.id) \(player.name)")
+                return seal.fulfill(player)
+            }
+        }.then { forfeittedPlayer -> Promise<PKGameOutcomeData> in
+            let outcomeData = PKGameOutcomeData(id: PKGameOutcomeData.placeholderId, profile_id: player.id, pk_game_id: self.pkGame.id, outcome: .lose)
+            return self.pkGameOutcomeManager.create(newRecord: outcomeData)
+        }.catch { err in
+            print(err)
+        }
     }
     
     private func addListenerToPKGame(gameUpdateListener: PKGameUpdateListener) {
