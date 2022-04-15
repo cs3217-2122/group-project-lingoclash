@@ -8,25 +8,26 @@ import PromiseKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-class FirebasePKGameMoveUpdater: PKGameMoveUpdateDelegate {
+class FirebasePKGameUpdater: PKGameUpdateDelegate {
     // TODO: abstract this away into a general synchroniser class
     var moveCollectionRef: CollectionReference
     private let db = Firestore.firestore()
     var firebaseMoveListener: ListenerRegistration?
     let profileManager = ProfileManager()
+    
+    var gameUpdateListener: PKGameUpdateListener? {
+        didSet {
+            removeListener()
+            if let moveListener = gameUpdateListener {
+                addListenerToMoves(gameUpdateListener: moveListener)
+            }
+        }
+    }
+    
     init(game: PKGame) {
         self.moveCollectionRef = db.collection(DataManagerResources.pkGames)
                                    .document(game.id)
                                    .collection(DataManagerResources.pkGamesMoves)
-    }
-    
-    var moveListener: PKGameMoveListener? {
-        didSet {
-            removeListener()
-            if let moveListener = moveListener {
-                addListenerToMoves(moveListener: moveListener)
-            }
-        }
     }
     
     func didMove(move: PKGameMove) {
@@ -47,7 +48,7 @@ class FirebasePKGameMoveUpdater: PKGameMoveUpdateDelegate {
         }
     }
     
-    private func addListenerToMoves(moveListener: PKGameMoveListener) {
+    private func addListenerToMoves(gameUpdateListener: PKGameUpdateListener) {
         firebaseMoveListener = moveCollectionRef.addSnapshotListener { [self] querySnapshot, error in
             guard let snapShot = querySnapshot else {
               print("Error fetching snapshots: \(error!)")
@@ -58,7 +59,7 @@ class FirebasePKGameMoveUpdater: PKGameMoveUpdateDelegate {
                     let _ = firstly {
                         self.getMove(from: moveData)
                     }.done { move in
-                        moveListener.didMove(move)
+                        gameUpdateListener.didMove(move)
                     }
                 }
             }
@@ -73,7 +74,7 @@ class FirebasePKGameMoveUpdater: PKGameMoveUpdateDelegate {
 }
 
 // MARK: Conversion between PKGameMove and PKGameMoveData
-extension FirebasePKGameMoveUpdater {
+extension FirebasePKGameUpdater {
     private func getMove(from moveData: PKGameMoveData) -> Promise<PKGameMove> {
         return firstly {
             profileManager.getProfile(id: moveData.player.id)
@@ -93,7 +94,7 @@ extension FirebasePKGameMoveUpdater {
 }
 
 // MARK: Processing documentData from Firebase
-extension FirebasePKGameMoveUpdater {
+extension FirebasePKGameUpdater {
     private func processDocumentData(_ documentData: [String: Any]) -> [String: Any] {
         var newDocumentData = documentData
         newDocumentData.forEach { (key: String, value: Any) in

@@ -20,6 +20,7 @@ protocol ThemeProtocol {
     var secondaryText: UIColor { get }
     var tertiaryText: UIColor { get }
     var errorText: UIColor { get }
+    var errorContainer: UIColor { get }
     
     var tint: UIColor { get }
     var green: UIColor { get }

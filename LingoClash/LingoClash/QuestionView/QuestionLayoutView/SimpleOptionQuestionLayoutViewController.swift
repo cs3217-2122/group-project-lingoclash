@@ -59,16 +59,18 @@ class SimpleOptionQuestionLayoutViewController: UIViewController, QuestionLayout
               let optionSelectedIndex = viewModel.optionSelectedIndex else {
             return
         }
-        guard let correctCell = optionsTableView.cellForRow(at: IndexPath(row: 0, section: viewModel.answerIndex)),
-              let cellSelected = optionsTableView.cellForRow(at: IndexPath(row: 0, section: optionSelectedIndex)) else {
+        guard let correctCell = optionsTableView.cellForRow(at: IndexPath(row: 0, section: viewModel.answerIndex)) as? OptionTableCell,
+              let cellSelected = optionsTableView.cellForRow(at: IndexPath(row: 0, section: optionSelectedIndex)) as? OptionTableCell else {
             return
         }
         
-        UIView.animate(withDuration: 1,
+        UIView.animate(withDuration: 0.7,
                        animations: {
-            correctCell.backgroundColor = .green
+            correctCell.backgroundColor = Theme.current.green
+            correctCell.optionLabel.textColor = .white
             if questionStatus == .wrong {
-                cellSelected.backgroundColor = .red
+                cellSelected.backgroundColor = Theme.current.errorContainer
+                cellSelected.optionLabel.textColor = Theme.current.errorText
             }
         }, completion: { [self] (_) -> Void in
             delegate?.questionLayoutViewController(self, didAnswerCorrectly: questionStatus == .correct)
@@ -93,6 +95,7 @@ extension SimpleOptionQuestionLayoutViewController: UITableViewDataSource {
             fatalError("Failure obtaining reusable option table view cell")
         }
         cell.optionText = viewModel?.options[indexPath.section] ?? ""
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -109,6 +112,13 @@ extension SimpleOptionQuestionLayoutViewController: UITableViewDataSource {
 }
 
 extension SimpleOptionQuestionLayoutViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        guard viewModel?.optionSelectedIndex == nil else {
+            return nil
+        }
+        return indexPath
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel?.didSelectOption(at: indexPath.section)
     }

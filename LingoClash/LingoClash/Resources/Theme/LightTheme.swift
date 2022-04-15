@@ -18,6 +18,7 @@ class LightTheme: ThemeProtocol {
     var secondary = UIColor(named: "Secondary")!
     var tertiary = UIColor(named: "Tertiary")!
     var error = UIColor(named: "Error")!
+    var errorContainer = UIColor(named: "ErrorContainer")!
     var primaryText = UIColor(named: "PrimaryText")!
     var secondaryText = UIColor(named: "SecondaryText")!
     var tertiaryText = UIColor(named: "TertiaryText")!

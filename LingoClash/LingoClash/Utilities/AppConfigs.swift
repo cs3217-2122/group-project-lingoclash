@@ -16,7 +16,7 @@ struct AppConfigs {
         static let enableLogin = false
         static let testAccounts: [LoginFields] = [
             LoginFields(email: "guy@gmail.com", password: "setMeUp?"),
-            LoginFields(email: "c@c.com", password: "123456")
+            LoginFields(email: "e@e.com", password: "123456")
         ]
     }
     

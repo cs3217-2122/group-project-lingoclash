@@ -21,7 +21,7 @@ class PKGameOverviewViewController: UIViewController {
     @IBOutlet weak var playerOneName: UILabel!
     @IBOutlet weak var playerTwoScore: UILabel!
     @IBOutlet weak var playerOneScore: UILabel!
-    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var topImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         styleUI()
@@ -38,7 +38,7 @@ class PKGameOverviewViewController: UIViewController {
         }
         titleOutcome.text = viewModel.titleOutcome
         descriptionOutcome.text = viewModel.descriptionOutcome
-        topView.backgroundColor = viewModel.isBackgroundDark ? Theme.current.secondary : Theme.current.primary
+        topImageView.image = viewModel.isBackgroundDark ? #imageLiteral(resourceName: "cover_5") : #imageLiteral(resourceName: "cover_2")
 
         playerOneName.text = viewModel.names[0]
         playerTwoName.text = viewModel.names[1]

@@ -6,7 +6,7 @@
 //
 
 class PKGameQuizViewModelFromPKGame: PKGameQuizViewModel {
-    var moveUpdateDelegate: PKGameMoveUpdateDelegate
+    var gameUpdateDelegate: PKGameUpdateDelegate
     let currentPlayerProfile: Profile
     let pkGame: PKGame
     let pkGameEngine: PKGameEngine
@@ -17,7 +17,7 @@ class PKGameQuizViewModelFromPKGame: PKGameQuizViewModel {
     var scores: Dynamic<[Int]>
     init(game: PKGame, currentPlayerProfile: Profile) {
         self.pkGame = game
-        self.moveUpdateDelegate = FirebasePKGameMoveUpdater(game: game)
+        self.gameUpdateDelegate = FirebasePKGameUpdater(game: game)
         self.currentPlayerProfile = currentPlayerProfile
         self.players = [currentPlayerProfile] + game.players.filter { $0 != currentPlayerProfile }
         self.playerNames = self.players.map({ $0.name.capitalized })
@@ -28,7 +28,7 @@ class PKGameQuizViewModelFromPKGame: PKGameQuizViewModel {
         self.pkGameEngine = PKGameEngine(game: game)
         
         self.pkGameEngine.renderer = self
-        self.moveUpdateDelegate.moveListener = self
+        self.gameUpdateDelegate.gameUpdateListener = self
 
     }
     
@@ -38,7 +38,7 @@ class PKGameQuizViewModelFromPKGame: PKGameQuizViewModel {
             return
         }
         
-        self.moveUpdateDelegate.didMove(move: move)
+        self.gameUpdateDelegate.didMove(move: move)
     }
 }
 

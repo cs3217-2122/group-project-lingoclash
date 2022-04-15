@@ -5,6 +5,6 @@
 //  Created by Sherwin Poh on 4/4/22.
 //
 
-protocol PKGameMoveListener {
+protocol PKGameUpdateListener {
     func didMove(_ move: PKGameMove)
 }
