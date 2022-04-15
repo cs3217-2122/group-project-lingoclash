@@ -15,14 +15,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--HomeViewController-->
-        <scene sceneID="kQd-8x-6s8">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="Wgw-O2-R8y" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nr7-pX-sGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-628" y="-251"/>
-        </scene>
         <!--Game Lobby View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -234,15 +226,22 @@
                                         <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="-3" height="-3"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover_5" translatesAutoresizingMaskIntoConstraints="NO" id="vEa-X2-2qD">
+                                        <rect key="frame" x="0.0" y="0.0" width="820" height="350"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.27843138579999999" green="0.61960786580000005" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="Primary"/>
                                 <constraints>
+                                    <constraint firstItem="vEa-X2-2qD" firstAttribute="leading" secondItem="TM5-nU-v92" secondAttribute="leading" id="4yC-oG-ed6"/>
                                     <constraint firstItem="6o8-m3-Vrm" firstAttribute="bottom" secondItem="evM-Wj-ga0" secondAttribute="bottom" id="MwY-ZU-3KH"/>
+                                    <constraint firstAttribute="trailing" secondItem="vEa-X2-2qD" secondAttribute="trailing" id="WKe-qS-Y4W"/>
                                     <constraint firstItem="evM-Wj-ga0" firstAttribute="centerY" secondItem="TM5-nU-v92" secondAttribute="centerY" id="Z05-j2-aDJ"/>
                                     <constraint firstItem="evM-Wj-ga0" firstAttribute="centerX" secondItem="TM5-nU-v92" secondAttribute="centerX" id="aOK-er-KcJ"/>
+                                    <constraint firstItem="vEa-X2-2qD" firstAttribute="top" secondItem="TM5-nU-v92" secondAttribute="top" id="kzT-rG-5rd"/>
                                     <constraint firstAttribute="height" constant="350" id="mqQ-pr-Fck"/>
                                     <constraint firstItem="1m4-Ex-kj4" firstAttribute="top" secondItem="evM-Wj-ga0" secondAttribute="bottom" constant="29.5" id="nJn-Yp-h49"/>
                                     <constraint firstItem="1m4-Ex-kj4" firstAttribute="centerX" secondItem="evM-Wj-ga0" secondAttribute="centerX" id="qnx-Bq-aOX"/>
+                                    <constraint firstAttribute="bottom" secondItem="vEa-X2-2qD" secondAttribute="bottom" id="tVg-6B-u5G"/>
                                     <constraint firstItem="6o8-m3-Vrm" firstAttribute="centerX" secondItem="evM-Wj-ga0" secondAttribute="centerX" id="uos-Q6-mPc"/>
                                 </constraints>
                             </view>
@@ -463,25 +462,19 @@
             </objects>
             <point key="canvasLocation" x="495" y="547"/>
         </scene>
-        <!--HomeViewController-->
-        <scene sceneID="aPj-U4-nbP">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="Sh5-fX-mL8" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="FIQ-ab-hMf"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K03-2I-868" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1252" y="547"/>
-        </scene>
     </scenes>
     <resources>
         <image name="avatar_7-circle" width="720" height="720"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="cover_2" width="1000" height="1000"/>
+        <image name="cover_5" width="1000" height="1000"/>
         <image name="ribbon" width="1777" height="569"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="Green">
             <color red="0.0" green="0.56000000238418579" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.36500000953674316" green="0.70999997854232788" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Secondary">
             <color red="0.49000000953674316" green="0.46200001239776611" blue="0.74000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
