@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K6s-Mm-Rk2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K6s-Mm-Rk2">
     <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -58,7 +58,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62O-yZ-ZwO">
-                                        <rect key="frame" x="215" y="406" width="594" height="24"/>
+                                        <rect key="frame" x="203" y="406" width="618" height="24"/>
                                         <string key="text">    “Success is the sum of small efforts, repeated day in and day out.”
     ―  Robert Collier, self-help author</string>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
@@ -66,7 +66,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    ―  Robert Collier, self-help author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIu-HE-ehr">
-                                        <rect key="frame" x="354" y="440" width="316" height="24"/>
+                                        <rect key="frame" x="349" y="440" width="326" height="24"/>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         <color key="textColor" name="Secondary"/>
                                         <nil key="highlightedColor"/>
@@ -171,6 +171,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOe-kK-NOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2861" y="154"/>
+        </scene>
+        <!--PKGameLobbyViewController-->
+        <scene sceneID="Pz3-Fo-4qq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PKGame" referencedIdentifier="PKGameLobbyViewController" id="GeP-wO-AO9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6G-di-okb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2987" y="125"/>
         </scene>
     </scenes>
     <resources>

@@ -137,6 +137,7 @@
 		CEBC07952808841E00A0ED82 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07922808841E00A0ED82 /* Arena.storyboard */; };
 		CEBC07962808842300A0ED82 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07922808841E00A0ED82 /* Arena.storyboard */; };
 		CEBC07972808842300A0ED82 /* LearningBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07902808841E00A0ED82 /* LearningBook.storyboard */; };
+		CEBC079C2809211400A0ED82 /* Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3C5E29127F73C9900F65B8E /* Dev-Info.plist */; };
 		CEC5886A27EA2A4F00809403 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886927EA2A4F00809403 /* StarView.swift */; };
 		CEC5886C27EA37E900809403 /* VocabsLearntTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */; };
 		CEC5887127EABEC000809403 /* LessonSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887027EABEC000809403 /* LessonSelectionViewController.swift */; };
@@ -420,7 +421,6 @@
 		D3C5E28827F71D8500F65B8E /* LessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E28627F71D8500F65B8E /* LessonManager.swift */; };
 		D3C5E28A27F71DA200F65B8E /* VocabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E28927F71DA200F65B8E /* VocabManager.swift */; };
 		D3C5E28B27F71DA200F65B8E /* VocabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E28927F71DA200F65B8E /* VocabManager.swift */; };
-		D3C5E29227F73C9900F65B8E /* Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3C5E29127F73C9900F65B8E /* Dev-Info.plist */; };
 		D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAA27DFA3E200393ADC /* FetchUtilities.swift */; };
 		D3F00CAD27DFAF6F00393ADC /* Promise+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAC27DFAF6F00393ADC /* Promise+Extensions.swift */; };
 		D3F00CAF27DFC00200393ADC /* DataProviderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F00CAE27DFC00200393ADC /* DataProviderTypes.swift */; };
@@ -1473,12 +1473,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBC079C2809211400A0ED82 /* Dev-Info.plist in Resources */,
 				CE8D228F27EE2B5A005E7058 /* Lesson.storyboard in Resources */,
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
 				CEBC077E280810CF00A0ED82 /* PKGame.storyboard in Resources */,
 				D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */,
 				CE8D22A227EEC059005E7058 /* Book.storyboard in Resources */,
-				D3C5E29227F73C9900F65B8E /* Dev-Info.plist in Resources */,
 				CEBC078A280883C300A0ED82 /* CompletedBook.storyboard in Resources */,
 				CEBC0788280883C300A0ED82 /* RecommendedBook.storyboard in Resources */,
 				D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */,

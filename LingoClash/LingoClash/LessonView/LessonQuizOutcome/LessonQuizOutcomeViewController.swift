@@ -13,9 +13,6 @@ class LessonQuizOutcomeViewController: UIViewController {
     enum Segue {
         static let unwindOutcomeToVocabVC = "unwindOutcomeToVocabVC"
     }
-
-    let darkBackgroundColor = UIColor(red: 5.0/255, green: 44.0/255, blue: 79.0/255, alpha: 1)
-    let lightBackgroundColor = UIColor(red: 3.0/255, green: 144.0/255, blue: 228.0/255, alpha: 1)
     
     @IBOutlet var stars: [StarView]!
     @IBOutlet weak var completionStatusLabel: UILabel!
@@ -62,7 +59,7 @@ class LessonQuizOutcomeViewController: UIViewController {
         self.lessonNameLabel.text = viewModel.lessonName
         self.performanceCommentLabel.text = viewModel.performanceComment
         viewModel.starsFilled.enumerated().forEach { stars[$0.offset].isFilled = $0.element }
-        self.topView.backgroundColor = viewModel.isBackgroundDark ? darkBackgroundColor : lightBackgroundColor
+        self.topView.backgroundColor = viewModel.isBackgroundDark ? Theme.current.secondary : Theme.current.primary
         self.actionButton.titleLabel?.text = viewModel.actionText
     }
 }
