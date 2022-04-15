@@ -78,7 +78,6 @@
 		CE673C2827F8B4D400321BB8 /* PKGameOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C2727F8B4D400321BB8 /* PKGameOverviewViewController.swift */; };
 		CE673C2A27F8B4DD00321BB8 /* PKGameOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C2927F8B4DD00321BB8 /* PKGameOverviewViewModel.swift */; };
 		CE673C2F27F9315700321BB8 /* PKGameLobbyViewModelFromProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C2E27F9315700321BB8 /* PKGameLobbyViewModelFromProfile.swift */; };
-		CE673C3827F95AF200321BB8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C3727F95AF200321BB8 /* User.swift */; };
 		CE673C3B27F9813C00321BB8 /* PKGameMatchFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C3A27F9813C00321BB8 /* PKGameMatchFinder.swift */; };
 		CE673C3D27F981F000321BB8 /* FirebasePKGameMatchFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C3C27F981F000321BB8 /* FirebasePKGameMatchFinder.swift */; };
 		CE673C4127F99ED300321BB8 /* QueueEntryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C4027F99ED300321BB8 /* QueueEntryDataManager.swift */; };
@@ -216,7 +215,6 @@
 		CEF3E6A0280690D2001F483B /* QueueEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C4227F99F0100321BB8 /* QueueEntry.swift */; };
 		CEF3E6A1280690D2001F483B /* LessonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA1C90027FA187300123225 /* LessonData.swift */; };
 		CEF3E6A2280690D2001F483B /* PKGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E67D28066B80001F483B /* PKGameData.swift */; };
-		CEF3E6A3280690D4001F483B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C3727F95AF200321BB8 /* User.swift */; };
 		CEF3E6A4280690D8001F483B /* PKGameLobbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C2127F8B46F00321BB8 /* PKGameLobbyViewModel.swift */; };
 		CEF3E6A5280690D8001F483B /* PKGameLobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C1F27F8B46100321BB8 /* PKGameLobbyViewController.swift */; };
 		CEF3E6A6280690D8001F483B /* PKGameMatchFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C3A27F9813C00321BB8 /* PKGameMatchFinder.swift */; };
@@ -502,7 +500,6 @@
 		CE673C2727F8B4D400321BB8 /* PKGameOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameOverviewViewController.swift; sourceTree = "<group>"; };
 		CE673C2927F8B4DD00321BB8 /* PKGameOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameOverviewViewModel.swift; sourceTree = "<group>"; };
 		CE673C2E27F9315700321BB8 /* PKGameLobbyViewModelFromProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameLobbyViewModelFromProfile.swift; sourceTree = "<group>"; };
-		CE673C3727F95AF200321BB8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE673C3A27F9813C00321BB8 /* PKGameMatchFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameMatchFinder.swift; sourceTree = "<group>"; };
 		CE673C3C27F981F000321BB8 /* FirebasePKGameMatchFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePKGameMatchFinder.swift; sourceTree = "<group>"; };
 		CE673C4027F99ED300321BB8 /* QueueEntryDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueEntryDataManager.swift; sourceTree = "<group>"; };
@@ -1154,7 +1151,6 @@
 				CEF1E7E727E61F58005D4272 /* OldLesson.swift */,
 				CEF1E7E927E61F68005D4272 /* Vocab.swift */,
 				624BD58A27E7A431006F0391 /* BookProgress.swift */,
-				CE673C3727F95AF200321BB8 /* User.swift */,
 				D30E491127FAA6880074CF2B /* Profile.swift */,
 				D30E491327FAA6E70074CF2B /* Lesson.swift */,
 			);
@@ -1535,7 +1531,6 @@
 				CE673C3D27F981F000321BB8 /* FirebasePKGameMatchFinder.swift in Sources */,
 				62A03E632801CE8C008FE249 /* HorizontalAlignment.swift in Sources */,
 				621E6D5127E9C4F10015BBD4 /* EditProfileViewController.swift in Sources */,
-				CE673C3827F95AF200321BB8 /* User.swift in Sources */,
 				629090A227E8314100941A3B /* RecommendedBooksTableViewCell.swift in Sources */,
 				CEA1C7B527FA145800123225 /* DefinitionOptionQuestion.swift in Sources */,
 				62CB30DF27EA6EFB0044CB24 /* ProfileBookManager.swift in Sources */,
@@ -1866,7 +1861,6 @@
 				D3C5E28827F71D8500F65B8E /* LessonManager.swift in Sources */,
 				CEF3E6AF280690DA001F483B /* PKGameMoveListener.swift in Sources */,
 				D3C5E23627F6E36B00F65B8E /* FirebaseAuthProvider.swift in Sources */,
-				CEF3E6A3280690D4001F483B /* User.swift in Sources */,
 				D3C5E23727F6E36B00F65B8E /* ProfileManager.swift in Sources */,
 				D3C5E23827F6E36B00F65B8E /* AuthProvider.swift in Sources */,
 				D3C5E23927F6E36B00F65B8E /* ProfileViewController.swift in Sources */,

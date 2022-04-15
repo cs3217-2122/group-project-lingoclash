@@ -50,7 +50,7 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
         ]
 
     
-        queueEntryDataManager.getList(filter: filters)
+        let _ = queueEntryDataManager.getList(filter: filters)
             .then{ [self] queueEntriesToDelete -> Promise<[Identifier]> in
                 assert(!queueEntriesToDelete.isEmpty)
                 return self.queueEntryDataManager.deleteMany(ids: queueEntriesToDelete.map { $0.id })

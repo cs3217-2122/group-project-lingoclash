@@ -22,18 +22,21 @@ class FirebasePKGameMoveUpdater: PKGameMoveUpdateDelegate {
     
     var moveListener: PKGameMoveListener? {
         didSet {
-            addListenerToMoves()
+            removeListener()
+            if let moveListener = moveListener {
+                addListenerToMoves(moveListener: moveListener)
+            }
         }
     }
     
     func didMove(move: PKGameMove) {
-        firstly {
+        let _ = firstly {
             getMoveData(from: move)
         }.done { [self] moveData in
             do {
-                try self.moveCollectionRef.addDocument(from: moveData) { error in
+                let _ = try self.moveCollectionRef.addDocument(from: moveData) { error in
                     if let error = error {
-                        print("add game document error")
+                        print("add game document error: \(error)")
                     } else {
                         print("successfully added document")
                     }
@@ -44,29 +47,19 @@ class FirebasePKGameMoveUpdater: PKGameMoveUpdateDelegate {
         }
     }
     
-    private func addListenerToMoves() {
+    private func addListenerToMoves(moveListener: PKGameMoveListener) {
         firebaseMoveListener = moveCollectionRef.addSnapshotListener { [self] querySnapshot, error in
             guard let snapShot = querySnapshot else {
               print("Error fetching snapshots: \(error!)")
               return
             }
-            snapShot.documentChanges.forEach { diff in
-                if (diff.type == .added) {
-                    if let moveData = self.getModel(from: diff.document) {
-                        firstly {
-                            self.getMove(from: moveData)
-                        }.done { move in
-//                            print("added move: \(move)")
-                            self.updateMoveListener(with: move)
-                        }
+            let _ = snapShot.documentChanges.forEach { diff in
+                if diff.type == .added, let moveData = self.getModel(from: diff.document) {
+                    let _ = firstly {
+                        self.getMove(from: moveData)
+                    }.done { move in
+                        moveListener.didMove(move)
                     }
-
-                }
-                if (diff.type == .modified) {
-//                    print("Modified move: \(diff.document.data())")
-                }
-                if (diff.type == .removed) {
-//                    print("Removed move: \(diff.document.data())")
                 }
             }
         }
@@ -74,10 +67,6 @@ class FirebasePKGameMoveUpdater: PKGameMoveUpdateDelegate {
     
     func removeListener() {
         self.firebaseMoveListener?.remove()
-    }
-    
-    private func updateMoveListener(with move: PKGameMove) {
-        self.moveListener?.didMove(move)
     }
     
 

@@ -68,6 +68,6 @@ extension PKGameQuizViewModelFromPKGame {
 
 extension PKGameQuizViewModelFromPKGame {
     func didMove(_ move: PKGameMove) {
-        pkGameEngine.addMove(move)
+        let _ = pkGameEngine.addMove(move)
     }
 }

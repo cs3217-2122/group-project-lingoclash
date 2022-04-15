@@ -54,7 +54,7 @@ class PKGameQuizViewController: UIViewController {
     }
     
     func navigateAfterQuizCompleted(vm: PKGameOverviewViewModel?) {
-        guard let overviewVM = vm else {
+        guard vm != nil else {
             return
         }
         performSegue(withIdentifier: Segue.toOverviewViewController, sender: self)

@@ -172,14 +172,6 @@
             </objects>
             <point key="canvasLocation" x="2861" y="154"/>
         </scene>
-        <!--PKGameLobbyViewController-->
-        <scene sceneID="Pz3-Fo-4qq">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PKGame" referencedIdentifier="PKGameLobbyViewController" id="GeP-wO-AO9" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D6G-di-okb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2987" y="125"/>
-        </scene>
     </scenes>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
