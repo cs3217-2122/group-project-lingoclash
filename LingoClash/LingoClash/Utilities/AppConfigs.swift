@@ -14,9 +14,10 @@ struct AppConfigs {
         // Preloads the db with some sample data. Only works in development scheme.
         static let enablePreloadData = false
         static let enableLogin = false
-//        static let testEmail = "test3@test.com"
-//        static let testPassword = "test@123"
-        static let testAccounts: [LoginFields] = [LoginFields(email: "guy@gmail.com", password: "setMeUp?"),LoginFields(email: "c@c.com", password: "123456")]
+        static let testAccounts: [LoginFields] = [
+            LoginFields(email: "guy@gmail.com", password: "setMeUp?"),
+            LoginFields(email: "c@c.com", password: "123456")
+        ]
     }
     
     struct View {
