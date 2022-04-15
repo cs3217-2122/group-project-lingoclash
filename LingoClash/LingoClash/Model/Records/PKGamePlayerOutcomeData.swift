@@ -25,3 +25,14 @@ struct PKGamePlayerOutcomeData {
 
 extension PKGamePlayerOutcomeData: Record {}
 
+extension PKGamePlayerOutcomeData: Hashable {
+    static func == (lhs: PKGamePlayerOutcomeData, rhs: PKGamePlayerOutcomeData) -> Bool {
+        return lhs.profile_id == rhs.profile_id && lhs.pk_game_id == rhs.pk_game_id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(profile_id)
+        hasher.combine(pk_game_id)
+    }
+}
+

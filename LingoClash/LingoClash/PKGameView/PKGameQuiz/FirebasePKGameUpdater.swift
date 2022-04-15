@@ -18,7 +18,7 @@ class FirebasePKGameUpdater: PKGameUpdateDelegate {
     private let db = Firestore.firestore()
     private let profileManager = ProfileManager()
     private let pkGameManager = PKGameManager()
-    private let pkGameOutcomeManager = PKGameOutcomeManager()
+    private let pkGameOutcomeManager = PKGamePlayerOutcomeManager()
 
     
     private let moveCollectionRef: CollectionReference

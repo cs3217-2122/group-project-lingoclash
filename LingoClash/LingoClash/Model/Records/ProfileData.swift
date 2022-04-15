@@ -17,7 +17,6 @@ struct ProfileData {
     let bio: String
     let days_learning: Int
     let vocabs_learnt: Int
-    let pk_winning_rate: Double
 }
 
 extension ProfileData: Record {}

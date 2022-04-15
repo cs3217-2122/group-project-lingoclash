@@ -58,8 +58,7 @@ class ProfileManager: DataManager<ProfileData> {
                 stars_goal: profileData.stars_goal,
                 bio: profileData.bio,
                 days_learning: profileData.days_learning,
-                vocabs_learnt: profileData.vocabs_learnt,
-                pk_winning_rate: profileData.pk_winning_rate
+                vocabs_learnt: profileData.vocabs_learnt
             )
             
             return self.update(id: profileData.id, from: profileData, to: newProfileData)
@@ -82,8 +81,7 @@ class ProfileManager: DataManager<ProfileData> {
                 stars_goal: starsGoal,
                 bio: bio,
                 days_learning: profileData.days_learning,
-                vocabs_learnt: profileData.vocabs_learnt,
-                pk_winning_rate: profileData.pk_winning_rate
+                vocabs_learnt: profileData.vocabs_learnt
             )
             
             return self.update(id: profileData.id, from: profileData, to: newProfileData)
@@ -94,6 +92,7 @@ class ProfileManager: DataManager<ProfileData> {
         var profile: ProfileData?
         var currentBook: Book?
         var rankingByTotalStars: Int?
+        var winningPKRate: Double?
         
         return profileData.then { profileData-> Promise<Void> in
             // Gets the current book
@@ -127,15 +126,37 @@ class ProfileManager: DataManager<ProfileData> {
                 rankingByTotalStars? += 1
                 
             }
+        }.then { () -> Promise<Void> in
+            // Gets the pk winning rate
+            guard let profile = profile else {
+                return Promise.reject(reason: DataManagerError.dataNotFound)
+            }
+            
+            return firstly { () -> Promise<[PKGamePlayerOutcomeData]> in
+                // 1. get the list of player outcomes whose profile_id = profile.id
+                let filters: [String: Any] = [
+                    "profile_id": profile.id
+                ]
+                return PKGamePlayerOutcomeManager().getList(filter: filters)
+            }.done { playerOutcomes in
+                var uniquePlayerOutcomes = Set<PKGamePlayerOutcomeData>()
+                for outcome in playerOutcomes {
+                    uniquePlayerOutcomes.insert(outcome)
+                }
+                
+                let wins = uniquePlayerOutcomes.filter { $0.outcome == .win }.count
+                let total = uniquePlayerOutcomes.count
+                winningPKRate = Double(wins) / Double(total) * 100
+            }
         }.compactMap {
-            guard let profile = profile, let rankingByTotalStars = rankingByTotalStars else {
+            guard let profile = profile, let rankingByTotalStars = rankingByTotalStars, let winningPKRate = winningPKRate else {
                 return nil
             }
             
             return Profile(
                 profileData: profile,
                 currentBook: currentBook,
-                rankingByTotalStars: rankingByTotalStars)
+                rankingByTotalStars: rankingByTotalStars, pkWinningRate: winningPKRate)
         }
     }
 }

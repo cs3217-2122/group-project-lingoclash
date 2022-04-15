@@ -78,7 +78,7 @@ class ProfileViewController: UIViewController {
         
         viewModel.$pkWinningRate.sink {[weak self] pkWinningRate in
             if let pkWinningRate = pkWinningRate {
-                self?.pkWinningRateLabel.text = "\(pkWinningRate)"
+                self?.pkWinningRateLabel.text = String(format:"%.2f", pkWinningRate)
             }
         }.store(in: &cancellables)
         

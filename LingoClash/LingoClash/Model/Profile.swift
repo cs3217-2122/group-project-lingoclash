@@ -22,7 +22,7 @@ struct Profile {
     let pkWinningRate: Double
     let rankingByTotalStars: Int
     
-    init(profileData: ProfileData, currentBook: Book?, rankingByTotalStars: Int) {
+    init(profileData: ProfileData, currentBook: Book?, rankingByTotalStars: Int, pkWinningRate: Double) {
         self.id = profileData.id
         self.user_id = profileData.user_id
         self.currentBook = currentBook
@@ -34,7 +34,7 @@ struct Profile {
         self.bio = profileData.bio
         self.daysLearning = profileData.days_learning
         self.vocabsLearnt = profileData.vocabs_learnt
-        self.pkWinningRate = profileData.pk_winning_rate
+        self.pkWinningRate = pkWinningRate
         self.rankingByTotalStars = rankingByTotalStars
     }
 }
