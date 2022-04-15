@@ -124,27 +124,18 @@ class SampleDataUtilities {
         var vocabId = 0
         var lessonId = 0
 
-        let vocabsData = vocabItems.compactMap { vocab -> VocabData? in
+        let vocabsData = vocabItems.map { vocab -> VocabData in
 
-            guard let definitions = vocab.defs else {
-                return nil
-            }
-
-            let definitionItem = definitions[0]
-
-            guard let examples = definitionItem.examples else {
-                return nil
-            }
-
-            let exampleItem = examples[0]
+            let definitionItem = vocab.defs?[0]
+            let exampleItem = definitionItem?.examples?[0]
 
             let vocabData = VocabData(
                 id: String(vocabId),
-                definition: definitionItem.def,
+                definition: definitionItem?.def ?? "No definition available",
                 lesson_id: String(lessonId),
-                sentence: exampleItem.example,
+                sentence: exampleItem?.example ?? "No example available",
                 word: vocab.word,
-                translation: exampleItem.translation
+                translation: exampleItem?.translation ?? "No translation available"
             )
 
             vocabId += 1
