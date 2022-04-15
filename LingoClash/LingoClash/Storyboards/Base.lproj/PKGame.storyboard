@@ -155,7 +155,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="K7X-i8-bMe" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="z3r-zW-BQP"/>
+                                    <segue destination="K7X-i8-bMe" kind="unwind" identifier="unwindFromPKGameQuizToHome" unwindAction="unwindToHomeWithSegue:" id="z3r-zW-BQP"/>
                                 </connections>
                             </button>
                         </subviews>

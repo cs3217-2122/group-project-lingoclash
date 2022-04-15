@@ -54,7 +54,7 @@ class PKGameQuizViewModelFromPKGame: PKGameQuizViewModel {
 }
 
 
-// MARK: PKGameUpdateListener methods
+// MARK: PKGameRenderer methods
 extension PKGameQuizViewModelFromPKGame {
     func didChangeQuestion(currQuestion: Question) {
         self.questionViewModel.value = QuestionViewModelFromQuestion(question: currQuestion)
@@ -77,14 +77,20 @@ extension PKGameQuizViewModelFromPKGame {
         self.scores.value = newScores
     }
     
-    func didForfeit(player: Profile) {
+    func didAccountForForfeit(player: Profile) {
         // TODO: Add some notif that a person has forfeitted
+        print("renderer update forfeit.")
     }
 }
 
-
+// MARK: PKGameUpdateListener
 extension PKGameQuizViewModelFromPKGame {
     func didMove(_ move: PKGameMove) {
         let _ = pkGameEngine.addMove(move)
+    }
+    
+    func didForfeit(player: Profile) {
+        // TODO: Add some notif that a person has forfeitted
+        print("renderer update forfeit.")
     }
 }

@@ -36,7 +36,8 @@ class PKGameEngine {
     
     // Returns true if player successfully forfeitted game
     func forfeitGame(player: Profile) -> Bool {
-        return false
+        renderer?.didAccountForForfeit(player: player)
+        return true
     }
     
     func addMove(isCorrect: Bool, playerProfile: Profile) -> PKGameMove? {

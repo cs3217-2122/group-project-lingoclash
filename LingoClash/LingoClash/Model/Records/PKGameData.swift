@@ -12,7 +12,7 @@ struct PKGameData {
     let createdAt: Date
     let players: [ProfileData]
     let questions: [Question]
-    let forfeittedPlayers: [Identifier]
+    let forfeittedPlayers: Set<Identifier>
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -23,7 +23,7 @@ struct PKGameData {
     }
     
     // Local creation of PKGameData to be pushed to DataProvider
-    init(createdAt: Date, players: [ProfileData], questions: [Question], forfeittedPlayers: [Identifier] = []) {
+    init(createdAt: Date, players: [ProfileData], questions: [Question], forfeittedPlayers: Set<Identifier> = Set()) {
         self.createdAt = createdAt
         self.players = players
         self.questions = questions
@@ -36,7 +36,7 @@ struct PKGameData {
         self.createdAt = try container.decode(Date.self, forKey: .createdAt)
         self.id = try container.decode(Identifier.self, forKey: .id)
         self.players = try container.decode([ProfileData].self, forKey: .players)
-        self.forfeittedPlayers = try container.decode([Identifier].self, forKey: .forfeittedPlayers)
+        self.forfeittedPlayers = try container.decode(Set<Identifier>.self, forKey: .forfeittedPlayers)
         let wrappers = try container.decode([QuestionWrapper].self, forKey: .questions)
         self.questions = wrappers.map { $0.question }
     }

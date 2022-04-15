@@ -10,4 +10,5 @@ protocol PKGameRenderer {
     func didCompleteGame(gameOutcome: PKGameOutcome)
     func didAddMove(_ move: PKGameMove)
     func didIncrementScore(newScore: Int, change: Int, player: Profile)
+    func didAccountForForfeit(player: Profile)
 }

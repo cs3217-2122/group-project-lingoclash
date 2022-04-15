@@ -9,48 +9,87 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class FirebasePKGameUpdater: PKGameUpdateDelegate {
-
-    
     // TODO: abstract this away into a general synchroniser class
-    private let moveCollectionRef: CollectionReference
+
     private let db = Firestore.firestore()
     private let profileManager = ProfileManager()
+    
+    private let moveCollectionRef: CollectionReference
+    private let gameDocumentRef: DocumentReference
+
+    // All listeners on fields of pkGame
+    private var pkGameUpdateListeners: [(PKGameUpdateListener, PKGameData) -> Void] = []
     private let pkGame: PKGame
-    var firebaseMoveListener: ListenerRegistration?
+    var firebaseMoveListeners: [ListenerRegistration] = []
     
     var gameUpdateListener: PKGameUpdateListener? {
         didSet {
-            removeListener()
+            removeListeners()
             if let moveListener = gameUpdateListener {
                 addListenerToMoves(gameUpdateListener: moveListener)
-                // TODO: add listener to changes in PKGame forfeitters
+                addListenerToPKGame(gameUpdateListener: moveListener)
             }
         }
     }
     
     init(game: PKGame) {
         self.pkGame = game
-        self.moveCollectionRef = db.collection(DataManagerResources.pkGames)
-                                   .document(game.id)
-                                   .collection(DataManagerResources.pkGamesMoves)
+        self.gameDocumentRef = db.collection(DataManagerResources.pkGames).document(game.id)
+        self.moveCollectionRef = self.gameDocumentRef.collection(DataManagerResources.pkGamesMoves)
+        self.pkGameUpdateListeners = [updateListenerOnForfeit]
     }
     
     func didForfeit(player: Profile) {
+        print("did forfeit game")
         // append player's id to forfeited players list
+        
         // create a PKGameOutcome document for a loss for the player
     }
     
     private func addListenerToPKGame(gameUpdateListener: PKGameUpdateListener) {
-        
+        print("did add listener to game")
+        self.gameDocumentRef.addSnapshotListener { [self] documentSnapshot, error in
+            guard let snapShot = documentSnapshot else {
+              print("Error fetching snapshots: \(error!)")
+              return
+            }
+            
+            guard let gameData:PKGameData = self.getModel(from: snapShot) else {
+                print("Unable to convert data to PkGameData model")
+                assert(false)
+                return
+            }
+
+            self.pkGameUpdateListeners.forEach { updateListeners in
+                updateListeners(gameUpdateListener, gameData)
+            }
+        }
     }
     
-    private func updateListenerOnForfeit(gameUpdateListener: PKGameUpdateListener, forfeittedPlayerId: Identifier) {
-        guard let forfeittedPlayer = self.pkGame.players.first(where: { $0.id == forfeittedPlayerId }) else {
-            assert(false)
+    private var forfeittedPlayerIds = Set<Identifier>()
+    private func updateListenerOnForfeit(_ gameUpdateListener: PKGameUpdateListener,_ pkGameData: PKGameData) {
+        let newForfeittedPlayers = pkGameData.forfeittedPlayers.subtracting(forfeittedPlayerIds)
+        guard !newForfeittedPlayers.isEmpty else {
+            print("No new forfeitted players")
+            return
+        }
+        
+        print("forfeittedPlayer ids: \(newForfeittedPlayers)")
+
+    
+        let forfeittedPlayers = self.pkGame.players.filter { newForfeittedPlayers.contains($0.id) }
+        
+        
+        guard forfeittedPlayers.count == newForfeittedPlayers.count else {
+//            assert(false)
             print("Received update on forfeit but player not in game.")
             return
         }
-        gameUpdateListener.didForfeit(player: forfeittedPlayer)
+        
+        for forfeittedPlayer in forfeittedPlayers {
+            forfeittedPlayerIds.insert(forfeittedPlayer.id)
+            gameUpdateListener.didForfeit(player: forfeittedPlayer)
+        }
     }
     
     func didMove(move: PKGameMove) {
@@ -72,13 +111,13 @@ class FirebasePKGameUpdater: PKGameUpdateDelegate {
     }
     
     private func addListenerToMoves(gameUpdateListener: PKGameUpdateListener) {
-        firebaseMoveListener = moveCollectionRef.addSnapshotListener { [self] querySnapshot, error in
+        let moveListener = moveCollectionRef.addSnapshotListener { [self] querySnapshot, error in
             guard let snapShot = querySnapshot else {
               print("Error fetching snapshots: \(error!)")
               return
             }
             let _ = snapShot.documentChanges.forEach { diff in
-                if diff.type == .added, let moveData = self.getModel(from: diff.document) {
+                if diff.type == .added, let moveData: PKGameMoveData = self.getModel(from: diff.document) {
                     let _ = firstly {
                         self.getMove(from: moveData)
                     }.done { move in
@@ -87,10 +126,12 @@ class FirebasePKGameUpdater: PKGameUpdateDelegate {
                 }
             }
         }
+        
+        firebaseMoveListeners.append(moveListener)
     }
     
-    func removeListener() {
-        self.firebaseMoveListener?.remove()
+    func removeListeners() {
+        self.firebaseMoveListeners.forEach { $0.remove() }
     }
     
 
@@ -138,7 +179,7 @@ extension FirebasePKGameUpdater {
         return newDocumentData
     }
     
-    private func getModel(from document: DocumentSnapshot) -> PKGameMoveData? {
+    private func getModel<T: Record>(from document: DocumentSnapshot) -> T? {
         guard var documentData = document.data() else {
             return nil
         }
@@ -146,7 +187,7 @@ extension FirebasePKGameUpdater {
         
         let data = try? JSONSerialization.data(withJSONObject: processDocumentData(documentData))
         
-        let model = try? JSONDecoder().decode(PKGameMoveData.self, from: data ?? Data())
+        let model = try? JSONDecoder().decode(T.self, from: data ?? Data())
         
         return model
     }
