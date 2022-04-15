@@ -39,7 +39,7 @@ class PKGameOverviewViewController: UIViewController {
         titleOutcome.text = viewModel.titleOutcome
         descriptionOutcome.text = viewModel.descriptionOutcome
         topImageView.image = viewModel.isBackgroundDark ? #imageLiteral(resourceName: "cover_5") : #imageLiteral(resourceName: "cover_2")
-
+        
         playerOneName.text = viewModel.names[0]
         playerTwoName.text = viewModel.names[1]
         playerOneScore.text = viewModel.scores[0]

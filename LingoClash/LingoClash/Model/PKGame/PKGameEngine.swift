@@ -19,6 +19,7 @@ class PKGameEngine {
     private var currQuestionIndex: Int = -1
     var moves: [PKGameMove]
     var players: [Profile]
+    var forfeittedPlayers = Set<Profile>()
     var scores: [ Profile: Int ]
     var currentQuestion: Question {
         questions[currQuestionIndex]
@@ -36,7 +37,19 @@ class PKGameEngine {
     
     // Returns true if player successfully forfeitted game
     func forfeitGame(player: Profile) -> Bool {
+        guard players.contains(player) else {
+            return false
+        }
+        
+        guard forfeittedPlayers.insert(player).inserted else {
+            return false
+        }
+        
         renderer?.didAccountForForfeit(player: player)
+        
+        if isGameComplete() {
+            gameDidComplete()
+        }
         return true
     }
     
@@ -121,9 +134,9 @@ class PKGameEngine {
     }
     
     private func isGameComplete() -> Bool {
-//        return true
-//        return currQuestionIndex == 1
-        return currQuestionIndex >= self.questions.count - 1
+        let hasReachedEndOfQuestions = currQuestionIndex >= self.questions.count - 1
+        let hasNoMoreOpponents = players.count - forfeittedPlayers.count <= 1
+        return hasReachedEndOfQuestions || hasNoMoreOpponents
     }
     
     private func gameDidComplete() {
@@ -143,17 +156,33 @@ class PKGameEngine {
         guard isGameComplete() else {
             return nil
         }
-        let questionOutcomes = self.questions.map({ question -> [Profile: Bool] in
+        
+        // Generate question outcomes
+        let questionOutcomes = generateQuestionOutcomes(questions: self.questions, moves: self.moves)
+        let playerOutcomes = generatePlayerOutcomes(scores: self.scores)
+        
+        
+        return PKGameOutcome(questionOutcomes: questionOutcomes, playerOutcomes: playerOutcomes)
+    }
+    
+    private func generateQuestionOutcomes(questions: [Question], moves: [PKGameMove]) -> [PKGameQuestionOutcome] {
+        let questionOutcomes = questions.map({ question -> PKGameQuestionOutcome in
             let moves = moves.filter({ $0.question.isEqual(to: question)})
             var questionOutcome: [Profile: Bool] = [:]
             for move in moves {
                 questionOutcome[move.player] = move.isCorrect
             }
-            return questionOutcome
+            return PKGameQuestionOutcome(question: question, outcome: questionOutcome)
         })
+        
+        return questionOutcomes
+    }
+    
+    private func generatePlayerOutcomes(scores: [Profile: Int]) -> [PKGamePlayerOutcome] {
         var highest: Int = 0
         var highestPlayers = [Profile]()
-        for (profile, score) in self.scores {
+        let nonForfeitScores = scores.filter { !forfeittedPlayers.contains($0.key) }
+        for (profile, score) in nonForfeitScores {
             if score > highest {
                 highestPlayers = [profile]
                 highest = score
@@ -161,17 +190,22 @@ class PKGameEngine {
                 highestPlayers.append(profile)
             }
         }
-        let playerOutcomes: [Profile: PKGamePlayerOutcome] = self.scores.mapValues { score in
-            if score == highest {
-                if highestPlayers.count > 1 {
-                    return PKGamePlayerOutcome.draw
+        let playerOutcomes: [PKGamePlayerOutcome] = scores.map { profile, score in
+            var outcome = PKGamePlayerOutcomeStatus.lose
+            let didForfeit = forfeittedPlayers.contains(profile)
+            if didForfeit {
+                outcome = PKGamePlayerOutcomeStatus.lose
+            } else if score == highest {
+                let moreThanOneHighest = highestPlayers.count > 1
+                if moreThanOneHighest {
+                    outcome = .draw
                 } else {
-                    return PKGamePlayerOutcome.win
+                    outcome = .win
                 }
-            } else {
-                return PKGamePlayerOutcome.lose
             }
+            
+            return PKGamePlayerOutcome(profile: profile, score: score, didForfeit: didForfeit, outcome: outcome)
         }
-        return PKGameOutcome(questions: self.questions, questionOutcomes: questionOutcomes, scores: self.scores, playerOutcomes: playerOutcomes)
+        return playerOutcomes
     }
 }

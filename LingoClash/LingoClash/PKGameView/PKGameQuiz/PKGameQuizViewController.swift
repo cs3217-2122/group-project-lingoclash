@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import simd
 
 class PKGameQuizViewController: UIViewController {
     enum Segue {
@@ -33,6 +34,24 @@ class PKGameQuizViewController: UIViewController {
     @IBOutlet weak var playerOneName: UILabel!
     @IBOutlet weak var playerOneScore: UILabel!
     func styleUI() {
+        
+    }
+    
+    @IBAction func forfeit(_ sender: Any) {
+        print("did click forfeit")
+        let forfeitConfirmation = UIAlertController(title: "Forfeit", message: "Forfeit in cowardice? Are you sure?", preferredStyle: .alert)
+         
+         // Create OK button with action handler
+         let proceed = UIAlertAction(title: "A Coward I am.", style: .default, handler: { (action) -> Void in
+             self.viewModel?.forfeitGame()
+          })
+        let cancel = UIAlertAction(title: "Stay and fight!", style: .cancel, handler: { (action) -> Void in
+            return
+        })
+         
+        forfeitConfirmation.addAction(proceed)
+        forfeitConfirmation.addAction(cancel)
+        self.present(forfeitConfirmation, animated: true, completion: nil)
         
     }
     
@@ -76,9 +95,6 @@ class PKGameQuizViewController: UIViewController {
                 return
             }
             outcomeViewController.viewModel = gameOverviewViewModel
-        } else if segue.identifier == Segue.unwindFromPKGameQuizToHome {
-            print("did prepare unwind to home")
-            viewModel?.forfeitGame()
         }
     }
 }

@@ -9,6 +9,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class FirebasePKGameUpdater: PKGameUpdateDelegate {
+    
     enum FirebasePKGameUpdaterError: Error {
         case errorUpdatingForfeit(desc: String)
     }
@@ -45,15 +46,13 @@ class FirebasePKGameUpdater: PKGameUpdateDelegate {
         self.pkGameUpdateListeners = [updateListenerOnForfeit]
     }
     
+    func didCompleteGame(outcome: PKGamePlayerOutcome) {
+        let outcomeData = PKGamePlayerOutcomeData(gameId: pkGame.id, gamePlayerOutcome: outcome)
+        let _ = self.pkGameOutcomeManager.create(newRecord: outcomeData)
+    }
+    
     func didForfeit(player: Profile) {
         print("did forfeit game")
-//        pkGameManager.addForfeittedPlayerToPKGame(id: pkGame.id, playerId: player.id)
-//            .then { [self] pkGameData -> Promise<PKGameOutcomeData> in
-//            let outcomeData = PKGameOutcomeData(id: PKGameOutcomeData.placeholderId, profile_id: player.id, pk_game_id: pkGameData.id, outcome: .lose)
-//            return self.pkGameOutcomeManager.create(newRecord: outcomeData)
-//        }.catch { err in
-//            print(err)
-//        }
         Promise<Profile> { seal in
             // TODO: Add method in firebase to support this (Repeated issue where dataprovider methods are not specific enough)
             // Alternative is less efficient: Query to get the existing PKGameData then update it
@@ -67,9 +66,6 @@ class FirebasePKGameUpdater: PKGameUpdateDelegate {
                 print("Successfully added forfietted player to Firebase \(player.id) \(player.name)")
                 return seal.fulfill(player)
             }
-        }.then { forfeittedPlayer -> Promise<PKGameOutcomeData> in
-            let outcomeData = PKGameOutcomeData(id: PKGameOutcomeData.placeholderId, profile_id: player.id, pk_game_id: self.pkGame.id, outcome: .lose)
-            return self.pkGameOutcomeManager.create(newRecord: outcomeData)
         }.catch { err in
             print(err)
         }

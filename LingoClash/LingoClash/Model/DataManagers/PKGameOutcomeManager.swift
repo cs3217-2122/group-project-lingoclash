@@ -6,9 +6,9 @@
 //
 import PromiseKit
 
-class PKGameOutcomeManager: DataManager<PKGameOutcomeData> {
+class PKGameOutcomeManager: DataManager<PKGamePlayerOutcomeData> {
     
     init() {
-        super.init(resource: DataManagerResources.pkGameOutcomes)
+        super.init(resource: DataManagerResources.pkGamePlayerOutcomes)
     }
 }

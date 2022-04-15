@@ -10,22 +10,20 @@ class PKGameOverviewViewModelFromOutcome: PKGameOverviewViewModel {
     var descriptionOutcome: String
     var isBackgroundDark: Bool
     private let playerOutcome: PKGamePlayerOutcome
-    private let profileScores: [(profile: Profile, score: Int)]
+    private let playerOutcomes: [PKGamePlayerOutcome]
     var scores: [String]
     var names: [String]
     init(outcome: PKGameOutcome, currentPlayer: Profile) {
-        let profileScoresUnsorted = outcome.scores.map { (profile: $0, score: $1) }
-        self.profileScores = profileScoresUnsorted.filter({ $0.profile == currentPlayer }) + profileScoresUnsorted.filter({ $0.profile != currentPlayer })
-
-        self.names = profileScores.map { $0.profile.name }
-        self.scores = profileScores.map { String($0.score) }
-        
-        guard let playerOutcome = outcome.playerOutcomes[currentPlayer] else {
+        guard let playerOutcome = outcome.playerOutcomes.first(where: {$0.profile == currentPlayer}) else {
             fatalError("Unable to get current player outcome")
         }
         self.playerOutcome = playerOutcome
+        self.playerOutcomes = [playerOutcome] + outcome.playerOutcomes.filter({ $0.profile != currentPlayer })
+
+        self.names = playerOutcomes.map { $0.profile.name }
+        self.scores = playerOutcomes.map { $0.didForfeit ? "Forfeited": String($0.score) }
         
-        switch playerOutcome {
+        switch playerOutcome.outcome {
         case .lose:
             self.titleOutcome = "Loss"
             self.descriptionOutcome = "Better luck next time."

@@ -6,13 +6,23 @@
 //
 
 struct PKGameOutcome {
-    var questions: [Question]
-    var questionOutcomes: [[Profile: Bool]]
-    var scores: [Profile: Int]
-    var playerOutcomes: [Profile: PKGamePlayerOutcome]
+    var questionOutcomes: [PKGameQuestionOutcome]
+    var playerOutcomes: [PKGamePlayerOutcome]
 }
 
-enum PKGamePlayerOutcome: String, Codable {
+struct PKGameQuestionOutcome {
+    let question: Question
+    let outcome: [Profile: Bool]
+}
+
+struct PKGamePlayerOutcome {
+    let profile: Profile
+    let score: Int
+    let didForfeit: Bool
+    let outcome: PKGamePlayerOutcomeStatus
+}
+
+enum PKGamePlayerOutcomeStatus: String, Codable {
     case win
     case lose
     case draw

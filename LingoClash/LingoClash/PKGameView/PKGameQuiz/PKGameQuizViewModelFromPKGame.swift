@@ -61,6 +61,12 @@ extension PKGameQuizViewModelFromPKGame {
     }
     
     func didCompleteGame(gameOutcome: PKGameOutcome) {
+        guard let currPlayerOutcome = gameOutcome.playerOutcomes.first(where: { $0.profile == currentPlayerProfile }) else {
+            print("current player outcome not found.")
+            assert(false)
+            return
+        }
+        self.gameUpdateDelegate.didCompleteGame(outcome: currPlayerOutcome)
         self.gameOverviewViewModel.value = PKGameOverviewViewModelFromOutcome(outcome: gameOutcome, currentPlayer: currentPlayerProfile)
     }
     
@@ -91,6 +97,7 @@ extension PKGameQuizViewModelFromPKGame {
     
     func didForfeit(player: Profile) {
         // TODO: Add some notif that a person has forfeitted
+        let _ = pkGameEngine.forfeitGame(player: player)
         print("renderer update forfeit.")
     }
 }
