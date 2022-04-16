@@ -52,32 +52,24 @@ class FirebaseDataProvider: DataProvider {
 
     func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
 
-        Promise { seal in
-            var collectionQuery: Query = db.collection(resource)
-            for (key, value) in params.filter {
-                collectionQuery = collectionQuery.whereField(key, isEqualTo: value)
+            Promise { seal in
+                db.collection(resource).getDocuments { querySnapshot, error in
+
+                    if let error = error {
+                        return seal.reject(error)
+                    }
+
+                    guard let querySnapshot = querySnapshot else {
+                        return seal.reject(FirebaseDataProviderError.invalidQuerySnapshot)
+                    }
+
+                    let dataList = querySnapshot.documents.compactMap { document -> T? in
+                        self.getModel(from: document)
+                    }
+
+                    return seal.fulfill(GetListResult(data: dataList, total: querySnapshot.count))
+                }
             }
-
-            collectionQuery = collectionQuery.order(by: params.sort.field, descending: params.sort.isDescending)
-
-            collectionQuery.getDocuments { querySnapshot, error in
-
-                if let error = error {
-                    print(error)
-                    return seal.reject(error)
-                }
-
-                guard let querySnapshot = querySnapshot else {
-                    return seal.reject(FirebaseDataProviderError.invalidQuerySnapshot)
-                }
-
-                let dataList = querySnapshot.documents.compactMap { document -> T? in
-                    self.getModel(from: document)
-                }
-
-                return seal.fulfill(GetListResult(data: dataList, total: querySnapshot.count))
-            }
-        }
     }
 
     func getOne<T: Codable>(resource: String, params: GetOneParams) -> Promise<GetOneResult<T>> {
@@ -128,22 +120,17 @@ class FirebaseDataProvider: DataProvider {
         }
     }
 
-    func getManyReference<T: Codable>(
-        resource: String,
-        params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
+    func getManyReference<T: Codable>(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
 
         Promise { seal in
-            var collectionQuery = db.collection(resource).whereField(params.target, isEqualTo: params.id)
-            if resource == DataManagerResources.profileLessons {
+            var filteredCollection = db.collection(resource).whereField(params.target, isEqualTo: params.id)
 
-            }
             for (key, value) in params.filter {
-                collectionQuery = collectionQuery.whereField(key, isEqualTo: value)
+                filteredCollection = filteredCollection.whereField(key, isEqualTo: value)
             }
 
-            collectionQuery = collectionQuery.order(by: params.sort.field, descending: params.sort.isDescending)
+            filteredCollection.getDocuments { querySnapshot, error in
 
-            collectionQuery.getDocuments { querySnapshot, error in
                 if let error = error {
                     return seal.reject(error)
                 }
