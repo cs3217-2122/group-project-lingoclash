@@ -1,8 +1,9 @@
 ![E3wpp7a](https://user-images.githubusercontent.com/24221801/163687599-ab8ebd9b-f19d-4c26-9d84-3127cb85527b.png)
 
-# Description
+# Background
 
-We are a group of language enthusiasts of diverse backgrounds. Having been exposed to numerous language learning apps, we have identified some of the best apps that have helped us tremendously in our learning journey. Among these apps, we thought that Hujiang is the closest to what we have envisioned as a perfect language-learning app. Despite that, we have not seen anything that resembles it in the English community and hence we decided to recreate it in English while also incorporating some of the best features that other apps have to offer such as spaced repetition.
+We are a group of language enthusiasts of diverse backgrounds. Having been exposed to numerous language learning apps, we have identified some of the best apps that have helped us tremendously in our learning journey. 
+Among these apps, we thought that 开心词场 by 沪江 is the closest to what we have envisioned as a perfect language-learning app. Despite that, we have not seen anything that resembles it in the English community and hence we decided to recreate it in English while also incorporating some of the best features that other apps have to offer such as spaced repetition.
 
 # Team Members
 
