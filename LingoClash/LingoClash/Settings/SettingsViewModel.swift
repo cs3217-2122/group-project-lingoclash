@@ -72,7 +72,7 @@ final class SettingsViewModel {
             authProvider.updateName(fields.name)
         }.then { [self] _ in
             self.profileManager.updateProfile(
-                starsGoal: starsGoal ?? 0,
+                starsGoal: fields.starsGoal ,
                 bio: bio ?? "")
         }.done { [self] _ in
             self.editProfileError = nil
