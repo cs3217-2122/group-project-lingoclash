@@ -47,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             setUpSampleData()
         case .production:
             Logger.info("Environment is: production")
+            setUpSampleData()
         case .none:
             Logger.info("Environment is: none")
         }

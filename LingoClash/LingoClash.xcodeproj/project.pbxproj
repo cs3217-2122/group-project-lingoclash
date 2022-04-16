@@ -280,6 +280,7 @@
 		D3AF1C262805937100DCFA2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C242805924300DCFA2E /* SettingsViewController.swift */; };
 		D3AF1C302805DDDB00DCFA2E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */; };
 		D3AF1C312805DDE000DCFA2E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF1C2F2805DDDB00DCFA2E /* SplashViewModel.swift */; };
+		D3AFB0AD280B2FC6006B48A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6204A03E27DE43350063100D /* ProfileViewController.swift */; };
 		D3BD29E527DCE6350061E362 /* LingoClashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD29E427DCE6350061E362 /* LingoClashTests.swift */; };
 		D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1027DED82A0061E362 /* LoginViewModel.swift */; };
 		D3BD2A1327DED8330061E362 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD2A1227DED8320061E362 /* SignUpViewModel.swift */; };
@@ -1628,6 +1629,7 @@
 				CE8D229627EEB8F4005E7058 /* UiViewController+InstantiateFromAppStoryboard.swift in Sources */,
 				CEC5886A27EA2A4F00809403 /* StarView.swift in Sources */,
 				D3C5E27A27F6F3E900F65B8E /* SampleDataUtilities.swift in Sources */,
+				D3AFB0AD280B2FC6006B48A6 /* ProfileViewController.swift in Sources */,
 				CEC5887927EAC90A00809403 /* LessonTableCellViewModel.swift in Sources */,
 				CEF1E7F127E6D120005D4272 /* QuestionViewModel.swift in Sources */,
 				CEA1C7B727FA145800123225 /* QuestionFormat.swift in Sources */,
