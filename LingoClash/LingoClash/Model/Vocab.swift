@@ -35,8 +35,7 @@ struct Vocab {
         self.word = vocabData.word
         self.definition = vocabData.definition
         self.sentence = vocabData.sentence
-        // TODO: add to firebase
-        self.sentenceDefinition = ""
+        self.sentenceDefinition = vocabData.translation
         self.pronunciationText = ""
     }
 }

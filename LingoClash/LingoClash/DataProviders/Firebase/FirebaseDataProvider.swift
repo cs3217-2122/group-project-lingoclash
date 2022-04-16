@@ -29,16 +29,17 @@ class FirebaseDataProvider: DataProvider {
     private func getModel<S: Codable>(from document: QueryDocumentSnapshot) -> S? {
         var documentData = document.data()
         documentData["id"] = document.documentID
-        
+
         var model: S?
-        
+
         do {
             let data = try JSONSerialization.data(withJSONObject: documentData)
             model = try JSONDecoder().decode(S.self, from: data)
-        } catch let error {
-            Logger.error("Failure to convert data to model. Error: \(error)")
+        } catch {
+            Logger.error(
+                "Failure to convert \(S.self) data to model. Error: \(error.localizedDescription)")
         }
-        
+
         return model
     }
 
@@ -48,16 +49,16 @@ class FirebaseDataProvider: DataProvider {
         }
 
         documentData["id"] = document.documentID
-        
+
         var model: S?
-        
+
         do {
             let data = try JSONSerialization.data(withJSONObject: documentData)
             model = try JSONDecoder().decode(S.self, from: data)
-        } catch let error {
+        } catch {
             Logger.error("Failure to convert data to model. Error: \(error)")
         }
-        
+
         return model
     }
 
