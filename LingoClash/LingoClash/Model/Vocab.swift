@@ -14,6 +14,7 @@ struct Vocab {
     let sentence: String
     let sentenceDefinition: String
     let pronunciationText: String
+
     init(
         id: Identifier = "0",
         word: String,
@@ -28,7 +29,6 @@ struct Vocab {
         self.sentenceDefinition = sentenceDefinition
         self.pronunciationText = pronunciationText
     }
-    // TODO: Add pronunciation
 
     init(vocabData: VocabData) {
         self.id = vocabData.id
@@ -36,7 +36,7 @@ struct Vocab {
         self.definition = vocabData.definition
         self.sentence = vocabData.sentence
         self.sentenceDefinition = vocabData.translation
-        self.pronunciationText = ""
+        self.pronunciationText = vocabData.pronunciation_text
     }
 }
 

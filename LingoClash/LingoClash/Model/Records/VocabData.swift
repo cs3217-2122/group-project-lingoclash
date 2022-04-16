@@ -12,6 +12,7 @@ struct VocabData {
     let sentence: String
     let word: String
     let translation: String
+    let pronunciation_text: String
 }
 
 extension VocabData: Record {}

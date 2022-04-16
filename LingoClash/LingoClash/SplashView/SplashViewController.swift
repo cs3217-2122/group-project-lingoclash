@@ -30,7 +30,9 @@ class SplashViewController: UIViewController {
     }
 
     func directToDevLogin() {
+        #if DEBUG
         performSegue(withIdentifier: Segue.toDevLoginVC, sender: self)
+        #endif
     }
 
     func setUpView() {

@@ -4996,5 +4996,1005 @@
             "강조해요",
             "강조합니다"
         ]
+    },
+    {
+        "word": "강조하다",
+        "romaja": "gangjohada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to emphasize"
+            }
+        ],
+        "conj": [
+            "강조한다",
+            "강조해",
+            "강조해요",
+            "강조합니다"
+        ]
+    },
+    {
+        "word": "강좌",
+        "romaja": "gangjwa",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "course; lesson; lecture"
+            }
+        ]
+    },
+    {
+        "word": "강주걱양태",
+        "romaja": "gangjugeogyangtae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The dragonet fish, Repomucenus olidus."
+            }
+        ]
+    },
+    {
+        "word": "강준치",
+        "romaja": "gangjunchi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The predatory carp or redfin culter, Chanodichthys erythropterus ( <= Culter erythropterus)."
+            }
+        ]
+    },
+    {
+        "word": "강철",
+        "romaja": "gangcheol",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "steel (metal alloy)"
+            }
+        ]
+    },
+    {
+        "word": "강추",
+        "romaja": "gangchu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Strong recommendation"
+            }
+        ]
+    },
+    {
+        "word": "강판",
+        "romaja": "gangpan",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "grater"
+            }
+        ]
+    },
+    {
+        "word": "강하다",
+        "romaja": "ganghada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "to be strong, intense"
+            }
+        ],
+        "conj": [
+            "강하다",
+            "강해",
+            "강해요",
+            "강합니다"
+        ]
+    },
+    {
+        "word": "강화도",
+        "romaja": "ganghwado",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Ganghwa Island, at the mouth of the Han River near Seoul."
+            }
+        ]
+    },
+    {
+        "word": "강화하다",
+        "romaja": "ganghwahada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to strengthen, to intensify"
+            }
+        ],
+        "conj": [
+            "강화한다",
+            "강화해",
+            "강화해요",
+            "강화합니다"
+        ]
+    },
+    {
+        "word": "갖가지",
+        "romaja": "gatgaji",
+        "pos": "det",
+        "defs": [
+            {
+                "def": "Abbreviation of 가지가지 (gajigaji, “various kinds of”)."
+            }
+        ]
+    },
+    {
+        "word": "갖가지",
+        "romaja": "gatgaji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Abbreviation of 가지가지 (gajigaji, “various kinds”)."
+            }
+        ]
+    },
+    {
+        "word": "갖다",
+        "romaja": "gatda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to have; to take"
+            }
+        ],
+        "conj": [
+            "갖는다",
+            "갖아",
+            "갖아요",
+            "갖습니다"
+        ]
+    },
+    {
+        "word": "갖추다",
+        "romaja": "gatchuda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to make the necessary preparations; to prepare or equip oneself"
+            },
+            {
+                "def": "to possess a desirable attribute"
+            }
+        ],
+        "conj": [
+            "갖춘다",
+            "갖추어",
+            "갖추어요/갖춰요",
+            "갖춥니다"
+        ]
+    },
+    {
+        "word": "같다",
+        "romaja": "gatda",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "(to be) the same",
+                "examples": [
+                    {
+                        "example": "같은 말을 되풀이하다",
+                        "transliteration": "gateun mareul doepurihada",
+                        "translation": "to say the same thing over and over"
+                    },
+                    {
+                        "example": "너의 어머니와 같다",
+                        "transliteration": "neoui eomeoniwa gatda",
+                        "translation": "the same as your mother"
+                    }
+                ]
+            },
+            {
+                "def": "(to be) like or similar (often used with 와 (wa)/과 (gwa))"
+            },
+            {
+                "def": "(to be) probably so; (to be) apparently so",
+                "examples": [
+                    {
+                        "example": "In this sense, it often follows 것 (geot) and is often translated as \"it looks like\"."
+                    },
+                    {
+                        "example": "비가 올 것 같다.",
+                        "transliteration": "Biga ol geot gatda.",
+                        "translation": "It looks like it will rain."
+                    },
+                    {
+                        "example": "공항까지 지하철을 타면 될 것 같은데 혹시 지하철이 어디 있는지 아세요?",
+                        "transliteration": "Gonghangkkaji jihacheoreul tamyeon doel geot gateunde hoksi jihacheori eodi inneunji aseyo?",
+                        "translation": "I think I can take the subway to the airport. Do you know where the subway is?"
+                    }
+                ]
+            }
+        ],
+        "conj": [
+            "같다",
+            "같아",
+            "같아요",
+            "같습니다"
+        ]
+    },
+    {
+        "word": "같은",
+        "romaja": "gateun",
+        "pos": "det",
+        "defs": [
+            {
+                "def": "the same",
+                "examples": [
+                    {
+                        "example": "같은 말을 되풀이하다",
+                        "transliteration": "gateun mareul doepurihada",
+                        "translation": "to say the same thing over and over"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "같이",
+        "romaja": "gachi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "with, together",
+                "examples": [
+                    {
+                        "example": "선생님과 같이 기념 사진을 찍었다.",
+                        "transliteration": "Seonsaengnimgwa gachi ginyeom sajineul jjigeotda.",
+                        "translation": "We took a commemorative photo with our teacher."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "같이",
+        "romaja": "gachi",
+        "pos": "part",
+        "defs": [
+            {
+                "def": "like, in a similar way",
+                "examples": [
+                    {
+                        "example": "형제같이 사이가 좋다.",
+                        "transliteration": "Hyeongjegachi saiga jota.",
+                        "translation": "They are as close as brothers (literally \"The relationship is as good as one between brothers\".)"
+                    }
+                ]
+            },
+            {
+                "def": "every time, as soon as",
+                "examples": [
+                    {
+                        "example": "매일같이 지각하다.",
+                        "transliteration": "Maeilgachi jigakhada.",
+                        "translation": "(One) is late every day."
+                    },
+                    {
+                        "example": "새벽같이 산에 오르다.",
+                        "transliteration": "Saebyeokgachi sane oreuda.",
+                        "translation": "Climb the mountain as dawn breaks."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "같이하다",
+        "romaja": "gachihada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To do together."
+            },
+            {
+                "def": "To do or think alike."
+            }
+        ],
+        "conj": [
+            "같이한다",
+            "같이해",
+            "같이해요",
+            "같이합니다"
+        ]
+    },
+    {
+        "word": "같잖다",
+        "romaja": "gatjanta",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "to be insignificant"
+            },
+            {
+                "def": "to be unseemly"
+            }
+        ],
+        "conj": [
+            "같잖다",
+            "같잖아",
+            "같잖아요",
+            "같잖습니다"
+        ]
+    },
+    {
+        "word": "갚다",
+        "romaja": "gapda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to repay, to return (something loaned)",
+                "examples": [
+                    {
+                        "example": "빌린 곡식을 두 배로 갚아 주다",
+                        "transliteration": "billin goksigeul du baero gapa juda",
+                        "translation": "to repay twice as much grain as one had borrowed"
+                    },
+                    {
+                        "example": "돈을 갚다",
+                        "transliteration": "doneul gapda",
+                        "translation": "to repay the money (financial debt))"
+                    }
+                ]
+            }
+        ],
+        "conj": [
+            "갚는다",
+            "갚아",
+            "갚아요",
+            "갚습니다"
+        ]
+    },
+    {
+        "word": "개",
+        "romaja": "gae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "dog"
+            },
+            {
+                "def": "someone who does the bidding of another"
+            }
+        ]
+    },
+    {
+        "word": "개",
+        "romaja": "gae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "estuary"
+            }
+        ]
+    },
+    {
+        "word": "개가",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "remarriage (by a woman)"
+            }
+        ]
+    },
+    {
+        "word": "개가하다",
+        "romaja": "gaegahada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To remarry after separation or divorce."
+            }
+        ],
+        "conj": [
+            "개가한다",
+            "개가해",
+            "개가해요",
+            "개가합니다"
+        ]
+    },
+    {
+        "word": "개고기",
+        "romaja": "gaegogi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "dog meat"
+            },
+            {
+                "def": "ill-bred person; pest; plague"
+            }
+        ]
+    },
+    {
+        "word": "개관식",
+        "romaja": "gaegwansik",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "opening ceremony"
+            }
+        ]
+    },
+    {
+        "word": "개구락지",
+        "romaja": "gaegurakji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "frog"
+            }
+        ]
+    },
+    {
+        "word": "개구리",
+        "romaja": "gaeguri",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "frog"
+            }
+        ]
+    },
+    {
+        "word": "개구리꺽정이",
+        "romaja": "gaegurikkeokjeong-i",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The frog sculpin, Myoxocephalus stelleri."
+            }
+        ]
+    },
+    {
+        "word": "개구리매",
+        "romaja": "gaegurimae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The marsh harrier, Circus spilonotus."
+            }
+        ]
+    },
+    {
+        "word": "개구장이",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Misspelling of 개구쟁이 (gaegujaeng-i)."
+            }
+        ]
+    },
+    {
+        "word": "개구쟁이",
+        "romaja": "gaegujaeng-i",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "brat; urchin"
+            }
+        ]
+    },
+    {
+        "word": "개국",
+        "romaja": "gaeguk",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "building of a country (government)"
+            }
+        ]
+    },
+    {
+        "word": "개국",
+        "romaja": "gaeguk",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "opening of an institution (such as a post office or a television station)"
+            }
+        ]
+    },
+    {
+        "word": "개꿈",
+        "romaja": "gaekkum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A meaningless dream."
+            }
+        ]
+    },
+    {
+        "word": "개꿩",
+        "romaja": "gaekkwong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "grey plover"
+            }
+        ]
+    },
+    {
+        "word": "개나리",
+        "romaja": "gaenari",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "forsythia, often specifically the Korean forsythia Forsythia koreana."
+            },
+            {
+                "def": "euphemistic spelling of 개새끼 (gaesaekki)"
+            }
+        ]
+    },
+    {
+        "word": "개나리꽃",
+        "romaja": "gaenarikkot",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A forsythia blossom, often specifically the blossom of Forsythia koreana."
+            }
+        ]
+    },
+    {
+        "word": "개념",
+        "romaja": "gaenyeom",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "concept; general idea"
+            }
+        ]
+    },
+    {
+        "word": "개다",
+        "romaja": "gaeda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to become bright and clear (especially of weather)"
+            }
+        ],
+        "conj": [
+            "갠다",
+            "개",
+            "개요/개어요",
+            "갭니다"
+        ]
+    },
+    {
+        "word": "개량",
+        "romaja": "gaeryang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "improvement"
+            }
+        ]
+    },
+    {
+        "word": "개량",
+        "romaja": "gaeryang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "remeasurement"
+            }
+        ]
+    },
+    {
+        "word": "개리",
+        "romaja": "gaeri",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The swan goose, Anser cygnoides."
+            }
+        ]
+    },
+    {
+        "word": "개미",
+        "romaja": "gaemi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "ant",
+                "examples": [
+                    {
+                        "example": "개미처럼 부지런하다",
+                        "transliteration": "gaemicheoreom bujireonhada",
+                        "translation": "(metaphorical) as hardworking as an ant"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "개발",
+        "romaja": "gaebal",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "development"
+            }
+        ]
+    },
+    {
+        "word": "개발되다",
+        "romaja": "gaebaldoeda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to be developed"
+            }
+        ],
+        "conj": [
+            "개발된다",
+            "개발돼",
+            "개발돼요/개발되어요",
+            "개발됩니다"
+        ]
+    },
+    {
+        "word": "개발자",
+        "romaja": "gaebalja",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "developer"
+            }
+        ]
+    },
+    {
+        "word": "개발하다",
+        "romaja": "gaebalhada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to develop or exploit."
+            }
+        ],
+        "conj": [
+            "개발한다",
+            "개발해",
+            "개발해요",
+            "개발합니다"
+        ]
+    },
+    {
+        "word": "개밥바라기",
+        "romaja": "gaebapbaragi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The evening star, Hesperus."
+            }
+        ]
+    },
+    {
+        "word": "개방",
+        "romaja": "gaebang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "opening, especially of doors"
+            },
+            {
+                "def": "liberalization"
+            }
+        ]
+    },
+    {
+        "word": "개방하다",
+        "romaja": "gaebanghada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to open (to the public)"
+            },
+            {
+                "def": "to liberalise"
+            }
+        ],
+        "conj": [
+            "개방한다",
+            "개방해",
+            "개방해요",
+            "개방합니다"
+        ]
+    },
+    {
+        "word": "개벽",
+        "romaja": "gaebyeok",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Creation"
+            },
+            {
+                "def": "The dawn of a new age or order"
+            }
+        ]
+    },
+    {
+        "word": "개별자",
+        "romaja": "gaebyeolja",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "individuals or particulars, as opposed to universals."
+            }
+        ]
+    },
+    {
+        "word": "개살구",
+        "romaja": "gaesalgu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The fruit of the Manchurian apricot, Prunus mandshurica."
+            }
+        ]
+    },
+    {
+        "word": "개새끼",
+        "romaja": "gaesaekki",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "son of a bitch, jerk, bastard"
+            }
+        ]
+    },
+    {
+        "word": "개선",
+        "romaja": "gaeseon",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Reform or improvement in general."
+            }
+        ]
+    },
+    {
+        "word": "개선하다",
+        "romaja": "gaeseonhada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to improve"
+            }
+        ],
+        "conj": [
+            "개선한다",
+            "개선해",
+            "개선해요",
+            "개선합니다"
+        ]
+    },
+    {
+        "word": "개성",
+        "romaja": "gaeseong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "reform, improvement in quality"
+            }
+        ]
+    },
+    {
+        "word": "개성",
+        "romaja": "gaeseong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "individuality, distinction"
+            }
+        ]
+    },
+    {
+        "word": "개성",
+        "romaja": "gaeseong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Opening the gates of a fortress"
+            },
+            {
+                "def": "surrender"
+            }
+        ]
+    },
+    {
+        "word": "개성",
+        "romaja": "gaeseong",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Kaesong (a city in North Korea)"
+            }
+        ]
+    },
+    {
+        "word": "개소겡",
+        "romaja": "gaesogeng",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The eel goby, Odontamblyopus lacepedii."
+            }
+        ]
+    },
+    {
+        "word": "개수",
+        "romaja": "gaesu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "the number of"
+            }
+        ]
+    },
+    {
+        "word": "개시",
+        "romaja": "gaesi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "start, beginning"
+            }
+        ]
+    },
+    {
+        "word": "개월",
+        "romaja": "gaewol",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "(number of) months; used as a count word for months"
+            }
+        ]
+    },
+    {
+        "word": "개인",
+        "romaja": "gaein",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "an individual or individuals; a private person"
+            },
+            {
+                "def": "personal, individual",
+                "examples": [
+                    {
+                        "example": "커피 메이커를 개인 용도로 쓰든 업무용으로 쓰든 간에",
+                        "transliteration": "keopi meikeoreul gaein yongdoro sseudeun eommuyong-euro sseudeun gane",
+                        "translation": "Whether you want coffeemaker for personal or for business use,"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "개인숭배",
+        "romaja": "gaeinsungbae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "cult of personality",
+                "examples": [
+                    {
+                        "example": "개인숭배를 둘러싼 논쟁은 공산주의 진영에 확산되면서 국제공산주의운동의 분열을 가져오는 계기가 되기도 하였다.",
+                        "transliteration": "Gaeinsungbaereul dulleossan nonjaeng-eun gongsanjuui jinyeong-e hwaksandoemyeonseo gukjegongsanjuuiundong-ui bunyeoreul gajyeooneun gyegiga doegido hayeotda.",
+                        "translation": "As the debate over the cult of personality spread to the Communist camp, it also served as a beginning of the division of the international communism movement."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "개인적",
+        "romaja": "gaeinjeok",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "personal, individual"
+            }
+        ]
+    },
+    {
+        "word": "개자식",
+        "romaja": "gaejasik",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "bastard; son of a bitch"
+            }
+        ]
+    },
+    {
+        "word": "개장",
+        "romaja": "gaejang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "opening of a location, session, etc."
+            }
+        ]
+    },
+    {
+        "word": "개장",
+        "romaja": "gaejang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Bosintang, a traditional dog-meat soup."
+            }
+        ]
+    },
+    {
+        "word": "개장국",
+        "romaja": "gaejangguk",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Gaejangguk (a flavored dog-meat soup)"
+            }
+        ]
+    },
+    {
+        "word": "개저씨",
+        "romaja": "gaejeossi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "older bastard; elder son of a bitch"
+            }
+        ]
+    },
+    {
+        "word": "개정",
+        "romaja": "gaejeong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "amendment"
+            }
+        ]
+    },
+    {
+        "word": "개지랄",
+        "romaja": "gaejiral",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "stupidity; foolishness"
+            }
+        ]
+    },
+    {
+        "word": "개지랄하다",
+        "romaja": "gaejiralhada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to act like an idiot, or shamelessly"
+            }
+        ],
+        "conj": [
+            "개지랄한다",
+            "개지랄해",
+            "개지랄해요",
+            "개지랄합니다"
+        ]
     }
 ]
+
