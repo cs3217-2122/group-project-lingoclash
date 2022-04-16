@@ -31,9 +31,14 @@ class FirebaseDataProvider: DataProvider {
         var documentData = document.data()
         documentData["id"] = document.documentID
         
-        let data = try? JSONSerialization.data(withJSONObject: documentData)
+        var model: S?
         
-        let model = try? JSONDecoder().decode(S.self, from: data ?? Data())
+        do {
+            let data = try JSONSerialization.data(withJSONObject: documentData)
+            model = try JSONDecoder().decode(S.self, from: data)
+        } catch let error {
+            Logger.error("Failure to convert data to model. Error: \(error)")
+        }
         
         return model
     }
@@ -45,8 +50,14 @@ class FirebaseDataProvider: DataProvider {
         
         documentData["id"] = document.documentID
         
-        let data =  try? JSONSerialization.data(withJSONObject: documentData)
-        let model = try? JSONDecoder().decode(S.self, from: data ?? Data())
+        var model: S?
+        
+        do {
+            let data = try JSONSerialization.data(withJSONObject: documentData)
+            model = try JSONDecoder().decode(S.self, from: data)
+        } catch let error {
+            Logger.error("Failure to convert data to model. Error: \(error)")
+        }
         
         return model
     }
