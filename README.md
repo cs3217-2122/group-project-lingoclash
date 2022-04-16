@@ -6,10 +6,13 @@ We are a group of language enthusiasts of diverse backgrounds. Having been expos
 
 # Team Members
 
-Hong Ai Ling
-Kevin Chua Kian Chun
-Sherwin Poh Kai Xun
-Toh Kar Wi
+[Hong Ai Ling](https://github.com/ailing35)
+
+[Kevin Chua Kian Chun](https://github.com/kevinchua6)
+
+[Sherwin Poh Kai Xun](https://github.com/sherrpass)
+
+[Toh Kar Wi](https://github.com/CrownKira)
 
 # User Manual
 
