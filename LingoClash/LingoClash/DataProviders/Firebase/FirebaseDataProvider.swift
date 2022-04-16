@@ -134,7 +134,9 @@ class FirebaseDataProvider: DataProvider {
 
         Promise { seal in
             var collectionQuery = db.collection(resource).whereField(params.target, isEqualTo: params.id)
+            if resource == DataManagerResources.profileLessons {
 
+            }
             for (key, value) in params.filter {
                 collectionQuery = collectionQuery.whereField(key, isEqualTo: value)
             }

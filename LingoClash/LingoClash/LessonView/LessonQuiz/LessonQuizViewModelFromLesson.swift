@@ -6,10 +6,10 @@
 //
 
 class LessonQuizViewModelFromLesson: LessonQuizViewModel {
-    let lesson: Lesson
+    private let lesson: Lesson
     let questionGenerator = QuestionsGenerator()
-    let starsBenchmarks = [7, 9, 10]
-    let initialLives = 2
+    let starsBenchmarks = [1, 9, 10]
+    let initialLives = 1
 
     var questionSequence: QuestionSequence
     var questionsLoaded = [Question]()
@@ -93,6 +93,10 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
         } else {
             quizStatus.value = QuizStatus.failed
         }
+
+        var updatedLesson = lesson
+        updatedLesson.completeQuiz(result: quizResult)
+        LessonManager().completeLesson(updatedLesson)
     }
 
     private func isQuizComplete() -> Bool {

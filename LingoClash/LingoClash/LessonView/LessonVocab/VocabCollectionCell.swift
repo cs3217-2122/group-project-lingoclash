@@ -15,6 +15,5 @@ class VocabCollectionCell: UICollectionViewCell {
         vocabLabel.text = vocab
         ViewUtilities.styleCard(contentView)
     }
-    
 
 }

@@ -8,10 +8,10 @@
 import Foundation
 
 struct Lesson {
-    let id: Identifier
+    var id: Identifier
     var vocabs: [Vocab]
-    let stars: Int
-    let name: String
+    var stars: Int
+    var name: String
 
     var questions = [Question]()
     var didPass: Bool {
@@ -23,5 +23,9 @@ struct Lesson {
         self.vocabs = vocabs
         self.name = lessonData.name
         self.stars = profileLessonData?.stars ?? 0
+    }
+
+    mutating func completeQuiz(result: LessonQuizResult) {
+        self.stars = result.starsObtained
     }
 }

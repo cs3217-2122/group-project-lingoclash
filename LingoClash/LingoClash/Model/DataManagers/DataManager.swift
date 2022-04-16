@@ -61,9 +61,6 @@ class DataManager<T: Record> {
         filter: [String: Any] = [:]) -> Promise<[T]> {
 
             let sort = SortPayload(field: field, isDescending: isDescending)
-            if self is ProfileBookManager {
-
-            }
             let result: Promise<GetManyReferenceResult<T>> = dataProvider.getManyReference(
                 resource: self.resource,
                 params: GetManyReferenceParams(

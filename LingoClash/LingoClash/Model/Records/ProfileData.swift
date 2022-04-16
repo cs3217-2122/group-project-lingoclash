@@ -7,16 +7,16 @@
 
 struct ProfileData {
     var id: Identifier
-    let book_id: Identifier?
-    let user_id: Identifier
-    let name: String
-    let email: String
-    let stars: Int
-    let stars_today: Int
-    let stars_goal: Int
-    let bio: String
-    let days_learning: Int
-    let vocabs_learnt: Int
+    var book_id: Identifier?
+    var user_id: Identifier
+    var name: String
+    var email: String
+    var stars: Int
+    var stars_today: Int
+    var stars_goal: Int
+    var bio: String
+    var days_learning: Int
+    var vocabs_learnt: Int
 }
 
 extension ProfileData: Record {}

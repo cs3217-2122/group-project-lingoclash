@@ -47,42 +47,31 @@ class ProfileManager: DataManager<ProfileData> {
         firstly {
             self.getCurrentProfileData()
         }.then { profileData -> Promise<ProfileData> in
-            let newProfileData = ProfileData(
-                id: profileData.id,
-                book_id: bookId,
-                user_id: profileData.user_id,
-                name: profileData.name,
-                email: profileData.email,
-                stars: profileData.stars,
-                stars_today: profileData.stars_today,
-                stars_goal: profileData.stars_goal,
-                bio: profileData.bio,
-                days_learning: profileData.days_learning,
-                vocabs_learnt: profileData.vocabs_learnt
-            )
+            var newProfileData = profileData
+            newProfileData.book_id = bookId
 
             return self.update(id: profileData.id, from: profileData, to: newProfileData)
         }
     }
 
     func updateProfile(starsGoal: Int, bio: String) -> Promise<ProfileData> {
-
         firstly {
             self.getCurrentProfileData()
         }.then { profileData -> Promise<ProfileData> in
-            let newProfileData = ProfileData(
-                id: profileData.id,
-                book_id: profileData.book_id,
-                user_id: profileData.user_id,
-                name: profileData.name,
-                email: profileData.email,
-                stars: profileData.stars,
-                stars_today: profileData.stars_today,
-                stars_goal: starsGoal,
-                bio: bio,
-                days_learning: profileData.days_learning,
-                vocabs_learnt: profileData.vocabs_learnt
-            )
+            var newProfileData = profileData
+            newProfileData.stars_goal = starsGoal
+            newProfileData.bio = bio
+
+            return self.update(id: profileData.id, from: profileData, to: newProfileData)
+        }
+    }
+
+    func incrementVocabsLearnt(by increment: Int) {
+        _ = firstly {
+            self.getCurrentProfileData()
+        }.then { profileData -> Promise<ProfileData> in
+            var newProfileData = profileData
+            newProfileData.vocabs_learnt = profileData.vocabs_learnt + increment
 
             return self.update(id: profileData.id, from: profileData, to: newProfileData)
         }

@@ -19,8 +19,7 @@ class QuestionsGenerator {
          Generate till question upper limit if any is reached
          */
         let questionConstructorRandomFactory = try createQuestionContructorRandomFactory(
-            questionProbabilities: settings.questionProbabilities,
-                                                                                         scopeSize: settings.scope.count)
+            questionProbabilities: settings.questionProbabilities, scopeSize: settings.scope.count)
         let questionScopeFactory = createQuestionScopeFactory(
             compulsoryScope: settings.compulsoryTestingScope,
             scope: settings.scope)
