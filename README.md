@@ -1,13 +1,37 @@
-# LingoClash
-[LingoClash_mock_up.pdf](https://github.com/LingoClash/LingoClash/files/8192890/LingoClash_mock_up.pdf)
+![E3wpp7a](https://user-images.githubusercontent.com/24221801/163687599-ab8ebd9b-f19d-4c26-9d84-3127cb85527b.png)
 
-## Google drive
-https://drive.google.com/drive/folders/1ceTaFgINaEMX1UGmsMvObBYOr4uLGxxA
+# Description
 
-# Database Schema
+We are a group of language enthusiasts of diverse backgrounds. Having been exposed to numerous language learning apps, we have identified some of the best apps that have helped us tremendously in our learning journey. Among these apps, we thought that Hujiang is the closest to what we have envisioned as a perfect language-learning app. Despite that, we have not seen anything that resembles it in the English community and hence we decided to recreate it in English while also incorporating some of the best features that other apps have to offer such as spaced repetition.
 
-## ERD v3
-![DatabaseSchema drawio](https://user-images.githubusercontent.com/24221801/158073272-9613ebaa-50fd-4bfb-9eb3-0be1d2fa53ba.png)
+# Team Members
 
-## ERD v2
-![LingoClash_erd_v2](https://user-images.githubusercontent.com/24221801/157072046-11a56fc5-598a-42cc-b715-c5b20b4d1123.png)
+Hong Ai Ling
+Kevin Chua Kian Chun
+Sherwin Poh Kai Xun
+Toh Kar Wi
+
+# User Manual
+
+The user manual can be found [here](https://www.notion.so/kyletoh/User-Manual-5df7eb411366419c9803ab0c4bcc6511)
+
+# Getting started
+
+- Open Xcode Project file.
+- Wait for all the packages to be resolved.
+- Choose the scheme to work with. 
+
+
+| Scheme  | Description |
+| ------------- | ------------- |
+| LingoClash  | Production environment. Uses the production firestore database.  |
+| LingoClash Dev  | Development environment. Uses the development firestore database.  |
+
+- In the `AppConfigs`, some Debug variables are provided, to allow toggling between modes.
+
+| Variable  | Description |
+| ------------- | ------------- |
+| enablePreloadData  | Set to `true` to preload the firestore with sample data on app initialization.  |
+| enableLogin  | Set to `false` to disable login for development purposes. Only works in `LingoClash Dev` scheme.  |
+
+- `Build` the project and `Run` it. Enjoy~
