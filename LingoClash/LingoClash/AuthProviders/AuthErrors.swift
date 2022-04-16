@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-enum AuthError: Error  {
+enum AuthError: Error {
     case invalidURL
     case invalidParams
     case invalidLoginParams

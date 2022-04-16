@@ -9,15 +9,16 @@ import UIKit
 
 class LightTheme: ThemeProtocol {
     var mainFontName: String = "SF-Pro"
-    var accent: UIColor = UIColor(named: "AccentColor")!
-    var background: UIColor = UIColor(named: "Background")!
-    var tint: UIColor = UIColor(named: "TintColor")!
+    var accent = UIColor(named: "AccentColor")!
+    var background = UIColor(named: "Background")!
+    var tint = UIColor(named: "TintColor")!
     var green = UIColor(named: "Green")!
     var red = UIColor(named: "Red")!
     var primary = UIColor(named: "Primary")!
     var secondary = UIColor(named: "Secondary")!
     var tertiary = UIColor(named: "Tertiary")!
     var error = UIColor(named: "Error")!
+    var errorContainer = UIColor(named: "ErrorContainer")!
     var primaryText = UIColor(named: "PrimaryText")!
     var secondaryText = UIColor(named: "SecondaryText")!
     var tertiaryText = UIColor(named: "TertiaryText")!

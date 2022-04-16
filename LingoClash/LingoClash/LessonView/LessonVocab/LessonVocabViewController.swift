@@ -8,33 +8,33 @@
 import UIKit
 
 class LessonVocabViewController: UIViewController {
-    @IBOutlet weak var vocabLabel: UILabel!
-    @IBOutlet weak var sentenceDefinitionLabel: UILabel!
-    @IBOutlet weak var sentenceLabel: UILabel!
-    @IBOutlet weak var vocabDefinitionLabel: UILabel!
-    @IBOutlet weak var pronounciationLabel: UILabel!
+    @IBOutlet private var vocabLabel: UILabel!
+    @IBOutlet private var sentenceDefinitionLabel: UILabel!
+    @IBOutlet private var sentenceLabel: UILabel!
+    @IBOutlet private var vocabDefinitionLabel: UILabel!
+    @IBOutlet private var pronounciationLabel: UILabel!
 
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet private var nextButton: UIButton!
+    @IBOutlet private var prevButton: UIButton!
 
-    @IBAction func playVocabPronounciation(_ sender: UIButton) {
+    @IBAction private func playVocabPronounciation(_ sender: UIButton) {
         viewModel?.playVocabPronounciation()
     }
-    
-    @IBAction func navigateToPreviousVocab(_ sender: UIButton) {
+
+    @IBAction private func navigateToPreviousVocab(_ sender: UIButton) {
         viewModel?.navigatePrev()
     }
-    
-    @IBAction func navigateToNextVocab(_ sender: UIButton) {
+
+    @IBAction private func navigateToNextVocab(_ sender: UIButton) {
         viewModel?.navigateNext()
     }
-    
+
     var viewModel: LessonVocabViewModel? {
         didSet {
             fillUI()
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         guard let viewModel = viewModel else {
@@ -45,8 +45,8 @@ class LessonVocabViewController: UIViewController {
             lessonQuizViewController.viewModel = viewModel.lessonQuizViewModel
         }
     }
-    
-    @IBAction func unwindToVocabs(segue: UIStoryboardSegue) {
+
+    @IBAction private func unwindToVocabs(segue: UIStoryboardSegue) {
         viewModel?.reload()
     }
 
@@ -55,16 +55,16 @@ class LessonVocabViewController: UIViewController {
         styleUI()
         fillUI()
     }
-    
+
     func styleUI() {
-        
+
     }
-    
+
     func fillUI() {
         guard isViewLoaded, let viewModel = viewModel else {
             return
         }
-        
+
         viewModel.currVocab.bindAndFire { [unowned self] in self.vocabLabel.text = $0 }
         viewModel.currSentenceDefinition.bindAndFire { [unowned self] in self.sentenceDefinitionLabel.text = $0 }
         viewModel.currSentence.bindAndFire { [unowned self] in self.sentenceLabel.text = $0 }

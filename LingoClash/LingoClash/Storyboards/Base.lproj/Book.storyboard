@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="820" height="1080"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-reading-time" translatesAutoresizingMaskIntoConstraints="NO" id="BEM-Wb-1Rx">
-                                        <rect key="frame" x="0.0" y="960" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="950" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="efZ-iC-UWG"/>
                                             <constraint firstAttribute="height" constant="150" id="lC2-CC-1VU"/>
@@ -48,7 +48,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="BEM-Wb-1Rx" secondAttribute="bottom" constant="70" id="591-Kl-dCN"/>
+                                    <constraint firstAttribute="bottom" secondItem="BEM-Wb-1Rx" secondAttribute="bottom" constant="80" id="591-Kl-dCN"/>
                                     <constraint firstAttribute="trailing" secondItem="xVM-nE-QFF" secondAttribute="trailing" id="LDS-WK-CmG"/>
                                     <constraint firstAttribute="bottom" secondItem="xVM-nE-QFF" secondAttribute="bottom" constant="100" id="OOl-na-K2T"/>
                                     <constraint firstItem="ieZ-Ka-m70" firstAttribute="centerX" secondItem="Zul-2c-ihB" secondAttribute="centerX" id="gdW-yD-PZL"/>
@@ -102,6 +102,9 @@
                                                     <color key="baseForegroundColor" name="Primary"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="pgD-es-a7e" kind="presentation" modalPresentationStyle="fullScreen" id="hHB-bV-UuV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxr-8a-Poi">
                                                 <rect key="frame" x="96.5" y="0.0" width="66.5" height="31"/>
@@ -243,7 +246,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSx-RO-ezo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5295" y="-126"/>
+            <point key="canvasLocation" x="5295" y="-129"/>
+        </scene>
+        <!--PKGameLobbyViewController-->
+        <scene sceneID="Y09-wa-dSv">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PKGame" storyboardName="PKGame" referencedIdentifier="PKGameLobbyViewController" id="pgD-es-a7e" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Sle-hm-Bq8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Pf-P2-2Sm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5088" y="-129"/>
         </scene>
         <!--Current Book Tab Bar Controller-->
         <scene sceneID="xGX-j0-uDW">
@@ -324,7 +337,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yZG-JA-Oy7"/>
+        <segue reference="ZPf-VB-GhE"/>
         <segue reference="aho-Ff-dmE"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K6s-Mm-Rk2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K6s-Mm-Rk2">
     <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -58,7 +58,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62O-yZ-ZwO">
-                                        <rect key="frame" x="215" y="406" width="594" height="24"/>
+                                        <rect key="frame" x="203" y="406" width="618" height="24"/>
                                         <string key="text">    “Success is the sum of small efforts, repeated day in and day out.”
     ―  Robert Collier, self-help author</string>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
@@ -66,7 +66,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    ―  Robert Collier, self-help author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIu-HE-ehr">
-                                        <rect key="frame" x="354" y="440" width="316" height="24"/>
+                                        <rect key="frame" x="349" y="440" width="326" height="24"/>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         <color key="textColor" name="Secondary"/>
                                         <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                             <constraint firstItem="lZU-pN-TOX" firstAttribute="top" secondItem="Big-oc-yN4" secondAttribute="bottom" constant="-20" id="3cr-q3-QE5"/>
                             <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="lZU-pN-TOX" secondAttribute="trailing" constant="50" id="80b-7z-UFf"/>
                             <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="Big-oc-yN4" secondAttribute="trailing" constant="100" id="86K-Gb-g8d"/>
-                            <constraint firstItem="twb-mm-j3v" firstAttribute="top" secondItem="QOj-mM-4xl" secondAttribute="topMargin" constant="50" id="IJa-Xl-wnd"/>
+                            <constraint firstItem="twb-mm-j3v" firstAttribute="top" secondItem="IaJ-5d-J2x" secondAttribute="top" constant="50" id="IJa-Xl-wnd"/>
                             <constraint firstItem="MSZ-tI-a42" firstAttribute="top" secondItem="lZU-pN-TOX" secondAttribute="bottom" id="Iva-95-C35"/>
                             <constraint firstItem="MSZ-tI-a42" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" id="WRq-Hz-YQm"/>
                             <constraint firstItem="twb-mm-j3v" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" constant="50" id="dwt-s3-btq"/>

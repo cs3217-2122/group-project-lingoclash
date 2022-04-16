@@ -8,17 +8,18 @@
 import UIKit
 
 struct AppConfigs {
-    
+
     struct Debug {
+
         // Preloads the db with some sample data. Only works in development scheme.
         static let enablePreloadData = false
         static let enableLogin = false
-//        static let testEmail = "test3@test.com"
-//        static let testPassword = "test@123"
-        static let testEmail = "guy@gmail.com"
-        static let testPassword = "setMeUp?"
+        static let testAccounts: [LoginFields] = [
+            LoginFields(email: "guy@gmail.com", password: "setMeUp?"),
+            LoginFields(email: "e@e.com", password: "123456")
+        ]
     }
-    
+
     struct View {
         static let primaryColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
         static let vocabCollectionCellIdentifier = "vocabCollectionCellIdentifier"
@@ -32,8 +33,8 @@ struct AppConfigs {
         static let devServerBaseURL = "http://localhost:3000"
         static let perPage = 10
         static let field = "id"
-        static let order = "desc"
+        static let isDescending = true
         static let accessTokenKey = "access_token"
     }
-    
+
 }

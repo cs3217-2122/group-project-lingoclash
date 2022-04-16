@@ -6,9 +6,9 @@
 //
 
 class ProfileBookManager: DataManager<ProfileBookData> {
-    
-    init() {
-        super.init(resource: "profile_books")
-    }
-}
 
+    init() {
+        super.init(resource: DataManagerResources.profileBooks)
+    }
+
+}

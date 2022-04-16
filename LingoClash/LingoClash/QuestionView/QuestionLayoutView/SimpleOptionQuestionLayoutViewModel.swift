@@ -23,7 +23,7 @@ class SimpleOptionQuestionLayoutViewModel: QuestionLayoutViewModel {
         }
         self.answerIndex = answerIndex
     }
-    
+
     func didSelectOption(at index: Int) {
         guard optionSelectedIndex == nil else {
             return

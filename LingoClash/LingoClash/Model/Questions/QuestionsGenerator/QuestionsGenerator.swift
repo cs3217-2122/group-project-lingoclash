@@ -9,7 +9,7 @@ import Darwin
 
 class QuestionsGenerator {
     private static let questionConstructors: [QuestionContructor] = [DefinitionOptionQuestionConstructor()]
-    
+
     func generateQuestions(settings: QuestionGeneratorSettings) throws -> QuestionSequence {
         /*
          Functionality should create a question sequence that follows the settings provided
@@ -18,12 +18,16 @@ class QuestionsGenerator {
          Once CTS is empty, able to generate questions that test random vocabs within the scope.
          Generate till question upper limit if any is reached
          */
-        let questionConstructorRandomFactory = try createQuestionContructorRandomFactory(questionProbabilities: settings.questionProbabilities,
-                                                                                         scopeSize: settings.scope.count)
-        let questionScopeFactory = createQuestionScopeFactory(compulsoryScope: settings.compulsoryTestingScope, scope: settings.scope)
-        return QuestionSequence(scopeFactory: questionScopeFactory, constructorFactory: questionConstructorRandomFactory)
+        let questionConstructorRandomFactory = try createQuestionContructorRandomFactory(
+            questionProbabilities: settings.questionProbabilities, scopeSize: settings.scope.count)
+        let questionScopeFactory = createQuestionScopeFactory(
+            compulsoryScope: settings.compulsoryTestingScope,
+            scope: settings.scope)
+        return QuestionSequence(
+            scopeFactory: questionScopeFactory,
+            constructorFactory: questionConstructorRandomFactory)
     }
-    
+
     private func createQuestionScopeFactory(compulsoryScope: Set<Vocab>?, scope: Set<Vocab>) -> QuestionScopeFactory {
         if let compulsoryScope = compulsoryScope {
             return QuestionScopeFactory(compulsoryScope: Array(compulsoryScope), scope: scope)
@@ -31,8 +35,10 @@ class QuestionsGenerator {
             return QuestionScopeFactory(compulsoryScope: [], scope: scope)
         }
     }
-    
-    private func createQuestionContructorRandomFactory(questionProbabilities: Dictionary<QuestionType, Double>?, scopeSize: Int) throws -> QuestionConstructorRandomFactory {
+
+    private func createQuestionContructorRandomFactory(
+        questionProbabilities: [QuestionType: Double]?,
+        scopeSize: Int) throws -> QuestionConstructorRandomFactory {
         var constructors = [QuestionContructor]()
         var probabilities = [Double]()
         if let questionProbabilities = questionProbabilities {
@@ -46,20 +52,23 @@ class QuestionsGenerator {
             }
             return QuestionConstructorRandomFactory(constructors: constructors, probabilities: probabilities)
         } else {
-            constructors = QuestionsGenerator.questionConstructors.filter { isConstructorViable($0, scopeSize: scopeSize) }
+            constructors = QuestionsGenerator.questionConstructors.filter {
+                isConstructorViable($0, scopeSize: scopeSize)
+
+            }
             probabilities = getUniformDistribution(itemCount: constructors.count)
         }
         guard !constructors.isEmpty else {
             throw QuestionGenerationError.insufficientVocabsToGenerateAnyQuestions
         }
         return QuestionConstructorRandomFactory(constructors: constructors, probabilities: probabilities)
-        
+
     }
-    
+
     private func isConstructorViable(_ constructor: QuestionContructor, scopeSize: Int) -> Bool {
-        return constructor.otherVocabsCount + constructor.vocabsTestedCount <= scopeSize
+        constructor.otherVocabsCount + constructor.vocabsTestedCount <= scopeSize
     }
-    
+
     private func getUniformDistribution(itemCount: Int) -> [Double] {
         guard itemCount > 0 else {
             return []
@@ -67,7 +76,7 @@ class QuestionsGenerator {
         let probability = 1 / Double(itemCount)
         return [Double](repeating: probability, count: itemCount)
     }
-    
+
     private func getQuestionConstructor(for questionType: QuestionType) -> QuestionContructor? {
         switch questionType {
         case .definitionOption:
@@ -83,14 +92,18 @@ struct QuestionGeneratorSettings {
     // fixed number of questions to generate, if nil, unlimited
     let numberOfQuestions: Int?
     // probability of questions types to generate, if nil, uniformly distributed
-    let questionProbabilities: Dictionary<QuestionType, Double>?
+    let questionProbabilities: [QuestionType: Double]?
     // scope of vocab that need to be tested at least once, needs to be subset of scope
     // TODO: implement subset check
     let compulsoryTestingScope: Set<Vocab>?
     // scope of vocab to generate questions from
     let scope: Set<Vocab>
-    
-    init(scope: Set<Vocab>, compulsoryTestingScope: Set<Vocab>? = nil, questionProbalities: Dictionary<QuestionType, Double>? = nil, numberOfQuestions: Int? = nil) {
+
+    init(
+        scope: Set<Vocab>,
+        compulsoryTestingScope: Set<Vocab>? = nil,
+        questionProbalities: [QuestionType: Double]? = nil,
+        numberOfQuestions: Int? = nil) {
         self.numberOfQuestions = numberOfQuestions
         self.questionProbabilities = questionProbalities
         self.compulsoryTestingScope = compulsoryTestingScope

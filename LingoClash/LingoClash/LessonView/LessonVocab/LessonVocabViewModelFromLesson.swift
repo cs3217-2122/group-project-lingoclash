@@ -10,7 +10,7 @@ import Foundation
 class LessonVocabViewModelFromLesson: LessonVocabViewModel {
     let lesson: Lesson
     var currIndex: Dynamic<Int> = Dynamic(0)
-    
+
     var currVocab: Dynamic<String>
     var currVocabDefinition: Dynamic<String>
     var currVocabPronounciation: Dynamic<String>
@@ -19,7 +19,7 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
     var isLastVocab: Dynamic<Bool>
     var isFirstVocab: Dynamic<Bool>
     var lessonQuizViewModel: LessonQuizViewModel
-    
+
     init(lesson: Lesson) {
         assert(lesson.vocabs.count > 0)
         self.lesson = lesson
@@ -33,16 +33,16 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
         self.isLastVocab = Dynamic(lesson.vocabs.count == self.currIndex.value - 1)
         self.lessonQuizViewModel = LessonQuizViewModelFromLesson(lesson: lesson)
     }
-    
+
     func reload() {
         updateCurrVocabInfo(currIndex: 0)
         self.lessonQuizViewModel = LessonQuizViewModelFromLesson(lesson: lesson)
     }
-    
+
     func playVocabPronounciation() {
         // TODO: Implement pronounciation
     }
-    
+
     func navigateNext() {
         guard !isLastVocab.value else {
             return
@@ -53,10 +53,10 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
         guard !isFirstVocab.value else {
             return
         }
-        
+
         updateCurrVocabInfo(currIndex: self.currIndex.value - 1)
     }
-    
+
     private func updateCurrVocabInfo(currIndex: Int) {
         let isWithinRange = currIndex < lesson.vocabs.count && currIndex >= 0
         guard isWithinRange else {

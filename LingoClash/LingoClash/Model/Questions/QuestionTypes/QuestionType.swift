@@ -6,7 +6,7 @@
 //
 
 /// For users of questions to know the types of questions.
-enum QuestionType {
+enum QuestionType: String, Codable {
     case definitionOption
     case matchVocabToDefinitionOption
 }

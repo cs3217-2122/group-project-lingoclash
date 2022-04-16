@@ -11,21 +11,21 @@ class LessonSelectorTableCell: UITableViewCell {
     typealias VM = LessonTableCellViewModel
     static let reuseIdentifier = "lessonSelectorTableCell"
 
-    @IBOutlet weak var levelNameLabel: UILabel!
-    @IBOutlet var stars: [StarView]!
-    
+    @IBOutlet private var levelNameLabel: UILabel!
+    @IBOutlet private var stars: [StarView]!
+
     var levelName: String = "" {
         didSet {
             self.levelNameLabel.text = levelName
         }
     }
-    
+
     var viewModel: VM? {
         didSet {
             fillUI()
         }
     }
-    
+
     func fillUI() {
         guard let viewModel = viewModel else {
             return

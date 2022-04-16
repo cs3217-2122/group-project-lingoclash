@@ -14,13 +14,13 @@ class LessonQuizProgressBarView: UIProgressView {
         let starView = getStarView(at: position)
         addSubview(starView)
     }
-    
+
     private func getStarView(at position: Float) -> UIImageView {
         let starImageView = UIImageView(image: self.starImage)
-        let height:CGFloat = 30
+        let height: CGFloat = 30
         let width = height
         let xPosition = (CGFloat(position) * frame.width) - width / 2
-        let yPosition:CGFloat = -15
+        let yPosition: CGFloat = -15
         starImageView.frame = CGRect(x: xPosition, y: yPosition, width: width, height: height)
         return starImageView
     }

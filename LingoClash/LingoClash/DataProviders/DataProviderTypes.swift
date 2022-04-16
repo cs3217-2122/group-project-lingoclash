@@ -13,11 +13,16 @@ protocol Record: Codable {
     var id: Identifier { get }
 }
 
+extension Record {
+    // Local creation of Records to be pushed to DataProvider where id is useless
+    static var placeholderId: Identifier { "PLACEHOLDER" }
+}
+
 struct CreateParams<T: Codable> {
     let data: T
 }
 
-struct CreateResult<T: Codable> {
+struct CreateResult<T: Record> {
     let data: T
 }
 
@@ -45,7 +50,7 @@ struct PaginationPayload {
 
 struct SortPayload {
     let field: String
-    let order: String
+    let isDescending: Bool
 }
 
 struct GetListParams {

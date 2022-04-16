@@ -8,14 +8,14 @@
 import UIKit
 
 class ExploreBookViewController: UIViewController {
-    
-    @IBOutlet weak var containerView: UIView!
-    
+
+    @IBOutlet private var containerView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
     }
-    
+
     func setUpView() {
         ViewUtilities.styleCard(containerView)
     }

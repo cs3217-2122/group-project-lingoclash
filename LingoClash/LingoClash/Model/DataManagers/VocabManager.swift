@@ -6,8 +6,8 @@
 //
 
 class VocabManager: DataManager<VocabData> {
-    
+
     init() {
-        super.init(resource: "vocabs")
+        super.init(resource: DataManagerResources.vocabs)
     }
 }

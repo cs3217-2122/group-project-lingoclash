@@ -8,17 +8,17 @@
 import UIKit
 
 class LearningBooksViewController: UIViewController {
-    
-    @IBOutlet weak var containerView: UIView!
-    
+
+    @IBOutlet private var containerView: UIView!
+
     private let viewModel = LearningBooksViewModel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     // MARK: - Navigation
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let collectionViewController = segue.destination as? BookCollectionViewController {
             collectionViewController.viewModel = self.viewModel

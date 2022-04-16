@@ -14,5 +14,5 @@ class VocabsLearntTableCell: UITableViewCell {
             self.vocabWordLabel.text = vocabWord
         }
     }
-    @IBOutlet weak var vocabWordLabel: UILabel!
+    @IBOutlet private var vocabWordLabel: UILabel!
 }

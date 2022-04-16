@@ -18,11 +18,11 @@ class CurrentBookTabBarController: UITabBarController {
         setUpBinders()
         viewModel?.refresh()
     }
-    
+
     func setUpBinders() {
         let currentBookViewIndex = 0
         let noBookViewIndex = 1
-        
+
         viewModel?.$currentBook.sink {[weak self] book in
             if let _ = book {
                 self?.selectedIndex = currentBookViewIndex
@@ -30,7 +30,7 @@ class CurrentBookTabBarController: UITabBarController {
                 self?.selectedIndex = noBookViewIndex
             }
         }.store(in: &cancellables)
-        
+
         viewModel?.$isRefreshing.sink {[weak self] isRefreshing in
             if isRefreshing {
                 self?.parent?.showSpinner()

@@ -9,26 +9,26 @@ import UIKit
 import Combine
 
 class ChangePasswordViewController: UIViewController {
-    
-    @IBOutlet weak var currentPasswordTextField: UITextField!
-    @IBOutlet weak var newPasswordTextField: UITextField!
-    @IBOutlet weak var confirmNewPasswordTextField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
-    
+
+    @IBOutlet private var currentPasswordTextField: UITextField!
+    @IBOutlet private var newPasswordTextField: UITextField!
+    @IBOutlet private var confirmNewPasswordTextField: UITextField!
+    @IBOutlet private var errorLabel: UILabel!
+
     weak var viewModel: SettingsViewModel?
     private var cancellables: Set<AnyCancellable> = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setUpView()
         setUpBinders()
     }
-    
+
     private func setUpView() {
         errorLabel.hide()
     }
-    
+
     private func setUpBinders() {
         viewModel?.$changePasswordError.sink {[weak self] error in
             if let error = error {
@@ -37,7 +37,7 @@ class ChangePasswordViewController: UIViewController {
                 self?.errorLabel.hide()
             }
         }.store(in: &cancellables)
-        
+
         viewModel?.$alertContent.sink {[weak self] alertContent in
             if let alertContent = alertContent {
                 self?.showDoneAlert(content: alertContent) { _ in
@@ -46,14 +46,17 @@ class ChangePasswordViewController: UIViewController {
             }
         }.store(in: &cancellables)
     }
-    
-    @IBAction func saveButtonTapped(_ sender: Any) {
+
+    @IBAction private func saveButtonTapped(_ sender: Any) {
         let currentPassword = FormUtilities.getTrimmedString(textField: currentPasswordTextField)
         let newPassword = FormUtilities.getTrimmedString(textField: newPasswordTextField)
         let confirmNewPassword = FormUtilities.getTrimmedString(textField: confirmNewPasswordTextField)
-        
-        let fields = ChangePasswordFields(currentPassword: currentPassword, newPassword: newPassword, confirmNewPassword: confirmNewPassword)
+
+        let fields = ChangePasswordFields(
+            currentPassword: currentPassword,
+            newPassword: newPassword,
+            confirmNewPassword: confirmNewPassword)
         viewModel?.changePassword(fields)
     }
-    
+
 }

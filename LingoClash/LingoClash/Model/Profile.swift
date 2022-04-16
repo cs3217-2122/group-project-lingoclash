@@ -9,9 +9,10 @@ import Foundation
 
 struct Profile {
     var id: Identifier
-    let name: String
-    let email: String
+    let user_id: Identifier
     let currentBook: Book?
+    let email: String
+    let name: String
     let stars: Int
     let starsToday: Int
     let starsGoal: Int
@@ -21,18 +22,31 @@ struct Profile {
     let pkWinningRate: Double
     let rankingByTotalStars: Int
 
-    init(userIdentity: UserIdentity, profileData: ProfileData, currentBook: Book?, rankingByTotalStars: Int) {
+    init(profileData: ProfileData, currentBook: Book?, rankingByTotalStars: Int, pkWinningRate: Double) {
         self.id = profileData.id
-        self.name = userIdentity.fullName ?? ""
-        self.email = userIdentity.email ?? ""
+        self.user_id = profileData.user_id
+        self.currentBook = currentBook
+        self.email = profileData.email
+        self.name = profileData.name
         self.stars = profileData.stars
         self.starsToday = profileData.stars_today
-        self.currentBook = currentBook
         self.starsGoal = profileData.stars_goal
         self.bio = profileData.bio
         self.daysLearning = profileData.days_learning
         self.vocabsLearnt = profileData.vocabs_learnt
-        self.pkWinningRate = profileData.pk_winning_rate
+        self.pkWinningRate = pkWinningRate
         self.rankingByTotalStars = rankingByTotalStars
     }
 }
+
+extension Profile: Hashable {
+    static func == (lhs: Profile, rhs: Profile) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
+    }
+}
+
+// extension Profile: Codable, Hashable {}

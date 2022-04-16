@@ -6,8 +6,8 @@
 //
 
 class BookCategoryManager: DataManager<BookCategoryData> {
-    
+
     init() {
-        super.init(resource: "book_categories")
+        super.init(resource: DataManagerResources.bookCategories)
     }
 }

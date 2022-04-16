@@ -106,6 +106,9 @@
                                             <color key="baseForegroundColor" name="SecondaryText"/>
                                             <color key="baseBackgroundColor" name="Secondary"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="logoutTapped:" destination="q2j-81-4aM" eventType="touchUpInside" id="4Rf-MC-uoL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

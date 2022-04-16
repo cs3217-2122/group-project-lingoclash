@@ -9,26 +9,26 @@ import UIKit
 import Combine
 
 class CurrentBookViewController: UIViewController {
-    
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var bookNameLabel: UILabel!
-    @IBOutlet weak var progressLabel: UILabel!
-    @IBOutlet weak var totalStarsLabel: UILabel!
-    @IBOutlet weak var progressView: UIProgressView!
-    
+
+    @IBOutlet private var containerView: UIView!
+    @IBOutlet private var bookNameLabel: UILabel!
+    @IBOutlet private var progressLabel: UILabel!
+    @IBOutlet private var totalStarsLabel: UILabel!
+    @IBOutlet private var progressView: UIProgressView!
+
     var viewModel: HomeViewModel?
     private var cancellables: Set<AnyCancellable> = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
         setUpBinders()
     }
-    
+
     func setUpView() {
         ViewUtilities.styleCard(containerView)
     }
-    
+
     func setUpBinders() {
         viewModel?.$currentBook.sink {[weak self] book in
             if let book = book {
@@ -39,7 +39,7 @@ class CurrentBookViewController: UIViewController {
             }
         }.store(in: &cancellables)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let lessonSelectionViewController = segue.destination as? LessonSelectionViewController {
             guard let lessonSelectionViewModel = self.viewModel?.lessonSelectionViewModel else {
@@ -47,7 +47,13 @@ class CurrentBookViewController: UIViewController {
                 return
             }
             lessonSelectionViewController.viewModel = lessonSelectionViewModel
+        } else if let pkLobbyVC = segue.destination as? PKGameLobbyViewController {
+            guard let pkLobbyVM = self.viewModel?.pkGameLobbyViewModel else {
+                assert(false)
+                return
+            }
+            pkLobbyVC.viewModel = pkLobbyVM
         }
     }
-    
+
 }

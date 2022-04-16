@@ -9,23 +9,20 @@ import UIKit
 
 class LessonQuizOutcomeViewController: UIViewController {
     typealias VM = LessonQuizOutcomeViewModel
-    
+
     enum Segue {
         static let unwindOutcomeToVocabVC = "unwindOutcomeToVocabVC"
     }
 
-    let darkBackgroundColor = UIColor(red: 5.0/255, green: 44.0/255, blue: 79.0/255, alpha: 1)
-    let lightBackgroundColor = UIColor(red: 3.0/255, green: 144.0/255, blue: 228.0/255, alpha: 1)
-    
-    @IBOutlet var stars: [StarView]!
-    @IBOutlet weak var completionStatusLabel: UILabel!
-    @IBOutlet weak var lessonNameLabel: UILabel!
-    @IBOutlet weak var performanceCommentLabel: UILabel!
-    @IBOutlet weak var vocabsLearntTableView: UITableView!
-    @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet private var stars: [StarView]!
+    @IBOutlet private var completionStatusLabel: UILabel!
+    @IBOutlet private var lessonNameLabel: UILabel!
+    @IBOutlet private var performanceCommentLabel: UILabel!
+    @IBOutlet private var vocabsLearntTableView: UITableView!
+    @IBOutlet private var topView: UIView!
+    @IBOutlet private var actionButton: UIButton!
 
-    @IBAction func onActionButtonTap(_ sender: UIButton) {
+    @IBAction private func onActionButtonTap(_ sender: UIButton) {
         guard let viewModel = self.viewModel else {
             return
         }
@@ -41,19 +38,19 @@ class LessonQuizOutcomeViewController: UIViewController {
             fillUI()
         }
     }
-    
-    @IBOutlet weak var quizOutcomeLabel: UILabel!
+
+    @IBOutlet private var quizOutcomeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.vocabsLearntTableView.dataSource = self
         styleUI()
         fillUI()
     }
-    
+
     func styleUI() {
-        
+
     }
-    
+
     func fillUI() {
         guard isViewLoaded, let viewModel = viewModel else {
             return
@@ -62,7 +59,7 @@ class LessonQuizOutcomeViewController: UIViewController {
         self.lessonNameLabel.text = viewModel.lessonName
         self.performanceCommentLabel.text = viewModel.performanceComment
         viewModel.starsFilled.enumerated().forEach { stars[$0.offset].isFilled = $0.element }
-        self.topView.backgroundColor = viewModel.isBackgroundDark ? darkBackgroundColor : lightBackgroundColor
+        self.topView.backgroundColor = viewModel.isBackgroundDark ? Theme.current.secondary : Theme.current.primary
         self.actionButton.titleLabel?.text = viewModel.actionText
     }
 }

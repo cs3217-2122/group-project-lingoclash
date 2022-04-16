@@ -7,20 +7,19 @@
 
 import PromiseKit
 
-
 class BookManager: DataManager<BookData> {
-    
+
     init() {
-        super.init(resource: "books")
+        super.init(resource: DataManagerResources.books)
     }
-    
+
     func getBook(id: Identifier) -> Promise<Book> {
         var book: BookData?
         var bookCategory: BookCategoryData?
         var profileBook: ProfileBookData?
         var profileLessons = [ProfileLessonData]()
         var vocabsByLesson = [LessonData: [VocabData]]()
-        
+
         return firstly {
             firstly {
                 self.getOne(id: id)
@@ -31,7 +30,7 @@ class BookManager: DataManager<BookData> {
             guard let book = book else {
                 return Promise.reject(reason: DataManagerError.dataNotFound)
             }
-            
+
             // Gets the lessons of the book
             return firstly {
                 LessonManager().getManyReference(target: "book_id", id: book.id)
@@ -51,7 +50,7 @@ class BookManager: DataManager<BookData> {
             guard let categoryId = book?.category_id else {
                 return Promise.reject(reason: DataManagerError.dataNotFound)
             }
-            
+
             return firstly {
                 BookCategoryManager().getOne(id: categoryId)
             }.done { bookCategoryData in
@@ -70,7 +69,7 @@ class BookManager: DataManager<BookData> {
             guard let profileBook = profileBook else {
                 return Promise<Void>()
             }
-            
+
             // Gets the profile lessons
             return firstly {
                 ProfileLessonManager().getManyReference(target: "profile_book_id", id: profileBook.id)
@@ -78,7 +77,7 @@ class BookManager: DataManager<BookData> {
                 guard !profileLessonData.isEmpty else {
                     return
                 }
-                
+
                 profileLessons = profileLessonData
             }
         }.compactMap {
@@ -86,7 +85,7 @@ class BookManager: DataManager<BookData> {
                   let bookCategory = bookCategory else {
                       return nil
                   }
-            
+
             return Book(
                 bookData: book,
                 vocabsByLesson: vocabsByLesson,
@@ -96,10 +95,10 @@ class BookManager: DataManager<BookData> {
             )
         }
     }
-    
+
     func getCompletedBooks() -> Promise<[Book]> {
         var completedBooks = [Book]()
-        
+
         return firstly {
             ProfileManager().getCurrentProfile()
         }.then { profileData in
@@ -115,16 +114,16 @@ class BookManager: DataManager<BookData> {
                     completedBooks.append(book)
                 }
             }
-            
+
             return when(fulfilled: bookPromises)
         }.map {
             completedBooks
         }
     }
-    
+
     func getLearningBooks() -> Promise<[Book]> {
         var learningBooks = [Book]()
-        
+
         return firstly {
             ProfileManager().getCurrentProfile()
         }.then { profileData in
@@ -140,18 +139,18 @@ class BookManager: DataManager<BookData> {
                     learningBooks.append(book)
                 }
             }
-            
+
             return when(fulfilled: bookPromises)
         }.map {
             learningBooks
         }
     }
-    
+
     func getRecommendedBooks() -> Promise<[BooksForCategory]> {
         var recommendedBooks = [Book]()
         var bookCategories = [BookCategoryData]()
         var booksForCategories = [BooksForCategory]()
-        
+
         return firstly {
             self.getList()
         }.then { booksData -> Promise<Void> in
@@ -163,7 +162,7 @@ class BookManager: DataManager<BookData> {
                     recommendedBooks.append(book)
                 }
             }
-            
+
             return when(fulfilled: bookPromises)
         }.then { () -> Promise<Void> in
             // Gets the book category
@@ -184,7 +183,7 @@ class BookManager: DataManager<BookData> {
             return booksForCategories
         }
     }
-        
+
     func markAsLearning(bookId: Identifier) -> Promise<ProfileBookData> {
         firstly {
             ProfileManager().getCurrentProfile()

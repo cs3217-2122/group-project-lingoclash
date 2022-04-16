@@ -18,22 +18,23 @@ class LessonSelectionViewController: UIViewController {
             fillUI()
         }
     }
-    
-    @IBOutlet weak var levelsPassedLabel: UILabel!
-    @IBOutlet weak var starsObtainedLabel: UILabel!
-    @IBOutlet weak var lessonsTableView: UITableView!
+
+    @IBOutlet private var levelsPassedLabel: UILabel!
+    @IBOutlet private var starsObtainedLabel: UILabel!
+    @IBOutlet private var lessonsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         lessonsTableView.dataSource = self
         lessonsTableView.delegate = self
         styleUI()
         fillUI()
+
     }
-    
+
     func styleUI() {
-        
+
     }
-    
+
     func fillUI() {
         guard isViewLoaded, let viewModel = viewModel else {
             return
@@ -44,21 +45,21 @@ class LessonSelectionViewController: UIViewController {
         viewModel.lessonsPassed.bindAndFire { [unowned self] in
             self.levelsPassedLabel.text = $0
         }
-        viewModel.lessonTableViewModels.bindAndFire { [unowned self] (_) -> Void in
+        viewModel.lessonTableViewModels.bindAndFire { [unowned self] _ -> Void in
             self.lessonsTableView.reloadData()
         }
-        viewModel.lessonOverviewViewModel.bind{ [unowned self] in
+        viewModel.lessonOverviewViewModel.bind { [unowned self] in
             transitionToLessonOverview(viewModel: $0)
         }
     }
-    
+
     func transitionToLessonOverview(viewModel: LessonOverviewViewModel?) {
         guard viewModel != nil else {
             return
         }
         performSegue(withIdentifier: Segue.selectorToOverview, sender: self)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let overviewVC = segue.destination as? LessonOverviewViewController {
             guard let overviewViewModel = self.viewModel?.lessonOverviewViewModel.value else {
@@ -67,8 +68,8 @@ class LessonSelectionViewController: UIViewController {
             overviewVC.viewModel = overviewViewModel
         }
     }
-    
-    @IBAction func unwindToSelection(segue: UIStoryboardSegue) {
+
+    @IBAction private func unwindToSelection(segue: UIStoryboardSegue) {
         viewModel?.reloadLessons()
     }
 }
@@ -77,9 +78,9 @@ extension LessonSelectionViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         viewModel?.lessonTableViewModels.value.count ?? 0
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,15 +93,15 @@ extension LessonSelectionViewController: UITableViewDataSource {
         cell.viewModel = viewModel?.lessonTableViewModels.value[indexPath.section]
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return cellSpacingHeight
+        cellSpacingHeight
     }
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-//        headerView.backgroundColor = UIColor.clear
-        headerView.backgroundColor = Theme.current.tertiary
+        headerView.backgroundColor = UIColor.clear
+//        headerView.backgroundColor = Theme.current.tertiary
         return headerView
     }
 }

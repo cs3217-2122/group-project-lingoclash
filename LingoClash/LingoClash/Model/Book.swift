@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum BookStatus {
     case unread
     case learning
@@ -22,7 +21,7 @@ struct Book {
     let passedLessons: Int
     let lessons: [Lesson]
     let status: BookStatus
-    
+
     var progress: Float {
         Float(passedLessons / totalLessons)
     }
@@ -33,13 +32,18 @@ struct Book {
         let totalStarsPerLesson = 3
         return totalLessons * totalStarsPerLesson
     }
-    
-    init(bookData: BookData, vocabsByLesson: [LessonData: [VocabData]], bookCategoryData: BookCategoryData, profileBookData: ProfileBookData?, profileLessonsData: [ProfileLessonData]) {
+
+    init(
+        bookData: BookData,
+        vocabsByLesson: [LessonData: [VocabData]],
+        bookCategoryData: BookCategoryData,
+        profileBookData: ProfileBookData?,
+        profileLessonsData: [ProfileLessonData]) {
         self.category = BookCategory(bookCategoryData: bookCategoryData)
         self.id = bookData.id
         self.name = bookData.name
         self.totalLessons = vocabsByLesson.count
-        
+
         var passedLessonsCount = 0
         var profileLessonsByLessonId = [Identifier: ProfileLessonData]()
         let profileLessons = profileLessonsData
@@ -50,19 +54,31 @@ struct Book {
             profileLessonsByLessonId[profileLesson.lesson_id] = profileLesson
         }
         self.passedLessons = passedLessonsCount
-        
+
         var bookLessons = [Lesson]()
         for (lessonData, vocabsData) in vocabsByLesson {
             let vocabs = vocabsData.map { Vocab(vocabData: $0) }
-            
-            bookLessons.append(Lesson(lessonData: lessonData, vocabs: vocabs, profileLessonData: profileLessonsByLessonId[lessonData.id]))
+
+            bookLessons.append(
+                Lesson(
+                    lessonData: lessonData,
+                    vocabs: vocabs,
+                    profileLessonData: profileLessonsByLessonId[lessonData.id]))
         }
         self.lessons = bookLessons
-        
+
         if let profileBookData = profileBookData {
             self.status = profileBookData.is_completed ? .completed : .learning
         } else {
             self.status = .unread
         }
+    }
+
+    func getVocabs() -> Set<Vocab> {
+        var vocabs = Set<Vocab>()
+        for lesson in self.lessons {
+            vocabs = vocabs.union(lesson.vocabs)
+        }
+        return vocabs
     }
 }

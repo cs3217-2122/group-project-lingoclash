@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -25,7 +30,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Gp1-0j-4ak"/>
                                         </constraints>
-                                        <color key="tintColor" name="PrimaryText"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
                                         <connections>
@@ -34,7 +39,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IR3-ea-lRv">
                                         <rect key="frame" x="0.0" y="70" width="740" height="50"/>
-                                        <color key="tintColor" name="Primary"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
@@ -68,11 +73,78 @@
                     <connections>
                         <outlet property="loginButton" destination="IR3-ea-lRv" id="4Ci-SZ-zbJ"/>
                         <outlet property="signUpButton" destination="f0m-Dr-DVL" id="E47-8T-lXW"/>
+                        <segue destination="NkY-f7-qBV" kind="show" identifier="toDevLoginVC" id="21a-Du-6Z8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="75.669642857142847"/>
+        </scene>
+        <!--Dev Login View Controller-->
+        <scene sceneID="oyO-2o-oPb">
+            <objects>
+                <viewController id="NkY-f7-qBV" customClass="DevLoginViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PJk-Kq-kuW">
+                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(DEV) Choose account to log in as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7e-SQ-3ro">
+                                <rect key="frame" x="54.5" y="74" width="711.5" height="60"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MHe-qZ-hwB">
+                                <rect key="frame" x="0.0" y="184" width="820" height="976"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="devLoginTableCellIdentifier" id="Hxx-fO-mou" customClass="DevLoginTableCell" customModule="LingoClash" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="820" height="66.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hxx-fO-mou" id="mAT-bP-ge4">
+                                            <rect key="frame" x="0.0" y="0.0" width="820" height="66.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niM-bV-5BO">
+                                                    <rect key="frame" x="375" y="15" width="70.5" height="36.5"/>
+                                                    <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="30"/>
+                                                    <color key="textColor" name="Secondary"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="niM-bV-5BO" firstAttribute="centerY" secondItem="mAT-bP-ge4" secondAttribute="centerY" id="LIg-6J-w4Z"/>
+                                                <constraint firstItem="niM-bV-5BO" firstAttribute="centerX" secondItem="mAT-bP-ge4" secondAttribute="centerX" id="U0o-bP-O9t"/>
+                                                <constraint firstItem="niM-bV-5BO" firstAttribute="top" secondItem="mAT-bP-ge4" secondAttribute="top" constant="15" id="fK4-4B-cnJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="niM-bV-5BO" secondAttribute="bottom" constant="15" id="wpd-9V-veN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="email" destination="niM-bV-5BO" id="II6-c3-5kw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yyZ-ck-0BW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yyZ-ck-0BW" firstAttribute="trailing" secondItem="MHe-qZ-hwB" secondAttribute="trailing" id="Ky6-gK-Lfu"/>
+                            <constraint firstItem="S7e-SQ-3ro" firstAttribute="centerX" secondItem="PJk-Kq-kuW" secondAttribute="centerX" id="PGZ-lL-OKw"/>
+                            <constraint firstItem="yyZ-ck-0BW" firstAttribute="bottom" secondItem="MHe-qZ-hwB" secondAttribute="bottom" id="p8a-9z-P7h"/>
+                            <constraint firstItem="MHe-qZ-hwB" firstAttribute="top" secondItem="S7e-SQ-3ro" secondAttribute="bottom" constant="50" id="tZ1-dt-1Ea"/>
+                            <constraint firstItem="S7e-SQ-3ro" firstAttribute="top" secondItem="yyZ-ck-0BW" secondAttribute="top" constant="50" id="wCj-nf-dqe"/>
+                            <constraint firstItem="MHe-qZ-hwB" firstAttribute="leading" secondItem="yyZ-ck-0BW" secondAttribute="leading" id="xfl-m3-LBr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zlV-Ab-1gW"/>
+                    <connections>
+                        <outlet property="devLoginTableView" destination="MHe-qZ-hwB" id="Irp-zQ-oNv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3h-gN-yX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557.56097560975604" y="798.81355932203394"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aks-Xj-rbr">
@@ -123,7 +195,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="2H0-u7-Nb3"/>
                                         </constraints>
-                                        <color key="tintColor" name="PrimaryText"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
@@ -218,7 +290,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bfC-Nu-3y6"/>
                                         </constraints>
-                                        <color key="tintColor" name="PrimaryText"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
                                         <connections>
@@ -282,14 +354,14 @@
         <namedColor name="Error">
             <color red="0.73100000619888306" green="0.10400000214576721" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Primary">
-            <color red="0.36470588235294116" green="0.70980392156862748" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="PrimaryText">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Secondary">
+            <color red="0.49000000953674316" green="0.46200001239776611" blue="0.74000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
