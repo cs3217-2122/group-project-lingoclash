@@ -17,6 +17,7 @@ struct ProfileData {
     var bio: String
     var days_learning: Int
     var vocabs_learnt: Int
+    var pk_winning_rate: Double
 }
 
 extension ProfileData: Record {}
