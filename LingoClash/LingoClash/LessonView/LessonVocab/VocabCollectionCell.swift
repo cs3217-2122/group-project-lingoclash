@@ -13,7 +13,8 @@ class VocabCollectionCell: UICollectionViewCell {
     
     func configure(vocab: String?) {
         vocabLabel.text = vocab
-        vocabLabel.sizeToFit()
         ViewUtilities.styleCard(contentView)
     }
+    
+
 }

@@ -20,7 +20,8 @@ class LessonSelectionViewModelFromBook: LessonSelectionViewModel {
     }
     
     func didSelectLesson(at index: Int) {
-        let selectedLesson = book.lessons[index]
+        var selectedLesson = book.lessons[index]
+        selectedLesson.vocabs.append(Vocab(word: "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", definition: "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", sentence: "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", sentenceDefinition: "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", pronunciationText: "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"))
         self.lessonOverviewViewModel.value = LessonOverviewViewModelFromLesson(lesson: selectedLesson)
     }
     

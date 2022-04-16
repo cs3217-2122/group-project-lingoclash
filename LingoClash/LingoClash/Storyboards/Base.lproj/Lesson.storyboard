@@ -188,7 +188,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vocab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4N-98-V56">
-                                                    <rect key="frame" x="21.5" y="9.5" width="85" height="21"/>
+                                                    <rect key="frame" x="40" y="9.5" width="48" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="IbC-Fr-f0N"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -196,9 +199,10 @@
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemTealColor"/>
                                             <constraints>
-                                                <constraint firstItem="i4N-98-V56" firstAttribute="centerY" secondItem="M2k-8D-M17" secondAttribute="centerY" id="dgk-Fd-kUE"/>
-                                                <constraint firstAttribute="width" secondItem="i4N-98-V56" secondAttribute="width" multiplier="1.5" id="ouv-rL-gnR"/>
-                                                <constraint firstItem="i4N-98-V56" firstAttribute="centerX" secondItem="M2k-8D-M17" secondAttribute="centerX" id="qnf-FQ-VUZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="i4N-98-V56" secondAttribute="bottom" constant="9.5" id="AMO-CB-c9k"/>
+                                                <constraint firstItem="i4N-98-V56" firstAttribute="top" secondItem="M2k-8D-M17" secondAttribute="top" constant="9.5" id="BL7-KB-uOK"/>
+                                                <constraint firstAttribute="trailing" secondItem="i4N-98-V56" secondAttribute="trailing" constant="40" id="b5A-Av-F0m"/>
+                                                <constraint firstItem="i4N-98-V56" firstAttribute="leading" secondItem="M2k-8D-M17" secondAttribute="leading" constant="40" id="u0m-FK-7gs"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="128" height="40"/>

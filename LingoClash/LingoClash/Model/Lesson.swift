@@ -9,7 +9,7 @@ import Foundation
 
 struct Lesson {
     let id: Identifier
-    let vocabs: [Vocab]
+    var vocabs: [Vocab]
     let stars: Int
     let name: String
     

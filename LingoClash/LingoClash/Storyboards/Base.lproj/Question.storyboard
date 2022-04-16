@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="24" width="744" height="439"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUE-CN-cPX">
-                                        <rect key="frame" x="311" y="190.5" width="122.5" height="58.5"/>
+                                        <rect key="frame" x="311" y="190.5" width="122" height="58.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -44,6 +44,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="TUE-CN-cPX" firstAttribute="centerX" secondItem="0RF-XI-psu" secondAttribute="centerX" id="2WU-ww-WUv"/>
+                                    <constraint firstItem="TUE-CN-cPX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0RF-XI-psu" secondAttribute="leading" constant="50" id="eiU-rk-gBG"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TUE-CN-cPX" secondAttribute="trailing" constant="50" id="im8-3o-tof"/>
                                     <constraint firstItem="TUE-CN-cPX" firstAttribute="centerY" secondItem="0RF-XI-psu" secondAttribute="centerY" id="kZr-JT-FUK"/>
                                 </constraints>
                             </view>
@@ -66,15 +68,17 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="544" height="90"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7N-6X-VWE">
-                                                            <rect key="frame" x="235.5" y="30" width="73.5" height="30"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="C7N-6X-VWE">
+                                                            <rect key="frame" x="242.5" y="33" width="59.5" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="C7N-6X-VWE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bRI-5a-7Ra" secondAttribute="leading" constant="50" id="2Sk-c8-GP5"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="C7N-6X-VWE" secondAttribute="trailing" constant="50" id="NKC-x5-7IC"/>
                                                         <constraint firstItem="C7N-6X-VWE" firstAttribute="centerY" secondItem="bRI-5a-7Ra" secondAttribute="centerY" id="ejS-X6-87M"/>
                                                         <constraint firstItem="C7N-6X-VWE" firstAttribute="centerX" secondItem="bRI-5a-7Ra" secondAttribute="centerX" id="oOs-ID-IAH"/>
                                                     </constraints>
