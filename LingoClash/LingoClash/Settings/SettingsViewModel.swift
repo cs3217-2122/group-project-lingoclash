@@ -73,10 +73,10 @@ final class SettingsViewModel {
         }.then { [self] _ in
             self.profileManager.updateProfile(
                 starsGoal: fields.starsGoal ,
-                bio: bio ?? "")
+                bio: fields.bio)
         }.done { [self] _ in
             self.editProfileError = nil
-            self.alertContent = AlertContent(title: "", message: "Your name is updated succesfully.")
+            self.alertContent = AlertContent(title: "", message: "Your profile is updated succesfully.")
             self.refresh()
         }.catch { [self] error in
             self.editProfileError = error.localizedDescription
