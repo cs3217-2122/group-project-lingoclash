@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 protocol ThemeProtocol {
     var mainFontName: String { get }
     var accent: UIColor { get }
@@ -21,7 +20,7 @@ protocol ThemeProtocol {
     var tertiaryText: UIColor { get }
     var errorText: UIColor { get }
     var errorContainer: UIColor { get }
-    
+
     var tint: UIColor { get }
     var green: UIColor { get }
     var red: UIColor { get }

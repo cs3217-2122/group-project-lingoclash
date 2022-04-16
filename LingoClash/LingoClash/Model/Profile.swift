@@ -21,7 +21,7 @@ struct Profile {
     let vocabsLearnt: Int
     let pkWinningRate: Double
     let rankingByTotalStars: Int
-    
+
     init(profileData: ProfileData, currentBook: Book?, rankingByTotalStars: Int, pkWinningRate: Double) {
         self.id = profileData.id
         self.user_id = profileData.user_id
@@ -43,10 +43,10 @@ extension Profile: Hashable {
     static func == (lhs: Profile, rhs: Profile) -> Bool {
         lhs.id == rhs.id
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.id)
     }
 }
 
-//extension Profile: Codable, Hashable {}
+// extension Profile: Codable, Hashable {}

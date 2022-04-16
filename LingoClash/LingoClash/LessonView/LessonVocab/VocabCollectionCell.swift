@@ -8,9 +8,9 @@
 import UIKit
 
 class VocabCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var vocabLabel: UILabel!
-    @IBOutlet weak var containerView: UIView!
-    
+    @IBOutlet private var vocabLabel: UILabel!
+    @IBOutlet private var containerView: UIView!
+
     func configure(vocab: String?) {
         vocabLabel.text = vocab
         ViewUtilities.styleCard(contentView)

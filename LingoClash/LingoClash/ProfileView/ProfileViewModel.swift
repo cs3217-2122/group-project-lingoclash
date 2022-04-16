@@ -9,7 +9,7 @@ import PromiseKit
 import Combine
 
 final class ProfileViewModel {
-    
+
     @Published var isRefreshing = false
     @Published var error: String?
     @Published var name: String?
@@ -24,14 +24,14 @@ final class ProfileViewModel {
     @Published var pkWinningRate: Double?
     @Published var rankingByTotalStars: Int?
     @Published var alertContent: AlertContent?
-    
+
     private let authProvider: AuthProvider
     private let profileManager = ProfileManager()
-    
+
     init(authProvider: AuthProvider = AppConfigs.API.authProvider) {
         self.authProvider = authProvider
     }
-    
+
     func signOut() {
         firstly {
             authProvider.logout()
@@ -42,7 +42,7 @@ final class ProfileViewModel {
             self.error = error.localizedDescription
         }
     }
-    
+
     func refresh() {
         self.isRefreshing = true
         firstly {
@@ -65,6 +65,5 @@ final class ProfileViewModel {
             print(error)
         }
     }
-    
-    
+
 }

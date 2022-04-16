@@ -1,0 +1,5000 @@
+[
+    {
+        "word": "가",
+        "romaja": "ga",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "bound, edge, end, margin, rim, side, verge, brink"
+            }
+        ]
+    },
+    {
+        "word": "가",
+        "romaja": "ga",
+        "pos": "part",
+        "defs": [
+            {
+                "def": "Indicates the subject of a sentence.(Compare with Japanese が)",
+                "examples": [
+                    {
+                        "example": "그렇지만, 내가 펜을 갖고 있을텐데…",
+                        "transliteration": "geureochiman, naega peneul gatgo isseultende…",
+                        "translation": "I know I have a pen, though…"
+                    }
+                ]
+            },
+            {
+                "def": "Indicates the subjective complement of a sentence, usually used with 되다 (doeda, “become”) or 아니다 (anida, “be not”)."
+            }
+        ],
+        "notes": [
+            "가 (ga) indicates the subject of the verb in the sentence, as opposed to the object, which *를 (reul) indicates. See also 는 (neun), which indicates the topic of the sentence.",
+            "가 (ga) is used only after words ending with a vowel. After words ending with a consonant, 이 (i) is used instead."
+        ],
+        "syns": [
+            "이"
+        ],
+        "tags": [
+            "topik1"
+        ]
+    },
+    {
+        "word": "가",
+        "romaja": "ga",
+        "pos": "n",
+        "defs": [
+            {
+                "def": ": family, house"
+            },
+            {
+                "def": ": price, value"
+            },
+            {
+                "def": ": falsehood"
+            }
+        ]
+    },
+    {
+        "word": "가",
+        "romaja": "ga",
+        "pos": "suf",
+        "defs": [
+            {
+                "def": ": street"
+            }
+        ]
+    },
+    {
+        "word": "가",
+        "romaja": "ga",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "connective form of 가다 (gada, “to go”): because of going, upon going."
+            },
+            {
+                "def": "informal form of 가다 (gada, “to go”): go (indicative/interrogative/imperative), let's go"
+            }
+        ]
+    },
+    {
+        "word": "가",
+        "romaja": "ga",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "la (musical note)"
+            }
+        ]
+    },
+    {
+        "word": "가가우스어",
+        "romaja": "gagauseueo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The Gagauz language."
+            }
+        ]
+    },
+    {
+        "word": "가감",
+        "romaja": "gagam",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "addition and subtraction"
+            },
+            {
+                "def": "adjustment, increasing and decreasing (a quantity), regulation"
+            }
+        ]
+    },
+    {
+        "word": "가강수량",
+        "romaja": "gagangsuryang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "precipitable water"
+            }
+        ]
+    },
+    {
+        "word": "가게",
+        "romaja": "gage",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "store, shop",
+                "examples": [
+                    {
+                        "example": "그는 길을 따라, 그 가게에 이르렀다.",
+                        "transliteration": "Geuneun gireul ttara, geu gagee ireureotda.",
+                        "translation": "He went down the road to the store."
+                    },
+                    {
+                        "example": "나는 어제 그 가게에 가서 마실 것을 샀다.",
+                        "transliteration": "Naneun eoje geu gagee gaseo masil geoseul satda.",
+                        "translation": "I went to that shop and bought something to drink yesterday."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가격",
+        "romaja": "gagyeok",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "monetary price"
+            }
+        ]
+    },
+    {
+        "word": "가계",
+        "romaja": "gagye",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A family line; bloodline; lineage"
+            }
+        ]
+    },
+    {
+        "word": "가계",
+        "romaja": "gagye",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "household economy; family income and expenditure"
+            },
+            {
+                "def": "living conditions of a family"
+            }
+        ]
+    },
+    {
+        "word": "가곡",
+        "romaja": "gagok",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "song"
+            },
+            {
+                "def": "melody, tune"
+            }
+        ]
+    },
+    {
+        "word": "가공",
+        "romaja": "gagong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "processing; treatment; improvement"
+            }
+        ]
+    },
+    {
+        "word": "가공품",
+        "romaja": "gagongpum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "product"
+            }
+        ]
+    },
+    {
+        "word": "가공하다",
+        "romaja": "gagonghada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to process or treat; to improve"
+            }
+        ],
+        "conj": [
+            "가공한다",
+            "가공해",
+            "가공해요",
+            "가공합니다"
+        ]
+    },
+    {
+        "word": "가관",
+        "romaja": "gagwan",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "(sarcastic) sight; being ridiculous"
+            },
+            {
+                "def": "sight; spectacle"
+            }
+        ]
+    },
+    {
+        "word": "가구",
+        "romaja": "gagu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "family; household"
+            }
+        ]
+    },
+    {
+        "word": "가구",
+        "romaja": "gagu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "furniture"
+            }
+        ]
+    },
+    {
+        "word": "가까이",
+        "romaja": "gakkai",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "closely; close together"
+            }
+        ]
+    },
+    {
+        "word": "가까이",
+        "romaja": "gakkai",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "vicinity, neighborhood"
+            }
+        ]
+    },
+    {
+        "word": "가까이하다",
+        "romaja": "gakkaihada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to get close to; to befriend"
+            },
+            {
+                "def": "to enjoy"
+            },
+            {
+                "def": "to approach"
+            }
+        ],
+        "conj": [
+            "가까이한다",
+            "가까이해",
+            "가까이해요",
+            "가까이합니다"
+        ]
+    },
+    {
+        "word": "가깝다",
+        "romaja": "gakkapda",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "To be close, near (in distance, time)",
+                "examples": [
+                    {
+                        "example": "새로 이사한 집에선 학교가 가깝다.",
+                        "transliteration": "Saero isahan jibeseon hakgyoga gakkapda.",
+                        "translation": "The school is close to our new house."
+                    }
+                ]
+            },
+            {
+                "def": "To be on friendly terms."
+            },
+            {
+                "def": "To be of similar quantity."
+            },
+            {
+                "def": "To be closely related.",
+                "examples": [
+                    {
+                        "example": "가까운 친척",
+                        "transliteration": "gakkaun chincheok",
+                        "translation": "close relatives"
+                    }
+                ]
+            }
+        ],
+        "conj": [
+            "가깝다",
+            "가까워",
+            "가까워요",
+            "가깝습니다"
+        ]
+    },
+    {
+        "word": "가꾸다",
+        "romaja": "gakkuda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To cultivate (plants)."
+            },
+            {
+                "def": "To decorate."
+            }
+        ],
+        "conj": [
+            "가꾼다",
+            "가꾸어",
+            "가꾸어요/가꿔요",
+            "가꿉니다"
+        ]
+    },
+    {
+        "word": "가끔",
+        "romaja": "gakkeum",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "occasionally"
+            }
+        ]
+    },
+    {
+        "word": "가끔씩",
+        "romaja": "gakkeumssik",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "sometimes"
+            }
+        ]
+    },
+    {
+        "word": "가나",
+        "romaja": "Gana",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Ghana"
+            }
+        ]
+    },
+    {
+        "word": "가나",
+        "romaja": "Gana",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "kana"
+            }
+        ]
+    },
+    {
+        "word": "가난",
+        "romaja": "ganan",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "poverty"
+            }
+        ]
+    },
+    {
+        "word": "가난하다",
+        "romaja": "gananhada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "poor (not wealthy)"
+            }
+        ],
+        "conj": [
+            "가난하다",
+            "가난해",
+            "가난해요",
+            "가난합니다"
+        ]
+    },
+    {
+        "word": "가난히",
+        "romaja": "gananhi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "in poverty; poorly"
+            }
+        ]
+    },
+    {
+        "word": "가내공업",
+        "romaja": "ganaegong-eop",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "cottage industry; household industry"
+            }
+        ]
+    },
+    {
+        "word": "가는돌고기",
+        "romaja": "ganeundolgogi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The slender shiner, Pseudopungtungia tenuicorpus."
+            }
+        ]
+    },
+    {
+        "word": "가늘다",
+        "romaja": "ganeulda",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "thin, slender (of something long and thin, like a thread or a stick)"
+            },
+            {
+                "def": "weak, soft (of a voice or sound)"
+            }
+        ],
+        "conj": [
+            "가늘다",
+            "가늘어",
+            "가늘어요",
+            "가늡니다"
+        ]
+    },
+    {
+        "word": "가늠",
+        "romaja": "ganeum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "aim, approach to a goal"
+            },
+            {
+                "def": "discernment; prediction"
+            }
+        ]
+    },
+    {
+        "word": "가늠하다",
+        "romaja": "ganeumhada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To aim at a goal"
+            },
+            {
+                "def": "To predict how something will turn out"
+            }
+        ],
+        "conj": [
+            "가늠한다",
+            "가늠해",
+            "가늠해요",
+            "가늠합니다"
+        ]
+    },
+    {
+        "word": "가능",
+        "romaja": "ganeung",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "possibility; potentiality"
+            }
+        ]
+    },
+    {
+        "word": "가능성",
+        "romaja": "ganeungseong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "degree of possibility"
+            }
+        ]
+    },
+    {
+        "word": "가능하다",
+        "romaja": "ganeunghada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "to be possible; able",
+                "examples": [
+                    {
+                        "example": "나는 가능한 한 빨리 왔다.",
+                        "transliteration": "Naneun ganeunghan han ppalli watda.",
+                        "translation": "I came as soon as I could."
+                    }
+                ]
+            }
+        ],
+        "conj": [
+            "가능하다",
+            "가능해",
+            "가능해요",
+            "가능합니다"
+        ]
+    },
+    {
+        "word": "가닛",
+        "romaja": "ganit",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "garnet (mineral, gemstone)"
+            }
+        ]
+    },
+    {
+        "word": "가다",
+        "romaja": "gada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to go",
+                "examples": [
+                    {
+                        "example": "가자!",
+                        "transliteration": "Gaja!",
+                        "translation": "Let's go!"
+                    },
+                    {
+                        "example": "서울에 가요.",
+                        "transliteration": "Seoure gayo.",
+                        "translation": "(I am, you are, he is, etc.) going to Seoul."
+                    },
+                    {
+                        "example": "저랑 같이 가실래요? / 네, 같이 가요.",
+                        "transliteration": "Jeorang gachi gasillaeyo? / Ne, gachi gayo.",
+                        "translation": "Would you like to come with me? / Yeah, let's go together."
+                    },
+                    {
+                        "example": "그들은 개관식에 참석하러 베이징으로 갔다.",
+                        "transliteration": "Geudeureun gaegwansige chamseokhareo Beijing-euro gatda.",
+                        "translation": "They went to Beijing for the opening."
+                    },
+                    {
+                        "example": "미안해요, 전 가야 해요.",
+                        "transliteration": "Mianhaeyo, jeon gaya haeyo.",
+                        "translation": "Sorry, I've got to go."
+                    }
+                ]
+            }
+        ],
+        "conj": [
+            "간다",
+            "가",
+            "가요",
+            "갑니다"
+        ],
+        "tags": [
+            "topik1"
+        ]
+    },
+    {
+        "word": "가돌리늄",
+        "romaja": "gadollinyum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "gadolinium"
+            }
+        ]
+    },
+    {
+        "word": "가두녀성",
+        "romaja": "gadunyeoseong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "homemaker"
+            }
+        ]
+    },
+    {
+        "word": "가두다",
+        "romaja": "gaduda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to confine, lock, lock up, coop up, shut up, fence, imprison"
+            }
+        ],
+        "conj": [
+            "가둔다",
+            "가두어",
+            "가두어요/가둬요",
+            "가둡니다"
+        ]
+    },
+    {
+        "word": "가두리",
+        "romaja": "gaduri",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "rim, brim"
+            }
+        ]
+    },
+    {
+        "word": "가두배추",
+        "romaja": "gadubaechu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "cabbage"
+            }
+        ]
+    },
+    {
+        "word": "가득",
+        "romaja": "gadeuk",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "full; fully"
+            }
+        ]
+    },
+    {
+        "word": "가득가득",
+        "romaja": "gadeukgadeuk",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "packed full; teeming with; full of (people or objects)"
+            }
+        ]
+    },
+    {
+        "word": "가득하다",
+        "romaja": "gadeukhada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "To be full"
+            }
+        ],
+        "conj": [
+            "가득하다",
+            "가득해",
+            "가득해요",
+            "가득합니다"
+        ]
+    },
+    {
+        "word": "가득히",
+        "romaja": "gadeukhi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "fully; to the brim"
+            }
+        ]
+    },
+    {
+        "word": "가따까나",
+        "romaja": "gattakkana",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Alternative form of 가타카나 (gatakana)"
+            }
+        ]
+    },
+    {
+        "word": "가라데",
+        "romaja": "garade",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "karate"
+            }
+        ]
+    },
+    {
+        "word": "가라앉다",
+        "romaja": "garaanda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to sink, to go down",
+                "examples": [
+                    {
+                        "example": "물에 수영할 거면 가라앉지 마세요!",
+                        "transliteration": "Mure suyeonghal geomyeon garaanji maseyo!",
+                        "translation": "If you're going to go swimming in the water, please don't sink!"
+                    }
+                ]
+            },
+            {
+                "def": "to cool off, to cool down, to settle down"
+            },
+            {
+                "def": "to abate, to soothe"
+            }
+        ],
+        "conj": [
+            "가라앉는다",
+            "가라앉아",
+            "가라앉아요",
+            "가라앉습니다"
+        ]
+    },
+    {
+        "word": "가라오케",
+        "romaja": "garaoke",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "karaoke"
+            }
+        ]
+    },
+    {
+        "word": "가락",
+        "romaja": "garak",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "spindle; distaff"
+            },
+            {
+                "def": "strand"
+            }
+        ]
+    },
+    {
+        "word": "가락지",
+        "romaja": "garakji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "a twinned pair of rings"
+            },
+            {
+                "def": "a ring, a finger ring",
+                "examples": [
+                    {
+                        "example": "가락지를 끼다",
+                        "transliteration": "garakjireul kkida",
+                        "translation": "put on/wear a ring"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가락지빵",
+        "romaja": "garakjippang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "donut"
+            }
+        ]
+    },
+    {
+        "word": "가람",
+        "romaja": "garam",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "river"
+            }
+        ]
+    },
+    {
+        "word": "가람",
+        "romaja": "garam",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Buddhist temple"
+            },
+            {
+                "def": "Buddhist monastery"
+            }
+        ]
+    },
+    {
+        "word": "가래",
+        "romaja": "garae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "spade"
+            },
+            {
+                "def": "phlegm"
+            }
+        ]
+    },
+    {
+        "word": "가련하다",
+        "romaja": "garyeonhada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "To be miserable or wretched"
+            }
+        ],
+        "conj": [
+            "가련하다",
+            "가련해",
+            "가련해요",
+            "가련합니다"
+        ]
+    },
+    {
+        "word": "가련히",
+        "romaja": "garyeonhi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "pitifully; pathetically"
+            }
+        ]
+    },
+    {
+        "word": "가렵다",
+        "romaja": "garyeopda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to be itchy"
+            }
+        ],
+        "conj": [
+            "가렵는다",
+            "가려워",
+            "가려워요",
+            "가렵습니다"
+        ]
+    },
+    {
+        "word": "가렸지만",
+        "romaja": "garida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to pick out or single out from a group"
+            }
+        ],
+        "conj": [
+            "가린다",
+            "가려",
+            "가려요/가리어요",
+            "가립니다"
+        ]
+    },
+    {
+        "word": "가령",
+        "romaja": "garyeong",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "supposing (that)"
+            },
+            {
+                "def": "for example"
+            }
+        ]
+    },
+    {
+        "word": "가로",
+        "romaja": "garo",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "across; horizontally"
+            }
+        ]
+    },
+    {
+        "word": "가로",
+        "romaja": "garo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The crosswise or horizontal direction."
+            }
+        ]
+    },
+    {
+        "word": "가로등",
+        "romaja": "garodeung",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "streetlamp, streetlight"
+            }
+        ]
+    },
+    {
+        "word": "가로막",
+        "romaja": "garomak",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The diaphragm."
+            }
+        ]
+    },
+    {
+        "word": "가로채다",
+        "romaja": "garochaeda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To snatch or steal"
+            }
+        ],
+        "conj": [
+            "가로챈다",
+            "가로채",
+            "가로채요/가로채어요",
+            "가로챕니다"
+        ]
+    },
+    {
+        "word": "가루",
+        "romaja": "garu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "meal, flour (of wheat, etc.); powder"
+            }
+        ]
+    },
+    {
+        "word": "가르다",
+        "romaja": "gareuda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to separate"
+            },
+            {
+                "def": "to cut or slice through"
+            },
+            {
+                "def": "to make the difference between defeat and victory"
+            }
+        ],
+        "conj": [
+            "가른다",
+            "갈라",
+            "갈라요",
+            "가릅니다"
+        ]
+    },
+    {
+        "word": "가르치다",
+        "romaja": "gareuchida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to teach or impart knowledge.",
+                "examples": [
+                    {
+                        "example": "로버트는 수학을 가르치는 선생님입니다.",
+                        "transliteration": "Robeoteuneun suhageul gareuchineun seonsaengnimimnida.",
+                        "translation": "Robert is a teacher who teaches math."
+                    }
+                ]
+            },
+            {
+                "def": "to send someone to school."
+            },
+            {
+                "def": "to tell or show someone how to do something."
+            },
+            {
+                "def": "to tell someone about something."
+            },
+            {
+                "def": "to point (=가리키다)"
+            }
+        ],
+        "conj": [
+            "가르친다",
+            "가르쳐",
+            "가르쳐요/가르치어요",
+            "가르칩니다"
+        ],
+        "tags": [
+            "topik1"
+        ]
+    },
+    {
+        "word": "가르침",
+        "romaja": "gareuchim",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "teaching, instruction, study"
+            }
+        ]
+    },
+    {
+        "word": "가름",
+        "romaja": "gareum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "dividing, splitting, separation"
+            }
+        ]
+    },
+    {
+        "word": "가리개",
+        "romaja": "garigae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A traditional folding screen having two panels.",
+                "examples": [
+                    {
+                        "example": "가리개 뒤에서 옷을 갈아입다.",
+                        "transliteration": "Garigae dwieseo oseul garaipda.",
+                        "translation": "One changes one's clothes behind the folding screen."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가리다",
+        "romaja": "garida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to pick out or single out from a group"
+            }
+        ],
+        "conj": [
+            "가린다",
+            "가려",
+            "가려요/가리어요",
+            "가립니다"
+        ]
+    },
+    {
+        "word": "가리비",
+        "romaja": "garibi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "scallop"
+            }
+        ]
+    },
+    {
+        "word": "가리키다",
+        "romaja": "garikida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To point."
+            },
+            {
+                "def": "To indicate or emphasize something."
+            }
+        ],
+        "conj": [
+            "가리킨다",
+            "가리켜",
+            "가리켜요/가리키어요",
+            "가리킵니다"
+        ]
+    },
+    {
+        "word": "가마",
+        "romaja": "gama",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "kiln; oven",
+                "examples": [
+                    {
+                        "example": "벽돌을 가마에 굽다",
+                        "transliteration": "byeokdoreul gamae gupda",
+                        "translation": "to bake bricks in a kiln"
+                    }
+                ]
+            },
+            {
+                "def": "cauldron",
+                "examples": [
+                    {
+                        "example": "가마 밑이 노구솥 밑을 검다 한다.",
+                        "transliteration": "Gama michi nogusot miteul geomda handa.",
+                        "translation": "The pot calls the kettle black."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가마",
+        "romaja": "gama",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "whorl of hair, vortex of hair (on the vertex of the head)",
+                "examples": [
+                    {
+                        "example": "내 머리에 가마가 하나니 둘이니?",
+                        "transliteration": "Nae meorie gamaga hanani durini?",
+                        "translation": "Do I have one or two hair whorls?"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가마",
+        "romaja": "gama",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "sack made of straw"
+            },
+            {
+                "def": "bag, sack",
+                "examples": [
+                    {
+                        "example": "쌀 한 가마에 십만 원 간다.",
+                        "transliteration": "Ssal han gamae simman won ganda.",
+                        "translation": "The market price of rice is 100,000 won a bag."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가마",
+        "romaja": "gama",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "palanquin",
+                "examples": [
+                    {
+                        "example": "가마를 타고 가다",
+                        "transliteration": "gamareul tago gada",
+                        "translation": "to go by palanquin"
+                    },
+                    {
+                        "example": "가마를 메다",
+                        "transliteration": "gamareul meda",
+                        "translation": "to carry a palanquin on the shoulder"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가마솥",
+        "romaja": "gamasot",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "cauldron; iron pot"
+            }
+        ]
+    },
+    {
+        "word": "가마우지",
+        "romaja": "gamauji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A cormorant."
+            },
+            {
+                "def": "The Japanese cormorant, Phalacrocorax capillatus."
+            }
+        ]
+    },
+    {
+        "word": "가마치",
+        "romaja": "gamachi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "scorched rice, prepared by scraping from the bottom of the rice cooker, mixing with water, and re-cooking."
+            }
+        ]
+    },
+    {
+        "word": "가만",
+        "romaja": "gaman",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "quietly; without moving or speaking"
+            },
+            {
+                "def": "without change; just as it is"
+            }
+        ]
+    },
+    {
+        "word": "가만",
+        "romaja": "gaman",
+        "pos": "intj",
+        "defs": [
+            {
+                "def": "quiet! shh!"
+            }
+        ]
+    },
+    {
+        "word": "가만가만",
+        "romaja": "gaman-gaman",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "softly; without noise"
+            },
+            {
+                "def": "stealthily"
+            }
+        ]
+    },
+    {
+        "word": "가만두다",
+        "romaja": "gamanduda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to leave (a person) alone; to not disturb"
+            }
+        ],
+        "conj": [
+            "가만둔다",
+            "가만두어",
+            "가만두어요/가만둬요",
+            "가만둡니다"
+        ]
+    },
+    {
+        "word": "가만히",
+        "romaja": "gamanhi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "Still; not moving."
+            },
+            {
+                "def": "quietly"
+            },
+            {
+                "def": "Just as it is."
+            },
+            {
+                "def": "Stealthily; in secret."
+            }
+        ]
+    },
+    {
+        "word": "가면",
+        "romaja": "gamyeon",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "mask"
+            }
+        ]
+    },
+    {
+        "word": "가면극",
+        "romaja": "gamyeon-geuk",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "masque; any performance conducted in masks"
+            }
+        ]
+    },
+    {
+        "word": "가명",
+        "romaja": "gamyeong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "alias"
+            }
+        ]
+    },
+    {
+        "word": "가무이야기",
+        "romaja": "gamu-iyagi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A musical"
+            }
+        ]
+    },
+    {
+        "word": "가물가물",
+        "romaja": "gamulgamul",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "A shape of the small and weak light keep moving as if disappear."
+            },
+            {
+                "def": "A shape of the object keep moving faintly."
+            },
+            {
+                "def": "A shape of the conscience is a little blurred."
+            }
+        ]
+    },
+    {
+        "word": "가물치",
+        "romaja": "gamulchi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "the snakehead, Channa argus."
+            },
+            {
+                "def": "a fish caught during a drought, when the water is low"
+            }
+        ]
+    },
+    {
+        "word": "가뭄",
+        "romaja": "gamum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "drought (a period of below average rain fall)"
+            }
+        ]
+    },
+    {
+        "word": "가미카제",
+        "romaja": "gamikaje",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "kamikaze"
+            }
+        ]
+    },
+    {
+        "word": "가발",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "wig, toupee"
+            }
+        ]
+    },
+    {
+        "word": "가방",
+        "romaja": "gabang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "bag; briefcase"
+            }
+        ]
+    },
+    {
+        "word": "가벼워지다",
+        "romaja": "gabyeowojida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to become lighter"
+            }
+        ],
+        "conj": [
+            "가벼워진다",
+            "가벼워져",
+            "가벼워져요/가벼워지어요",
+            "가벼워집니다"
+        ]
+    },
+    {
+        "word": "가볍다",
+        "romaja": "gabyeopda",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "light (not heavy)"
+            }
+        ],
+        "conj": [
+            "가볍다",
+            "가벼워",
+            "가벼워요",
+            "가볍습니다"
+        ]
+    },
+    {
+        "word": "가보로네",
+        "romaja": "Gaborone",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Gaborone (the capital city of Botswana)"
+            }
+        ]
+    },
+    {
+        "word": "가봉",
+        "romaja": "Gabong",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Gabon"
+            }
+        ]
+    },
+    {
+        "word": "가브리엘",
+        "romaja": "gabeuriel",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Gabriel, the Archangel."
+            }
+        ]
+    },
+    {
+        "word": "가사",
+        "romaja": "gasa",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "lyrics"
+            }
+        ]
+    },
+    {
+        "word": "가사",
+        "romaja": "gasa",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "umbrella"
+            }
+        ]
+    },
+    {
+        "word": "가사",
+        "romaja": "gasa",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "housework"
+            }
+        ]
+    },
+    {
+        "word": "가산",
+        "romaja": "gasan",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "addition"
+            }
+        ]
+    },
+    {
+        "word": "가새",
+        "romaja": "gasae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "strut; bracing"
+            },
+            {
+                "def": "scissors"
+            }
+        ]
+    },
+    {
+        "word": "가설",
+        "romaja": "gaseol",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "conjecture"
+            }
+        ]
+    },
+    {
+        "word": "가설",
+        "romaja": "gaseol",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "hypothesis"
+            }
+        ]
+    },
+    {
+        "word": "가설",
+        "romaja": "gaseol",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "construction"
+            }
+        ]
+    },
+    {
+        "word": "가설법",
+        "romaja": "gaseolbeop",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The subjunctive mood"
+            }
+        ]
+    },
+    {
+        "word": "가세요",
+        "romaja": "gada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to go",
+                "examples": [
+                    {
+                        "example": "가자!",
+                        "transliteration": "Gaja!",
+                        "translation": "Let's go!"
+                    },
+                    {
+                        "example": "서울에 가요.",
+                        "transliteration": "Seoure gayo.",
+                        "translation": "(I am, you are, he is, etc.) going to Seoul."
+                    },
+                    {
+                        "example": "저랑 같이 가실래요? / 네, 같이 가요.",
+                        "transliteration": "Jeorang gachi gasillaeyo? / Ne, gachi gayo.",
+                        "translation": "Would you like to come with me? / Yeah, let's go together."
+                    },
+                    {
+                        "example": "그들은 개관식에 참석하러 베이징으로 갔다.",
+                        "transliteration": "Geudeureun gaegwansige chamseokhareo Beijing-euro gatda.",
+                        "translation": "They went to Beijing for the opening."
+                    },
+                    {
+                        "example": "미안해요, 전 가야 해요.",
+                        "transliteration": "Mianhaeyo, jeon gaya haeyo.",
+                        "translation": "Sorry, I've got to go."
+                    }
+                ]
+            }
+        ],
+        "conj": [
+            "간다",
+            "가",
+            "가요",
+            "갑니다"
+        ]
+    },
+    {
+        "word": "가소롭다",
+        "romaja": "gasoropda",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "To be absurd; laughable."
+            }
+        ],
+        "conj": [
+            "가소롭다",
+            "가소로워",
+            "가소로워요",
+            "가소롭습니다"
+        ]
+    },
+    {
+        "word": "가소제",
+        "romaja": "gasoje",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A plasticizer."
+            }
+        ]
+    },
+    {
+        "word": "가솔린",
+        "romaja": "gasollin",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "gasoline, petrol"
+            }
+        ]
+    },
+    {
+        "word": "가수",
+        "romaja": "gasu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "a singer, usually professional"
+            }
+        ]
+    },
+    {
+        "word": "가숭어",
+        "romaja": "gasung-eo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The redlip mullet, Chelon haematocheilus"
+            }
+        ]
+    },
+    {
+        "word": "가스",
+        "romaja": "gaseu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "gas"
+            },
+            {
+                "def": "natural gas"
+            },
+            {
+                "def": "poison gas"
+            }
+        ]
+    },
+    {
+        "word": "가스레인지",
+        "romaja": "gaseureinji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "gas stove"
+            }
+        ]
+    },
+    {
+        "word": "가스파초",
+        "romaja": "gaseupacho",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "gazpacho"
+            }
+        ]
+    },
+    {
+        "word": "가슴",
+        "romaja": "gaseum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "the thorax"
+            },
+            {
+                "def": "the chest or breasts"
+            }
+        ]
+    },
+    {
+        "word": "가슴뼈",
+        "romaja": "gaseumppyeo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The sternum or breastbone."
+            }
+        ]
+    },
+    {
+        "word": "가시",
+        "romaja": "gasi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "thorn"
+            },
+            {
+                "def": "sting"
+            },
+            {
+                "def": "fishbone"
+            }
+        ]
+    },
+    {
+        "word": "가시고기",
+        "romaja": "gasigogi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The Chinese nine-spined stickleback, Pungitius sinensis."
+            }
+        ]
+    },
+    {
+        "word": "가시나",
+        "romaja": "gasina",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "girl; young girl"
+            }
+        ]
+    },
+    {
+        "word": "가시납지리",
+        "romaja": "gasinapjiri",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The Korean spined bitterling, Acanthorhodeus gracilis."
+            }
+        ]
+    },
+    {
+        "word": "가시다",
+        "romaja": "gasida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to leave; to disappear"
+            },
+            {
+                "def": "honorific of 가다 (gada) : to go",
+                "examples": [
+                    {
+                        "example": "그 사무실에 당도하려면 두개 층을 내려가셔야 합니다.",
+                        "transliteration": "Geu samusire dangdoharyeomyeon dugae cheung-eul naeryeogasyeoya hamnida.",
+                        "translation": "You'll need to go down two floors to get to that office."
+                    }
+                ]
+            }
+        ],
+        "conj": [
+            "가신다",
+            "가셔",
+            "가세요/가셔요",
+            "가십니다"
+        ]
+    },
+    {
+        "word": "가시아버지",
+        "romaja": "gasiabeoji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "father-in-law (wife's father)"
+            }
+        ]
+    },
+    {
+        "word": "가시어머니",
+        "romaja": "gasieomeoni",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A man's mother-in-law (wife's mother)"
+            }
+        ]
+    },
+    {
+        "word": "가시집",
+        "romaja": "gasijip",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A wife's parent's home."
+            }
+        ]
+    },
+    {
+        "word": "가식",
+        "romaja": "gasik",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "affectation; pretense"
+            }
+        ]
+    },
+    {
+        "word": "가식하다",
+        "romaja": "gasikhada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to be pretentious; to put on airs"
+            }
+        ],
+        "conj": [
+            "가식한다",
+            "가식해",
+            "가식해요",
+            "가식합니다"
+        ]
+    },
+    {
+        "word": "가야",
+        "romaja": "Gaya",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Gaya, an ancient confederacy of city-states in the Nakdong River valley of central and southern Korea"
+            }
+        ]
+    },
+    {
+        "word": "가야금",
+        "romaja": "gayageum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A long zither with bridges and between 12 and 25 strings; used primarily in Korean traditional and classical music."
+            }
+        ]
+    },
+    {
+        "word": "가언적",
+        "romaja": "ga-eonjeok",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "being hypothetical"
+            }
+        ]
+    },
+    {
+        "word": "가언적",
+        "romaja": "ga-eonjeok",
+        "pos": "det",
+        "defs": [
+            {
+                "def": "hypothetical"
+            }
+        ]
+    },
+    {
+        "word": "가없다",
+        "romaja": "ga-eopda",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "(가없는) limitless, endless, boundless"
+            }
+        ],
+        "conj": [
+            "가없다",
+            "가없어",
+            "가없어요",
+            "가없습니다"
+        ]
+    },
+    {
+        "word": "가없이",
+        "romaja": "ga-eopsi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "endlessly, limitlessly"
+            }
+        ]
+    },
+    {
+        "word": "가엾다",
+        "romaja": "gayeopda",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "pitiful"
+            }
+        ],
+        "conj": [
+            "가엾다",
+            "가엾어",
+            "가엾어요",
+            "가엾습니다"
+        ]
+    },
+    {
+        "word": "가오리",
+        "romaja": "gaori",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "ray, stingray"
+            }
+        ]
+    },
+    {
+        "word": "가요",
+        "romaja": "gayo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "song"
+            }
+        ]
+    },
+    {
+        "word": "가요",
+        "romaja": "gayo",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "informal polite present indicative of 가다"
+            },
+            {
+                "def": "informal polite present interrogative of 가다"
+            },
+            {
+                "def": "informal polite present hortative of 가다"
+            },
+            {
+                "def": "informal polite present imperative of 가다"
+            }
+        ]
+    },
+    {
+        "word": "가운데",
+        "romaja": "gaunde",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "the center of something"
+            },
+            {
+                "def": "(dependent noun) in the course of doing something"
+            }
+        ]
+    },
+    {
+        "word": "가위",
+        "romaja": "gawi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "scissors"
+            }
+        ]
+    },
+    {
+        "word": "가위바위보",
+        "romaja": "gawibawibo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "rock paper scissors"
+            }
+        ]
+    },
+    {
+        "word": "가을",
+        "romaja": "ga-eul",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "autumn; fall"
+            }
+        ]
+    },
+    {
+        "word": "가이드",
+        "romaja": "gaideu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "guide"
+            }
+        ]
+    },
+    {
+        "word": "가이아나",
+        "romaja": "Gaiana",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Guyana"
+            }
+        ]
+    },
+    {
+        "word": "가자",
+        "romaja": "Gaja",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Gaza (a city in Palestine)",
+                "examples": [
+                    {
+                        "example": "가자 지구",
+                        "transliteration": "Gaja jigu",
+                        "translation": "Gaza strip"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가장",
+        "romaja": "gajang",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "most"
+            },
+            {
+                "def": "(by extension also used to form superlatives of adjectives) the most; the best (of its kind)",
+                "examples": [
+                    {
+                        "example": "이 사전이 가장 좋아요.",
+                        "transliteration": "I sajeoni gajang joayo.",
+                        "translation": "This dictionary is the best."
+                    },
+                    {
+                        "example": "우사인 볼트는 지구상에서 가장 빠른 사람에요.",
+                        "transliteration": "Usain bolteuneun jigusang-eseo gajang ppareun sarameyo.",
+                        "translation": "Usain Bolt is the fastest (most fast) man on Earth."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가장",
+        "romaja": "gajang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A hurried or temporary burial"
+            },
+            {
+                "def": "Burying a child"
+            }
+        ]
+    },
+    {
+        "word": "가장",
+        "romaja": "gajang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "the head of a family"
+            }
+        ]
+    },
+    {
+        "word": "가장자리",
+        "romaja": "gajangjari",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "edge, verge, brink",
+                "examples": [
+                    {
+                        "example": "그는, “우리가 현재 있는 이곳은 2008년으로 거슬러 가면 온통 눈으로 덮여 있었어요. 여기 저기 가장자리 쪽에서 빙하가 약 20에서 30미터 줄어들었지요.”라고 말했다.",
+                        "transliteration": "Geuneun, “uriga hyeonjae inneun igoseun 2008nyeoneuro geoseulleo gamyeon ontong nuneuro deopyeo isseosseoyo. Yeogi jeogi gajangjari jjogeseo binghaga yak 20eseo 30miteo jureodeureotjiyo.”rago malhaetda.",
+                        "translation": "He said, “Where we’re at right now was back in 2008 all covered with ice. From here to there at the side, the glacier shrank about 20 to 30 meters.”"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가재",
+        "romaja": "gajae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "crayfish (freshwater crustacean resembling lobster)"
+            }
+        ]
+    },
+    {
+        "word": "가정",
+        "romaja": "gajeong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "a household, a family"
+            }
+        ]
+    },
+    {
+        "word": "가정",
+        "romaja": "gajeong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "a supposition or presupposition"
+            },
+            {
+                "def": "a hypothesis"
+            }
+        ]
+    },
+    {
+        "word": "가정법",
+        "romaja": "gajeongbeop",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The subjunctive mood."
+            }
+        ]
+    },
+    {
+        "word": "가정부",
+        "romaja": "gajeongbu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "housekeeper, maid"
+            }
+        ]
+    },
+    {
+        "word": "가제",
+        "romaja": "gaje",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "gauze"
+            }
+        ]
+    },
+    {
+        "word": "가젤",
+        "romaja": "gajel",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "gazelle"
+            }
+        ]
+    },
+    {
+        "word": "가져가다",
+        "romaja": "gajyeogada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to take something (somewhere), to take away",
+                "examples": [
+                    {
+                        "example": "로사의 생일 선물을 가져갈거야.",
+                        "transliteration": "Rosaui saeng-il seonmureul gajyeogalgeoya.",
+                        "translation": "I will take a present to Rosa for her birthday."
+                    }
+                ]
+            }
+        ],
+        "conj": [
+            "가져간다",
+            "가져가",
+            "가져가요",
+            "가져갑니다"
+        ]
+    },
+    {
+        "word": "가져오다",
+        "romaja": "gajyeooda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to bring something"
+            },
+            {
+                "def": "to incur; to entail"
+            }
+        ],
+        "conj": [
+            "가져온다",
+            "가져와",
+            "가져와요",
+            "가져옵니다"
+        ]
+    },
+    {
+        "word": "가족",
+        "romaja": "gajok",
+        "hanja": "家族",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "household; family",
+                "examples": [
+                    {
+                        "example": "저희 가족을 소개하겠습니다.",
+                        "transliteration": "Jeohui gajogeul sogaehagetseumnida.",
+                        "translation": "(I) will introduce my family."
+                    }
+                ]
+            }
+        ],
+        "syns": [
+            "핵가족",
+            "씨족",
+            "가정"
+        ],
+        "tags": [
+            "topik1"
+        ]
+    },
+    {
+        "word": "가주",
+        "romaja": "Gaju",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "California (a state of the United States)"
+            }
+        ]
+    },
+    {
+        "word": "가죽",
+        "romaja": "gajuk",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "leather"
+            }
+        ]
+    },
+    {
+        "word": "가죽끈",
+        "romaja": "gajukkkeun",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "leather strap; leash",
+                "examples": [
+                    {
+                        "example": "그는 가죽끈으로 맨 개 한 마리를 가져왔다.",
+                        "transliteration": "Geuneun gajukkkeuneuro maen gae han marireul gajyeowatda.",
+                        "translation": "He brought a dog on a leash."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가지",
+        "romaja": "gaji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "kind or kinds"
+            }
+        ]
+    },
+    {
+        "word": "가지",
+        "romaja": "gaji",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "suspective form of 가다 (gada, “to go”)"
+            }
+        ]
+    },
+    {
+        "word": "가지",
+        "romaja": "gaji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "twig or branch"
+            }
+        ]
+    },
+    {
+        "word": "가지",
+        "romaja": "gaji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "eggplant/aubergine"
+            }
+        ]
+    },
+    {
+        "word": "가지가지",
+        "romaja": "gajigaji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "various kinds, many kinds"
+            }
+        ]
+    },
+    {
+        "word": "가지가지",
+        "romaja": "gajigaji",
+        "pos": "det",
+        "defs": [
+            {
+                "def": "various kinds of"
+            }
+        ]
+    },
+    {
+        "word": "가지고",
+        "romaja": "gajigo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "with; by; by means of",
+                "examples": [
+                    {
+                        "example": "공을 가지고 놀다",
+                        "transliteration": "gong-eul gajigo nolda",
+                        "translation": "to play with a ball"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가지다",
+        "romaja": "gajida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to have, to possess",
+                "examples": [
+                    {
+                        "example": "왜 세계지도를 가지고 있지?",
+                        "transliteration": "Wae segyejidoreul gajigo itji?",
+                        "translation": "Why do you have a map of the world?"
+                    }
+                ]
+            },
+            {
+                "def": "to hold or bear a specific attitude or idea"
+            },
+            {
+                "def": "to bear or conceive a child"
+            }
+        ],
+        "conj": [
+            "가진다",
+            "가져",
+            "가져요/가지어요",
+            "가집니다"
+        ]
+    },
+    {
+        "word": "가지뿔",
+        "romaja": "gajippul",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The antler of a pronghorn."
+            }
+        ]
+    },
+    {
+        "word": "가짜",
+        "romaja": "gajja",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "fake"
+            }
+        ]
+    },
+    {
+        "word": "가차",
+        "romaja": "gacha",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "(Chinese character classification) Chinese characters that are \"borrowed\" to write another homophonous or near-homophonous morpheme"
+            }
+        ]
+    },
+    {
+        "word": "가창",
+        "romaja": "gachang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "singing"
+            }
+        ]
+    },
+    {
+        "word": "가창",
+        "romaja": "gachang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "prostitute, whore, streetwalker"
+            }
+        ]
+    },
+    {
+        "word": "가창오리",
+        "romaja": "gachang-ori",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The Baikal teal, Anas formosa."
+            }
+        ]
+    },
+    {
+        "word": "가축",
+        "romaja": "gachuk",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "livestock"
+            }
+        ]
+    },
+    {
+        "word": "가치",
+        "romaja": "gachi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "value"
+            }
+        ]
+    },
+    {
+        "word": "가치관",
+        "romaja": "gachigwan",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "value (one's morals, morality, or belief system)",
+                "examples": [
+                    {
+                        "example": "그 집안의 아버지와 딸은 서로 다른 기치관을 고집한다.",
+                        "transliteration": "Geu jibanui abeojiwa ttareun seoro dareun gichigwaneul gojiphanda.",
+                        "translation": "The father and the daughter of this household hold different values from each other."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "가타나",
+        "romaja": "gatana",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "katana"
+            }
+        ]
+    },
+    {
+        "word": "가타카나",
+        "romaja": "gatakana",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "katakana"
+            }
+        ]
+    },
+    {
+        "word": "가톨릭",
+        "romaja": "gatollik",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Catholicism; the Catholic Church"
+            }
+        ]
+    },
+    {
+        "word": "가톨릭교회",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Catholic Church"
+            }
+        ]
+    },
+    {
+        "word": "가파르다",
+        "romaja": "gapareuda",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "to be steep (of a road, path, or slope)"
+            }
+        ],
+        "conj": [
+            "가파르다",
+            "가팔라",
+            "가팔라요",
+            "가파릅니다"
+        ]
+    },
+    {
+        "word": "가하다",
+        "romaja": "gahada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To add; to increase"
+            },
+            {
+                "def": "To do a certain act; to affect"
+            },
+            {
+                "def": "To affect in order to do a certain act"
+            },
+            {
+                "def": "To drive quickly"
+            }
+        ],
+        "conj": [
+            "가한다",
+            "가해",
+            "가해요",
+            "가합니다"
+        ]
+    },
+    {
+        "word": "가하다",
+        "romaja": "gahada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "To be right; to be good"
+            },
+            {
+                "def": "To be good in accordance with one's will"
+            }
+        ],
+        "conj": [
+            "가한다",
+            "가해",
+            "가해요",
+            "가합니다"
+        ]
+    },
+    {
+        "word": "가히",
+        "romaja": "gahi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "rightly (so); readily"
+            }
+        ]
+    },
+    {
+        "word": "각",
+        "romaja": "gak",
+        "pos": "det",
+        "defs": [
+            {
+                "def": "each"
+            }
+        ]
+    },
+    {
+        "word": "각",
+        "romaja": "gak",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "angle, corner"
+            }
+        ]
+    },
+    {
+        "word": "각각",
+        "romaja": "gakgak",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "each, every, respective",
+                "examples": [
+                    {
+                        "example": "각각의 금액이 매도인 측 은행에서 수령된 때에",
+                        "transliteration": "gakgagui geumaegi maedoin cheuk eunhaeng-eseo suryeongdoen ttaee",
+                        "translation": "when the respective sums due have been received by the Seller’s bank"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "각국",
+        "romaja": "gakguk",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "each country/nation"
+            },
+            {
+                "def": "various countries"
+            }
+        ]
+    },
+    {
+        "word": "각기",
+        "romaja": "gakgi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "each, respectively, individually",
+                "examples": [
+                    {
+                        "example": "그들에게 사과를 각기 두 개씩 주어라.",
+                        "transliteration": "Geudeurege sagwareul gakgi du gaessik jueora.",
+                        "translation": "Give them two apples each."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "각도",
+        "romaja": "gakdo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "angle (measure, figure)"
+            },
+            {
+                "def": "angle (viewpoint)"
+            }
+        ]
+    },
+    {
+        "word": "각막",
+        "romaja": "gangmak",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "cornea"
+            }
+        ]
+    },
+    {
+        "word": "각본",
+        "romaja": "gakbon",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "script; scenario; screenplay"
+            }
+        ]
+    },
+    {
+        "word": "각선미",
+        "romaja": "gakseonmi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "attractive visual quality for describing the legs of a person",
+                "examples": [
+                    {
+                        "example": "우리 언니의 각선미가 참 예뻐!",
+                        "transliteration": "Uri eonniui gakseonmiga cham yeppeo!",
+                        "translation": "My older sister has very nice legs!"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "각시붕어",
+        "romaja": "gaksibung-eo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The Korean rose bitterling, Rhodeus uyekii."
+            }
+        ]
+    },
+    {
+        "word": "각자",
+        "romaja": "gakja",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "each person, everyone"
+            }
+        ]
+    },
+    {
+        "word": "각종",
+        "romaja": "gakjong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "every sort; all kinds"
+            }
+        ]
+    },
+    {
+        "word": "각주구검",
+        "romaja": "gakjugugeom",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "being foolishly stubborn and unwilling to adapt to changes"
+            }
+        ]
+    },
+    {
+        "word": "각하",
+        "romaja": "gakha",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "(Mr/Madame) President"
+            },
+            {
+                "def": "(your) Excellency"
+            },
+            {
+                "def": "Your Honour"
+            }
+        ]
+    },
+    {
+        "word": "간",
+        "pos": "suf",
+        "defs": [
+            {
+                "def": "(time) for"
+            },
+            {
+                "def": "(place) between"
+            }
+        ]
+    },
+    {
+        "word": "간",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "salty seasonings"
+            }
+        ]
+    },
+    {
+        "word": "간",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "(abbreviation of 간장) liver"
+            }
+        ]
+    },
+    {
+        "word": "간",
+        "romaja": "gan",
+        "hanja": "澗",
+        "pos": "num",
+        "defs": [
+            {
+                "def": "10^38 (10 to the 38th power)"
+            }
+        ]
+    },
+    {
+        "word": "간계",
+        "romaja": "gan-gye",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "plot; evil scheme"
+            }
+        ]
+    },
+    {
+        "word": "간곡",
+        "romaja": "gan-gok",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "kindness, warmth, cordiality"
+            }
+        ]
+    },
+    {
+        "word": "간곡하다",
+        "romaja": "gan-gokhada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "to be earnest"
+            }
+        ],
+        "conj": [
+            "간곡하다",
+            "간곡해",
+            "간곡해요",
+            "간곡합니다"
+        ]
+    },
+    {
+        "word": "간균",
+        "romaja": "gan-gyun",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "bacillus (any bacteria in the genus Bacillus)"
+            }
+        ]
+    },
+    {
+        "word": "간단",
+        "romaja": "gandan",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A pause; a brief cessation"
+            }
+        ]
+    },
+    {
+        "word": "간단",
+        "romaja": "gandan",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "easy; simple"
+            }
+        ]
+    },
+    {
+        "word": "간단하다",
+        "romaja": "gandanhada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "To be simple or straightforward.",
+                "examples": [
+                    {
+                        "example": "아주 간단합니다.",
+                        "transliteration": "Aju gandanhamnida.",
+                        "translation": "It's really simple."
+                    }
+                ]
+            }
+        ],
+        "conj": [
+            "간단하다",
+            "간단해",
+            "간단해요",
+            "간단합니다"
+        ]
+    },
+    {
+        "word": "간단하다",
+        "romaja": "gandanhada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To pause briefly."
+            }
+        ],
+        "conj": [
+            "간단하다",
+            "간단해",
+            "간단해요",
+            "간단합니다"
+        ]
+    },
+    {
+        "word": "간단히",
+        "romaja": "gandanhi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "simply, easily"
+            }
+        ]
+    },
+    {
+        "word": "간모",
+        "romaja": "ganmo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "plot; evil scheme"
+            }
+        ]
+    },
+    {
+        "word": "간물",
+        "romaja": "ganmul",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "brine"
+            }
+        ]
+    },
+    {
+        "word": "간부",
+        "romaja": "ganbu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "executive"
+            },
+            {
+                "def": "officer"
+            }
+        ]
+    },
+    {
+        "word": "간사",
+        "romaja": "gansa",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "deceit"
+            }
+        ]
+    },
+    {
+        "word": "간사하다",
+        "romaja": "gansahada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "To be deceitful or cunning."
+            }
+        ],
+        "conj": [
+            "간사하다",
+            "간사해",
+            "간사해요",
+            "간사합니다"
+        ]
+    },
+    {
+        "word": "간사하다",
+        "romaja": "gansahada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To manage or administer."
+            }
+        ],
+        "conj": [
+            "간사하다",
+            "간사해",
+            "간사해요",
+            "간사합니다"
+        ]
+    },
+    {
+        "word": "간선도로",
+        "romaja": "ganseondoro",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "main road, main thoroughfare, artery, arterial road, trunk road"
+            }
+        ]
+    },
+    {
+        "word": "간섭",
+        "romaja": "ganseop",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "interference"
+            }
+        ]
+    },
+    {
+        "word": "간성",
+        "romaja": "ganseong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The honorable defenders of the country."
+            }
+        ]
+    },
+    {
+        "word": "간식",
+        "romaja": "gansik",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "snack, refreshments, nosh"
+            }
+        ]
+    },
+    {
+        "word": "간신",
+        "romaja": "gansin",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A villainous vassal."
+            }
+        ]
+    },
+    {
+        "word": "간쑤",
+        "romaja": "Ganssu",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Gansu"
+            }
+        ]
+    },
+    {
+        "word": "간악",
+        "romaja": "ganak",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "wickedness"
+            }
+        ]
+    },
+    {
+        "word": "간악하다",
+        "romaja": "ganakhada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "malicious; treacherous"
+            }
+        ],
+        "conj": [
+            "간악하다",
+            "간악해",
+            "간악해요",
+            "간악합니다"
+        ]
+    },
+    {
+        "word": "간유",
+        "romaja": "ganyu",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "(cod-)liver oil"
+            }
+        ]
+    },
+    {
+        "word": "간음",
+        "romaja": "ganeum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "adultery"
+            }
+        ]
+    },
+    {
+        "word": "간장",
+        "romaja": "ganjang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "soy sauce made from soybean"
+            }
+        ]
+    },
+    {
+        "word": "간장",
+        "romaja": "ganjang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "liver and intestine"
+            }
+        ]
+    },
+    {
+        "word": "간접",
+        "romaja": "ganjeop",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "indirectness",
+                "examples": [
+                    {
+                        "example": "간접 목적어",
+                        "transliteration": "ganjeop mokjeogeo",
+                        "translation": "indirect object"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "간접화법",
+        "romaja": "ganjeophwabeop",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "indirect discourse"
+            }
+        ]
+    },
+    {
+        "word": "간지",
+        "romaja": "ganji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The sexagenary cycle used in East Asian astrology."
+            }
+        ]
+    },
+    {
+        "word": "간직하다",
+        "romaja": "ganjikhada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to save/preserve/safely put away something precious"
+            }
+        ],
+        "conj": [
+            "간직한다",
+            "간직해",
+            "간직해요",
+            "간직합니다"
+        ]
+    },
+    {
+        "word": "간질",
+        "romaja": "ganjil",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "epilepsy"
+            }
+        ]
+    },
+    {
+        "word": "간질거리다",
+        "romaja": "ganjilgeorida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To tickle"
+            },
+            {
+                "def": "To be delighted"
+            }
+        ],
+        "conj": [
+            "간질거린다",
+            "간질거려",
+            "간질거려요/간질거리어요",
+            "간질거립니다"
+        ]
+    },
+    {
+        "word": "간질대다",
+        "romaja": "ganjildaeda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To tickle"
+            },
+            {
+                "def": "To be tickled or ticklish"
+            }
+        ],
+        "conj": [
+            "간질댄다",
+            "간질대",
+            "간질대요/간질대어요",
+            "간질댑니다"
+        ]
+    },
+    {
+        "word": "간질이다",
+        "romaja": "ganjirida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To tickle"
+            }
+        ],
+        "conj": [
+            "간질인다",
+            "간질여",
+            "간질여요/간질이어요",
+            "간질입니다"
+        ]
+    },
+    {
+        "word": "간첩",
+        "romaja": "gancheop",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "spy; secret agent"
+            }
+        ]
+    },
+    {
+        "word": "간체",
+        "romaja": "ganche",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Simplified Chinese characters"
+            }
+        ]
+    },
+    {
+        "word": "간체",
+        "romaja": "ganche",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "rod cell"
+            }
+        ]
+    },
+    {
+        "word": "간체자",
+        "romaja": "gancheja",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "simplified Chinese character"
+            }
+        ]
+    },
+    {
+        "word": "간추리다",
+        "romaja": "ganchurida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To summarize"
+            },
+            {
+                "def": "To abridge"
+            }
+        ],
+        "conj": [
+            "간추린다",
+            "간추려",
+            "간추려요/간추리어요",
+            "간추립니다"
+        ]
+    },
+    {
+        "word": "간통",
+        "romaja": "gantong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "adultery"
+            }
+        ]
+    },
+    {
+        "word": "간판",
+        "romaja": "ganpan",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "signboard"
+            }
+        ]
+    },
+    {
+        "word": "간편하다",
+        "romaja": "ganpyeonhada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "simple and convenient; straightforward"
+            }
+        ],
+        "conj": [
+            "간편한다",
+            "간편해",
+            "간편해요",
+            "간편합니다"
+        ]
+    },
+    {
+        "word": "간헐천",
+        "romaja": "ganheolcheon",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "a geyser"
+            }
+        ]
+    },
+    {
+        "word": "간호사",
+        "romaja": "ganhosa",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "nurse"
+            }
+        ]
+    },
+    {
+        "word": "간호원",
+        "romaja": "ganhowon",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "nurse"
+            }
+        ]
+    },
+    {
+        "word": "갇히다",
+        "romaja": "gathida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to be locked up, to be confined"
+            }
+        ],
+        "conj": [
+            "갇힌다",
+            "갇혀",
+            "갇혀요/갇히어요",
+            "갇힙니다"
+        ]
+    },
+    {
+        "word": "갈",
+        "romaja": "gal",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "Future adnominal form of 가다 (gada, “to go”), thus often \"who/that will go\"",
+                "examples": [
+                    {
+                        "example": "서울로 갈 사람",
+                        "transliteration": "Seoul-lo gal saram",
+                        "translation": "someone who will go to Seoul"
+                    }
+                ]
+            },
+            {
+                "def": "Future adnominal form of 갈다 (galda, “to change, grind, or cultivate”)",
+                "examples": [
+                    {
+                        "example": "밭을 갈 때",
+                        "transliteration": "bat-eul gal ttae",
+                        "translation": "when plowing the field"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "갈겨니",
+        "romaja": "galgyeoni",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The dark chub, Nipponocypris temmincki ( <= Zacco temminckii)."
+            }
+        ]
+    },
+    {
+        "word": "갈고",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "galgo, an ancient double-headed hourglass-shaped drum played with two sticks, used in Korean traditional music"
+            }
+        ]
+    },
+    {
+        "word": "갈고랑이",
+        "romaja": "galgorang-i",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "hook, crook, gaff"
+            }
+        ]
+    },
+    {
+        "word": "갈고리",
+        "romaja": "galgori",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "hook"
+            }
+        ]
+    },
+    {
+        "word": "갈기",
+        "romaja": "galgi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "mane"
+            }
+        ]
+    },
+    {
+        "word": "갈까마귀",
+        "romaja": "galkkamagwi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "jackdaw"
+            }
+        ]
+    },
+    {
+        "word": "갈다",
+        "romaja": "galda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to till, plough, sow a crop, cultivate"
+            }
+        ],
+        "conj": [
+            "간다",
+            "갈아",
+            "갈아요",
+            "갑니다"
+        ]
+    },
+    {
+        "word": "갈다",
+        "romaja": "galda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to change, replace"
+            }
+        ],
+        "conj": [
+            "간다",
+            "갈아",
+            "갈아요",
+            "갑니다"
+        ]
+    },
+    {
+        "word": "갈다",
+        "romaja": "galda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to grind, file, polish, rub, whet"
+            }
+        ],
+        "conj": [
+            "간다",
+            "갈아",
+            "갈아요",
+            "갑니다"
+        ]
+    },
+    {
+        "word": "갈등",
+        "romaja": "galdeung",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "discord, conflict"
+            }
+        ]
+    },
+    {
+        "word": "갈라지다",
+        "romaja": "gallajida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "part (to become divided in two or separated)"
+            }
+        ],
+        "conj": [
+            "갈라진다",
+            "갈라져",
+            "갈라져요/갈라지어요",
+            "갈라집니다"
+        ]
+    },
+    {
+        "word": "갈래",
+        "romaja": "gallae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "division, separation, split, strand, thread, fork"
+            }
+        ]
+    },
+    {
+        "word": "갈륨",
+        "romaja": "gallyum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "gallium"
+            }
+        ]
+    },
+    {
+        "word": "갈리",
+        "romaja": "galli",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Alternative spelling of 갤리 (gaelli)"
+            }
+        ]
+    },
+    {
+        "word": "갈리시아",
+        "romaja": "Gallisia",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Galicia (Spain)"
+            }
+        ]
+    },
+    {
+        "word": "갈림길",
+        "romaja": "gallimgil",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "forked road, the fork of a road",
+                "examples": [
+                    {
+                        "example": "갈림길에서 오른쪽으로 접어들다",
+                        "transliteration": "gallimgireseo oreunjjogeuro jeobeodeulda",
+                        "translation": "take the right-hand fork"
+                    },
+                    {
+                        "example": "이 도로를 따라서 곧장 가시면 갈림길이 나올겁니다.",
+                        "transliteration": "I dororeul ttaraseo gotjang gasimyeon gallimgiri naolgeomnida.",
+                        "translation": "Go straight down this road till you come to a fork in the road."
+                    }
+                ]
+            },
+            {
+                "def": "crossroads, turning point or opportunity to change direction, course, or goal",
+                "examples": [
+                    {
+                        "example": "갈림길에 서다",
+                        "transliteration": "gallimgire seoda",
+                        "translation": "stand at the crossroads"
+                    },
+                    {
+                        "example": "전북지역 경찰관들의 슬기로운 대응이 추석 연휴기간 생사(生死)의 갈림길에 놓였던 시민들을 잇따라 구조해 주목을 받고 있다.",
+                        "transliteration": "Jeonbukjiyeok gyeongchalgwandeurui seulgiroun daeeung-i chuseok yeonhyugigan saengsaui gallimgire noyeotdeon simindeureul itttara gujohae jumogeul batgo itda.",
+                        "translation": "The wise rescue actions of policemen in the Jeonbuk region during the Harvest Festival holiday period, in response to civilians who were at the crossroads of life and death, have put themselves under the spotlight."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "갈매기",
+        "romaja": "galmaegi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "gull, seagull, mew"
+            }
+        ]
+    },
+    {
+        "word": "갈문망둑",
+        "romaja": "galmunmangduk",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The paradise goby, Rhinogobius giurinus."
+            }
+        ]
+    },
+    {
+        "word": "갈밭쥐",
+        "romaja": "galbatjwi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The reed vole, Microtus fortis"
+            }
+        ]
+    },
+    {
+        "word": "갈보",
+        "romaja": "galbo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "prostitute"
+            }
+        ]
+    },
+    {
+        "word": "갈비",
+        "romaja": "galbi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "ribs"
+            },
+            {
+                "def": "kalbi, galbi (a Korean barbecued rib dish)"
+            },
+            {
+                "def": "a skinny person, a living skeleton"
+            }
+        ]
+    },
+    {
+        "word": "갈비뼈",
+        "romaja": "galbippyeo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "rib (bone)"
+            }
+        ]
+    },
+    {
+        "word": "갈비탕",
+        "romaja": "galbitang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Korean beef-rib soup, galbitang"
+            }
+        ]
+    },
+    {
+        "word": "갈색",
+        "romaja": "galsaek",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "brown (color)"
+            }
+        ]
+    },
+    {
+        "word": "갈색얼가니새",
+        "romaja": "galsaegeolganisae",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The brown booby, Sula leucogaster."
+            }
+        ]
+    },
+    {
+        "word": "갈수록",
+        "romaja": "galsurok",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "as time goes by, the more ... the more ...",
+                "examples": [
+                    {
+                        "example": "소득 수준이 높아지면서 대형 가전제품의 수요가 갈수록 늘어나고 있다.",
+                        "transliteration": "Sodeuk sujuni nopajimyeonseo daehyeong gajeonjepumui suyoga galsurok neureonago itda.",
+                        "translation": "As income level is raised, the demand for large-sized household electrical appliances is also increasing."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "갈아입다",
+        "romaja": "garaipda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to change (clothing)"
+            }
+        ],
+        "conj": [
+            "갈아입는다",
+            "갈아입어",
+            "갈아입어요",
+            "갈아입습니다"
+        ]
+    },
+    {
+        "word": "갈아타다",
+        "romaja": "garatada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to change to, to transfer to"
+            }
+        ],
+        "conj": [
+            "갈아탄다",
+            "갈아타",
+            "갈아타요",
+            "갈아탑니다"
+        ]
+    },
+    {
+        "word": "갈옷",
+        "romaja": "garot",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The traditional brown-dyed clothing of Jeju."
+            }
+        ]
+    },
+    {
+        "word": "갈음하다",
+        "romaja": "gareumhada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to substitute; to replace"
+            }
+        ],
+        "conj": [
+            "갈음한다",
+            "갈음해",
+            "갈음해요",
+            "갈음합니다"
+        ]
+    },
+    {
+        "word": "갈증",
+        "romaja": "galjeung",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "thirst"
+            },
+            {
+                "def": "Short for 갈급증 (galgeupjeung, “impatience”)."
+            }
+        ]
+    },
+    {
+        "word": "갈퀴",
+        "romaja": "galkwi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "rake, harrow"
+            }
+        ]
+    },
+    {
+        "word": "갈퀴다",
+        "romaja": "galkwida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to rake"
+            }
+        ],
+        "conj": [
+            "갈퀸다",
+            "갈퀴어",
+            "갈퀴어요",
+            "갈큅니다"
+        ]
+    },
+    {
+        "word": "갈토",
+        "romaja": "galto",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "A Saturday on which school classes are held."
+            }
+        ]
+    },
+    {
+        "word": "갉다",
+        "romaja": "gakda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to gnaw (at); to nibble (at)"
+            },
+            {
+                "def": "to rake together"
+            },
+            {
+                "def": "to extort; to squeeze; to exploit"
+            },
+            {
+                "def": "to find fault (with)"
+            }
+        ],
+        "conj": [
+            "갉는다",
+            "갉아",
+            "갉아요",
+            "갉습니다"
+        ]
+    },
+    {
+        "word": "갋다",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to make parallel"
+            }
+        ]
+    },
+    {
+        "word": "감",
+        "romaja": "gam",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "feeling"
+            }
+        ]
+    },
+    {
+        "word": "감",
+        "romaja": "gam",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "persimmon"
+            }
+        ]
+    },
+    {
+        "word": "감",
+        "romaja": "gam",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "material, fabric"
+            }
+        ]
+    },
+    {
+        "word": "감",
+        "romaja": "gam",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "A  surname​."
+            }
+        ]
+    },
+    {
+        "word": "감각",
+        "romaja": "gamgak",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "sensation"
+            },
+            {
+                "def": "A sense for something."
+            }
+        ]
+    },
+    {
+        "word": "감각적",
+        "romaja": "gamgakjeok",
+        "pos": "det",
+        "defs": [
+            {
+                "def": "sensual"
+            }
+        ]
+    },
+    {
+        "word": "감각적인",
+        "romaja": "gamgakjeok",
+        "pos": "det",
+        "defs": [
+            {
+                "def": "sensual"
+            }
+        ]
+    },
+    {
+        "word": "감금",
+        "romaja": "gamgeum",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "imprisonment, captivity, confinement, detention"
+            }
+        ]
+    },
+    {
+        "word": "감기",
+        "romaja": "gamgi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "a cold; influenza",
+                "examples": [
+                    {
+                        "example": "감기가 들다",
+                        "transliteration": "gamgiga deulda",
+                        "translation": "to catch a cold (Literally, \"A cold enters\")"
+                    },
+                    {
+                        "example": "감기에 걸리다",
+                        "transliteration": "gamgie geollida",
+                        "translation": "to catch a cold"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "감기다",
+        "romaja": "gamgida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to close",
+                "examples": [
+                    {
+                        "example": "눈이 감겨요.",
+                        "transliteration": "Nuni gamgyeoyo.",
+                        "translation": "Close your eyes."
+                    }
+                ]
+            }
+        ],
+        "conj": [
+            "감긴다",
+            "감겨",
+            "감겨요/감기어요",
+            "감깁니다"
+        ]
+    },
+    {
+        "word": "감다",
+        "romaja": "gamda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to wash oneself; to bathe",
+                "examples": [
+                    {
+                        "example": "머리를 감다",
+                        "transliteration": "meorireul gamda",
+                        "translation": "to wash (one's) hair."
+                    }
+                ]
+            },
+            {
+                "def": "to close (one's eyes)"
+            }
+        ],
+        "conj": [
+            "감는다",
+            "감아",
+            "감아요",
+            "감습니다"
+        ]
+    },
+    {
+        "word": "감당하다",
+        "romaja": "gamdanghada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to cope with; to manage"
+            }
+        ],
+        "conj": [
+            "감당한다",
+            "감당해",
+            "감당해요",
+            "감당합니다"
+        ]
+    },
+    {
+        "word": "감독",
+        "romaja": "gamdok",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "direction, supervision"
+            },
+            {
+                "def": "the director of a cinematic or theatrical production"
+            }
+        ]
+    },
+    {
+        "word": "감돌고기",
+        "romaja": "gamdolgogi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The black shiner, Pseudopungtungia nigra."
+            }
+        ]
+    },
+    {
+        "word": "감동",
+        "romaja": "gamdong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "sensation; touching by heart; moving by heart"
+            }
+        ]
+    },
+    {
+        "word": "감동사",
+        "romaja": "gamdongsa",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "an interjection"
+            }
+        ]
+    },
+    {
+        "word": "감람",
+        "romaja": "gamnam",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Chinese olive"
+            }
+        ]
+    },
+    {
+        "word": "감람",
+        "romaja": "gamnam",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "cabbage"
+            }
+        ]
+    },
+    {
+        "word": "감로",
+        "romaja": "gamno",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "honeydew"
+            },
+            {
+                "def": "amrita, nectar"
+            }
+        ]
+    },
+    {
+        "word": "감리교",
+        "romaja": "gamnigyo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Methodism"
+            }
+        ]
+    },
+    {
+        "word": "감마",
+        "romaja": "gamma",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The Greek letter gamma"
+            }
+        ]
+    },
+    {
+        "word": "감미료",
+        "romaja": "gammiryo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "sweetener"
+            }
+        ]
+    },
+    {
+        "word": "감방",
+        "romaja": "gambang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "prison cell"
+            }
+        ]
+    },
+    {
+        "word": "감비아",
+        "romaja": "Gambia",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Gambia"
+            }
+        ]
+    },
+    {
+        "word": "감사",
+        "romaja": "gamsa",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "gratitude; thanks"
+            }
+        ]
+    },
+    {
+        "word": "감사하다",
+        "romaja": "gamsahada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "To be thankful"
+            }
+        ],
+        "conj": [
+            "감사하다",
+            "감사해",
+            "감사해요",
+            "감사합니다"
+        ]
+    },
+    {
+        "word": "감사하다",
+        "romaja": "gamsahada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "To give thanks; to thank"
+            }
+        ],
+        "conj": [
+            "감사하다",
+            "감사해",
+            "감사해요",
+            "감사합니다"
+        ]
+    },
+    {
+        "word": "감사합니다",
+        "romaja": "gamsahamnida",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "Formal indicative assertive of 감사하다 (gamsahada, “to be thankful”), thus \"is/am/are thankful.\""
+            }
+        ]
+    },
+    {
+        "word": "감사합니다",
+        "romaja": "gamsahamnida",
+        "pos": "intj",
+        "defs": [
+            {
+                "def": "thank you"
+            }
+        ]
+    },
+    {
+        "word": "감사합니다",
+        "romaja": "gamsahamnida",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "Formal indicative assertive of 감사하다 (gamsahada), thus \"give(s) thanks.\"",
+                "examples": [
+                    {
+                        "example": "그럼에도 그는 감사합니다.",
+                        "transliteration": "Geureomedo geuneun gamsahamnida.",
+                        "translation": "Nonetheless he gives thanks."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "감소",
+        "romaja": "gamso",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "reduction",
+                "examples": [
+                    {
+                        "example": "한 조사팀이 바이수에이의 감소가 지난 10년간 연간 약 27미터라고 기록하였다.",
+                        "transliteration": "Han josatimi baisueiui gamsoga jinan 10nyeon-gan yeon-gan yak 27miteorago girokhayeotda.",
+                        "translation": "One research team has recorded Baishui’s decrease at about 27 meters per year over the last 10 years."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "감수하다",
+        "romaja": "gamsuhada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to put up with; to endure"
+            }
+        ],
+        "conj": [
+            "감수한다",
+            "감수해",
+            "감수해요",
+            "감수합니다"
+        ]
+    },
+    {
+        "word": "감숙",
+        "romaja": "Gamsuk",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Gansu"
+            }
+        ]
+    },
+    {
+        "word": "감시",
+        "romaja": "gamsi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "surveillance"
+            }
+        ]
+    },
+    {
+        "word": "감싸다",
+        "romaja": "gamssada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to cover; to wrap"
+            },
+            {
+                "def": "to defend; to cover"
+            }
+        ],
+        "conj": [
+            "감싼다",
+            "감싸",
+            "감싸요",
+            "감쌉니다"
+        ]
+    },
+    {
+        "word": "감염",
+        "romaja": "gamyeom",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "infection, contagion, infestation"
+            }
+        ]
+    },
+    {
+        "word": "감옥",
+        "romaja": "gamok",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "jail"
+            }
+        ]
+    },
+    {
+        "word": "감자",
+        "romaja": "gamja",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "potato"
+            }
+        ]
+    },
+    {
+        "word": "감자",
+        "romaja": "gamja",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "let's close (our eyes)"
+            },
+            {
+                "def": "let's wash"
+            }
+        ]
+    },
+    {
+        "word": "감정",
+        "romaja": "gamjeong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "emotion, feeling"
+            }
+        ]
+    },
+    {
+        "word": "감초",
+        "romaja": "gamcho",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "licorice"
+            }
+        ]
+    },
+    {
+        "word": "감추다",
+        "romaja": "gamchuda",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to conceal, to keep secret"
+            }
+        ],
+        "conj": [
+            "감춘다",
+            "감추어",
+            "감추어요/감춰요",
+            "감춥니다"
+        ]
+    },
+    {
+        "word": "감칠맛",
+        "romaja": "gamchilmat",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "umami taste; savoury taste"
+            }
+        ]
+    },
+    {
+        "word": "감탄",
+        "romaja": "gamtan",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "admiration; wonderment",
+                "examples": [
+                    {
+                        "example": "그림을 밝고 빛나는 색깔로 덕지덕지 그려 놓으면, 서민들은 그것을 휼륭한 작품이라며 감탄해 한다.",
+                        "transliteration": "Geurimeul balgo binnaneun saekkkallo deokjideokji geuryeo noeumyeon, seomindeureun geugeoseul hyullyunghan jakpumiramyeo gamtanhae handa.",
+                        "translation": "If a picture is daubed with many bright and glaring colours, the vulgar admire it as an excellent piece. (I. Watts)"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "감탄사",
+        "romaja": "gamtansa",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "interjection"
+            }
+        ]
+    },
+    {
+        "word": "감히",
+        "romaja": "gamhi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "boldly, fearlessly, daringly",
+                "examples": [
+                    {
+                        "example": "제가 감히 한 말씀 드리겠습니다.",
+                        "transliteration": "Jega gamhi han malsseum deurigetseumnida.",
+                        "translation": "If I may, I would like to say one thing."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "갑",
+        "romaja": "gap",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "armor; shell"
+            },
+            {
+                "def": "the first of the ten heavenly stems"
+            }
+        ]
+    },
+    {
+        "word": "갑",
+        "romaja": "gap",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "box; case"
+            }
+        ]
+    },
+    {
+        "word": "갑",
+        "romaja": "gap",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "cape; headland"
+            }
+        ]
+    },
+    {
+        "word": "갑각",
+        "romaja": "gapgak",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "shell; carapace"
+            }
+        ]
+    },
+    {
+        "word": "갑옷",
+        "romaja": "gabot",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "armor"
+            }
+        ]
+    },
+    {
+        "word": "갑이다",
+        "romaja": "gap",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "armor; shell"
+            },
+            {
+                "def": "the first of the ten Celestial stems"
+            }
+        ]
+    },
+    {
+        "word": "갑이다",
+        "romaja": "gap",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "box; case"
+            }
+        ]
+    },
+    {
+        "word": "갑이다",
+        "romaja": "gap",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "cape, headland"
+            }
+        ]
+    },
+    {
+        "word": "갑자기",
+        "romaja": "gapjagi",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "suddenly, all of a sudden"
+            }
+        ]
+    },
+    {
+        "word": "갑작변이",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "mutation"
+            }
+        ]
+    },
+    {
+        "word": "갑작부자",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Someone who has become instantly rich."
+            }
+        ]
+    },
+    {
+        "word": "갑작스럽다",
+        "romaja": "gapjakseureopda",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "to be sudden, abrupt, unexpected"
+            }
+        ],
+        "conj": [
+            "갑작스럽다",
+            "갑작스러워",
+            "갑작스러워요",
+            "갑작스럽습니다"
+        ]
+    },
+    {
+        "word": "갑작스레",
+        "romaja": "gapjakseure",
+        "pos": "adv",
+        "defs": [
+            {
+                "def": "suddenly, unexpectedly"
+            }
+        ]
+    },
+    {
+        "word": "갑충",
+        "romaja": "gapchung",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "beetle"
+            }
+        ]
+    },
+    {
+        "word": "갑판",
+        "romaja": "gappan",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "deck (of a ship)"
+            }
+        ]
+    },
+    {
+        "word": "값",
+        "romaja": "gap",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "(가격): price",
+                "examples": [
+                    {
+                        "example": "값이 얼마입니까?",
+                        "transliteration": "Gapsi eolmaimnikka?",
+                        "translation": "How much does it cost?"
+                    }
+                ]
+            },
+            {
+                "def": "(가치): value"
+            }
+        ]
+    },
+    {
+        "word": "값나가다",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "valuable, expensive"
+            }
+        ],
+        "conj": [
+            "값나간다",
+            "값나가",
+            "값나가요",
+            "값나갑니다"
+        ]
+    },
+    {
+        "word": "값어치",
+        "romaja": "gabeochi",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "value, worth"
+            }
+        ]
+    },
+    {
+        "word": "강",
+        "romaja": "gang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "river"
+            }
+        ]
+    },
+    {
+        "word": "강간",
+        "romaja": "ganggan",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "rape"
+            }
+        ]
+    },
+    {
+        "word": "강계",
+        "romaja": "Ganggye",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Kanggye (a city in North Korea)"
+            }
+        ]
+    },
+    {
+        "word": "강남",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Gangnam"
+            }
+        ]
+    },
+    {
+        "word": "강냉이",
+        "romaja": "gangnaeng-i",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "maize; corn"
+            }
+        ]
+    },
+    {
+        "word": "강당",
+        "romaja": "gangdang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "lecture hall; auditorium"
+            }
+        ]
+    },
+    {
+        "word": "강대국",
+        "romaja": "gangdaeguk",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "great power"
+            }
+        ]
+    },
+    {
+        "word": "강도",
+        "romaja": "gangdo",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "robber"
+            }
+        ]
+    },
+    {
+        "word": "강도다리",
+        "romaja": "gangdodari",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "The starry flounder, Platichthys stellatus."
+            }
+        ]
+    },
+    {
+        "word": "강력",
+        "romaja": "gangnyeok",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "strength; intensity"
+            }
+        ]
+    },
+    {
+        "word": "강력하다",
+        "romaja": "gangnyeokhada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "To be strong or powerful."
+            },
+            {
+                "def": "To have great potential."
+            }
+        ],
+        "conj": [
+            "강력하다",
+            "강력해",
+            "강력해요",
+            "강력합니다"
+        ]
+    },
+    {
+        "word": "강렬하다",
+        "romaja": "gangnyeolhada",
+        "pos": "a",
+        "defs": [
+            {
+                "def": "to be strong, intense"
+            }
+        ],
+        "conj": [
+            "강렬하다",
+            "강렬해",
+            "강렬해요",
+            "강렬합니다"
+        ]
+    },
+    {
+        "word": "강물",
+        "romaja": "gangmul",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "river water, river"
+            }
+        ]
+    },
+    {
+        "word": "강사",
+        "romaja": "gangsa",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "lecturer"
+            }
+        ]
+    },
+    {
+        "word": "강생이",
+        "romaja": "gangsaeng-i",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "puppy"
+            }
+        ]
+    },
+    {
+        "word": "강서",
+        "romaja": "Gangseo",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Jiangxi"
+            }
+        ]
+    },
+    {
+        "word": "강설",
+        "romaja": "gangseol",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "snowfall"
+            }
+        ]
+    },
+    {
+        "word": "강세",
+        "romaja": "gangse",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "stress, accent, emphasis"
+            }
+        ]
+    },
+    {
+        "word": "강소",
+        "romaja": "Gangso",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Jiangsu"
+            }
+        ]
+    },
+    {
+        "word": "강수",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "precipitation (water falling from the atmosphere)"
+            }
+        ]
+    },
+    {
+        "word": "강수량",
+        "romaja": "gangsuryang",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "precipitation (weather: water falling from the atmosphere)"
+            }
+        ]
+    },
+    {
+        "word": "강아지",
+        "romaja": "gang-aji",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "puppy"
+            },
+            {
+                "def": "dog, doggy"
+            }
+        ]
+    },
+    {
+        "word": "강요하다",
+        "romaja": "gang-yohada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to force, to impose"
+            }
+        ],
+        "conj": [
+            "강요한다",
+            "강요해",
+            "강요해요",
+            "강요합니다"
+        ]
+    },
+    {
+        "word": "강원도",
+        "romaja": "Gang-wondo",
+        "pos": "propn",
+        "defs": [
+            {
+                "def": "Gangwon Province, South Korea"
+            }
+        ]
+    },
+    {
+        "word": "강의",
+        "romaja": "gang-ui",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "lecture"
+            }
+        ]
+    },
+    {
+        "word": "강정",
+        "romaja": "gangjeong",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "Gangjeong, a hard cookie made from glutinous rice and deep-fried in oil."
+            }
+        ]
+    },
+    {
+        "word": "강제",
+        "romaja": "gangje",
+        "pos": "n",
+        "defs": [
+            {
+                "def": "compulsion, coercion",
+                "examples": [
+                    {
+                        "example": "강제로",
+                        "transliteration": "gangjero",
+                        "translation": "forcibly, by force"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "강조",
+        "romaja": "gangjohada",
+        "pos": "v",
+        "defs": [
+            {
+                "def": "to emphasize"
+            }
+        ],
+        "conj": [
+            "강조한다",
+            "강조해",
+            "강조해요",
+            "강조합니다"
+        ]
+    }
+]

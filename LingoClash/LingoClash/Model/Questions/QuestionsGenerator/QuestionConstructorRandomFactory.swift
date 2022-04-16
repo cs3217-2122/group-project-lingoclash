@@ -16,7 +16,7 @@ struct QuestionConstructorRandomFactory {
         let randomConstructorIndex = randomNumber(probabilities: probabilities)
         return constructors[randomConstructorIndex]
     }
-    
+
     private func randomNumber(probabilities: [Double]) -> Int {
         let sum = probabilities.reduce(0, +)
             let rnd = Double.random(in: 0.0 ..< sum)

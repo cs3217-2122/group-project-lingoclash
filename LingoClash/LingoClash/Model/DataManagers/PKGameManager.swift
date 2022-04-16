@@ -8,19 +8,19 @@
 import PromiseKit
 
 class PKGameManager: DataManager<PKGameData> {
-    
+
     init() {
         super.init(resource: DataManagerResources.pkGames)
     }
-    
+
     func createPKGame(pkGameData: PKGameData) -> Promise<PKGame> {
-        return firstly {
+        firstly {
             create(newRecord: pkGameData)
         }.then { [self] pkGameData -> Promise<PKGame> in
             self.getPKGame(id: pkGameData.id)
         }
     }
-    
+
     func getPKGame(id: Identifier) -> Promise<PKGame> {
         let profileManager = ProfileManager()
         // TODO: Make this more query efficient (in one instead of many)
@@ -37,14 +37,18 @@ class PKGameManager: DataManager<PKGameData> {
             }
         }
     }
-    
+
     func addForfeittedPlayerToPKGame(id: Identifier, playerId: Identifier) -> Promise<PKGameData> {
-        return firstly {
+        firstly {
             self.getOne(id: id)
         }.then { pkGameData -> Promise<PKGameData> in
             var forfeittedPlayers = pkGameData.forfeittedPlayers
             forfeittedPlayers.insert(playerId)
-            let newPkGameData = PKGameData(createdAt: pkGameData.createdAt, players: pkGameData.players, questions: pkGameData.questions, forfeittedPlayers: forfeittedPlayers)
+            let newPkGameData = PKGameData(
+                createdAt: pkGameData.createdAt,
+                players: pkGameData.players,
+                questions: pkGameData.questions,
+                forfeittedPlayers: forfeittedPlayers)
             return self.update(id: pkGameData.id, from: pkGameData, to: newPkGameData)
         }
     }

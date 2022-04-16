@@ -12,12 +12,12 @@ struct Lesson {
     var vocabs: [Vocab]
     let stars: Int
     let name: String
-    
+
     var questions = [Question]()
     var didPass: Bool {
         stars > 0
     }
-    
+
     init(lessonData: LessonData, vocabs: [Vocab], profileLessonData: ProfileLessonData?) {
         self.id = lessonData.id
         self.vocabs = vocabs

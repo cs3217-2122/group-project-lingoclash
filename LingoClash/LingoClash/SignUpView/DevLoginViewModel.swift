@@ -9,9 +9,9 @@ import Foundation
 import PromiseKit
 
 class DevLoginViewModel {
-    
+
     @Published var error: String?
-    
+
     let testAccounts = AppConfigs.Debug.testAccounts
 
     private let authProvider: AuthProvider
@@ -19,7 +19,7 @@ class DevLoginViewModel {
     init(authProvider: AuthProvider = AppConfigs.API.authProvider) {
         self.authProvider = authProvider
     }
-    
+
     func directLogin(row: Int) {
         #if DEBUG
         let account = testAccounts[row]

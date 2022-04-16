@@ -9,9 +9,9 @@ import UIKit
 
 class DarkTheme: ThemeProtocol {
         var mainFontName: String = "SF-Pro"
-    var accent: UIColor = UIColor(named: "AccentColor-Dark")!
-    var background: UIColor = UIColor(named: "Background-Dark")!
-    var tint: UIColor = UIColor(named: "TintColor-Dark")!
+    var accent = UIColor(named: "AccentColor-Dark")!
+    var background = UIColor(named: "Background-Dark")!
+    var tint = UIColor(named: "TintColor-Dark")!
     var green = UIColor(named: "Green-Dark")!
     var red = UIColor(named: "Red-Dark")!
     var primary = UIColor(named: "Primary-Dark")!

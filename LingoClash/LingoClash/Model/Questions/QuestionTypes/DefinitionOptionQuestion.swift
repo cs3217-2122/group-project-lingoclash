@@ -13,21 +13,21 @@ struct DefinitionOptionQuestion: SimpleOptionQuestion, Codable {
     let context: String
     let options: [String]
     let answer: String
-    
+
     init(context: String, options: [String], answer: String, vocabsTested: Set<Vocab>) {
         self.context = context
         self.options = options
         self.answer = answer
         self.vocabsTested = vocabsTested
     }
-    
+
     func isCorrect(response: Any) -> Bool {
         guard let response = response as? String else {
             return false
         }
         return response == answer
     }
-    
+
     func isEqual(to other: Question) -> Bool {
         guard let other = other as? DefinitionOptionQuestion else {
             return false

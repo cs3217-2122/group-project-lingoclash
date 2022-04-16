@@ -24,15 +24,15 @@ class QuestionViewController: UIViewController {
         styleUI()
         fillUI()
     }
-    
+
     func reloadData() {
         setUpViewModel()
     }
-    
+
     private func styleUI() {
-        
+
     }
-    
+
     private func fillUI() {
         guard isViewLoaded, let viewModel = viewModel else {
             return
@@ -42,7 +42,7 @@ class QuestionViewController: UIViewController {
         }
         loadQuestionLayoutViewController(belongingTo: layoutViewModel)
     }
-    
+
     private func loadQuestionLayoutViewController(belongingTo questionLayoutViewModel: QuestionLayoutViewModel) {
         var viewController: QuestionLayoutViewController?
         switch questionLayoutViewModel {
@@ -51,7 +51,8 @@ class QuestionViewController: UIViewController {
             vc.viewModel = simpleOptionQuestionLayoutViewModel
             viewController = vc
         case let twoDisjointSetOptionQuestionLayoutViewModel as TwoDisjointSetOptionQuestionLayoutViewModel:
-            let vc = TwoDisjointSetOptionQuestionLayoutViewController.instantiateFromAppStoryboard(AppStoryboard.Question)
+            let vc = TwoDisjointSetOptionQuestionLayoutViewController.instantiateFromAppStoryboard(
+                AppStoryboard.Question)
             vc.viewModel = twoDisjointSetOptionQuestionLayoutViewModel
             viewController = vc
         default:
@@ -62,10 +63,10 @@ class QuestionViewController: UIViewController {
             loadQuestionLayoutViewController(viewController)
         }
     }
-    
+
     private func loadQuestionLayoutViewController(_ newViewController: QuestionLayoutViewController) {
         let oldViewController = self.currentChildVC
-        
+
         addChild(newViewController)
         view.addSubview(newViewController.view)
         setVCConstraints(newViewController)
@@ -77,15 +78,19 @@ class QuestionViewController: UIViewController {
 
         self.currentChildVC = newViewController
     }
-    
+
     private func setVCConstraints(_ viewController: QuestionLayoutViewController) {
         viewController.view.translatesAutoresizingMaskIntoConstraints = false
-        viewController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
-        viewController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        viewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        viewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        viewController.view.bottomAnchor.constraint(
+            equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
+        viewController.view.topAnchor.constraint(
+            equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        viewController.view.leadingAnchor.constraint(
+            equalTo: view.leadingAnchor, constant: 20).isActive = true
+        viewController.view.trailingAnchor.constraint(
+            equalTo: view.trailingAnchor, constant: -20).isActive = true
     }
-    
+
     private func setUpViewModel() {
         guard let vm = datasource?.setViewModel(self) else {
             return

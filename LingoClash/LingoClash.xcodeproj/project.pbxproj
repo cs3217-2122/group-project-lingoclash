@@ -247,6 +247,8 @@
 		D30E491627FAC7C60074CF2B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E491127FAA6880074CF2B /* Profile.swift */; };
 		D30E491727FAC7C80074CF2B /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E491327FAA6E70074CF2B /* Lesson.swift */; };
 		D30E491827FAC7CE0074CF2B /* BookCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30E490D27FA20140074CF2B /* BookCategory.swift */; };
+		D32BB7A92809F83F009E4049 /* korean-eng.json in Resources */ = {isa = PBXBuildFile; fileRef = D32BB7A82809F83F009E4049 /* korean-eng.json */; };
+		D32BB7AA2809F83F009E4049 /* korean-eng.json in Resources */ = {isa = PBXBuildFile; fileRef = D32BB7A82809F83F009E4049 /* korean-eng.json */; };
 		D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DD27D4D42700C80986 /* AppDelegate.swift */; };
 		D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DF27D4D42700C80986 /* SceneDelegate.swift */; };
 		D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282E127D4D42700C80986 /* SplashViewController.swift */; };
@@ -611,6 +613,7 @@
 		D30E490F27FA91ED0074CF2B /* DataManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerError.swift; sourceTree = "<group>"; };
 		D30E491127FAA6880074CF2B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		D30E491327FAA6E70074CF2B /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		D32BB7A82809F83F009E4049 /* korean-eng.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "korean-eng.json"; sourceTree = "<group>"; };
 		D33282DA27D4D42700C80986 /* LingoClash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoClash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33282DD27D4D42700C80986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D33282DF27D4D42700C80986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -707,12 +710,12 @@
 			isa = PBXGroup;
 			children = (
 				6204A03927DE1CDB0063100D /* AppConfigs.swift */,
-				D3C5E27927F6F3E900F65B8E /* SampleDataUtilities.swift */,
 				62165B7527F2244C004BC620 /* FormUtilities.swift */,
 				CEF1E7DB27E60C7A005D4272 /* Dynamic.swift */,
 				D30CD1E727E79F3A0021A5AA /* KeychainManager.swift */,
 				D3C4423F27E8C65600676C93 /* Logger.swift */,
 				6204A04027DE4A500063100D /* ViewUtilities.swift */,
+				D32BB7822809F127009E4049 /* SampleData */,
 				D3C4423427E8A95000676C93 /* Alert */,
 				D3C4422027E8712100676C93 /* AlignedCollectionViewFlowLayout */,
 				D3C4422127E8713400676C93 /* API */,
@@ -1080,6 +1083,15 @@
 			path = AuthProviders;
 			sourceTree = "<group>";
 		};
+		D32BB7822809F127009E4049 /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				D32BB7A82809F83F009E4049 /* korean-eng.json */,
+				D3C5E27927F6F3E900F65B8E /* SampleDataUtilities.swift */,
+			);
+			path = SampleData;
+			sourceTree = "<group>";
+		};
 		D33282D127D4D42700C80986 = {
 			isa = PBXGroup;
 			children = (
@@ -1357,6 +1369,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D33282F127D4D42E00C80986 /* Build configuration list for PBXNativeTarget "LingoClash" */;
 			buildPhases = (
+				D32BB7802809E461009E4049 /* Run SwiftLint */,
 				D33282D627D4D42700C80986 /* Sources */,
 				D33282D727D4D42700C80986 /* Frameworks */,
 				D33282D827D4D42700C80986 /* Resources */,
@@ -1404,6 +1417,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C5E26D27F6E36B00F65B8E /* Build configuration list for PBXNativeTarget "LingoClashDev" */;
 			buildPhases = (
+				D32BB7812809E48C009E4049 /* Run SwiftLint */,
 				D3C5E1DD27F6E36B00F65B8E /* Sources */,
 				D3C5E25827F6E36B00F65B8E /* Frameworks */,
 				D3C5E26227F6E36B00F65B8E /* Resources */,
@@ -1479,6 +1493,7 @@
 			files = (
 				CEBC079C2809211400A0ED82 /* Dev-Info.plist in Resources */,
 				CE8D228F27EE2B5A005E7058 /* Lesson.storyboard in Resources */,
+				D32BB7A92809F83F009E4049 /* korean-eng.json in Resources */,
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
 				CEBC077E280810CF00A0ED82 /* PKGame.storyboard in Resources */,
 				D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */,
@@ -1510,6 +1525,7 @@
 			files = (
 				D3C5E26327F6E36B00F65B8E /* Lesson.storyboard in Resources */,
 				CEBC077F280810CF00A0ED82 /* PKGame.storyboard in Resources */,
+				D32BB7AA2809F83F009E4049 /* korean-eng.json in Resources */,
 				D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */,
 				D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */,
 				CEBC078F280883E600A0ED82 /* RecommendedBook.storyboard in Resources */,
@@ -1529,6 +1545,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D32BB7802809E461009E4049 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		D32BB7812809E48C009E4049 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D33282D627D4D42700C80986 /* Sources */ = {

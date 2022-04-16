@@ -13,7 +13,7 @@ struct PKGameMoveData {
     let player: ProfileData
     let isCorrect: Bool
     let timeTaken: Double
-    
+
     private enum CodingKeys: String, CodingKey {
         case id
         case question
@@ -21,15 +21,20 @@ struct PKGameMoveData {
         case isCorrect
         case timeTaken
     }
-    
-    init(question: Question, player: ProfileData, isCorrect: Bool, timeTaken: Double, id: String = PKGameMoveData.placeholderId) {
+
+    init(
+        question: Question,
+        player: ProfileData,
+        isCorrect: Bool,
+        timeTaken: Double,
+        id: String = PKGameMoveData.placeholderId) {
         self.question = question
         self.player = player
         self.isCorrect = isCorrect
         self.timeTaken = timeTaken
         self.id = id
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.player = try container.decode(ProfileData.self, forKey: .player)
@@ -39,7 +44,7 @@ struct PKGameMoveData {
         let wrapper = try container.decode(QuestionWrapper.self, forKey: .question)
         self.question = wrapper.question
     }
-    
+
     func encode(to encoder: Encoder) throws {
         let wrapper = QuestionWrapper(question)
 

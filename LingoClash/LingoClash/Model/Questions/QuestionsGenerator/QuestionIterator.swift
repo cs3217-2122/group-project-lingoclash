@@ -9,5 +9,5 @@ struct QuestionIterator {
     var scopeFactory: QuestionScopeFactory
     var constructorFactory: QuestionConstructorRandomFactory
     var questionsLeft: Int?
-    
+
 }

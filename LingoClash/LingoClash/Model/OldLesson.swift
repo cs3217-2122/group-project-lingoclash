@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 // deprecated. please use Lesson instead
 class OldLesson {
     let lessonName: String
@@ -18,7 +17,7 @@ class OldLesson {
     var didPass: Bool {
         stars > 0
     }
-    
+
     init(lessonName: String, lessonId: Int, stars: Int) {
         self.lessonName = lessonName
         self.lessonId = lessonId

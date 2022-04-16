@@ -16,7 +16,7 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
         case questionGenerationError
         case noCurrentBook
     }
-    
+
     private let db = Firestore.firestore()
     private var listener: ListenerRegistration? {
         didSet {
@@ -30,7 +30,7 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
     private let pkGameDataManager = PKGameManager()
     private let profileDataManager = ProfileManager()
     func findGame(playerProfile: Profile) -> Promise<PKGame> {
-        return firstly {
+        firstly {
             getValidQueueEntries(playerProfile: playerProfile)
         }.then { [self] queueEntries -> Promise<PKGame> in
             if queueEntries.count < PKGame.playerCountRequired - 1 {
@@ -40,7 +40,7 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
             }
         }
     }
-    
+
     func cancel(playerProfile: Profile) {
         // If queue entry exists belonging to playerProfile that is currently waiting, remove it
         let filters: [String: Any] = [
@@ -49,16 +49,15 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
             "playerProfile.id": playerProfile.id
         ]
 
-    
-        let _ = queueEntryDataManager.getList(filter: filters)
-            .then{ [self] queueEntriesToDelete -> Promise<[Identifier]> in
+        _ = queueEntryDataManager.getList(filter: filters)
+            .then { [self] queueEntriesToDelete -> Promise<[Identifier]> in
                 assert(!queueEntriesToDelete.isEmpty)
                 return self.queueEntryDataManager.deleteMany(ids: queueEntriesToDelete.map { $0.id })
             }.done { _ in
                 self.listener = nil
             }
     }
-    
+
     private func getValidQueueEntries(playerProfile: Profile) -> Promise<[QueueEntry]> {
         //    1. Find all queueEntries that have:
         //        a. Same game type
@@ -71,7 +70,7 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
         let filters: [String: Any] = [
             "gameType": self.gameType,
             "isWaiting": true,
-            "playerProfile.book_id": currentBookId,
+            "playerProfile.book_id": currentBookId
         ]
         let queueEntries = queueEntryDataManager.getList(field: "joinedAt", isDescending: false, filter: filters)
         let filteredQueueEntries = queueEntries.map { queueEntries in
@@ -79,9 +78,9 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
         }
         return filteredQueueEntries
     }
-    
+
     private func createGame(playerProfile: Profile, queueEntries: [QueueEntry]) -> Promise<PKGame> {
-        return firstly {
+        firstly {
             generatePKGameData(playerProfile: playerProfile, queueEntries: queueEntries)
         }.then { [self] pkGameData in
             self.pkGameDataManager.createPKGame(pkGameData: pkGameData)
@@ -92,29 +91,34 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
                 let fieldsToUpdate = [
                     "gameId": newGame.id,
                     "isWaiting": false
-                ] as [String : Any]
+                ] as [String: Any]
                 batch.updateData(fieldsToUpdate, forDocument: docRef)
             }
-            
+
             return Promise { seal in
-                batch.commit() { error in
+                batch.commit { error in
                     if let error = error {
                         print(error)
                         return seal.reject(error)
                     }
-                    
+
                     return seal.fulfill(newGame)
                 }
             }
         }
     }
-    
+
     private func joinQueue(playerProfile: Profile) -> Promise<PKGame> {
-        return firstly { () -> Promise<ProfileData> in
+        firstly { () -> Promise<ProfileData> in
             let currentPlayerProfileData = profileDataManager.getOne(id: playerProfile.id)
             return currentPlayerProfileData
         }.then { [self] currentPlayerProfileData -> Promise<QueueEntry> in
-            let newQueueEntry = QueueEntry(id: "", playerProfile: currentPlayerProfileData, joinedAt: Date.now, isWaiting: true, gameType: gameType)
+            let newQueueEntry = QueueEntry(
+                id: "",
+                playerProfile: currentPlayerProfileData,
+                joinedAt: Date.now,
+                isWaiting: true,
+                gameType: gameType)
 
             return self.queueEntryDataManager.create(newRecord: newQueueEntry)
         }.then { [self] newQueueEntry in
@@ -126,19 +130,21 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
 // MARK: Helper methods for joinQueue
 extension FirebasePKGameMatchFinder {
     private func listenForGameCreation(_ queueEntry: QueueEntry) -> Promise<PKGame> {
-        // 1. add a listener to the queue entry, the callback function passed to the listener will call seal.accept(with the game after gameId is filled)
+        // 1. add a listener to the queue entry, the callback function passed to the listener
+        // will call seal.accept(with the game after gameId is filled)
         // 2. getOne the PKGame that corresponds to the gameId
 
         // TODO: This is firebase query inefficient since every player has to do the query chain of PKGame -> Profiles -> Books -> Lessons -> Vocabs
         return Promise<Identifier> { seal in
-            self.listener = self.db.collection(DataManagerResources.queueEntries).document(queueEntry.id).addSnapshotListener { documentSnapshot, error in
+            self.listener = self.db.collection(
+                DataManagerResources.queueEntries).document(queueEntry.id).addSnapshotListener { documentSnapshot, _ in
                 guard let document = documentSnapshot else {
                     return seal.reject(FirebaseMultiplayerMatchFinderError.invalidDocumentSnapshot)
                 }
                 guard let data = document.data() else {
                     return
                 }
-                
+
                 if let gameId = data["gameId"] {
                     guard let gameId = gameId as? Identifier else {
                         return seal.reject(FirebaseMultiplayerMatchFinderError.invalidDocumentSnapshot)
@@ -157,21 +163,23 @@ extension FirebasePKGameMatchFinder {
 extension FirebasePKGameMatchFinder {
     private func generatePKGameData(playerProfile: Profile, queueEntries: [QueueEntry]) -> Promise<PKGameData> {
         let questionsInScope = generateQuestions(playerProfile: playerProfile)
-        
+
         guard let questionsInScope = questionsInScope else {
             return Promise.reject(reason: FirebaseMultiplayerMatchFinderError.questionGenerationError)
         }
-        
-        let gamePlayersProfile = generateGamePlayersProfileData(queueEntries: queueEntries, currentPlayerProfile: playerProfile)
+
+        let gamePlayersProfile = generateGamePlayersProfileData(
+            queueEntries: queueEntries,
+            currentPlayerProfile: playerProfile)
         let pkGameData = gamePlayersProfile.map { gamePlayersData -> PKGameData in
             PKGameData(createdAt: Date.now, players: gamePlayersData, questions: questionsInScope)
         }
-        
+
         return pkGameData
     }
-    
+
     private func generateGamePlayersProfileData(queueEntries: [QueueEntry], currentPlayerProfile: Profile) -> Promise<[ProfileData]> {
-        return firstly {
+        firstly {
             profileDataManager.getOne(id: currentPlayerProfile.id)
         }.map { currentPlayerProfileData -> [ProfileData] in
             let gameQueueEntries = queueEntries.prefix(PKGame.playerCountRequired)
@@ -180,21 +188,23 @@ extension FirebasePKGameMatchFinder {
             return players
         }
     }
-    
+
     private func generateQuestions(playerProfile: Profile) -> [Question]? {
         guard let currentBook = playerProfile.currentBook else {
             return nil
         }
         let bookVocabs = currentBook.getVocabs()
-                
-        guard var questionSequence = try? questionsGenerator.generateQuestions(settings: QuestionGeneratorSettings(scope: bookVocabs)) else {
+
+        guard var questionSequence = try? questionsGenerator.generateQuestions(
+            settings: QuestionGeneratorSettings(
+                scope: bookVocabs)) else {
             return nil
         }
-        
+
         let questions = (0..<PKGame.numberOfQuestions).compactMap { _ in
             questionSequence.next()
         }
-        
+
         return questions
     }
 }

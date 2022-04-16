@@ -9,6 +9,6 @@ import UIKit
 
 class DevLoginTableCell: UITableViewCell {
     static let reuseIdentifier = "devLoginTableCellIdentifier"
-    
-    @IBOutlet weak var email: UILabel!
+
+    @IBOutlet var email: UILabel!
 }

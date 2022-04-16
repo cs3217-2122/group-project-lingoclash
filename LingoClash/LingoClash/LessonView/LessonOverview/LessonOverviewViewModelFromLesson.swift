@@ -19,7 +19,7 @@ class LessonOverviewViewModelFromLesson: LessonOverviewViewModel {
         self.lessonName = LessonOverviewViewModelFromLesson.formatLessonName(for: lesson)
         retrieveVocabs()
     }
-    
+
     /// Fetches Vocabs using DataProvider, add to lesson, populates vocabs field.
     func retrieveVocabs() {
         // TODO: Temporary, to replace with real data from provider
@@ -37,17 +37,17 @@ class LessonOverviewViewModelFromLesson: LessonOverviewViewModel {
         //     Vocab(word: "秒", definition: "second", sentence: "她今天看起来很悲伤。",
         //               sentenceDefinition: "She looks saf today.", pronunciationText: "jīntiān")
         // ]
-        
+
         // lesson.vocabs = vocabs
         // self.vocabs.value = vocabs.map { LessonOverviewViewModelFromLesson.formatVocab(for: $0) }
         self.vocabs.value = lesson.vocabs.map { LessonOverviewViewModelFromLesson.formatVocab(for: $0) }
     }
-    
+
     static func formatVocab(for vocab: Vocab) -> String {
-        return vocab.word
+        vocab.word
     }
-    
+
     static func formatLessonName(for lesson: Lesson) -> String {
-        return lesson.name.capitalized
+        lesson.name.capitalized
     }
 }

@@ -8,9 +8,9 @@
 import UIKit
 
 struct AppConfigs {
-    
+
     struct Debug {
-        
+
         // Preloads the db with some sample data. Only works in development scheme.
         static let enablePreloadData = false
         static let enableLogin = false
@@ -19,7 +19,7 @@ struct AppConfigs {
             LoginFields(email: "e@e.com", password: "123456")
         ]
     }
-    
+
     struct View {
         static let primaryColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
         static let vocabCollectionCellIdentifier = "vocabCollectionCellIdentifier"
@@ -36,5 +36,5 @@ struct AppConfigs {
         static let isDescending = true
         static let accessTokenKey = "access_token"
     }
-    
+
 }

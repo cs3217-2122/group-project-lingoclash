@@ -11,6 +11,7 @@ struct VocabData {
     let lesson_id: Identifier
     let sentence: String
     let word: String
+    let translation: String
 }
 
 extension VocabData: Record {}

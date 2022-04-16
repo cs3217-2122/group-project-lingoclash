@@ -12,7 +12,7 @@ class DevLoginViewController: UIViewController {
     private let viewModel = DevLoginViewModel()
     private var cancellables: Set<AnyCancellable> = []
 
-    @IBOutlet weak var devLoginTableView: UITableView!
+    @IBOutlet private var devLoginTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class DevLoginViewController: UIViewController {
         devLoginTableView.dataSource = self
         devLoginTableView.delegate = self
     }
-    
+
     func setUpBinders() {
         viewModel.$error.sink {[weak self] error in
             if let error = error {
@@ -30,10 +30,10 @@ class DevLoginViewController: UIViewController {
             }
         }.store(in: &cancellables)
     }
-    
+
     func transitionToHome() {
         let mainViewController = HomeNavigationViewController.instantiateFromAppStoryboard(AppStoryboard.Home)
-        
+
         view.window?.rootViewController = mainViewController
         view.window?.makeKeyAndVisible()
     }
@@ -51,7 +51,7 @@ extension DevLoginViewController: UITableViewDataSource {
             fatalError("Failure obtaining reusable dev login table view cell")
         }
         let account = viewModel.testAccounts[indexPath.row]
-        
+
         cell.email.text = account.email
         return cell
     }
@@ -62,4 +62,3 @@ extension DevLoginViewController: UITableViewDelegate {
         viewModel.directLogin(row: indexPath.row)
     }
 }
-

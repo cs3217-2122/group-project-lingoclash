@@ -11,7 +11,7 @@ struct QuestionWrapper: Codable {
     private enum CodingKeys: String, CodingKey {
         case questionType, payload
     }
-    
+
     init(_ question: Question) {
         self.question = question
     }
