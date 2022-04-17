@@ -88,16 +88,15 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
         let didPass = quizScore >= minStarsBenchMark
         let quizResult = LessonQuizResult(starsObtained: starsObtained, didPass: didPass,
                                           vocabsTested: vocabsTested, lessonName: lesson.name)
-        quizOutcomeViewModel = LessonQuizOutcomeViewModelFromQuizResult(quizResult: quizResult)
-        if didPass {
-            quizStatus.value = QuizStatus.passed
-            NotificationCenter.default.post(name: .lessonQuizPassed, object: nil, userInfo: ["stars": starsObtained])
-        } else {
-            quizStatus.value = QuizStatus.failed
-        }
 
         var updatedLesson = lesson
         updatedLesson.completeQuiz(result: quizResult)
+        quizOutcomeViewModel = LessonQuizOutcomeViewModelFromQuizResult(lesson: updatedLesson, quizResult: quizResult)
+        if didPass {
+            quizStatus.value = QuizStatus.passed
+        } else {
+            quizStatus.value = QuizStatus.failed
+        }
         LessonManager().completeLesson(updatedLesson)
     }
 

@@ -13,7 +13,7 @@
         <!--Lesson Selection View Controller-->
         <scene sceneID="B32-KW-bqx">
             <objects>
-                <viewController storyboardIdentifier="LessonSelectionViewController" id="8HE-b4-e38" customClass="LessonSelectionViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LessonSelectionViewController" modalPresentationStyle="fullScreen" id="8HE-b4-e38" customClass="LessonSelectionViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5t6-BL-xWI">
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -629,7 +629,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onActionButtonTap:" destination="zkw-70-GXY" eventType="touchUpInside" id="EX5-1K-1DZ"/>
-                                    <segue destination="Fgy-0e-OFM" kind="unwind" unwindAction="unwindToSelectionWithSegue:" id="kJM-Br-DPX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -661,13 +660,14 @@
                         <outletCollection property="stars" destination="vYd-cc-Twi" collectionClass="NSMutableArray" id="jIU-F2-6f1"/>
                         <outletCollection property="stars" destination="rm6-Qx-wUt" collectionClass="NSMutableArray" id="h5y-5G-d9S"/>
                         <outletCollection property="stars" destination="gxX-6O-Dra" collectionClass="NSMutableArray" id="AOF-i3-d7k"/>
-                        <segue destination="Fgy-0e-OFM" kind="unwind" identifier="unwindOutcomeToVocabVC" unwindAction="unwindToVocabsWithSegue:" id="jHf-Mt-gqt"/>
+                        <segue destination="Fgy-0e-OFM" kind="unwind" identifier="outcomeToLessonSelection" unwindAction="unwindToSelectionWithSegue:" id="AuF-WF-J2O"/>
+                        <segue destination="Fgy-0e-OFM" kind="unwind" identifier="outcomeToVocabVC" unwindAction="unwindToVocabsWithSegue:" id="llY-sx-RFT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2t-pY-g2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Fgy-0e-OFM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="9606" y="2271"/>
+            <point key="canvasLocation" x="8865" y="2314"/>
         </scene>
         <!--QuestionViewController-->
         <scene sceneID="PiI-qh-bOf">

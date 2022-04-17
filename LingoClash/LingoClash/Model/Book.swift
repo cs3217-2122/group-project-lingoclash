@@ -19,7 +19,7 @@ struct Book {
     let name: String
     let totalLessons: Int
     let passedLessons: Int
-    let lessons: [Lesson]
+    var lessons: [Lesson]
     let status: BookStatus
 
     var progress: Float {

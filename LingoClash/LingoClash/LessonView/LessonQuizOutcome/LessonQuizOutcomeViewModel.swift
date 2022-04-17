@@ -6,6 +6,7 @@
 //
 
 protocol LessonQuizOutcomeViewModel {
+    var lesson: Lesson { get }
     var starsFilled: [Bool] { get }
     var completedStatus: String { get }
     var lessonName: String { get }
@@ -14,4 +15,5 @@ protocol LessonQuizOutcomeViewModel {
     var isBackgroundDark: Bool { get }
     var actionText: String { get }
     var didPass: Bool { get }
+    func updateLessonSelection(viewController: LessonSelectionViewController)
 }

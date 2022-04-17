@@ -28,6 +28,17 @@ class LessonSelectionViewModelFromBook: LessonSelectionViewModel {
         updateStarsObtained()
         updateLessonsPassed()
     }
+    
+    func refreshLesson(lesson: Lesson) {
+        book.lessons = book.lessons.map { oldLesson in
+            if lesson == oldLesson {
+                return lesson
+            } else {
+                return oldLesson
+            }
+        }
+        reloadLessons()
+    }
 
     private func updateStarsObtained() {
         let starsObtained = book.lessons.reduce(0, { $0 + $1.stars })
