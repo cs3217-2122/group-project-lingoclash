@@ -1,4 +1,13 @@
-![E3wpp7a](https://user-images.githubusercontent.com/24221801/163687599-ab8ebd9b-f19d-4c26-9d84-3127cb85527b.png)
+<p align="center">
+  
+  ![E3wpp7a](https://user-images.githubusercontent.com/24221801/163687599-ab8ebd9b-f19d-4c26-9d84-3127cb85527b.png)
+  
+  <p align="center">
+<img src="https://github.com/LingoClash/LingoClash/actions/workflows/Testing.yml/badge.svg" />
+    </p>
+</p>
+
+
 
 # Background
 
@@ -7,12 +16,9 @@ Among these apps, we thought that 开心词场 by 沪江 is the closest to what 
 
 # Team Members
 
-[Hong Ai Ling](https://github.com/ailing35)
-
-[Kevin Chua Kian Chun](https://github.com/kevinchua6)
-
-[Sherwin Poh Kai Xun](https://github.com/sherrpass)
-
+[Hong Ai Ling](https://github.com/ailing35)  
+[Kevin Chua Kian Chun](https://github.com/kevinchua6)  
+[Sherwin Poh Kai Xun](https://github.com/sherrpass)  
 [Toh Kar Wi](https://github.com/CrownKira)
 
 # User Manual
@@ -25,17 +31,24 @@ The user manual can be found [here](https://www.notion.so/kyletoh/User-Manual-5d
 - Wait for all the packages to be resolved.
 - Choose the scheme to work with. 
 
-
+<div align="center">
+  
 | Scheme  | Description |
 | ------------- | ------------- |
 | LingoClash  | Production environment. Uses the production firestore database.  |
 | LingoClash Dev  | Development environment. Uses the development firestore database.  |
-
+ 
+</div>
+  
 - In the `AppConfigs`, some Debug variables are provided, to allow toggling between modes.
 
+<div align="center">
+  
 | Variable  | Description |
 | ------------- | ------------- |
 | enablePreloadData  | Set to `true` to preload the firestore with sample data on app initialization.  |
 | enableLogin  | Set to `false` to disable login for development purposes. Only works in `LingoClash Dev` scheme.  |
+  
+</div>
 
 - `Build` the project and `Run` it. Enjoy~
