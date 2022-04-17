@@ -25,4 +25,13 @@ final class RecommendedBooksViewModel {
             print(error)
         }
     }
+
+    func updateCurrentBook(book: Book) {
+        _ = BookManager().markAsLearning(bookId: book.id).catch { err in
+            print(err)
+        }
+        _ = ProfileManager().setAsCurrentBook(bookId: book.id).catch { err in
+            print(err)
+        }
+    }
 }
