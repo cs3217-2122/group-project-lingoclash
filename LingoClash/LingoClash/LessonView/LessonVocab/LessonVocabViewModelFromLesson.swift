@@ -10,6 +10,8 @@ import Foundation
 class LessonVocabViewModelFromLesson: LessonVocabViewModel {
     let lesson: Lesson
     var currIndex: Dynamic<Int> = Dynamic(0)
+    
+    var vocab: Vocab
 
     var currVocab: Dynamic<String>
     var currVocabDefinition: Dynamic<String>
@@ -24,6 +26,7 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
         assert(lesson.vocabs.count > 0)
         self.lesson = lesson
         let currVocab = lesson.vocabs[self.currIndex.value]
+        self.vocab = currVocab
         self.currVocab = Dynamic(currVocab.word)
         self.currVocabDefinition = Dynamic(currVocab.definition)
         self.currVocabPronounciation = Dynamic(currVocab.pronunciationText)

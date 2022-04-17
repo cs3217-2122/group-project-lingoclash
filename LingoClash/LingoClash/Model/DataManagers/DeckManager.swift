@@ -56,7 +56,6 @@ class DeckManager: DataManager<DeckData> {
                     vocabByDeckData[deckData] = []
                     continue
                 }
-//                print(revisionVocabData)
                 vocabPromises.append(
                     firstly {
                         VocabManager().getMany(ids: revisionVocabData.map{$0.id})
@@ -70,9 +69,14 @@ class DeckManager: DataManager<DeckData> {
             var deckArr = [Deck]()
             // convert [DeckData] into
             for (deckData, vocabData) in vocabByDeckData {
-                deckArr.append(Deck(deckData: deckData, vocabDataArr: vocabData))
+                deckArr.append(
+                    Deck(deckData: deckData,
+                         revisionVocabDataArr: revisionVocabByDeckData[deckData] ?? [],
+                         vocabDataArr: vocabData
+                    )
+                )
             }
-            return deckArr
+            return deckArr.sorted()
         }
     }
     

@@ -44,6 +44,11 @@ class LessonVocabViewController: UIViewController {
         if let lessonQuizViewController = segue.destination as? LessonQuizViewController {
             lessonQuizViewController.viewModel = viewModel.lessonQuizViewModel
         }
+        
+        if let addToDeckVC = segue.destination as? AddToDeckTableView {
+            addToDeckVC.viewModel = AddToDeckViewModel(vocab: viewModel.vocab)
+            
+        }
     }
 
     @IBAction private func unwindToVocabs(segue: UIStoryboardSegue) {
@@ -73,4 +78,5 @@ class LessonVocabViewController: UIViewController {
         viewModel.isLastVocab.bindAndFire { [weak self] in self?.nextButton.isEnabled = !$0 }
         viewModel.isFirstVocab.bindAndFire { [weak self] in self?.prevButton.isEnabled = !$0 }
     }
+    
 }

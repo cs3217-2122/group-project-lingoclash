@@ -10,7 +10,6 @@ import Combine
 private let reuseIdentifier = "DeckTableViewCell"
 
 class RevisionViewController: UIViewController {
-    
     enum Segue {
         static let gotoDeck = "gotoDeck"
     }
@@ -27,16 +26,16 @@ class RevisionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchDecks()
         
         setUpBinders()
         revisionTableView.dataSource = self
         revisionTableView.delegate = self
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        viewModel.stopRefresh()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.decks = []
+        self.viewModel.fetchDecks()
     }
 
     private func setUpBinders() {
@@ -84,12 +83,19 @@ extension RevisionViewController: UITableViewDataSource {
                     withIdentifier: reuseIdentifier) as? DeckTableViewCell else {
             fatalError("Failure obtaining reusable vocabs learnt table view cell")
         }
+        guard let decks = self.decks else {
+            return deckCell
+        }
 
-//        deckCell.configure(deckName: "IDIOT", vocabNo: "IDIOT")
-        
-        deckCell.configure(deckName: self.decks?[indexPath.row].name ?? "", vocabNo: String(self.decks?[indexPath.row].vocabNo ?? 0))
+        // We create a RevisionSequence at that point to see how many are available
+        deckCell.configure(
+            deckName: decks[indexPath.row].name,
+            vocabNo: String(
+                RevisionSequence(deck: decks[indexPath.row],
+                                 criteria: RevisionViewModel.REVISION_QUERY_CRITERIA).count()
+            )
+        )
 
-//        cell.vocabWord = viewModel?.vocabsLearnt[indexPath.row] ?? ""
         return deckCell
     }
 }
