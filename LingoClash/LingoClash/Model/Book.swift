@@ -65,7 +65,8 @@ struct Book {
                     vocabs: vocabs,
                     profileLessonData: profileLessonsByLessonId[lessonData.id]))
         }
-        self.lessons = bookLessons
+
+        self.lessons = bookLessons.sorted()
 
         if let profileBookData = profileBookData {
             self.status = profileBookData.is_completed ? .completed : .learning

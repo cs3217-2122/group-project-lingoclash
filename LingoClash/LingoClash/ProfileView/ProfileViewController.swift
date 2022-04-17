@@ -29,8 +29,12 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.refresh()
         setUpBinders()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.refresh()
     }
 
     func setUpBinderForLabel(label: UILabel, publisher: Published<String?>.Publisher) {

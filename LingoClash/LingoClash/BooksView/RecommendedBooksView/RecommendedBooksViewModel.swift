@@ -25,4 +25,10 @@ final class RecommendedBooksViewModel {
             print(error)
         }
     }
+
+    func learnBook(book: Book) {
+        bookManager.markAsLearning(bookId: book.id).catch { error in
+            print(error)
+        }
+    }
 }

@@ -80,8 +80,9 @@ open class AlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
             default:
                 break
             }
+
         @unknown default:
-            fatalError()
+            fatalError("Unknown collection view flow layout direction")
         }
 
         // It's safe to force-unwrap as `.leading` and `.trailing` are covered

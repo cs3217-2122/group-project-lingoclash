@@ -14,6 +14,7 @@ final class SignUpViewModel {
     @Published var error: String?
 
     private let authProvider: AuthProvider
+    private let profileManager = ProfileManager()
 
     init(authProvider: AuthProvider = AppConfigs.API.authProvider) {
         self.authProvider = authProvider
@@ -26,7 +27,14 @@ final class SignUpViewModel {
             return
         }
 
-        authProvider.register(params: fields).done {_ in
+        firstly {
+            authProvider.register(params: fields)
+        }.then { userIdentity -> Promise<Profile> in
+            guard let userId = userIdentity.id else {
+                return Promise.reject(reason: DataManagerError.dataNotFound)
+            }
+            return self.profileManager.createProfile(params: fields, userId: userId)
+        }.done { _ in
             self.error = nil
         }.catch { error in
             self.error = error.localizedDescription
