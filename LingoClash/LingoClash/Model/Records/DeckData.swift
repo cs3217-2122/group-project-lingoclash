@@ -9,7 +9,7 @@ struct DeckData {
     var id: Identifier
     let name: String
     let profile_id: Identifier
-    let revision_vocab_id: [Int]
+    let revision_vocab_id: [Identifier]
 }
 
 extension DeckData: Record {}

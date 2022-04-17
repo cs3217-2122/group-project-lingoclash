@@ -48,6 +48,7 @@ struct Vocab {
         self.pronunciationText = pronunciationText
         self.id = "1"
     }
+
 }
 
 extension Vocab: Codable {}

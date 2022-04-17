@@ -8,6 +8,7 @@
 import Foundation
 
 protocol LessonVocabViewModel {
+    var vocab: Vocab { get }
     var currVocab: Dynamic<String> { get }
     var currVocabDefinition: Dynamic<String> { get }
     var currVocabPronounciation: Dynamic<String> { get }

@@ -7,46 +7,36 @@
 
 import Foundation
 
+// A wrapper for a Query object
 struct RevisionQuery: Query {
-    var id: Identifier
-    // Starts from 0
     var revVocab: RevisionVocab
     
-    
-    var difficultyParameter: Difficulty
-    var lastAttemptedDate: Date?
-    
-    let context: String
-    var answerToString: String
-    
-    init(vocab: RevisionVocab, context: String, answer: String, id: Identifier) {
+    init(vocab: RevisionVocab) {
         self.revVocab = vocab
-        self.context = context
-        self.answerToString = answer
-        
-        self.difficultyParameter = Difficulty(amount: 0)
-        self.id = id
     }
     
-    init(vocab: RevisionVocab, context: String, answer: String, difficulty: Difficulty, lastAttemptedDate: Date?, id: Identifier) {
+    init(vocab: RevisionVocab, difficulty: Difficulty, lastAttemptedDate: Date?) {
         self.revVocab = vocab
-        self.context = context
-        self.answerToString = answer
-        
-        self.difficultyParameter = difficulty
-        self.lastAttemptedDate = lastAttemptedDate
-        self.id = id
+
+        self.revVocab.difficultyParameter = difficulty
+        self.revVocab.lastAttemptedDate = lastAttemptedDate
     }
     
-    // This magnitude is calculated on the fly, because the time difference always changes when Today changes
+    var context: String {
+        get {
+            revVocab.vocab.word
+        }
+    }
+    
+    var answerToString: String {
+        get {
+            revVocab.vocab.definition
+        }
+    }
+    
     var magnitude: Double {
         get {
-            let difficultyVal: Double = Double(difficultyParameter.amount)
-            let timeDiff: TimeInterval? = lastAttemptedDate?.timeIntervalSinceNow
-            let lengthSinceLastDoneVal: Double = abs(timeDiff ?? 0)
-            
-            // Calculation to get the magnitude of each RevisionQuery
-            return difficultyVal + lengthSinceLastDoneVal / 3600
+            revVocab.magnitude
         }
     }
 }

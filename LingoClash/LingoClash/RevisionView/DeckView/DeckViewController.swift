@@ -43,12 +43,14 @@ class DeckViewController: UIViewController {
     private func setUpBinders() {
         viewModel?.$deck.sink {[weak self] deck in
             self?.deck = deck
+            if self?.deck?.vocabs.count == 0 {
+                self?.showNoWordsScreen()
+            }
         }.store(in: &cancellables)
         
         viewModel?.$revisionSequence.sink {[weak self] revisionSequence in
             self?.revisionSequence = revisionSequence
             self?.updateWordsLeft()
-            self?.showScreenWhenNoWordsLeft()
         }.store(in: &cancellables)
     }
     
@@ -74,11 +76,16 @@ class DeckViewController: UIViewController {
         showAnswer()
     }
     
-    func recallDifficultyButtonTapped() {
+    private func recallDifficultyButtonTapped(recallDifficulty: RecallDifficulty) {
+        viewModel?.updateRevisionQuery(query: currentQuery, recallDifficulty: recallDifficulty)
+        updateUiRecallTapped()
+    }
+    
+    private func updateUiRecallTapped() {
         unhideAnswerButton()
         hideAnswer()
-        // Check if we have 0 words left
         
+        // Check if we have 0 words left
         showScreenWhenNoWordsLeft()
     }
     
@@ -110,47 +117,47 @@ class DeckViewController: UIViewController {
     @IBOutlet weak var hardButton: UIButton!
     
     @IBAction func againDidTap(_ sender: Any) {
-        
         viewModel?.addToQueue(currentQuery: currentQuery, recallDifficulty: .again)
-        viewModel?.updateRevisionQuery(query: currentQuery)
-        
+        recallDifficultyButtonTapped(recallDifficulty: .again)
+
         let nextQuery = viewModel?.getNextQuery()
         self.currentQuery = nextQuery
         
         setLabelToQuery(query: nextQuery)
-        recallDifficultyButtonTapped()
+        
     }
     
     @IBAction func hardDidTap(_ sender: Any) {
-        
         viewModel?.addToQueue(currentQuery: currentQuery, recallDifficulty: .hard)
-        
+        recallDifficultyButtonTapped(recallDifficulty: .hard)
+
         let nextQuery = viewModel?.getNextQuery()
         self.currentQuery = nextQuery
         
         setLabelToQuery(query: nextQuery)
-        recallDifficultyButtonTapped()
+        
     }
     
     @IBAction func easyDidTap(_ sender: Any) {
-        
         viewModel?.addToQueue(currentQuery: currentQuery, recallDifficulty: .easy)
+        recallDifficultyButtonTapped(recallDifficulty: .easy)
         
         let nextQuery = viewModel?.getNextQuery()
         self.currentQuery = nextQuery
         
         setLabelToQuery(query: nextQuery)
-        recallDifficultyButtonTapped()
+        
     }
     
     @IBAction func goodDidTap(_ sender: Any) {
         viewModel?.addToQueue(currentQuery: currentQuery, recallDifficulty: .good)
+        recallDifficultyButtonTapped(recallDifficulty: .good)
         
         let nextQuery = viewModel?.getNextQuery()
         self.currentQuery = nextQuery
         
         setLabelToQuery(query: nextQuery)
-        recallDifficultyButtonTapped()
+        
     }
     
     private func setLabelToQuery(query: RevisionQuery?) {

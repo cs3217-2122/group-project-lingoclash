@@ -10,8 +10,8 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="SF-Pro.ttf">
-            <string>SFPro-Bold</string>
             <string>SFPro-Light</string>
+            <string>SFPro-Medium</string>
             <string>SFPro-Regular</string>
         </array>
     </customFonts>
@@ -37,15 +37,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA5-xA-1bl">
-                                                    <rect key="frame" x="40" y="4" width="76.5" height="36"/>
-                                                    <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="30"/>
+                                                    <rect key="frame" x="40" y="4" width="73" height="36"/>
+                                                    <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaU-OM-RQo">
                                                     <rect key="frame" x="507" y="11" width="119" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -90,17 +90,17 @@
                                 <color key="textColor" name="Background"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 card due (0s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-NJ-IFg">
-                                <rect key="frame" x="415.5" y="363" width="193" height="36"/>
-                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="30"/>
-                                <color key="textColor" name="Background"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Studied 0 cards in 0 minutes today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oau-r6-1b6">
                                 <rect key="frame" x="259" y="1201" width="446" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="30"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press the &quot;+&quot; button on the bottom right to create a deck!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFj-NJ-IFg">
+                                <rect key="frame" x="317" y="341" width="390" height="99"/>
+                                <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="30"/>
+                                <color key="textColor" name="Background"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -146,7 +146,7 @@
                                 <color key="textColor" name="Background"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNk-Zt-k7D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNk-Zt-k7D">
                                 <rect key="frame" x="313" y="627" width="78" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="npU-vS-HG1"/>
@@ -161,7 +161,7 @@
                                 <color key="textColor" name="Background"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日も素敵ですね" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0a-NO-Q30">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日も素敵ですね" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0a-NO-Q30">
                                 <rect key="frame" x="152" y="423" width="400" height="60"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -190,7 +190,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Hard">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                            <color key="baseForegroundColor" name="ErrorText"/>
+                                            <color key="baseForegroundColor" name="Background"/>
                                             <color key="baseBackgroundColor" name="Tertiary-Dark"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -203,7 +203,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Good">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                            <color key="baseBackgroundColor" name="Green"/>
+                                            <color key="baseBackgroundColor" red="0.32793747462254857" green="0.72503221649484528" blue="0.3449732171795088" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="goodDidTap:" destination="cke-iM-Mrv" eventType="touchUpInside" id="EwZ-qa-vXx"/>
@@ -240,8 +240,15 @@
                                     <action selector="answerDidTap:" destination="cke-iM-Mrv" eventType="touchUpInside" id="1Xd-Pd-C8J"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-flash-card" translatesAutoresizingMaskIntoConstraints="NO" id="SuA-Rp-yJF">
+                                <rect key="frame" x="0.0" y="171" width="195" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="gVQ-8b-ZpN"/>
+                                    <constraint firstAttribute="height" constant="156" id="gY5-zf-CGx"/>
+                                </constraints>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background_1" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-n6-YCU">
-                                <rect key="frame" x="0.0" y="-973" width="704" height="995.5"/>
+                                <rect key="frame" x="-213" y="-928" width="704" height="995.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished all words for today!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1p-he-GGK">
                                 <rect key="frame" x="178" y="523.5" width="348.5" height="36"/>
@@ -256,7 +263,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="undraw-close_book" translatesAutoresizingMaskIntoConstraints="NO" id="rfq-PN-paS">
-                                <rect key="frame" x="673" y="6" width="394" height="251"/>
+                                <rect key="frame" x="574" y="38" width="394" height="251"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="251" id="P8G-Tb-gsR"/>
                                     <constraint firstAttribute="width" constant="394" id="qVP-6g-d2P"/>
@@ -268,6 +275,7 @@
                         <constraints>
                             <constraint firstItem="Ath-Uc-iIa" firstAttribute="bottom" secondItem="rdj-1d-TEO" secondAttribute="bottom" id="19m-L9-1jK"/>
                             <constraint firstItem="DtN-o5-NCM" firstAttribute="top" secondItem="sJB-S7-2ud" secondAttribute="bottom" constant="122" id="4T8-HU-hfV"/>
+                            <constraint firstItem="SuA-Rp-yJF" firstAttribute="leading" secondItem="Ath-Uc-iIa" secondAttribute="leading" id="5RT-VU-FRL"/>
                             <constraint firstItem="u0j-n6-YCU" firstAttribute="leading" secondItem="Ath-Uc-iIa" secondAttribute="leading" id="8eX-GX-SGv"/>
                             <constraint firstItem="zNk-Zt-k7D" firstAttribute="centerX" secondItem="jbE-k5-LoW" secondAttribute="centerX" id="90o-fw-T1Z"/>
                             <constraint firstItem="S1p-he-GGK" firstAttribute="top" secondItem="rfq-PN-paS" secondAttribute="bottom" constant="30" id="CL7-3B-WY4"/>
@@ -275,6 +283,7 @@
                             <constraint firstItem="rfq-PN-paS" firstAttribute="centerX" secondItem="jbE-k5-LoW" secondAttribute="centerX" id="Hff-L5-bln"/>
                             <constraint firstItem="5Ra-kG-8DO" firstAttribute="top" secondItem="Ath-Uc-iIa" secondAttribute="top" id="Ib8-s2-ecw"/>
                             <constraint firstAttribute="bottom" secondItem="zNk-Zt-k7D" secondAttribute="bottom" constant="332.5" id="InP-aD-HQq"/>
+                            <constraint firstItem="k0a-NO-Q30" firstAttribute="top" secondItem="SuA-Rp-yJF" secondAttribute="bottom" constant="96" id="N8g-me-bFy"/>
                             <constraint firstItem="S1p-he-GGK" firstAttribute="centerX" secondItem="jbE-k5-LoW" secondAttribute="centerX" id="NUj-Ms-S2k"/>
                             <constraint firstItem="4ss-0e-3e8" firstAttribute="leading" secondItem="Ath-Uc-iIa" secondAttribute="leading" id="NeZ-lp-o8y"/>
                             <constraint firstItem="Ath-Uc-iIa" firstAttribute="trailing" secondItem="sJB-S7-2ud" secondAttribute="trailing" constant="30" id="NfA-mP-21u"/>
@@ -393,15 +402,13 @@
         <image name="book" width="30" height="30"/>
         <image name="cover_2" width="1000" height="1000"/>
         <image name="undraw-close_book" width="713.7420654296875" height="454.87759399414062"/>
+        <image name="undraw-flash-card" width="740.10321044921875" height="574.3155517578125"/>
         <image name="undraw-ideas" width="534.6700439453125" height="589.0946044921875"/>
         <namedColor name="Background">
             <color red="0.98400002717971802" green="0.98799997568130493" blue="0.99699997901916504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Error">
             <color red="0.73100000619888306" green="0.10400000214576721" blue="0.10599999874830246" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ErrorText">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Green">
             <color red="0.45100000500679016" green="0.98199999332427979" blue="0.47600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -7,9 +7,10 @@
 
 /// Note that not all RevisionVocabs need to be tested. They are sorted by a priority queue and only up to a certain
 /// day difference they will be tested
-///
-/// This is just a wrapper around the factory, with a count and when it hits zero it returns null
 struct RevisionSequence: QuerySequence {
+    
+    typealias criteriaType = (RevisionQuery) -> Bool
+    let criteria: criteriaType
     
     var questionsLeft: Int?
     
@@ -17,7 +18,8 @@ struct RevisionSequence: QuerySequence {
     // and the next function will reduce the number by 1
     var revisionPq: Heap<RevisionQuery>
 
-    init(revisionQueryArr: [RevisionQuery]) {
+    init(revisionQueryArr: [RevisionQuery], criteria: @escaping criteriaType) {
+        self.criteria = criteria
         // convert into heap
         self.revisionPq = Heap<RevisionQuery>(sort: {
             (rq1: RevisionQuery, rq2: RevisionQuery) -> Bool in
@@ -27,20 +29,19 @@ struct RevisionSequence: QuerySequence {
         
         // initialise pq
         for rq in revisionQueryArr {
-            self.revisionPq.insert(rq)
+            self.insert(rq)
         }
     }
     
-    init(deck: Deck) {
-        self.init(revisionQueryArr: deck.vocabs)
+    init(deck: Deck, criteria: @escaping criteriaType) {
+        self.init(revisionQueryArr: deck.vocabs, criteria: criteria)
     }
     
     mutating func insert(_ rq: RevisionQuery) {
         // only insert things smaller than a set magnitude
-//        print(rq.magnitude)
-        guard rq.magnitude < 2 else {
-//            print("revisionquery removed")
-//            print(rq.magnitude)
+        print(rq.magnitude)
+        guard criteria(rq) else {
+            Logger.info("Revision Query \(rq) discarded from queue")
             return
         }
         
@@ -56,9 +57,11 @@ struct RevisionSequence: QuerySequence {
         let nextRevision = self.revisionPq.remove()
         self.questionsLeft = revisionPq.count
         
-//        print(nextRevision?.magnitude)
-        
         return nextRevision
+    }
+    
+    func count() -> Int {
+        revisionPq.count
     }
 }
 

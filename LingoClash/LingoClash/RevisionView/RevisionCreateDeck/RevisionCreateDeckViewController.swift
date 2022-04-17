@@ -31,11 +31,14 @@ class RevisionCreateDeckViewController: UIViewController {
     @IBAction func onTapActionSave(_ sender: Any) {
         let newDeckName = FormUtilities.getTrimmedString(textField: createDeckLabel)
         let newDeckFields = CreateDeckFields(newName: newDeckName)
+        
+        // Add deck locally
         viewModel?.addDeck(newDeckFields)
         
         createDeckLabel.text = ""
         deckAddedNotif.isHidden = false
         
+        // Send api request to add a deck
         DeckManager().addDeck(newDeckFields: newDeckFields)
     }
 }

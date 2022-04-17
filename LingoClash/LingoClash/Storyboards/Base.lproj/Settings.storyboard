@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q2j-81-4aM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q2j-81-4aM">
     <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -43,6 +43,9 @@
                                                     <segment title="Light"/>
                                                     <segment title="Dark"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="themeChanged:" destination="q2j-81-4aM" eventType="valueChanged" id="J8c-dg-NeG"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -88,7 +91,7 @@
                                         <color key="tintColor" name="TintColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Change Password" cornerStyle="capsule">
-                                            <color key="baseForegroundColor" name="Secondary"/>
+                                            <color key="baseForegroundColor" name="Tertiary"/>
                                             <color key="baseBackgroundColor" name="TertiaryContainer"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -123,6 +126,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="zD7-kc-WBW"/>
+                    <connections>
+                        <outlet property="themeControl" destination="3QK-4a-Cbb" id="57i-pu-5W7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgx-vu-P4a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
