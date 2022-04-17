@@ -21,7 +21,6 @@ class FirebaseAuthProvider: AuthProvider {
     struct Configs {
         static let firstNameKey = "firstName"
         static let lastNameKey = "lastName"
-        static let uidKey = "uid"
         static let usersCollection = "users"
     }
 

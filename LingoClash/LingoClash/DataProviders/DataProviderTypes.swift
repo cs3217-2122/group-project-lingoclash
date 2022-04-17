@@ -24,7 +24,6 @@ extension Record {
 
 struct CreateParams<T: Codable> {
     let data: T
-    var useAutoId = true
 }
 
 struct CreateResult<T: Record> {

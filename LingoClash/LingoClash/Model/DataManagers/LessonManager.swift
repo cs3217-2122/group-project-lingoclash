@@ -17,9 +17,12 @@ class LessonManager: DataManager<LessonData> {
     func completeLesson(_ lesson: Lesson) {
         let profileManager = ProfileManager()
         let profileLessonManager = ProfileLessonManager()
+        let
 
         _ = firstly {
-            profileLessonManager.getOneCurrentUser(lessonId: lesson.id)
+            profileManager.getCurrentProfileData()
+        }.then { profileData in
+            profileLessonManager.getOne(lessonId: lesson.id, profileId: profileData.id)
         }.then { profileLessonData -> Promise<ProfileLessonData> in
             let didGainStars = profileLessonData.stars < lesson.stars
 
