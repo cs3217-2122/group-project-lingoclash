@@ -51,18 +51,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-gG-aVb">
-                                                    <rect key="frame" x="180.5" y="549" width="259.5" height="31"/>
+                                                    <rect key="frame" x="229" y="549" width="163" height="31"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-rn-aeu">
-                                                            <rect key="frame" x="0.0" y="0.0" width="66.5" height="31"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="filled" title="PK" cornerStyle="capsule">
-                                                                <color key="baseForegroundColor" name="Primary"/>
-                                                                <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </buttonConfiguration>
-                                                        </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRn-TK-NhC">
-                                                            <rect key="frame" x="96.5" y="0.0" width="66.5" height="31"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="66.5" height="31"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="filled" title="Revise" cornerStyle="capsule">
                                                                 <color key="baseForegroundColor" name="Primary"/>
@@ -70,7 +62,7 @@
                                                             </buttonConfiguration>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-Xv-WtM">
-                                                            <rect key="frame" x="193" y="0.0" width="66.5" height="31"/>
+                                                            <rect key="frame" x="96.5" y="0.0" width="66.5" height="31"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="filled" title="Learn" cornerStyle="capsule">
                                                                 <color key="baseForegroundColor" name="Primary"/>
@@ -148,7 +140,6 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="600" height="600"/>
                                 <connections>
-                                    <outlet property="PKButton" destination="CWs-rn-aeu" id="xrW-xS-btZ"/>
                                     <outlet property="bookNameLabel" destination="IIC-Y4-7Fa" id="A8D-x1-IhW"/>
                                     <outlet property="learnButton" destination="gQD-Xv-WtM" id="q2l-ka-5hB"/>
                                     <outlet property="progressLabel" destination="Z6G-S7-SYQ" id="XDU-XJ-bBw"/>
