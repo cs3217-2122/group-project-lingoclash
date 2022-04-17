@@ -15,9 +15,12 @@ class Logger {
 
         var prefix: String {
             switch self {
-            case .info: return "INFO"
-            case .warning: return "WARN ⚠️"
-            case .error: return "ALERT ❌"
+            case .info:
+                return "INFO"
+            case .warning:
+                return "WARN ⚠️"
+            case .error:
+                return "ALERT ❌"
             }
         }
     }

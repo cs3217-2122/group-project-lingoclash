@@ -51,6 +51,10 @@ final class RevisionViewModel {
     }
 
     func fetchDecks() {
+        if self.isRefreshing {
+            return
+        }
+        
         self.isRefreshing = true
         
         firstly {
@@ -60,9 +64,15 @@ final class RevisionViewModel {
         }.done { deckArr in
             self.decks.append(contentsOf: deckArr)
             self.isRefreshing = false
+        }.catch { error in
+            print(error)
         }
 
         addDefaultDeck()
+    }
+    
+    func stopRefresh() {
+        self.isRefreshing = false
     }
     
     func deckProgress() {

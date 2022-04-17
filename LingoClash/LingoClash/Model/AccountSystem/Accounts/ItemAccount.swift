@@ -17,12 +17,14 @@ class ItemAccount<T: Item>: Account {
         self.items = items
     }
 
-    func createTransaction(items: [T], debitOrCredit: DebitOrCredit, description: String) -> ItemTransaction<T>? {
+    func createTransaction(items: [T], debitOrCredit: DebitOrCredit, description: TransactionDescription)
+    -> ItemTransaction<T>? {
         guard !items.isEmpty else {
             return nil
         }
 
-        let transaction = ItemTransaction<T>(id: "", debitOrCredit: debitOrCredit, items: items, account: self)
+        let transaction = ItemTransaction<T>(id: "", debitOrCredit: debitOrCredit, items: items,
+                                             account: self, description: description)
         return transaction
     }
 

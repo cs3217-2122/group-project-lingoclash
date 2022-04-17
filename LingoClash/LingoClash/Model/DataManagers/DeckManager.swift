@@ -20,7 +20,11 @@ class DeckManager: DataManager<DeckData> {
         }.done { currentProfile in
             self.create(newRecord:
                             DeckData(id: "-1", name: newDeckFields.newName, profile_id: currentProfile.id, revision_vocab_id: [])
-            )
+            ).catch { error in
+                print(error)
+            }
+        }.catch { error in
+            print(error)
         }
     }
     

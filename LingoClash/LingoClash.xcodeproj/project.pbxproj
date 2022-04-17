@@ -18,6 +18,14 @@
 		62165B7D27F226C7004BC620 /* LoginFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62165B7C27F226C7004BC620 /* LoginFields.swift */; };
 		621E6D5127E9C4F10015BBD4 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621E6D5027E9C4F10015BBD4 /* EditProfileViewController.swift */; };
 		6220921F280BC57F003365DF /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1E7AD27E503B3005D4272 /* Account.swift */; };
+		62209221280BF1FA003365DF /* TransactionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62209220280BF1FA003365DF /* TransactionDescription.swift */; };
+		62209222280BF25E003365DF /* TransactionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62209220280BF1FA003365DF /* TransactionDescription.swift */; };
+		62209224280BF45A003365DF /* LessonQuizRewardSystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62209223280BF45A003365DF /* LessonQuizRewardSystemView.swift */; };
+		62209225280BF612003365DF /* LessonQuizRewardSystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62209223280BF45A003365DF /* LessonQuizRewardSystemView.swift */; };
+		62209227280C11C4003365DF /* RewardSystemError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62209226280C11C4003365DF /* RewardSystemError.swift */; };
+		62209228280C13E2003365DF /* RewardSystemError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62209226280C11C4003365DF /* RewardSystemError.swift */; };
+		6220922A280C1CA1003365DF /* TimeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62209229280C1CA1003365DF /* TimeUtilities.swift */; };
+		6220922B280C1F18003365DF /* TimeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62209229280C1CA1003365DF /* TimeUtilities.swift */; };
 		624989DA27E735600092FC1B /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989D927E735600092FC1B /* BookCollectionViewController.swift */; };
 		624989DC27E736590092FC1B /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989DB27E736590092FC1B /* BookCollectionViewCell.swift */; };
 		624989DE27E7395E0092FC1B /* LearningBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624989DD27E7395E0092FC1B /* LearningBooksViewController.swift */; };
@@ -111,8 +119,6 @@
 		62FEFAE2280B534D00C0503B /* MainRewardSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FEFAE0280B534D00C0503B /* MainRewardSystem.swift */; };
 		62FEFAE4280B535C00C0503B /* PKGameRewardSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FEFAE3280B535C00C0503B /* PKGameRewardSystem.swift */; };
 		62FEFAE5280B535C00C0503B /* PKGameRewardSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FEFAE3280B535C00C0503B /* PKGameRewardSystem.swift */; };
-		62FEFAE7280B536600C0503B /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FEFAE6280B536600C0503B /* Reward.swift */; };
-		62FEFAE8280B536600C0503B /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FEFAE6280B536600C0503B /* Reward.swift */; };
 		62FEFAEA280B537200C0503B /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FEFAE9280B537200C0503B /* NotificationObserver.swift */; };
 		62FEFAEB280B537200C0503B /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FEFAE9280B537200C0503B /* NotificationObserver.swift */; };
 		6F034D922809281700663A12 /* RevisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA053D327F69E5900E03683 /* RevisionViewController.swift */; };
@@ -550,6 +556,10 @@
 		621E6D5027E9C4F10015BBD4 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		621E6D5227E9C5060015BBD4 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		621E6D5427E9C8260015BBD4 /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
+		62209220280BF1FA003365DF /* TransactionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDescription.swift; sourceTree = "<group>"; };
+		62209223280BF45A003365DF /* LessonQuizRewardSystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizRewardSystemView.swift; sourceTree = "<group>"; };
+		62209226280C11C4003365DF /* RewardSystemError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardSystemError.swift; sourceTree = "<group>"; };
+		62209229280C1CA1003365DF /* TimeUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtilities.swift; sourceTree = "<group>"; };
 		624989D927E735600092FC1B /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
 		624989DB27E736590092FC1B /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		624989DD27E7395E0092FC1B /* LearningBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningBooksViewController.swift; sourceTree = "<group>"; };
@@ -608,7 +618,6 @@
 		62FEFADD280B534100C0503B /* RewardSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardSystem.swift; sourceTree = "<group>"; };
 		62FEFAE0280B534D00C0503B /* MainRewardSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRewardSystem.swift; sourceTree = "<group>"; };
 		62FEFAE3280B535C00C0503B /* PKGameRewardSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameRewardSystem.swift; sourceTree = "<group>"; };
-		62FEFAE6280B536600C0503B /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		62FEFAE9280B537200C0503B /* NotificationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationObserver.swift; sourceTree = "<group>"; };
 		6F034DA028098B4300663A12 /* RevisionVocabManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionVocabManager.swift; sourceTree = "<group>"; };
 		6F034DA328098B5500663A12 /* DeckManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckManager.swift; sourceTree = "<group>"; };
@@ -675,7 +684,6 @@
 		CEA1C87927FA14FA00123225 /* PKGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKGame.swift; sourceTree = "<group>"; };
 		CEA1C8CD27FA14FA00123225 /* PKGameMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKGameMove.swift; sourceTree = "<group>"; };
 		CEA1C90027FA187300123225 /* LessonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonData.swift; sourceTree = "<group>"; };
-		CEA1C90227FA23DE00123225 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CEA1C90427FA26FD00123225 /* PKGameQuizViewModelFromPKGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameQuizViewModelFromPKGame.swift; sourceTree = "<group>"; };
 		CEA1C90827FA67BC00123225 /* PKGameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameEngine.swift; sourceTree = "<group>"; };
 		CEA1C90A27FA684500123225 /* PKGameRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameRenderer.swift; sourceTree = "<group>"; };
@@ -843,10 +851,12 @@
 				62FEFAA8280B4C7B00C0503B /* Snackbar */,
 				6204A03927DE1CDB0063100D /* AppConfigs.swift */,
 				62165B7527F2244C004BC620 /* FormUtilities.swift */,
+				62209229280C1CA1003365DF /* TimeUtilities.swift */,
 				CEF1E7DB27E60C7A005D4272 /* Dynamic.swift */,
 				D30CD1E727E79F3A0021A5AA /* KeychainManager.swift */,
 				D3C4423F27E8C65600676C93 /* Logger.swift */,
 				6204A04027DE4A500063100D /* ViewUtilities.swift */,
+				62FEFAA8280B4C7B00C0503B /* Snackbar */,
 				D32BB7822809F127009E4049 /* SampleData */,
 				D3C4423427E8A95000676C93 /* Alert */,
 				D3C4422027E8712100676C93 /* AlignedCollectionViewFlowLayout */,
@@ -945,7 +955,6 @@
 				62BB1CE028002135002CD31A /* HomeViewModel.swift */,
 				CE8D229E27EEBBD2005E7058 /* HomeNavigationViewController.swift */,
 				62C04A1427DDEB10002D2497 /* HomeViewController.swift */,
-				CEA1C90227FA23DE00123225 /* HomeViewModel.swift */,
 				629090A927E8DE0300941A3B /* CurrentBookTabBarController.swift */,
 				62BB1CE62800308D002CD31A /* ExploreBookViewController.swift */,
 				629090AB27E8E3B900941A3B /* CurrentBookViewController.swift */,
@@ -978,8 +987,9 @@
 			isa = PBXGroup;
 			children = (
 				CEF1E7A727E50082005D4272 /* Transaction.swift */,
-				62FEFABF280B504F00C0503B /* CurrencyTransaction.swift */,
+				62209220280BF1FA003365DF /* TransactionDescription.swift */,
 				62FEFAC3280B506100C0503B /* DebitOrCredit.swift */,
+				62FEFABF280B504F00C0503B /* CurrencyTransaction.swift */,
 				62FEFAC1280B505A00C0503B /* ItemTransaction.swift */,
 			);
 			path = Transactions;
@@ -988,9 +998,10 @@
 		62FEFAD9280B531F00C0503B /* RewardSystem */ = {
 			isa = PBXGroup;
 			children = (
-				62FEFAE6280B536600C0503B /* Reward.swift */,
+				62209226280C11C4003365DF /* RewardSystemError.swift */,
 				62FEFAE9280B537200C0503B /* NotificationObserver.swift */,
 				62FEFADA280B533100C0503B /* LessonQuizRewardSystem.swift */,
+				62209223280BF45A003365DF /* LessonQuizRewardSystemView.swift */,
 				62FEFAE3280B535C00C0503B /* PKGameRewardSystem.swift */,
 				62FEFAE0280B534D00C0503B /* MainRewardSystem.swift */,
 				62FEFADD280B534100C0503B /* RewardSystem.swift */,
@@ -1891,6 +1902,7 @@
 				D3AF1C1828057C7600DCFA2E /* LightTheme.swift in Sources */,
 				CE8D229627EEB8F4005E7058 /* UiViewController+InstantiateFromAppStoryboard.swift in Sources */,
 				62FEFAAA280B4C8C00C0503B /* SnackbarUtilities.swift in Sources */,
+				6220922A280C1CA1003365DF /* TimeUtilities.swift in Sources */,
 				CEC5886A27EA2A4F00809403 /* StarView.swift in Sources */,
 				D3C5E27A27F6F3E900F65B8E /* SampleDataUtilities.swift in Sources */,
 				62FEFAB2280B4EDC00C0503B /* ProfileViewController.swift in Sources */,
@@ -1934,6 +1946,7 @@
 				D3F00CB327DFC59500393ADC /* BookData.swift in Sources */,
 				CEA1C8F927FA14FA00123225 /* PKGameMove.swift in Sources */,
 				62FEFAD4280B52DE00C0503B /* StarAccountData.swift in Sources */,
+				62209221280BF1FA003365DF /* TransactionDescription.swift in Sources */,
 				D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */,
 				62FEFABC280B500E00C0503B /* CurrencyTypes.swift in Sources */,
 				CEA1C7AE27FA145800123225 /* QuestionConstructorRandomFactory.swift in Sources */,
@@ -1951,6 +1964,7 @@
 				6F756442280BE1EB00AECCBD /* DeckManager.swift in Sources */,
 				D3C5E28427F71D6A00F65B8E /* BookCategoryManager.swift in Sources */,
 				6F67BDEF2804261C00B91844 /* Heap.swift in Sources */,
+				62209227280C11C4003365DF /* RewardSystemError.swift in Sources */,
 				D30CD1E827E79F3A0021A5AA /* KeychainManager.swift in Sources */,
 				6220921F280BC57F003365DF /* Account.swift in Sources */,
 				62FEFAA4280B4B3400C0503B /* UIApplication+Extensions.swift in Sources */,
@@ -2005,6 +2019,7 @@
 				CEF1E81627E742BF005D4272 /* SimpleOptionQuestionLayoutViewModel.swift in Sources */,
 				D3C4424027E8C65600676C93 /* Logger.swift in Sources */,
 				D3C4423E27E8B20000676C93 /* DataProviderErrors.swift in Sources */,
+				62209224280BF45A003365DF /* LessonQuizRewardSystemView.swift in Sources */,
 				CEA1C7AB27FA145800123225 /* QuestionSequence.swift in Sources */,
 				CEA1C7B327FA145800123225 /* QuestionType.swift in Sources */,
 				D3C5E28727F71D8500F65B8E /* LessonManager.swift in Sources */,
@@ -2059,7 +2074,6 @@
 				62BB1CE72800308D002CD31A /* ExploreBookViewController.swift in Sources */,
 				D33282F927D4E63B00C80986 /* Theme.swift in Sources */,
 				6F4C4D6727F8045600394CCB /* RevisionVocab.swift in Sources */,
-				62FEFAE7280B536600C0503B /* Reward.swift in Sources */,
 				624989DC27E736590092FC1B /* BookCollectionViewCell.swift in Sources */,
 				62FEFAE4280B535C00C0503B /* PKGameRewardSystem.swift in Sources */,
 				629090A027E8303F00941A3B /* RecommendedBooksTableViewController.swift in Sources */,
@@ -2145,7 +2159,6 @@
 				D3C5E1F527F6E36B00F65B8E /* UiViewController+InstantiateFromAppStoryboard.swift in Sources */,
 				6F75643D280BE1C500AECCBD /* RevisionVocab.swift in Sources */,
 				D3C5E1F627F6E36B00F65B8E /* StarView.swift in Sources */,
-				62FEFAE8280B536600C0503B /* Reward.swift in Sources */,
 				6F756436280BE19400AECCBD /* Deck.swift in Sources */,
 				CEF3E696280690C2001F483B /* QuestionWrapper.swift in Sources */,
 				62BB1CE228002135002CD31A /* HomeViewModel.swift in Sources */,
@@ -2157,10 +2170,12 @@
 				CEF3E6B0280690DA001F483B /* PKGameQuizViewController.swift in Sources */,
 				D30E490A27FA1E670074CF2B /* Book.swift in Sources */,
 				6F756439280BE1A300AECCBD /* DeckViewModel.swift in Sources */,
+				62209228280C13E2003365DF /* RewardSystemError.swift in Sources */,
 				D3AF1C262805937100DCFA2E /* SettingsViewController.swift in Sources */,
 				CE2771D4280988FB00A739C1 /* PKGamePlayerOutcomeData.swift in Sources */,
 				62A03E682801CF53008FE249 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				62FEFAA5280B4B3B00C0503B /* UIApplication+Extensions.swift in Sources */,
+				62209222280BF25E003365DF /* TransactionDescription.swift in Sources */,
 				D3C5E1FA27F6E36B00F65B8E /* OptionTableCell.swift in Sources */,
 				6F75643A280BE1A800AECCBD /* DeckViewController.swift in Sources */,
 				D3C5E1FB27F6E36B00F65B8E /* QuestionStatus.swift in Sources */,
@@ -2222,6 +2237,7 @@
 				62FEFAEB280B537200C0503B /* NotificationObserver.swift in Sources */,
 				D3C5E21C27F6E36B00F65B8E /* LessonQuizViewModelFromLesson.swift in Sources */,
 				CEF3E68D280690A0001F483B /* QuestionsGenerator.swift in Sources */,
+				6220922B280C1F18003365DF /* TimeUtilities.swift in Sources */,
 				D3C5E21D27F6E36B00F65B8E /* AppStoryboard.swift in Sources */,
 				6F756441280BE1CF00AECCBD /* RevisionSequence.swift in Sources */,
 				CEF3E69C280690C5001F483B /* SimpleOptionQuestion.swift in Sources */,
@@ -2246,6 +2262,7 @@
 				D3C5E22827F6E36B00F65B8E /* LessonQuizViewController.swift in Sources */,
 				6F756437280BE19900AECCBD /* RevisionViewModel.swift in Sources */,
 				62A03E6B2801CF59008FE249 /* Alignment.swift in Sources */,
+				62209225280BF612003365DF /* LessonQuizRewardSystemView.swift in Sources */,
 				CEF3E68E280690A0001F483B /* QuestionScopeFactory.swift in Sources */,
 				D3C5E22A27F6E36B00F65B8E /* LessonOverviewViewModelFromLesson.swift in Sources */,
 				62FEFAC8280B508D00C0503B /* AccountOwner.swift in Sources */,

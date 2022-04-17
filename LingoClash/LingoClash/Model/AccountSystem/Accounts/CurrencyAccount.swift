@@ -18,12 +18,13 @@ class CurrencyAccount<T: Currency>: Account {
         self.transactions = transactions
     }
 
-    func createTransaction(amount: Int, description: String) -> CurrencyTransaction<T>? {
+    func createTransaction(amount: Int, description: TransactionDescription) -> CurrencyTransaction<T>? {
         guard amount != 0 else {
             return nil
         }
         let action: DebitOrCredit = amount > 0 ? .debit : .credit
-        let transaction = CurrencyTransaction<T>(id: "", debitOrCredit: action, amount: abs(amount), account: self)
+        let transaction = CurrencyTransaction<T>(id: "", debitOrCredit: action, amount: abs(amount),
+                                                 account: self, description: description)
         return transaction
     }
 

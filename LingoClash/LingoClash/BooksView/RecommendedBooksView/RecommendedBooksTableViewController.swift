@@ -21,6 +21,11 @@ class RecommendedBooksTableViewController: UITableViewController {
         setUpBinders()
         viewModel?.refresh()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel?.stopRefresh()
+    }
 
     func setUpBinders() {
         guard let viewModel = viewModel else {

@@ -36,7 +36,8 @@ class StarAccountManager: DataManager<StarAccountData> {
                 }
 
                 starAccountData = currStarAccountData
-                starAccount = CurrencyAccount<Star>(id: currStarAccountData.id, owner: profile, balance: currStarAccountData.balance)
+                starAccount = CurrencyAccount<Star>(id: currStarAccountData.id, owner: profile,
+                                                    balance: currStarAccountData.balance)
             }
         }.then { () -> Promise<Void> in
             guard let starAccount = starAccount, let starAccountData = starAccountData else {
@@ -56,7 +57,8 @@ class StarAccountManager: DataManager<StarAccountData> {
         }
     }
 
-    func updateStarAccount(account: CurrencyAccount<Star>, newTransaction: CurrencyTransaction<Star>) -> Promise<CurrencyAccount<Star>> {
+    func updateStarAccount(account: CurrencyAccount<Star>, newTransaction: CurrencyTransaction<Star>)
+    -> Promise<CurrencyAccount<Star>> {
         var updatedAccountData: StarAccountData?
         var updatedAccount: CurrencyAccount<Star>?
 
@@ -66,12 +68,15 @@ class StarAccountManager: DataManager<StarAccountData> {
         .done { starAccountData in
             updatedAccountData = starAccountData
         }.then { () -> Promise<StarTransactionData> in
-            guard let _ = updatedAccountData else {
+            guard updatedAccountData != nil else {
                 return Promise.reject(reason: DataManagerError.dataNotFound)
             }
 
-            let transactionData = StarTransactionData(id: "-1", account_id: account.id, amount: newTransaction.amount,
-                                                      createdAt: newTransaction.createdAt, debitOrCredit: newTransaction.debitOrCredit,
+            let transactionData = StarTransactionData(id: "-1",
+                                                      account_id: account.id,
+                                                      amount: newTransaction.amount,
+                                                      createdAt: newTransaction.createdAt,
+                                                      debitOrCredit: newTransaction.debitOrCredit,
                                                       description: newTransaction.description)
             return StarTransactionManager().create(newRecord: transactionData)
         }.then { _ -> Promise<Void> in
@@ -87,4 +92,5 @@ class StarAccountManager: DataManager<StarAccountData> {
             return updatedAccount
         }
     }
+
 }

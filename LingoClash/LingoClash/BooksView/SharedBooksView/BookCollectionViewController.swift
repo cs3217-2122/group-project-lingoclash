@@ -21,6 +21,11 @@ class BookCollectionViewController: UICollectionViewController {
         setUpBinders()
         viewModel?.refresh()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel?.stopRefresh()
+    }
 
     func setUpBinders() {
         guard let viewModel = viewModel else {

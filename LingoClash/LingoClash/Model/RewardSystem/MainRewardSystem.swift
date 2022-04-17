@@ -6,16 +6,16 @@
 //
 
 class MainRewardSystem {
-    private static let lessonQuizRewardSytem: RewardSystem = LessonQuizRewardSystem()
-    private static let pkGameRewardSystem: RewardSystem = PKGameRewardSystem()
+    private static let lessonQuizRewardSytemView: RewardSystemView = LessonQuizRewardSystemView()
+//    private static let pkGameRewardSystem: RewardSystem = PKGameRewardSystem()
 
-    private static var rewardSystems: [RewardSystem] {
-        [lessonQuizRewardSytem, pkGameRewardSystem]
+    private static var rewardSystems: [RewardSystemView] {
+        [lessonQuizRewardSytemView]
     }
 
-    static func setUpObservers() {
+    static func setUp() {
         for rewardSystem in rewardSystems {
-            rewardSystem.setUpObservers()
+            rewardSystem.setUp()
         }
     }
 }

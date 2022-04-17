@@ -24,7 +24,7 @@ class LessonQuizViewController: UIViewController {
     @IBOutlet private var progressBar: LessonQuizProgressBarView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("loaded!")
+
         styleUI()
         fillUI()
     }

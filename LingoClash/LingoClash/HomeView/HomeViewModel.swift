@@ -1,5 +1,6 @@
 import Combine
 import PromiseKit
+import Foundation
 
 class HomeViewModel {
     @Published var isRefreshing = false

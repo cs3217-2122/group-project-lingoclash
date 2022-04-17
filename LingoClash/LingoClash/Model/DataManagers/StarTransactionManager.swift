@@ -13,7 +13,7 @@ class StarTransactionManager: DataManager<StarTransactionData> {
     }
 
     func getStarTransactions(accountId: Identifier, account: CurrencyAccount<Star>)
-        -> Promise<[CurrencyTransaction<Star>]> {
+    -> Promise<[CurrencyTransaction<Star>]> {
 
         var starTransactions = [StarTransactionData]()
 
@@ -29,8 +29,8 @@ class StarTransactionManager: DataManager<StarTransactionData> {
                                           debitOrCredit: starTransaction.debitOrCredit,
                                           amount: starTransaction.amount,
                                           account: account,
-                                          createdAt: starTransaction.createdAt,
-                                          description: starTransaction.description)
+                                          description: starTransaction.description,
+                                          createdAt: starTransaction.createdAt)
             }
         }
     }

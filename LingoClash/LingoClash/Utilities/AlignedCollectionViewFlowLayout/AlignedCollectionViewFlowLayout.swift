@@ -251,7 +251,8 @@ open class AlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
         return super.layoutAttributesForElements(in: lineFrame) ?? []
     }
 
-    /// Copmutes the alignment axis with which to align the items represented by the `layoutAttributes` objects vertically.
+    /// Computes the alignment axis with which to align the items represented by the
+    /// `layoutAttributes` objects vertically.
     ///
     /// - Parameter layoutAttributes: The layout attributes objects to be vertically aligned.
     /// - Returns: The axis with respect to which the layout attributes can be aligned

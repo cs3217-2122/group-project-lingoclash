@@ -11,6 +11,6 @@ protocol Transaction {
     var id: Identifier { get }
     var debitOrCredit: DebitOrCredit { get }
     var createdAt: Date { get }
-    var description: String { get }
+    var description: TransactionDescription { get }
     func execute()
 }

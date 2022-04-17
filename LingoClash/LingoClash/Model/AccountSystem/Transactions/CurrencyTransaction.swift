@@ -13,9 +13,10 @@ class CurrencyTransaction<T: Currency>: Transaction {
     let amount: Int
     let account: CurrencyAccount<T>
     let createdAt: Date
-    let description: String
+    let description: TransactionDescription
 
-    init(id: Identifier, debitOrCredit: DebitOrCredit, amount: Int, account: CurrencyAccount<T>, createdAt: Date = Date(), description: String = "") {
+    init(id: Identifier, debitOrCredit: DebitOrCredit, amount: Int, account: CurrencyAccount<T>,
+         description: TransactionDescription, createdAt: Date = Date()) {
         self.id = id
         self.debitOrCredit = debitOrCredit
         self.amount = amount
@@ -27,6 +28,7 @@ class CurrencyTransaction<T: Currency>: Transaction {
     func execute() {
         if debitOrCredit == .debit {
             account.balance += amount
+
         } else {
             if account.balance - amount < 0 {
                 return

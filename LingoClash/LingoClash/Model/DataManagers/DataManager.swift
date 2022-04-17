@@ -22,8 +22,8 @@ class DataManager<T: Record> {
         filter: [String: Any] = [:]
     ) -> Promise<[T]> {
 
-        let sort = SortPayload(field: field, isDescending: isDescending)
-        let result: Promise<GetListResult<T>> = dataProvider.getList(resource: self.resource, params: GetListParams(filter: filter))
+        let result: Promise<GetListResult<T>> = dataProvider.getList(resource: self.resource,
+                                                                     params: GetListParams(filter: filter))
 
         return result.map { result in
             result.data

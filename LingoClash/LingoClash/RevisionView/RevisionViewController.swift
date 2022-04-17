@@ -27,11 +27,16 @@ class RevisionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel.fetchDecks()
+        viewModel.fetchDecks()
         
         setUpBinders()
         revisionTableView.dataSource = self
         revisionTableView.delegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel.stopRefresh()
     }
 
     private func setUpBinders() {

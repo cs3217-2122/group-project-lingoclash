@@ -20,7 +20,7 @@ class CurrentBookTabBarController: UITabBarController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        viewModel.stopRefresh()
+        viewModel?.stopRefresh()
     }
 
     func setUpBinders() {

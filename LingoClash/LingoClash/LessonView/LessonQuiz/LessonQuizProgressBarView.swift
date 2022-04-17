@@ -10,7 +10,6 @@ import UIKit
 class LessonQuizProgressBarView: UIProgressView {
     private let starImage = #imageLiteral(resourceName: "star")
     func addStarView(at position: Float) {
-        print(position)
         let starView = getStarView(at: position)
         addSubview(starView)
     }
