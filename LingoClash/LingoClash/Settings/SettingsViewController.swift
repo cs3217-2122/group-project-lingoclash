@@ -9,13 +9,15 @@ import UIKit
 import Combine
 
 class SettingsViewController: UIViewController {
-
+    
+    
     private let viewModel = SettingsViewModel()
+    @IBOutlet weak var themeControl: UISegmentedControl!
     private var cancellables: Set<AnyCancellable> = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         viewModel.refresh()
         applyTheme()
         setUpBinders()
@@ -25,24 +27,22 @@ class SettingsViewController: UIViewController {
         super.viewWillDisappear(animated)
         viewModel.stopRefresh()
     }
-
-    @IBAction private func themeChanged(_ sender: UISwitch) {
-        Theme.current = sender.isOn ? LightTheme() : DarkTheme()
-        UserDefaults.standard.set(sender.isOn, forKey: "LightTheme")
-        applyTheme()
+    
+    @IBAction func themeChanged(_ sender: UISegmentedControl) {
+        viewModel.setTheme(selectedTheme: sender.selectedSegmentIndex)
     }
     
     @IBAction private func logoutTapped(_ sender: Any) {
         viewModel.signOut()
     }
-
+    
     func setUpBinders() {
         viewModel.$error.sink {[weak self] error in
             if let error = error {
                 self?.showError(error)
             }
         }.store(in: &cancellables)
-
+        
         viewModel.$alertContent.sink {[weak self] alertContent in
             if let alertContent = alertContent {
                 self?.showConfirmAlert(content: alertContent) { _ in
@@ -50,21 +50,31 @@ class SettingsViewController: UIViewController {
                 }
             }
         }.store(in: &cancellables)
+        
+        viewModel.$isLightSelected.sink {[weak self] isLightSelected in
+            UIApplication
+                .shared
+                .keyWindow?
+                .overrideUserInterfaceStyle = isLightSelected
+            ? .light : .dark
+            UserDefaults.standard.set(isLightSelected, forKey: "LightTheme")
+            self?.themeControl.selectedSegmentIndex = isLightSelected ? 0 : 1
+        }.store(in: &cancellables)
     }
-
+    
     func transitionToSplash() {
         let splashViewController = SplashViewController.instantiateFromAppStoryboard(AppStoryboard.Main)
-
+        
         view.window?.rootViewController = splashViewController
         view.window?.makeKeyAndVisible()
     }
-
+    
     func showError(_ message: String) {
         Logger.error("Unable to sign out. Error: \(message)")
     }
-
+    
     private func applyTheme() {}
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let editProfileVC = segue.destination as? EditProfileViewController {
             editProfileVC.viewModel = self.viewModel
@@ -74,5 +84,5 @@ class SettingsViewController: UIViewController {
             changeEmailVC.viewModel = self.viewModel
         }
     }
-
+    
 }

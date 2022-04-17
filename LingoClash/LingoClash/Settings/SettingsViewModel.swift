@@ -9,7 +9,7 @@ import Foundation
 import PromiseKit
 
 final class SettingsViewModel {
-
+    
     @Published var isRefreshing = false
     @Published var name: String?
     @Published var starsGoal: Int?
@@ -22,14 +22,15 @@ final class SettingsViewModel {
     @Published var changePasswordError: String?
     @Published var error: String?
     @Published var alertContent: AlertContent?
-
+    @Published var isLightSelected = UserDefaults.standard.bool(forKey: "LightTheme")
+    
     private let authProvider: AuthProvider
     private let profileManager = ProfileManager()
-
+    
     init(authProvider: AuthProvider = AppConfigs.API.authProvider) {
         self.authProvider = authProvider
     }
-
+    
     func signOut() {
         firstly {
             authProvider.logout()
@@ -40,7 +41,7 @@ final class SettingsViewModel {
             self.error = error.localizedDescription
         }
     }
-
+    
     func refresh() {
         if self.isRefreshing {
             return
@@ -65,17 +66,17 @@ final class SettingsViewModel {
     func stopRefresh() {
         self.isRefreshing = false
     }
-
+    
     func editProfile(_ fields: EditProfileFields) {
         if let error = FormUtilities.validateFieldsNotEmpty(fields) {
             editProfileError = error
             return
         }
-
+        
         if name == fields.name, starsGoal == fields.starsGoal, bio == fields.bio {
             return
         }
-
+        
         firstly {
             authProvider.updateName(fields.name)
         }.then { [self] _ in
@@ -90,23 +91,23 @@ final class SettingsViewModel {
             self.editProfileError = error.localizedDescription
         }
     }
-
+    
     func changeEmail(_ fields: ChangeEmailFields) {
         if let error = FormUtilities.validateFieldsNotEmpty(fields) {
             changeEmailError = error
             return
         }
-
+        
         if let error = FormUtilities.validateEmail(email: fields.newEmail) {
             changeEmailError = error
             return
         }
-
+        
         if email == fields.newEmail {
             changeEmailError = "New email must be different from the current email."
             return
         }
-
+        
         firstly {
             authProvider.updateEmail(fields.newEmail)
         }.done {
@@ -117,28 +118,28 @@ final class SettingsViewModel {
             self.changeEmailError = error.localizedDescription
         }
     }
-
+    
     func changePassword(_ fields: ChangePasswordFields) {
         if let error = FormUtilities.validateFieldsNotEmpty(fields) {
             changePasswordError = error
             return
         }
-
+        
         if let error = FormUtilities.validatePassword(password: fields.newPassword) {
             changePasswordError = error
             return
         }
-
+        
         if fields.newPassword != fields.confirmNewPassword {
             changePasswordError = "New password and confirmation password must be the same."
             return
         }
-
+        
         if fields.newPassword == fields.currentPassword {
             changePasswordError = "New password must be different from the current password."
             return
         }
-
+        
         firstly {
             authProvider.reauthenticate(password: fields.currentPassword)
         }.then {
@@ -151,5 +152,9 @@ final class SettingsViewModel {
             self.changePasswordError = error.localizedDescription
         }
     }
-
+    
+    func setTheme(selectedTheme: Int) {
+        self.isLightSelected = selectedTheme == 0
+    }
+    
 }
