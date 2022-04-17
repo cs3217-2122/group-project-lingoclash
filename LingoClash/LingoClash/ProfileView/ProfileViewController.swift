@@ -91,7 +91,7 @@ class ProfileViewController: UIViewController {
 
         viewModel.$bio.sink {[weak self] bio in
             if let bio = bio {
-                self?.bioLabel.text = "\"\(bio)\""
+//                self?.bioLabel.text = "\"\(bio)\""
             }
         }.store(in: &cancellables)
 
