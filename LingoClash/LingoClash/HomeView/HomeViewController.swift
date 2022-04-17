@@ -15,9 +15,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        viewModel.refresh()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.viewModel.refresh()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,6 +35,5 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction private func unwindToHome(segue: UIStoryboardSegue) {
-        self.viewModel.refresh()
     }
 }

@@ -41,17 +41,21 @@ class SampleDataUtilities {
         }
     }
 
-    // TODO: add book icon
     private static func createSampleBooks() -> Promise<Void> {
         Logger.info("Creating sample books...")
+
+        let languageLevelNames = ["TOPIK ", "JLPT N", "HSK "]
 
         let bookManager = BookManager()
         var books = [BookData]()
         var bookId = 0
 
-        for i in 0...5 {
-            for j in 0...5 {
-                let book = BookData(id: String(bookId), category_id: String(i), name: "Book \(i)-\(j)")
+        for i in 0...2 {
+            for j in 0...2 {
+                let book = BookData(
+                    id: String(bookId),
+                    category_id: String(i),
+                    name: "\(languageLevelNames[i])\(j + 1)")
                 books.append(book)
                 bookId += 1
             }
@@ -65,10 +69,12 @@ class SampleDataUtilities {
     private static func createSampleBookCategories() -> Promise<Void> {
         Logger.info("Creating sample book categories...")
 
+        let categoryNames = ["Korean", "Japanese", "Chinese"]
+
         let bookCategoryManager = BookCategoryManager()
         var categories = [BookCategoryData]()
-        for i in 0...5 {
-            let category = BookCategoryData(id: String(i), name: "Language - \(i)")
+        for i in 0...2 {
+            let category = BookCategoryData(id: String(i), name: categoryNames[i])
             categories.append(category)
         }
 
@@ -84,10 +90,13 @@ class SampleDataUtilities {
         var lessons = [LessonData]()
         var lessonId = 0
 
-        for i in 0...35 {
+        for i in 0...8 {
             for j in 0...9 {
                 let lesson = LessonData(
-                    id: String(lessonId), name: "Lesson \(j)", book_id: String(i))
+                    id: String(lessonId),
+                    name: "Lesson \(j + 1)",
+                    book_id: String(i)
+                )
                 lessons.append(lesson)
                 lessonId += 1
             }
@@ -102,21 +111,7 @@ class SampleDataUtilities {
         Logger.info("Creating sample vocabs...")
 
         let vocabManager = VocabManager()
-        //        var vocabs = [VocabData]()
-        //        var vocabId = 0
 
-        //        for i in 0...30 {
-        //            for j in 0...9 {
-        //                let vocab = VocabData(
-        //                    id: String(vocabId),
-        //                    definition: "Definition of vocab \(j)",
-        //                    lesson_id: String(i),
-        //                    sentence: "Example sentence of vocab \(j)",
-        //                    word: "Vocabulary - \(vocabId)")
-        //                vocabs.append(vocab)
-        //                vocabId += 1
-        //            }
-        //        }
         guard let vocabItems = parseKoreanJSON() else {
             return Promise.reject(reason: SampleDataError.parseError)
         }
@@ -135,11 +130,12 @@ class SampleDataUtilities {
                 lesson_id: String(lessonId),
                 sentence: exampleItem?.example ?? "No example available",
                 word: vocab.word,
-                translation: exampleItem?.translation ?? "No translation available"
+                translation: exampleItem?.translation ?? "No translation available",
+                pronunciation_text: vocab.romaja ?? ""
             )
 
             vocabId += 1
-            if vocabId.isMultiple(of: 10) {
+            if vocabId.isMultiple(of: 5) {
                 lessonId += 1
             }
 
@@ -185,6 +181,6 @@ struct DefinitionItem: Codable {
 
 struct ExampleItem: Codable {
     let example: String
-    let transliteration: String
-    let translation: String
+    let transliteration: String?
+    let translation: String?
 }

@@ -171,7 +171,11 @@ class ProfileManager: DataManager<ProfileData> {
 
                 let wins = uniquePlayerOutcomes.filter { $0.outcome == .win }.count
                 let total = uniquePlayerOutcomes.count
-                winningPKRate = Double(wins) / Double(total) * 100
+                if total == 0 {
+                    winningPKRate = 0
+                } else {
+                    winningPKRate = Double(wins) / Double(total) * 100
+                }
             }
         }.compactMap {
             guard let profile = profile,
@@ -183,7 +187,8 @@ class ProfileManager: DataManager<ProfileData> {
             return Profile(
                 profileData: profile,
                 currentBook: currentBook,
-                rankingByTotalStars: rankingByTotalStars, pkWinningRate: winningPKRate)
+                rankingByTotalStars: rankingByTotalStars,
+                pkWinningRate: winningPKRate)
         }
     }
 }

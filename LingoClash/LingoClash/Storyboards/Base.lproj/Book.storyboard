@@ -30,13 +30,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have not started on a book yet. Explore books now!" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8P-lK-VJU">
-                                        <rect key="frame" x="115.5" y="525" width="589.5" height="30"/>
+                                        <rect key="frame" x="115.5" y="515" width="589.5" height="30"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
                                         <color key="textColor" name="PrimaryText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieZ-Ka-m70">
-                                        <rect key="frame" x="360" y="585" width="100" height="31"/>
+                                        <rect key="frame" x="360" y="575" width="100" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="  Explore &gt;  " cornerStyle="capsule">
                                             <color key="baseForegroundColor" name="Primary"/>
@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="bottom" secondItem="xVM-nE-QFF" secondAttribute="bottom" constant="100" id="OOl-na-K2T"/>
                                     <constraint firstItem="ieZ-Ka-m70" firstAttribute="centerX" secondItem="Zul-2c-ihB" secondAttribute="centerX" id="gdW-yD-PZL"/>
                                     <constraint firstItem="xVM-nE-QFF" firstAttribute="leading" secondItem="Zul-2c-ihB" secondAttribute="leading" id="h1D-Zk-yRa"/>
-                                    <constraint firstItem="U8P-lK-VJU" firstAttribute="centerY" secondItem="Zul-2c-ihB" secondAttribute="centerY" constant="-50" id="mM1-xp-GWd"/>
+                                    <constraint firstItem="U8P-lK-VJU" firstAttribute="centerY" secondItem="Zul-2c-ihB" secondAttribute="centerY" constant="-60" id="mM1-xp-GWd"/>
                                     <constraint firstItem="xVM-nE-QFF" firstAttribute="top" secondItem="Zul-2c-ihB" secondAttribute="top" id="tBd-BQ-CI1"/>
                                     <constraint firstItem="ieZ-Ka-m70" firstAttribute="top" secondItem="U8P-lK-VJU" secondAttribute="bottom" constant="30" id="trn-fY-uGd"/>
                                     <constraint firstItem="U8P-lK-VJU" firstAttribute="centerX" secondItem="Zul-2c-ihB" secondAttribute="centerX" id="woT-Os-rOr"/>

@@ -178,7 +178,7 @@ extension FirebasePKGameMatchFinder {
         firstly {
             profileDataManager.getOne(id: currentPlayerProfile.id)
         }.map { currentPlayerProfileData -> [ProfileData] in
-            let gameQueueEntries = queueEntries.prefix(PKGame.playerCountRequired)
+            let gameQueueEntries = queueEntries.prefix(PKGame.playerCountRequired - 1)
             var players = gameQueueEntries.map { $0.playerProfile }
             players.append(currentPlayerProfileData)
             return players

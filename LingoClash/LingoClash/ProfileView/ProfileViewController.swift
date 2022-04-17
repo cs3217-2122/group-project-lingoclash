@@ -73,6 +73,12 @@ class ProfileViewController: UIViewController {
             }
         }.store(in: &cancellables)
 
+        viewModel.$bio.sink {[weak self] bio in
+            if let bio = bio {
+               self?.bioLabel.text = "\"\(bio)\""
+            }
+        }.store(in: &cancellables)
+
         viewModel.$isRefreshing.sink {[weak self] isRefreshing in
             if isRefreshing {
                 self?.showSpinner()

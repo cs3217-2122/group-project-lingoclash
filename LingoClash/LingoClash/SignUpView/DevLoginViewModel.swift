@@ -23,8 +23,8 @@ class DevLoginViewModel {
     func directLogin(row: Int) {
         #if DEBUG
         let account = testAccounts[row]
-        Logger.info("DEBUG mode ON. Bypassing login now...")
-        Logger.info("You may disable bypassing in AppConfigs")
+        Logger.info("DEBUG mode ON. Bypassing authentication now...")
+        Logger.info("You may disable authentication bypass in AppConfigs")
 
         let email = account.email
         let password = account.password

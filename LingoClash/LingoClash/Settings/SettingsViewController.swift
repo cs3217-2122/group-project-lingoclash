@@ -31,6 +31,10 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.set(sender.isOn, forKey: "LightTheme")
         applyTheme()
     }
+    
+    @IBAction private func logoutTapped(_ sender: Any) {
+        viewModel.signOut()
+    }
 
     func setUpBinders() {
         viewModel.$error.sink {[weak self] error in
@@ -56,17 +60,10 @@ class SettingsViewController: UIViewController {
     }
 
     func showError(_ message: String) {
-        // TODO: Perhaps it is better to show as popup
-        Logger.info("Error signing out: \(message)")
+        Logger.error("Unable to sign out. Error: \(message)")
     }
 
-    fileprivate func applyTheme() {
-        //        view.backgroundColor = Theme.current.primary
-    }
-
-    @IBAction private func logoutTapped(_ sender: Any) {
-        viewModel.signOut()
-    }
+    private func applyTheme() {}
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let editProfileVC = segue.destination as? EditProfileViewController {
@@ -77,4 +74,5 @@ class SettingsViewController: UIViewController {
             changeEmailVC.viewModel = self.viewModel
         }
     }
+
 }
