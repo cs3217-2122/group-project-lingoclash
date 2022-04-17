@@ -10,8 +10,8 @@ import Foundation
 class LessonQuizViewModelFromLesson: LessonQuizViewModel {
     private let lesson: Lesson
     let questionGenerator = QuestionsGenerator()
-    let starsBenchmarks = [1, 9, 10]
-    let initialLives = 1
+    let starsBenchmarks = [7, 9, 10]
+    let initialLives = 2
 
     var questionSequence: QuestionSequence
     var questionsLoaded = [Question]()
