@@ -74,7 +74,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Logger.warning("enablePreloadData is set to true. Will be preloading db with sample data")
 
-        // TODO: convert to synchronous
         firstly {
             SampleDataUtilities.createSampleData()
         }.done {

@@ -7,7 +7,6 @@
 
 import Foundation
 
-// TODO: perhaps migrate to combine framework
 class Dynamic<T> {
     typealias Listener = (T) -> Void
     var listener: Listener?

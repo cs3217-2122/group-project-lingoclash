@@ -24,10 +24,9 @@ class LessonSelectionViewModelFromBook: LessonSelectionViewModel {
     }
 
     func reloadLessons() {
-        // TODO: TO replace with actual data fetching
         self.lessonTableViewModels.value = book.lessons.map { LessonTableCellViewModelFromLesson(lesson: $0) }
         updateStarsObtained()
-        updateLevelsPassed()
+        updateLessonsPassed()
     }
 
     private func updateStarsObtained() {
@@ -36,7 +35,7 @@ class LessonSelectionViewModelFromBook: LessonSelectionViewModel {
         self.starsObtained.value = String(starsObtained) + "/" + String(starsTotal)
     }
 
-    private func updateLevelsPassed() {
+    private func updateLessonsPassed() {
         let levelsPassed = book.lessons.filter { $0.didPass }.count
         let levelTotal = book.lessons.count
         self.lessonsPassed.value = String(levelsPassed) + "/" + String(levelTotal)

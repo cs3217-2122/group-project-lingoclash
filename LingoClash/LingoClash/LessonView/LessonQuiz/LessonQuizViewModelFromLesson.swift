@@ -90,7 +90,6 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
                                           vocabsTested: vocabsTested, lessonName: lesson.name)
         quizOutcomeViewModel = LessonQuizOutcomeViewModelFromQuizResult(quizResult: quizResult)
         if didPass {
-            // TODO: update stars currency for user, update lesson for the stars
             quizStatus.value = QuizStatus.passed
             NotificationCenter.default.post(name: .lessonQuizPassed, object: nil, userInfo: ["stars": starsObtained])
         } else {

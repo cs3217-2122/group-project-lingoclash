@@ -12,7 +12,6 @@ import FirebaseFirestoreSwift
 
 class FirebaseDataProvider: DataProvider {
 
-    // TODO: think of better error names
     enum FirebaseDataProviderError: Error {
         case invalidParams
         case invalidQuerySnapshot

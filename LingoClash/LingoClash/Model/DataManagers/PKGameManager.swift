@@ -23,7 +23,6 @@ class PKGameManager: DataManager<PKGameData> {
 
     func getPKGame(id: Identifier) -> Promise<PKGame> {
         let profileManager = ProfileManager()
-        // TODO: Make this more query efficient (in one instead of many)
         return firstly {
             getOne(id: id)
         }.then { pkGameData -> Promise<PKGame> in

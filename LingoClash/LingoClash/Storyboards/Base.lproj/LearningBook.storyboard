@@ -11,7 +11,7 @@
         <!--Learning-->
         <scene sceneID="3eY-Ey-H1w">
             <objects>
-                <viewController id="nIF-gE-wlG" customClass="LearningBooksViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LearningBooks" id="nIF-gE-wlG" customClass="LearningBooksViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h0n-EL-U2i">
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cn1-89-AFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8245" y="-220"/>
+            <point key="canvasLocation" x="8247" y="-220"/>
         </scene>
         <!--UICollectionViewController-YY5-1r-xMr-->
         <scene sceneID="FC7-Pp-vra">

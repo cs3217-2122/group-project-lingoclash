@@ -13,6 +13,5 @@ class PKGameRewardSystem: RewardSystem {
     }
 
     @objc func pkGameWon(_ notification: Notification) {
-        // TODO: add stars for user
     }
 }

@@ -33,7 +33,6 @@ class LessonQuizRewardSystem: RewardSystem {
     }
 
     private func rewardLessonQuizPass(starCount: Int) {
-        // TODO: Check number of stars before assigning to avoid rewarding multiple times
         firstly {
             getStarReward(amount: starCount, description: .lessonCompletion)
         }.done { currencyTransaction in

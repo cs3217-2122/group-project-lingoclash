@@ -12,7 +12,6 @@ import PromiseKit
 
 class FirebaseAuthProvider: AuthProvider {
 
-    // TODO: think of better error names
     enum FirebaseAuthError: Error {
         case invalidAuthParams
         case invalidAuthDataResult

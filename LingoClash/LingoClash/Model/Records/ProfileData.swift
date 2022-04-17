@@ -28,7 +28,6 @@ struct ProfileData {
         self.name = name
         self.email = email
         self.stars = stars
-        // TODO: Remove from profile data
         self.stars_today = 0
         self.stars_goal = stars_goal
         self.bio = bio

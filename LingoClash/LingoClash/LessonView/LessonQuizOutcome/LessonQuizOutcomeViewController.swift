@@ -26,9 +26,7 @@ class LessonQuizOutcomeViewController: UIViewController {
         guard let viewModel = self.viewModel else {
             return
         }
-        if viewModel.didPass {
-            // TODO: perform segue to next lesson/level selector page
-        } else {
+        if !viewModel.didPass {
             performSegue(withIdentifier: Segue.unwindOutcomeToVocabVC, sender: self)
         }
     }

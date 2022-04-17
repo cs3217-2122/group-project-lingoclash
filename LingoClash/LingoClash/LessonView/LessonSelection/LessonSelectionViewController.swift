@@ -28,7 +28,6 @@ class LessonSelectionViewController: UIViewController {
         lessonsTableView.delegate = self
         styleUI()
         fillUI()
-
     }
 
     func styleUI() {
