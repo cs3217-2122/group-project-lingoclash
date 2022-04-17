@@ -15,7 +15,7 @@ struct AppConfigs {
         static let enablePreloadData = false
         static let enableLogin = false
 
-        #if DEVELOPMENT
+        #if PRODUCTION
         static let testAccounts: [LoginFields] = [
             LoginFields(email: "b@b.com", password: "setMeUp?"),
             LoginFields(email: "e@e.com", password: "setMeUp?")
