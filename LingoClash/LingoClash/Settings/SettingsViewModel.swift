@@ -42,6 +42,10 @@ final class SettingsViewModel {
     }
 
     func refresh() {
+        if self.isRefreshing {
+            return
+        }
+        
         self.isRefreshing = true
         firstly {
             profileManager.getCurrentProfile()
@@ -56,6 +60,10 @@ final class SettingsViewModel {
         }.catch { error in
             print(error)
         }
+    }
+    
+    func stopRefresh() {
+        self.isRefreshing = false
     }
 
     func editProfile(_ fields: EditProfileFields) {

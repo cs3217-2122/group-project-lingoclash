@@ -35,48 +35,9 @@ class FirebaseAuthProvider: AuthProvider {
 
                 return seal.fulfill(result)
             }
-        }.then { result -> Promise<Void> in
-            guard let _ = result else {
-                return Promise.reject(reason: FirebaseAuthError.invalidAuthDataResult)
-            }
-
-            return Promise { seal in
-                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                changeRequest?.displayName = params.name
-                changeRequest?.commitChanges { error in
-                    if let error = error {
-                        return seal.reject(error)
-                    }
-
-                    return seal.fulfill(())
-                }
-            }
-        }.then {
+        }.then { _ in
             self.getIdentity()
-        }.then { userIdentity -> Promise<UserIdentity> in
-            guard let id = userIdentity.id,
-                  let name = userIdentity.fullName,
-                  let email = userIdentity.email else {
-                return Promise.reject(reason: FirebaseAuthError.invalidAuthDataResult)
-            }
-            let newProfileData = ProfileData(id: ProfileData.placeholderId,
-                                             book_id: nil,
-                                             user_id: id,
-                                             name: name,
-                                             email: email,
-                                             stars: 0,
-                                             stars_today: 0,
-                                             stars_goal: 10,
-                                             bio: "Learning a language doesn't always have to be civil.",
-                                             days_learning: 0,
-                                             vocabs_learnt: 0,
-                                             pk_winning_rate: 100)
-            let createdProfileData = ProfileManager().create(newRecord: newProfileData)
-            return createdProfileData.map { _ in
-                userIdentity
-            }
         }
-
     }
 
     func login(params: LoginFields) -> Promise<Void> {
@@ -102,7 +63,7 @@ class FirebaseAuthProvider: AuthProvider {
         return Promise<Void>.resolve(value: ())
     }
 
-    func checkError(error: HTTPError) -> Promise<Void> {
+    func checkError(error: DataProviderErrors.HTTPError) -> Promise<Void> {
         Promise<Void>.resolve(value: ())
     }
 
@@ -162,7 +123,7 @@ class FirebaseAuthProvider: AuthProvider {
 
         return Promise<Void> { seal in
             Auth.auth().currentUser?.reauthenticate(with: credential, completion: { _, error in
-                if let _ = error {
+                if error != nil {
                     return seal.reject(AuthError.invalidPassword)
                 }
 

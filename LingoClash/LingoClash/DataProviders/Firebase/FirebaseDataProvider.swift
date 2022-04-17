@@ -26,38 +26,8 @@ class FirebaseDataProvider: DataProvider {
 
     private let db = Firestore.firestore()
 
-    private func getModel<S: Codable>(from document: QueryDocumentSnapshot) -> S? {
-        var documentData = document.data()
-        documentData["id"] = document.documentID
-
-        var model: S?
-
-        do {
-            let data = try JSONSerialization.data(withJSONObject: processDocumentData(documentData))
-            model = try JSONDecoder().decode(S.self, from: data)
-        } catch {
-            Logger.error(
-                "Failure to convert \(S.self) data to model. Error: \(error.localizedDescription)")
-        }
-
-        return model
-    }
-
     private func getModel<S: Codable>(from document: DocumentSnapshot) -> S? {
-        guard var documentData = document.data() else {
-            return nil
-        }
-
-        documentData["id"] = document.documentID
-
-        var model: S?
-
-        do {
-            let data = try JSONSerialization.data(withJSONObject: processDocumentData(documentData))
-            model = try JSONDecoder().decode(S.self, from: data)
-        } catch {
-            Logger.error("Failure to convert data to model. Error: \(error)")
-        }
+        let model = document.decode(as: S.self)
 
         return model
     }
@@ -317,24 +287,5 @@ class FirebaseDataProvider: DataProvider {
                 return seal.fulfill(DeleteManyResult(data: params.ids))
             }
         }
-    }
-
-    // converts from firebase types to swift types
-    private func processDocumentData(_ documentData: [String: Any]) -> [String: Any] {
-        var newDocumentData = documentData
-        newDocumentData.forEach { (key: String, value: Any) in
-            switch value {
-            case is DocumentReference:
-                newDocumentData.removeValue(forKey: key)
-            case let ts as Timestamp:
-                let date = ts.dateValue()
-
-                let jsonValue = Int((date.timeIntervalSince1970 * 1_000).rounded())
-                newDocumentData[key] = jsonValue
-            default:
-                break
-            }
-        }
-        return newDocumentData
     }
 }

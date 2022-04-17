@@ -5,11 +5,11 @@
 //  Created by Sherwin Poh on 22/3/22.
 //
 
-struct QuestionSequence {
+struct QuestionSequence: QuerySequence {
     var scopeFactory: QuestionScopeFactory
     var constructorFactory: QuestionConstructorRandomFactory
     var questionsLeft: Int?
-    mutating func next() -> Question? {
+    mutating func next() -> Query? {
         if let questionsLeft = questionsLeft {
             guard questionsLeft > 0 else {
                 return nil

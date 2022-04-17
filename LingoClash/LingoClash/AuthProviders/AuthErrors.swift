@@ -21,11 +21,11 @@ extension AuthError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .invalidUser:
-            return NSLocalizedString("The current user is invalid.", comment: "Invalid user")
+            return NSLocalizedString("The current user is invalid.", bundle: .main, comment: "Invalid user")
         case .invalidPassword:
-            return NSLocalizedString("The password is incorrect.", comment: "Invalid password")
+            return NSLocalizedString("The password is incorrect.", bundle: .main, comment: "Invalid password")
         default:
-            return NSLocalizedString("", comment: "")
+            return NSLocalizedString("", bundle: .main, comment: "")
         }
     }
 }

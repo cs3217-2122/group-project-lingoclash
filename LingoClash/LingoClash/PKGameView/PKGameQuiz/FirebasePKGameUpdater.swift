@@ -53,7 +53,8 @@ class FirebasePKGameUpdater: PKGameUpdateDelegate {
     func didForfeit(player: Profile) {
         print("did forfeit game")
         Promise<Profile> { seal in
-            // TODO: Add method in firebase to support this (Repeated issue where dataprovider methods are not specific enough)
+            // TODO: Add method in firebase to support this
+            // (Repeated issue where dataprovider methods are not specific enough)
             // Alternative is less efficient: Query to get the existing PKGameData then update it
             self.gameDocumentRef.updateData([
                 "forfeittedPlayers": FieldValue.arrayUnion([player.id])
@@ -139,7 +140,7 @@ class FirebasePKGameUpdater: PKGameUpdateDelegate {
               print("Error fetching snapshots: \(error!)")
               return
             }
-            _ = snapShot.documentChanges.forEach { diff in
+            snapShot.documentChanges.forEach { diff in
                 if diff.type == .added, let moveData: PKGameMoveData = self.getModel(from: diff.document) {
                     _ = firstly {
                         self.getMove(from: moveData)

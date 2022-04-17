@@ -49,8 +49,8 @@ class LessonOverviewViewController: UIViewController {
         label.text = viewModel.lessonName
         self.navigationItem.titleView = label
 
-        viewModel.vocabs.bindAndFire {[unowned self] _ -> Void in
-            vocabCollection.reloadData()
+        viewModel.vocabs.bindAndFire { [weak self] _ -> Void in
+            self?.vocabCollection.reloadData()
         }
     }
 

@@ -12,6 +12,9 @@ struct MatchVocabToDefinitionQuestion: TwoDisjointSetOptionQuestion, Codable {
     static let optionsCount: Int = 4
     let vocabsTested: Set<Vocab>
     let context: String
+    // Represents the string representation of the answer
+    let answerToString: String
+    
     let options: Set<Pair<String>>
     let answer: Set<Pair<String>>
 
@@ -20,8 +23,13 @@ struct MatchVocabToDefinitionQuestion: TwoDisjointSetOptionQuestion, Codable {
         self.options = options
         self.answer = answer
         self.vocabsTested = vocabsTested
+        
+        self.answerToString = answer.description
     }
-
+    
+    // We should probably test if the response _contains_ the answer instead
+    // because we still want things to be correct if only one thing is matched.
+    // We don't want to check it at the very end.
     func isCorrect(response: Any) -> Bool {
         guard let response = response as? Set<Pair<String>> else {
             return false

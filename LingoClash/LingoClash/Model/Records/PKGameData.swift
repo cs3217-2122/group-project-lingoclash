@@ -28,7 +28,7 @@ struct PKGameData {
         self.players = players
         self.questions = questions
         self.forfeittedPlayers = forfeittedPlayers
-        self.id = PKGameData.placeholderId
+        self.id = Identifier.placeholder
     }
 
     init(from decoder: Decoder) throws {

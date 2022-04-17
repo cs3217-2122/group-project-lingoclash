@@ -28,59 +28,43 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel.refresh()
         setUpBinders()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.refresh()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.stopRefresh()
+    }
+
+    func setUpBinderForLabel(label: UILabel, publisher: Published<String?>.Publisher) {
+        publisher.sink { value in
+            if let value = value {
+                label.text = value
+            }
+        }.store(in: &cancellables)
+    }
+
     func setUpBinders() {
-        viewModel.$name.sink {[weak self] name in
-            if let name = name {
-                self?.nameLabel.text = name
-            }
-        }.store(in: &cancellables)
+        let bindings: [UILabel: Published<String?>.Publisher] = [
+            self.nameLabel: viewModel.$name,
+            self.totalStarsLabel: viewModel.$totalStars,
+            self.starsTodayLabel: viewModel.$starsToday,
+            self.starsGoalLabel: viewModel.$starsGoal,
+            self.rankingByTotalStarsLabel: viewModel.$rankingByTotalStars,
+            self.daysLearningLabel: viewModel.$daysLearning,
+            self.vocabsLearntLabel: viewModel.$vocabsLearnt,
+            self.pkWinningRateLabel: viewModel.$pkWinningRate,
+            self.bioLabel: viewModel.$bio
+        ]
 
-        viewModel.$totalStars.sink {[weak self] totalStars in
-            if let totalStars = totalStars {
-                self?.totalStarsLabel.text = "\(totalStars)"
-            }
-        }.store(in: &cancellables)
-
-        viewModel.$starsToday.sink {[weak self] starsToday in
-            if let starsToday = starsToday {
-                self?.starsTodayLabel.text = "\(starsToday)"
-            }
-        }.store(in: &cancellables)
-
-        viewModel.$starsGoal.sink {[weak self] starsGoal in
-            if let starsGoal = starsGoal {
-                self?.starsGoalLabel.text = "\(starsGoal)"
-            }
-        }.store(in: &cancellables)
-
-        viewModel.$rankingByTotalStars.sink {[weak self] rankingByTotalStars in
-            if let rankingByTotalStars = rankingByTotalStars {
-                self?.rankingByTotalStarsLabel.text = "\(rankingByTotalStars)"
-            }
-        }.store(in: &cancellables)
-
-        viewModel.$daysLearning.sink {[weak self] daysLearning in
-            if let daysLearning = daysLearning {
-                self?.daysLearningLabel.text = "\(daysLearning)"
-            }
-        }.store(in: &cancellables)
-
-        viewModel.$vocabsLearnt.sink {[weak self] vocabsLearnt in
-            if let vocabsLearnt = vocabsLearnt {
-                self?.vocabsLearntLabel.text = "\(vocabsLearnt)"
-            }
-        }.store(in: &cancellables)
-
-        viewModel.$pkWinningRate.sink {[weak self] pkWinningRate in
-            if let pkWinningRate = pkWinningRate {
-                self?.pkWinningRateLabel.text = String(format: "%.2f", pkWinningRate)
-            }
-        }.store(in: &cancellables)
+        for (label, publisher) in bindings {
+            setUpBinderForLabel(label: label, publisher: publisher)
+        }
 
         viewModel.$starsGoalProgress.sink {[weak self] starsGoalProgress in
             if let starsGoalProgress = starsGoalProgress {
@@ -91,7 +75,7 @@ class ProfileViewController: UIViewController {
 
         viewModel.$bio.sink {[weak self] bio in
             if let bio = bio {
-//                self?.bioLabel.text = "\"\(bio)\""
+               self?.bioLabel.text = "\"\(bio)\""
             }
         }.store(in: &cancellables)
 

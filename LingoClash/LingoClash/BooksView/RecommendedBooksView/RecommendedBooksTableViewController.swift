@@ -21,6 +21,11 @@ class RecommendedBooksTableViewController: UITableViewController {
         setUpBinders()
         viewModel?.refresh()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel?.stopRefresh()
+    }
 
     func setUpBinders() {
         guard let viewModel = viewModel else {
@@ -91,11 +96,12 @@ class RecommendedBooksTableViewController: UITableViewController {
 }
 
 extension RecommendedBooksTableViewController: LearnButtonDelegate {
-    func learnButtonTapped(book: Book, lessonSelectionVM: LessonSelectionViewModel) {
-        viewModel?.updateCurrentBook(book: book)
-
+    func learnButtonTapped(book: Book) {
         let viewController = LessonSelectionViewController.instantiateFromAppStoryboard(.Lesson)
-        viewController.viewModel = lessonSelectionVM
+        viewController.viewModel = LessonSelectionViewModelFromBook(book: book)
+
         self.show(viewController, sender: nil)
+
+        self.viewModel?.learnBook(book: book)
     }
 }

@@ -20,6 +20,11 @@ class SettingsViewController: UIViewController {
         applyTheme()
         setUpBinders()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel.stopRefresh()
+    }
 
     @IBAction private func themeChanged(_ sender: UISwitch) {
         Theme.current = sender.isOn ? LightTheme() : DarkTheme()

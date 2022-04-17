@@ -16,7 +16,7 @@ struct PKGameMove {
 
     // TODO: Possibly add a constant to represent a placeholder
     init(question: Question, player: Profile, isCorrect: Bool, timeTaken: Double, id: Identifier = "") {
-        self.id = "Placeholder"
+        self.id = Identifier.placeholder
         self.question = question
         self.player = player
         self.isCorrect = isCorrect

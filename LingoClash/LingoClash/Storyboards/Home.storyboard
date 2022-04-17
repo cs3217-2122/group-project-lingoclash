@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K6s-Mm-Rk2">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="IAo-Xc-6nC">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="bDF-8g-LGo" customClass="HomeViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QOj-mM-4xl">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Welcome Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twb-mm-j3v">
+                                <rect key="frame" x="50" y="120" width="375.5" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Z2G-c3-OBc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZU-pN-TOX">
+                                <rect key="frame" x="50" y="230" width="924" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="H3m-Q3-m7S"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="d4I-0u-cQ3" kind="embed" id="dyl-hE-Zzo"/>
+                                </connections>
+                            </containerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-empty_street" translatesAutoresizingMaskIntoConstraints="NO" id="Big-oc-yN4">
+                                <rect key="frame" x="674" y="100" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="fP4-8N-Uc6"/>
+                                    <constraint firstAttribute="height" constant="150" id="spx-I1-HtV"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSZ-tI-a42">
+                                <rect key="frame" x="0.0" y="680" width="1024" height="636"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="undraw-notebook" translatesAutoresizingMaskIntoConstraints="NO" id="SHl-Fr-xh9">
+                                        <rect key="frame" x="362" y="118" width="300" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="Gnm-LW-Qt7"/>
+                                            <constraint firstAttribute="width" constant="300" id="dXW-JD-XUi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62O-yZ-ZwO">
+                                        <rect key="frame" x="215" y="406" width="594" height="24"/>
+                                        <string key="text">    “Success is the sum of small efforts, repeated day in and day out.”
+    ―  Robert Collier, self-help author</string>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
+                                        <color key="textColor" name="Secondary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    ―  Robert Collier, self-help author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIu-HE-ehr">
+                                        <rect key="frame" x="354" y="440" width="316" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
+                                        <color key="textColor" name="Secondary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="CIu-HE-ehr" firstAttribute="top" secondItem="62O-yZ-ZwO" secondAttribute="bottom" constant="10" id="F5p-ck-6Oo"/>
+                                    <constraint firstItem="62O-yZ-ZwO" firstAttribute="centerX" secondItem="MSZ-tI-a42" secondAttribute="centerX" id="F9Z-rx-GXf"/>
+                                    <constraint firstItem="62O-yZ-ZwO" firstAttribute="centerX" secondItem="MSZ-tI-a42" secondAttribute="centerX" id="Tq0-f7-s9A"/>
+                                    <constraint firstItem="62O-yZ-ZwO" firstAttribute="centerY" secondItem="MSZ-tI-a42" secondAttribute="centerY" constant="100" id="bD3-nr-882"/>
+                                    <constraint firstItem="SHl-Fr-xh9" firstAttribute="centerY" secondItem="MSZ-tI-a42" secondAttribute="centerY" constant="-50" id="dnz-zL-qhg"/>
+                                    <constraint firstItem="CIu-HE-ehr" firstAttribute="centerX" secondItem="MSZ-tI-a42" secondAttribute="centerX" id="gJr-0Y-mXw"/>
+                                    <constraint firstItem="CIu-HE-ehr" firstAttribute="centerX" secondItem="MSZ-tI-a42" secondAttribute="centerX" id="iIQ-sQ-ax1"/>
+                                    <constraint firstItem="SHl-Fr-xh9" firstAttribute="centerX" secondItem="MSZ-tI-a42" secondAttribute="centerX" id="wjv-sO-uQL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IaJ-5d-J2x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lZU-pN-TOX" firstAttribute="top" secondItem="Big-oc-yN4" secondAttribute="bottom" constant="-20" id="3cr-q3-QE5"/>
+                            <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="lZU-pN-TOX" secondAttribute="trailing" constant="50" id="80b-7z-UFf"/>
+                            <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="Big-oc-yN4" secondAttribute="trailing" constant="100" id="86K-Gb-g8d"/>
+                            <constraint firstItem="twb-mm-j3v" firstAttribute="top" secondItem="QOj-mM-4xl" secondAttribute="topMargin" constant="50" id="IJa-Xl-wnd"/>
+                            <constraint firstItem="MSZ-tI-a42" firstAttribute="top" secondItem="lZU-pN-TOX" secondAttribute="bottom" id="Iva-95-C35"/>
+                            <constraint firstItem="MSZ-tI-a42" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" id="WRq-Hz-YQm"/>
+                            <constraint firstItem="twb-mm-j3v" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" constant="50" id="dwt-s3-btq"/>
+                            <constraint firstItem="lZU-pN-TOX" firstAttribute="leading" secondItem="IaJ-5d-J2x" secondAttribute="leading" constant="50" id="fOA-OD-uwj"/>
+                            <constraint firstItem="IaJ-5d-J2x" firstAttribute="trailing" secondItem="MSZ-tI-a42" secondAttribute="trailing" id="gEE-sH-zfS"/>
+                            <constraint firstItem="lZU-pN-TOX" firstAttribute="top" secondItem="twb-mm-j3v" secondAttribute="bottom" constant="50" id="mjS-9H-QFH"/>
+                            <constraint firstItem="IaJ-5d-J2x" firstAttribute="bottom" secondItem="MSZ-tI-a42" secondAttribute="bottom" id="vEP-Kt-a3a"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="Xuo-Gh-bln"/>
+                    <navigationItem key="navigationItem" id="855-fR-Mya"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gtf-zM-FFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3735.9712230215828" y="-241.20603015075378"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Qhf-yY-cwS">
+            <objects>
+                <tabBarController id="nNh-FI-BzR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="opM-GN-BXH"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2dh-ML-wtf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bDF-8g-LGo" kind="relationship" relationship="viewControllers" id="Eiz-3w-43o"/>
+                        <segue destination="9WF-xz-Frq" kind="relationship" relationship="viewControllers" id="pAO-xn-O5q"/>
+                        <segue destination="va1-G6-opB" kind="relationship" relationship="viewControllers" id="RnM-ey-MtF"/>
+                        <segue destination="vxL-QK-VKq" kind="relationship" relationship="viewControllers" id="1ql-oH-4S0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCb-DV-SXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2791" y="-242"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Hh3-hP-Mv4">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNavigationViewController" title="Home" id="K6s-Mm-Rk2" customClass="HomeNavigationViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ncz-yP-WY9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wHo-DS-p4g">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nNh-FI-BzR" kind="relationship" relationship="rootViewController" id="pVr-Zh-Yt5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8TH-GT-6iT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837" y="-242"/>
+        </scene>
+        <!--CurrentBookSectionViewController-->
+        <scene sceneID="YSF-lk-mKJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Book" referencedIdentifier="CurrentBookSectionViewController" id="d4I-0u-cQ3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjE-Dm-gIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3736" y="147"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="wf2-cL-al8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="9WF-xz-Frq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="l2u-fh-j1i"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoz-T5-PZ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2705" y="154"/>
+        </scene>
+        <!--Arena-->
+        <scene sceneID="ox7-om-1pQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Arena" id="va1-G6-opB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="TEc-UZ-h0e"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OOe-kK-NOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2861" y="154"/>
+        </scene>
+        <!--RevisionViewController-->
+        <scene sceneID="YWr-ws-lv7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Revision" referencedIdentifier="RevisionViewController" id="vxL-QK-VKq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="24k-wb-jZN"/>
+                    <navigationItem key="navigationItem" id="YfF-Si-787"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbU-R6-b7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2962" y="154"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="undraw-empty_street" width="997.8612060546875" height="450.80810546875"/>
+        <image name="undraw-notebook" width="892" height="500.74996948242188"/>
+        <namedColor name="Secondary">
+            <color red="0.49000000953674316" green="0.46200001239776611" blue="0.74000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

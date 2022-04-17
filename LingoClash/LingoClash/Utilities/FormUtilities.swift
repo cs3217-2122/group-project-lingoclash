@@ -28,7 +28,7 @@ class FormUtilities {
     static func validateFieldsNotEmpty(_ fields: FormFields) -> String? {
         let mirror = Mirror(reflecting: fields)
         for child in mirror.children {
-            if let value = child.value as? String, value == "" {
+            if let value = child.value as? String, value.isEmpty {
                 return "Please fill in all fields."
             }
         }

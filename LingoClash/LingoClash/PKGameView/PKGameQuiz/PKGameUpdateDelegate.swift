@@ -5,7 +5,7 @@
 //  Created by Sherwin Poh on 4/4/22.
 //
 
-protocol PKGameUpdateDelegate {
+protocol PKGameUpdateDelegate: AnyObject {
     var gameUpdateListener: PKGameUpdateListener? { get set }
     func didMove(move: PKGameMove)
     func didForfeit(player: Profile)

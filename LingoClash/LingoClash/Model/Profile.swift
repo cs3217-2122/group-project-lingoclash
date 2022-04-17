@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Profile {
+struct Profile: AccountOwner {
     var id: Identifier
     let user_id: Identifier
     let currentBook: Book?
@@ -29,7 +29,8 @@ struct Profile {
         self.email = profileData.email
         self.name = profileData.name
         self.stars = profileData.stars
-        self.starsToday = profileData.stars_today
+        // TODO: get stars today from stars transaction
+        self.starsToday = 0
         self.starsGoal = profileData.stars_goal
         self.bio = profileData.bio
         self.daysLearning = profileData.days_learning
@@ -48,5 +49,3 @@ extension Profile: Hashable {
         hasher.combine(self.id)
     }
 }
-
-// extension Profile: Codable, Hashable {}

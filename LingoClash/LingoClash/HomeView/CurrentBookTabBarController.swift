@@ -16,7 +16,11 @@ class CurrentBookTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBinders()
-        viewModel?.refresh()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel?.stopRefresh()
     }
 
     func setUpBinders() {
@@ -24,7 +28,7 @@ class CurrentBookTabBarController: UITabBarController {
         let noBookViewIndex = 1
 
         viewModel?.$currentBook.sink {[weak self] book in
-            if let _ = book {
+            if book != nil {
                 self?.selectedIndex = currentBookViewIndex
             } else {
                 self?.selectedIndex = noBookViewIndex

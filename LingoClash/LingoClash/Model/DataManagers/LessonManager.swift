@@ -28,7 +28,7 @@ class LessonManager: DataManager<LessonData> {
                                                      profile_book_id: profileLessonData.profile_book_id,
                                                      lesson_id: profileLessonData.lesson_id,
                                                      stars: lesson.stars)
-                _ = profileLessonManager.update(id: profileLessonData.id, from: profileLessonData, to: modifiedData)
+                _ = profileLessonManager.update(id: profileLessonData.id, to: modifiedData)
             }
             return Promise<ProfileLessonData>.resolve(value: profileLessonData)
         }.done { oldProfileLessonData in

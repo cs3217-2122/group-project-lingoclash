@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setUpEnvironment()
         setUpView()
         setUpTheme()
+        MainRewardSystem.setUp()
 
         return true
     }

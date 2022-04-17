@@ -23,12 +23,22 @@ final class CompletedBooksViewModel: BooksViewModel {
     private let bookManager = BookManager()
 
     func refresh() {
+        if self.isRefreshing {
+            return
+        }
+        
+        self.isRefreshing = true
         firstly {
             bookManager.getCompletedBooks()
         }.done { books in
             self.books = books
+            self.isRefreshing = false
         }.catch { error in
             print(error)
         }
+    }
+    
+    func stopRefresh() {
+        self.isRefreshing = false
     }
 }

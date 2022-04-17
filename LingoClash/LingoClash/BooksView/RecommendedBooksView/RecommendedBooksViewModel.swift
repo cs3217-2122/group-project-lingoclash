@@ -15,6 +15,10 @@ final class RecommendedBooksViewModel {
     private let bookManager = BookManager()
 
     func refresh() {
+        if self.isRefreshing {
+            return
+        }
+        
         self.isRefreshing = true
         firstly {
             bookManager.getRecommendedBooks()
@@ -25,13 +29,14 @@ final class RecommendedBooksViewModel {
             print(error)
         }
     }
+    
+    func stopRefresh() {
+        self.isRefreshing = false
+    }
 
-    func updateCurrentBook(book: Book) {
-        _ = BookManager().markAsLearning(bookId: book.id).catch { err in
-            print(err)
-        }
-        _ = ProfileManager().setAsCurrentBook(bookId: book.id).catch { err in
-            print(err)
+    func learnBook(book: Book) {
+        bookManager.markAsLearning(bookId: book.id).catch { error in
+            print(error)
         }
     }
 }

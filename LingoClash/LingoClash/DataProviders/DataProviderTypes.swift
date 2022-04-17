@@ -9,6 +9,10 @@ import Foundation
 
 typealias Identifier = String
 
+extension Identifier {
+    static var placeholder: Identifier { "-1" }
+}
+
 protocol Record: Codable {
     var id: Identifier { get }
 }
@@ -96,7 +100,6 @@ struct GetManyReferenceResult<T: Codable> {
 struct UpdateParams<T: Codable> {
     let id: Identifier
     let data: T
-    let previousData: T
 }
 
 struct UpdateResult<T: Codable> {
@@ -119,3 +122,4 @@ struct DeleteManyParams {
 struct DeleteManyResult {
     let data: [Identifier]
 }
+

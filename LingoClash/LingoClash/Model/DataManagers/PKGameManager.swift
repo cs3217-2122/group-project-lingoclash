@@ -49,7 +49,7 @@ class PKGameManager: DataManager<PKGameData> {
                 players: pkGameData.players,
                 questions: pkGameData.questions,
                 forfeittedPlayers: forfeittedPlayers)
-            return self.update(id: pkGameData.id, from: pkGameData, to: newPkGameData)
+            return self.update(id: pkGameData.id, to: newPkGameData)
         }
     }
 }

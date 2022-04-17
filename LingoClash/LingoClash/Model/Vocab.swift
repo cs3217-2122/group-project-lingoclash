@@ -16,12 +16,12 @@ struct Vocab {
     let pronunciationText: String
 
     init(
-        id: Identifier = "0",
         word: String,
         definition: String,
         sentence: String,
         sentenceDefinition: String,
-        pronunciationText: String) {
+        pronunciationText: String,
+        id: Identifier = "-1") {
         self.id = id
         self.word = word
         self.definition = definition
@@ -37,6 +37,16 @@ struct Vocab {
         self.sentence = vocabData.sentence
         self.sentenceDefinition = vocabData.translation
         self.pronunciationText = vocabData.pronunciation_text
+    }
+    
+    // To be removed
+    init(vocabId: Int, word: String, definition: String, sentence: String, sentenceDefinition: String, pronunciationText: String ) {
+        self.word = word
+        self.definition = definition
+        self.sentence = sentence
+        self.sentenceDefinition = sentenceDefinition
+        self.pronunciationText = pronunciationText
+        self.id = "1"
     }
 }
 

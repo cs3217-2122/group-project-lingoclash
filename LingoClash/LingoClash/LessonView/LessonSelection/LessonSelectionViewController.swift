@@ -39,17 +39,17 @@ class LessonSelectionViewController: UIViewController {
         guard isViewLoaded, let viewModel = viewModel else {
             return
         }
-        viewModel.starsObtained.bindAndFire { [unowned self] in
-            self.starsObtainedLabel.text = $0
+        viewModel.starsObtained.bindAndFire { [weak self] in
+            self?.starsObtainedLabel.text = $0
         }
-        viewModel.lessonsPassed.bindAndFire { [unowned self] in
-            self.levelsPassedLabel.text = $0
+        viewModel.lessonsPassed.bindAndFire { [weak self] in
+            self?.levelsPassedLabel.text = $0
         }
-        viewModel.lessonTableViewModels.bindAndFire { [unowned self] _ -> Void in
-            self.lessonsTableView.reloadData()
+        viewModel.lessonTableViewModels.bindAndFire { [weak self] _ -> Void in
+            self?.lessonsTableView.reloadData()
         }
-        viewModel.lessonOverviewViewModel.bind { [unowned self] in
-            transitionToLessonOverview(viewModel: $0)
+        viewModel.lessonOverviewViewModel.bind { [weak self] in
+            self?.transitionToLessonOverview(viewModel: $0)
         }
     }
 

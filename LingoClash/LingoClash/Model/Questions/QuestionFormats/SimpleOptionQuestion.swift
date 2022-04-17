@@ -8,7 +8,6 @@
 /// Unfortunately swift's limitation of not being able to have generic type protocols that can act as assignable types,
 /// limits the generalisability of the protocol
 protocol SimpleOptionQuestion: Question {
-    var context: String { get }
     var options: [String] { get }
     var answer: String { get }
 }

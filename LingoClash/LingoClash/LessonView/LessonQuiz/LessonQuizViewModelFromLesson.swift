@@ -5,6 +5,8 @@
 //  Created by Sherwin Poh on 20/3/22.
 //
 
+import Foundation
+
 class LessonQuizViewModelFromLesson: LessonQuizViewModel {
     private let lesson: Lesson
     let questionGenerator = QuestionsGenerator()
@@ -51,7 +53,7 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
     }
 
     func loadNextQuestion() {
-        guard let currQuestion = self.questionSequence.next() else {
+        guard let currQuestion = self.questionSequence.next() as? Question else {
             fatalError("Unable to load question")
         }
         self.questionsLoaded.append(currQuestion)
@@ -90,6 +92,7 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
         if didPass {
             // TODO: update stars currency for user, update lesson for the stars
             quizStatus.value = QuizStatus.passed
+            NotificationCenter.default.post(name: .lessonQuizPassed, object: nil, userInfo: ["stars": starsObtained])
         } else {
             quizStatus.value = QuizStatus.failed
         }

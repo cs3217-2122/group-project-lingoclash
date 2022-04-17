@@ -50,7 +50,7 @@ class ProfileManager: DataManager<ProfileData> {
             var newProfileData = profileData
             newProfileData.book_id = bookId
 
-            return self.update(id: profileData.id, from: profileData, to: newProfileData)
+            return self.update(id: profileData.id, to: newProfileData)
         }
     }
 
@@ -62,7 +62,42 @@ class ProfileManager: DataManager<ProfileData> {
             newProfileData.stars_goal = starsGoal
             newProfileData.bio = bio
 
-            return self.update(id: profileData.id, from: profileData, to: newProfileData)
+            return self.update(id: profileData.id, to: newProfileData)
+        }
+    }
+
+    func updateProfile(stars: Int, vocabsLearnt: Int) -> Promise<ProfileData> {
+
+        firstly {
+            self.getCurrentProfileData()
+        }.then { profileData -> Promise<ProfileData> in
+            var newProfileData = profileData
+            newProfileData.stars = stars
+            newProfileData.vocabs_learnt = vocabsLearnt
+
+            return self.update(id: profileData.id, to: newProfileData)
+        }
+    }
+
+    func createProfile(params: SignUpFields, userId: Identifier) -> Promise<Profile> {
+        let profileData = ProfileData(userId: userId, name: params.name, email: params.email)
+        var profile: Profile?
+
+        return firstly {
+            self.create(newRecord: profileData)
+        }.then { _ in
+            self.getCurrentProfile()
+        }.done { currProfile in
+            profile = currProfile
+            let starAccountData = StarAccountData(ownerId: currProfile.id)
+            StarAccountManager().create(newRecord: starAccountData).catch { error in
+                print(error)
+            }
+        }.compactMap {
+            guard let profile = profile else {
+                return nil
+            }
+            return profile
         }
     }
 
@@ -73,7 +108,7 @@ class ProfileManager: DataManager<ProfileData> {
             var newProfileData = profileData
             newProfileData.vocabs_learnt = profileData.vocabs_learnt + increment
 
-            return self.update(id: profileData.id, from: profileData, to: newProfileData)
+            return self.update(id: profileData.id, to: newProfileData)
         }
     }
 

@@ -19,7 +19,7 @@ protocol AuthProvider {
     func register(params: SignUpFields) -> Promise<UserIdentity>
     func login(params: LoginFields) -> Promise<Void>
     func logout() -> Promise<Void>
-    func checkError(error: HTTPError) -> Promise<Void>
+    func checkError(error: DataProviderErrors.HTTPError) -> Promise<Void>
     func getIdentity() -> Promise<UserIdentity>
     func updateName(_ name: String) -> Promise<Void>
     func updateEmail(_ email: String) -> Promise<Void>

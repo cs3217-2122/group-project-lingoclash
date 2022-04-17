@@ -109,6 +109,6 @@ protocol QuestionViewControllerDataSource {
     func setViewModel(_: QuestionViewController) -> QuestionViewModel?
 }
 
-protocol QuestionViewControllerDelegate {
+protocol QuestionViewControllerDelegate: AnyObject {
     func questionViewController(_ : QuestionViewController, didAnswerCorrectly: Bool)
 }

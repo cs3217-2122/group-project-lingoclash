@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        viewModel.refresh()
     }
 
     override func viewWillAppear(_ animated: Bool) {

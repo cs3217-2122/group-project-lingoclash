@@ -19,7 +19,7 @@ class LessonSelectionViewModelFromBook: LessonSelectionViewModel {
     }
 
     func didSelectLesson(at index: Int) {
-        var selectedLesson = book.lessons[index]
+        let selectedLesson = book.lessons[index]
         self.lessonOverviewViewModel.value = LessonOverviewViewModelFromLesson(lesson: selectedLesson)
     }
 
