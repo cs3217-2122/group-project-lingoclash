@@ -43,7 +43,6 @@ class FormUtilities {
     }
 
     static func validatePassword(password: String) -> String? {
-        // TODO: Reinstate after dev
         return nil
     }
 }

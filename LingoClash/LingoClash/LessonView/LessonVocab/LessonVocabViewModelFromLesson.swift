@@ -8,6 +8,7 @@
 import Foundation
 
 class LessonVocabViewModelFromLesson: LessonVocabViewModel {
+    
     let lesson: Lesson
     var currIndex: Dynamic<Int> = Dynamic(0)
     
@@ -40,10 +41,6 @@ class LessonVocabViewModelFromLesson: LessonVocabViewModel {
     func reload() {
         updateCurrVocabInfo(currIndex: 0)
         self.lessonQuizViewModel = LessonQuizViewModelFromLesson(lesson: lesson)
-    }
-
-    func playVocabPronounciation() {
-        // TODO: Implement pronounciation
     }
 
     func navigateNext() {

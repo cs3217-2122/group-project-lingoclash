@@ -82,7 +82,6 @@ class QuestionsGenerator {
         case .definitionOption:
             return QuestionsGenerator.questionConstructors.first(where: { $0 is DefinitionOptionQuestionConstructor })
         case .matchVocabToDefinitionOption:
-            // TODO: Create a constructor for this
             return nil
         }
     }
@@ -94,7 +93,6 @@ struct QuestionGeneratorSettings {
     // probability of questions types to generate, if nil, uniformly distributed
     let questionProbabilities: [QuestionType: Double]?
     // scope of vocab that need to be tested at least once, needs to be subset of scope
-    // TODO: implement subset check
     let compulsoryTestingScope: Set<Vocab>?
     // scope of vocab to generate questions from
     let scope: Set<Vocab>

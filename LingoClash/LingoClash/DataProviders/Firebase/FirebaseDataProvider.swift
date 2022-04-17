@@ -12,16 +12,11 @@ import FirebaseFirestoreSwift
 
 class FirebaseDataProvider: DataProvider {
 
-    // TODO: think of better error names
     enum FirebaseDataProviderError: Error {
         case invalidParams
         case invalidQuerySnapshot
         case documentNotFound
         case serializationError
-    }
-
-    struct Configs {
-        static let uidKey = "uid"
     }
 
     private let db = Firestore.firestore()
@@ -225,30 +220,34 @@ class FirebaseDataProvider: DataProvider {
 
     func create<T: Record>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
 
-        Promise { seal in
+        return Promise { seal in
             do {
-                let docRef = db.collection(resource)
+                var ref: DocumentReference? = nil
 
-                if params.useAutoId {
-                    _ = try docRef.addDocument(from: params.data) { error in
-
-                        if let error = error {
-                            return seal.reject(error)
-                        }
-
-                        // TODO: Modify the id to be ref.documentID
-                        return seal.fulfill(CreateResult(data: params.data))
+                ref = try db.collection(resource).addDocument(from: params.data) { error in
+                    if let error = error {
+                        return seal.reject(error)
                     }
-                } else {
-                    _ = try docRef.document(params.data.id).setData(from: params.data) { error in
-
-                        if let error = error {
-                            return seal.reject(error)
-                        }
-
-                        // TODO: Modify the id to be ref.documentID
-                        return seal.fulfill(CreateResult(data: params.data))
+                }
+                
+                guard let ref = ref else {
+                    return seal.reject(FirebaseDataProviderError.documentNotFound)
+                }
+                
+                ref.getDocument { (document, error) in
+                    if let error = error {
+                        return seal.reject(error)
                     }
+                    
+                    guard let document = document, document.exists else {
+                        return seal.reject(FirebaseDataProviderError.documentNotFound)
+                    }
+                    
+                    guard let data: T = self.getModel(from: document) else {
+                        return seal.reject(FirebaseDataProviderError.serializationError)
+                    }
+                    
+                    return seal.fulfill(CreateResult(data: data))
                 }
 
             } catch {

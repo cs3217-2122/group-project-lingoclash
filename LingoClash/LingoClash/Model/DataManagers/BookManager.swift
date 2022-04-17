@@ -189,15 +189,35 @@ class BookManager: DataManager<BookData> {
         }
     }
 
-    func markAsLearning(bookId: Identifier) -> Promise<ProfileBookData> {
-        firstly {
-            ProfileManager().setAsCurrentBook(bookId: bookId)
+    func markAsLearning(book: Book) -> Promise<ProfileBookData> {
+        let profileManager = ProfileManager()
+        let profileLessonManager = ProfileLessonManager()
+        let profileBookManager = ProfileBookManager()
+        return firstly {
+            profileManager.setAsCurrentBook(bookId: book.id)
         }.then { currentProfile in
-            ProfileBookManager().create(
+            profileBookManager.create(
                 newRecord: ProfileBookData(
-                    id: "-1",
+                    id: Identifier.placeholder,
                     profile_id: currentProfile.id,
-                    book_id: bookId, is_completed: false))
+                    book_id: book.id, is_completed: false))
+        }.then { profileBookData in
+            firstly {
+                profileManager.getCurrentProfileData()
+            }.then { profileData -> Promise<[ProfileLessonData]> in
+                var promises: [Promise<ProfileLessonData>] = []
+                for lesson in book.lessons {
+                    let profileLessonData = ProfileLessonData(id: Identifier.placeholder,
+                                      profile_id: profileData.id,
+                                      profile_book_id: profileBookData.id,
+                                      lesson_id: lesson.id,
+                                      stars: 0)
+                    promises.append(profileLessonManager.create(newRecord: profileLessonData))
+                }
+                return when(fulfilled: promises)
+            }.map { _ in
+                return profileBookData
+            }
         }
     }
 }

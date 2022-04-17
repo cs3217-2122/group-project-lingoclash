@@ -17,7 +17,6 @@ protocol LessonVocabViewModel {
     var isLastVocab: Dynamic<Bool> { get }
     var isFirstVocab: Dynamic<Bool> { get }
     var lessonQuizViewModel: LessonQuizViewModel { get }
-    func playVocabPronounciation()
     func navigateNext()
     func navigatePrev()
     func reload()

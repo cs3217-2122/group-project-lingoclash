@@ -58,7 +58,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62O-yZ-ZwO">
-                                        <rect key="frame" x="215" y="406" width="594" height="24"/>
+                                        <rect key="frame" x="203" y="406" width="618" height="24"/>
                                         <string key="text">    “Success is the sum of small efforts, repeated day in and day out.”
     ―  Robert Collier, self-help author</string>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
@@ -66,7 +66,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    ―  Robert Collier, self-help author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIu-HE-ehr">
-                                        <rect key="frame" x="354" y="440" width="316" height="24"/>
+                                        <rect key="frame" x="349" y="440" width="326" height="24"/>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         <color key="textColor" name="Secondary"/>
                                         <nil key="highlightedColor"/>
@@ -120,7 +120,6 @@
                     <connections>
                         <segue destination="bDF-8g-LGo" kind="relationship" relationship="viewControllers" id="Eiz-3w-43o"/>
                         <segue destination="9WF-xz-Frq" kind="relationship" relationship="viewControllers" id="pAO-xn-O5q"/>
-                        <segue destination="va1-G6-opB" kind="relationship" relationship="viewControllers" id="RnM-ey-MtF"/>
                         <segue destination="vxL-QK-VKq" kind="relationship" relationship="viewControllers" id="1ql-oH-4S0"/>
                     </connections>
                 </tabBarController>
@@ -162,16 +161,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoz-T5-PZ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2705" y="154"/>
-        </scene>
-        <!--Arena-->
-        <scene sceneID="ox7-om-1pQ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Arena" id="va1-G6-opB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="TEc-UZ-h0e"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OOe-kK-NOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2861" y="154"/>
         </scene>
         <!--RevisionViewController-->
         <scene sceneID="YWr-ws-lv7">

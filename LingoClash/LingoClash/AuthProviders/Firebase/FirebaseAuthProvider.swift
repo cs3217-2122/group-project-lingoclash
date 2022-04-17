@@ -12,7 +12,6 @@ import PromiseKit
 
 class FirebaseAuthProvider: AuthProvider {
 
-    // TODO: think of better error names
     enum FirebaseAuthError: Error {
         case invalidAuthParams
         case invalidAuthDataResult
@@ -21,7 +20,6 @@ class FirebaseAuthProvider: AuthProvider {
     struct Configs {
         static let firstNameKey = "firstName"
         static let lastNameKey = "lastName"
-        static let uidKey = "uid"
         static let usersCollection = "users"
     }
 

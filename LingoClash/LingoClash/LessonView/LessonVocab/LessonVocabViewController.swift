@@ -17,10 +17,6 @@ class LessonVocabViewController: UIViewController {
     @IBOutlet private var nextButton: UIButton!
     @IBOutlet private var prevButton: UIButton!
 
-    @IBAction private func playVocabPronounciation(_ sender: UIButton) {
-        viewModel?.playVocabPronounciation()
-    }
-
     @IBAction private func navigateToPreviousVocab(_ sender: UIButton) {
         viewModel?.navigatePrev()
     }

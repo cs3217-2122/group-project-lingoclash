@@ -19,7 +19,6 @@ struct QuestionWrapper: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let questionType = try container.decode(QuestionType.self, forKey: .questionType)
-        // TODO: integrate this with QuestionType enum using extension that maps enum type to QuestionType
         switch questionType {
         case .definitionOption:
             self.question = try container.decode(DefinitionOptionQuestion.self, forKey: .payload)

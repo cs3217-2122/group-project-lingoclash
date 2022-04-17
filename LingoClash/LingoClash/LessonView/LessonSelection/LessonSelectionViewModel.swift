@@ -12,4 +12,5 @@ protocol LessonSelectionViewModel {
     var lessonOverviewViewModel: Dynamic<LessonOverviewViewModel?> { get }
     func reloadLessons()
     func didSelectLesson(at: Int)
+    func refreshLesson(lesson: Lesson)
 }

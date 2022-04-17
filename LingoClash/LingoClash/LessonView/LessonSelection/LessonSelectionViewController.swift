@@ -28,7 +28,6 @@ class LessonSelectionViewController: UIViewController {
         lessonsTableView.delegate = self
         styleUI()
         fillUI()
-
     }
 
     func styleUI() {
@@ -52,6 +51,8 @@ class LessonSelectionViewController: UIViewController {
             self?.transitionToLessonOverview(viewModel: $0)
         }
     }
+    
+
 
     func transitionToLessonOverview(viewModel: LessonOverviewViewModel?) {
         guard viewModel != nil else {

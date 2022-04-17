@@ -14,7 +14,6 @@ struct PKGameMove {
     let isCorrect: Bool
     let timeTaken: Double
 
-    // TODO: Possibly add a constant to represent a placeholder
     init(question: Question, player: Profile, isCorrect: Bool, timeTaken: Double, id: Identifier = "") {
         self.id = Identifier.placeholder
         self.question = question

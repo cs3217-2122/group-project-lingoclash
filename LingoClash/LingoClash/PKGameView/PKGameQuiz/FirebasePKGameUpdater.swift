@@ -13,7 +13,6 @@ class FirebasePKGameUpdater: PKGameUpdateDelegate {
     enum FirebasePKGameUpdaterError: Error {
         case errorUpdatingForfeit(desc: String)
     }
-    // TODO: abstract this away into a general synchroniser class
 
     private let db = Firestore.firestore()
     private let profileManager = ProfileManager()
@@ -53,9 +52,6 @@ class FirebasePKGameUpdater: PKGameUpdateDelegate {
     func didForfeit(player: Profile) {
         print("did forfeit game")
         Promise<Profile> { seal in
-            // TODO: Add method in firebase to support this
-            // (Repeated issue where dataprovider methods are not specific enough)
-            // Alternative is less efficient: Query to get the existing PKGameData then update it
             self.gameDocumentRef.updateData([
                 "forfeittedPlayers": FieldValue.arrayUnion([player.id])
             ]) { err in
@@ -177,7 +173,6 @@ extension FirebasePKGameUpdater {
 
     private func getMoveData(from move: PKGameMove) -> Promise<PKGameMoveData> {
         firstly {
-            // TODO: Check if this is necessary (or if a simple conversion from profile to profileData is enough)
             profileManager.getOne(id: move.player.id)
         }.map {
             PKGameMoveData(question: move.question, player: $0, isCorrect: move.isCorrect, timeTaken: move.timeTaken)

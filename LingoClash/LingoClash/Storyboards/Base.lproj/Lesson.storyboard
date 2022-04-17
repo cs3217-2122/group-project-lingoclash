@@ -13,7 +13,7 @@
         <!--Lesson Selection View Controller-->
         <scene sceneID="B32-KW-bqx">
             <objects>
-                <viewController storyboardIdentifier="LessonSelectionViewController" id="8HE-b4-e38" customClass="LessonSelectionViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LessonSelectionViewController" modalPresentationStyle="fullScreen" id="8HE-b4-e38" customClass="LessonSelectionViewController" customModule="LingoClash" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5t6-BL-xWI">
                         <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,7 +269,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="820" height="250"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pJs-Hw-zPy">
-                                        <rect key="frame" x="45" y="63" width="730" height="124.5"/>
+                                        <rect key="frame" x="45" y="63.5" width="730" height="123"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bc-qI-c3x">
                                                 <rect key="frame" x="0.0" y="0.0" width="104.5" height="48"/>
@@ -278,28 +278,18 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdP-KP-tsO">
-                                                <rect key="frame" x="0.0" y="56" width="110" height="31"/>
+                                                <rect key="frame" x="0.0" y="56" width="61.5" height="29.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqB-Ql-Hqc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="29.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRf-sd-Clx">
-                                                        <rect key="frame" x="61.5" y="0.0" width="48.5" height="31"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="speaker.wave.2.fill" catalog="system">
-                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="playVocabPronounciation:" destination="Ib8-VH-U3i" eventType="touchUpInside" id="J6K-Zj-Q7h"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4S-GB-KNT">
-                                                <rect key="frame" x="0.0" y="95" width="61.5" height="29.5"/>
+                                                <rect key="frame" x="0.0" y="93.5" width="61.5" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -695,7 +685,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onActionButtonTap:" destination="zkw-70-GXY" eventType="touchUpInside" id="EX5-1K-1DZ"/>
-                                    <segue destination="Fgy-0e-OFM" kind="unwind" unwindAction="unwindToSelectionWithSegue:" id="kJM-Br-DPX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -727,13 +716,14 @@
                         <outletCollection property="stars" destination="vYd-cc-Twi" collectionClass="NSMutableArray" id="jIU-F2-6f1"/>
                         <outletCollection property="stars" destination="rm6-Qx-wUt" collectionClass="NSMutableArray" id="h5y-5G-d9S"/>
                         <outletCollection property="stars" destination="gxX-6O-Dra" collectionClass="NSMutableArray" id="AOF-i3-d7k"/>
-                        <segue destination="Fgy-0e-OFM" kind="unwind" identifier="unwindOutcomeToVocabVC" unwindAction="unwindToVocabsWithSegue:" id="jHf-Mt-gqt"/>
+                        <segue destination="Fgy-0e-OFM" kind="unwind" identifier="outcomeToLessonSelection" unwindAction="unwindToSelectionWithSegue:" id="AuF-WF-J2O"/>
+                        <segue destination="Fgy-0e-OFM" kind="unwind" identifier="outcomeToVocabVC" unwindAction="unwindToVocabsWithSegue:" id="llY-sx-RFT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2t-pY-g2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Fgy-0e-OFM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="9606" y="2271"/>
+            <point key="canvasLocation" x="8865" y="2314"/>
         </scene>
         <!--QuestionViewController-->
         <scene sceneID="PiI-qh-bOf">
@@ -749,7 +739,6 @@
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="cover_2" width="1000" height="1000"/>
         <image name="ribbon" width="1777" height="569"/>
-        <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
         <image name="star" width="1024" height="1024"/>
         <namedColor name="AccentColor">
             <color red="0.36500000953674316" green="0.70999997854232788" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

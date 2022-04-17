@@ -11,7 +11,8 @@ class LessonQuizOutcomeViewController: UIViewController {
     typealias VM = LessonQuizOutcomeViewModel
 
     enum Segue {
-        static let unwindOutcomeToVocabVC = "unwindOutcomeToVocabVC"
+        static let outcomeToVocabVC = "outcomeToVocabVC"
+        static let outcomeToLessonSelection = "outcomeToLessonSelection"
     }
 
     @IBOutlet private var stars: [StarView]!
@@ -22,14 +23,21 @@ class LessonQuizOutcomeViewController: UIViewController {
     @IBOutlet private var topView: UIView!
     @IBOutlet private var actionButton: UIButton!
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let selectionVC = segue.destination as? LessonSelectionViewController,
+           let viewModel = viewModel {
+            viewModel.updateLessonSelection(viewController: selectionVC)
+        }
+    }
+    
     @IBAction private func onActionButtonTap(_ sender: UIButton) {
         guard let viewModel = self.viewModel else {
             return
         }
         if viewModel.didPass {
-            // TODO: perform segue to next lesson/level selector page
+            performSegue(withIdentifier: Segue.outcomeToLessonSelection, sender: self)
         } else {
-            performSegue(withIdentifier: Segue.unwindOutcomeToVocabVC, sender: self)
+            performSegue(withIdentifier: Segue.outcomeToVocabVC, sender: self)
         }
     }
 
