@@ -36,7 +36,7 @@ class FirebaseAuthProvider: AuthProvider {
                 return seal.fulfill(result)
             }
         }.then { result -> Promise<Void> in
-            guard let _ = result else {
+            guard result != nil else {
                 return Promise.reject(reason: FirebaseAuthError.invalidAuthDataResult)
             }
 
@@ -59,7 +59,7 @@ class FirebaseAuthProvider: AuthProvider {
                   let email = userIdentity.email else {
                 return Promise.reject(reason: FirebaseAuthError.invalidAuthDataResult)
             }
-            let newProfileData = ProfileData(id: ProfileData.placeholderId,
+            let newProfileData = ProfileData(id: Identifier.placeholder,
                                              book_id: nil,
                                              user_id: id,
                                              name: name,
@@ -102,7 +102,7 @@ class FirebaseAuthProvider: AuthProvider {
         return Promise<Void>.resolve(value: ())
     }
 
-    func checkError(error: HTTPError) -> Promise<Void> {
+    func checkError(error: DataProviderErrors.HTTPError) -> Promise<Void> {
         Promise<Void>.resolve(value: ())
     }
 
@@ -162,7 +162,7 @@ class FirebaseAuthProvider: AuthProvider {
 
         return Promise<Void> { seal in
             Auth.auth().currentUser?.reauthenticate(with: credential, completion: { _, error in
-                if let _ = error {
+                if error != nil {
                     return seal.reject(AuthError.invalidPassword)
                 }
 

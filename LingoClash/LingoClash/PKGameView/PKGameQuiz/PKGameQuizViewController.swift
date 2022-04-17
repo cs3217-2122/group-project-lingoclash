@@ -63,15 +63,15 @@ class PKGameQuizViewController: UIViewController {
         }
         playerOneName.text = viewModel.playerNames[0]
         playerTwoName.text = viewModel.playerNames[1]
-        viewModel.questionViewModel.bindAndFire { [unowned self] _ -> Void in
-            self.questionViewController?.reloadData()
+        viewModel.questionViewModel.bindAndFire { [weak self] _ -> Void in
+            self?.questionViewController?.reloadData()
         }
-        viewModel.scores.bindAndFire { [unowned self] scores in
-            playerOneScore.text = String(scores[0])
-            playerTwoScore.text = String(scores[1])
+        viewModel.scores.bindAndFire { [weak self] scores in
+            self?.playerOneScore.text = String(scores[0])
+            self?.playerTwoScore.text = String(scores[1])
         }
-        viewModel.gameOverviewViewModel.bindAndFire { [unowned self] in
-            self.navigateAfterQuizCompleted(vm: $0)
+        viewModel.gameOverviewViewModel.bindAndFire { [weak self] in
+            self?.navigateAfterQuizCompleted(vm: $0)
 
         }
     }

@@ -13,6 +13,6 @@ protocol QuestionLayoutViewController: UIViewController {
     var delegate: QuestionLayoutVCDelegate? { get set }
 }
 
-protocol QuestionLayoutVCDelegate {
+protocol QuestionLayoutVCDelegate: AnyObject {
     func questionLayoutViewController(_ : QuestionLayoutViewController, didAnswerCorrectly: Bool)
 }

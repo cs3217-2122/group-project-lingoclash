@@ -65,12 +65,12 @@ class LessonVocabViewController: UIViewController {
             return
         }
 
-        viewModel.currVocab.bindAndFire { [unowned self] in self.vocabLabel.text = $0 }
-        viewModel.currSentenceDefinition.bindAndFire { [unowned self] in self.sentenceDefinitionLabel.text = $0 }
-        viewModel.currSentence.bindAndFire { [unowned self] in self.sentenceLabel.text = $0 }
-        viewModel.currVocabDefinition.bindAndFire { [unowned self] in self.vocabDefinitionLabel.text = $0 }
-        viewModel.currVocabPronounciation.bindAndFire { [unowned self] in self.pronounciationLabel.text = $0 }
-        viewModel.isLastVocab.bindAndFire { [unowned self] in self.nextButton.isEnabled = !$0 }
-        viewModel.isFirstVocab.bindAndFire { [unowned self] in self.prevButton.isEnabled = !$0 }
+        viewModel.currVocab.bindAndFire { [weak self] in self?.vocabLabel.text = $0 }
+        viewModel.currSentenceDefinition.bindAndFire { [weak self] in self?.sentenceDefinitionLabel.text = $0 }
+        viewModel.currSentence.bindAndFire { [weak self] in self?.sentenceLabel.text = $0 }
+        viewModel.currVocabDefinition.bindAndFire { [weak self] in self?.vocabDefinitionLabel.text = $0 }
+        viewModel.currVocabPronounciation.bindAndFire { [weak self] in self?.pronounciationLabel.text = $0 }
+        viewModel.isLastVocab.bindAndFire { [weak self] in self?.nextButton.isEnabled = !$0 }
+        viewModel.isFirstVocab.bindAndFire { [weak self] in self?.prevButton.isEnabled = !$0 }
     }
 }

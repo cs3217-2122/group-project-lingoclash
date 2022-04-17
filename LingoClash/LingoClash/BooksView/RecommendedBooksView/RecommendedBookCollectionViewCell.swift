@@ -9,9 +9,9 @@ import UIKit
 
 class RecommendedBookCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet var containerView: UIView!
-    @IBOutlet var bookNameLabel: UILabel!
-    @IBOutlet var learnButton: UIButton!
+    @IBOutlet private var containerView: UIView!
+    @IBOutlet private var bookNameLabel: UILabel!
+    @IBOutlet private var learnButton: UIButton!
 
     weak var delegate: LearnButtonDelegate?
     private(set) var lessonSelectionViewModel: LessonSelectionViewModel?
@@ -20,6 +20,7 @@ class RecommendedBookCollectionViewCell: UICollectionViewCell {
         bookNameLabel.text = book.name
         self.delegate = delegate
         self.lessonSelectionViewModel = LessonSelectionViewModelFromBook(book: book)
+        ViewUtilities.styleCard(containerView)
     }
 
     @IBAction private func learnButtonTapped(_ sender: UIButton) {

@@ -130,12 +130,7 @@ class FirebasePKGameMatchFinder: PKGameMatchFinder {
 // MARK: Helper methods for joinQueue
 extension FirebasePKGameMatchFinder {
     private func listenForGameCreation(_ queueEntry: QueueEntry) -> Promise<PKGame> {
-        // 1. add a listener to the queue entry, the callback function passed to the listener
-        // will call seal.accept(with the game after gameId is filled)
-        // 2. getOne the PKGame that corresponds to the gameId
-
-        // TODO: This is firebase query inefficient since every player has to do the query chain of PKGame -> Profiles -> Books -> Lessons -> Vocabs
-        return Promise<Identifier> { seal in
+        Promise<Identifier> { seal in
             self.listener = self.db.collection(
                 DataManagerResources.queueEntries).document(queueEntry.id).addSnapshotListener { documentSnapshot, _ in
                 guard let document = documentSnapshot else {
@@ -178,7 +173,8 @@ extension FirebasePKGameMatchFinder {
         return pkGameData
     }
 
-    private func generateGamePlayersProfileData(queueEntries: [QueueEntry], currentPlayerProfile: Profile) -> Promise<[ProfileData]> {
+    private func generateGamePlayersProfileData(queueEntries: [QueueEntry],
+                                                currentPlayerProfile: Profile) -> Promise<[ProfileData]> {
         firstly {
             profileDataManager.getOne(id: currentPlayerProfile.id)
         }.map { currentPlayerProfileData -> [ProfileData] in

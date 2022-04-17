@@ -9,6 +9,12 @@ import UIKit
 
 class DevLoginTableCell: UITableViewCell {
     static let reuseIdentifier = "devLoginTableCellIdentifier"
-
-    @IBOutlet var email: UILabel!
+    var email: String? {
+        didSet {
+            if let email = email {
+                self.emailLabel.text = email
+            }
+        }
+    }
+    @IBOutlet private var emailLabel: UILabel!
 }

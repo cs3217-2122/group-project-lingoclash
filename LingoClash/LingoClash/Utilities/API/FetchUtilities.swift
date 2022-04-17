@@ -18,11 +18,11 @@ class FetchUtilities {
                 }
 
                 guard let response = response as? HTTPURLResponse else {
-                    return seal.reject(NetworkError.invalidResponse)
+                    return seal.reject(DataProviderErrors.NetworkError.invalidResponse)
                 }
                 let status = response.statusCode
                 guard (200...299).contains(status) else {
-                    return seal.reject(HTTPError.serverSideError(status))
+                    return seal.reject(DataProviderErrors.HTTPError.serverSideError(status))
                 }
 
                 return seal.fulfill(

@@ -24,7 +24,7 @@ class CurrentBookTabBarController: UITabBarController {
         let noBookViewIndex = 1
 
         viewModel?.$currentBook.sink {[weak self] book in
-            if let _ = book {
+            if book != nil {
                 self?.selectedIndex = currentBookViewIndex
             } else {
                 self?.selectedIndex = noBookViewIndex

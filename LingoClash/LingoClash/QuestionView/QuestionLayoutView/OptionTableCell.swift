@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 class OptionTableCell: UITableViewCell {
     static let reuseIdentifier = "optionTableCell"
@@ -14,7 +15,26 @@ class OptionTableCell: UITableViewCell {
             self.optionLabel.text = optionText
         }
     }
-    @IBOutlet var optionLabel: UILabel!
+
+    func animate(isCorrect: Bool, duration: Double) -> Promise<Bool> {
+        Promise { seal in
+            UIView.animate(withDuration: duration,
+                           animations: {
+                if isCorrect {
+                    self.backgroundColor = Theme.current.green
+                    self.optionLabel.textColor = .white
+                } else {
+                    self.backgroundColor = Theme.current.errorContainer
+                    self.optionLabel.textColor = Theme.current.errorText
+                }
+            }, completion: { _ -> Void in
+                seal.fulfill(true)
+            })
+        }
+
+    }
+
+    @IBOutlet private var optionLabel: UILabel!
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = 10

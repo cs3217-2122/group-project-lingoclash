@@ -1,5 +1,4 @@
-//
-//  Types.swift
+//  DataProviderTypes.swift
 //  LingoClash
 //
 //  Created by Kyle キラ on 15/3/22.
@@ -9,13 +8,12 @@ import Foundation
 
 typealias Identifier = String
 
-protocol Record: Codable {
-    var id: Identifier { get }
+extension Identifier {
+    static var placeholder: Identifier { "-1" }
 }
 
-extension Record {
-    // Local creation of Records to be pushed to DataProvider where id is useless
-    static var placeholderId: Identifier { "PLACEHOLDER" }
+protocol Record: Codable {
+    var id: Identifier { get }
 }
 
 struct CreateParams<T: Codable> {
@@ -54,7 +52,6 @@ struct SortPayload {
 }
 
 struct GetListParams {
-    let sort: SortPayload
     let filter: [String: Any]
 }
 
@@ -82,7 +79,6 @@ struct GetManyResult<T: Codable> {
 struct GetManyReferenceParams {
     let target: String
     let id: Identifier
-    let sort: SortPayload
     let filter: [String: Any]
 }
 

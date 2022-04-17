@@ -14,9 +14,9 @@ struct PKGamePlayerOutcomeData {
     let outcome: PKGamePlayerOutcomeStatus
 
     init(
-        id: Identifier = PKGamePlayerOutcomeData.placeholderId,
         gameId: Identifier,
-        gamePlayerOutcome: PKGamePlayerOutcome) {
+        gamePlayerOutcome: PKGamePlayerOutcome,
+        id: Identifier = Identifier.placeholder) {
         self.id = id
         self.pk_game_id = gameId
         self.profile_id = gamePlayerOutcome.profile.id

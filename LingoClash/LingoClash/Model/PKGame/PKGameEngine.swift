@@ -87,12 +87,7 @@ class PKGameEngine {
     func updateScore(for move: PKGameMove) {
         if move.isCorrect {
             let player = move.player
-            // TODO: Perhaps split into multiple variables to shorten the line; it is hard to read
-            let scoreIncrement = Int(
-                (
-                    PKGameEngine.maxPointsPerQuestion
-                    * (max((
-                        PKGameEngine.maxTimePerQuestion - move.timeTaken), 0.0) / PKGameEngine.maxTimePerQuestion)).rounded())
+            let scoreIncrement = calculateScoreIncrement(timeTaken: move.timeTaken)
             guard let oldScore = scores[player] else {
                 assert(false)
                 return
@@ -102,6 +97,13 @@ class PKGameEngine {
             renderer?.didIncrementScore(newScore: newScore, change: scoreIncrement, player: move.player)
         }
 
+    }
+
+    func calculateScoreIncrement(timeTaken: Double) -> Int {
+        let timeFraction = (max((
+            PKGameEngine.maxTimePerQuestion - timeTaken), 0.0) / PKGameEngine.maxTimePerQuestion)
+        let scoreIncrement = Int((PKGameEngine.maxPointsPerQuestion * timeFraction).rounded())
+        return scoreIncrement
     }
 
     func shouldLoadNextQuestion() -> Bool {

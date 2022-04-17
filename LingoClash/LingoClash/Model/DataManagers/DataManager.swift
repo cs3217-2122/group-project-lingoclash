@@ -23,8 +23,7 @@ class DataManager<T: Record> {
     ) -> Promise<[T]> {
 
         let sort = SortPayload(field: field, isDescending: isDescending)
-        let result: Promise<GetListResult<T>> = dataProvider.getList(resource: self.resource, params: GetListParams(
-            sort: sort, filter: filter))
+        let result: Promise<GetListResult<T>> = dataProvider.getList(resource: self.resource, params: GetListParams(filter: filter))
 
         return result.map { result in
             result.data
@@ -64,8 +63,9 @@ class DataManager<T: Record> {
             let result: Promise<GetManyReferenceResult<T>> = dataProvider.getManyReference(
                 resource: self.resource,
                 params: GetManyReferenceParams(
-                    target: target, id: id,
-                    sort: sort, filter: filter))
+                    target: target,
+                    id: id,
+                    filter: filter))
 
             return result.map { result in
                 result.data

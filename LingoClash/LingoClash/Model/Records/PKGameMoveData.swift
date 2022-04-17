@@ -27,7 +27,7 @@ struct PKGameMoveData {
         player: ProfileData,
         isCorrect: Bool,
         timeTaken: Double,
-        id: String = PKGameMoveData.placeholderId) {
+        id: String = Identifier.placeholder) {
         self.question = question
         self.player = player
         self.isCorrect = isCorrect

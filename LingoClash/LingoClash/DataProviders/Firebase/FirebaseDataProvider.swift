@@ -33,7 +33,7 @@ class FirebaseDataProvider: DataProvider {
         var model: S?
 
         do {
-            let data = try JSONSerialization.data(withJSONObject: documentData)
+            let data = try JSONSerialization.data(withJSONObject: processDocumentData(documentData))
             model = try JSONDecoder().decode(S.self, from: data)
         } catch {
             Logger.error(
@@ -53,7 +53,7 @@ class FirebaseDataProvider: DataProvider {
         var model: S?
 
         do {
-            let data = try JSONSerialization.data(withJSONObject: documentData)
+            let data = try JSONSerialization.data(withJSONObject: processDocumentData(documentData))
             model = try JSONDecoder().decode(S.self, from: data)
         } catch {
             Logger.error("Failure to convert data to model. Error: \(error)")
@@ -65,7 +65,11 @@ class FirebaseDataProvider: DataProvider {
     func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
 
             Promise { seal in
-                db.collection(resource).getDocuments { querySnapshot, error in
+                var filteredCollection: Query = db.collection(resource)
+                for (key, value) in params.filter {
+                    filteredCollection = filteredCollection.whereField(key, isEqualTo: value)
+                }
+                filteredCollection.getDocuments { querySnapshot, error in
 
                     if let error = error {
                         return seal.reject(error)
@@ -132,7 +136,8 @@ class FirebaseDataProvider: DataProvider {
         }
     }
 
-    func getManyReference<T: Codable>(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
+    func getManyReference<T: Codable>(resource: String,
+                                      params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
 
         Promise { seal in
             var filteredCollection = db.collection(resource).whereField(params.target, isEqualTo: params.id)

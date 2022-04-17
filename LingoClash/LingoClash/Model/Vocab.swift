@@ -15,12 +15,12 @@ struct Vocab {
     let sentenceDefinition: String
     let pronunciationText: String
     init(
-        id: Identifier = "0",
         word: String,
         definition: String,
         sentence: String,
         sentenceDefinition: String,
-        pronunciationText: String) {
+        pronunciationText: String,
+        id: Identifier = "-1") {
         self.id = id
         self.word = word
         self.definition = definition

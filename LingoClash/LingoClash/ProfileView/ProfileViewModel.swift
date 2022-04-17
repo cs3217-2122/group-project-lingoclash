@@ -14,15 +14,15 @@ final class ProfileViewModel {
     @Published var error: String?
     @Published var name: String?
     @Published var email: String?
-    @Published var totalStars: Int?
-    @Published var starsToday: Int?
-    @Published var starsGoal: Int?
+    @Published var totalStars: String?
+    @Published var starsToday: String?
+    @Published var starsGoal: String?
     @Published var starsGoalProgress: Float?
     @Published var bio: String?
-    @Published var daysLearning: Int?
-    @Published var vocabsLearnt: Int?
-    @Published var pkWinningRate: Double?
-    @Published var rankingByTotalStars: Int?
+    @Published var daysLearning: String?
+    @Published var vocabsLearnt: String?
+    @Published var pkWinningRate: String?
+    @Published var rankingByTotalStars: String?
     @Published var alertContent: AlertContent?
 
     private let authProvider: AuthProvider
@@ -50,16 +50,16 @@ final class ProfileViewModel {
         }.done { profile in
             self.name = profile.name
             self.email = profile.email
-            self.starsToday = profile.starsToday
-            self.totalStars = profile.stars
-            self.starsGoal = profile.starsGoal
+            self.starsToday = String(profile.starsToday)
+            self.totalStars = String(profile.stars)
+            self.starsGoal = String(profile.starsGoal)
             self.starsGoalProgress = min(
                 Float(profile.starsToday / profile.starsGoal), 1)
             self.bio = profile.bio
-            self.daysLearning = profile.daysLearning
-            self.vocabsLearnt = profile.vocabsLearnt
-            self.pkWinningRate = profile.pkWinningRate
-            self.rankingByTotalStars = profile.rankingByTotalStars
+            self.daysLearning = String(profile.daysLearning)
+            self.vocabsLearnt = String(profile.vocabsLearnt)
+            self.pkWinningRate = String(profile.pkWinningRate)
+            self.rankingByTotalStars = String(profile.rankingByTotalStars)
             self.isRefreshing = false
         }.catch { error in
             print(error)

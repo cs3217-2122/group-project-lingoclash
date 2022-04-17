@@ -39,8 +39,6 @@ extension RecommendedBooksTableViewCell: UICollectionViewDataSource, UICollectio
             for: indexPath) as? RecommendedBookCollectionViewCell {
             bookCell.configure(book: books[indexPath.row], delegate: delegate)
 
-            ViewUtilities.styleCard(bookCell.containerView)
-
             cell = bookCell
         }
         return cell

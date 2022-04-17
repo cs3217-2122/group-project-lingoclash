@@ -51,8 +51,7 @@ extension DevLoginViewController: UITableViewDataSource {
             fatalError("Failure obtaining reusable dev login table view cell")
         }
         let account = viewModel.testAccounts[indexPath.row]
-
-        cell.email.text = account.email
+        cell.email = account.email
         return cell
     }
 }

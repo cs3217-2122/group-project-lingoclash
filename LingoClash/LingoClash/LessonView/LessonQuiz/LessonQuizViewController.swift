@@ -60,17 +60,17 @@ class LessonQuizViewController: UIViewController {
             self.progressBar.addStarView(at: position)
 
         }
-        viewModel.progress.bindAndFire { [unowned self] in
-            self.progressBar?.setProgress($0, animated: true)
+        viewModel.progress.bindAndFire { [weak self] in
+            self?.progressBar?.setProgress($0, animated: true)
         }
-        viewModel.questionViewModel.bindAndFire { [unowned self] _ -> Void in
-            self.questionViewController?.reloadData()
+        viewModel.questionViewModel.bindAndFire { [weak self] _ -> Void in
+            self?.questionViewController?.reloadData()
         }
-        viewModel.quizStatus.bindAndFire { [unowned self] in
-            self.navigateAfterQuizCompleted(quizStatus: $0)
+        viewModel.quizStatus.bindAndFire { [weak self] in
+            self?.navigateAfterQuizCompleted(quizStatus: $0)
         }
-        viewModel.livesLeft.bindAndFire { [unowned self] in
-            self.livesLeftLabel.text = String($0)
+        viewModel.livesLeft.bindAndFire { [weak self] in
+            self?.livesLeftLabel.text = String($0)
         }
     }
 
