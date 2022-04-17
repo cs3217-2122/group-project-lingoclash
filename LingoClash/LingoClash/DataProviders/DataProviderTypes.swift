@@ -20,6 +20,7 @@ extension Record {
 
 struct CreateParams<T: Codable> {
     let data: T
+    var useAutoId = true
 }
 
 struct CreateResult<T: Record> {
@@ -49,7 +50,7 @@ struct PaginationPayload {
 }
 
 struct SortPayload {
-    let field: String
+    let field: String?
     let isDescending: Bool
 }
 
@@ -73,6 +74,7 @@ struct GetOneResult<T: Codable> {
 
 struct GetManyParams {
     let ids: [Identifier]
+    let sort: SortPayload
 }
 
 struct GetManyResult<T: Codable> {

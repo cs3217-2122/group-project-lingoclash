@@ -17,7 +17,7 @@ class DataManager<T: Record> {
     }
 
     func getList(
-        field: String = AppConfigs.API.field,
+        field: String? = nil,
         isDescending: Bool = AppConfigs.API.isDescending,
         filter: [String: Any] = [:]
     ) -> Promise<[T]> {
@@ -42,11 +42,16 @@ class DataManager<T: Record> {
         }
     }
 
-    func getMany(ids: [Identifier]) -> Promise<[T]> {
+    func getMany(
+        ids: [Identifier],
+        field: String? = nil,
+        isDescending: Bool = AppConfigs.API.isDescending
+    ) -> Promise<[T]> {
+
+        let sort = SortPayload(field: field, isDescending: isDescending)
 
         let result: Promise<GetManyResult<T>> = dataProvider.getMany(
-            resource: self.resource,
-            params: GetManyParams(ids: ids))
+            resource: self.resource, params: GetManyParams(ids: ids, sort: sort))
 
         return result.map { result in
             result.data
@@ -56,9 +61,9 @@ class DataManager<T: Record> {
     func getManyReference(
         target: String,
         id: Identifier,
-        field: String = AppConfigs.API.field,
+        field: String? = nil,
         isDescending: Bool = AppConfigs.API.isDescending,
-        filter: [String: Any] = [:]) -> Promise<[T]> {
+        filter: [String: Any] = [:]    ) -> Promise<[T]> {
 
             let sort = SortPayload(field: field, isDescending: isDescending)
             let result: Promise<GetManyReferenceResult<T>> = dataProvider.getManyReference(

@@ -24,7 +24,7 @@ protocol DataProvider {
 
     func updateMany<T: Codable>(resource: String, params: UpdateManyParams<T>) -> Promise<UpdateManyResult>
 
-    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>>
+    func create<T: Record>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>>
 
     func createMany<T: Record>(resource: String, params: CreateManyParams<T>) -> Promise<CreateManyResult<T>>
 

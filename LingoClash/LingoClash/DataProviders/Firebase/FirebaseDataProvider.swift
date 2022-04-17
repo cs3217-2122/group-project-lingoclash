@@ -64,30 +64,32 @@ class FirebaseDataProvider: DataProvider {
 
     func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
 
-            Promise { seal in
-                var collection = db.collection(resource).order(by: params.sort.field, descending: params.sort.isDescending)
+        Promise { seal in
+            let isDescending = params.sort.isDescending
+            let collection = db.collection(resource)
 
-                for (key, value) in params.filter {
-                    collection = collection.whereField(key, isEqualTo: value)
-                }
-
-                collection.getDocuments { querySnapshot, error in
-
-                    if let error = error {
-                        return seal.reject(error)
-                    }
-
-                    guard let querySnapshot = querySnapshot else {
-                        return seal.reject(FirebaseDataProviderError.invalidQuerySnapshot)
-                    }
-
-                    let dataList = querySnapshot.documents.compactMap { document -> T? in
-                        self.getModel(from: document)
-                    }
-
-                    return seal.fulfill(GetListResult(data: dataList, total: querySnapshot.count))
-                }
+            if let sortField = params.sort.field {
+                collection.order(
+                    by: sortField, descending: isDescending)
             }
+
+            collection.getDocuments { querySnapshot, error in
+
+                if let error = error {
+                    return seal.reject(error)
+                }
+
+                guard let querySnapshot = querySnapshot else {
+                    return seal.reject(FirebaseDataProviderError.invalidQuerySnapshot)
+                }
+
+                let dataList = querySnapshot.documents.compactMap { document -> T? in
+                    self.getModel(from: document)
+                }
+
+                return seal.fulfill(GetListResult(data: dataList, total: querySnapshot.count))
+            }
+        }
     }
 
     func getOne<T: Codable>(resource: String, params: GetOneParams) -> Promise<GetOneResult<T>> {
@@ -116,7 +118,13 @@ class FirebaseDataProvider: DataProvider {
     func getMany<T: Codable>(resource: String, params: GetManyParams) -> Promise<GetManyResult<T>> {
 
         Promise { seal in
+            let isDescending = params.sort.isDescending
             let collection = db.collection(resource)
+
+            if let sortField = params.sort.field {
+                collection.order(
+                    by: sortField, descending: isDescending)
+            }
 
             collection.whereField(FieldPath.documentID(), in: params.ids).getDocuments { querySnapshot, error in
 
@@ -129,7 +137,6 @@ class FirebaseDataProvider: DataProvider {
                 }
 
                 let dataList = querySnapshot.documents.compactMap { document -> T? in
-
                     self.getModel(from: document)
                 }
 
@@ -138,16 +145,28 @@ class FirebaseDataProvider: DataProvider {
         }
     }
 
-    func getManyReference<T: Codable>(resource: String, params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
+    func getManyReference<T: Codable>(
+        resource: String,
+        params: GetManyReferenceParams) -> Promise<GetManyReferenceResult<T>> {
 
         Promise { seal in
-            var collection = db.collection(resource).order(by: params.sort.field, descending: params.sort.isDescending)
+            let isDescending = params.sort.isDescending
+            let collection = db.collection(resource)
 
-            for (key, value) in params.filter {
-                collection = collection.whereField(key, isEqualTo: value)
+            if let sortField = params.sort.field {
+                collection.order(
+                    by: sortField, descending: isDescending)
             }
 
-            collection.getDocuments { querySnapshot, error in
+            var filteredCollection = collection.whereField(params.target, isEqualTo: params.id)
+
+            for (key, value) in params.filter {
+                filteredCollection = filteredCollection.whereField(
+                    key,
+                    isEqualTo: value)
+            }
+
+            filteredCollection.getDocuments { querySnapshot, error in
 
                 if let error = error {
                     return seal.reject(error)
@@ -234,36 +253,32 @@ class FirebaseDataProvider: DataProvider {
         }
     }
 
-    func create<T: Codable>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
+    func create<T: Record>(resource: String, params: CreateParams<T>) -> Promise<CreateResult<T>> {
 
         Promise { seal in
             do {
-                var ref: DocumentReference?
+                let docRef = db.collection(resource)
 
-                ref = try db.collection(resource).addDocument(from: params.data) { error in
-                    if let error = error {
-                        return seal.reject(error)
+                if params.useAutoId {
+                    _ = try docRef.addDocument(from: params.data) { error in
+
+                        if let error = error {
+                            return seal.reject(error)
+                        }
+
+                        // TODO: Modify the id to be ref.documentID
+                        return seal.fulfill(CreateResult(data: params.data))
                     }
-                }
+                } else {
+                    _ = try docRef.document(params.data.id).setData(from: params.data) { error in
 
-                guard let ref = ref else {
-                    return seal.reject(FirebaseDataProviderError.documentNotFound)
-                }
+                        if let error = error {
+                            return seal.reject(error)
+                        }
 
-                ref.getDocument { document, error in
-                    if let error = error {
-                        return seal.reject(error)
+                        // TODO: Modify the id to be ref.documentID
+                        return seal.fulfill(CreateResult(data: params.data))
                     }
-
-                    guard let document = document, document.exists else {
-                        return seal.reject(FirebaseDataProviderError.documentNotFound)
-                    }
-
-                    guard let data: T = self.getModel(from: document) else {
-                        return seal.reject(FirebaseDataProviderError.serializationError)
-                    }
-
-                    return seal.fulfill(CreateResult(data: data))
                 }
 
             } catch {
