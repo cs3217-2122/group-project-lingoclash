@@ -15,15 +15,15 @@ struct AppConfigs {
         static let enablePreloadData = false
         static let enableLogin = false
 
-        #if PRODUCTION
-        static let testAccounts: [LoginFields] = [
-            LoginFields(email: "b@b.com", password: "setMeUp?"),
-            LoginFields(email: "e@e.com", password: "setMeUp?")
-        ]
-        #else
+        #if DEVELOPMENT
         static let testAccounts: [LoginFields] = [
             LoginFields(email: "guy@gmail.com", password: "setMeUp?"),
             LoginFields(email: "e@e.com", password: "123456")
+        ]
+        #else
+        static let testAccounts: [LoginFields] = [
+            LoginFields(email: "b@b.com", password: "setMeUp?"),
+            LoginFields(email: "e@e.com", password: "setMeUp?")
         ]
         #endif
     }

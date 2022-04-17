@@ -67,7 +67,7 @@ class Logger {
         if shouldLogContext {
             fullString += " → \(context.description)"
         }
-
+        
         #if DEBUG
         print(fullString)
         #endif
