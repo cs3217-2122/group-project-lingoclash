@@ -198,7 +198,7 @@ extension FirebasePKGameMatchFinder {
         }
 
         let questions = (0..<PKGame.numberOfQuestions).compactMap { _ in
-            questionSequence.next()
+            questionSequence.next() as? Question
         }
 
         return questions

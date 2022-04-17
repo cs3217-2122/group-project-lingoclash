@@ -11,6 +11,10 @@ class HomeViewModel {
     private let profileManager = ProfileManager()
 
     func refresh() {
+        if self.isRefreshing {
+            return
+        }
+        
         self.isRefreshing = true
         firstly {
             profileManager.getCurrentProfile()
@@ -27,5 +31,9 @@ class HomeViewModel {
         }.catch { error in
             print(error)
         }
+    }
+    
+    func stopRefresh() {
+        self.isRefreshing = false
     }
 }

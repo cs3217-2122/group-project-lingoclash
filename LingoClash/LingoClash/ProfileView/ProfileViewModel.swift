@@ -44,6 +44,10 @@ final class ProfileViewModel {
     }
 
     func refresh() {
+        if self.isRefreshing {
+            return
+        }
+        
         self.isRefreshing = true
         firstly {
             profileManager.getCurrentProfile()
@@ -65,5 +69,8 @@ final class ProfileViewModel {
             print(error)
         }
     }
-
+    
+    func stopRefresh() {
+        self.isRefreshing = false
+    }
 }

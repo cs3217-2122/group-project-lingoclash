@@ -35,7 +35,7 @@ class FirebaseDataProvider: DataProvider {
     func getList<T: Codable>(resource: String, params: GetListParams) -> Promise<GetListResult<T>> {
 
             Promise { seal in
-                var filteredCollection: Query = db.collection(resource)
+                var filteredCollection: FirebaseFirestore.Query = db.collection(resource)
                 for (key, value) in params.filter {
                     filteredCollection = filteredCollection.whereField(key, isEqualTo: value)
                 }

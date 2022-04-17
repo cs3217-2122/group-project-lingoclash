@@ -38,6 +38,16 @@ struct Vocab {
         self.sentenceDefinition = vocabData.translation
         self.pronunciationText = ""
     }
+    
+    // To be removed
+    init(vocabId: Int, word: String, definition: String, sentence: String, sentenceDefinition: String, pronunciationText: String ) {
+        self.word = word
+        self.definition = definition
+        self.sentence = sentence
+        self.sentenceDefinition = sentenceDefinition
+        self.pronunciationText = pronunciationText
+        self.id = "1"
+    }
 }
 
 extension Vocab: Codable {}

@@ -115,6 +115,55 @@
 		62FEFAE8280B536600C0503B /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FEFAE6280B536600C0503B /* Reward.swift */; };
 		62FEFAEA280B537200C0503B /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FEFAE9280B537200C0503B /* NotificationObserver.swift */; };
 		62FEFAEB280B537200C0503B /* NotificationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FEFAE9280B537200C0503B /* NotificationObserver.swift */; };
+		6F034D922809281700663A12 /* RevisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA053D327F69E5900E03683 /* RevisionViewController.swift */; };
+		6F034DA228098B4300663A12 /* RevisionVocabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F034DA028098B4300663A12 /* RevisionVocabManager.swift */; };
+		6F034DA828098BE000663A12 /* RevisionVocabData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F034DA628098BE000663A12 /* RevisionVocabData.swift */; };
+		6F034DAB28098BE900663A12 /* DeckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F034DA928098BE900663A12 /* DeckData.swift */; };
+		6F0B37BC27F7E18000C91257 /* RevisionCreateDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B37BB27F7E18000C91257 /* RevisionCreateDeckViewController.swift */; };
+		6F448B8B2809209A00D50D05 /* QuerySequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB0A2727FC899200F63E46 /* QuerySequence.swift */; };
+		6F448B8C280920A000D50D05 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2F4A2527F9947500923DB9 /* Query.swift */; };
+		6F448B8D280920A900D50D05 /* Answerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2F4A2727F9952D00923DB9 /* Answerable.swift */; };
+		6F4C4D6027F7FE9D00394CCB /* CreateDeckFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D5F27F7FE9D00394CCB /* CreateDeckFields.swift */; };
+		6F4C4D6227F7FFDB00394CCB /* RevisionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D6127F7FFDB00394CCB /* RevisionViewModel.swift */; };
+		6F4C4D6527F8041600394CCB /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D6427F8041600394CCB /* Deck.swift */; };
+		6F4C4D6727F8045600394CCB /* RevisionVocab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D6627F8045600394CCB /* RevisionVocab.swift */; };
+		6F4C4D6927F80A9C00394CCB /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D6827F80A9C00394CCB /* DeckTableViewCell.swift */; };
+		6F4C4D6E27F87E7F00394CCB /* RevisionSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D6D27F87E7F00394CCB /* RevisionSequence.swift */; };
+		6F4C4D7227F8810800394CCB /* RecallDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D7127F8810800394CCB /* RecallDifficulty.swift */; };
+		6F50FC2D28054E490027C634 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50FC2C28054E490027C634 /* DeckViewController.swift */; };
+		6F5425C92803C26E009E5AD5 /* RevisionQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5425C82803C26E009E5AD5 /* RevisionQuery.swift */; };
+		6F5842D52806FFEB008C9547 /* DeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5842D42806FFEA008C9547 /* DeckViewModel.swift */; };
+		6F5842D72807D154008C9547 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5842D62807D154008C9547 /* Answer.swift */; };
+		6F67BDEF2804261C00B91844 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67BDEE2804261C00B91844 /* Heap.swift */; };
+		6F67BDF12804607800B91844 /* DeckProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67BDF02804607800B91844 /* DeckProgress.swift */; };
+		6F6DEB93280C141400FE118C /* Revision.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DEB92280C141400FE118C /* Revision.storyboard */; };
+		6F6DEB94280C141400FE118C /* Revision.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DEB92280C141400FE118C /* Revision.storyboard */; };
+		6F6DEB96280C145E00FE118C /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DEB95280C145D00FE118C /* Question.storyboard */; };
+		6F6DEB97280C145E00FE118C /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DEB95280C145D00FE118C /* Question.storyboard */; };
+		6F6DEB99280C154D00FE118C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DEB98280C154D00FE118C /* Main.storyboard */; };
+		6F6DEB9A280C154D00FE118C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DEB98280C154D00FE118C /* Main.storyboard */; };
+		6F6DEB9C280C159A00FE118C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DEB9B280C159A00FE118C /* Home.storyboard */; };
+		6F6DEB9D280C159A00FE118C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F6DEB9B280C159A00FE118C /* Home.storyboard */; };
+		6F756436280BE19400AECCBD /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D6427F8041600394CCB /* Deck.swift */; };
+		6F756437280BE19900AECCBD /* RevisionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D6127F7FFDB00394CCB /* RevisionViewModel.swift */; };
+		6F756438280BE19F00AECCBD /* RevisionCreateDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B37BB27F7E18000C91257 /* RevisionCreateDeckViewController.swift */; };
+		6F756439280BE1A300AECCBD /* DeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5842D42806FFEA008C9547 /* DeckViewModel.swift */; };
+		6F75643A280BE1A800AECCBD /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50FC2C28054E490027C634 /* DeckViewController.swift */; };
+		6F75643B280BE1AC00AECCBD /* DeckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D6827F80A9C00394CCB /* DeckTableViewCell.swift */; };
+		6F75643C280BE1AF00AECCBD /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67BDEE2804261C00B91844 /* Heap.swift */; };
+		6F75643D280BE1C500AECCBD /* RevisionVocab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D6627F8045600394CCB /* RevisionVocab.swift */; };
+		6F75643E280BE1C700AECCBD /* RecallDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D7127F8810800394CCB /* RecallDifficulty.swift */; };
+		6F75643F280BE1CB00AECCBD /* RevisionQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5425C82803C26E009E5AD5 /* RevisionQuery.swift */; };
+		6F756440280BE1CC00AECCBD /* DeckProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F67BDF02804607800B91844 /* DeckProgress.swift */; };
+		6F756441280BE1CF00AECCBD /* RevisionSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D6D27F87E7F00394CCB /* RevisionSequence.swift */; };
+		6F756442280BE1EB00AECCBD /* DeckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F034DA328098B5500663A12 /* DeckManager.swift */; };
+		6F756444280BE1F100AECCBD /* CreateDeckFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C4D5F27F7FE9D00394CCB /* CreateDeckFields.swift */; };
+		6F756445280BE38600AECCBD /* DeckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F034DA928098BE900663A12 /* DeckData.swift */; };
+		6F756446280BE3A500AECCBD /* RevisionVocabData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F034DA628098BE000663A12 /* RevisionVocabData.swift */; };
+		6F756447280BE3C600AECCBD /* RevisionVocabManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F034DA028098B4300663A12 /* RevisionVocabManager.swift */; };
+		6F756448280BE49600AECCBD /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2F4A2527F9947500923DB9 /* Query.swift */; };
+		6F756449280BE49B00AECCBD /* Answerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2F4A2727F9952D00923DB9 /* Answerable.swift */; };
+		6F75644D280BEE4700AECCBD /* DeckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F034DA328098B5500663A12 /* DeckManager.swift */; };
 		6FA0243827E1BBBE00F94E54 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243727E1BBBE00F94E54 /* FirebaseAuth */; };
 		6FA0243A27E1BBBE00F94E54 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243927E1BBBE00F94E54 /* FirebaseAuthCombine-Community */; };
 		6FA0243C27E1BBBE00F94E54 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0243B27E1BBBE00F94E54 /* FirebaseDatabase */; };
@@ -123,6 +172,8 @@
 		6FA0244227E1BBBE00F94E54 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244127E1BBBE00F94E54 /* FirebaseStorage */; };
 		6FA0244427E1BBBE00F94E54 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244327E1BBBE00F94E54 /* FirebaseStorageCombine-Community */; };
 		6FA0244727E1BC9E00F94E54 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6FA0244627E1BC9E00F94E54 /* PromiseKit */; };
+		6FA053D427F69E5900E03683 /* RevisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA053D327F69E5900E03683 /* RevisionViewController.swift */; };
+		6FCB0A2827FC899200F63E46 /* QuerySequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB0A2727FC899200F63E46 /* QuerySequence.swift */; };
 		CE2771D02809882500A739C1 /* PKGamePlayerOutcomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2771CF2809882500A739C1 /* PKGamePlayerOutcomeManager.swift */; };
 		CE2771D12809889C00A739C1 /* PKGamePlayerOutcomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2771CF2809882500A739C1 /* PKGamePlayerOutcomeManager.swift */; };
 		CE2771D3280988C600A739C1 /* PKGamePlayerOutcomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2771D2280988C600A739C1 /* PKGamePlayerOutcomeData.swift */; };
@@ -139,9 +190,7 @@
 		CE673C4127F99ED300321BB8 /* QueueEntryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C4027F99ED300321BB8 /* QueueEntryDataManager.swift */; };
 		CE673C4327F99F0100321BB8 /* QueueEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C4227F99F0100321BB8 /* QueueEntry.swift */; };
 		CE673C4727F9B8AF00321BB8 /* PKGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE673C4627F9B8AF00321BB8 /* PKGameManager.swift */; };
-		CE8D228C27EE2986005E7058 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D228A27EE2986005E7058 /* Question.storyboard */; };
 		CE8D228F27EE2B5A005E7058 /* Lesson.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D228D27EE2B5A005E7058 /* Lesson.storyboard */; };
-		CE8D229227EEA8B0005E7058 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229027EEA8B0005E7058 /* Home.storyboard */; };
 		CE8D229427EEB7EE005E7058 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D229327EEB7EE005E7058 /* AppStoryboard.swift */; };
 		CE8D229627EEB8F4005E7058 /* UiViewController+InstantiateFromAppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D229527EEB8F4005E7058 /* UiViewController+InstantiateFromAppStoryboard.swift */; };
 		CE8D229F27EEBBD2005E7058 /* HomeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D229E27EEBBD2005E7058 /* HomeNavigationViewController.swift */; };
@@ -192,7 +241,6 @@
 		CEBC07952808841E00A0ED82 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07922808841E00A0ED82 /* Arena.storyboard */; };
 		CEBC07962808842300A0ED82 /* Arena.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07922808841E00A0ED82 /* Arena.storyboard */; };
 		CEBC07972808842300A0ED82 /* LearningBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBC07902808841E00A0ED82 /* LearningBook.storyboard */; };
-		CEBC079C2809211400A0ED82 /* Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3C5E29127F73C9900F65B8E /* Dev-Info.plist */; };
 		CEC5886A27EA2A4F00809403 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886927EA2A4F00809403 /* StarView.swift */; };
 		CEC5886C27EA37E900809403 /* VocabsLearntTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5886B27EA37E900809403 /* VocabsLearntTableCell.swift */; };
 		CEC5887127EABEC000809403 /* LessonSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887027EABEC000809403 /* LessonSelectionViewController.swift */; };
@@ -201,7 +249,6 @@
 		CEC5887727EAC6E700809403 /* LessonSelectorTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887627EAC6E700809403 /* LessonSelectorTableCell.swift */; };
 		CEC5887927EAC90A00809403 /* LessonTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887827EAC90A00809403 /* LessonTableCellViewModel.swift */; };
 		CEC5887B27EAC91600809403 /* LessonTableCellViewModelFromLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5887A27EAC91600809403 /* LessonTableCellViewModelFromLesson.swift */; };
-		CED64D452806A20B0028B2FE /* (null) in Resources */ = {isa = PBXBuildFile; };
 		CEE9806D2806E6840052863B /* DevLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9806C2806E6840052863B /* DevLoginViewController.swift */; };
 		CEE9806E2806E6840052863B /* DevLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9806C2806E6840052863B /* DevLoginViewController.swift */; };
 		CEE980702806E83B0052863B /* DevLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9806F2806E83B0052863B /* DevLoginViewModel.swift */; };
@@ -299,7 +346,6 @@
 		D33282DE27D4D42700C80986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DD27D4D42700C80986 /* AppDelegate.swift */; };
 		D33282E027D4D42700C80986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282DF27D4D42700C80986 /* SceneDelegate.swift */; };
 		D33282E227D4D42700C80986 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33282E127D4D42700C80986 /* SplashViewController.swift */; };
-		D33282E527D4D42700C80986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282E327D4D42700C80986 /* Main.storyboard */; };
 		D33282E827D4D42700C80986 /* LingoClash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D33282E627D4D42700C80986 /* LingoClash.xcdatamodeld */; };
 		D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33282E927D4D42E00C80986 /* Assets.xcassets */; };
 		D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */; };
@@ -455,9 +501,6 @@
 		D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D33282FA27D4E7BE00C80986 /* SF-Pro.ttf */; };
 		D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D22A027EEC059005E7058 /* Book.storyboard */; };
 		D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33282E927D4D42E00C80986 /* Assets.xcassets */; };
-		D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D228A27EE2986005E7058 /* Question.storyboard */; };
-		D3C5E26B27F6E36B00F65B8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33282E327D4D42700C80986 /* Main.storyboard */; };
-		D3C5E26C27F6E36B00F65B8E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D229027EEA8B0005E7058 /* Home.storyboard */; };
 		D3C5E27A27F6F3E900F65B8E /* SampleDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E27927F6F3E900F65B8E /* SampleDataUtilities.swift */; };
 		D3C5E27B27F6F3E900F65B8E /* SampleDataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E27927F6F3E900F65B8E /* SampleDataUtilities.swift */; };
 		D3C5E28027F71C7300F65B8E /* VocabData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5E27F27F71C7300F65B8E /* VocabData.swift */; };
@@ -567,6 +610,32 @@
 		62FEFAE3280B535C00C0503B /* PKGameRewardSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameRewardSystem.swift; sourceTree = "<group>"; };
 		62FEFAE6280B536600C0503B /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		62FEFAE9280B537200C0503B /* NotificationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationObserver.swift; sourceTree = "<group>"; };
+		6F034DA028098B4300663A12 /* RevisionVocabManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionVocabManager.swift; sourceTree = "<group>"; };
+		6F034DA328098B5500663A12 /* DeckManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckManager.swift; sourceTree = "<group>"; };
+		6F034DA628098BE000663A12 /* RevisionVocabData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionVocabData.swift; sourceTree = "<group>"; };
+		6F034DA928098BE900663A12 /* DeckData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckData.swift; sourceTree = "<group>"; };
+		6F0B37BB27F7E18000C91257 /* RevisionCreateDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionCreateDeckViewController.swift; sourceTree = "<group>"; };
+		6F2F4A2527F9947500923DB9 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		6F2F4A2727F9952D00923DB9 /* Answerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answerable.swift; sourceTree = "<group>"; };
+		6F4C4D5F27F7FE9D00394CCB /* CreateDeckFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeckFields.swift; sourceTree = "<group>"; };
+		6F4C4D6127F7FFDB00394CCB /* RevisionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionViewModel.swift; sourceTree = "<group>"; };
+		6F4C4D6427F8041600394CCB /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		6F4C4D6627F8045600394CCB /* RevisionVocab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionVocab.swift; sourceTree = "<group>"; };
+		6F4C4D6827F80A9C00394CCB /* DeckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckTableViewCell.swift; sourceTree = "<group>"; };
+		6F4C4D6D27F87E7F00394CCB /* RevisionSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionSequence.swift; sourceTree = "<group>"; };
+		6F4C4D7127F8810800394CCB /* RecallDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallDifficulty.swift; sourceTree = "<group>"; };
+		6F50FC2C28054E490027C634 /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
+		6F5425C82803C26E009E5AD5 /* RevisionQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionQuery.swift; sourceTree = "<group>"; };
+		6F5842D42806FFEA008C9547 /* DeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModel.swift; sourceTree = "<group>"; };
+		6F5842D62807D154008C9547 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		6F67BDEE2804261C00B91844 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		6F67BDF02804607800B91844 /* DeckProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckProgress.swift; sourceTree = "<group>"; };
+		6F6DEB92280C141400FE118C /* Revision.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Revision.storyboard; sourceTree = "<group>"; };
+		6F6DEB95280C145D00FE118C /* Question.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
+		6F6DEB98280C154D00FE118C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6F6DEB9B280C159A00FE118C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		6FA053D327F69E5900E03683 /* RevisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionViewController.swift; sourceTree = "<group>"; };
+		6FCB0A2727FC899200F63E46 /* QuerySequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuerySequence.swift; sourceTree = "<group>"; };
 		CE2771CF2809882500A739C1 /* PKGamePlayerOutcomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGamePlayerOutcomeManager.swift; sourceTree = "<group>"; };
 		CE2771D2280988C600A739C1 /* PKGamePlayerOutcomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGamePlayerOutcomeData.swift; sourceTree = "<group>"; };
 		CE673C1F27F8B46100321BB8 /* PKGameLobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameLobbyViewController.swift; sourceTree = "<group>"; };
@@ -581,9 +650,7 @@
 		CE673C4027F99ED300321BB8 /* QueueEntryDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueEntryDataManager.swift; sourceTree = "<group>"; };
 		CE673C4227F99F0100321BB8 /* QueueEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueEntry.swift; sourceTree = "<group>"; };
 		CE673C4627F9B8AF00321BB8 /* PKGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKGameManager.swift; sourceTree = "<group>"; };
-		CE8D228B27EE2986005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Question.storyboard; sourceTree = "<group>"; };
 		CE8D228E27EE2B5A005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Lesson.storyboard; sourceTree = "<group>"; };
-		CE8D229127EEA8B0005E7058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		CE8D229327EEB7EE005E7058 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		CE8D229527EEB8F4005E7058 /* UiViewController+InstantiateFromAppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+InstantiateFromAppStoryboard.swift"; sourceTree = "<group>"; };
 		CE8D229E27EEBBD2005E7058 /* HomeNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationViewController.swift; sourceTree = "<group>"; };
@@ -682,7 +749,6 @@
 		D33282DD27D4D42700C80986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D33282DF27D4D42700C80986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D33282E127D4D42700C80986 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		D33282E427D4D42700C80986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D33282E727D4D42700C80986 /* LingoClash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LingoClash.xcdatamodel; sourceTree = "<group>"; };
 		D33282E927D4D42E00C80986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D33282EC27D4D42E00C80986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -773,6 +839,7 @@
 		6204A03B27DE34040063100D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6F67BDED2804260D00B91844 /* DataStructures */,
 				62FEFAA8280B4C7B00C0503B /* Snackbar */,
 				6204A03927DE1CDB0063100D /* AppConfigs.swift */,
 				62165B7527F2244C004BC620 /* FormUtilities.swift */,
@@ -797,6 +864,7 @@
 				620DF3C927F23133006A9E5F /* ChangeEmailFields.swift */,
 				62165B7C27F226C7004BC620 /* LoginFields.swift */,
 				62165B7A27F226BA004BC620 /* SignUpFields.swift */,
+				6F4C4D5F27F7FE9D00394CCB /* CreateDeckFields.swift */,
 			);
 			path = FormFields;
 			sourceTree = "<group>";
@@ -928,6 +996,98 @@
 				62FEFADD280B534100C0503B /* RewardSystem.swift */,
 			);
 			path = RewardSystem;
+			sourceTree = "<group>";
+		};
+		6F0B37BA27F7E16200C91257 /* RevisionCreateDeck */ = {
+			isa = PBXGroup;
+			children = (
+				6F0B37BB27F7E18000C91257 /* RevisionCreateDeckViewController.swift */,
+			);
+			path = RevisionCreateDeck;
+			sourceTree = "<group>";
+		};
+		6F195D1F27FA984A009CBFFC /* QueryGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				6FCB0A2727FC899200F63E46 /* QuerySequence.swift */,
+			);
+			path = QueryGenerator;
+			sourceTree = "<group>";
+		};
+		6F2F4A2427F9945100923DB9 /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				6F195D1F27FA984A009CBFFC /* QueryGenerator */,
+				6F2F4A2527F9947500923DB9 /* Query.swift */,
+				6F2F4A2727F9952D00923DB9 /* Answerable.swift */,
+				6F5842D62807D154008C9547 /* Answer.swift */,
+			);
+			path = Query;
+			sourceTree = "<group>";
+		};
+		6F448B8A28091F8600D50D05 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		6F4C4D6327F8040400394CCB /* Decks */ = {
+			isa = PBXGroup;
+			children = (
+				6F4C4D6C27F87E7100394CCB /* RevisionGenerator */,
+				6F4C4D6427F8041600394CCB /* Deck.swift */,
+				6F4C4D6627F8045600394CCB /* RevisionVocab.swift */,
+				6F4C4D7127F8810800394CCB /* RecallDifficulty.swift */,
+				6F5425C82803C26E009E5AD5 /* RevisionQuery.swift */,
+				6F67BDF02804607800B91844 /* DeckProgress.swift */,
+			);
+			path = Decks;
+			sourceTree = "<group>";
+		};
+		6F4C4D6B27F8274100394CCB /* Revision */ = {
+			isa = PBXGroup;
+			children = (
+				6F4C4D6327F8040400394CCB /* Decks */,
+			);
+			path = Revision;
+			sourceTree = "<group>";
+		};
+		6F4C4D6C27F87E7100394CCB /* RevisionGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				6F4C4D6D27F87E7F00394CCB /* RevisionSequence.swift */,
+			);
+			path = RevisionGenerator;
+			sourceTree = "<group>";
+		};
+		6F50FC2E28054E520027C634 /* DeckView */ = {
+			isa = PBXGroup;
+			children = (
+				6F50FC2C28054E490027C634 /* DeckViewController.swift */,
+				6F5842D42806FFEA008C9547 /* DeckViewModel.swift */,
+			);
+			path = DeckView;
+			sourceTree = "<group>";
+		};
+		6F67BDED2804260D00B91844 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				6F67BDEE2804261C00B91844 /* Heap.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		6FA053D027F69E0F00E03683 /* RevisionView */ = {
+			isa = PBXGroup;
+			children = (
+				6F50FC2E28054E520027C634 /* DeckView */,
+				6F0B37BA27F7E16200C91257 /* RevisionCreateDeck */,
+				6FA053D327F69E5900E03683 /* RevisionViewController.swift */,
+				6F4C4D6127F7FFDB00394CCB /* RevisionViewModel.swift */,
+				6F4C4D6827F80A9C00394CCB /* DeckTableViewCell.swift */,
+			);
+			path = RevisionView;
 			sourceTree = "<group>";
 		};
 		CE673C1B27F8B3CE00321BB8 /* PKGameView */ = {
@@ -1201,6 +1361,7 @@
 				D33282DC27D4D42700C80986 /* LingoClash */,
 				D3BD29E327DCE6350061E362 /* LingoClashTests */,
 				D33282DB27D4D42700C80986 /* Products */,
+				6F448B8A28091F8600D50D05 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1217,6 +1378,7 @@
 		D33282DC27D4D42700C80986 /* LingoClash */ = {
 			isa = PBXGroup;
 			children = (
+				6FA053D027F69E0F00E03683 /* RevisionView */,
 				6204A03B27DE34040063100D /* Utilities */,
 				D33282F727D4E62F00C80986 /* Resources */,
 				D3AF1C22280591DA00DCFA2E /* SplashView */,
@@ -1257,6 +1419,8 @@
 		D33282FC27D5258000C80986 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6F2F4A2427F9945100923DB9 /* Query */,
+				6F4C4D6B27F8274100394CCB /* Revision */,
 				62FEFAD9280B531F00C0503B /* RewardSystem */,
 				D3C4423B27E8B17400676C93 /* DatabaseErrors.swift */,
 				CEA1C87827FA14FA00123225 /* PKGame */,
@@ -1308,16 +1472,17 @@
 				CEBC07922808841E00A0ED82 /* Arena.storyboard */,
 				CEBC07902808841E00A0ED82 /* LearningBook.storyboard */,
 				CEBC0784280883C300A0ED82 /* CompletedBook.storyboard */,
+				6F6DEB95280C145D00FE118C /* Question.storyboard */,
+				6F6DEB92280C141400FE118C /* Revision.storyboard */,
+				6F6DEB98280C154D00FE118C /* Main.storyboard */,
+				6F6DEB9B280C159A00FE118C /* Home.storyboard */,
 				CEBC0786280883C300A0ED82 /* Profile.storyboard */,
 				CEBC0780280883C300A0ED82 /* RecommendedBook.storyboard */,
 				CEBC0782280883C300A0ED82 /* Settings.storyboard */,
 				CEBC077C280810CE00A0ED82 /* PKGame.storyboard */,
 				CE8D22A027EEC059005E7058 /* Book.storyboard */,
 				D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */,
-				D33282E327D4D42700C80986 /* Main.storyboard */,
-				CE8D229027EEA8B0005E7058 /* Home.storyboard */,
 				CE8D228D27EE2B5A005E7058 /* Lesson.storyboard */,
-				CE8D228A27EE2986005E7058 /* Question.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1439,6 +1604,8 @@
 				62E418CB27EA525600DFF03C /* ProfileBookData.swift */,
 				D3F00CB227DFC59500393ADC /* BookData.swift */,
 				D3F00CB427DFC5DD00393ADC /* BookCategoryData.swift */,
+				6F034DA628098BE000663A12 /* RevisionVocabData.swift */,
+				6F034DA928098BE900663A12 /* DeckData.swift */,
 				CEA1C90027FA187300123225 /* LessonData.swift */,
 				CEF3E67D28066B80001F483B /* PKGameData.swift */,
 				CEF3E68128068701001F483B /* PKGameMoveData.swift */,
@@ -1462,6 +1629,8 @@
 				62A03E552801510F008FE249 /* ProfileLessonManager.swift */,
 				62CB30DE27EA6EFB0044CB24 /* ProfileBookManager.swift */,
 				62E418D227EA5A6900DFF03C /* ProfileManager.swift */,
+				6F034DA028098B4300663A12 /* RevisionVocabManager.swift */,
+				6F034DA328098B5500663A12 /* DeckManager.swift */,
 				CE673C4027F99ED300321BB8 /* QueueEntryDataManager.swift */,
 				CE673C4627F9B8AF00321BB8 /* PKGameManager.swift */,
 				CE2771CF2809882500A739C1 /* PKGamePlayerOutcomeManager.swift */,
@@ -1478,10 +1647,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D33282F127D4D42E00C80986 /* Build configuration list for PBXNativeTarget "LingoClash" */;
 			buildPhases = (
-				D32BB7802809E461009E4049 /* Run SwiftLint */,
 				D33282D627D4D42700C80986 /* Sources */,
 				D33282D727D4D42700C80986 /* Frameworks */,
 				D33282D827D4D42700C80986 /* Resources */,
+				6F5706D327FAE83F00F72BDD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1526,7 +1695,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C5E26D27F6E36B00F65B8E /* Build configuration list for PBXNativeTarget "LingoClashDev" */;
 			buildPhases = (
-				D32BB7812809E48C009E4049 /* Run SwiftLint */,
 				D3C5E1DD27F6E36B00F65B8E /* Sources */,
 				D3C5E25827F6E36B00F65B8E /* Frameworks */,
 				D3C5E26227F6E36B00F65B8E /* Resources */,
@@ -1600,24 +1768,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBC079C2809211400A0ED82 /* Dev-Info.plist in Resources */,
 				CE8D228F27EE2B5A005E7058 /* Lesson.storyboard in Resources */,
 				D32BB7A92809F83F009E4049 /* korean-eng.json in Resources */,
 				D33282ED27D4D42E00C80986 /* LaunchScreen.storyboard in Resources */,
+				6F6DEB9C280C159A00FE118C /* Home.storyboard in Resources */,
 				CEBC077E280810CF00A0ED82 /* PKGame.storyboard in Resources */,
 				D33282FB27D4E7BF00C80986 /* SF-Pro.ttf in Resources */,
 				CE8D22A227EEC059005E7058 /* Book.storyboard in Resources */,
 				CEBC078A280883C300A0ED82 /* CompletedBook.storyboard in Resources */,
+				6F6DEB93280C141400FE118C /* Revision.storyboard in Resources */,
 				CEBC0788280883C300A0ED82 /* RecommendedBook.storyboard in Resources */,
 				D33282EA27D4D42E00C80986 /* Assets.xcassets in Resources */,
 				CEBC07952808841E00A0ED82 /* Arena.storyboard in Resources */,
 				CEBC07942808841E00A0ED82 /* LearningBook.storyboard in Resources */,
+				6F6DEB96280C145E00FE118C /* Question.storyboard in Resources */,
 				CEBC0789280883C300A0ED82 /* Settings.storyboard in Resources */,
 				CEBC077A2807E70800A0ED82 /* GoogleService-Info.plist in Resources */,
-				CE8D228C27EE2986005E7058 /* Question.storyboard in Resources */,
+				6F6DEB99280C154D00FE118C /* Main.storyboard in Resources */,
 				CEBC078B280883C300A0ED82 /* Profile.storyboard in Resources */,
-				D33282E527D4D42700C80986 /* Main.storyboard in Resources */,
-				CE8D229227EEA8B0005E7058 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1635,20 +1803,20 @@
 				D3C5E26327F6E36B00F65B8E /* Lesson.storyboard in Resources */,
 				CEBC077F280810CF00A0ED82 /* PKGame.storyboard in Resources */,
 				D32BB7AA2809F83F009E4049 /* korean-eng.json in Resources */,
+				6F6DEB9D280C159A00FE118C /* Home.storyboard in Resources */,
 				D3C5E26427F6E36B00F65B8E /* LaunchScreen.storyboard in Resources */,
 				D3C5E26527F6E36B00F65B8E /* SF-Pro.ttf in Resources */,
 				CEBC078F280883E600A0ED82 /* RecommendedBook.storyboard in Resources */,
 				D3C5E26627F6E36B00F65B8E /* Book.storyboard in Resources */,
 				D3C5E26827F6E36B00F65B8E /* Assets.xcassets in Resources */,
+				6F6DEB94280C141400FE118C /* Revision.storyboard in Resources */,
 				CEBC077B2807E71100A0ED82 /* GoogleService-Info.plist in Resources */,
-				D3C5E26927F6E36B00F65B8E /* Question.storyboard in Resources */,
 				CEBC078E280883E600A0ED82 /* Profile.storyboard in Resources */,
 				CEBC078D280883E600A0ED82 /* CompletedBook.storyboard in Resources */,
-				D3C5E26B27F6E36B00F65B8E /* Main.storyboard in Resources */,
-				D3C5E26C27F6E36B00F65B8E /* Home.storyboard in Resources */,
-				CED64D452806A20B0028B2FE /* (null) in Resources */,
 				CEBC07962808842300A0ED82 /* Arena.storyboard in Resources */,
+				6F6DEB97280C145E00FE118C /* Question.storyboard in Resources */,
 				CEBC078C280883E200A0ED82 /* Settings.storyboard in Resources */,
+				6F6DEB9A280C154D00FE118C /* Main.storyboard in Resources */,
 				CEBC07972808842300A0ED82 /* LearningBook.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1656,7 +1824,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D32BB7802809E461009E4049 /* Run SwiftLint */ = {
+		6F5706D327FAE83F00F72BDD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1665,32 +1833,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Run SwiftLint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		D32BB7812809E48C009E4049 /* Run SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run SwiftLint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1724,6 +1874,7 @@
 				CEA1C7A927FA145800123225 /* QuestionScopeFactory.swift in Sources */,
 				62A03E562801510F008FE249 /* ProfileLessonManager.swift in Sources */,
 				CEF1E7EA27E61F68005D4272 /* Vocab.swift in Sources */,
+				6FCB0A2827FC899200F63E46 /* QuerySequence.swift in Sources */,
 				62E418CC27EA525600DFF03C /* ProfileBookData.swift in Sources */,
 				CE673C2027F8B46100321BB8 /* PKGameLobbyViewController.swift in Sources */,
 				CE673C4327F99F0100321BB8 /* QueueEntry.swift in Sources */,
@@ -1748,6 +1899,7 @@
 				CEF1E7F127E6D120005D4272 /* QuestionViewModel.swift in Sources */,
 				CEA1C7B727FA145800123225 /* QuestionFormat.swift in Sources */,
 				CEF1E81827E742FE005D4272 /* TwoDisjointSetOptionQuestionLayoutViewModel.swift in Sources */,
+				6F5425C92803C26E009E5AD5 /* RevisionQuery.swift in Sources */,
 				CEF1E82127E75979005D4272 /* OptionTableCell.swift in Sources */,
 				62165B7B27F226BA004BC620 /* SignUpFields.swift in Sources */,
 				CEF1E81427E71F9D005D4272 /* QuestionStatus.swift in Sources */,
@@ -1776,6 +1928,8 @@
 				CE673C4127F99ED300321BB8 /* QueueEntryDataManager.swift in Sources */,
 				629090A527E85EFA00941A3B /* ProfileViewModel.swift in Sources */,
 				D3C4423A27E8B15900676C93 /* AuthErrors.swift in Sources */,
+				6F4C4D6E27F87E7F00394CCB /* RevisionSequence.swift in Sources */,
+				6F4C4D6927F80A9C00394CCB /* DeckTableViewCell.swift in Sources */,
 				CEA1C7AD27FA145800123225 /* QuestionIterator.swift in Sources */,
 				D3F00CB327DFC59500393ADC /* BookData.swift in Sources */,
 				CEA1C8F927FA14FA00123225 /* PKGameMove.swift in Sources */,
@@ -1785,19 +1939,25 @@
 				CEA1C7AE27FA145800123225 /* QuestionConstructorRandomFactory.swift in Sources */,
 				62BB1CE128002135002CD31A /* HomeViewModel.swift in Sources */,
 				CEF1E7E227E60D68005D4272 /* LessonQuizViewModel.swift in Sources */,
+				6F756445280BE38600AECCBD /* DeckData.swift in Sources */,
 				CEF1E81F27E74C6F005D4272 /* QuestionLayoutViewController.swift in Sources */,
+				6F5842D72807D154008C9547 /* Answer.swift in Sources */,
 				62FEFAEA280B537200C0503B /* NotificationObserver.swift in Sources */,
 				CEA1C90D27FA68C600123225 /* PKGameUpdateListener.swift in Sources */,
 				CEF1E7F927E6D568005D4272 /* QuestionViewModelFromQuestion.swift in Sources */,
 				CE673C2F27F9315700321BB8 /* PKGameLobbyViewModelFromProfile.swift in Sources */,
 				CEA1C7B927FA145800123225 /* TwoDisjointSetOptionQuestion.swift in Sources */,
 				D3F00CAB27DFA3E200393ADC /* FetchUtilities.swift in Sources */,
+				6F756442280BE1EB00AECCBD /* DeckManager.swift in Sources */,
 				D3C5E28427F71D6A00F65B8E /* BookCategoryManager.swift in Sources */,
+				6F67BDEF2804261C00B91844 /* Heap.swift in Sources */,
 				D30CD1E827E79F3A0021A5AA /* KeychainManager.swift in Sources */,
 				6220921F280BC57F003365DF /* Account.swift in Sources */,
 				62FEFAA4280B4B3400C0503B /* UIApplication+Extensions.swift in Sources */,
 				D3BD2A1127DED82A0061E362 /* LoginViewModel.swift in Sources */,
 				CEF1E81C27E74634005D4272 /* TwoDisjointSetOptionQuestionLayoutViewController.swift in Sources */,
+				6F0B37BC27F7E18000C91257 /* RevisionCreateDeckViewController.swift in Sources */,
+				6FA053D427F69E5900E03683 /* RevisionViewController.swift in Sources */,
 				CEF1E7DE27E60D42005D4272 /* LessonOverviewViewModel.swift in Sources */,
 				D3AF1C1A28057C8200DCFA2E /* DarkTheme.swift in Sources */,
 				620DF3CA27F23133006A9E5F /* ChangeEmailFields.swift in Sources */,
@@ -1816,6 +1976,7 @@
 				CEF02D7B27E9577C00C30E03 /* LessonQuizResult.swift in Sources */,
 				62A03E5F2801CDD4008FE249 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				CEF1E7DC27E60C7A005D4272 /* Dynamic.swift in Sources */,
+				6F67BDF12804607800B91844 /* DeckProgress.swift in Sources */,
 				CEF3E67E28066B80001F483B /* PKGameData.swift in Sources */,
 				CEF02D7327E8CAC400C30E03 /* LessonQuizProgressBarView.swift in Sources */,
 				6204A04127DE4A500063100D /* ViewUtilities.swift in Sources */,
@@ -1832,7 +1993,9 @@
 				62A03E59280176CA008FE249 /* BookButtonDelegate.swift in Sources */,
 				D30E490E27FA20140074CF2B /* BookCategory.swift in Sources */,
 				CEC5887B27EAC91600809403 /* LessonTableCellViewModelFromLesson.swift in Sources */,
+				6F4C4D7227F8810800394CCB /* RecallDifficulty.swift in Sources */,
 				CEF02D7927E9573700C30E03 /* LessonQuizOutcomeViewModelFromQuizResult.swift in Sources */,
+				6F4C4D6027F7FE9D00394CCB /* CreateDeckFields.swift in Sources */,
 				CEF1E7D527E60C1F005D4272 /* LessonOverviewViewController.swift in Sources */,
 				CEA1C7B627FA145800123225 /* MatchVocabToDefinitionQuestion.swift in Sources */,
 				6204A03A27DE1CDB0063100D /* AppConfigs.swift in Sources */,
@@ -1858,6 +2021,7 @@
 				CEA1C7AF27FA145800123225 /* Question.swift in Sources */,
 				62FEFACE280B51FA00C0503B /* StarAccountManager.swift in Sources */,
 				62FEFAD7280B530000C0503B /* StarTransactionData.swift in Sources */,
+				6F756448280BE49600AECCBD /* Query.swift in Sources */,
 				62FEFADB280B533100C0503B /* LessonQuizRewardSystem.swift in Sources */,
 				62FEFABA280B4FE700C0503B /* ItemAccount.swift in Sources */,
 				D3C4424527E9F2FC00676C93 /* BookManager.swift in Sources */,
@@ -1881,18 +2045,26 @@
 				D30E491427FAA6E70074CF2B /* Lesson.swift in Sources */,
 				D398780927DF6AB800B2F4ED /* DataProvider.swift in Sources */,
 				D3AF1C302805DDDB00DCFA2E /* SplashViewModel.swift in Sources */,
+				6F4C4D6527F8041600394CCB /* Deck.swift in Sources */,
 				CEC5887727EAC6E700809403 /* LessonSelectorTableCell.swift in Sources */,
 				CEC5887327EABECC00809403 /* LessonSelectionViewModel.swift in Sources */,
 				D3C5E1CD27F600BA00F65B8E /* DataManager.swift in Sources */,
 				CEF3E68228068701001F483B /* PKGameMoveData.swift in Sources */,
+				6F756446280BE3A500AECCBD /* RevisionVocabData.swift in Sources */,
 				624BD58627E7A37D006F0391 /* RecommendedBooksViewModel.swift in Sources */,
+				6F4C4D6227F7FFDB00394CCB /* RevisionViewModel.swift in Sources */,
+				6F756447280BE3C600AECCBD /* RevisionVocabManager.swift in Sources */,
+				6F5842D52806FFEB008C9547 /* DeckViewModel.swift in Sources */,
 				624989DA27E735600092FC1B /* BookCollectionViewController.swift in Sources */,
 				62BB1CE72800308D002CD31A /* ExploreBookViewController.swift in Sources */,
 				D33282F927D4E63B00C80986 /* Theme.swift in Sources */,
+				6F4C4D6727F8045600394CCB /* RevisionVocab.swift in Sources */,
 				62FEFAE7280B536600C0503B /* Reward.swift in Sources */,
 				624989DC27E736590092FC1B /* BookCollectionViewCell.swift in Sources */,
 				62FEFAE4280B535C00C0503B /* PKGameRewardSystem.swift in Sources */,
 				629090A027E8303F00941A3B /* RecommendedBooksTableViewController.swift in Sources */,
+				6F50FC2D28054E490027C634 /* DeckViewController.swift in Sources */,
+				6F756449280BE49B00AECCBD /* Answerable.swift in Sources */,
 				624BD58027E761FB006F0391 /* LearningBooksViewModel.swift in Sources */,
 				62A03E652801CE9D008FE249 /* VerticalAlignment.swift in Sources */,
 				62165B7627F2244C004BC620 /* FormUtilities.swift in Sources */,
@@ -1933,6 +2105,7 @@
 				D3C5E1E227F6E36B00F65B8E /* ChangePasswordViewController.swift in Sources */,
 				D3C5E1E327F6E36B00F65B8E /* ProfileBookManager.swift in Sources */,
 				D3C5E1E527F6E36B00F65B8E /* RecommendedBooksViewController.swift in Sources */,
+				6F448B8B2809209A00D50D05 /* QuerySequence.swift in Sources */,
 				D3686A0627F7513A0013B289 /* SignUpFields.swift in Sources */,
 				D3757B1A2806849B003CF4F2 /* SettingsViewModel.swift in Sources */,
 				D3C5E1E627F6E36B00F65B8E /* LessonVocabViewModel.swift in Sources */,
@@ -1944,6 +2117,7 @@
 				D3C5E1EB27F6E36B00F65B8E /* Vocab.swift in Sources */,
 				D3686A0927F7515C0013B289 /* ChangePasswordFields.swift in Sources */,
 				D3C5E1EC27F6E36B00F65B8E /* ProfileBookData.swift in Sources */,
+				6F756440280BE1CC00AECCBD /* DeckProgress.swift in Sources */,
 				D3C5E1ED27F6E36B00F65B8E /* CompletedBooksViewController.swift in Sources */,
 				62FEFAC6280B508600C0503B /* DebitOrCredit.swift in Sources */,
 				62FEFACB280B509500C0503B /* CurrencyTypes.swift in Sources */,
@@ -1953,33 +2127,42 @@
 				CEF3E6AC280690DA001F483B /* FirebasePKGameUpdater.swift in Sources */,
 				CEF3E69B280690C5001F483B /* QuestionFormat.swift in Sources */,
 				CEF3E6AB280690DA001F483B /* PKGameUpdateDelegate.swift in Sources */,
+				6F756438280BE19F00AECCBD /* RevisionCreateDeckViewController.swift in Sources */,
 				D3C5E1EE27F6E36B00F65B8E /* AppDelegate.swift in Sources */,
 				D3C5E1F027F6E36B00F65B8E /* LessonVocabViewModelFromLesson.swift in Sources */,
 				62FEFACA280B509200C0503B /* ItemAccount.swift in Sources */,
 				62FEFADC280B533100C0503B /* LessonQuizRewardSystem.swift in Sources */,
 				D3C5E1F127F6E36B00F65B8E /* DataProviderTypes.swift in Sources */,
+				6F448B8C280920A000D50D05 /* Query.swift in Sources */,
 				CEF3E68528069092001F483B /* PKGame.swift in Sources */,
 				CEF3E69A280690C5001F483B /* TwoDisjointSetOptionQuestion.swift in Sources */,
 				D3C5E1F227F6E36B00F65B8E /* HomeNavigationViewController.swift in Sources */,
+				6F034DAB28098BE900663A12 /* DeckData.swift in Sources */,
 				D3C5E1F327F6E36B00F65B8E /* DatabaseErrors.swift in Sources */,
 				D3C5E1F427F6E36B00F65B8E /* SignUpViewController.swift in Sources */,
+				6F756444280BE1F100AECCBD /* CreateDeckFields.swift in Sources */,
 				62FEFAB0280B4CC100C0503B /* SnackbarView.swift in Sources */,
 				D3C5E1F527F6E36B00F65B8E /* UiViewController+InstantiateFromAppStoryboard.swift in Sources */,
+				6F75643D280BE1C500AECCBD /* RevisionVocab.swift in Sources */,
 				D3C5E1F627F6E36B00F65B8E /* StarView.swift in Sources */,
 				62FEFAE8280B536600C0503B /* Reward.swift in Sources */,
+				6F756436280BE19400AECCBD /* Deck.swift in Sources */,
 				CEF3E696280690C2001F483B /* QuestionWrapper.swift in Sources */,
 				62BB1CE228002135002CD31A /* HomeViewModel.swift in Sources */,
 				D3C5E27B27F6F3E900F65B8E /* SampleDataUtilities.swift in Sources */,
+				6F034DA228098B4300663A12 /* RevisionVocabManager.swift in Sources */,
 				D3C5E1F727F6E36B00F65B8E /* LessonTableCellViewModel.swift in Sources */,
 				D3C5E1F827F6E36B00F65B8E /* QuestionViewModel.swift in Sources */,
 				D3C5E1F927F6E36B00F65B8E /* TwoDisjointSetOptionQuestionLayoutViewModel.swift in Sources */,
 				CEF3E6B0280690DA001F483B /* PKGameQuizViewController.swift in Sources */,
 				D30E490A27FA1E670074CF2B /* Book.swift in Sources */,
+				6F756439280BE1A300AECCBD /* DeckViewModel.swift in Sources */,
 				D3AF1C262805937100DCFA2E /* SettingsViewController.swift in Sources */,
 				CE2771D4280988FB00A739C1 /* PKGamePlayerOutcomeData.swift in Sources */,
 				62A03E682801CF53008FE249 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				62FEFAA5280B4B3B00C0503B /* UIApplication+Extensions.swift in Sources */,
 				D3C5E1FA27F6E36B00F65B8E /* OptionTableCell.swift in Sources */,
+				6F75643A280BE1A800AECCBD /* DeckViewController.swift in Sources */,
 				D3C5E1FB27F6E36B00F65B8E /* QuestionStatus.swift in Sources */,
 				D3AF1C312805DDE000DCFA2E /* SplashViewModel.swift in Sources */,
 				CEE980712806E83B0052863B /* DevLoginViewModel.swift in Sources */,
@@ -1996,6 +2179,7 @@
 				D3C5E20627F6E36B00F65B8E /* ProfileData.swift in Sources */,
 				D3C5E20727F6E36B00F65B8E /* AlertUtilities.swift in Sources */,
 				D3C5E20827F6E36B00F65B8E /* ProfileViewModel.swift in Sources */,
+				6F75643E280BE1C700AECCBD /* RecallDifficulty.swift in Sources */,
 				D3C5E20927F6E36B00F65B8E /* AuthErrors.swift in Sources */,
 				D3C5E20A27F6E36B00F65B8E /* BookData.swift in Sources */,
 				D3C5E20B27F6E36B00F65B8E /* SceneDelegate.swift in Sources */,
@@ -2018,6 +2202,7 @@
 				62FEFAB1280B4CC300C0503B /* SnackbarUtilities.swift in Sources */,
 				CEF3E6A0280690D2001F483B /* QueueEntry.swift in Sources */,
 				D3C5E28527F71D6A00F65B8E /* BookCategoryManager.swift in Sources */,
+				6F034D922809281700663A12 /* RevisionViewController.swift in Sources */,
 				D3C5E21427F6E36B00F65B8E /* KeychainManager.swift in Sources */,
 				62A03E5D28017856008FE249 /* LearnButtonDelegate.swift in Sources */,
 				62FEFAE5280B535C00C0503B /* PKGameRewardSystem.swift in Sources */,
@@ -2038,16 +2223,19 @@
 				D3C5E21C27F6E36B00F65B8E /* LessonQuizViewModelFromLesson.swift in Sources */,
 				CEF3E68D280690A0001F483B /* QuestionsGenerator.swift in Sources */,
 				D3C5E21D27F6E36B00F65B8E /* AppStoryboard.swift in Sources */,
+				6F756441280BE1CF00AECCBD /* RevisionSequence.swift in Sources */,
 				CEF3E69C280690C5001F483B /* SimpleOptionQuestion.swift in Sources */,
 				D3C5E21E27F6E36B00F65B8E /* QuestionLayoutViewModel.swift in Sources */,
 				D3C5E21F27F6E36B00F65B8E /* UIViewController+Alerts.swift in Sources */,
 				D3C5E28127F71C7300F65B8E /* VocabData.swift in Sources */,
+				6F75643C280BE1AF00AECCBD /* Heap.swift in Sources */,
 				62FEFAD5280B52EC00C0503B /* StarAccountData.swift in Sources */,
 				D3C5E22027F6E36B00F65B8E /* SignUpViewModel.swift in Sources */,
 				CEE9806E2806E6840052863B /* DevLoginViewController.swift in Sources */,
 				62FEFACF280B520800C0503B /* StarAccountManager.swift in Sources */,
 				CEF3E691280690A7001F483B /* DefinitionOptionQuestionConstructor.swift in Sources */,
 				D3C5E22127F6E36B00F65B8E /* QuestionViewController.swift in Sources */,
+				6F75643F280BE1CB00AECCBD /* RevisionQuery.swift in Sources */,
 				D3C5E22227F6E36B00F65B8E /* LessonQuizResult.swift in Sources */,
 				D3C5E22327F6E36B00F65B8E /* Dynamic.swift in Sources */,
 				D3C5E22427F6E36B00F65B8E /* LessonQuizProgressBarView.swift in Sources */,
@@ -2056,6 +2244,7 @@
 				D3C5E22627F6E36B00F65B8E /* Transaction.swift in Sources */,
 				D3C5E22727F6E36B00F65B8E /* VocabCollectionCell.swift in Sources */,
 				D3C5E22827F6E36B00F65B8E /* LessonQuizViewController.swift in Sources */,
+				6F756437280BE19900AECCBD /* RevisionViewModel.swift in Sources */,
 				62A03E6B2801CF59008FE249 /* Alignment.swift in Sources */,
 				CEF3E68E280690A0001F483B /* QuestionScopeFactory.swift in Sources */,
 				D3C5E22A27F6E36B00F65B8E /* LessonOverviewViewModelFromLesson.swift in Sources */,
@@ -2068,11 +2257,14 @@
 				D3C5E23127F6E36B00F65B8E /* AppConfigs.swift in Sources */,
 				D3C5E23227F6E36B00F65B8E /* SimpleOptionQuestionLayoutViewModel.swift in Sources */,
 				CEF3E68728069092001F483B /* PKGameMove.swift in Sources */,
+				6F448B8D280920A900D50D05 /* Answerable.swift in Sources */,
+				6F034DA828098BE000663A12 /* RevisionVocabData.swift in Sources */,
 				D3C5E23427F6E36B00F65B8E /* Logger.swift in Sources */,
 				D3C5E23527F6E36B00F65B8E /* DataProviderErrors.swift in Sources */,
 				D3C5E28827F71D8500F65B8E /* LessonManager.swift in Sources */,
 				CEF3E6AF280690DA001F483B /* PKGameUpdateListener.swift in Sources */,
 				62FEFACC280B509700C0503B /* ItemTypes.swift in Sources */,
+				6F75643B280BE1AC00AECCBD /* DeckTableViewCell.swift in Sources */,
 				D3C5E23627F6E36B00F65B8E /* FirebaseAuthProvider.swift in Sources */,
 				D3C5E23727F6E36B00F65B8E /* ProfileManager.swift in Sources */,
 				D3C5E23827F6E36B00F65B8E /* AuthProvider.swift in Sources */,
@@ -2094,6 +2286,7 @@
 				CEF3E6A5280690D8001F483B /* PKGameLobbyViewController.swift in Sources */,
 				CE2771D12809889C00A739C1 /* PKGamePlayerOutcomeManager.swift in Sources */,
 				D3C5E24327F6E36B00F65B8E /* Promise+Extensions.swift in Sources */,
+				6F75644D280BEE4700AECCBD /* DeckManager.swift in Sources */,
 				D3C5E24427F6E36B00F65B8E /* CurrentBookTabBarController.swift in Sources */,
 				D3C5E24527F6E36B00F65B8E /* DataProvider.swift in Sources */,
 				D30E491727FAC7C80074CF2B /* Lesson.swift in Sources */,
@@ -2145,28 +2338,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE8D228A27EE2986005E7058 /* Question.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE8D228B27EE2986005E7058 /* Base */,
-			);
-			name = Question.storyboard;
-			sourceTree = "<group>";
-		};
 		CE8D228D27EE2B5A005E7058 /* Lesson.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CE8D228E27EE2B5A005E7058 /* Base */,
 			);
 			name = Lesson.storyboard;
-			sourceTree = "<group>";
-		};
-		CE8D229027EEA8B0005E7058 /* Home.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE8D229127EEA8B0005E7058 /* Base */,
-			);
-			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		CE8D22A027EEC059005E7058 /* Book.storyboard */ = {
@@ -2231,14 +2408,6 @@
 				CEBC07932808841E00A0ED82 /* Base */,
 			);
 			name = Arena.storyboard;
-			sourceTree = "<group>";
-		};
-		D33282E327D4D42700C80986 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D33282E427D4D42700C80986 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		D33282EB27D4D42E00C80986 /* LaunchScreen.storyboard */ = {

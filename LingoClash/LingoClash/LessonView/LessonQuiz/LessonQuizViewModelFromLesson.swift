@@ -53,7 +53,7 @@ class LessonQuizViewModelFromLesson: LessonQuizViewModel {
     }
 
     func loadNextQuestion() {
-        guard let currQuestion = self.questionSequence.next() else {
+        guard let currQuestion = self.questionSequence.next() as? Question else {
             fatalError("Unable to load question")
         }
         self.questionsLoaded.append(currQuestion)

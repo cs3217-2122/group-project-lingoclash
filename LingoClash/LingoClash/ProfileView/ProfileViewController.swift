@@ -36,6 +36,11 @@ class ProfileViewController: UIViewController {
         super.viewDidAppear(animated)
         viewModel.refresh()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.stopRefresh()
+    }
 
     func setUpBinderForLabel(label: UILabel, publisher: Published<String?>.Publisher) {
         publisher.sink { value in
